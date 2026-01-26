@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="app_name">MES</string>
+  <string name="action_settings">Settings</string>
+
+  <string name="Welcome">Welcome\nClick for SQLite tests</string>
+
+  <string name="openDrawer">Menu</string>
+  <string name="closeDrawer">MES</string>
+
+  <string name="DownloadUsers">Stáhni Uživatele</string>
+  <string name="CameraUsers">Kamera</string>
+  
+  <string name="DownloadLogin">Download</string>
+
+
+  <string name="permission_WriteExternalStorage_rationale">K uložení souboru je potřeba oprávnění WriteExternalStorage.</string>
+  <string name="permission_ReadExternalStorage_rationale">K čtení souboru je potřeba oprávnění WriteExternalStorage.</string>
+  <string name="Text_OK">OK</string>
+  <string name="Text_Zrusit">Zrušit</string>
+
+  <string name="Title">Potřebujeme tyto práva</string>
+  <string name="Message">Protože...</string>
+
+  <string name="PristupZamitnut">Přístup zamítnut</string>
+  <string name="PristupUdelen">Přístup udělen</string>
+
+  <string name="User_Message">Uživatel nenalezen</string>
+  <string name="User_Message2">Uživatel nenalezen nebo špatné heslo</string>
+  <string name="User_Title">Info</string>
+
+  <string name="Def_Text">Default_Text</string>
+
+  <string name="Test_Text">Jméno uživatele: Pepa Novák</string>
+  
+  <string name="Menu_Konfigurace">Konfigurace</string>
+  <string name="Menu_Odhlasit">Odhlásit</string>
+
+
+  <string name="agendy">Agendy</string>
+  <string name="Prijem">Příjem</string>
+  <string name="Vydej">Výdej</string>
+  <string name="Prodej">Vol. Pohyb</string>
+  <string name="Inventura">Inventura</string>
+  <string name="Expedice">Expedice</string>
+  <string name="Vyroba">Výroba</string>
+  <string name="ParsKode">Parsování kódu</string>
+
+  <string name="Ciselnik">Číselníky hromadně</string>
+  <string name="CiselnikySeznam">Číselníky seznam</string>
+
+
+  <!--<string name="Zasoby">Zasoby</string>
+  <string name="Odberatele">Odběratelé</string>
+  <string name="SKlady">Sklady</string>
+  <string name="Meny">Měny</string>
+  <string name="Strediska">Střediska</string>
+  <string name="TypyDokladu">Typy dokladů</string>
+  <string name="Lokace">Lokace</string>
+  <string name="Pracovnici">Pracovníci</string>-->
+
+  <string name="Zasoby_Full">Zásoby F1</string>
+
+  <string name="Zasoby">Zas.</string>
+  <string name="Odberatele">Odb.</string>
+  <string name="Sklady">Skl.</string>
+  <string name="Meny">Měny</string>
+  <string name="Strediska">Stř.</string>
+  <string name="TypyDokladu">T.Dok</string>
+  <string name="Lokace">Lok.</string>
+  <string name="Pracovnici">Prac.</string>
+
+  <string name="MES_Welcome">Vítá Vás MES</string>
+
+  <string name="HlMenu">Hlavní menu</string>
+
+  <string name="activity_intent_filter_action">com.FASK.datawedge.xamarin.ACTION</string>
+  <string name="datawedge_intent_key_source">com.symbol.datawedge.source</string>
+  <string name="datawedge_intent_key_label_type">com.symbol.datawedge.label_type</string>
+  <string name="datawedge_intent_key_data">com.symbol.datawedge.data_string</string>
+
+  <string name="Main_Login_Konec">Konec</string>
+  <string name="Main_Login_Uzivatele">Uživatelé</string>
+  <string name="Main_Login_OK">OK</string>
+  <string name="Main_Login_Login">Login</string>
+  <string name="Main_Login_Password">Heslo</string>
+  <string name="Dialog_Login_row_ID">ID</string>
+
+  <string name="Dialog_TypyPalet_row_ID">ID</string>
+  <string name="Dialog_TypyPalet_row_Name">Name</string>
+
+</resources>

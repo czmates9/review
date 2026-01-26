@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ostatni" targetNamespace="http://tempuri.org/Ostatni.xsd" xmlns:mstns="http://tempuri.org/Ostatni.xsd" xmlns="http://tempuri.org/Ostatni.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ostatni" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Ostatni" msprop:Generator_UserDSName="Ostatni">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST_SE" msprop:Generator_TableClassName="CZMST_SEDataTable" msprop:Generator_TableVarName="tableCZMST_SE" msprop:Generator_TablePropName="CZMST_SE" msprop:Generator_RowDeletingName="CZMST_SERowDeleting" msprop:Generator_RowChangingName="CZMST_SERowChanging" msprop:Generator_RowEvHandlerName="CZMST_SERowChangeEventHandler" msprop:Generator_RowDeletedName="CZMST_SERowDeleted" msprop:Generator_UserTableName="CZMST_SE" msprop:Generator_RowChangedName="CZMST_SERowChanged" msprop:Generator_RowEvArgName="CZMST_SERowChangeEvent" msprop:Generator_RowClassName="CZMST_SERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CountEntries" msprop:Generator_ColumnVarNameInTable="columnCountEntries" msprop:Generator_ColumnPropNameInRow="CountEntries" msprop:Generator_ColumnPropNameInTable="CountEntriesColumn" msprop:Generator_UserColumnName="CountEntries" type="xs:int" />
+              <xs:element name="SOPNUMBE" msprop:Generator_ColumnVarNameInTable="columnSOPNUMBE" msprop:Generator_ColumnPropNameInRow="SOPNUMBE" msprop:Generator_ColumnPropNameInTable="SOPNUMBEColumn" msprop:Generator_UserColumnName="SOPNUMBE" type="xs:string" />
+              <xs:element name="ITEMNMBR" msprop:Generator_ColumnVarNameInTable="columnITEMNMBR" msprop:Generator_ColumnPropNameInRow="ITEMNMBR" msprop:Generator_ColumnPropNameInTable="ITEMNMBRColumn" msprop:Generator_UserColumnName="ITEMNMBR" type="xs:string" minOccurs="0" />
+              <xs:element name="ITEMTYPE" msprop:Generator_ColumnVarNameInTable="columnITEMTYPE" msprop:Generator_ColumnPropNameInRow="ITEMTYPE" msprop:Generator_ColumnPropNameInTable="ITEMTYPEColumn" msprop:Generator_UserColumnName="ITEMTYPE" type="xs:string" />
+              <xs:element name="ITEMDESC" msprop:Generator_ColumnVarNameInTable="columnITEMDESC" msprop:Generator_ColumnPropNameInRow="ITEMDESC" msprop:Generator_ColumnPropNameInTable="ITEMDESCColumn" msprop:Generator_UserColumnName="ITEMDESC" type="xs:string" minOccurs="0" />
+              <xs:element name="VNDDOCNM" msprop:Generator_ColumnVarNameInTable="columnVNDDOCNM" msprop:Generator_ColumnPropNameInRow="VNDDOCNM" msprop:Generator_ColumnPropNameInTable="VNDDOCNMColumn" msprop:Generator_UserColumnName="VNDDOCNM" type="xs:string" minOccurs="0" />
+              <xs:element name="VNDITNUM" msprop:Generator_ColumnVarNameInTable="columnVNDITNUM" msprop:Generator_ColumnPropNameInRow="VNDITNUM" msprop:Generator_ColumnPropNameInTable="VNDITNUMColumn" msprop:Generator_UserColumnName="VNDITNUM" type="xs:string" minOccurs="0" />
+              <xs:element name="ORD" msprop:Generator_ColumnVarNameInTable="columnORD" msprop:Generator_ColumnPropNameInRow="ORD" msprop:Generator_ColumnPropNameInTable="ORDColumn" msprop:Generator_UserColumnName="ORD" type="xs:int" />
+              <xs:element name="CZ_CarKod" msprop:Generator_ColumnVarNameInTable="columnCZ_CarKod" msprop:Generator_ColumnPropNameInRow="CZ_CarKod" msprop:Generator_ColumnPropNameInTable="CZ_CarKodColumn" msprop:Generator_UserColumnName="CZ_CarKod" type="xs:string" />
+              <xs:element name="LOCNCODE" msprop:Generator_ColumnVarNameInTable="columnLOCNCODE" msprop:Generator_ColumnPropNameInRow="LOCNCODE" msprop:Generator_ColumnPropNameInTable="LOCNCODEColumn" msprop:Generator_UserColumnName="LOCNCODE" type="xs:string" minOccurs="0" />
+              <xs:element name="QTYSHPPD" msprop:Generator_ColumnVarNameInTable="columnQTYSHPPD" msprop:Generator_ColumnPropNameInRow="QTYSHPPD" msprop:Generator_ColumnPropNameInTable="QTYSHPPDColumn" msprop:Generator_UserColumnName="QTYSHPPD" type="xs:decimal" />
+              <xs:element name="QTYPACK" msprop:Generator_ColumnVarNameInTable="columnQTYPACK" msprop:Generator_ColumnPropNameInRow="QTYPACK" msprop:Generator_ColumnPropNameInTable="QTYPACKColumn" msprop:Generator_UserColumnName="QTYPACK" type="xs:decimal" />
+              <xs:element name="CZ_DatVyr_Track" msprop:Generator_ColumnVarNameInTable="columnCZ_DatVyr_Track" msprop:Generator_ColumnPropNameInRow="CZ_DatVyr_Track" msprop:Generator_ColumnPropNameInTable="CZ_DatVyr_TrackColumn" msprop:Generator_UserColumnName="CZ_DatVyr_Track" type="xs:unsignedByte" />
+              <xs:element name="CZ_DatVyr_Delka" msprop:Generator_ColumnVarNameInTable="columnCZ_DatVyr_Delka" msprop:Generator_ColumnPropNameInRow="CZ_DatVyr_Delka" msprop:Generator_ColumnPropNameInTable="CZ_DatVyr_DelkaColumn" msprop:Generator_UserColumnName="CZ_DatVyr_Delka" type="xs:short" />
+              <xs:element name="CZ_SerNum_Track" msprop:Generator_ColumnVarNameInTable="columnCZ_SerNum_Track" msprop:Generator_ColumnPropNameInRow="CZ_SerNum_Track" msprop:Generator_ColumnPropNameInTable="CZ_SerNum_TrackColumn" msprop:Generator_UserColumnName="CZ_SerNum_Track" type="xs:unsignedByte" />
+              <xs:element name="CZ_SerNum_Delka" msprop:Generator_ColumnVarNameInTable="columnCZ_SerNum_Delka" msprop:Generator_ColumnPropNameInRow="CZ_SerNum_Delka" msprop:Generator_ColumnPropNameInTable="CZ_SerNum_DelkaColumn" msprop:Generator_UserColumnName="CZ_SerNum_Delka" type="xs:short" />
+              <xs:element name="CZ_SW_Track" msprop:Generator_ColumnVarNameInTable="columnCZ_SW_Track" msprop:Generator_ColumnPropNameInRow="CZ_SW_Track" msprop:Generator_ColumnPropNameInTable="CZ_SW_TrackColumn" msprop:Generator_UserColumnName="CZ_SW_Track" type="xs:unsignedByte" />
+              <xs:element name="CZ_SW_Delka" msprop:Generator_ColumnVarNameInTable="columnCZ_SW_Delka" msprop:Generator_ColumnPropNameInRow="CZ_SW_Delka" msprop:Generator_ColumnPropNameInTable="CZ_SW_DelkaColumn" msprop:Generator_UserColumnName="CZ_SW_Delka" type="xs:short" />
+              <xs:element name="CZ_Doslo" msprop:Generator_ColumnVarNameInTable="columnCZ_Doslo" msprop:Generator_ColumnPropNameInRow="CZ_Doslo" msprop:Generator_ColumnPropNameInTable="CZ_DosloColumn" msprop:Generator_UserColumnName="CZ_Doslo" type="xs:unsignedByte" />
+              <xs:element name="Note" msprop:Generator_ColumnVarNameInTable="columnNote" msprop:Generator_ColumnPropNameInRow="Note" msprop:Generator_ColumnPropNameInTable="NoteColumn" msprop:Generator_UserColumnName="Note" type="xs:string" minOccurs="0" />
+              <xs:element name="TYPEPAL" msprop:Generator_ColumnVarNameInTable="columnTYPEPAL" msprop:Generator_ColumnPropNameInRow="TYPEPAL" msprop:Generator_ColumnPropNameInTable="TYPEPALColumn" msprop:Generator_UserColumnName="TYPEPAL" type="xs:string" minOccurs="0" />
+              <xs:element name="QTYPAL" msprop:Generator_ColumnVarNameInTable="columnQTYPAL" msprop:Generator_ColumnPropNameInRow="QTYPAL" msprop:Generator_ColumnPropNameInTable="QTYPALColumn" msprop:Generator_UserColumnName="QTYPAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PRIORITY" msprop:Generator_ColumnVarNameInTable="columnPRIORITY" msprop:Generator_ColumnPropNameInRow="PRIORITY" msprop:Generator_ColumnPropNameInTable="PRIORITYColumn" msprop:Generator_UserColumnName="PRIORITY" type="xs:unsignedByte" />
+              <xs:element name="PRINTED" msprop:Generator_ColumnVarNameInTable="columnPRINTED" msprop:Generator_ColumnPropNameInRow="PRINTED" msprop:Generator_ColumnPropNameInTable="PRINTEDColumn" msprop:Generator_UserColumnName="PRINTED" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="DEX_ROW_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnDEX_ROW_ID" msprop:Generator_ColumnPropNameInRow="DEX_ROW_ID" msprop:Generator_ColumnPropNameInTable="DEX_ROW_IDColumn" msprop:Generator_UserColumnName="DEX_ROW_ID" type="xs:int" />
+              <xs:element name="SKL_ID" msprop:Generator_ColumnVarNameInTable="columnSKL_ID" msprop:Generator_ColumnPropNameInRow="SKL_ID" msprop:Generator_ColumnPropNameInTable="SKL_IDColumn" msprop:Generator_UserColumnName="SKL_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="MJ" msprop:Generator_ColumnVarNameInTable="columnMJ" msprop:Generator_ColumnPropNameInRow="MJ" msprop:Generator_ColumnPropNameInTable="MJColumn" msprop:Generator_UserColumnName="MJ" type="xs:string" />
+              <xs:element name="CZ_REZ1_Track" msprop:Generator_ColumnVarNameInTable="columnCZ_REZ1_Track" msprop:Generator_ColumnPropNameInRow="CZ_REZ1_Track" msprop:Generator_ColumnPropNameInTable="CZ_REZ1_TrackColumn" msprop:Generator_UserColumnName="CZ_REZ1_Track" type="xs:unsignedByte" />
+              <xs:element name="CZ_REZ2_Track" msprop:Generator_ColumnVarNameInTable="columnCZ_REZ2_Track" msprop:Generator_ColumnPropNameInRow="CZ_REZ2_Track" msprop:Generator_ColumnPropNameInTable="CZ_REZ2_TrackColumn" msprop:Generator_UserColumnName="CZ_REZ2_Track" type="xs:unsignedByte" />
+              <xs:element name="ITEMCODE" msprop:Generator_ColumnVarNameInTable="columnITEMCODE" msprop:Generator_ColumnPropNameInRow="ITEMCODE" msprop:Generator_ColumnPropNameInTable="ITEMCODEColumn" msprop:Generator_UserColumnName="ITEMCODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WEIGHT" msprop:Generator_ColumnVarNameInTable="columnWEIGHT" msprop:Generator_ColumnPropNameInRow="WEIGHT" msprop:Generator_ColumnPropNameInTable="WEIGHTColumn" msprop:Generator_UserColumnName="WEIGHT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="USERID" msprop:Generator_ColumnVarNameInTable="columnUSERID" msprop:Generator_ColumnPropNameInRow="USERID" msprop:Generator_ColumnPropNameInTable="USERIDColumn" msprop:Generator_UserColumnName="USERID" type="xs:int" minOccurs="0" />
+              <xs:element name="CZ_Expirace_Track" msprop:Generator_ColumnVarNameInTable="columnCZ_Expirace_Track" msprop:Generator_ColumnPropNameInRow="CZ_Expirace_Track" msprop:Generator_ColumnPropNameInTable="CZ_Expirace_TrackColumn" msprop:Generator_UserColumnName="CZ_Expirace_Track" type="xs:unsignedByte" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

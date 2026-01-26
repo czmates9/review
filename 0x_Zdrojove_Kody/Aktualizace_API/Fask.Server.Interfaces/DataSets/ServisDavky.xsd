@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ServisDavky" targetNamespace="http://tempuri.org/ServisDavky.xsd" xmlns:mstns="http://tempuri.org/ServisDavky.xsd" xmlns="http://tempuri.org/ServisDavky.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ServisDavky" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ServisDavky" msprop:Generator_DataSetName="ServisDavky" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Hlavicky" msprop:Generator_UserTableName="Hlavicky" msprop:Generator_RowDeletedName="HlavickyRowDeleted" msprop:Generator_RowChangedName="HlavickyRowChanged" msprop:Generator_RowClassName="HlavickyRow" msprop:Generator_RowChangingName="HlavickyRowChanging" msprop:Generator_RowEvArgName="HlavickyRowChangeEvent" msprop:Generator_RowEvHandlerName="HlavickyRowChangeEventHandler" msprop:Generator_TableClassName="HlavickyDataTable" msprop:Generator_TableVarName="tableHlavicky" msprop:Generator_RowDeletingName="HlavickyRowDeleting" msprop:Generator_TablePropName="Hlavicky">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CountEntries" msprop:Generator_UserColumnName="CountEntries" msprop:Generator_ColumnPropNameInRow="CountEntries" msprop:Generator_ColumnVarNameInTable="columnCountEntries" msprop:Generator_ColumnPropNameInTable="CountEntriesColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DOCUMENT_NUMBER" msprop:Generator_UserColumnName="DOCUMENT_NUMBER" msprop:Generator_ColumnPropNameInRow="DOCUMENT_NUMBER" msprop:Generator_ColumnVarNameInTable="columnDOCUMENT_NUMBER" msprop:Generator_ColumnPropNameInTable="DOCUMENT_NUMBERColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CntItems" msprop:Generator_UserColumnName="CntItems" msprop:Generator_ColumnPropNameInRow="CntItems" msprop:Generator_ColumnVarNameInTable="columnCntItems" msprop:Generator_ColumnPropNameInTable="CntItemsColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="OkruhID" msprop:Generator_UserColumnName="OkruhID" msprop:Generator_ColumnPropNameInRow="OkruhID" msprop:Generator_ColumnVarNameInTable="columnOkruhID" msprop:Generator_ColumnPropNameInTable="OkruhIDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ODB_ID" msprop:Generator_UserColumnName="ODB_ID" msprop:Generator_ColumnPropNameInRow="ODB_ID" msprop:Generator_ColumnVarNameInTable="columnODB_ID" msprop:Generator_ColumnPropNameInTable="ODB_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OkruhOznaceni" msprop:Generator_UserColumnName="OkruhOznaceni" msprop:Generator_ColumnVarNameInTable="columnOkruhOznaceni" msprop:Generator_ColumnPropNameInRow="OkruhOznaceni" msprop:Generator_ColumnPropNameInTable="OkruhOznaceniColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OdbOznaceni" msprop:Generator_UserColumnName="OdbOznaceni" msprop:Generator_ColumnVarNameInTable="columnOdbOznaceni" msprop:Generator_ColumnPropNameInRow="OdbOznaceni" msprop:Generator_ColumnPropNameInTable="OdbOznaceniColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Barcode" msprop:Generator_UserColumnName="Barcode" msprop:Generator_ColumnPropNameInRow="Barcode" msprop:Generator_ColumnVarNameInTable="columnBarcode" msprop:Generator_ColumnPropNameInTable="BarcodeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="yes"?>
+<Konfig xmlns="http://tempuri.org/Konfig.xsd">
+  <ConnectionStrings>
+    <PohodaDB>Provider=SQLNCLI11;Data Source=192.168.1.121\SQLEXPRESS;Initial Catalog=StwPh_64086551_201801;Password=sasa;User ID=sa;Persist Security Info=True</PohodaDB>
+    <FASKDB>Data Source=192.168.1.121\SQLEXPRESS;Initial Catalog=FASKPOH_I_Tec_Dasenka;Persist Security Info=True;User ID=sa;Password=sasa</FASKDB>
+  </ConnectionStrings>
+  <Tisk>
+    <Tisk_Font_Size_ZnakuNaRadek>91</Tisk_Font_Size_ZnakuNaRadek>
+    <Tisk_Font_Size_Width>14</Tisk_Font_Size_Width>
+    <Tisk_Font_Size_SirkaStitku>562</Tisk_Font_Size_SirkaStitku>
+    <Tisk_Font_Size_Medzera>8</Tisk_Font_Size_Medzera>
+    <Tisk_Font_Size_Height>15</Tisk_Font_Size_Height>
+    <Tisk_Adresa_Jednotlivo>false</Tisk_Adresa_Jednotlivo>
+  </Tisk>
+  <Expedice>
+    <StatusObjectsDirectory>Logs\SoDir\</StatusObjectsDirectory>
+    <HesloStornoExpedice>1234</HesloStornoExpedice>
+    <Expedice_Baleni_AfterDataProcessed_Action_P1 />
+    <Expedice_Baleni_AfterDataProcessed_Action_P2 />
+    <Expedice_Baleni_AfterDataProcessed_Action />
+    <Expedice_AfterDataProcessed_Action />
+    <Expedice_AfterDataProcessed_Action_P2 />
+    <Expedice_AfterDataProcessed_Action_P1 />
+    <Expedice_SSCC_Generovat_SEQUENCE>123</Expedice_SSCC_Generovat_SEQUENCE>
+    <Expedice_AfterDataProcessed_Action_Asynchronous>false</Expedice_AfterDataProcessed_Action_Asynchronous>
+    <Expedice_Baleni_AfterDataProcessed_Action_Asynchronous>false</Expedice_Baleni_AfterDataProcessed_Action_Asynchronous>
+    <Expedice_AfterData_Generate_Prijemka>true</Expedice_AfterData_Generate_Prijemka>
+  </Expedice>
+</Konfig>

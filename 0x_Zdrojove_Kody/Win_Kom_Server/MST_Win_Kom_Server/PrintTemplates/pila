@@ -1,0 +1,16 @@
+Stitek
+
+loginid:$loginid$
+machineid:$machineid$
+dateeve:$dateeve$
+qty:$qty$
+qtyReal:$qtyReal$
+description:$description$
+barcodeReaded:$barcodeReaded$
+barcodeSended:$barcodeSended$
+zakazka:$zakazka$
+popis:$popis$
+faskGUID:$faskGUID$
+reportType:$reportType$
+
+PocetVytisku: $PocetVytisku$

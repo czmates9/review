@@ -1,0 +1,768 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0062)http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/saved_resource"></script><script type="text/javascript" async="" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/ms2_blogs.js"></script><script type="text/javascript" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/ai.js" async=""></script><script type="text/javascript" charset="UTF-8" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/Widget.aspx"></script><meta name="robots" content="index,follow">
+<meta name="GENERATOR" content="Telligent Evolution Platform Developer Build (Build: 5.6.50428.7875)">
+<link rel="pingback" href="http://blogs.msdn.com/b/vsdteam/pingback.aspx">
+<link href="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/7632fe1dd91290a46b3a118f9478cf1b-27cae0dd5641775697cb89e9a8587625-RequestReducedStyle.css" rel="Stylesheet" type="text/css"><link rel="alternate" type="application/rss+xml" title="Site Home (RSS 2.0)" href="http://blogs.msdn.com/rss.aspx">
+<link rel="alternate" type="application/rss+xml" title="MobileDevGroup&#39;s Comments (RSS 2.0)" href="http://blogs.msdn.com/members/MobileDevGroup/comments/rss.aspx">
+<link rel="alternate" type="application/rss+xml" title="MobileDevGroup&#39;s Activities (RSS 2.0)" href="http://blogs.msdn.com/members/MobileDevGroup/activities/rss.aspx">
+<link rel="alternate" type="application/rss+xml" title="Activities of People MobileDevGroup Follows (RSS 2.0)" href="http://blogs.msdn.com/members/MobileDevGroup/activities/followersrss.aspx">
+<link rel="alternate" type="application/rss+xml" title="MobileDevGroup&#39;s Groups Activities (RSS 2.0)" href="http://blogs.msdn.com/members/MobileDevGroup/activities/groupsrss.aspx">
+<link rel="alternate" type="application/rss+xml" title="Visual Studio For Devices (RSS 2.0)" href="http://blogs.msdn.com/b/vsdteam/rss.aspx">
+<link rel="alternate" type="application/atom+xml" title="Visual Studio For Devices (Atom 1.0)" href="http://blogs.msdn.com/b/vsdteam/atom.aspx">
+<link rel="alternate" type="application/rss+xml" title="Visual Studio For Devices - All Comments (RSS 2.0)" href="http://blogs.msdn.com/b/vsdteam/rsscomments.aspx">
+<link rel="alternate" type="application/rss+xml" title="Platform Verification Task - Comments for this post (RSS 2.0)" href="http://blogs.msdn.com/b/vsdteam/rsscomments.aspx?WeblogPostID=756400">
+
+                    
+          
+          <link rel="shortcut icon" type="image/ico" href="http://blogs.msdn.com/themes/MSDN2/favicon.ico">
+          <!--
+            Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx.
+          -->
+          <link href="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/6e455ee01481483d5d047db51a775dad-ffc9f7e1f0412800af51bef62a866f63-RequestReducedStyle.css" rel="Stylesheet" type="text/css"><script src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/jquery-1.5.2.min.js" type="text/javascript" language="javascript"></script>
+                            
+          <link type="text/css" rel="stylesheet" href="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/DynamicStyle.aspx" media="screen,print">
+          <link type="text/css" rel="stylesheet" href="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/DynamicStyle(1).aspx" media="screen,print">
+        
+          <!--[if lte IE 6]>
+              <link type="text/css" rel="stylesheet" href="/themes/MSDN2/css/ie6.css" media="screen,print" />
+          <![endif]-->
+                  <meta name="msvalidate.01" content="B717AD6FC29D3A844832AF011B5F9E4C">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blogs.msdn.com/b/vsdteam/rsd.ashx">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" title="WLWManifest" href="http://blogs.msdn.com/b/vsdteam/wlwmanifest.ashx">
+
+        <!--
+            Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx.
+          -->
+        <script src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/jquery-1.5.2.min.js" type="text/javascript" language="javascript"></script>
+    <title>
+	Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs
+</title><script type="text/javascript" charset="utf-8" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/metrics.js"></script><style type="text/css"></style><script type="text/javascript" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/jquery.tmpl.min.js"></script><link href="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/UnifiedBaseballCard.css" rel="stylesheet" type="text/css"><link href="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/usercard.css" rel="stylesheet" type="text/css"><script type="text/javascript" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/jquery.timeago.js"></script><script type="text/javascript" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/jquery.textfill.js"></script><script type="text/javascript" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/widgets.js"></script></head>
+	<body spellcheck="true">
+		<form name="aspnetForm" method="post" action="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs.html" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="ctl00_content_ctl00_w_52320__ac9b8d_ctl00_ctl00_PlaceHolder1_ctl04_bpCommentForm_ctl04_invisibleCaptcha_answer" id="ctl00_content_ctl00_w_52320__ac9b8d_ctl00_ctl00_PlaceHolder1_ctl04_bpCommentForm_ctl04_invisibleCaptcha_answer" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTM5OTAxNDYyNWRkvI787cXLvh9XHlDReEjVejxzcZ4=">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/022892eeb2fae89b75b83e091bf9fc43-d127f0fc35eb773887b0302d454d76c1-RequestReducedScript.js" type="text/javascript"></script>
+
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="84C00179">
+</div>
+			
+            
+                
+            
+            <div class="header-fragments-header"></div>
+<div class="header-fragments"><div class="header-fragment-outer top-bar msdn-header-fragment-outer msdn-top-bar"><div class="header-fragment-inner top-bar msdn-header-fragment-inner msdn-top-bar"><div class="header-fragment welcome-message" id="header-fragment-1402503690">
+
+
+<!-- always render -->
+</div><div class="header-fragment login-logout" id="header-fragment-1402503691">
+
+
+
+
+
+        <div class="navigation-list-header"></div>
+        <ul class="navigation-list">
+
+            <li class="navigation-item">
+                <span id="ctl00_header_fragment_1402503691__ac9b8d_ctl00_ctl02_ctl05_WLIDLoginButton1" class="internal-link live-id-button"><a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=12&ct=1439387889&rver=6.0.5286.0&wp=MBI&wreply=http:%2F%2Fblogs.msdn.com%2Fb%2Fvsdteam%2Farchive%2F2006%2F09%2F15%2F756400.aspx&lc=1033&id=271611">Sign in</a></span>
+            </li>
+        </ul>
+        <div class="navigation-list-footer"></div>
+    </div><div class="header-fragment user-welcome-without-login" id="header-fragment-1402503692">
+
+ &nbsp;<!-- always render -->
+
+</div></div></div><div class="header-fragment blog-banner" id="header-fragment-1402503693">
+
+
+
+<div class="site-banner blog-banner">
+
+<h1 class="blog-banner-name"><a href="http://blogs.msdn.com/b/vsdteam/">Visual Studio For Devices</a></h1>
+<div class="blog-banner-description">A Team blog from the Visual Studio for Devices Team</div>
+</div>
+
+</div></div>
+<div class="header-fragments-footer"></div>
+			
+    <div class="content-fragment-page post" id="ctl00_content_ctl00_page"><div class="layout">
+<div class="layout-header"></div>
+<div class="layout-content content-left-sidebar-right" id="ctl00_content_ctl00_layout">
+<div class="layout-region right-sidebar" id="ctl00_content_ctl00_right-sidebar">
+<div class="layout-region-inner right-sidebar"><div class="content-fragment c-t-f-widget no-wrapper-with-spacing with-header" id="fragment-52310">
+<div class="content-fragment-inner msdn-content-fragment-inner"><div class="content-fragment-top msdn-content-fragment-top"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div><div class="content-fragment-header"><div>Translate This Page</div></div>
+<div class="content-fragment-content">
+
+
+     <!--
+         
+           localize text, such as translate this & powered by 
+           
+           
+            -->
+<div id="MicrosoftTranslatorWidget" style="width: 275px; border: 2px solid rgb(51, 51, 51); direction: ltr; min-height: 83px; background-image: url(data:image/x-ms-bmp;base64,Qk2eAAAAAAAAADYAAAAoAAAAAQAAABoAAAABABgAAAAAAGgAAAAAAAAAAAAAAAAAAAAAAAAAgICA/3p6ev90dHT/bm5u/2hoaP9iYmL/XFxc/1ZWVv9QUFD/S0tL/0VFRf8/Pz//OTk5/4CAgP+FhYX/i4uL/5GRkf+Xl5f/nZ2d/6Ojo/+pqan/r6+v/7S0tP+6urr/wMDA/8bGxv8=); background-color: rgb(204, 204, 204); background-repeat: repeat-x;" class="" translate="no"><div id="MSTWContent"><div id="MSTWHeader" style="border-color: rgb(158, 158, 158);"><span class="MSTWBox"><span id="MSTWHeaderText" style="width: 160px;">Přeložit tuto stránku</span></span><span class="MSTWBox"><select name="MSTWMenu" id="MSTWMenu" style="margin-top: 2px;"><option value="ar">Arabština</option><option value="bs-latn">Bosenština (latinka)</option><option value="bg">Bulharština</option><option selected="selected" value="cs">Čeština</option><option value="da">Dánština</option><option value="et">Estonština</option><option value="fi">Finština</option><option value="fr">Francouzština</option><option value="ht">Haitská kreolština</option><option value="he">Hebrejština</option><option value="hi">Hindština</option><option value="mww">Hmong Daw</option><option value="nl">Holandština</option><option value="hr">Chorvatština</option><option value="id">Indonéština</option><option value="it">Italština</option><option value="ja">Japonština</option><option value="ca">Katalánština</option><option value="tlh">Klingonština</option><option value="ko">Korejština</option><option value="lt">Litevština</option><option value="lv">Lotyština</option><option value="hu">Maďarština</option><option value="ms">Malajština</option><option value="mt">Maltština</option><option value="de">Němčina</option><option value="no">Norština</option><option value="fa">Perština</option><option value="pl">Polština</option><option value="pt">Portugalština</option><option value="otq">Querétaro Otomi</option><option value="ro">Rumunština</option><option value="ru">Ruština</option><option value="el">Řečtina</option><option value="sk">Slovenština</option><option value="sl">Slovinština</option><option value="sr-cyrl">Srbština (cyrilice)</option><option value="sr-latn">Srbština (latinka)</option><option value="es">Španělština</option><option value="sv">Švédština</option><option value="th">Thajština</option><option value="zh-cht">Tradiční čínština</option><option value="tr">Turečtina</option><option value="uk">Ukrajinština</option><option value="ur">Urdština</option><option value="cy">Velština</option><option value="vi">Vietnamština</option><option value="yua">Yucatec Maya</option><option value="zh-chs">Zjednodušená čínština</option></select><a id="MSTWGoButton" title="Přeložit tuto stránku" class="MSTWButtonLink" href="javascript: Přeložit tuto stránku" style="overflow: hidden; border-color: rgb(158, 158, 158); background-image: url(data:image/x-ms-bmp;base64,Qk2GAAAAAAAAADYAAAAoAAAAAQAAABQAAAABABgAAAAAAFAAAAAAAAAAAAAAAAAAAAAAAAAA5ubm/+Pj4//g4OD/3t7e/9vb2//Z2dn/1tbW/9TU1P/R0dH/z8/P/+bm5v/o6Oj/6+vr/+3t7f/w8PD/8vLy//X19f/39/f/+vr6//z8/P8=); background-repeat: repeat-x;"><img id="MSTWGoImage" src="data:image/gif;base64,R0lGODlhGAASAHAAACH5BAEAAP8ALAAAAAAYABIAhwAAAP%2f%2f%2fwAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAg8AP8JHEiwoMGDCBMqXMiwIcMAARwihAhRYkGKFC0KxIjRIkeODj9%2bfCiyYsOSHkFq7KhxY8SW%0d%0aMGPKRBgQADs%3d" style="border-width:0px;"></a></span></div><div id="MSTWFooter"><span id="MSTWBrand" class="MSTWBox"><a id="MSTWBrandLink" title="Microsoft® Translator" href="http://www.bing.com/translator?ref=MSTWidget" target="_blank"><span style="font-family: Segoe UI; direction: ltr;">Microsoft<sup style="vertical-align: super; font-size: 70%;">®</sup> Translator</span></a></span><span id="MSTWGetShare" class="MSTWBox"><a id="MSTWGetButton" title="Získat tuto pomůcku pro svou webovou stránku" class="MSTWButtonLink" href="http://www.microsofttranslator.com/widget/?ref=MSTWidget" target="_blank" style="border-color: rgb(158, 158, 158);"><img id="MSTWGetImage" src="data:image/gif;base64,R0lGODlhGAASAPcAAAAAAP%2f%2f%2fwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAP8ALAAAAAAYABIA%0d%0aAAhBAP8JHEiwoMGDCBMqXMiwocOHCAMEGCgRYkWCFxlmxDhx4caCH0F2TBiSI8mRJw%2bWVIny38qI%0d%0aI19CnEmzpk2DAQEAOw%3d%3d" style="border-width:0px;"></a><a id="MSTWShareButton" title="Sdílet" class="MSTWButtonLink" href="mailto:?charset=utf-8&subject=Vyzkou%C5%A1ejte%20tuto%20str%C3%A1nku%20v%20jazyce%20%C4%8Ce%C5%A1tina%20p%C5%99elo%C5%BEenou%20z%20jazyka%20Angli%C4%8Dtina&body=P%C5%99elo%C5%BEen%C3%BD%20text%3A%20http%3A%2F%2Fblogs.msdn.com%2Fb%2Fvsdteam%2Farchive%2F2006%2F09%2F15%2F756400.aspx%23mstto%3Dcs%0D%0AP%C5%AFvodn%C3%AD%20text%3A%20http%3A%2F%2Fblogs.msdn.com%2Fb%2Fvsdteam%2Farchive%2F2006%2F09%2F15%2F756400.aspx%0D%0A%0D%0AAutomatick%C3%BD%20p%C5%99eklada%C4%8D%20pou%C5%BE%C3%ADv%C3%A1%20technologii%20Microsoft%C2%AE%20Translator%0D%0Ahttp%3A%2F%2Fwww.bing.com%2Ftranslator" style="border-color: rgb(158, 158, 158);"><img id="MSTWShareImage" src="data:image/gif;base64,R0lGODlhGAASAPcAAAAAAP%2f%2f%2fwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0d%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAP8ALAAAAAAYABIA%0d%0aAAhHAP8JHEiwoMGDCBMqXMiwocOHBQNInEiRokKJFwNc%2fKfxoMaOCDuCHChyo8CRIEcaLGmxZMKP%0d%0aITlmnPmyok2MEHPq3MlTYUAAOw%3d%3d" style="border-width:0px;"></a></span></div><div id="MSTWHidden" style="display: none;"><span id="MSTWCheckOut">Vyzkoušejte tuto stránku v jazyce {0} přeloženou z jazyka {1}</span><span id="MSTWTranslatedFrom">přeloženou z jazyka</span><span id="MSTWOriginal">Původní text:</span><span id="MSTWTranslated">Přeložený text:</span><span id="MSTWPoweredBy">Automatický překladač používá technologii Microsoft® Translator</span><span id="MSTWStart">Zahájit překlad</span><span id="MSTWStop">Zastavit překlady</span><span id="MSTWClose">Zavřít</span><span id="MSTWCloseShowOrig">Zavřít a zobrazit původní stránku</span><span id="MSTWLangNotSup"></span><span id="MSTWSelect">Vybrat</span></div></div></div>
+</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom msdn-content-fragment-bottom"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment blog-links no-wrapper-with-spacing with-header" id="fragment-52311">
+<div class="content-fragment-inner msdn-content-fragment-inner"><div class="content-fragment-top msdn-content-fragment-top"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div><div class="content-fragment-header"><div>Options</div></div>
+<div class="content-fragment-content">
+
+		<div class="navigation-list-header"></div>
+		<ul class="navigation-list">
+	<li class="navigation-item"><a class="internal-link view-application" href="http://blogs.msdn.com/b/vsdteam/"><span></span>Blog Home</a></li><li class="navigation-item"><a class="internal-link view-contact" href="http://blogs.msdn.com/b/vsdteam/contact.aspx"><span></span>Email Blog Author</a></li><li class="navigation-item"><a class="internal-link email-post" href="mailto:?subject=Platform%20Verification%20Task&body=http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx">
+		<span></span>Share this
+	</a></li><li class="navigation-item"><a class="internal-link rss" href="http://blogs.msdn.com/b/vsdteam/rss.aspx"><span></span>RSS for posts</a></li><li class="navigation-item"><a class="internal-link rss" href="http://blogs.msdn.com/b/vsdteam/atom.aspx"><span></span>Atom</a></li><li id="" rsscomments"""="" class="navigation-item"><a class="internal-link rss" href="http://blogs.msdn.com/b/vsdteam/rsscomments.aspx"><span></span>RSS for comments</a></li>
+		</ul>
+		<div class="navigation-list-footer"></div>
+	</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom msdn-content-fragment-bottom"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment search-form no-wrapper-with-spacing with-header" id="fragment-52312">
+<div class="content-fragment-inner msdn-content-fragment-inner"><div class="content-fragment-top msdn-content-fragment-top"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div><div class="content-fragment-header"><div>Search</div></div>
+<div class="content-fragment-content">
+
+<div class="field-list-header">
+</div>
+<fieldset class="field-list">
+    <ul class="field-list">
+        <li class="field-item search">
+            <div id="search-allblogs-container" style="display: none;">
+                <span class="field-item-input">
+                    <input id="SearchTextBox_AllBlogs" name="SearchTextBox_AllBlogs" type="text" class="searchField" maxlength="64" size="45" autocomplete="off" title="Search MSDN with Bing" style="color: rgb(170, 170, 170); font-style: italic;">
+                    <input id="SearchButton_AllBlogs" name="SearchButton_AllBlogs" type="button" class="search-button" title="Search MSDN with Bing">
+                <div id="SearchFlyoutContainer" style="display: none; text-align: left; border: 1px solid buttonshadow; position: absolute; z-index: 1000; padding: 2px; color: rgb(0, 0, 0); font-family: Arial; font-size: 11px; background-color: rgb(255, 255, 255);"><div id="SuggestionContainer"><ul style="list-style: none; padding: 4px 2px 0px 1px; cursor: pointer; margin: 1px; white-space: nowrap;"></ul></div></div></span>
+            </div>
+            <div id="search-thisblog-container">
+                <span class="field-item-input">
+                    <input id="SearchTextBox_ThisBlog" name="SearchTextBox_ThisBlog" type="text" class="searchField" maxlength="64" size="45" autocomplete="off" title="Search MSDN with Bing" style="color: rgb(170, 170, 170); font-style: italic;">
+                    <input id="SearchButton_ThisBlog" name="SearchButton_ThisBlog" type="button" class="search-button" title="Search MSDN with Bing">
+                <div id="SearchFlyoutContainer" style="display: none; text-align: left; border: 1px solid buttonshadow; position: absolute; z-index: 1000; padding: 2px; color: rgb(0, 0, 0); font-family: Arial; font-size: 11px; background-color: rgb(255, 255, 255);"><div id="SuggestionContainer"><ul style="list-style: none; padding: 4px 2px 0px 1px; cursor: pointer; margin: 1px; white-space: nowrap;"></ul></div></div></span>
+            </div>
+        </li>
+    </ul>
+</fieldset>
+<div class="field-list-footer">
+    <div id="search-switch-container">
+        <span style="display: inline-block">
+            <input type="radio" name="SearchTypeRadio" value="ThisBlog" id="ThisBlog" checked="checked"><label for="ThisBlog" id="ThisBlogText">Search this blog</label></span>
+        <span style="display: inline-block">
+            <input type="radio" name="SearchTypeRadio" value="AllBlogs" id="AllBlogs"><label for="AllBlogs" id="AllBlogsText">Search all blogs</label></span>
+    </div>
+</div>
+<script type="text/javascript">
+var elmSearchAll = $('#search-allblogs-container').hide();
+var elmSearchThis = $('#search-thisblog-container');
+
+// try to get the blog id, if we fail, then we aren't on a blog and just use the regular search approach       
+(3844 === -1) && $('#search-switch-container').hide();
+
+$(document).ready(function() {
+    $('#ThisBlog').click(function () {
+        var self = $(this);
+        if (self.is(':checked')) {
+            elmSearchAll.hide();
+            elmSearchThis.show();
+        }
+    });
+    
+    $('#AllBlogs').click(function () {
+        var self = $(this);
+        if (self.is(':checked')) {
+            elmSearchThis.hide();
+            elmSearchAll.show();
+        }
+    });
+});
+</script>
+<script src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/SearchBox.jss" type="text/javascript" language="javascript"></script>
+<script src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/SearchBox(1).jss" type="text/javascript" language="javascript"></script>
+</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom msdn-content-fragment-bottom"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment tag-cloud no-wrapper-with-spacing with-header" id="fragment-52313">
+<div class="content-fragment-inner msdn-content-fragment-inner"><div class="content-fragment-top msdn-content-fragment-top"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div><div class="content-fragment-header"><div>Tags</div></div>
+<div class="content-fragment-content">
+<div class="tag-list-header"></div><ul class="tag-list">
+<li class="tag-item level-2"><a href="http://blogs.msdn.com/b/vsdteam/archive/tags/Author_3A00_+Amit+Chopra/" rel="tag">Author: Amit Chopra</a></li>
+<li class="tag-item level-6"><a href="http://blogs.msdn.com/b/vsdteam/archive/tags/Author_3A00_+Amit+Chopra+Orcas/" rel="tag">Author: Amit Chopra Orcas</a></li>
+<li class="tag-item level-1"><a href="http://blogs.msdn.com/b/vsdteam/archive/tags/Author_3A00_+Neil+Enns/" rel="tag">Author: Neil Enns</a></li>
+<li class="tag-item level-4"><a href="http://blogs.msdn.com/b/vsdteam/archive/tags/Author_3A00_+Ori+Amiga/" rel="tag">Author: Ori Amiga</a></li>
+<li class="tag-item level-3"><a href="http://blogs.msdn.com/b/vsdteam/archive/tags/connectivity/" rel="tag">connectivity</a></li>
+<li class="tag-item level-6"><a href="http://blogs.msdn.com/b/vsdteam/archive/tags/eMbedded+Visual+C_2B002B00_+4-0/" rel="tag">eMbedded Visual C++ 4.0</a></li>
+<li class="tag-item level-2"><a href="http://blogs.msdn.com/b/vsdteam/archive/tags/FAQs/" rel="tag">FAQs</a></li>
+<li class="tag-item level-1"><a href="http://blogs.msdn.com/b/vsdteam/archive/tags/Managed+Development/" rel="tag">Managed Development</a></li>
+<li class="tag-item level-3"><a href="http://blogs.msdn.com/b/vsdteam/archive/tags/Native+Development/" rel="tag">Native Development</a></li>
+<li class="tag-item level-6"><a href="http://blogs.msdn.com/b/vsdteam/archive/tags/orcas+beta1+vsd+unittesting/" rel="tag">orcas beta1 vsd unittesting</a></li>
+<li class="tag-item level-5"><a href="http://blogs.msdn.com/b/vsdteam/archive/tags/Shows+and+Events/" rel="tag">Shows and Events</a></li>
+<li class="tag-item level-5"><a href="http://blogs.msdn.com/b/vsdteam/archive/tags/SP1/" rel="tag">SP1</a></li>
+</ul>
+<div class="tag-list-footer"></div>
+</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom msdn-content-fragment-bottom"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment blog-archive-list no-wrapper-with-spacing with-header" id="fragment-52314">
+<div class="content-fragment-inner msdn-content-fragment-inner"><div class="content-fragment-top msdn-content-fragment-top"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div><div class="content-fragment-header"><div>Archive</div></div>
+<div class="content-fragment-content">
+
+		<div class="content-list-header"></div>
+		<div class="content-list-name">Archives</div>
+		<ul class="content-list">
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2007/12.aspx">December 2007</a> (2)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2007/11.aspx">November 2007</a> (3)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2007/05.aspx">May 2007</a> (1)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2007/04.aspx">April 2007</a> (1)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2007/03.aspx">March 2007</a> (2)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2007/01.aspx">January 2007</a> (1)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2006/12.aspx">December 2006</a> (1)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2006/11.aspx">November 2006</a> (1)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2006/09.aspx">September 2006</a> (1)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2006/07.aspx">July 2006</a> (5)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2006/06.aspx">June 2006</a> (6)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2006/05.aspx">May 2006</a> (3)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2006/04.aspx">April 2006</a> (2)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2006/02.aspx">February 2006</a> (2)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2005/12.aspx">December 2005</a> (4)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2005/11.aspx">November 2005</a> (6)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2005/10.aspx">October 2005</a> (2)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2005/09.aspx">September 2005</a> (3)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2005/08.aspx">August 2005</a> (2)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2005/07.aspx">July 2005</a> (2)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2005/06.aspx">June 2005</a> (8)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2005/05.aspx">May 2005</a> (3)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2005/04.aspx">April 2005</a> (10)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2005/03.aspx">March 2005</a> (3)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2005/02.aspx">February 2005</a> (2)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2005/01.aspx">January 2005</a> (3)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2004/12.aspx">December 2004</a> (3)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2004/10.aspx">October 2004</a> (4)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2004/09.aspx">September 2004</a> (8)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2004/08.aspx">August 2004</a> (7)</li>
+	
+		<li class="content-item"><a class="internal-link view-post-archive-list" href="http://blogs.msdn.com/b/vsdteam/archive/2004/07.aspx">July 2004</a> (8)</li>
+	
+		</ul>
+		<div class="content-list-footer"></div>
+	
+</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom msdn-content-fragment-bottom"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div></div></div>
+</div>
+</div>
+<div class="layout-region content" id="ctl00_content_ctl00_content">
+<div class="layout-region-inner content"><div class="content-fragment blog-title full-border" id="fragment-52315">
+<div class="content-fragment-inner msdn-content-fragment-inner"><div class="content-fragment-top msdn-content-fragment-top"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div><div class="content-fragment-content">
+<h1 class="title">
+	    
+			        
+			    
+	                Platform Verification Task
+			    
+	</h1></div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom msdn-content-fragment-bottom"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment blog-bread-crumbs no-wrapper" id="fragment-52316">
+<div class="content-fragment-inner msdn-content-fragment-inner"><div class="content-fragment-top msdn-content-fragment-top"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div><div class="content-fragment-content">
+
+
+<div class="breadcrumb-list-header"></div>
+<div class="breadcrumb-list">
+	<span class="breadcrumb-item"><a class="internal-link view-home" href="http://blogs.msdn.com/">MSDN Blogs</a></span>
+  
+	
+
+	
+			<span class="separator"> &gt; </span>
+			<span class="breadcrumb-item">
+		<a href="http://blogs.msdn.com/b/vsdteam/">Visual Studio For Devices</a>
+			</span>
+		
+	
+	
+			<span class="separator"> &gt; </span>
+			<span class="breadcrumb-item">
+		<a href="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs.html" class="last">Platform Verification Task</a>
+			</span>
+		
+
+	
+</div>
+<div class="breadcrumb-list-footer"></div>
+</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom msdn-content-fragment-bottom"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment blog-post no-wrapper" id="fragment-52317">
+<div class="content-fragment-inner msdn-content-fragment-inner"><div class="content-fragment-top msdn-content-fragment-top"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div><div class="content-fragment-content">
+
+<div class="full-post-header"></div>
+<div class="full-post">
+	<h3 class="post-name">Platform Verification Task</h3>
+	
+	        <div class="post-rating">
+	            Rate This<br>
+	    <span id="ctl00_content_ctl00_w_52317__ac9b8d_ctl00_ctl01" title="Rated Excellent [5 out of 5]." class="rating readonly"><img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/star-left-on.png" align="absmiddle" border="0" style="border-width: 0px;"><img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/star-right-on.png" align="absmiddle" border="0" style="border-width: 0px;"><img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/star-left-on.png" align="absmiddle" border="0" style="border-width: 0px;"><img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/star-right-on.png" align="absmiddle" border="0" style="border-width: 0px;"><img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/star-left-on.png" align="absmiddle" border="0" style="border-width: 0px;"><img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/star-right-on.png" align="absmiddle" border="0" style="border-width: 0px;"><img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/star-left-on.png" align="absmiddle" border="0" style="border-width: 0px;"><img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/star-right-on.png" align="absmiddle" border="0" style="border-width: 0px;"><img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/star-left-on.png" align="absmiddle" border="0" style="border-width: 0px;"><img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/star-right-on.png" align="absmiddle" border="0" style="border-width: 0px;"></span><input type="hidden" value="5" id="ctl00_content_ctl00_w_52317__ac9b8d_ctl00_ctl01_Value">
+	        </div>
+	    
+    <div class="post-author">
+        <span class="avatar"><a href="http://blogs.msdn.com/3844/ProfileUrlRedirect.ashx"><img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/anonymous.gif" alt="" style="border-width:0px;max-height:32px;max-width:32px;"></a></span>
+        
+         <span class="profile-usercard-hover" data-profile-userid="00000000000000000000000000000000">
+            <span class="user-name"><a class="internal-link view-user-profile" href="http://blogs.msdn.com/3844/ProfileUrlRedirect.ashx"><span></span>MobileDevGroup</a></span>
+       
+            
+        </span>
+    </div>
+    <div class="post-date">
+        <span class="value">
+            15 Sep 2006 3:20 PM
+        </span>
+    </div>
+    <div class="post-attributes">
+        <div class="attribute-list-header"></div>
+        <ul class="attribute-list">
+             <li class="attribute-item post-reply-count">
+                <span class="attribute-name">Comments</span>
+                <span class="attribute-value"><a href="http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx#comments" class="internal-link view-replies"><span></span>13</a></span>
+             </li>
+        </ul>
+        <div class="attribute-list-footer"></div>
+    </div>
+    <div class="post-content user-defined-markup"><p class="MsoNormal" style="MARGIN: 0in 0in 10pt; TEXT-INDENT: 0.5in; TEXT-ALIGN: justify; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><!--?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /--><o:p><font face="Arial"></font></o:p></span></p><b><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri">
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt; mso-pagination: none; mso-layout-grid-align: none"><b><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><font face="Arial">What is Platform Verification Task?<o:p></o:p></font></span></b></p></span></b><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri">
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt; TEXT-INDENT: 0.5in; TEXT-ALIGN: justify; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><font face="Arial">Smart Device development involves writing applications that target a particular device platform. Toolbox filtering, the unsupported control designer and IntelliSense provide design time aid to the developer to add only PMEs (properties/methods/events) supported by the current platform to his application. But in certain scenarios the developer might have written an application for a particular platform and then ported it to another platform. In this scenario it is necessary to identify the PMEs not supported by the new platform at build time. These errors cannot be caught by simply compiling the project against NETCF assemblies (For example, if your project contains a "Button" control, then, building it against the NETCF system assemblies will always succeed, since "System.Windows.Forms.Button" is a supported NETCF control. But "System.Windows.Forms.Button" is not supported by all device platforms (For example, Smartphone does not support it)). <strong>Platform Verification Task (PVT) is a post-build validation step to catch the unsupported PMEs before they can result in a runtime exception.</strong></font></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt; TEXT-INDENT: 0.5in; TEXT-ALIGN: justify; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><strong><o:p></o:p></strong></span><font face="Arial">&nbsp;</font></p></span>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt; mso-pagination: none; mso-layout-grid-align: none"><b><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><font face="Arial">Just another MSBuild target:<o:p></o:p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt; TEXT-INDENT: 0.5in; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><font face="Arial">So what is this post build step and how does fit into Visual Studio build system? As you might be aware VS2005 uses the <u><span style="COLOR: #0070c0"><a href="http://msdn2.microsoft.com/en-us/library/wea2sca5.aspx"><span style="mso-bidi-font-family: Calibri">MSBuild</span></a></span></u> engine from the IDE to perform all compile time actions. The project file contains the information about the set of target files (which contain the list of MSBuild targets) that need to be imported and executed by the MSBuild engine. The set of targets specific to Smart Device projects are defined in Microsoft.CompactFramework.Common.targets file (installed in the System .NET Framework directory) and are imported inside each Smart device project’s project file.<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt; TEXT-INDENT: 0.5in; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><font face="Arial">Platform Verification task is one of the MSBuild targets added to Microsoft.CompactFramework.Common.targets file which is executed after the project has been built. If project build is successful, then PVT is executed with the following parameters:<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l6 level1 lfo1; mso-pagination: none; mso-layout-grid-align: none"><font face="Arial"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore">1)<span style="FONT: 7pt &#39;Times New Roman&#39;"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span></span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri">PlatformFamilyName (example, PocketPC)<o:p></o:p></span></font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l6 level1 lfo2; mso-pagination: none; mso-layout-grid-align: none"><font face="Arial"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore">2)<span style="FONT: 7pt &#39;Times New Roman&#39;"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span></span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri">PlatformID (example, ID corresponding to PPC2003)<o:p></o:p></span></font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l6 level1 lfo3; mso-pagination: none; mso-layout-grid-align: none"><font face="Arial"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore">3)<span style="FONT: 7pt &#39;Times New Roman&#39;"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span></span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri">SourceAssembly name<o:p></o:p></span></font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l6 level1 lfo4; mso-pagination: none; mso-layout-grid-align: none"><font face="Arial"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore">4)<span style="FONT: 7pt &#39;Times New Roman&#39;"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span></span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri">ReferencePath, i.e. assembly path<o:p></o:p></span></font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l6 level1 lfo5; mso-pagination: none; mso-layout-grid-align: none"><font face="Arial"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore">5)<span style="FONT: 7pt &#39;Times New Roman&#39;"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span></span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri">TreatWarningsAsErrors , a flag specifying whether PVT should generate Warnings or Errors and <o:p></o:p></span></font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l6 level1 lfo6; mso-pagination: none; mso-layout-grid-align: none"><font face="Arial"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore">6)<span style="FONT: 7pt &#39;Times New Roman&#39;"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span></span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri">PlatformVersion (example NETCF v2)<o:p></o:p></span></font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt; TEXT-INDENT: 0.5in; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><o:p><font face="Arial">&nbsp;</font></o:p></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt; mso-pagination: none; mso-layout-grid-align: none"><b><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><font face="Arial">What is required? A managed code analysis tool to examine the managed assemblies for correctness issues. Every managed code developer already uses it, isn’t it?<o:p></o:p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt; TEXT-INDENT: 0.5in; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><font face="Arial">As stated above, PVT is not a build time step. What this means is that PVT does not parse the source code to identify unsupported PMEs. It parses the IL to do the same work. This is where <u><span style="COLOR: #0070c0"><a href="http://msdn.microsoft.com/netframework/programming/classlibraries/fxcop/"><span style="mso-bidi-font-family: Calibri"><font color="#0000ff">FXCop</font></span></a></span></u> comes into picture. FXCop architecture provides the necessary extensibility to define customized FXCop rules. FXCop rules are generally used to identify violations of design guidelines in the code, but the user can define just about any policy specific to his requirement. <o:p></o:p></font></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt; TEXT-INDENT: 0.5in; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><font face="Arial">FXCop has three main facets:<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l0 level1 lfo7; mso-pagination: none; mso-layout-grid-align: none"><font face="Arial"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore">1)<span style="FONT: 7pt &#39;Times New Roman&#39;"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span></span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri">Targets - the assemblies to be analyzed<o:p></o:p></span></font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l0 level1 lfo8; mso-pagination: none; mso-layout-grid-align: none"><font face="Arial"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore">2)<span style="FONT: 7pt &#39;Times New Roman&#39;"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span></span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri">Rules - the checks to be performed <o:p></o:p></span></font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l0 level1 lfo9; mso-pagination: none; mso-layout-grid-align: none"><font face="Arial"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore">3)<span style="FONT: 7pt &#39;Times New Roman&#39;"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span></span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri">Messages - the output from the rules<o:p></o:p></span></font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt; TEXT-INDENT: 0.5in; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><font face="Arial">PVT internally implements a customized FXCop rule which performs the checks for unsupported PMEs.<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt; TEXT-INDENT: 0.5in; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><o:p><font face="Arial">&nbsp;</font></o:p></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt; mso-pagination: none; mso-layout-grid-align: none"><b><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><font face="Arial">So how does it all work?<o:p></o:p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><font face="Arial">The basic control flow is as follows:<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l7 level1 lfo10; mso-pagination: none; mso-layout-grid-align: none"><font face="Arial"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore">1)<span style="FONT: 7pt &#39;Times New Roman&#39;"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span></span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri">PVT is invoked with the necessary parameters mentioned above.<o:p></o:p></span></font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l3 level1 lfo11; mso-pagination: none; mso-layout-grid-align: none"><font face="Arial"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore">2)<span style="FONT: 7pt &#39;Times New Roman&#39;"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span></span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri">It identifies the list of assemblies referenced by the source assembly and loads the metadata in the platform specific <a href="http://www.msakademik.net/academicdays2005/Serge_Lidin.ppt"><span style="mso-bidi-font-family: Calibri">asmmeta assemblies</span></a> corresponding to each of the referenced assemblies. (Platform specific asmmeta assemblies </span>are assmeta files which contains the information about platform’s supported PMEs. For each platform there is one assmeta file provided by NETCF. The files are located under %Program files%\Microsoft Visual Studio 8\smartdevices\sdk folder)<span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l8 level1 lfo12; mso-pagination: none; mso-layout-grid-align: none"><font face="Arial"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore">3)<span style="FONT: 7pt &#39;Times New Roman&#39;"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span></span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri">PVT then executes a customized FXCop rule (PlatformVerificationRule) with this metadata and the source assembly.<o:p></o:p></span></font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l2 level1 lfo13; mso-pagination: none; mso-layout-grid-align: none"><font face="Arial"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore">4)<span style="FONT: 7pt &#39;Times New Roman&#39;"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span></span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri">PlatformVerificationRule (PVR) parses the IL; in fact, it is the base FXCop rule that does the parsing. The FXCop analysis engine uses Reflection exposed type system in the assemblies to disassemble IL, build color graphs from assemblies and create control flow graphs from Method. The base FXCop rule lets you ask for higher-level constructs in the MSIL for the code. For identifying whether the application is conformant to the target platform, PVT needs to perform checks only for some constructs (ones which can access platform unsupported PMEs). Hence it overrides the methods which are called when following constructs are identified in the assembly:<o:p></o:p></span></font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 1in; TEXT-INDENT: -0.25in; mso-list: skip; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><font face="Arial">a.<span style="mso-tab-count: 1">&nbsp; </span>Constructor<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 1in; TEXT-INDENT: -0.25in; mso-list: skip; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><font face="Arial">b.<span style="mso-tab-count: 1">&nbsp; </span>Expression statement<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 1in; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><o:p><font face="Arial"></font></o:p></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l5 level1 lfo14; mso-pagination: none; mso-layout-grid-align: none"><font face="Arial"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore">5)<span style="FONT: 7pt &#39;Times New Roman&#39;"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span></span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri">For the above construct types, it performs the following checks in the corresponding overridden methods:<o:p></o:p></span></font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 1in; TEXT-INDENT: -0.25in; mso-list: skip; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><font face="Arial">c.<span style="mso-tab-count: 1">&nbsp;&nbsp; </span>Constructor: In this method, PVR gets the assmeta type of the object getting instantiated and checks whether this type has “SupportedAttribute” attribute set to false. If yes, it generates a message for each violation.<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 1in; TEXT-INDENT: -0.25in; mso-list: skip; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><font face="Arial">d.<span style="mso-tab-count: 1">&nbsp; </span>Expression statement: In this method, PVR checks if the expression statement involves a method call. If so, it gets the assmeta type for the type on which the method is getting called and checks whether this type has “SupportedAttribute” attribute set to false. It also gets the asmmeta type for the method getting called and checks whether it has “SupportedAttribute” attribute set to false. For each violation a Message is generated.<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 0.5in; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><o:p><font face="Arial">&nbsp;</font></o:p></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l1 level1 lfo15; mso-pagination: none; mso-layout-grid-align: none"><font face="Arial"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore">6)<span style="FONT: 7pt &#39;Times New Roman&#39;"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span></span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri">The Messages are then output as Warning/Errors. <o:p></o:p></span></font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt 0.5in; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><o:p><font face="Arial">&nbsp;</font></o:p></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt; mso-pagination: none; mso-layout-grid-align: none"><b><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><font face="Arial">Disabling PlatformVerificationTask: If it is so useful, why will I disable it at all?<o:p></o:p></font></span></b></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt; TEXT-INDENT: 0.5in; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><font face="Arial">Though Platform Verification Task aids the developer in identifying all the unsupported PMEs getting accessed in code at build time itself, it does add quite a bit to the build time. Ideally the developer might like to run PVT only once in a while and not during every build. Currently there is no support in the VS2005 IDE to customize the execution of PVT during build, though we are looking to add support for it in next release. As a workaround for VS2005, PVT execution can be customized by following the steps below:<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; LINE-HEIGHT: normal; mso-list: l4 level1 lfo16; mso-pagination: none; mso-layout-grid-align: none; tab-stops: .5in"><font face="Arial"><span style="FONT-SIZE: 12pt; COLOR: #00007f; mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore">1)<span style="FONT: 7pt &#39;Times New Roman&#39;"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;</font></span></span></span><span style="FONT-SIZE: 12pt; COLOR: #00007f; mso-bidi-font-family: Calibri">Open the file %windir%\Microsoft.NET\Framework\v2.0.50727\Microsoft.CompactFramework.Common.Targets for editing. <o:p></o:p></span></font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; LINE-HEIGHT: normal; mso-list: l4 level1 lfo17; mso-pagination: none; mso-layout-grid-align: none; tab-stops: .5in"><font face="Arial"><span style="FONT-SIZE: 12pt; COLOR: blue; mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore"><font color="#000080">2)</font><span style="FONT: 7pt &#39;Times New Roman&#39;"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;</font></span></span></span><span style="FONT-SIZE: 12pt; COLOR: #00007f; mso-bidi-font-family: Calibri">Go to the line which&nbsp;reads:</span></font><span style="FONT-SIZE: 12pt; mso-bidi-font-family: Calibri"><br><br><font face="Arial"><span style="COLOR: red">Name</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">PlatformVerificationTask</span>"</font><font face="Arial"><span style="COLOR: blue">&gt;<br><br></span><font color="#000080">and change it to:</font></font><span style="COLOR: blue"><br><br></span><font face="Arial"><span style="COLOR: red">Name</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">PlatformVerificationTask</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Condition</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">'$(SkipPlatformVerification)' != 'true'</span>"<span style="COLOR: blue">&gt; <o:p></o:p></span></font></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 10pt; mso-pagination: none; mso-layout-grid-align: none"><span style="FONT-SIZE: 12pt; COLOR: #00007f; LINE-HEIGHT: 115%; mso-bidi-font-family: Calibri"><o:p><font face="Arial">&nbsp;</font></o:p></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; LINE-HEIGHT: normal; mso-list: l9 level1 lfo18; mso-pagination: none; mso-layout-grid-align: none; tab-stops: .5in"><font face="Arial"><span style="FONT-SIZE: 12pt; COLOR: #00007f; mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore">3)<span style="FONT: 7pt &#39;Times New Roman&#39;"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span></span><span style="FONT-SIZE: 12pt; COLOR: #00007f; mso-bidi-font-family: Calibri">Add the SkipPlatformVerification environment variable to the system and set it to "true" (To re-enable Platform Verification set the environment variable to "false")</span></font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; LINE-HEIGHT: normal; mso-list: l9 level1 lfo18; mso-pagination: none; mso-layout-grid-align: none; tab-stops: .5in"><span style="FONT-SIZE: 12pt; COLOR: #00007f; mso-bidi-font-family: Calibri"><o:p><font face="Arial"></font></o:p></span>&nbsp;</p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; LINE-HEIGHT: normal; mso-list: l9 level1 lfo19; mso-pagination: none; mso-layout-grid-align: none; tab-stops: .5in"><font face="Arial"><span style="FONT-SIZE: 12pt; mso-fareast-font-family: Calibri; mso-bidi-font-family: Calibri"><span style="mso-list: Ignore"><font color="#000080">4)</font><span style="FONT: 7pt &#39;Times New Roman&#39;"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span></span><span style="FONT-SIZE: 12pt; COLOR: #00007f; mso-bidi-font-family: Calibri">Restart Visual Studio for the changes to take effect (If building from the command line using MSBuild, add /p:SkipPlatformVerification=true to your command line to turn off the task. You can specify the variable in the project file also, so that this information is persisted across sessions</span><span style="FONT-SIZE: 12pt; mso-bidi-font-family: Calibri">).<o:p></o:p></span></font></p>
+<p><font face="Arial"></font>&nbsp;</p><div style="clear:both;"></div></div>
+    <div class="post-attachment-viewer">
+		
+    </div>
+    <div class="post-actions">
+        <div class="navigation-list-header"></div>
+        <ul class="navigation-list">
+            <!---->
+            <li class="navigation-item"><a class="internal-link view-replies" href="http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx#comments"><span></span>13 Comments</a></li>
+            
+            
+        </ul>
+        <div class="navigation-list-footer"></div>
+    </div>
+    
+</div>
+<div class="full-post-footer"></div></div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom msdn-content-fragment-bottom"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment social-media-sharing no-wrapper" id="fragment-52318">
+<div class="content-fragment-inner msdn-content-fragment-inner"><div class="content-fragment-top msdn-content-fragment-top"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div><div class="content-fragment-content">
+
+<script src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/47499858c4077d6e043f7add14000981-e99ec8f3b45f97b38095df2708dc5898-RequestReducedScript.js" type="text/javascript"></script>
+<div class="ShareThisMainPanel">
+	<div id="ctl00_content_ctl00_w_52318__ac9b8d_ctl00_296a0daf_05a2_420f_8b56_0078421400d0" class="ShareThis_ChildRootPanel" onmouseover="ShareThisChildRootPanelOnmouseOver(this.id);" onmouseout="ShareThisChildRootPanelOnmouseOut(this.id);">
+		<div id="ctl00_content_ctl00_w_52318__ac9b8d_ctl00_ShareThisBtnCollPanel_d01d2c02c4d64b66af4f9d3093390f4a" class="tierOnePanel">
+			<div class="buttonPanel">
+				<a title="Share on Facebook" class="iconsOnPanel" href="http://www.facebook.com/sharer.php?u=http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx&t=Platform+Verification+Task" target="_blank"><img title="Share on Facebook" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/facebook.gif" style="border-width:0px;"></a>
+			</div><div class="buttonPanel">
+				<a title="Share on Twitter" class="iconsOnPanel" href="http://twitter.com/home?status=Platform+Verification+Task%20:%20http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx" target="_blank"><img title="Share on Twitter" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/twitter.gif" style="border-width:0px;"></a>
+			</div><div class="buttonPanel">
+				<a title="Share on Digg" class="iconsOnPanel" href="http://digg.com/submit?url=http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx&title=Platform+Verification+Task" target="_blank"><img title="Share on Digg" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/digg.gif" style="border-width:0px;"></a>
+			</div><div class="buttonPanel">
+				<a title="Share on del.icio.us" class="iconsOnPanel" href="http://del.icio.us/post?url=http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx&title=Platform+Verification+Task" target="_blank"><img title="Share on del.icio.us" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/delicious.gif" style="border-width:0px;"></a>
+			</div>
+		</div><div id="ctl00_content_ctl00_w_52318__ac9b8d_ctl00_ShareThisBtnCollPanel_99e65417cc7449c9afa4b6b91c736e96" class="tierTwoPanel" onclick="TierTwoPanelOnclick(this.id);" onkeypress="if (event.keyCode == 13) TierTwoPanelOnclick(this.id);" onmouseover="TierTwoPanelOnmouseOver(this.id);" onmouseout="TierTwoPanelOnmouseOut(this.id);">
+			<div id="ctl00_content_ctl00_w_52318__ac9b8d_ctl00_ShareThisBtnCollPanel_bf986b77c0f146f2a9ae140ea5723b6d" class="tierTwoRowPanel">
+				<div class="buttonPanel">
+					<a title="Share on Reddit" class="iconsOnPanel" href="http://www.reddit.com/submit?url=http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx&title=Platform+Verification+Task" target="_blank"><img title="Share on Reddit" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/reddit.gif" style="border-width:0px;"></a>
+				</div><div class="buttonPanel">
+					<a title="Share on LinkedIn" class="iconsOnPanel" href="http://www.linkedin.com/shareArticle?mini=true&ro=true&url=http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx&title=Platform+Verification+Task&summary=&source=Microsoft&armin=armin" target="_blank"><img title="Share on LinkedIn" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/linkedin.gif" style="border-width:0px;"></a>
+				</div><div class="buttonPanel">
+					<a title="Share on Slashdot" class="iconsOnPanel" href="http://slashdot.org/bookmark.pl?url=http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx&title=Platform+Verification+Task" target="_blank"><img title="Share on Slashdot" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/slashdot.gif" style="border-width:0px;"></a>
+				</div><div class="buttonPanel">
+					<a title="Share on MySpace" class="iconsOnPanel" href="http://www.myspace.com/Modules/PostTo/Pages/?u=http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx&t=Platform+Verification+Task" target="_blank"><img title="Share on MySpace" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/myspace.gif" style="border-width:0px;"></a>
+				</div>
+			</div><div id="ctl00_content_ctl00_w_52318__ac9b8d_ctl00_ShareThisBtnCollPanel_2f7d78de8ef74da3a13545af6161cf18" class="tierTwoRowPanel">
+				<div class="buttonPanel">
+					<a title="Share on Technorati" class="iconsOnPanel" href="http://technorati.com/faves/?add=http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx" target="_blank"><img title="Share on Technorati" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/technorati.gif" style="border-width:0px;"></a>
+				</div><div class="buttonPanel">
+					<a title="Share on FriendFeed" class="iconsOnPanel" href="http://friendfeed.com/?url=http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx&title=Platform+Verification+Task" target="_blank"><img title="Share on FriendFeed" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/friendfeed.gif" style="border-width:0px;"></a>
+				</div><div class="buttonPanel">
+					<a title="Share on Messenger" class="iconsOnPanel" href="http://profile.live.com/badge?url=http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx&title=Platform+Verification+Task" target="_blank"><img title="Share on Messenger" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/messenger.png" style="border-width:0px;"></a>
+				</div><div class="buttonPanel">
+					<a title="Share on StumbleUpon" class="iconsOnPanel" href="http://www.stumbleupon.com/submit?url=http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx&title=Platform+Verification+Task" target="_blank"><img title="Share on StumbleUpon" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/stumbleupon.gif" style="border-width:0px;"></a>
+				</div>
+			</div>
+		</div>
+	</div><div id="ctl00_content_ctl00_w_52318__ac9b8d_ctl00_ShowMoreLessButtonsPanel_8ceaad6b_d3c8_4230_825e_4d88bfbc1126" tabindex="1" class="ShowMoreLessButtonsPanel" onclick="ShowMoreLessButtonsPanelOnClick(this.id);" onkeypress="if (event.keyCode == 13) ShowMoreLessButtonsPanelOnClick(this.id);" onmouseover="ShowMoreLessButtonsPanelOnmouseOver(this.id);" onmouseout="ShowMoreLessButtonsPanelOnmouseOut(this.id);">
+		<a class="buttonMoreLess" id="btn_more"><img title="More" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/more.gif" style="border-width:0px;"></a><a class="buttonMoreLess" id="btn_less"><img title="Less" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/less.gif" style="border-width:0px;"></a>
+	</div>
+</div><div class="ShareClearFloatsPanel">
+
+</div></div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom msdn-content-fragment-bottom"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment blog-feedback-list no-wrapper with-header" id="fragment-52319">
+<div class="content-fragment-inner msdn-content-fragment-inner"><div class="content-fragment-top msdn-content-fragment-top"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div><div class="content-fragment-header"><div>Blog - Comment List MSDN TechNet</div></div>
+<div class="content-fragment-content">
+
+<script src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/c6cf9e2cff3f0bfc0a1a8c20bf243544-5882c0bb1c3252f4238afcfee921f6f5-RequestReducedScript.js" type="text/javascript"></script>
+<script type="text/javascript">
+    // <![CDATA[
+    (function ($) {
+        $.extend(jQuery.tmpl.tag, {
+            "for": {
+                _default: { $2: "var i=1;i<=1;i++" },
+                open: 'for ($2){',
+                close: '};'
+            }
+        });
+    })(jQuery);
+
+    function findYPos(obj) {
+        var curtop = 0;
+        if (obj.offsetParent) {
+            do {
+                curtop += obj.offsetTop;
+            } while (obj = obj.offsetParent);
+            return [curtop];
+        }
+    }
+
+    var endpoint = '/b/vsdteam/listComments.aspx';
+    var deleteendpoint = '/Utility/ContentFragments/Blogs/FeedbackListAjax.asmx';  
+    $(document).ready(function () {
+        if (window.location.hash) {
+            var commentHash = parseInt(window.location.hash.substring(1, window.location.hash.length));
+            if (!isNaN(commentHash)) {
+                loadComments(0, commentHash, true);
+                return;
+            }
+        }
+
+        loadComments(0, 0, true);
+    });
+
+    function loadComments(page, anchorId, isFirstLoad) {
+        $.ajax({
+            type: 'POST',
+            async: false,
+            contentType: 'application/json',
+            dataType: 'json',
+            url: endpoint + '?blogId=3844&postId=756400&page=' + page + '&commentId=' + anchorId + '&pageSize=1000&firstLoad=' + isFirstLoad + "&time=" + new Date().getTime(),
+            success: function (data) {
+                var pager = $('#pagerContainer');
+
+                $('#commentList').html('');
+                $('#commentList').html($('#commentTemplate').tmpl(data.Comments));
+                $('#pagerContainer').html($('#pagerTemplate').tmpl(data));
+
+                $('.pagingLink').click(function (e) {
+                    e.preventDefault();
+                    loadComments($(this).data('page'), 0, false);
+                    window.scroll(0, findYPos(document.getElementById('commentList')) - 50);
+                    return false;
+                });
+
+                $('.pagingLink').removeClass('selected');
+                $('#pager' + data.CurrentPage).addClass('selected');
+
+	            
+            }
+        });
+    }
+    // ]]>
+</script>
+
+
+<a name="comments"></a>
+<div class="content-list-header"></div>
+<div class="content-list-name">
+    
+            <a class="internal-link rss" href="http://blogs.msdn.com/b/vsdteam/rsscomments.aspx?WeblogPostID=756400"><span></span>Comments</a>
+        
+</div>
+
+
+
+<ul id="commentList" class="content-list"><li id="commentItem761439" class="content-item">         <div class="full-post-outer fiji-full-post-outer"><div class="full-post-header"><div class="r fiji-r"></div></div>         <div class="full-post"><div class="full-post-inner fiji-full-post-inner">             <div class="post-author">                 <span class="avatar">                                          <img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/anonymous.gif" style="border-width:0;max-height:32px;max-width:32px;">                                      </span>                 <span class="profile-usercard-hover" data-profile-userid="00000000000000000000000000000000">                     <span class="user-name">                                                  Dean                                              </span>                 </span>             </div>             <div class="post-date">                 <span class="value">18 Sep 2006 10:08 PM</span>             </div>             <a name="761439" style="padding-left:5px;" href="http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx#761439">#</a>             <div class="post-content user-defined-markup">                 Thank you!
+<br>[url=<a rel="nofollow" target="_new" href="http://gcnpncio.com/rgdt/boce.html">http://gcnpncio.com/rgdt/boce.html</a>]My homepage[/url] | [url=<a rel="nofollow" target="_new" href="http://xpfjjddh.com/vklu/znnu.html">http://xpfjjddh.com/vklu/znnu.html</a>]Cool site[/url]<div style="clear:both;"></div>             </div>             <div class="post-actions">                              </div>         </div>                  <div class="full-post-footer">                      <div class="r wireframe-r"></div>         </div>     </div></div></li>          <li id="commentItem761443" class="content-item">         <div class="full-post-outer fiji-full-post-outer"><div class="full-post-header"><div class="r fiji-r"></div></div>         <div class="full-post"><div class="full-post-inner fiji-full-post-inner">             <div class="post-author">                 <span class="avatar">                                          <img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/anonymous.gif" style="border-width:0;max-height:32px;max-width:32px;">                                      </span>                 <span class="profile-usercard-hover" data-profile-userid="00000000000000000000000000000000">                     <span class="user-name">                                                  Dean                                              </span>                 </span>             </div>             <div class="post-date">                 <span class="value">18 Sep 2006 10:12 PM</span>             </div>             <a name="761443" style="padding-left:5px;" href="http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx#761443">#</a>             <div class="post-content user-defined-markup">                 Thank you!
+<br>[url=<a rel="nofollow" target="_new" href="http://gcnpncio.com/rgdt/boce.html">http://gcnpncio.com/rgdt/boce.html</a>]My homepage[/url] | [url=<a rel="nofollow" target="_new" href="http://xpfjjddh.com/vklu/znnu.html">http://xpfjjddh.com/vklu/znnu.html</a>]Cool site[/url]<div style="clear:both;"></div>             </div>             <div class="post-actions">                              </div>         </div>                  <div class="full-post-footer">                      <div class="r wireframe-r"></div>         </div>     </div></div></li>          <li id="commentItem761444" class="content-item">         <div class="full-post-outer fiji-full-post-outer"><div class="full-post-header"><div class="r fiji-r"></div></div>         <div class="full-post"><div class="full-post-inner fiji-full-post-inner">             <div class="post-author">                 <span class="avatar">                                          <img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/anonymous.gif" style="border-width:0;max-height:32px;max-width:32px;">                                      </span>                 <span class="profile-usercard-hover" data-profile-userid="00000000000000000000000000000000">                     <span class="user-name">                                                  Otto                                              </span>                 </span>             </div>             <div class="post-date">                 <span class="value">18 Sep 2006 10:12 PM</span>             </div>             <a name="761444" style="padding-left:5px;" href="http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx#761444">#</a>             <div class="post-content user-defined-markup">                 Well done!
+<br>&lt;a href="<a rel="nofollow" target="_new" href="http://gcnpncio.com/rgdt/boce.html%22%3EMy">http://gcnpncio.com/rgdt/boce.html"&gt;My</a> homepage&lt;/a&gt; | &lt;a href="<a rel="nofollow" target="_new" href="http://vdjydblr.com/fknt/bial.html%22%3EPlease">http://vdjydblr.com/fknt/bial.html"&gt;Please</a> visit&lt;/a&gt;<div style="clear:both;"></div>             </div>             <div class="post-actions">                              </div>         </div>                  <div class="full-post-footer">                      <div class="r wireframe-r"></div>         </div>     </div></div></li>          <li id="commentItem761446" class="content-item">         <div class="full-post-outer fiji-full-post-outer"><div class="full-post-header"><div class="r fiji-r"></div></div>         <div class="full-post"><div class="full-post-inner fiji-full-post-inner">             <div class="post-author">                 <span class="avatar">                                          <img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/anonymous.gif" style="border-width:0;max-height:32px;max-width:32px;">                                      </span>                 <span class="profile-usercard-hover" data-profile-userid="00000000000000000000000000000000">                     <span class="user-name">                                                  Felix                                              </span>                 </span>             </div>             <div class="post-date">                 <span class="value">18 Sep 2006 10:13 PM</span>             </div>             <a name="761446" style="padding-left:5px;" href="http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx#761446">#</a>             <div class="post-content user-defined-markup">                 Nice site!
+<br><a rel="nofollow" target="_new" href="http://gcnpncio.com/rgdt/boce.html">http://gcnpncio.com/rgdt/boce.html</a> | <a rel="nofollow" target="_new" href="http://qpsfzdbx.com/pioi/lzsx.html">http://qpsfzdbx.com/pioi/lzsx.html</a><div style="clear:both;"></div>             </div>             <div class="post-actions">                              </div>         </div>                  <div class="full-post-footer">                      <div class="r wireframe-r"></div>         </div>     </div></div></li>          <li id="commentItem8213686" class="content-item">         <div class="full-post-outer fiji-full-post-outer"><div class="full-post-header"><div class="r fiji-r"></div></div>         <div class="full-post"><div class="full-post-inner fiji-full-post-inner">             <div class="post-author">                 <span class="avatar">                                          <img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/anonymous.gif" style="border-width:0;max-height:32px;max-width:32px;">                                      </span>                 <span class="profile-usercard-hover" data-profile-userid="00000000000000000000000000000000">                     <span class="user-name">                                                  Garry Trinder                                              </span>                 </span>             </div>             <div class="post-date">                 <span class="value">14 Mar 2008 8:21 PM</span>             </div>             <a name="8213686" style="padding-left:5px;" href="http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx#8213686">#</a>             <div class="post-content user-defined-markup">                 <p>PingBack from <a rel="nofollow" target="_new" href="http://dvanderboom.wordpress.com/2008/03/14/compact-framework-creating-custom-controls-and-designers-part-1/">http://dvanderboom.wordpress.com/2008/03/14/compact-framework-creating-custom-controls-and-designers-part-1/</a></p>
+             </div>             <div class="post-actions">                              </div>         </div>                  <div class="full-post-footer">                      <div class="r wireframe-r"></div>         </div>     </div></div></li>          <li id="commentItem8424280" class="content-item">         <div class="full-post-outer fiji-full-post-outer"><div class="full-post-header"><div class="r fiji-r"></div></div>         <div class="full-post"><div class="full-post-inner fiji-full-post-inner">             <div class="post-author">                 <span class="avatar">                                          <img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/anonymous.gif" style="border-width:0;max-height:32px;max-width:32px;">                                      </span>                 <span class="profile-usercard-hover" data-profile-userid="00000000000000000000000000000000">                     <span class="user-name">                                                  Garry Trinder                                              </span>                 </span>             </div>             <div class="post-date">                 <span class="value">25 Apr 2008 12:01 PM</span>             </div>             <a name="8424280" style="padding-left:5px;" href="http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx#8424280">#</a>             <div class="post-content user-defined-markup">                 <p>PingBack from <a rel="nofollow" target="_new" href="http://www.jaxidian.org/update/2008/04/25/22/">http://www.jaxidian.org/update/2008/04/25/22/</a></p>
+             </div>             <div class="post-actions">                              </div>         </div>                  <div class="full-post-footer">                      <div class="r wireframe-r"></div>         </div>     </div></div></li>          <li id="commentItem9013106" class="content-item">         <div class="full-post-outer fiji-full-post-outer"><div class="full-post-header"><div class="r fiji-r"></div></div>         <div class="full-post"><div class="full-post-inner fiji-full-post-inner">             <div class="post-author">                 <span class="avatar">                                          <img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/anonymous.gif" style="border-width:0;max-height:32px;max-width:32px;">                                      </span>                 <span class="profile-usercard-hover" data-profile-userid="00000000000000000000000000000000">                     <span class="user-name">                                                  Garry Trinder                                              </span>                 </span>             </div>             <div class="post-date">                 <span class="value">23 Oct 2008 11:07 AM</span>             </div>             <a name="9013106" style="padding-left:5px;" href="http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx#9013106">#</a>             <div class="post-content user-defined-markup">                 <p>解决VS2008开发windowsMobile项目生成速度慢的问题</p>
+             </div>             <div class="post-actions">                              </div>         </div>                  <div class="full-post-footer">                      <div class="r wireframe-r"></div>         </div>     </div></div></li>          <li id="commentItem9061236" class="content-item">         <div class="full-post-outer fiji-full-post-outer"><div class="full-post-header"><div class="r fiji-r"></div></div>         <div class="full-post"><div class="full-post-inner fiji-full-post-inner">             <div class="post-author">                 <span class="avatar">                                          <img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/anonymous.gif" style="border-width:0;max-height:32px;max-width:32px;">                                      </span>                 <span class="profile-usercard-hover" data-profile-userid="00000000000000000000000000000000">                     <span class="user-name">                                                  Garry Trinder                                              </span>                 </span>             </div>             <div class="post-date">                 <span class="value">11 Nov 2008 10:08 PM</span>             </div>             <a name="9061236" style="padding-left:5px;" href="http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx#9061236">#</a>             <div class="post-content user-defined-markup">                 <p>AsIamgoingwithmyproject,theVisualStudiobecomesslowerandsloweruntilIcannotbareitan...</p>
+             </div>             <div class="post-actions">                              </div>         </div>                  <div class="full-post-footer">                      <div class="r wireframe-r"></div>         </div>     </div></div></li>          <li id="commentItem9131654" class="content-item">         <div class="full-post-outer fiji-full-post-outer"><div class="full-post-header"><div class="r fiji-r"></div></div>         <div class="full-post"><div class="full-post-inner fiji-full-post-inner">             <div class="post-author">                 <span class="avatar">                                          <img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/anonymous.gif" style="border-width:0;max-height:32px;max-width:32px;">                                      </span>                 <span class="profile-usercard-hover" data-profile-userid="00000000000000000000000000000000">                     <span class="user-name">                                                  Garry Trinder                                              </span>                 </span>             </div>             <div class="post-date">                 <span class="value">21 Nov 2008 5:04 AM</span>             </div>             <a name="9131654" style="padding-left:5px;" href="http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx#9131654">#</a>             <div class="post-content user-defined-markup">                 <p>PingBack from <a rel="nofollow" target="_new" href="http://bykohl.com/blog/?p=22">http://bykohl.com/blog/?p=22</a></p>
+             </div>             <div class="post-actions">                              </div>         </div>                  <div class="full-post-footer">                      <div class="r wireframe-r"></div>         </div>     </div></div></li>          <li id="commentItem9411785" class="content-item">         <div class="full-post-outer fiji-full-post-outer"><div class="full-post-header"><div class="r fiji-r"></div></div>         <div class="full-post"><div class="full-post-inner fiji-full-post-inner">             <div class="post-author">                 <span class="avatar">                                          <img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/anonymous.gif" style="border-width:0;max-height:32px;max-width:32px;">                                      </span>                 <span class="profile-usercard-hover" data-profile-userid="00000000000000000000000000000000">                     <span class="user-name">                                                  Garry Trinder                                              </span>                 </span>             </div>             <div class="post-date">                 <span class="value">10 Feb 2009 8:57 PM</span>             </div>             <a name="9411785" style="padding-left:5px;" href="http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx#9411785">#</a>             <div class="post-content user-defined-markup">                 <p>最近用VS2008开发WindowsMobile程序，使用C#、.NETCompactFramework，发现项目生成速度比较慢。用VS2008打开项目后，开始一段时间生成速度还能忍受，时间一长...</p>
+             </div>             <div class="post-actions">                              </div>         </div>                  <div class="full-post-footer">                      <div class="r wireframe-r"></div>         </div>     </div></div></li>          <li id="commentItem9412192" class="content-item">         <div class="full-post-outer fiji-full-post-outer"><div class="full-post-header"><div class="r fiji-r"></div></div>         <div class="full-post"><div class="full-post-inner fiji-full-post-inner">             <div class="post-author">                 <span class="avatar">                                          <img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/anonymous.gif" style="border-width:0;max-height:32px;max-width:32px;">                                      </span>                 <span class="profile-usercard-hover" data-profile-userid="00000000000000000000000000000000">                     <span class="user-name">                                                  Garry Trinder                                              </span>                 </span>             </div>             <div class="post-date">                 <span class="value">11 Feb 2009 1:42 AM</span>             </div>             <a name="9412192" style="padding-left:5px;" href="http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx#9412192">#</a>             <div class="post-content user-defined-markup">                 <p>最近用VS2008开发WindowsMobile程序，使用C#、.NETCompactFramework，发现项目生成速度比较慢。用VS2008打开项目后，开始一段时间生成速度还能忍受，时间一长...</p>
+             </div>             <div class="post-actions">                              </div>         </div>                  <div class="full-post-footer">                      <div class="r wireframe-r"></div>         </div>     </div></div></li>          <li id="commentItem9425244" class="content-item">         <div class="full-post-outer fiji-full-post-outer"><div class="full-post-header"><div class="r fiji-r"></div></div>         <div class="full-post"><div class="full-post-inner fiji-full-post-inner">             <div class="post-author">                 <span class="avatar">                                          <img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/anonymous.gif" style="border-width:0;max-height:32px;max-width:32px;">                                      </span>                 <span class="profile-usercard-hover" data-profile-userid="00000000000000000000000000000000">                     <span class="user-name">                                                  Garry Trinder                                              </span>                 </span>             </div>             <div class="post-date">                 <span class="value">15 Feb 2009 10:10 PM</span>             </div>             <a name="9425244" style="padding-left:5px;" href="http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx#9425244">#</a>             <div class="post-content user-defined-markup">                 <p>最近用VS2008开发WindowsMobile程序，使用C#、.NETCompactFramework，发现项目生成速度比较慢。用VS2008打开项目后，开始一段时间生成速度还能忍受，时间一长...</p>
+             </div>             <div class="post-actions">                              </div>         </div>                  <div class="full-post-footer">                      <div class="r wireframe-r"></div>         </div>     </div></div></li>          <li id="commentItem9539171" class="content-item">         <div class="full-post-outer fiji-full-post-outer"><div class="full-post-header"><div class="r fiji-r"></div></div>         <div class="full-post"><div class="full-post-inner fiji-full-post-inner">             <div class="post-author">                 <span class="avatar">                                          <img src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/anonymous.gif" style="border-width:0;max-height:32px;max-width:32px;">                                      </span>                 <span class="profile-usercard-hover" data-profile-userid="00000000000000000000000000000000">                     <span class="user-name">                                                  Garry Trinder                                              </span>                 </span>             </div>             <div class="post-date">                 <span class="value">8 Apr 2009 7:33 PM</span>             </div>             <a name="9539171" style="padding-left:5px;" href="http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx#9539171">#</a>             <div class="post-content user-defined-markup">                 <p>PingBack from <a rel="nofollow" target="_new" href="http://clearer-code.com/speeding-up-builds-in-visual-studio-for-net-ce/">http://clearer-code.com/speeding-up-builds-in-visual-studio-for-net-ce/</a></p>
+             </div>             <div class="post-actions">                              </div>         </div>                  <div class="full-post-footer">                      <div class="r wireframe-r"></div>         </div>     </div></div></li></ul>
+<div id="pagerContainer" class="pager">                   </div>
+<div class="content-list-footer"></div>
+
+<script id="commentTemplate" type="text/html">
+    {{if Author}}
+    <li id="commentItem${Id}" class="content-item">
+        <div class="full-post-outer fiji-full-post-outer"><div class="full-post-header"><div class="r fiji-r"></div></div>
+        <div class="full-post"><div class="full-post-inner fiji-full-post-inner">
+            <div class="post-author">
+                <span class="avatar">
+                    {{if !Author.IsAnonymous}}
+                    <a href="${Author.ProfileUrl}">
+                        <img src="${Author.AvatarUrl}" style="border-width:0;max-height:32px;max-width:32px;"/>
+                    </a>
+                    {{else}}
+                    <img src="${Author.AvatarUrl}" style="border-width:0;max-height:32px;max-width:32px;"/>
+                    {{/if}}
+                </span>
+                <span class="profile-usercard-hover" data-profile-userid="${Author.ProfileId}">
+                    <span class="user-name">
+                        {{if !Author.IsAnonymous}}
+                        <a href="${Author.ProfileUrl}">
+                            ${Author.DisplayName}
+                        </a>
+                        {{else}}
+                        ${Author.DisplayName}
+                        {{/if}}
+                    </span>
+                </span>
+            </div>
+            <div class="post-date">
+                <span class="value">${PublishedDate}</span>
+            </div>
+            <a name="${Id}" style="padding-left:5px;" href="#${Id}">#</a>
+            <div class="post-content user-defined-markup">
+                {{html Body}}
+            </div>
+            <div class="post-actions">
+                
+            </div>
+        </div>
+        {{if !Author.IsAnonymous && Author.Id == 3844}}
+        <div class="full-post-footer user-is-author">
+        {{else}}
+        <div class="full-post-footer">
+        {{/if}}
+            <div class="r wireframe-r"></div>
+        </div>
+    </li>
+    {{/if}}
+</script>
+
+
+<script id="pagerTemplate" type="text/html">
+    {{if TotalPages}}     
+        {{if TotalPages > 1}}     
+            <span class="summary">Page 1 of 3 (39 items)</span>            
+        
+             {{for(i=1;i<=TotalPages;i++)}}            
+                <a id="pager${i}" data-page="${i}" href="javascript:void(0);" class="pagingLink">
+                    <span>${i}</span>
+                </a>
+                <span class="separator"></span>
+            {{/for }}
+        {{else}}  
+        {{/if}}
+    {{else}}      
+    {{/if}}
+</script></div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom msdn-content-fragment-bottom"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment captcha-blog-post-comment-form no-wrapper" id="fragment-52320">
+<div class="content-fragment-inner msdn-content-fragment-inner"><div class="content-fragment-top msdn-content-fragment-top"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div><div class="content-fragment-content">
+<input type="hidden" name="ctl00$content$ctl00$w_52320$_ac9b8d$ctl00$ctl00$postCommentUrl" id="ctl00_content_ctl00_w_52320__ac9b8d_ctl00_ctl00_postCommentUrl">
+
+    
+    </div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom msdn-content-fragment-bottom"><div class="r1 msdn-r1"></div><div class="r2 msdn-r2"></div><div class="r3 msdn-r3"></div><div class="r4 msdn-r4"></div></div></div></div>
+</div>
+</div>
+</div>
+<div class="layout-footer"></div>
+</div></div>
+
+			<div class="footer-fragments-header"></div>
+<div class="footer-fragments"><div class="footer-fragment copyright-info" id="footer-fragment-1402503690">
+
+<ul class="footer-fragment-links">
+    <li class="message copyright">© 2015 Microsoft Corporation.</li>
+	<li class="message termsOfService"><a href="http://msdn.microsoft.com/cc300389">Terms of Use</a> </li>
+    <li class="message trademarks"><a href="http://www.microsoft.com/library/toolbar/3.0/trademarks/en-us.mspx">Trademarks</a> </li>
+    <li class="message privacy"><a href="http://go.microsoft.com/fwlink/?LinkId=248681">Privacy &amp; Cookies</a> </li>
+    <li class="message abuse">
+    
+            <a id="ctl00_footer_fragment_1402503690__ac9b8d_ctl00_ctl00_ctl01_lnkAbuse" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$footer_fragment_1402503690$_ac9b8d$ctl00$ctl00$ctl01$lnkAbuse", "", true, "", "", false, true))">Report Abuse</a>
+        
+    </li>
+    
+    <li class="message version">5.6.426.415</li>
+</ul></div><div class="footer-fragment omniture-footer-fragment" id="footer-fragment-1402503691">
+
+
+<script src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/2569210a296af7a76a1f0a41cafcfd42-2e0c141b75ad92888490f6154505d4c2-RequestReducedScript.js" type="text/javascript"></script>        <noscript>&lt;a href="http://www.omniture.com" title="Web Analytics"&gt;&lt;img
+        src="http://msstomsdnblogs.112.2O7.net/b/ss/msstomsdnblogs/1/H.20.2--NS/0"
+        height="1" width="1" border="0" alt="" /&gt;&lt;/a&gt;</noscript>
+
+</div><div class="footer-fragment app-insights-footer-fragment" id="footer-fragment-1402503692">
+
+        <script type="text/javascript" language="javascript">
+            $(document).ready(function () {
+                window.appInsights = { queue: [], start: function (n) { function r(n, t) { n[t] = function () { var i = arguments; n.queue.push(function () { n[t].apply(n, i) }) } } var t, i; this.applicationInsightsId = n; this.accountId = null; this.appUserId = null; r(this, "logEvent"); r(this, "logPageView"); t = document.createElement("script"); t.type = "text/javascript"; t.src = "//az416426.vo.msecnd.net/scripts/ai.js"; t.async = !0; i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(t, i) } };
+                window.appInsights.start("b4d65b72-ce61-486e-b07c-969cef6675f6");
+                window.appInsights.logPageView();
+            });
+        </script>
+    </div></div>
+<div class="footer-fragments-footer"></div>
+		
+<script type="text/javascript">
+// <![CDATA[
+ctl00_content_ctl00 = new ContentFragmentPageCustomCallback('ctl00_content_ctl00',new Function('mode','parameters','callback','errorCallback','context','ctl00_content_ctl00_ctl00._doCallback(mode+\':\'+parameters,callback,context,errorCallback);'));
+// ]]>
+</script>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+rdf:about="http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx"
+dc:identifier="http://blogs.msdn.com/b/vsdteam/archive/2006/09/15/756400.aspx"
+dc:title="Platform Verification Task"
+trackback:ping="http://blogs.msdn.com/b/vsdteam/trackback.ashx?WeblogPostID=756400" />
+</rdf:RDF>
+-->
+<script type="text/javascript">
+// <![CDATA[
+Telligent_Modal.Configure('\/utility\/loading.htm',['modal'],['modal-title','modal-title-2','modal-title-3','modal-title-4'],['modal-close'],['modal-content','modal-content-2'],['modal-footer','modal-footer-2','modal-footer-3'],['modal-resize'],['modal-mask'],10000,false,true,true);
+// ]]>
+</script><script type="text/javascript">
+// <![CDATA[
+window.ctl00_content_ctl00_ctl00 = new Telligent_CallbackManager('ctl00_content_ctl00_ctl00','ctl00$content$ctl00$ctl00','aspnetForm');
+// ]]>
+</script><script type="text/javascript">
+// <![CDATA[
+var ctl00_content_ctl00_w_52317__ac9b8d_ctl00_ctl01=new RateableContentRating('ctl00_content_ctl00_w_52317__ac9b8d_ctl00_ctl01','ctl00_content_ctl00_w_52317__ac9b8d_ctl00_ctl01','ctl00_content_ctl00_w_52317__ac9b8d_ctl00_ctl01_Value', 5, '/Utility/images/', false, 'rating','rating active','rating readonly',['Terrible','Poor','Fair','Average','Good','Excellent'],true,true);
+// ]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+<script type="text/javascript">
+				// <![CDATA[
+				var ctl00_content_ctl00_w_52317__ac9b8d_ctl00_ctl01_ajax={"SaveRating":function(rating,successFunction,failureFunction){WebForm_DoCallback('ctl00$content$ctl00$w_52317$_ac9b8d$ctl00$ctl01',rating,successFunction,rating,failureFunction,true)}};
+				// ]]>
+				</script><script type="text/javascript">
+// <![CDATA[
+$('#ctl00_content_ctl00_w_52317__ac9b8d_ctl00_ctl15_ctl01_Container input[value="Save"]').attr('onclick','').removeAttr('onclick').click( function(){ try { var tagText = $('#ctl00_content_ctl00_w_52317__ac9b8d_ctl00_ctl15_ctl01_Tags').val(); if (!tagText) return false;var tagList = tagText.replace(';',',').split(','); var isValid = true; for (var i=0,l=tagList.length;i<l;i++) {isValid = /^[ -~]{0,100}$/ig.test(tagList[i]); if (!isValid) { alert(tagList[i] + ' : is not valide'); return false; } }ctl00_content_ctl00_w_52317__ac9b8d_ctl00_ctl15_ctl01.Save();}catch(ex){ } return false; });
+// ]]>
+</script>
+</form>
+       
+    <script type="text/javascript">
+        $(window).load(function () {
+            $.getScript('http://widgets.membership.s-msft.com/v1/loader.js?brand=msdn&lang=en-US', function () {
+            });
+        });
+    </script>
+    
+	
+        <script type="text/javascript">$('div.breadcrumb-list span:last a').addClass('last');</script>
+
+<div id="_WEDCSInsertedData" style="display: none;"><iframe id="_msnFrame" src="./Platform Verification Task - Visual Studio For Devices - Site Home - MSDN Blogs_files/c.gif" style="z-index:-1;height:1px;width:1px;display:none;visibility:hidden;" onload="javascript:MscomBeacon();"></iframe></div></body></html>

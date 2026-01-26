@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48D60698-510C-4CEF-A4B4-97BD773ED1B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FASK.MST_WINDOWS.Module.ZZS</RootNamespace>
+    <AssemblyName>ZZS</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\!Build!\MST_WINDOWS\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\!Build!\MST_WINDOWS\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\04_Support\zip-v1.9\Rel\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\OtevriDavku.cs" />
+    <Compile Include="Config\CiselneRady.cs" />
+    <Compile Include="Form\FormInputQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormInputQuantity.Designer.cs">
+      <DependentUpon>FormInputQuantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainZZS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainZZS.Designer.cs">
+      <DependentUpon>frmMainZZS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NasnimanaData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NasnimanaData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RFID_Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RFID_Data.Designer.cs">
+      <DependentUpon>RFID_Data.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form\FormInputQuantity.resx">
+      <DependentUpon>FormInputQuantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainZZS.resx">
+      <DependentUpon>frmMainZZS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintTemplate\S02toS01.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintTemplate\S01toS02 - Backup.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintTemplate\S01toS02.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintTemplate\Zmetky.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RFID_Data.resx">
+      <DependentUpon>RFID_Data.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\_SdileneProjekty_\TouchscreenKeyboard\TouchscreenKeyboard\TouchscreenKeyboard.csproj">
+      <Project>{94070b1d-6de4-4d45-b2b9-5da09d0e15c9}</Project>
+      <Name>TouchscreenKeyboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Emailing\Emailing\Emailing.csproj">
+      <Project>{FB082FE8-178B-40D4-8A2B-36CE544A00C7}</Project>
+      <Name>Emailing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ErrorLog\ErrorLog.csproj">
+      <Project>{3151DDC5-73BA-4E7A-AD51-873EFBBA0FDC}</Project>
+      <Name>ErrorLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fask.Graphic\Fask.Graphic.csproj">
+      <Project>{A5221DAE-DD8A-403B-A1B7-82E84A6AE7E3}</Project>
+      <Name>Fask.Graphic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IRFIDProvider\IRFIDProvider.csproj">
+      <Project>{01BD8C0C-F391-420E-AD74-6C1CA3584C17}</Project>
+      <Name>IRFIDProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IScannerProvider\IScannerProvider.csproj">
+      <Project>{B24889A4-2446-48F8-A99E-670A2D4FE3CB}</Project>
+      <Name>IScannerProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MainForm\MST_WINDOWS.csproj">
+      <Project>{D7E00B2D-1105-4108-BB2E-E05D39663923}</Project>
+      <Name>MST_WINDOWS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RFIDFactory\RFIDFactory.csproj">
+      <Project>{F77C6154-11B1-474F-97FB-F1FB43E5264C}</Project>
+      <Name>RFIDFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ScannerFactory\ScannerFactory.csproj">
+      <Project>{74824146-2E98-4DA6-878C-846D918B4A37}</Project>
+      <Name>ScannerFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VyrobaIfc\VyrobaIfc.csproj">
+      <Project>{AEF304CD-C27C-46A4-ACA9-D3EBECAF0F5F}</Project>
+      <Name>VyrobaIfc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="NasnimanaData.xsc">
+      <DependentUpon>NasnimanaData.xsd</DependentUpon>
+    </None>
+    <None Include="NasnimanaData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NasnimanaData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="NasnimanaData.xss">
+      <DependentUpon>NasnimanaData.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\ConfigZZS.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PrintTemplate\LOGO.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="Sounds\chimes.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\chyba.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\dotaz.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\info.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

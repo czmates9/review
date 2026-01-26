@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+  <item
+    android:id="@+id/nav_Ciselniky_Pro"
+    android:icon="@drawable/refreshing"
+    android:title="@string/Ciselnik" />
+
+
+  <item android:title="@string/CiselnikySeznam">
+    <menu>
+      <item
+        android:id="@+id/nav_Ciselnik_Zasoby_Pro"
+        android:icon="@drawable/refreshing"
+        android:title="@string/Zasoby" />
+      <item
+        android:id="@+id/nav_Ciselnik_Odberatele_Pro"
+        android:icon="@drawable/refreshing"
+        android:title="@string/Odberatele" />
+      <item
+        android:id="@+id/nav_Ciselnik_Sklady_Pro"
+        android:icon="@drawable/refreshing"
+        android:title="@string/Sklady" />
+      <item
+        android:id="@+id/nav_Ciselnik_Meny_Pro"
+        android:icon="@drawable/refreshing"
+        android:title="@string/Meny" />
+      <item
+        android:id="@+id/nav_Ciselnik_Strediska_Pro"
+        android:icon="@drawable/refreshing"
+        android:title="@string/Strediska" />
+      <item
+        android:id="@+id/nav_Ciselnik_TypyDokladu_Pro"
+        android:icon="@drawable/refreshing"
+        android:title="@string/TypyDokladu" />
+      <item
+        android:id="@+id/nav_Ciselnik_Lokace_Pro"
+        android:icon="@drawable/refreshing"
+        android:title="@string/Lokace" />
+      <item
+        android:id="@+id/nav_Ciselnik_Pracovnici_Pro"
+        android:icon="@drawable/refreshing"
+        android:title="@string/Pracovnici" />
+    </menu>
+  </item>
+
+  <group android:checkableBehavior="single">
+  <item
+  android:id="@+id/nav_HlMenu_Pro"
+  android:icon="@drawable/logout"
+  android:title="@string/HlMenu" />
+</group>
+</menu>

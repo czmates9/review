@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ZobrazitRFID" targetNamespace="http://tempuri.org/ZobrazitRFID.xsd" xmlns:mstns="http://tempuri.org/ZobrazitRFID.xsd" xmlns="http://tempuri.org/ZobrazitRFID.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ZobrazitRFID" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="ZobrazitRFID" msprop:Generator_UserDSName="ZobrazitRFID" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Polozky" msprop:Generator_UserTableName="Polozky" msprop:Generator_RowDeletedName="PolozkyRowDeleted" msprop:Generator_TableClassName="PolozkyDataTable" msprop:Generator_RowChangedName="PolozkyRowChanged" msprop:Generator_RowClassName="PolozkyRow" msprop:Generator_RowChangingName="PolozkyRowChanging" msprop:Generator_RowEvArgName="PolozkyRowChangeEvent" msprop:Generator_RowEvHandlerName="PolozkyRowChangeEventHandler" msprop:Generator_TablePropName="Polozky" msprop:Generator_TableVarName="tablePolozky" msprop:Generator_RowDeletingName="PolozkyRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemDesc" msprop:Generator_UserColumnName="ItemDesc" msprop:Generator_ColumnPropNameInRow="ItemDesc" msprop:Generator_ColumnVarNameInTable="columnItemDesc" msprop:Generator_ColumnPropNameInTable="ItemDescColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Itemnmbr" msdata:Caption="Položka" msprop:Generator_UserColumnName="Itemnmbr" msprop:Generator_ColumnPropNameInRow="Itemnmbr" msprop:Generator_ColumnVarNameInTable="columnItemnmbr" msprop:Generator_ColumnPropNameInTable="ItemnmbrColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Serialnmbr" msprop:Generator_UserColumnName="Serialnmbr" msprop:Generator_ColumnPropNameInRow="Serialnmbr" msprop:Generator_ColumnVarNameInTable="columnSerialnmbr" msprop:Generator_ColumnPropNameInTable="SerialnmbrColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Ean" msprop:Generator_UserColumnName="Ean" msprop:Generator_ColumnPropNameInRow="Ean" msprop:Generator_ColumnVarNameInTable="columnEan" msprop:Generator_ColumnPropNameInTable="EanColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="mnozstvi" msprop:Generator_UserColumnName="mnozstvi" msprop:Generator_ColumnPropNameInRow="mnozstvi" msprop:Generator_ColumnVarNameInTable="columnmnozstvi" msprop:Generator_ColumnPropNameInTable="mnozstviColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

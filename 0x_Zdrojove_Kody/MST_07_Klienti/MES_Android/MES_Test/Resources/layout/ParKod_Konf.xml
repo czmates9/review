@@ -1,0 +1,193 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="100"
+>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="20"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <CheckedTextView
+        android:id="@+id/CHTV_WeightCode"
+        android:checkMark='?android:attr/listChoiceIndicatorMultiple'
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/WeightCode"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:checked = 'false'
+        android:gravity="left"
+        android:paddingLeft="50px"
+        android:paddingRight="50px"
+        android:paddingTop="20px"
+        android:paddingBottom="20px" />
+
+        <CheckedTextView
+        android:id="@+id/CHTV_WeightCode_12"
+        android:checkMark='?android:attr/listChoiceIndicatorMultiple'
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/WeightCode_12"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:checked = 'false'
+        android:gravity="left"
+        android:paddingLeft="50px"
+        android:paddingRight="50px"
+        android:paddingTop="20px"
+        android:paddingBottom="20px" />
+
+        <CheckedTextView
+        android:id="@+id/CHTV_BarcodeSlashSarze"
+        android:checkMark='?android:attr/listChoiceIndicatorMultiple'
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/BarcodeSlashSarze"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:checked = 'false'
+        android:gravity="left"
+        android:paddingLeft="50px"
+        android:paddingRight="50px"
+        android:paddingTop="20px"
+        android:paddingBottom="20px" />
+
+        <CheckedTextView
+        android:id="@+id/CHTV_FenixBarcodeObal"
+        android:checkMark='?android:attr/listChoiceIndicatorMultiple'
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/FenixBarcodeObal"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:checked = 'false'
+        android:gravity="left"
+        android:paddingLeft="50px"
+        android:paddingRight="50px"
+        android:paddingTop="20px"
+        android:paddingBottom="20px" />
+
+        <CheckedTextView
+        android:id="@+id/CHTV_Fenix_HIBC"
+        android:checkMark='?android:attr/listChoiceIndicatorMultiple'
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Fenix_HIBC"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:checked = 'false'
+        android:gravity="left"
+        android:paddingLeft="50px"
+        android:paddingRight="50px"
+        android:paddingTop="20px"
+        android:paddingBottom="20px" />
+
+        <CheckedTextView
+        android:id="@+id/CHTV_GS1_FASK"
+        android:checkMark='?android:attr/listChoiceIndicatorMultiple'
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/GS1_FASK"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:checked = 'false'
+        android:gravity="left"
+        android:paddingLeft="50px"
+        android:paddingRight="50px"
+        android:paddingTop="20px"
+        android:paddingBottom="20px" />
+
+        <CheckedTextView
+        android:id="@+id/CHTV_SAB_AustralianNorm"
+        android:checkMark='?android:attr/listChoiceIndicatorMultiple'
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/SAB_AustralianNorm"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:checked = 'false'
+        android:gravity="left"
+        android:paddingLeft="50px"
+        android:paddingRight="50px"
+        android:paddingTop="20px"
+        android:paddingBottom="20px" />
+
+        <CheckedTextView
+        android:id="@+id/CHTV_SAB_Balton"
+        android:checkMark='?android:attr/listChoiceIndicatorMultiple'
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/SAB_Balton"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:checked = 'false'
+        android:gravity="left"
+        android:paddingLeft="50px"
+        android:paddingRight="50px"
+        android:paddingTop="20px"
+        android:paddingBottom="20px" />
+
+        <CheckedTextView
+        android:id="@+id/CHTV_SAB_GS1_Zavorky"
+        android:checkMark='?android:attr/listChoiceIndicatorMultiple'
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/SAB_GS1_Zavorky"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:checked = 'false'
+        android:gravity="left"
+        android:paddingLeft="50px"
+        android:paddingRight="50px"
+        android:paddingTop="20px"
+        android:paddingBottom="20px" />
+
+        <CheckedTextView
+        android:id="@+id/CHTV_SABNeznamyKod"
+        android:checkMark='?android:attr/listChoiceIndicatorMultiple'
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/SABNeznamyKod"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:checked = 'false'
+        android:gravity="left"
+        android:paddingLeft="50px"
+        android:paddingRight="50px"
+        android:paddingTop="20px"
+        android:paddingBottom="20px" />
+
+        </LinearLayout>
+    </ScrollView>
+        
+        <Button
+        android:id="@+id/ParKod_konf_btnSaveConfig"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="50px"
+        android:background="#FA0"
+        android:layout_alignParentBottom="true"
+        android:text="@string/SaveBtn"
+        android:layout_weight="80"
+        android:layout_marginTop="20px"
+        android:layout_marginBottom="20px"
+        />
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GlobalConfig" targetNamespace="http://tempuri.org/GlobalConfig.xsd" xmlns:mstns="http://tempuri.org/GlobalConfig.xsd" xmlns="http://tempuri.org/GlobalConfig.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GlobalConfig" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="GlobalConfig" msprop:Generator_UserDSName="GlobalConfig">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Main" msprop:Generator_UserTableName="Main" msprop:Generator_RowEvArgName="MainRowChangeEvent" msprop:Generator_TableVarName="tableMain" msprop:Generator_TablePropName="Main" msprop:Generator_RowDeletingName="MainRowDeleting" msprop:Generator_RowChangingName="MainRowChanging" msprop:Generator_RowDeletedName="MainRowDeleted" msprop:Generator_RowEvHandlerName="MainRowChangeEventHandler" msprop:Generator_TableClassName="MainDataTable" msprop:Generator_RowChangedName="MainRowChanged" msprop:Generator_RowClassName="MainRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MachineID" msprop:Generator_ColumnVarNameInTable="columnMachineID" msprop:Generator_ColumnPropNameInRow="MachineID" msprop:Generator_ColumnPropNameInTable="MachineIDColumn" msprop:Generator_UserColumnName="MachineID" type="xs:string" minOccurs="0" />
+              <xs:element name="MachineName" msprop:Generator_ColumnVarNameInTable="columnMachineName" msprop:Generator_ColumnPropNameInRow="MachineName" msprop:Generator_ColumnPropNameInTable="MachineNameColumn" msprop:Generator_UserColumnName="MachineName" type="xs:string" minOccurs="0" />
+              <xs:element name="MachineDescription" msprop:Generator_ColumnVarNameInTable="columnMachineDescription" msprop:Generator_ColumnPropNameInRow="MachineDescription" msprop:Generator_ColumnPropNameInTable="MachineDescriptionColumn" msprop:Generator_UserColumnName="MachineDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="SqlConnectionStringLocal" msprop:Generator_ColumnVarNameInTable="columnSqlConnectionStringLocal" msprop:Generator_ColumnPropNameInRow="SqlConnectionStringLocal" msprop:Generator_ColumnPropNameInTable="SqlConnectionStringLocalColumn" msprop:Generator_UserColumnName="SqlConnectionStringLocal" type="xs:string" minOccurs="0" />
+              <xs:element name="SqlConnectionStringRemote" msprop:Generator_ColumnVarNameInTable="columnSqlConnectionStringRemote" msprop:Generator_ColumnPropNameInRow="SqlConnectionStringRemote" msprop:Generator_ColumnPropNameInTable="SqlConnectionStringRemoteColumn" msprop:Generator_UserColumnName="SqlConnectionStringRemote" type="xs:string" minOccurs="0" />
+              <xs:element name="SqlSynchronizationTimeout" msprop:Generator_ColumnVarNameInTable="columnSqlSynchronizationTimeout" msprop:Generator_ColumnPropNameInRow="SqlSynchronizationTimeout" msprop:Generator_ColumnPropNameInTable="SqlSynchronizationTimeoutColumn" msprop:Generator_UserColumnName="SqlSynchronizationTimeout" type="xs:int" minOccurs="0" />
+              <xs:element name="ModuleAutoStart" msprop:Generator_ColumnVarNameInTable="columnModuleAutoStart" msprop:Generator_ColumnPropNameInRow="ModuleAutoStart" msprop:Generator_ColumnPropNameInTable="ModuleAutoStartColumn" msprop:Generator_UserColumnName="ModuleAutoStart" type="xs:string" minOccurs="0" />
+              <xs:element name="MachineType" msprop:Generator_ColumnVarNameInTable="columnMachineType" msprop:Generator_ColumnPropNameInRow="MachineType" msprop:Generator_ColumnPropNameInTable="MachineTypeColumn" msprop:Generator_UserColumnName="MachineType" type="xs:string" minOccurs="0" />
+              <xs:element name="Koeficient" msprop:Generator_ColumnVarNameInTable="columnKoeficient" msprop:Generator_ColumnPropNameInRow="Koeficient" msprop:Generator_ColumnPropNameInTable="KoeficientColumn" msprop:Generator_UserColumnName="Koeficient" type="xs:string" minOccurs="0" />
+              <xs:element name="KomServer" msprop:Generator_ColumnVarNameInTable="columnKomServer" msprop:Generator_ColumnPropNameInRow="KomServer" msprop:Generator_ColumnPropNameInTable="KomServerColumn" msprop:Generator_UserColumnName="KomServer" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Logging" msprop:Generator_TableClassName="LoggingDataTable" msprop:Generator_TableVarName="tableLogging" msprop:Generator_TablePropName="Logging" msprop:Generator_RowDeletingName="LoggingRowDeleting" msprop:Generator_RowChangingName="LoggingRowChanging" msprop:Generator_RowEvHandlerName="LoggingRowChangeEventHandler" msprop:Generator_RowDeletedName="LoggingRowDeleted" msprop:Generator_UserTableName="Logging" msprop:Generator_RowChangedName="LoggingRowChanged" msprop:Generator_RowEvArgName="LoggingRowChangeEvent" msprop:Generator_RowClassName="LoggingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Enable_Error" msprop:Generator_ColumnVarNameInTable="columnEnable_Error" msprop:Generator_ColumnPropNameInRow="Enable_Error" msprop:Generator_ColumnPropNameInTable="Enable_ErrorColumn" msprop:Generator_UserColumnName="Enable_Error" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Enable_Trace" msprop:Generator_ColumnVarNameInTable="columnEnable_Trace" msprop:Generator_ColumnPropNameInRow="Enable_Trace" msprop:Generator_ColumnPropNameInTable="Enable_TraceColumn" msprop:Generator_UserColumnName="Enable_Trace" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="WEBAPI" msprop:Generator_TableClassName="WEBAPIDataTable" msprop:Generator_TableVarName="tableWEBAPI" msprop:Generator_TablePropName="WEBAPI" msprop:Generator_RowDeletingName="WEBAPIRowDeleting" msprop:Generator_RowChangingName="WEBAPIRowChanging" msprop:Generator_RowEvHandlerName="WEBAPIRowChangeEventHandler" msprop:Generator_RowDeletedName="WEBAPIRowDeleted" msprop:Generator_UserTableName="WEBAPI" msprop:Generator_RowChangedName="WEBAPIRowChanged" msprop:Generator_RowEvArgName="WEBAPIRowChangeEvent" msprop:Generator_RowClassName="WEBAPIRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Autorizace_DoAPI" msprop:Generator_ColumnVarNameInTable="columnAutorizace_DoAPI" msprop:Generator_ColumnPropNameInRow="Autorizace_DoAPI" msprop:Generator_ColumnPropNameInTable="Autorizace_DoAPIColumn" msprop:Generator_UserColumnName="Autorizace_DoAPI" type="xs:string" minOccurs="0" />
+              <xs:element name="Adresa" msprop:Generator_ColumnVarNameInTable="columnAdresa" msprop:Generator_ColumnPropNameInRow="Adresa" msprop:Generator_ColumnPropNameInTable="AdresaColumn" msprop:Generator_UserColumnName="Adresa" type="xs:string" minOccurs="0" />
+              <xs:element name="AliasDB" msprop:Generator_ColumnVarNameInTable="columnAliasDB" msprop:Generator_ColumnPropNameInRow="AliasDB" msprop:Generator_ColumnPropNameInTable="AliasDBColumn" msprop:Generator_UserColumnName="AliasDB" type="xs:string" minOccurs="0" />
+              <xs:element name="isHTTPS" msprop:Generator_ColumnVarNameInTable="columnisHTTPS" msprop:Generator_ColumnPropNameInRow="isHTTPS" msprop:Generator_ColumnPropNameInTable="isHTTPSColumn" msprop:Generator_UserColumnName="isHTTPS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="API_TimeOut" msprop:Generator_ColumnVarNameInTable="columnAPI_TimeOut" msprop:Generator_ColumnPropNameInRow="API_TimeOut" msprop:Generator_ColumnPropNameInTable="API_TimeOutColumn" msprop:Generator_UserColumnName="API_TimeOut" type="xs:int" minOccurs="0" />
+              <xs:element name="Enable" msprop:Generator_ColumnVarNameInTable="columnEnable" msprop:Generator_ColumnPropNameInRow="Enable" msprop:Generator_ColumnPropNameInTable="EnableColumn" msprop:Generator_UserColumnName="Enable" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

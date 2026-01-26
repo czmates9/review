@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="OperacePotvrzeni_Label">Operace Potvrzení</string>
+  
+  <string name="OperacePotvrzeni_OK">OK</string>
+  <string name="OperacePotvrzeni_Storno">Zrušit</string>
+  <string name="OperacePotvrzeni_Korekce">Korekce</string>
+  <string name="OperacePotvrzeni_Material">Materál</string>
+
+  <string name="OperacePotvrzeni_Label_Text">Operace Potvrzení</string>
+
+  <string name="OperacePotvrzeni_TW_lblPolozka">Položka :</string>
+  <string name="OperacePotvrzeni_TW_lblPracovnik">Pracovník :</string>
+  <string name="OperacePotvrzeni_TW_lblStroj">Stroj :</string>
+  <string name="OperacePotvrzeni_TW_lblPripravnyCas">Přípravný čas :</string>
+  <string name="OperacePotvrzeni_TW_lblJednotkovyCas">Jednotk. čas :</string>
+  <string name="OperacePotvrzeni_TW_lblKorekceCasu">Korekce času :</string>
+  <string name="OperacePotvrzeni_TW_lblCelkovyCas">Cel. čas s kor. :</string>
+  <string name="OperacePotvrzeni_TW_lblKusu">Kusů :</string>
+  
+  
+</resources>

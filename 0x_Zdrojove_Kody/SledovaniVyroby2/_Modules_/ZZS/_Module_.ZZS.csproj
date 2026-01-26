@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48D60698-510C-4CEF-A4B4-97BD773ED1B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FASK.SledovaniVyroby.Module.ZZS</RootNamespace>
+    <AssemblyName>ZZS</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\!Build!\Vyroba\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\!Build!\Vyroba\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Ionic.Zip.1.9.1.8\lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\..\04_Support\_Support_\SQLite\sqlite-netFx46-binary-Win32-2015-1.0.112.0\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Odberatele.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Odberatele.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Pracovnici.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Pracovnici.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Prodej.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Prodej.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Sklady.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Sklady.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_TypDokladu.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_TypDokladu.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Zbozi.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Zbozi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\_Routines.cs">
+      <Link>SQLiteDBs\Controllers\_Routines.cs</Link>
+    </Compile>
+    <Compile Include="Classes\OtevriDavku.cs" />
+    <Compile Include="Config\CiselneRady.cs" />
+    <Compile Include="Constants\Common.cs" />
+    <Compile Include="Exstensions\DataGridViewExt.cs" />
+    <Compile Include="Exstensions\FlexibleMessageBox.cs" />
+    <Compile Include="Form\FileTransfer\CompressFile.cs" />
+    <Compile Include="Form\FileTransfer\Downloading.cs" />
+    <Compile Include="Form\FileTransfer\Uploading.cs" />
+    <Compile Include="Form\FormInputQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormInputQuantity.Designer.cs">
+      <DependentUpon>FormInputQuantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ProdejServiceOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ProdejServiceOperations.Designer.cs">
+      <DependentUpon>ProdejServiceOperations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ServiceOperationsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ServiceOperationsForm.Designer.cs">
+      <DependentUpon>ServiceOperationsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainZZS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainZZS.Designer.cs">
+      <DependentUpon>frmMainZZS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalObject.cs" />
+    <Compile Include="NasnimanaData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NasnimanaData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RFID_Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RFID_Data.Designer.cs">
+      <DependentUpon>RFID_Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLCEDB\DataSets\Zbozi.cs">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Odberatele.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Pracovnici.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Prodej1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Sklady.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\TypDokladu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TypDokladu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Zbozi1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CiselnikService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\FileTransferService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ProdejService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="_WebRefernces_Globals\CiselnikServiceOperationsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_WebRefernces_Globals\CiselnikServiceOperationsForm.Designer.cs">
+      <DependentUpon>CiselnikServiceOperationsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_WebRefernces_Globals\CiselnikServiceSession.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form\FormInputQuantity.resx">
+      <DependentUpon>FormInputQuantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProdejServiceOperations.resx">
+      <DependentUpon>ProdejServiceOperations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ServiceOperationsForm.resx">
+      <DependentUpon>ServiceOperationsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainZZS.resx">
+      <DependentUpon>frmMainZZS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RFID_Data.resx">
+      <DependentUpon>RFID_Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_WebRefernces_Globals\CiselnikServiceOperationsForm.resx">
+      <DependentUpon>CiselnikServiceOperationsForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\Fask.Logging\Fask.Logging.csproj">
+      <Project>{89e8c070-4694-4f11-ab01-a674bf8b9f80}</Project>
+      <Name>Fask.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Emailing\Emailing\Emailing.csproj">
+      <Project>{FB082FE8-178B-40D4-8A2B-36CE544A00C7}</Project>
+      <Name>Emailing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ErrorLog\ErrorLog.csproj">
+      <Project>{3151DDC5-73BA-4E7A-AD51-873EFBBA0FDC}</Project>
+      <Name>ErrorLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fask.Graphic\Fask.Graphic.csproj">
+      <Project>{A5221DAE-DD8A-403B-A1B7-82E84A6AE7E3}</Project>
+      <Name>Fask.Graphic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IRFIDProvider\IRFIDProvider.csproj">
+      <Project>{01BD8C0C-F391-420E-AD74-6C1CA3584C17}</Project>
+      <Name>IRFIDProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IScannerProvider\IScannerProvider.csproj">
+      <Project>{B24889A4-2446-48F8-A99E-670A2D4FE3CB}</Project>
+      <Name>IScannerProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Logging\Logging.csproj">
+      <Project>{8B038B30-3962-410F-A306-1DA2CDC74266}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RFIDFactory\RFIDFactory.csproj">
+      <Project>{F77C6154-11B1-474F-97FB-F1FB43E5264C}</Project>
+      <Name>RFIDFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ScannerFactory\ScannerFactory.csproj">
+      <Project>{74824146-2E98-4DA6-878C-846D918B4A37}</Project>
+      <Name>ScannerFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SQLCECommLib\SQLCECommLib.csproj">
+      <Project>{F35D1E86-FF59-4992-AEB3-730A4883BCF1}</Project>
+      <Name>SQLCECommLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TouchscreenKeyboard\TouchscreenKeyboard\TouchscreenKeyboard.csproj">
+      <Project>{94070B1D-6DE4-4D45-B2B9-5DA09D0E15C9}</Project>
+      <Name>TouchscreenKeyboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VyrobaIfc\VyrobaIfc.csproj">
+      <Project>{AEF304CD-C27C-46A4-ACA9-D3EBECAF0F5F}</Project>
+      <Name>VyrobaIfc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="NasnimanaData.xsc">
+      <DependentUpon>NasnimanaData.xsd</DependentUpon>
+    </None>
+    <None Include="NasnimanaData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NasnimanaData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="NasnimanaData.xss">
+      <DependentUpon>NasnimanaData.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQLCEDB\DataSets\Odberatele.xsc">
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </None>
+    <None Include="SQLCEDB\DataSets\Odberatele.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SQLCEDB\DataSets\Odberatele.xss">
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </None>
+    <None Include="SQLCEDB\DataSets\TypDokladu.xsc">
+      <DependentUpon>TypDokladu.xsd</DependentUpon>
+    </None>
+    <None Include="SQLCEDB\DataSets\TypDokladu.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SQLCEDB\DataSets\TypDokladu.xss">
+      <DependentUpon>TypDokladu.xsd</DependentUpon>
+    </None>
+    <None Include="SQLCEDB\DataSets\Zbozi.xsc">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+    <None Include="SQLCEDB\DataSets\Zbozi.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SQLCEDB\DataSets\Zbozi.xss">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+    <None Include="SQLCEDB\DataSets\Sklady.xsc">
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </None>
+    <None Include="SQLCEDB\DataSets\Sklady.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SQLCEDB\DataSets\Sklady.xss">
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </None>
+    <None Include="SQLCEDB\DataSets\Pracovnici.xsc">
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </None>
+    <None Include="SQLCEDB\DataSets\Pracovnici.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SQLCEDB\DataSets\Pracovnici.xss">
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Odberatele.xsc">
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Odberatele.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Odberatele.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Odberatele.xss">
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Pracovnici.xsc">
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Pracovnici.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pracovnici.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Pracovnici.xss">
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Prodej.xsc">
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Prodej.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Prodej1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Prodej.xss">
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Sklady.xsc">
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Sklady.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sklady.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Sklady.xss">
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\TypDokladu.xsc">
+      <DependentUpon>TypDokladu.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\TypDokladu.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TypDokladu.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\TypDokladu.xss">
+      <DependentUpon>TypDokladu.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Zbozi.xsc">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Zbozi.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Zbozi1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Zbozi.xss">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\CiselnikService\Ciselnik.wsdl" />
+    <None Include="Web References\CiselnikService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CiselnikService\StatusObject1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\FileTransferService\FileTransfer.wsdl" />
+    <None Include="Web References\FileTransferService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ProdejService\Location.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\Location.xsd" />
+    <None Include="Web References\ProdejService\Prodej.wsdl" />
+    <None Include="Web References\ProdejService\ProdejData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\ProdejData.xsd" />
+    <None Include="Web References\ProdejService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ProdejService\STATUS.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\StatusObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\StatusOverLokace.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\StatusOverPohyb.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\StatusResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\ConfigZZS.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="SQLCEDB\Odberatele.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQLCEDB\Pracovnici.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQLCEDB\Prodej.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQLCEDB\Sklady.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQLCEDB\TypDokladu.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQLCEDB\Zbozi.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Web References\FileTransferService\FileTransfer.disco" />
+    <None Include="Web References\ProdejService\Prodej.disco" />
+    <None Include="Web References\CiselnikService\Ciselnik.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_6_alfa/Ciselnik.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CiselnikService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_6_alfa/Ciselnik.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ZZS_CiselnikService_CiselnikService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_6_alfa/FileTransfer.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\FileTransferService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_6_alfa/FileTransfer.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ZZS_FileTransferService_FileTransfer</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_6_alfa/Prodej.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ProdejService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_6_alfa/Prodej.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ZZS_ProdejService_ProdejService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

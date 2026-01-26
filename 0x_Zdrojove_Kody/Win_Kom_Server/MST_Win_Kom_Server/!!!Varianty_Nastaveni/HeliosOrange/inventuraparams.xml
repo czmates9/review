@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="yes"?>
+<Inventura1 xmlns="http://sqlce.fask.cz/Inventura1.xsd">
+  <Parametry>
+    <!-- (MST_W:Ano) Upozornit na prebytek, pokud je zadano vetsi mnozstvi nez dle predlohy -->
+    <CFG_UpozornitNaPrebytek>true</CFG_UpozornitNaPrebytek>
+    <!-- (MST_W:Ne) ??? -->
+    <CFG_DalsiPolozkuBezDotazu>true</CFG_DalsiPolozkuBezDotazu>
+    <!-- (MST_W:Ano) kontrola uplnosti polozky -->
+    <CFG_KontrolaUplnostiPolozky>true</CFG_KontrolaUplnostiPolozky>
+    <!-- (MST_W:Ano) Po zadani mnozstvi/SN/Sarze zpet do seznamu polozek -->
+    <CFG_PoZadaniSNZpetNaMN>true</CFG_PoZadaniSNZpetNaMN>
+    <!-- (MST_W:Ano) povoluje predvypleni mnozstvi -->
+    <CFG_PredvyplnitMnozstvi>false</CFG_PredvyplnitMnozstvi>
+    <!-- (MST_W:Ano) predvyplni zbyvajici mnozstvi -->
+    <CFG_PredvyplnitMnozstviZbyvajici>false</CFG_PredvyplnitMnozstviZbyvajici>
+    <!-- (MST_W:Ano) predvyplni mnozstvi "1" -->
+    <CFG_PredvyplnitMnozstviOJedna>false</CFG_PredvyplnitMnozstviOJedna>
+    <!-- (MST_W:Ano) Povolit duplicitni SN/Sarzi (true=kontrola se neprovadi, false=provadi se kontrola) -->
+    <CFG_PovolitDuplicituSN>true</CFG_PovolitDuplicituSN>
+    <!-- (MST_W:Ano) Povoluje zadavani mnozstvi scannerem -->
+    <CFG_MnozstviScannerem>false</CFG_MnozstviScannerem>
+    <!-- (MST_W:Ne) ??? -->
+    <CFG_PosunNaDalsiPolozku>false</CFG_PosunNaDalsiPolozku>
+    <!-- (MST_W:Ano) Povoluje zadani mnozstvi mensi nebo rovno nule (<=0) -->
+    <CFG_PovolitZaporneMnozstvi>false</CFG_PovolitZaporneMnozstvi>
+    <!-- (MST_W:Ano, ale momentalne neni funkcni) Povoluje kontrolu uplnosti davky invnetury -->
+    <CFG_KontrolaUplnosti>false</CFG_KontrolaUplnosti>
+    <!-- (MST_W:Ano) Vyzaduje(povoluje) zadani/zmenu/potvrzeni lokace(LOCNCODE) -->
+    <CFG_PovolitZmenuLokace>false</CFG_PovolitZmenuLokace>
+    <!-- (MST_W:Ano) Zobrazeni mnozstvi na sklade (hodnota Nacist z predlohy) -->
+    <CFG_PovolitZobrazeniMnozstviNaSklade>true</CFG_PovolitZobrazeniMnozstviNaSklade>
+
+  </Parametry>
+</Inventura1>

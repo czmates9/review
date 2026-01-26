@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="Windows-1250"?>
+<dat:dataPack id="ob002" ico="12345678" application="StwTest" version = "2.0" note="Import Objednávky"       
+xmlns:dat="http://www.stormware.cz/schema/version_2/data.xsd"         		  
+xmlns:ord="http://www.stormware.cz/schema/version_2/order.xsd"		          		 
+xmlns:typ="http://www.stormware.cz/schema/version_2/type.xsd" >
+  <dat:dataPackItem id="OBJ001" version="2.0">
+    <ord:order version="2.0">
+      <!--	Vydana objednavka. -->
+      <ord:orderHeader>
+        <ord:orderType>issuedOrder</ord:orderType>
+        <ord:date>2013-10-14</ord:date>
+        <ord:dateDelivery>2013-10-16</ord:dateDelivery>
+        <ord:text>Nabídka na zboží</ord:text>
+		<!--vazba na adresu z programu POHODA-->
+		<ord:partnerIdentity>
+          <typ:id>25</typ:id>
+        </ord:partnerIdentity>
+        <ord:paymentType>
+          <typ:ids>hotově</typ:ids>
+        </ord:paymentType>
+		<ord:note>Načteno z XML</ord:note>
+		<ord:intNote>Objednávka s textovou položkou</ord:intNote>
+      </ord:orderHeader>
+      <ord:orderDetail>
+		<!--textova polozka-->  
+        <ord:orderItem>
+          <ord:text>Sestava PC</ord:text>
+          <ord:quantity>1</ord:quantity>
+          <ord:delivered>0</ord:delivered>
+          <ord:rateVAT>high</ord:rateVAT>
+          <ord:homeCurrency>
+            <typ:unitPrice>198</typ:unitPrice>
+          </ord:homeCurrency>
+        </ord:orderItem>
+      </ord:orderDetail>
+      <ord:orderSummary>
+        <ord:roundingDocument>math2one</ord:roundingDocument>
+      </ord:orderSummary>
+    </ord:order>
+  </dat:dataPackItem>
+	
+  <dat:dataPackItem id="OBJ002" version="2.0">
+    <ord:order version="2.0">
+	  <!--	Vydaná objednávka v cizí měně. -->
+      <ord:orderHeader>
+        <ord:orderType>issuedOrder</ord:orderType>
+        <ord:date>2013-10-14</ord:date>
+        <ord:dateDelivery>2013-10-16</ord:dateDelivery>
+        <ord:text>Nabídka na zboží</ord:text>
+		<!--vazba na adresu z programu POHODA-->  
+        <ord:partnerIdentity>
+          <typ:id>25</typ:id>
+        </ord:partnerIdentity>
+		  
+        <ord:paymentType>
+          <typ:ids>hotově</typ:ids>
+        </ord:paymentType>
+		<ord:note>Načteno z XML</ord:note>
+		<ord:intNote>Objednávka v cizí měně.Vazba na adresu z programu POHODA.</ord:intNote>  
+      </ord:orderHeader>
+      <ord:orderSummary>
+        <ord:roundingDocument>math2one</ord:roundingDocument>
+        <ord:foreignCurrency>
+          <typ:currency>
+            <typ:ids>EUR</typ:ids>
+          </typ:currency>
+          <typ:rate>20.232</typ:rate>
+          <typ:amount>1</typ:amount>
+          <typ:priceSum>580</typ:priceSum>
+        </ord:foreignCurrency>
+      </ord:orderSummary>
+    </ord:order>
+  </dat:dataPackItem>
+</dat:dataPack>

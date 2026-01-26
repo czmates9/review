@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DieCutLabel xml:space="preserve" labelversion="1.1" platform="Win" osversion="10.0.14393" build="2.2.3105.0">
+  <Id category="Address">StandardAddressLabel</Id>
+  <Orientation>Landscape</Orientation>
+  <Automation>
+    <ScreenLogo />
+    <ScreenTitle />
+    <ScreenLogoScaleMode>None</ScreenLogoScaleMode>
+    <AutomationActions />
+    <ScreenColor Alpha="0" Red="0" Green="0" Blue="0" />
+  </Automation>
+  <Shape>
+    <Rectangle Left="0" Top="0" Width="4989" Height="1587" RadiusX="181" RadiusY="181" />
+  </Shape>
+  <LabelElements>
+    <TextData>
+      <Id>OdberatelOznaceni</Id>
+      <Left>207</Left>
+      <Top>100</Top>
+      <Width>4588</Width>
+      <Height>360</Height>
+      <Foreground Alpha="255" Red="0" Green="0" Blue="0" />
+      <Background Alpha="0" Red="182" Green="182" Blue="182" />
+      <RotateAngle>Angle0</RotateAngle>
+      <Reflected>false</Reflected>
+      <Editable>false</Editable>
+      <HorizontalAlignment>Left</HorizontalAlignment>
+      <VerticalAlignment>Top</VerticalAlignment>
+      <IsTextVertical>false</IsTextVertical>
+      <ScalingMode>ShrinkToFit</ScalingMode>
+      <TextElements>
+        <TextInfo>
+          <Text>Odb</Text>
+          <Foreground Alpha="255" Red="0" Green="0" Blue="0" />
+          <Font Family="Times New Roman" Size="10" Bold="false" Italic="false" Underline="false" Strikeout="false" />
+        </TextInfo>
+        <TextInfo>
+          <Text>ěratel označení</Text>
+          <Foreground Alpha="255" Red="0" Green="0" Blue="0" />
+          <Font Family="Times New Roman" Size="10" Bold="false" Italic="false" Underline="false" Strikeout="false" />
+        </TextInfo>
+      </TextElements>
+    </TextData>
+    <TextData>
+      <Id>OkruhOznaceni</Id>
+      <Left>192</Left>
+      <Top>414</Top>
+      <Width>4603</Width>
+      <Height>360</Height>
+      <Foreground Alpha="255" Red="0" Green="0" Blue="0" />
+      <Background Alpha="0" Red="182" Green="182" Blue="182" />
+      <RotateAngle>Angle0</RotateAngle>
+      <Reflected>false</Reflected>
+      <Editable>false</Editable>
+      <HorizontalAlignment>Left</HorizontalAlignment>
+      <VerticalAlignment>Top</VerticalAlignment>
+      <IsTextVertical>false</IsTextVertical>
+      <ScalingMode>ShrinkToFit</ScalingMode>
+      <TextElements>
+        <TextInfo>
+          <Text>Okruh označení</Text>
+          <Foreground Alpha="255" Red="0" Green="0" Blue="0" />
+          <Font Family="Times New Roman" Size="10" Bold="false" Italic="false" Underline="false" Strikeout="false" />
+        </TextInfo>
+      </TextElements>
+    </TextData>
+    <TextData>
+      <Id>ZdrojOznaceni</Id>
+      <Left>226</Left>
+      <Top>1157</Top>
+      <Width>4570</Width>
+      <Height>360</Height>
+      <Foreground Alpha="255" Red="0" Green="0" Blue="0" />
+      <Background Alpha="0" Red="182" Green="182" Blue="182" />
+      <RotateAngle>Angle0</RotateAngle>
+      <Reflected>false</Reflected>
+      <Editable>false</Editable>
+      <HorizontalAlignment>Center</HorizontalAlignment>
+      <VerticalAlignment>Bottom</VerticalAlignment>
+      <IsTextVertical>false</IsTextVertical>
+      <ScalingMode>ShrinkToFit</ScalingMode>
+      <TextElements>
+        <TextInfo>
+          <Text>Zdroj ozna</Text>
+          <Foreground Alpha="255" Red="0" Green="0" Blue="0" />
+          <Font Family="Times New Roman" Size="10" Bold="false" Italic="false" Underline="false" Strikeout="false" />
+        </TextInfo>
+        <TextInfo>
+          <Text>čení</Text>
+          <Foreground Alpha="255" Red="0" Green="0" Blue="0" />
+          <Font Family="Times New Roman" Size="10" Bold="false" Italic="false" Underline="false" Strikeout="false" />
+        </TextInfo>
+      </TextElements>
+    </TextData>
+    <BarcodeData>
+      <Id>ZdrojBarcode</Id>
+      <Type>Code128Auto</Type>
+      <Left>192</Left>
+      <Top>745</Top>
+      <Width>4604</Width>
+      <Height>508</Height>
+      <Size>Small</Size>
+      <ReferenceId />
+      <RotateAngle>Angle0</RotateAngle>
+      <Editable>false</Editable>
+      <HorizontalAlignment>Center</HorizontalAlignment>
+      <TextAlignment>None</TextAlignment>
+      <TextInfo>
+        <Text>Zdroj barcode</Text>
+        <Foreground Alpha="255" Red="0" Green="0" Blue="0" />
+        <Font Family="Army" Size="10" Bold="false" Italic="false" Underline="false" Strikeout="false" />
+      </TextInfo>
+    </BarcodeData>
+  </LabelElements>
+  <Type>Standard</Type>
+  <LabelLength>0</LabelLength>
+</DieCutLabel>

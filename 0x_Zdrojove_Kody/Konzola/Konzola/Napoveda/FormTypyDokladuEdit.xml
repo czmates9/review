@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Napoveda>
+  <add key="doc_id" value="Typ dokladu" />
+  <add key="doc_id2" value="Doplňující identifikátor=NEVYPLŇOVAT" />
+  <add key="doc_desc" value="Název typu dokladu" />
+  <add key="doc_typ" value="Doplňující podlogika=NEVYPLŇOVAT" />
+  <add key="doc_carcode" value="Čárový kód typu dokladu" />
+  <add key="DEX_ROW_ID" value="Index položky" />
+  <add key="LOCNCODE" value="Předvyplnění lokace" />
+  <add key="cfg_odb" value="Povolit odběratele (0 nepovoleno, 1 povoleno)" />
+  <add key="cfg_str" value="Povolit středisko (0 nepovoleno, 1 povoleno)" />
+  <add key="cfg_prac" value="Povolit pracovníka (0 nepovoleno, 1 povoleno)" />
+  <add key="cfg_mn2sn" value="Množství automaticky 1 s řevzetím čárového kódu do seriového čísla (0 nepovoleno, 1 povoleno) " />
+  <add key="cfg_disp" value="Povolit kontrolu disponibility (0 nepovoleno, 1 povoleno)" />
+  <add key="cfg_disp_proc" value="Název procedůry pro kontrolu disponibility" />
+  <add key="cfg_disp_param1" value="Název parameteru procedůry, která provádí kontrolu disponibility" />
+  <add key="cfg_disp_param2" value="Název parameteru procedůry, která provádí kontrolu disponibility" />
+  <add key="cfg_palety" value="Povolit paletování (0 nepovoleno, 1 povoleno)" />
+  <add key="cfg_paleta_id" value="Při opuštění nasnímaných dat, které mají přiřazené číslo palety a ID skladu, po znovu otevření dávky se automaticky dotáhne číslo palety a ID skladu z již vytvořených dat" />
+  <add key="cfg_zakazka_id" value="Po znovu otevření dávky se automaticky dotáhne ID zakázky na hlavičce zakázkyz již nasnímaných dat" />
+  <add key="cfg_mena_id" value="Po znovu otevření dávky se automaticky dotáhne ID měny na hlavičce zakázky z již nasnímaných dat" />
+  <add key="cfg_tisk" value="Povolit tisk etikety po přidání položky (0 nepovoleno, 1 povoleno)" />
+  <add key="cfg_prevod_sklad" value="Po znovu otevření dávky se automaticky dotáhne ID zakázky na hlavičce zakázky z již nasnímaných dat" />
+  <add key="cfg_tisk_soupis" value="Povolit tisk soupisu při ukončení dávky + tisk pomocí klávesové zkratky. Nepovoluje tisk z menu (0 nepovoleno, 1 povoleno)" />
+  <add key="SKL_ID" value="Nastvení ID skladu pro typ dokladu" />
+  <add key="cfg_lokace" value="Za předpokladu povolení cfg_lokace_ciselnik se zobrazí dialog s pohledem na číselník lokací, kde ručně obsluha volí lokaci. NESMÍ BÝT VYPLNĚNÍ LOCENCODE" />
+  <add key="cfg_lokace_ciselnik" value="V případě zakázání cfg_lokace_ciselnik a cfg_lokace jsou povolené a zároveň konfiguračně je povolené zadání lokace před zadáním seriového čísla se lokace bude přebírat z číselníku zboží" />
+  <add key="cfg_lokace_dest" value="Povolením umožňujeme dít na jinou lokaci (0 nepovoleno, 1 povoleno) " />
+  <add key="cfg_onl_dop_pal" value="On-line dotaz pro nasnímanu položku z lokačního mechanismu (množství, seriové číslo a lokace) (0 nepovoleno, 1 povoleno)" />
+  <add key="cfg_onl_over_lokace" value="On-line dotaz pro ověření zdrojové lokace položky (0 nepovoleno, 1 povoleno)" />
+  <add key="cfg_onl_over_lokace_dest" value="On-line dotaz pro ověření cílové lokace položky (0 nepovoleno, 1 povoleno)" />
+  <add key="cfg_mnozstvi_ze_zbozi" value="Převezme množství z číselníku zboží a obsluha množství již nezadává On-line dotaz pro ověření zdrojové lokace položky (0 nepovoleno, 1 povoleno)" />
+  <add key="cfg_predvyplnit_mnozstvi" value="Automaticky předvyplní množství z číselníku zboží a dá obsluze vybrat, zda s množstvím souhlasí On-line dotaz pro ověření zdrojové lokace položky (0 nepovoleno, 1 povoleno)" />
+  <add key="cfg_skl_id_dest" value="Pokud je parametr povolený, tak předvyplní ID skladu podle parametru predvyplnit_skl_ID_dest On-line dotaz pro ověření zdrojové lokace položky (0 nepovoleno, 1 povoleno)" />
+  <add key="predvyplnit_skl_id_dest" value="V případě, že je parametr vyplněný, tak se přebírá ID. Pokud není vyplnění obsluze se zobrazí číselník skladů)" />
+  <add key="cfg_lok_mech" value="On-line pohyby, které jsou uloženy do lokačního mechanismu (0 nepovoleno, 1 povoleno)" />
+  <add key="cfg_lok_mech_pohyb_type" value="On-line ověření zdrojové lokace (zadat typ pohybu: E,P,V,I,D)" />
+  <add key="cfg_skl_id_dest_prevzit" value="Převzetí ID skladu z karty zboží a nebo z číselníku skladu (0 nepovoleno, 1 povoleno)" />
+  <add key="cfg_lokace_dest_ciselnik" value="Povolením se obsluze zobrazí číselník lokací a ta lokaci vybírá ručně (0 nepovoleno, 1 povoleno)" />
+  <add key="predvyplnit_locncodedest" value="Lokace na kterou obsluha bude přesunovat položku" />
+  <add key="cfg_sklady" value="Povolení převzetí z číselníků skladu + při otevření dávky se provede výběr zdrojového ID skladu  (0 nepovoleno, 1 povoleno)" />
+  <add key="cfg_onl_dop_lokace_dest" value="On-line dotaz na doporučenou cílovou lokaci " />
+  <add key="cfg_generovat_sn" value="Povolení umožňuje generování sériové číslo na základě posledních dvou čísel roku+den (0 nepovoleno, 1 povoleno) " />
+  <add key="cfg_parsovat_ck" value="Povolení parsování čárového kódu (0 nepovoleno, 1 povoleno)" />
+  <add key="cfg_sn_na_davku" value="Povolení automatického vygenerování sériového čísla" />
+  <add key="cfg_lok_mech_online_pohyby" value="On-line pohyby, které jsou uloženy do lokačního mechanismu (0 nepovoleno, 1 povoleno)" />
+  <add key="cfg_onl_palety_generovat" value="Povolení generování čísla palety při otevření dávky (0 nepovoleno, 1 povoleno) " />
+  <add key="cfg_tisk_palety" value="Povolení tisku paletového štítku (0 nepovoleno, 1 povoleno)" />
+  <add key="cfg_sklady_zmena" value="V případě povolení cfg_sklady a cfg_sklady_změna, obsluha může změnit zdrojový sklad z menu (0 nepovoleno, 1 povoleno)" />
+  <add key="cfg_delka_SN" value="Zadání délka znaků" />
+</Napoveda>

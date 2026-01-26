@@ -1,0 +1,17 @@
+.extended-analytics-table{
+    border-width: 1px;
+    border-spacing: 1px;
+    border: 1px solid;
+    padding: 2px;
+}
+
+.extended-analytics-table-header{
+    font-weight: bold;
+}
+
+.extended-analytics-table-container{
+	width: 100%; 
+	border: solid 1px #dcdcdc; 
+	overflow: scroll; 
+	padding: 5px
+}

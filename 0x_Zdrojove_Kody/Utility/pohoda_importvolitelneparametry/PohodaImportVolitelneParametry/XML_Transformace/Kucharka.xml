@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<kucharka>
+  <recept nazev="Černý čaj s citronem" priprava="5">
+    <ingredience nazev="čaj" mnozstvi="1" jednotka="sáček"/>
+    <ingredience nazev="citron" mnozstvi="1" jednotka="plátek"/>
+    <ingredience nazev="cukr" mnozstvi="2" jednotka="čajová lžička"/>
+    <ingredience nazev="voda" mnozstvi="0.4" jednotka="l"/>
+    <postup>
+      Přivedeme vodu k varu. Mezitím si nachystáme hrnek, do něj vložíme sáček čaje.
+      Jakmile voda zavaří, vlijeme ji do hrnku. Necháme 5 minut louhovat a poté sáček vyjmeme.
+      Přidáme cukr a citron.
+    </postup>
+  </recept>
+</kucharka>

@@ -1,0 +1,20 @@
+Prijem
+---------------------------------------
+1) Online funkce lokace ma vracet seznam lokaci, kam je mozne paletu umistit (ktere se nasledne na terminalu zobrazi) a uzivatel si muze vybrat, nebo ma jit ciste o kontrolni funkci, kdy uzivatel zada ID lokace/palety a kontrolni funkce mu rekne, zdali tam muze dat paletu nebo nemuze.
+Pokud by se pouzila prvni moznost, ma nasledne dojit k nejakemu overeni, zdali opravdu dal paletu na danou lokaci? (napr. moci vybrat lokaci pouze sejmutim caroveho kodu)
+ 
+2) Ma se pred porizovanim fotografie zobrazit nejaky dialog (s odpovedi Ano/Ne), ktery se bude ptat, zdali se ma provest foceni?
+
+3) odesilani fotografii ma probihat pri odesilani davky nebo napr. pri nejake volbe z menu aplikace? Maji se fotky odesilat v hlavnim vlakne? Kdyz uzivatel vyfoti fotky a nasledne zruseni zadani mnozstvi (da storno), ma dojit k odstraneni fotek s danou sarzi?
+
+4) Aplikace zamrza pri foceni na MC2180. Zkusit vyresit, nebo pockat, az se vrati terminal, ktery budou pouzivat? (Pri implementaci foceni pro Esa s tim byl take u nas problem, ale pak to samo od sebe zacalo opet fungovat ...)
+
+5) Pri zadavani lokace do textoveho pole (parametr CONFIG_SNIM_LOCNCODE) je napevno nastaven pocet znaku na 11 (public const int). Dochazi k zobrazeni hlasky "Sejmuty kod je kratsi nez 11 znaku. Chcete ho ulozit?"
+
+Prodej (Prevod materialu do vyroby)
+---------------------------------------
+
+
+Prodej (Modul vratka palety z vyroby)
+---------------------------------------
+

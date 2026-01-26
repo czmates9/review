@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Napoveda>
+  <add key="ID" value="Identifikator" />
+  <!--<add key="Default" value="" />
+ <add key="PlatnostOd" value="Určuje platnost Do pro danou definici" />
+  <add key="PlatnostDo" value="Určuje platnost Od pro danou definici" />-->
+  <add key="Modul" value="Nazev modulu" />
+  <add key="Modul_ID" value="ID modulu" />
+  <add key="Modul_ID2" value="ID2 omdulu" />
+  <add key="Modul_Funkce" value="Funkce modulu" />
+  <add key="Rada_ID" value="ID řady v IS" />
+  <add key="Rada_Nazev" value="Název řady" />
+  <add key="Rada_Prefix" value="Prefix řady" />
+  <add key="Rada_Count" value="počitadlo řady" />
+  <add key="Filtr_SkladID" value="Filtr pro danou definici na Sklad" />
+  <add key="Filtr_UserID" value="Filtr pro danou definici na uživatele" />
+  <add key="Vloz_Stredisko" value="Středisko do IS" />
+  <add key="Vloz_Cinnost" value="činnost do IS" />
+  <add key="Vloz_Zakazka" value="Zakazka do IS" />
+  <add key="Vyber_Typ_Prevodka" value="Jedná se o typ převodky která vznikne v IS POHODA. &#13;&#10; 0 - Datum vydejky aj přijemky je totožný. &#13;&#10; 1 - Datum příjemky se nenastaví. Nastaví se pouze datum výdejky. &#13;&#10; 2 - Je možno nastavit datum přijemky. (zatim nevymyšleno, nastavuje se aktualny čas pri vytvařeni xml requestu.)" />
+  <add key="Prodej_Prijemka_Tisk_Tiskarna" value="Jedná se o nazev tiskarny na kterou se bude tiskout přijemka." />
+  <add key="Prodej_Vydejka_Tisk_Tiskarna" value="Jedná se o nazev tiskarny na kterou se bude tiskout výdejka." />
+  <add key="Prodej_Prevodka_Tisk_Tiskarna" value="Jedná se o nazev tiskarny na kterou se bude tiskout převoda." />
+  <add key="Prodej_Prijemka_Tisk_ID_sablona" value="Jedná se o ID šablony na kterou se bude tiskout přijemka." />
+  <add key="Prodej_Vydejka_Tisk_ID_sablona" value="Jedná se o ID šablony na kterou se bude tiskout výdejka." />
+  <add key="Prodej_Prevodka_Tisk_ID_sablona" value="Jedná se o ID šablony na kterou se bude tiskout převoda." /> 
+</Napoveda>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Passwd" targetNamespace="http://fask.cz/Passwd.xsd" xmlns:mstns="http://fask.cz/Passwd.xsd" xmlns="http://fask.cz/Passwd.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="ExcludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="FASKConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="FASKConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.FASKConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Passwd" msdata:IsDataSet="true" msdata:Locale="" msdata:EnforceConstraints="False" msprop:Generator_UserDSName="Passwd" msprop:Generator_DataSetName="Passwd">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMSTPWD" msprop:Generator_UserTableName="CZMSTPWD" msprop:Generator_RowDeletedName="CZMSTPWDRowDeleted" msprop:Generator_RowChangedName="CZMSTPWDRowChanged" msprop:Generator_RowClassName="CZMSTPWDRow" msprop:Generator_RowChangingName="CZMSTPWDRowChanging" msprop:Generator_RowEvArgName="CZMSTPWDRowChangeEvent" msprop:Generator_RowEvHandlerName="CZMSTPWDRowChangeEventHandler" msprop:Generator_TableClassName="CZMSTPWDDataTable" msprop:Generator_TableVarName="tableCZMSTPWD" msprop:Generator_RowDeletingName="CZMSTPWDRowDeleting" msprop:Generator_TablePropName="CZMSTPWD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="login" msprop:Generator_UserColumnName="login" msprop:Generator_ColumnPropNameInRow="login" msprop:Generator_ColumnVarNameInTable="columnlogin" msprop:Generator_ColumnPropNameInTable="loginColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="passwd" msprop:Generator_UserColumnName="passwd" msprop:Generator_ColumnPropNameInRow="passwd" msprop:Generator_ColumnVarNameInTable="columnpasswd" msprop:Generator_ColumnPropNameInTable="passwdColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:decimal" />
+              <xs:element name="adm" msprop:Generator_UserColumnName="adm" msprop:Generator_ColumnPropNameInRow="adm" msprop:Generator_ColumnVarNameInTable="columnadm" msprop:Generator_ColumnPropNameInTable="admColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="firstname" msprop:Generator_UserColumnName="firstname" msprop:Generator_ColumnPropNameInRow="firstname" msprop:Generator_ColumnVarNameInTable="columnfirstname" msprop:Generator_ColumnPropNameInTable="firstnameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="secondname" msprop:Generator_UserColumnName="secondname" msprop:Generator_ColumnPropNameInRow="secondname" msprop:Generator_ColumnVarNameInTable="columnsecondname" msprop:Generator_ColumnPropNameInTable="secondnameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="code" msprop:Generator_UserColumnName="code" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_ColumnPropNameInTable="codeColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CZMSTPWD" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://sqlce.fask.cz/Ukoly.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://sqlce.fask.cz/Ukoly.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://sqlce.fask.cz/Ukoly.xsd" id="Ukoly" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="" name="Ukoly">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZ_UKOL">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" />
+              <xs:element name="Name" type="xs:string" />
+              <xs:element name="Description" type="xs:string" />
+              <xs:element minOccurs="0" name="Code" type="xs:string" />
+              <xs:element name="CreatorID" type="xs:int" />
+              <xs:element name="DateCreated" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DateFrom" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DateTo" type="xs:dateTime" />
+              <xs:element name="State" type="xs:string" />
+              <xs:element minOccurs="0" name="Kind" type="xs:string" />
+              <xs:element minOccurs="0" name="Type" type="xs:string" />
+              <xs:element name="Priority" type="xs:int" />
+              <xs:element minOccurs="0" name="PartnerID" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZ_UKOL_UZIV">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" />
+              <xs:element name="UkolID" type="xs:int" />
+              <xs:element name="UserID" type="xs:int" />
+              <xs:element name="State" type="xs:string" />
+              <xs:element minOccurs="0" name="DateChanged" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="UserIDChanged" type="xs:int" />
+              <xs:element minOccurs="0" name="Note" type="xs:string" />
+              <xs:element minOccurs="0" name="DateNotify" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DateFinished" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZ_UKOL_STATE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="State" type="xs:string" />
+              <xs:element name="Description" type="xs:string" />
+              <xs:element name="IsStart" type="xs:boolean" />
+              <xs:element name="IsEnd" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZ_UKOL_ServiceMan">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" />
+              <xs:element minOccurs="0" name="NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="EMAIL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PHONE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DESC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OPERATOR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OPERATOR_Type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:CZ_UKOL" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="CZ_UKOL_UZIV_Constraint1">
+      <xs:selector xpath=".//mstns:CZ_UKOL_UZIV" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="CZ_UKOL_STATE_Constraint1">
+      <xs:selector xpath=".//mstns:CZ_UKOL_STATE" />
+      <xs:field xpath="mstns:State" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="CZ_UKOL_ServiceMan_Constraint1">
+      <xs:selector xpath=".//mstns:CZ_UKOL_ServiceMan" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

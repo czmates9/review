@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TypDokladu" targetNamespace="http://sqlce.fask.cz/TypDokladu.xsd" xmlns:mstns="http://sqlce.fask.cz/TypDokladu.xsd" xmlns="http://sqlce.fask.cz/TypDokladu.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TypDokladu" msdata:IsDataSet="true" msdata:Locale="" msprop:Generator_DataSetName="TypDokladu" msprop:Generator_UserDSName="TypDokladu">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST092" msprop:Generator_UserTableName="CZMST092" msprop:Generator_RowEvArgName="CZMST092RowChangeEvent" msprop:Generator_TableVarName="tableCZMST092" msprop:Generator_TablePropName="CZMST092" msprop:Generator_RowDeletingName="CZMST092RowDeleting" msprop:Generator_RowChangingName="CZMST092RowChanging" msprop:Generator_RowDeletedName="CZMST092RowDeleted" msprop:Generator_RowEvHandlerName="CZMST092RowChangeEventHandler" msprop:Generator_TableClassName="CZMST092DataTable" msprop:Generator_RowChangedName="CZMST092RowChanged" msprop:Generator_RowClassName="CZMST092Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="doc_id" msprop:Generator_ColumnVarNameInTable="columndoc_id" msprop:Generator_ColumnPropNameInRow="doc_id" msprop:Generator_ColumnPropNameInTable="doc_idColumn" msprop:Generator_UserColumnName="doc_id">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="doc_desc" msprop:Generator_ColumnVarNameInTable="columndoc_desc" msprop:Generator_ColumnPropNameInRow="doc_desc" msprop:Generator_ColumnPropNameInTable="doc_descColumn" msprop:Generator_UserColumnName="doc_desc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="doc_typ" msprop:Generator_ColumnVarNameInTable="columndoc_typ" msprop:Generator_ColumnPropNameInRow="doc_typ" msprop:Generator_ColumnPropNameInTable="doc_typColumn" msprop:Generator_UserColumnName="doc_typ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="doc_carcode" msprop:Generator_ColumnVarNameInTable="columndoc_carcode" msprop:Generator_ColumnPropNameInRow="doc_carcode" msprop:Generator_ColumnPropNameInTable="doc_carcodeColumn" msprop:Generator_UserColumnName="doc_carcode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DEX_ROW_ID" msprop:Generator_ColumnVarNameInTable="columnDEX_ROW_ID" msprop:Generator_ColumnPropNameInRow="DEX_ROW_ID" msprop:Generator_ColumnPropNameInTable="DEX_ROW_IDColumn" msprop:Generator_UserColumnName="DEX_ROW_ID" type="xs:int" />
+              <xs:element name="LOCNCODE" msprop:Generator_ColumnVarNameInTable="columnLOCNCODE" msprop:Generator_ColumnPropNameInRow="LOCNCODE" msprop:Generator_ColumnPropNameInTable="LOCNCODEColumn" msprop:Generator_UserColumnName="LOCNCODE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cfg_odb" msprop:Generator_ColumnVarNameInTable="columncfg_odb" msprop:Generator_ColumnPropNameInRow="cfg_odb" msprop:Generator_ColumnPropNameInTable="cfg_odbColumn" msprop:Generator_UserColumnName="cfg_odb" type="xs:unsignedByte" />
+              <xs:element name="cfg_str" msprop:Generator_ColumnVarNameInTable="columncfg_str" msprop:Generator_ColumnPropNameInRow="cfg_str" msprop:Generator_ColumnPropNameInTable="cfg_strColumn" msprop:Generator_UserColumnName="cfg_str" type="xs:unsignedByte" />
+              <xs:element name="cfg_disp" msprop:Generator_ColumnVarNameInTable="columncfg_disp" msprop:Generator_ColumnPropNameInRow="cfg_disp" msprop:Generator_ColumnPropNameInTable="cfg_dispColumn" msprop:Generator_UserColumnName="cfg_disp" type="xs:unsignedByte" />
+              <xs:element name="cfg_disp_dest" msprop:Generator_ColumnVarNameInTable="columncfg_disp_dest" msprop:Generator_ColumnPropNameInRow="cfg_disp_dest" msprop:Generator_ColumnPropNameInTable="cfg_disp_destColumn" msprop:Generator_UserColumnName="cfg_disp_dest" type="xs:unsignedByte" />
+              <xs:element name="cfg_mn2sn" msprop:Generator_ColumnVarNameInTable="columncfg_mn2sn" msprop:Generator_ColumnPropNameInRow="cfg_mn2sn" msprop:Generator_ColumnPropNameInTable="cfg_mn2snColumn" msprop:Generator_UserColumnName="cfg_mn2sn" type="xs:unsignedByte" />
+              <xs:element name="cfg_prac" msprop:Generator_ColumnVarNameInTable="columncfg_prac" msprop:Generator_ColumnPropNameInRow="cfg_prac" msprop:Generator_ColumnPropNameInTable="cfg_pracColumn" msprop:Generator_UserColumnName="cfg_prac" type="xs:unsignedByte" />
+              <xs:element name="cfg_palety" msprop:Generator_ColumnVarNameInTable="columncfg_palety" msprop:Generator_ColumnPropNameInRow="cfg_palety" msprop:Generator_ColumnPropNameInTable="cfg_paletyColumn" msprop:Generator_UserColumnName="cfg_palety" type="xs:unsignedByte" />
+              <xs:element name="cfg_paleta_id" msprop:Generator_ColumnVarNameInTable="columncfg_paleta_id" msprop:Generator_ColumnPropNameInRow="cfg_paleta_id" msprop:Generator_ColumnPropNameInTable="cfg_paleta_idColumn" msprop:Generator_UserColumnName="cfg_paleta_id" type="xs:unsignedByte" />
+              <xs:element name="cfg_zakazka_id" msprop:Generator_ColumnVarNameInTable="columncfg_zakazka_id" msprop:Generator_ColumnPropNameInRow="cfg_zakazka_id" msprop:Generator_ColumnPropNameInTable="cfg_zakazka_idColumn" msprop:Generator_UserColumnName="cfg_zakazka_id" type="xs:unsignedByte" />
+              <xs:element name="cfg_mena_id" msprop:Generator_ColumnVarNameInTable="columncfg_mena_id" msprop:Generator_ColumnPropNameInRow="cfg_mena_id" msprop:Generator_ColumnPropNameInTable="cfg_mena_idColumn" msprop:Generator_UserColumnName="cfg_mena_id" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="doc_id2" msprop:Generator_ColumnVarNameInTable="columndoc_id2" msprop:Generator_ColumnPropNameInRow="doc_id2" msprop:Generator_ColumnPropNameInTable="doc_id2Column" msprop:Generator_UserColumnName="doc_id2" default="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cfg_tisk" msprop:Generator_ColumnVarNameInTable="columncfg_tisk" msprop:Generator_ColumnPropNameInRow="cfg_tisk" msprop:Generator_ColumnPropNameInTable="cfg_tiskColumn" msprop:Generator_UserColumnName="cfg_tisk" type="xs:unsignedByte" default="0" />
+              <xs:element name="cfg_prevod_sklad" msprop:Generator_ColumnVarNameInTable="columncfg_prevod_sklad" msprop:Generator_ColumnPropNameInRow="cfg_prevod_sklad" msprop:Generator_ColumnPropNameInTable="cfg_prevod_skladColumn" msprop:Generator_UserColumnName="cfg_prevod_sklad" type="xs:unsignedByte" default="0" />
+              <xs:element name="cfg_tisk_soupis" msprop:Generator_ColumnVarNameInTable="columncfg_tisk_soupis" msprop:Generator_ColumnPropNameInRow="cfg_tisk_soupis" msprop:Generator_ColumnPropNameInTable="cfg_tisk_soupisColumn" msprop:Generator_UserColumnName="cfg_tisk_soupis" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="SKL_ID" msprop:Generator_ColumnVarNameInTable="columnSKL_ID" msprop:Generator_ColumnPropNameInRow="SKL_ID" msprop:Generator_ColumnPropNameInTable="SKL_IDColumn" msprop:Generator_UserColumnName="SKL_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cfg_lokace" msprop:Generator_ColumnVarNameInTable="columncfg_lokace" msprop:Generator_ColumnPropNameInRow="cfg_lokace" msprop:Generator_ColumnPropNameInTable="cfg_lokaceColumn" msprop:Generator_UserColumnName="cfg_lokace" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_lokace_ciselnik" msprop:Generator_ColumnVarNameInTable="columncfg_lokace_ciselnik" msprop:Generator_ColumnPropNameInRow="cfg_lokace_ciselnik" msprop:Generator_ColumnPropNameInTable="cfg_lokace_ciselnikColumn" msprop:Generator_UserColumnName="cfg_lokace_ciselnik" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_lokace_dest" msprop:Generator_ColumnVarNameInTable="columncfg_lokace_dest" msprop:Generator_ColumnPropNameInRow="cfg_lokace_dest" msprop:Generator_ColumnPropNameInTable="cfg_lokace_destColumn" msprop:Generator_UserColumnName="cfg_lokace_dest" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_onl_dop_pal" msprop:Generator_ColumnVarNameInTable="columncfg_onl_dop_pal" msprop:Generator_ColumnPropNameInRow="cfg_onl_dop_pal" msprop:Generator_ColumnPropNameInTable="cfg_onl_dop_palColumn" msprop:Generator_UserColumnName="cfg_onl_dop_pal" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_onl_over_lokace" msprop:Generator_ColumnVarNameInTable="columncfg_onl_over_lokace" msprop:Generator_ColumnPropNameInRow="cfg_onl_over_lokace" msprop:Generator_ColumnPropNameInTable="cfg_onl_over_lokaceColumn" msprop:Generator_UserColumnName="cfg_onl_over_lokace" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_onl_over_lokace_dest" msprop:Generator_ColumnVarNameInTable="columncfg_onl_over_lokace_dest" msprop:Generator_ColumnPropNameInRow="cfg_onl_over_lokace_dest" msprop:Generator_ColumnPropNameInTable="cfg_onl_over_lokace_destColumn" msprop:Generator_UserColumnName="cfg_onl_over_lokace_dest" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_mnozstvi_ze_zbozi" msprop:Generator_ColumnVarNameInTable="columncfg_mnozstvi_ze_zbozi" msprop:Generator_ColumnPropNameInRow="cfg_mnozstvi_ze_zbozi" msprop:Generator_ColumnPropNameInTable="cfg_mnozstvi_ze_zboziColumn" msprop:Generator_UserColumnName="cfg_mnozstvi_ze_zbozi" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_predvyplnit_mnozstvi" msprop:Generator_ColumnVarNameInTable="columncfg_predvyplnit_mnozstvi" msprop:Generator_ColumnPropNameInRow="cfg_predvyplnit_mnozstvi" msprop:Generator_ColumnPropNameInTable="cfg_predvyplnit_mnozstviColumn" msprop:Generator_UserColumnName="cfg_predvyplnit_mnozstvi" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_skl_id_dest" msprop:Generator_ColumnVarNameInTable="columncfg_skl_id_dest" msprop:Generator_ColumnPropNameInRow="cfg_skl_id_dest" msprop:Generator_ColumnPropNameInTable="cfg_skl_id_destColumn" msprop:Generator_UserColumnName="cfg_skl_id_dest" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="predvyplnit_skl_id_dest" msprop:Generator_ColumnVarNameInTable="columnpredvyplnit_skl_id_dest" msprop:Generator_ColumnPropNameInRow="predvyplnit_skl_id_dest" msprop:Generator_ColumnPropNameInTable="predvyplnit_skl_id_destColumn" msprop:Generator_UserColumnName="predvyplnit_skl_id_dest" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cfg_lok_mech" msprop:Generator_ColumnVarNameInTable="columncfg_lok_mech" msprop:Generator_ColumnPropNameInRow="cfg_lok_mech" msprop:Generator_ColumnPropNameInTable="cfg_lok_mechColumn" msprop:Generator_UserColumnName="cfg_lok_mech" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_lok_mech_pohyb_type" msprop:Generator_ColumnVarNameInTable="columncfg_lok_mech_pohyb_type" msprop:Generator_ColumnPropNameInRow="cfg_lok_mech_pohyb_type" msprop:Generator_ColumnPropNameInTable="cfg_lok_mech_pohyb_typeColumn" msprop:Generator_UserColumnName="cfg_lok_mech_pohyb_type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cfg_skl_id_dest_prevzit" msprop:Generator_ColumnVarNameInTable="columncfg_skl_id_dest_prevzit" msprop:Generator_ColumnPropNameInRow="cfg_skl_id_dest_prevzit" msprop:Generator_ColumnPropNameInTable="cfg_skl_id_dest_prevzitColumn" msprop:Generator_UserColumnName="cfg_skl_id_dest_prevzit" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_lokace_dest_ciselnik" msprop:Generator_ColumnVarNameInTable="columncfg_lokace_dest_ciselnik" msprop:Generator_ColumnPropNameInRow="cfg_lokace_dest_ciselnik" msprop:Generator_ColumnPropNameInTable="cfg_lokace_dest_ciselnikColumn" msprop:Generator_UserColumnName="cfg_lokace_dest_ciselnik" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="predvyplnit_locncodedest" msprop:Generator_ColumnVarNameInTable="columnpredvyplnit_locncodedest" msprop:Generator_ColumnPropNameInRow="predvyplnit_locncodedest" msprop:Generator_ColumnPropNameInTable="predvyplnit_locncodedestColumn" msprop:Generator_UserColumnName="predvyplnit_locncodedest" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cfg_sklady" msprop:Generator_ColumnVarNameInTable="columncfg_sklady" msprop:Generator_ColumnPropNameInRow="cfg_sklady" msprop:Generator_ColumnPropNameInTable="cfg_skladyColumn" msprop:Generator_UserColumnName="cfg_sklady" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_onl_dop_lokace_dest" msprop:Generator_ColumnVarNameInTable="columncfg_onl_dop_lokace_dest" msprop:Generator_ColumnPropNameInRow="cfg_onl_dop_lokace_dest" msprop:Generator_ColumnPropNameInTable="cfg_onl_dop_lokace_destColumn" msprop:Generator_UserColumnName="cfg_onl_dop_lokace_dest" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_generovat_sn" msprop:Generator_ColumnVarNameInTable="columncfg_generovat_sn" msprop:Generator_ColumnPropNameInRow="cfg_generovat_sn" msprop:Generator_ColumnPropNameInTable="cfg_generovat_snColumn" msprop:Generator_UserColumnName="cfg_generovat_sn" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_parsovat_ck" msprop:Generator_ColumnVarNameInTable="columncfg_parsovat_ck" msprop:Generator_ColumnPropNameInRow="cfg_parsovat_ck" msprop:Generator_ColumnPropNameInTable="cfg_parsovat_ckColumn" msprop:Generator_UserColumnName="cfg_parsovat_ck" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_sn_na_davku" msprop:Generator_ColumnVarNameInTable="columncfg_sn_na_davku" msprop:Generator_ColumnPropNameInRow="cfg_sn_na_davku" msprop:Generator_ColumnPropNameInTable="cfg_sn_na_davkuColumn" msprop:Generator_UserColumnName="cfg_sn_na_davku" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_lok_mech_online_pohyby" msprop:Generator_ColumnVarNameInTable="columncfg_lok_mech_online_pohyby" msprop:Generator_ColumnPropNameInRow="cfg_lok_mech_online_pohyby" msprop:Generator_ColumnPropNameInTable="cfg_lok_mech_online_pohybyColumn" msprop:Generator_UserColumnName="cfg_lok_mech_online_pohyby" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_onl_palety_generovat" msprop:Generator_ColumnVarNameInTable="columncfg_onl_palety_generovat" msprop:Generator_ColumnPropNameInRow="cfg_onl_palety_generovat" msprop:Generator_ColumnPropNameInTable="cfg_onl_palety_generovatColumn" msprop:Generator_UserColumnName="cfg_onl_palety_generovat" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_tisk_palety" msprop:Generator_ColumnVarNameInTable="columncfg_tisk_palety" msprop:Generator_ColumnPropNameInRow="cfg_tisk_palety" msprop:Generator_ColumnPropNameInTable="cfg_tisk_paletyColumn" msprop:Generator_UserColumnName="cfg_tisk_palety" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_sklady_zmena" msprop:Generator_ColumnVarNameInTable="columncfg_sklady_zmena" msprop:Generator_ColumnPropNameInRow="cfg_sklady_zmena" msprop:Generator_ColumnPropNameInTable="cfg_sklady_zmenaColumn" msprop:Generator_UserColumnName="cfg_sklady_zmena" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_delka_SN" msprop:Generator_ColumnVarNameInTable="columncfg_delka_SN" msprop:Generator_ColumnPropNameInRow="cfg_delka_SN" msprop:Generator_ColumnPropNameInTable="cfg_delka_SNColumn" msprop:Generator_UserColumnName="cfg_delka_SN" type="xs:int" minOccurs="0" />
+              <xs:element name="cfg_Navrh" msprop:Generator_ColumnVarNameInTable="columncfg_Navrh" msprop:Generator_ColumnPropNameInRow="cfg_Navrh" msprop:Generator_ColumnPropNameInTable="cfg_NavrhColumn" msprop:Generator_UserColumnName="cfg_Navrh" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_sarze_ONOFF" msprop:Generator_ColumnVarNameInTable="columncfg_sarze_ONOFF" msprop:Generator_ColumnPropNameInRow="cfg_sarze_ONOFF" msprop:Generator_ColumnPropNameInTable="cfg_sarze_ONOFFColumn" msprop:Generator_UserColumnName="cfg_sarze_ONOFF" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_sn_ONOFF" msprop:Generator_ColumnVarNameInTable="columncfg_sn_ONOFF" msprop:Generator_ColumnPropNameInRow="cfg_sn_ONOFF" msprop:Generator_ColumnPropNameInTable="cfg_sn_ONOFFColumn" msprop:Generator_UserColumnName="cfg_sn_ONOFF" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_expirace_ONOFF" msprop:Generator_ColumnVarNameInTable="columncfg_expirace_ONOFF" msprop:Generator_ColumnPropNameInRow="cfg_expirace_ONOFF" msprop:Generator_ColumnPropNameInTable="cfg_expirace_ONOFFColumn" msprop:Generator_UserColumnName="cfg_expirace_ONOFF" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="cfg_AttributeToSN_ONOFF" msprop:Generator_ColumnVarNameInTable="columncfg_AttributeToSN_ONOFF" msprop:Generator_ColumnPropNameInRow="cfg_AttributeToSN_ONOFF" msprop:Generator_ColumnPropNameInTable="cfg_AttributeToSN_ONOFFColumn" msprop:Generator_UserColumnName="cfg_AttributeToSN_ONOFF" type="xs:unsignedByte" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

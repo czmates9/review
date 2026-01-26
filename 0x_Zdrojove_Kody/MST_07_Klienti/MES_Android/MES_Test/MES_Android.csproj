@@ -1,0 +1,1780 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{415099E8-8799-464B-BA9E-D93A3A970288}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{122416d6-6b49-4ee2-a1e8-b825f31c79fe}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MES_Android</RootNamespace>
+    <AssemblyName>MES_Android</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>True</Deterministic>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <AndroidUseManagedDesignTimeResourceGenerator>False</AndroidUseManagedDesignTimeResourceGenerator>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <BundleAssemblies>false</BundleAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidLinkMode>Full</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <BundleAssemblies>false</BundleAssemblies>
+    <MandroidI18n />
+    <AndroidSupportedAbis>armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
+    <AndroidKeyStore>false</AndroidKeyStore>
+    <AndroidSigningKeyStore>
+    </AndroidSigningKeyStore>
+    <AndroidSigningStorePass>
+    </AndroidSigningStorePass>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\_SdileneTridy_\netstandard2.1\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\_SdileneTridy_\Konfigurace_Android\Konfigurace.cs">
+      <Link>Konfigurace\Konfigurace.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\Konfigurace_Android\Konfigurace_Prodej.cs">
+      <Link>Konfigurace\Konfigurace_Prodej.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\Konfigurace_Android\Konfigurace_Prodej_Price.cs">
+      <Link>Konfigurace\Konfigurace_Prodej_Price.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\Konfigurace_Android\Konfigurace_Prodej_REZ.cs">
+      <Link>Konfigurace\Konfigurace_Prodej_REZ.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\Konfigurace_Android\Konfigurace_Vyroba.cs">
+      <Link>Konfigurace\Konfigurace_Vyroba.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\Konfigurace_Android\SQLite_ProdejScript.cs">
+      <Link>Konfigurace\SQLite_ProdejScript.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\RestSharp\Communication_4_7.cs">
+      <Link>API_Server\Communication_4_7.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\RestSharp\Communication_Base.cs">
+      <Link>API_Server\Communication_Base.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\RestSharp\TrustAllCertificatePolicy.cs">
+      <Link>API_Server\TrustAllCertificatePolicy.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_InternalState.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_InternalState.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Lokace.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Lokace.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Meny.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Meny.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Odberatele.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Odberatele.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Pracovnici.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Pracovnici.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Prodej.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Prodej.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Settings.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Settings.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Sklady.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Sklady.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Strediska.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Strediska.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_TypDokladu.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_TypDokladu.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Users.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Users.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Vyroba.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Vyroba.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Zbozi.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Zbozi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Static.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Static.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\_Routines.cs">
+      <Link>SQLiteDBs\Controllers\_Routines.cs</Link>
+    </Compile>
+    <Compile Include="Activity_HlavneMenu.cs" />
+    <Compile Include="API_Server\API_Komunikator.cs" />
+    <Compile Include="Async_Metody\AsynDialogWait.cs" />
+    <Compile Include="Async_Metody\MessageBoxAsync_V2.cs" />
+    <Compile Include="Async_Metody\InputBoxAsync.cs" />
+    <Compile Include="Async_Metody\TEST_Asynchronne_Okno.cs" />
+    <Compile Include="Ciselniky\VyrobaServiceOperations.cs" />
+    <Compile Include="Classes\DetailZasoby_Dialog\Dialog_DetailZasoby.cs" />
+    <Compile Include="Classes\Paleta.cs" />
+    <Compile Include="Classes\TimePickerFragment.cs" />
+    <Compile Include="Classes\DatePickerFragment .cs" />
+    <Compile Include="Classes\HideAndShowKeyboard.cs" />
+    <Compile Include="Classes\TypyPalet_Dialog_ID\Dialog_TypyPalet.cs" />
+    <Compile Include="Classes\TypyPalet_Dialog_ID\FASK_ListeViewAdapter_ID.cs" />
+    <Compile Include="Classes\TypyPalet_Dialog_ID\ID.cs" />
+    <Compile Include="Classes\WrapperForBinder\WrapperForBinder.cs" />
+    <Compile Include="Config\Config_HTTPS.cs" />
+    <Compile Include="Config\Config_Scannery.cs" />
+    <Compile Include="Config\Settings_DB.cs" />
+    <Compile Include="Extensions\ConvertExtensions.cs" />
+    <Compile Include="Extensions\MyDateTimeExtensions.cs" />
+    <Compile Include="Extensions\MyEditTextExtensions.cs" />
+    <Compile Include="Extensions\MyTimeSpanExtensions.cs" />
+    <Compile Include="Kontrola_Kodu\ListKoduAsync.cs" />
+    <Compile Include="OdvadeniVyroby\Adaptery\Adapter.cs" />
+    <Compile Include="OdvadeniVyroby\Adaptery\OperaceVyber_Item_Adapter.cs" />
+    <Compile Include="OdvadeniVyroby\Adaptery\PrikazVyber_Item_Adapter.cs" />
+    <Compile Include="OdvadeniVyroby\Classes\OdvedeniTisk.cs" />
+    <Compile Include="OdvadeniVyroby\Classes\Vyroba_Online.cs" />
+    <Compile Include="OdvadeniVyroby\Database\InternalState_DB.cs" />
+    <Compile Include="OdvadeniVyroby\Database\Production_DB.cs" />
+    <Compile Include="OdvadeniVyroby\Data\DatabaseActions.cs" />
+    <Compile Include="OdvadeniVyroby\Filtrery\OperaceVyber_Filter.cs" />
+    <Compile Include="OdvadeniVyroby\Filtrery\PrikazVyber_Filter.cs" />
+    <Compile Include="OdvadeniVyroby\Forms\FormBaleniMain.cs" />
+    <Compile Include="OdvadeniVyroby\Forms\FormInput_Production_SN.cs" />
+    <Compile Include="OdvadeniVyroby\Forms\FormKorekce.cs" />
+    <Compile Include="OdvadeniVyroby\Forms\FormKorekceCasu.cs" />
+    <Compile Include="OdvadeniVyroby\Forms\FormMaterial.cs" />
+    <Compile Include="OdvadeniVyroby\Forms\FormMaterialAlternaceVyber.cs" />
+    <Compile Include="OdvadeniVyroby\Forms\FormUdalosti.cs" />
+    <Compile Include="OdvadeniVyroby\Forms\Form_A.cs" />
+    <Compile Include="OdvadeniVyroby\GlobalObject.cs" />
+    <Compile Include="OdvadeniVyroby\Holdery\Holder.cs" />
+    <Compile Include="OdvadeniVyroby\Holdery\OperaceVyber_Item_Holder.cs" />
+    <Compile Include="OdvadeniVyroby\Holdery\PrikazVyber_Item_Holder.cs" />
+    <Compile Include="OdvadeniVyroby\IDMachine.cs" />
+    <Compile Include="OdvadeniVyroby\InputKod2.cs" />
+    <Compile Include="OdvadeniVyroby\InputQuantity.cs" />
+    <Compile Include="OdvadeniVyroby\InputWeight.cs" />
+    <Compile Include="OdvadeniVyroby\Logika\OdvadeniVyroby_Odvadeni_LogikaAsync.cs" />
+    <Compile Include="OdvadeniVyroby\Logika\OV_Core_LogikaAsync.cs" />
+    <Compile Include="OdvadeniVyroby\OdvadeniPrehled.cs" />
+    <Compile Include="OdvadeniVyroby\OdvadeniVyroby.cs" />
+    <Compile Include="OdvadeniVyroby\OdvadeniVyroby_SberDat.cs" />
+    <Compile Include="OdvadeniVyroby\OperacePotvrzeni.cs" />
+    <Compile Include="OdvadeniVyroby\OperaceVyber.cs" />
+    <Compile Include="OdvadeniVyroby\PrikazVyber.cs" />
+    <Compile Include="OdvadeniVyroby\Seznamy\OperaceVyber_Seznam.cs" />
+    <Compile Include="OdvadeniVyroby\Seznamy\PrikazVyber_Seznam.cs" />
+    <Compile Include="OdvadeniVyroby\Tisk_Baleni\BaleniTisk.cs" />
+    <Compile Include="OdvadeniVyroby\UserLoginWithTimeInput.cs" />
+    <Compile Include="Prodej\Classes\Prodej_PPP_Objekt.cs" />
+    <Compile Include="Prodej\Holdery\Holder.cs" />
+    <Compile Include="Prodej\Logika\Prodej_SberDat_LogikaAsync.cs" />
+    <Compile Include="Prodej\Prodej_PridatPolozku.cs" />
+    <Compile Include="Prodej\Prodej_VyberPalety.cs" />
+    <Compile Include="Schema\TypyPalet.cs" />
+    <Compile Include="SQLiteDBs\DataSets\InternalState.cs" />
+    <Compile Include="SQLiteDBs\DataSets\InternalState_PartialClass.cs" />
+    <Compile Include="SQLiteDBs\DataSets\Vyroba.cs" />
+    <Compile Include="Web References\VydejService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\VyrobaBaleni\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Vyroba\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Zebra_Scanner\BarcodeScanner.cs" />
+    <Compile Include="Z_Base_Activity\Base_Aktivita.cs" />
+    <Compile Include="Ciselniky\CiselnikServiceOperations.cs" />
+    <Compile Include="Ciselniky\Ciselniky_Helper.cs" />
+    <Compile Include="Classes\DataInfo_Static.cs" />
+    <Compile Include="Classes\FASK_ActionBarDrawerToggle.cs" />
+    <Compile Include="Classes\Login_Dialog_ID\FASK_ListeViewAdapter_ID.cs" />
+    <Compile Include="Classes\FileTransfer\CompressFile.cs" />
+    <Compile Include="Classes\FileTransfer\Downloading.cs" />
+    <Compile Include="Classes\FileTransfer\FileOperations.cs" />
+    <Compile Include="Classes\FileTransfer\Routines.cs" />
+    <Compile Include="Classes\InputModeChecker.cs" />
+    <Compile Include="Classes\JSON_Class.cs" />
+    <Compile Include="Classes\Login_Dialog_ID\Dialog_Logins.cs" />
+    <Compile Include="Classes\Login_Dialog_ID\ID.cs" />
+    <Compile Include="Classes\LokaceLog.cs" />
+    <Compile Include="Classes\MySystem\Audio.cs" />
+    <Compile Include="Classes\Price.cs" />
+    <Compile Include="Classes\ProgressDialog_Infinity.cs" />
+    <Compile Include="Classes\SearchViewExpandListener.cs" />
+    <Compile Include="Konfigurace\Konfigurace_Singleton.cs" />
+    <Compile Include="Kontrola_Kodu\ListeViewAdapter_Row.cs" />
+    <Compile Include="Kontrola_Kodu\ParsovaniKodu_Konfigurace.cs" />
+    <Compile Include="Kontrola_Kodu\ParsovaniKodu_UkazatKod.cs" />
+    <Compile Include="Kontrola_Kodu\Row_Code.cs" />
+    <Compile Include="Listner\Permission_Hlasic.cs" />
+    <Compile Include="Prodej\Adaptery\Adapter.cs" />
+    <Compile Include="Prodej\Adaptery\Prodej_Lokace_Item_Adapter.cs" />
+    <Compile Include="Prodej\Adaptery\Prodej_VyberMaterial_Item_Adapter.cs" />
+    <Compile Include="Prodej\Adaptery\Prodej_Zasoby_Item_Adapter.cs" />
+    <Compile Include="Prodej\Adaptery\Prodej_Sklady_Item_Adapter.cs" />
+    <Compile Include="Prodej\Adaptery\Prodej_Odberatele_Item_Adapter.cs" />
+    <Compile Include="Prodej\Adaptery\Prodej_Meny_Item_Adapter.cs" />
+    <Compile Include="Prodej\Dialogy\FormReport.cs" />
+    <Compile Include="Classes\Users.cs" />
+    <Compile Include="Classes_HlavneMenu\BTN_Item.cs" />
+    <Compile Include="Classes_HlavneMenu\RecycleHolder.cs" />
+    <Compile Include="Classes_HlavneMenu\RecyclerAdapter.cs" />
+    <Compile Include="Classes_ProgresDialog\Dialog_Progress.cs" />
+    <Compile Include="Config\CiselneRady.cs" />
+    <Compile Include="Config\Config_Main.cs" />
+    <Compile Include="Config\Config_Terminal.cs" />
+    <Compile Include="Config\MyFragmentPagerAdapter.cs" />
+    <Compile Include="Config\MyFrament.cs" />
+    <Compile Include="Config\Settings.cs" />
+    <Compile Include="DW\DWUtilities.cs" />
+    <Compile Include="DW\DW_KillScanner.cs" />
+    <Compile Include="ItemTouch\IItemTouchHelperAdapter.cs" />
+    <Compile Include="ItemTouch\IItemTouchHelperViewHolder.cs" />
+    <Compile Include="ItemTouch\IOnStartDragListener.cs" />
+    <Compile Include="ItemTouch\SimpleItemTouchHelperCallback.cs" />
+    <Compile Include="ItemTouch\TouchListenerHelper.cs" />
+    <Compile Include="Listner\MyDismissListner.cs" />
+    <Compile Include="Listner\SampleErrorListner.cs" />
+    <Compile Include="Listner\SampleMultiplePermissionListner.cs" />
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Prodej\Filtrery\Prodej_Lokace_Filter.cs" />
+    <Compile Include="Prodej\Filtrery\Prodej_VyberMaterial_Filter.cs" />
+    <Compile Include="Prodej\Filtrery\Prodej_Zasoby_Filter.cs" />
+    <Compile Include="Prodej\Filtrery\Prodej_Sklady_Filter.cs" />
+    <Compile Include="Prodej\Filtrery\Prodej_Odberatele_Filter.cs" />
+    <Compile Include="Prodej\Filtrery\Prodej_Meny_Filter.cs" />
+    <Compile Include="Prodej\Holdery\Prodej_Lokace_Item_Holder.cs" />
+    <Compile Include="Prodej\Holdery\Prodej_VyberMaterial_Item_Holder.cs" />
+    <Compile Include="Prodej\Holdery\Prodej_Zasoby_Item_Holder.cs" />
+    <Compile Include="Prodej\Holdery\Prodej_Sklady_Item_Holder.cs" />
+    <Compile Include="Prodej\Holdery\Prodej_Odberatele_Item_Holder.cs" />
+    <Compile Include="Prodej\Holdery\Prodej_Meny_Item_Holder.cs" />
+    <Compile Include="Prodej\Prodej_Lokace.cs" />
+    <Compile Include="Prodej\Prodej_VyberMaterial.cs" />
+    <Compile Include="Prodej\Prodej_Zasoby.cs" />
+    <Compile Include="Prodej\Seznamy\Prodej_Lokace_Seznam.cs" />
+    <Compile Include="Prodej\Seznamy\Prodej_VyberMaterial_Seznam.cs" />
+    <Compile Include="Prodej\Seznamy\Prodej_Zasoby_Seznam.cs" />
+    <Compile Include="Prodej\Seznamy\Prodej_SberDat_Seznam.cs" />
+    <Compile Include="Prodej\Filtrery\Prodej_SberDat_Filter.cs" />
+    <Compile Include="Prodej\Seznamy\Prodej_Meny_Seznam.cs" />
+    <Compile Include="Prodej\Seznamy\Prodej_Odberatele_Seznam.cs" />
+    <Compile Include="Prodej\Seznamy\Prodej_Sklady_Seznam.cs" />
+    <Compile Include="Prodej\Seznamy\Prodej_TypDokladu_Seznam.cs" />
+    <Compile Include="Prodej\Filtrery\Prodej_TypDokladu_Filter.cs" />
+    <Compile Include="Prodej\Filtrery\Prodej_Davka_Filter.cs" />
+    <Compile Include="Prodej\Prodej_Davka_Item.cs" />
+    <Compile Include="Prodej\Seznamy\Prodej_Davka_Seznam.cs" />
+    <Compile Include="Prodej\GlobalObject.cs" />
+    <Compile Include="Prodej\ProdejServiceOperations.cs" />
+    <Compile Include="Prodej\Prodej_Odberatel.cs" />
+    <Compile Include="Prodej\Prodej_SberDat.cs" />
+    <Compile Include="Prodej\Adaptery\Prodej_SberDat_Item_Adapter.cs" />
+    <Compile Include="Prodej\Holdery\Prodej_SberDat_Item_Holder.cs" />
+    <Compile Include="Prodej\Prodej_Sklady.cs" />
+    <Compile Include="Prodej\Holdery\Prodej_TypDokladu_Item_Holder.cs" />
+    <Compile Include="Prodej\Adaptery\Prodej_TypDokladu_Item_Adapter.cs" />
+    <Compile Include="Prodej\Adaptery\Prodej_Davka_Item_Adapter.cs" />
+    <Compile Include="Prodej\Holdery\Prodej_Davka_Item_Holder.cs" />
+    <Compile Include="Prodej\Prodej_Davky.cs" />
+    <Compile Include="Prodej\Prodej_TypDokladu.cs" />
+    <Compile Include="Prodej\Prodej_Meny.cs" />
+    <Compile Include="Prodej\Tisk\ProdejTisk.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <AndroidResource Include="Resources\values\strings_Prodej.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <Compile Include="Z_Base_Activity\ICiselniky_Datum.cs" />
+    <Compile Include="Z_Base_Activity\Scanner_Activity.cs" />
+    <Compile Include="ServerAccess\CertificatesPolicy\QueryTrustCertificatePolicy.cs" />
+    <Compile Include="ServerAccess\CertificatesPolicy\TrustAllCertificatePolicy.cs" />
+    <Compile Include="ServerAccess\Credentials.cs" />
+    <Compile Include="SplashActivity.cs" />
+    <Compile Include="SQLiteDBs\DataSets\Lokace.cs" />
+    <Compile Include="SQLiteDBs\DataSets\Meny.cs" />
+    <Compile Include="SQLiteDBs\DataSets\Odberatele.cs" />
+    <Compile Include="SQLiteDBs\DataSets\Pracovnici.cs" />
+    <Compile Include="SQLiteDBs\DataSets\Prodej.cs" />
+    <Compile Include="SQLiteDBs\DataSets\Sklady.cs" />
+    <Compile Include="SQLiteDBs\DataSets\Strediska.cs" />
+    <Compile Include="SQLiteDBs\DataSets\TypDokladu.cs" />
+    <Compile Include="SQLiteDBs\DataSets\Uzivatele.cs" />
+    <Compile Include="SQLiteDBs\DataSets\Zbozi.cs" />
+    <Compile Include="SQLiteDBs\Entities\User.cs" />
+    <Compile Include="SQLiteDBs\Tests\TestCases.cs" />
+    <Compile Include="SQLiteDBs_Classes\SQLite_Helper.cs" />
+    <Compile Include="Tisk\PrinterFactory\Enumerations.cs" />
+    <Compile Include="Tisk\PrinterFactory\ModuleToPrint.cs" />
+    <Compile Include="Tisk\PrinterFactory\Printer.cs" />
+    <Compile Include="Tisk\PrinterFactory\PrinterFactory.cs" />
+    <Compile Include="Tisk\PrinterProviderWebService\DSConfigPrinterProviderWebService.cs" />
+    <Compile Include="Tisk\PrinterProviderWebService\Provider.cs" />
+    <Compile Include="Tisk\PrinterProvider\IPrinterProvider.cs" />
+    <Compile Include="Web References\ConfigurationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ExpediceService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\InformationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\LokaceService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PrijemService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PrintServerTestService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PrintServerTiskService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PrintServerTiskTestService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ProdejService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CiselnikService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\FileTransfer\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\LoginService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="_Translations\Meny.cs" />
+    <Compile Include="_WebReferences_Globals\TiskTestServiceSession.cs" />
+    <Compile Include="_WebReferences_Globals\TestServiceSession.cs" />
+    <Compile Include="_WebReferences_Globals\TiskServiceSession.cs" />
+    <Compile Include="_WebReferences_Globals\CiselnikServiceSession.cs" />
+    <Compile Include="_WebReferences_Globals\ConfigurationServiceSession.cs" />
+    <Compile Include="_WebReferences_Globals\ExpediceSeviceSession.cs" />
+    <Compile Include="_WebReferences_Globals\InformationServiceSession.cs" />
+    <Compile Include="_WebReferences_Globals\LoginServiceSession.cs" />
+    <Compile Include="_WebReferences_Globals\LokaceServiceSession.cs" />
+    <Compile Include="_WebReferences_Globals\PrijemServiceSession.cs" />
+    <Compile Include="_WebReferences_Globals\ProdejServiceSession.cs" />
+    <Compile Include="_WebReferences_Globals\VydejServiceSession.cs" />
+    <Compile Include="_WebReferences_Globals\VyrobaBaleniSession.cs" />
+    <Compile Include="_WebReferences_Globals\VyrobaSession.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidNativeLibrary Include="libs\arm64-v8a\libsQLite.interop.dll.so" />
+    <AndroidNativeLibrary Include="libs\armeabi-v7a\libsQLite.interop.dll.so" />
+    <AndroidNativeLibrary Include="libs\x86\libsQLite.interop.dll.so" />
+    <AndroidNativeLibrary Include="libs\x86_64\libsQLite.interop.dll.so" />
+    <None Include="Web References\VydejService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\VydejService\StatusObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\VydejService\StatusOverExpirace.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\VydejService\Vydej.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\VydejService\Vydej.disco" />
+    <None Include="Web References\VydejService\Vydej.wsdl" />
+    <None Include="Web References\VydejService\Vydej.xsd" />
+    <None Include="Web References\VydejService\Vydejky.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\VydejService\Vydejky.xsd" />
+    <None Include="Web References\VydejService\Vydej_Items_Online.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\VydejService\Vydej_Items_Online.xsd" />
+    <None Include="Web References\Vyroba\ProductionState.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Vyroba\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Vyroba\Report_UserDay.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Vyroba\Vyroba.disco" />
+    <None Include="Web References\VyrobaBaleni\Baleni.disco" />
+    <None Include="Web References\PrintServerTiskTestService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PrintServerTiskTestService\TiskTest.disco" />
+    <None Include="Web References\PrintServerTiskService\DSValues.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PrintServerTiskService\DSValues.xsd" />
+    <None Include="Web References\PrintServerTiskService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PrintServerTiskService\Tisk.disco" />
+    <None Include="Web References\PrintServerTestService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PrintServerTestService\StatusObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PrintServerTestService\Test.disco" />
+    <None Include="Web References\ConfigurationService\Configuration.disco" />
+    <None Include="Web References\ConfigurationService\Configuration.wsdl" />
+    <None Include="Web References\ConfigurationService\dsCZMSTCFG.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ConfigurationService\dsCZMSTCFG.xsd" />
+    <None Include="Web References\ConfigurationService\License.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ConfigurationService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\InformationService\Informations.disco" />
+    <None Include="Web References\InformationService\Informations.wsdl" />
+    <None Include="Web References\InformationService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\LokaceService\Location.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LokaceService\Location.xsd" />
+    <None Include="Web References\LokaceService\Lokace.disco" />
+    <None Include="Web References\LokaceService\Lokace.wsdl" />
+    <None Include="Web References\LokaceService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\LokaceService\StatusLokace.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PrijemService\Obecne.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PrijemService\Prijem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PrijemService\Prijem.disco" />
+    <None Include="Web References\ExpediceService\Expedice.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExpediceService\Expedice.disco" />
+    <None Include="Web References\CiselnikService\StatusObject1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExpediceService\Expedice.wsdl" />
+    <None Include="Web References\ExpediceService\Expedice.xsd" />
+    <None Include="Web References\ExpediceService\ExpediceBaleni.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExpediceService\ExpediceBaleni.xsd" />
+    <None Include="Web References\ExpediceService\ExpediceBaleniHlavicky.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExpediceService\ExpediceBaleniHlavicky.xsd" />
+    <None Include="Web References\ExpediceService\ExpediceHlavicky.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExpediceService\ExpediceHlavicky.xsd" />
+    <None Include="Web References\ExpediceService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ExpediceService\SSCC.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExpediceService\StatusObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LoginService\StatusObject1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PrijemService\Obecne.xsd" />
+    <None Include="Web References\PrijemService\Prijem.wsdl" />
+    <None Include="Web References\PrijemService\Prijem.xsd" />
+    <None Include="Web References\PrijemService\PrijemDavky.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PrijemService\PrijemDavky.xsd" />
+    <None Include="Web References\PrijemService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PrijemService\StatusObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PrijemService\StatusOverLokace.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PrintServerTestService\Test.wsdl" />
+    <None Include="Web References\PrintServerTiskService\Tisk.wsdl" />
+    <None Include="Web References\PrintServerTiskTestService\TiskTest.wsdl" />
+    <None Include="Web References\ProdejService\Location.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\Location.xsd" />
+    <None Include="Web References\ProdejService\Odberatele.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\Odberatele.xsd" />
+    <None Include="Web References\ProdejService\Prodej.disco" />
+    <None Include="Web References\ProdejService\Prodej.wsdl" />
+    <None Include="Web References\ProdejService\ProdejData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\ProdejData.xsd" />
+    <None Include="Web References\ProdejService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ProdejService\STATUS.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\StatusObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\StatusOverLokace.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\StatusOverPohyb.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\StatusResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\VystupniObjekt.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CiselnikService\Ciselnik.disco" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <AndroidNativeLibrary Include="libs\arm64-v8a\SQLite.Interop.dll" />
+    <AndroidNativeLibrary Include="libs\armeabi-v7a\SQLite.Interop.dll" />
+    <AndroidNativeLibrary Include="libs\x86\SQLite.Interop.dll" />
+    <AndroidNativeLibrary Include="libs\x86_64\SQLite.Interop.dll" />
+    <AndroidResource Include="Resources\layout\Config_Main.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Config_Terminal.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Prodej.png" />
+    <AndroidResource Include="Resources\drawable\Inventura.png" />
+    <AndroidResource Include="Resources\drawable\Prijem.png" />
+    <AndroidResource Include="Resources\drawable\Expedice.png" />
+    <AndroidResource Include="Resources\drawable\settings.png" />
+    <AndroidResource Include="Resources\drawable\textview_border.xml" />
+    <AndroidResource Include="Resources\drawable\Vydej.png" />
+    <AndroidResource Include="Resources\layout\HlavneMenu_Item.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\HlavneMenu_content_main.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\HlavneMenu_app_bar_main.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\HlavneMenu_nav_header_main.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\side_nav_bar.xml" />
+    <AndroidResource Include="Resources\menu\hlavne_menu.xml" />
+    <AndroidResource Include="Resources\drawable\LogOut.png" />
+    <AndroidResource Include="Resources\drawable\Ciselniky.png" />
+    <AndroidResource Include="Resources\drawable\logo_FASK.png" />
+    <AndroidResource Include="Resources\layout\Dialog_Progress.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\progress_bar.xml" />
+    <AndroidResource Include="Resources\layout\Main_Login.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MainLogin_nav_header_main.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MainLogin_app_bar_main.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MainLogin_content_main.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\main_login.xml" />
+    <AndroidResource Include="Resources\menu\prodej_davky.xml" />
+    <AndroidResource Include="Resources\layout\Prodej_Davky.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Davky_app_bar_main.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Davky_content_main.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Davky_nav_header_main.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\add.png" />
+    <AndroidResource Include="Resources\layout\Prodej_Davky_Item.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\ProdejDavka_Border.xml" />
+    <None Include="Prodej\ReadMe_Prodej.txt" />
+    <AndroidResource Include="Resources\drawable\Vyroba.png" />
+    <AndroidResource Include="Resources\menu\Prodej_Davky_Search.xml" />
+    <AndroidResource Include="Resources\drawable\refreshing.png" />
+    <AndroidResource Include="Resources\layout\Prodej_TypDokladu.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\prodej_typdok.xml" />
+    <AndroidResource Include="Resources\layout\Prodej_TypDokladu_app_bar_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_TypDokladu_content_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_TypDokladu_nav_header_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\Prodej_TypDokladu_Search.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_TypDokladu_ItemV2.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\psd.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_SberDat.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_SberDat_app_bar_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_SberDat_content_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_SberDat_Item.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_SberDat_nav_header_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\Prodej_SberDat_Search.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\InputBox.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\strings_Meny.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Meny_Item.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Meny.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\prodej_meny.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Meny_app_bar_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Meny_content_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Meny_nav_header_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\Prodej_Meny_Search.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\strings_Odberatele.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\strings_Sklady.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\Prodej_Sklady_Search.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\Prodej_Odberatele_Search.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\prodej_sklady.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\prodej_odberatele.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Odberatele.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Sklady.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Odberatele_app_bar_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Sklady_app_bar_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Sklady_content_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Odberatele_content_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Sklady_Item.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Odberatele_Item.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Sklady_nav_header_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Odberatele_nav_header_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Zasoby_content_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Zasoby_nav_header_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Zasoby_app_bar_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Zasoby.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Zasoby_Item.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\strings_Zasoby.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\Prodej_Zasoby_Search.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\prodej_Zasoby.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\raw\expedice.wav" />
+    <AndroidResource Include="Resources\raw\rozdelit.wav" />
+    <AndroidResource Include="Resources\raw\sklad.wav" />
+    <AndroidResource Include="Resources\raw\UspesneNacteni.wav" />
+    <AndroidResource Include="Resources\raw\brownuv_sum.wav" />
+    <AndroidResource Include="Resources\menu\Prodej_VyberMaterialu_Search.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\prodej_vybermaterialu.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_VyberMaterialu.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_VyberMaterialu_app_bar_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_VyberMaterialu_content_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_VyberMaterialu_nav_header_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_VyberMaterialu_Item.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\Prodej_Lokace_Search.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\prodej_lokace.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Lokace.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Lokace_app_bar_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Lokace_content_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Lokace_nav_header_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_Lokace_Item.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Dialog_Report.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\strings_Report.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Report_textview_border_Gray.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Report_textview_border_White.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Dialog_Progress_Infinity.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ParKod_Konf.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\strings_ParsKod_Konf.xml" />
+    <AndroidResource Include="Resources\drawable\barcodeScan.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ParKod_UkazKod.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <Content Include="API_Server\ReadMe.txt" />
+    <AndroidResource Include="Resources\drawable\SplashLogo.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\SplashScreen.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Dialog_ParsingCodes.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Dialog_ParsingCodes_Row.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\strings_Lokace.xml" />
+    <AndroidResource Include="Resources\values\strings_TypDokladu.xml" />
+    <AndroidResource Include="Resources\values\strings_VyberMaterialu.xml" />
+    <AndroidResource Include="Resources\values\strings_Prodej_SberDat.xml" />
+    <AndroidResource Include="Resources\values\strings_Prodej_Davka.xml" />
+    <AndroidResource Include="Resources\values\strings_Prodej_PridatPolozku.xml" />
+    <AndroidResource Include="Resources\layout\Prodej_PridatPolozku.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\border_PPP.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\border_PPP_btn_OK.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\border_PPP_btn_Storno.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\strings_Config.xml" />
+    <AndroidResource Include="Resources\layout\Config_Scannery.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Config_https.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\odvadenivyr.xml" />
+    <AndroidResource Include="Resources\layout\OdvadeniVyroby.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\OdvadeniVyroby_app_bar_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\OdvadeniVyroby_content_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\OdvadeniVyroby_nav_header_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\Strings_OdvadeniVyroby.xml" />
+    <AndroidResource Include="Resources\drawable\lost_focus_button.xml" />
+    <AndroidResource Include="Resources\drawable\focus_button.xml" />
+    <AndroidResource Include="Resources\drawable\focus_textview_border.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\lost_focus_textview_border.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidAsset Include="Assets\EMDKConfig.xml" />
+    <AndroidResource Include="Resources\drawable\focus_border_prodej.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\lost_focus_border_prodej.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\strings_UserLoginWithTimeInput.xml" />
+    <AndroidResource Include="Resources\layout\UserLoginWithTimeInput.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\UserLoginWithTimeInput_app_bar_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\UserLoginWithTimeInput_content_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\UserLoginWithTimeInput_nav_header_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\ULWTI.xml" />
+    <AndroidResource Include="Resources\layout\OdvadeniVyroby_SberDat.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\odvadenivyr_sberdat.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\Strings_OdvadeniVyrobySberDat.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\OdvadeniVyroby_SberDat_app_bar_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\OdvadeniVyroby_SberDat_content_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\OdvadeniVyroby_SberDat_nav_header_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\OV_focus_button_odvadeni.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\OV_lost_focus_button_odvadeni.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\OV_lost_focus_button_korekce.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\OV_lost_focus_button_tisk.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\OV_lost_focus_button_udalosti.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\OV_focus_button_tisk.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\OV_focus_button_korekce.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\OV_focus_button_udalosti.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\raw\dotaz.wav">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\raw\chimes.wav">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\raw\chyba.wav">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\raw\info.wav">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\raw\necozbyva.wav">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\raw\notify.wav">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\idmachine.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\Strings_IDMachine.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\IDMachine_nav_header_main.xml" />
+    <AndroidResource Include="Resources\layout\IDMachine.xml" />
+    <AndroidResource Include="Resources\layout\IDMachine_app_bar_main.xml" />
+    <AndroidResource Include="Resources\layout\IDMachine_content_main.xml" />
+    <AndroidResource Include="Resources\values\strings_InputQuantity.xml" />
+    <AndroidResource Include="Resources\layout\InputQuantity.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\input_quantity.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\InputQuantity_app_bar_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\InputQuantity_content_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\InputQuantity_nav_header_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\prikaz_vyber.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\PrikazVyber.xml" />
+    <AndroidResource Include="Resources\layout\PrikazVyber_app_bar_main.xml" />
+    <AndroidResource Include="Resources\layout\PrikazVyber_content_main.xml" />
+    <AndroidResource Include="Resources\layout\PrikazVyber_nav_header_main.xml" />
+    <AndroidResource Include="Resources\layout\PrikazVyber_Item.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\focus_border_OV.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\lost_focus_border_OV.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\PrikazVyber_Search.xml" />
+    <AndroidResource Include="Resources\values\strings_PrikazVyber.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\OperaceVyber.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\OperaceVyber_app_bar_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\OperaceVyber_content_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\OperaceVyber_nav_header_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\operace_vyber.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\strings_OperaceVyber.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\OperaceVyber_Item.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\OperaceVyber_Search.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\OdvadeniPrehled.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\OdvadeniPrehled_app_bar_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\OdvadeniPrehled_content_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\OdvadeniPrehled_nav_header_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\odvadeni_prehled.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\strings_OdvadeniPrehled.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\OV_textview_YELLOW.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\OV_textview_GREEN.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\OV_textview_RED.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\OV_textview_WHITE.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\TEST_Grid.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\strings_OperacePotvrzeni.xml" />
+    <AndroidResource Include="Resources\menu\operace_potvrzeni.xml" />
+    <AndroidResource Include="Resources\layout\OperacePotvrzeni.xml" />
+    <AndroidResource Include="Resources\layout\OperacePotvrzeni_app_bar_main.xml" />
+    <AndroidResource Include="Resources\layout\OperacePotvrzeni_content_main.xml" />
+    <AndroidResource Include="Resources\layout\OperacePotvrzeni_nav_header_main.xml" />
+    <AndroidResource Include="Resources\layout\InputKod2.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\InputKod2_app_bar_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\InputKod2_content_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\InputKod2_nav_header_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\input_kod2.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\strings_InputKod2.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <Content Include="ReadMe.txt" />
+    <AndroidResource Include="Resources\values\strings_InputWeight.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\InputWeight_nav_header_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\InputWeight.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\InputWeight_app_bar_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\InputWeight_content_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\input_weight.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Vaha.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_VyberPalety.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_VyberPalety_app_bar_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_VyberPalety_content_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_VyberPalety_Item.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Prodej_VyberPalety_nav_header_main.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\prodej_vyb_pal.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\strings_Prodej_VyberPalety.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Dialog_TypyPalet.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Dialog_TypyPalet_row.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\pallet.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Dialog_DetailZasoby.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\border_DDZ.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <Content Include="System.Data.SQLite.dll.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Web References\CiselnikService\Ciselnik.wsdl" />
+    <None Include="Web References\CiselnikService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\FileTransfer\FileTransfer.wsdl" />
+    <None Include="Web References\FileTransfer\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\LoginService\LoginService.wsdl" />
+    <None Include="Web References\LoginService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\VyrobaBaleni\Baleni.wsdl" />
+    <None Include="Web References\VyrobaBaleni\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\VyrobaBaleni\StatusBaleni.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Vyroba\Vyroba.wsdl" />
+    <None Include="Web References\Vyroba\VyrobaDataSet.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Vyroba\VyrobaDataSet.xsd" />
+    <None Include="Web References\Vyroba\VyrobaDataSet_StatistikaOdvadeni.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Vyroba\VyrobaDataSet_StatistikaOdvadeni.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
+    <AndroidResource Include="Resources\values\strings.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher_round.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Dialog_Logins.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Dexter">
+      <Version>1.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="RestSharp">
+      <Version>106.11.7</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
+      <Version>28.0.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Annotations">
+      <Version>28.0.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Compat">
+      <Version>28.0.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Core.UI">
+      <Version>28.0.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.3" />
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.3" />
+    <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.3" />
+    <PackageReference Include="Xamarin.Android.Support.Fragment">
+      <Version>28.0.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Media.Compat">
+      <Version>28.0.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v4">
+      <Version>28.0.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
+      <Version>28.0.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.GridLayout">
+      <Version>28.0.0.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Dasenka/FileTransfer.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\FileTransfer\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Dasenka/FileTransfer.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Dasenka/LoginService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\LoginService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Dasenka/LoginService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Dasenka/Ciselnik.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CiselnikService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Dasenka/Ciselnik.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Dasenka/Configuration.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ConfigurationService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Dasenka/Configuration.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Dasenka/Expedice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ExpediceService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Dasenka/Expedice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Dasenka/Informations.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\InformationService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Dasenka/Informations.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Dasenka/Lokace.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\LokaceService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Dasenka/Lokace.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Dasenka/Prijem.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PrijemService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Dasenka/Prijem.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Dasenka/Prodej.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ProdejService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Dasenka/Prodej.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Dasenka/Test.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PrintServerTestService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Dasenka/Test.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Dasenka/Tisk.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PrintServerTiskService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Dasenka/Tisk.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Dasenka/TiskTest.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PrintServerTiskTestService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Dasenka/TiskTest.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Dasenka/Baleni.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\VyrobaBaleni\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Dasenka/Baleni.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Dasenka/Vydej.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\VydejService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Dasenka/Vydej.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Dasenka/Vyroba.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Vyroba\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Dasenka/Vyroba.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\LoginService\LoginService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\FileTransfer\FileTransfer.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\anim\slide_right.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\anim\slide_up.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ButtonStyle.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\focus_border_style.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\lost_focus_style.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\tile.9.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Dialog_Logins_row.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Layout_Permision.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\HlavneMenu.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout-w720dp\Layout_Permision.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\base_strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Dimens.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\template-dimens.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\template-styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fask.Interfaces\Fask.Interfaces.csproj">
+      <Project>{d79b23ac-6942-42b9-b704-a1e9b7c0f97b}</Project>
+      <Name>Fask.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Logging\Fask.Logging.csproj">
+      <Project>{6d9a9e99-a0c3-4eeb-bc0e-103f8f574d22}</Project>
+      <Name>Fask.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Parsing\Fask.Parsing.csproj">
+      <Project>{af70800e-85ea-4605-8cc2-8ae5d7ecae8e}</Project>
+      <Name>Fask.Parsing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Scanner.Camera_ZXing\Fask.Scanner.Camera_ZXing.csproj">
+      <Project>{f743b1dc-988d-4f81-88ee-db10872a05aa}</Project>
+      <Name>Fask.Scanner.Camera_ZXing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Scanner.Zebra_EMDK\Fask.Scanner.Zebra_EMDK.csproj">
+      <Project>{2525f913-9f1a-43c0-bc60-498941b3dc11}</Project>
+      <Name>Fask.Scanner.Zebra_EMDK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FASK.Vaha.RAVAS\FASK.Vaha.RAVAS.csproj">
+      <Project>{50d56989-3c59-4725-9e5d-e28d09e14bf6}</Project>
+      <Name>FASK.Vaha.RAVAS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Components\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+    Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+  -->
+</Project>

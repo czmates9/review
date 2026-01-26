@@ -1,0 +1,15 @@
+
+
+-Prodej CORE logika
+
+-GetLokaciAsync => tady by mnelo byt okno k vyberem lokace, Filtr na sklad a na typ lokace??
+
+
+-Lokace, vybiraci okno udelat..
+
+
+-Expirace, zadavaci okno
+
+-
+
+

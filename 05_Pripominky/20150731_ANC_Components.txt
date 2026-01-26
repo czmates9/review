@@ -1,0 +1,23 @@
+Prodej (Prevod materialu do vyroby)
+---------------------------------------
+1) "výbìr výrobní objednávky ze serveru sejmutím ÈK z objednávky nebo ruèním výbìrem" - jedna se o nejaky ciselnik, ktery se bude plnit??
+
+1) Postup zpracovani se lisi od "Reseni v S4S". Podle ktereho se ridit?
+
+2) Online funkce pro kontrolu lokace ma vracet pouze jeden zaznam, nebo vice?
+
+3) jakym zpusobem pracovat s vyberem materialu?
+
+) Online funkce:
+"volání funkce pro kontrolu ID palety s auditem pøi porušení doporuèeného poøadí"
+a 
+"volání funkce kontrola lokace hlášení v pøípadì neshody (po potvrzení bude odepsáno dle umístìní v S4S)"
+... nema se jednat pouze o jednu online funkci misto dvou? ... "v Reseni v S4S" je napsano, ze po zadani ID materialu se ma maji vratit informace o nejstarsim materialu
+
+) U Prevodu materialu do vyroby se ma zadavat sarze a nema zadavat mnozstvi, ale u vratky se ma zadavatoboje. Jak to vyresit? (CZMST095 - sloupec CZ_SerNum_Track)
+- Mnozstvi se predvyplni u obou ...
+
+Prodej (Modul vratka palety z vyroby)
+---------------------------------------
+2) prevadi se "zustatkove" mnozstvi vybrane sarze. Co je tim mysleno a odkud vzit toto mnozstvi (to uzivatel nezadava?)? U "Prevod materialu do vyroby" se mnozstvi nezadava, ale zde jo, jak to vyresit? Pres CZ_SerNum_Track to nejde (nebo alespon nevim jak).
+

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/OperacePotvrzeni_app_bar_main">
+    <android.support.v7.widget.GridLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:columnCount="4"
+    app:rowCount="11"
+    >
+
+            <!-- lblPolozka -->
+    <TextView
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+            app:layout_columnSpan="4"
+        android:text="@string/OperacePotvrzeni_TW_lblPolozka"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"   
+        
+/>
+    <TextView
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_columnSpan="4"
+        android:text="@string/Def_Text"
+        android:id="@+id/OperacePotvrzeni_textview_lblPolozka"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:textColor="#000"
+            
+/>
+
+            <!-- lblPracovnik -->
+    <TextView
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+            app:layout_columnSpan="4"
+        android:text="@string/OperacePotvrzeni_TW_lblPracovnik"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:textColor="#000"    
+            
+        
+/>
+    <TextView
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_columnSpan="4"
+        android:text="@string/Def_Text"
+        android:id="@+id/OperacePotvrzeni_textview_lblPracovnik"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:textColor="#000"  
+        android:textAlignment="center"            
+            
+/>
+        
+            <!-- lblStroj -->
+    <TextView
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:text="@string/OperacePotvrzeni_TW_lblStroj"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:textColor="#000"      
+            
+/>
+    <TextView
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_columnSpan="3"
+        android:text="@string/Def_Text"
+        android:id="@+id/OperacePotvrzeni_textview_lblStroj"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:textColor="#000"  
+            
+/>
+                
+            <!-- lblPripravnyCas -->
+    <TextView
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:text="@string/OperacePotvrzeni_TW_lblPripravnyCas"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:textColor="#000"      
+            
+        
+/>
+    <TextView
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_columnSpan="3"
+        android:text="@string/Def_Text"
+        android:id="@+id/OperacePotvrzeni_textview_lblPripravnyCas"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:textColor="#000"   
+            
+/>
+                
+            <!-- lblJednotkovyCas -->
+    <TextView
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:text="@string/OperacePotvrzeni_TW_lblJednotkovyCas"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:textColor="#000"            
+            
+        
+/>
+    <TextView
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_columnSpan="3"
+        android:text="@string/Def_Text"
+        android:id="@+id/OperacePotvrzeni_textview_lblJednotkovyCas"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:textColor="#000"        
+            
+/>
+                
+            <!-- lblKorekceCasu -->
+    <TextView
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:text="@string/OperacePotvrzeni_TW_lblKorekceCasu"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:textColor="#000"      
+            
+        
+/>
+    <TextView
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_columnSpan="3"
+        android:text="@string/Def_Text"
+        android:id="@+id/OperacePotvrzeni_textview_lblKorekceCasu"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:textColor="#000"         
+            
+/>
+                
+            <!-- lblCelkovyCas -->
+    <TextView
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="2"
+            app:layout_columnSpan="4"
+        android:text="@string/OperacePotvrzeni_TW_lblCelkovyCas"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textFontWeight="700"             
+        android:textColor="#000"       
+            
+/>
+    <TextView
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="2"
+        app:layout_columnSpan="4"
+        android:text="@string/Def_Text"
+        android:id="@+id/OperacePotvrzeni_textview_lblCelkovyCas"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textFontWeight="700"             
+        android:textColor="#000"
+        android:textAlignment="center"
+            
+/>
+                
+            <!-- lblKusu -->
+    <TextView
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="2"
+            android:text="@string/OperacePotvrzeni_TW_lblKusu"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textFontWeight="700" 
+        android:textColor="#000"            
+            
+/>
+    <TextView
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="2"
+        app:layout_columnSpan="3"
+        android:text="@string/Def_Text"
+        android:id="@+id/OperacePotvrzeni_textview_lblKusu"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:textFontWeight="700" 
+        android:textColor="#000"            
+/>
+
+        </android.support.v7.widget.GridLayout>
+    <android.support.v7.widget.GridLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#c8e7ff"
+    app:columnCount="2"
+    app:rowCount="2"
+    >
+            <Button
+    android:text="@string/OperacePotvrzeni_Korekce"    
+    android:nextFocusDown="@id/OperacePotvrzeni_btn_Storno"
+    android:nextFocusLeft="@id/OperacePotvrzeni_btn_Korekce"
+    android:nextFocusUp="@id/OperacePotvrzeni_btn_Korekce"
+    android:nextFocusRight="@id/OperacePotvrzeni_btn_Material"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:id="@+id/OperacePotvrzeni_btn_Korekce"
+      />
+            <Button
+    android:text="@string/OperacePotvrzeni_Material"    
+    android:nextFocusDown="@id/OperacePotvrzeni_btn_OK"
+    android:nextFocusLeft="@id/OperacePotvrzeni_btn_Korekce"
+    android:nextFocusUp="@id/OperacePotvrzeni_btn_Material"
+    android:nextFocusRight="@id/OperacePotvrzeni_btn_Material"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:id="@+id/OperacePotvrzeni_btn_Material"
+      />
+    <Button
+    android:text="@string/OperacePotvrzeni_Storno"    
+    android:nextFocusDown="@id/OperacePotvrzeni_btn_Storno"
+    android:nextFocusLeft="@id/OperacePotvrzeni_btn_Storno"
+    android:nextFocusUp="@id/OperacePotvrzeni_btn_Korekce"
+    android:nextFocusRight="@id/OperacePotvrzeni_btn_OK"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:id="@+id/OperacePotvrzeni_btn_Storno"
+      />
+    <Button
+    android:text="@string/OperacePotvrzeni_OK"    
+    android:nextFocusDown="@id/OperacePotvrzeni_btn_OK"
+    android:nextFocusLeft="@id/OperacePotvrzeni_btn_Storno"
+    android:nextFocusUp="@id/OperacePotvrzeni_btn_Material"
+    android:nextFocusRight="@id/OperacePotvrzeni_btn_OK"
+    app:layout_columnWeight="1"
+    app:layout_rowWeight="1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:id="@+id/OperacePotvrzeni_btn_OK"
+    />
+    </android.support.v7.widget.GridLayout>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<DSConfigPrinterProviderWebService xmlns="http://fask.cz/DSConfigPrinterProviderWebService.xsd">
+  <Params>
+    <Address>http://192.168.1.101/MST_Win_Kom_Server_7_Dasenka</Address>
+    <Name>ZDesigner ZT421-203dpi ZPL</Name>
+    <Timeout>10000</Timeout>
+    <PrinterName>ZDesigner ZT421-203dpi ZPL</PrinterName>
+    <OneWayPrint>false</OneWayPrint>
+  </Params>
+</DSConfigPrinterProviderWebService>

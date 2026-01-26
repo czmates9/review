@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://EventsService.fask.cz/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://EventsService.fask.cz/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba přenosu dat EventsService</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://EventsService.fask.cz/">
+      <s:import namespace="http://fask.cz/Events.xsd" />
+      <s:import schemaLocation="http://localhost/MST_Win_Kom_Server_7_Cipisek/EventsService.asmx?schema=Events" namespace="http://fask.cz/Events.xsd" />
+      <s:element name="ProcessEventData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="eventData">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/Events.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessEventDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProcessEventDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessEventFileName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="filename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessEventFileNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProcessEventFileNameResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessEventFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="dstFile" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessEventFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProcessEventFileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ProcessEventDataSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessEventData" />
+  </wsdl:message>
+  <wsdl:message name="ProcessEventDataSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessEventDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessEventFileNameSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessEventFileName" />
+  </wsdl:message>
+  <wsdl:message name="ProcessEventFileNameSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessEventFileNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessEventFileSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessEventFile" />
+  </wsdl:message>
+  <wsdl:message name="ProcessEventFileSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessEventFileResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EventsServiceSoap">
+    <wsdl:operation name="ProcessEventData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro zpracování udalosti na serveru</wsdl:documentation>
+      <wsdl:input message="tns:ProcessEventDataSoapIn" />
+      <wsdl:output message="tns:ProcessEventDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessEventFileName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro zpracovaní soboru jen podle jeho jmena a ID Terminalu</wsdl:documentation>
+      <wsdl:input message="tns:ProcessEventFileNameSoapIn" />
+      <wsdl:output message="tns:ProcessEventFileNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessEventFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro Zpracovani udalosti z souboru</wsdl:documentation>
+      <wsdl:input message="tns:ProcessEventFileSoapIn" />
+      <wsdl:output message="tns:ProcessEventFileSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EventsServiceSoap" type="tns:EventsServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcessEventData">
+      <soap:operation soapAction="http://EventsService.fask.cz/ProcessEventData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessEventFileName">
+      <soap:operation soapAction="http://EventsService.fask.cz/ProcessEventFileName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessEventFile">
+      <soap:operation soapAction="http://EventsService.fask.cz/ProcessEventFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EventsServiceSoap12" type="tns:EventsServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcessEventData">
+      <soap12:operation soapAction="http://EventsService.fask.cz/ProcessEventData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessEventFileName">
+      <soap12:operation soapAction="http://EventsService.fask.cz/ProcessEventFileName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessEventFile">
+      <soap12:operation soapAction="http://EventsService.fask.cz/ProcessEventFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EventsService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba přenosu dat EventsService</wsdl:documentation>
+    <wsdl:port name="EventsServiceSoap" binding="tns:EventsServiceSoap">
+      <soap:address location="http://localhost/MST_Win_Kom_Server_7_Cipisek/EventsService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EventsServiceSoap12" binding="tns:EventsServiceSoap12">
+      <soap12:address location="http://localhost/MST_Win_Kom_Server_7_Cipisek/EventsService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

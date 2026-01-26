@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FASK.SledovaniVyroby.Module.Vyroba_Agro.ADAM.ADAM_60XX" Collapsed="true">
+    <Position X="3.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QEAEEACAISiAALAIABgGAI4BIAAACYAMIAAECBAAEAg=</HashCode>
+      <FileName>ADAM\ADAM_60XX.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FASK.SledovaniVyroby.Module.Vyroba_Agro.Classes.Cidlo" Collapsed="true">
+    <Position X="6.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAQABAAAAAAAAAJQAAAARAAEA=</HashCode>
+      <FileName>Classes\Cidlo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FASK.SledovaniVyroby.Module.Vyroba_Agro.Classes.Database" Collapsed="true">
+    <Position X="7.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAEBAAAAAAAAEAAA=</HashCode>
+      <FileName>Classes\Database.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FASK.SledovaniVyroby.Module.Vyroba_Agro.Classes.DatabaseCentral" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Classes\DatabaseCentral.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FASK.SledovaniVyroby.Module.Vyroba_Agro.Classes.DataVyroba" Collapsed="true">
+    <Position X="3.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgTNcEGoCgkBZxFQVIQCNojJSfaAqRJAZCkQAiR4HMk=</HashCode>
+      <FileName>Classes\DataVyroba.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FASK.SledovaniVyroby.Module.Vyroba_Agro.Classes.Udalosti" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAAACAAAAIBAAABAAAAIAEAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Udalosti.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FASK.SledovaniVyroby.Module.Vyroba_Agro.frmMainAgroVyroba" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>/9y8xXXwXSMRRJbtFNDEyooDOZ1YACAjQHEQk6jBlrk=</HashCode>
+      <FileName>frmMainAgroVyroba.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FASK.SledovaniVyroby.Module.Vyroba_Agro.InformationUC" Collapsed="true">
+    <Position X="2.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYEACGAAACFAKJBCAAKAAAgCQAGAAggABAQMAFAAAAE=</HashCode>
+      <FileName>InformationUC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FASK.SledovaniVyroby.Module.Vyroba_Agro.KeyboardUC" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAISEAAACBUACAAAQCIMw7AAAgAAAIQAAAACA=</HashCode>
+      <FileName>KeyboardUC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FASK.SledovaniVyroby.Module.Vyroba_Agro.DataSets.Data" Collapsed="true">
+    <Position X="1.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAwAAQAZABAAAQAAAAAgCQBgAAAAgAAEABBA=</HashCode>
+      <FileName>DataSets\Data.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

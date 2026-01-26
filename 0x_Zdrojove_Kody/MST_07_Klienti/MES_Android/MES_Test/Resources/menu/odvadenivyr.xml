@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+  <group android:checkableBehavior="single">
+    <item
+    android:id="@+id/nav_HlMenu_OV"
+    android:icon="@drawable/logout"
+    android:title="@string/HlMenu" />
+  </group>
+
+	<item android:title="@string/menu_OV_DB">
+		<menu>
+			<item
+			  android:id="@+id/nav_menu_OV_DB_upload"
+			  android:icon="@drawable/refreshing"
+			  android:title="@string/menu_OV_DB_upload" />
+			<item
+			  android:id="@+id/nav_menu_OV_DB_download"
+			  android:icon="@drawable/refreshing"
+			  android:title="@string/menu_OV_DB_download" />
+		</menu>
+	</item>
+
+</menu>

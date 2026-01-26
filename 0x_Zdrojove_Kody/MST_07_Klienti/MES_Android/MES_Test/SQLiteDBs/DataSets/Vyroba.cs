@@ -1,0 +1,18861 @@
+﻿using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Fask.SQLiteDBs.DataSets {
+    
+    
+    /// <summary>
+    ///Represents a strongly typed in-memory cache of data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Vyroba")]
+    public partial class Vyroba : global::System.Data.DataSet {
+        
+        private Production_OldDataTable tableProduction_Old;
+        
+        private CorrectsDataTable tableCorrects;
+        
+        private CZPRO_VPHDataTable tableCZPRO_VPH;
+        
+        private LoginsDataTable tableLogins;
+        
+        private UserEventsDataTable tableUserEvents;
+        
+        private StatusTypesDataTable tableStatusTypes;
+        
+        private CZPRO_VPPDataTable tableCZPRO_VPP;
+        
+        private Production_SourcesDataTable tableProduction_Sources;
+        
+        private FASK_CONS_095DataTable tableFASK_CONS_095;
+        
+        private CZMST093DataTable tableCZMST093;
+        
+        private CZMST094DataTable tableCZMST094;
+        
+        private ProductionDataTable tableProduction;
+        
+        private FASK_Vyroba_TPDataTable tableFASK_Vyroba_TP;
+        
+        private MachinesDataTable tableMachines;
+        
+        private OperationsDataTable tableOperations;
+        
+        private VMachinesOperationsDataTable tableVMachinesOperations;
+        
+        private ProductionHistDataTable tableProductionHist;
+        
+        private Production_origDataTable tableProduction_orig;
+        
+        private Production_updateDataTable tableProduction_update;
+        
+        private Production_SNDataTable tableProduction_SN;
+        
+        private global::System.Data.DataRelation relationOperations_VMachinesOperations;
+        
+        private global::System.Data.DataRelation relationMachines_VMachinesOperations;
+        
+        private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.ExcludeSchema;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Vyroba() {
+            this.BeginInit();
+            this.InitClass();
+            global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
+            base.Tables.CollectionChanged += schemaChangedHandler;
+            base.Relations.CollectionChanged += schemaChangedHandler;
+            this.EndInit();
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Production_OldDataTable Production_Old {
+            get {
+                return this.tableProduction_Old;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public CorrectsDataTable Corrects {
+            get {
+                return this.tableCorrects;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public CZPRO_VPHDataTable CZPRO_VPH {
+            get {
+                return this.tableCZPRO_VPH;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public LoginsDataTable Logins {
+            get {
+                return this.tableLogins;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public UserEventsDataTable UserEvents {
+            get {
+                return this.tableUserEvents;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public StatusTypesDataTable StatusTypes {
+            get {
+                return this.tableStatusTypes;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public CZPRO_VPPDataTable CZPRO_VPP {
+            get {
+                return this.tableCZPRO_VPP;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Production_SourcesDataTable Production_Sources {
+            get {
+                return this.tableProduction_Sources;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public FASK_CONS_095DataTable FASK_CONS_095 {
+            get {
+                return this.tableFASK_CONS_095;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public CZMST093DataTable CZMST093 {
+            get {
+                return this.tableCZMST093;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public CZMST094DataTable CZMST094 {
+            get {
+                return this.tableCZMST094;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public ProductionDataTable Production {
+            get {
+                return this.tableProduction;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public FASK_Vyroba_TPDataTable FASK_Vyroba_TP {
+            get {
+                return this.tableFASK_Vyroba_TP;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public MachinesDataTable Machines {
+            get {
+                return this.tableMachines;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public OperationsDataTable Operations {
+            get {
+                return this.tableOperations;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public VMachinesOperationsDataTable VMachinesOperations {
+            get {
+                return this.tableVMachinesOperations;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public ProductionHistDataTable ProductionHist {
+            get {
+                return this.tableProductionHist;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Production_origDataTable Production_orig {
+            get {
+                return this.tableProduction_orig;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Production_updateDataTable Production_update {
+            get {
+                return this.tableProduction_update;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Production_SNDataTable Production_SN {
+            get {
+                return this.tableProduction_SN;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
+            get {
+                return this._schemaSerializationMode;
+            }
+            set {
+                this._schemaSerializationMode = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public new global::System.Data.DataTableCollection Tables {
+            get {
+                return base.Tables;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public new global::System.Data.DataRelationCollection Relations {
+            get {
+                return base.Relations;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected override void InitializeDerivedDataSet() {
+            this.BeginInit();
+            this.InitClass();
+            this.EndInit();
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public override global::System.Data.DataSet Clone() {
+            Vyroba cln = ((Vyroba)(base.Clone()));
+            cln.InitVars();
+            cln.SchemaSerializationMode = this.SchemaSerializationMode;
+            return cln;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected override bool ShouldSerializeTables() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected override bool ShouldSerializeRelations() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected override void ReadXmlSerializable(global::System.Xml.XmlReader reader) {
+            if ((this.DetermineSchemaSerializationMode(reader) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
+                this.Reset();
+                global::System.Data.DataSet ds = new global::System.Data.DataSet();
+                ds.ReadXml(reader);
+                if ((ds.Tables["Production_Old"] != null)) {
+                    base.Tables.Add(new Production_OldDataTable(ds.Tables["Production_Old"]));
+                }
+                if ((ds.Tables["Corrects"] != null)) {
+                    base.Tables.Add(new CorrectsDataTable(ds.Tables["Corrects"]));
+                }
+                if ((ds.Tables["CZPRO_VPH"] != null)) {
+                    base.Tables.Add(new CZPRO_VPHDataTable(ds.Tables["CZPRO_VPH"]));
+                }
+                if ((ds.Tables["Logins"] != null)) {
+                    base.Tables.Add(new LoginsDataTable(ds.Tables["Logins"]));
+                }
+                if ((ds.Tables["UserEvents"] != null)) {
+                    base.Tables.Add(new UserEventsDataTable(ds.Tables["UserEvents"]));
+                }
+                if ((ds.Tables["StatusTypes"] != null)) {
+                    base.Tables.Add(new StatusTypesDataTable(ds.Tables["StatusTypes"]));
+                }
+                if ((ds.Tables["CZPRO_VPP"] != null)) {
+                    base.Tables.Add(new CZPRO_VPPDataTable(ds.Tables["CZPRO_VPP"]));
+                }
+                if ((ds.Tables["Production_Sources"] != null)) {
+                    base.Tables.Add(new Production_SourcesDataTable(ds.Tables["Production_Sources"]));
+                }
+                if ((ds.Tables["FASK_CONS_095"] != null)) {
+                    base.Tables.Add(new FASK_CONS_095DataTable(ds.Tables["FASK_CONS_095"]));
+                }
+                if ((ds.Tables["CZMST093"] != null)) {
+                    base.Tables.Add(new CZMST093DataTable(ds.Tables["CZMST093"]));
+                }
+                if ((ds.Tables["CZMST094"] != null)) {
+                    base.Tables.Add(new CZMST094DataTable(ds.Tables["CZMST094"]));
+                }
+                if ((ds.Tables["Production"] != null)) {
+                    base.Tables.Add(new ProductionDataTable(ds.Tables["Production"]));
+                }
+                if ((ds.Tables["FASK_Vyroba_TP"] != null)) {
+                    base.Tables.Add(new FASK_Vyroba_TPDataTable(ds.Tables["FASK_Vyroba_TP"]));
+                }
+                if ((ds.Tables["Machines"] != null)) {
+                    base.Tables.Add(new MachinesDataTable(ds.Tables["Machines"]));
+                }
+                if ((ds.Tables["Operations"] != null)) {
+                    base.Tables.Add(new OperationsDataTable(ds.Tables["Operations"]));
+                }
+                if ((ds.Tables["VMachinesOperations"] != null)) {
+                    base.Tables.Add(new VMachinesOperationsDataTable(ds.Tables["VMachinesOperations"]));
+                }
+                if ((ds.Tables["ProductionHist"] != null)) {
+                    base.Tables.Add(new ProductionHistDataTable(ds.Tables["ProductionHist"]));
+                }
+                if ((ds.Tables["Production_orig"] != null)) {
+                    base.Tables.Add(new Production_origDataTable(ds.Tables["Production_orig"]));
+                }
+                if ((ds.Tables["Production_update"] != null)) {
+                    base.Tables.Add(new Production_updateDataTable(ds.Tables["Production_update"]));
+                }
+                if ((ds.Tables["Production_SN"] != null)) {
+                    base.Tables.Add(new Production_SNDataTable(ds.Tables["Production_SN"]));
+                }
+                this.DataSetName = ds.DataSetName;
+                this.Prefix = ds.Prefix;
+                this.Namespace = ds.Namespace;
+                this.Locale = ds.Locale;
+                this.CaseSensitive = ds.CaseSensitive;
+                this.EnforceConstraints = ds.EnforceConstraints;
+                this.Merge(ds, false, global::System.Data.MissingSchemaAction.Add);
+                this.InitVars();
+            }
+            else {
+                this.ReadXml(reader);
+                this.InitVars();
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected override global::System.Xml.Schema.XmlSchema GetSchemaSerializable() {
+            global::System.IO.MemoryStream stream = new global::System.IO.MemoryStream();
+            this.WriteXmlSchema(new global::System.Xml.XmlTextWriter(stream, null));
+            stream.Position = 0;
+            return global::System.Xml.Schema.XmlSchema.Read(new global::System.Xml.XmlTextReader(stream), null);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        internal void InitVars() {
+            this.InitVars(true);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        internal void InitVars(bool initTable) {
+            this.tableProduction_Old = ((Production_OldDataTable)(base.Tables["Production_Old"]));
+            if ((initTable == true)) {
+                if ((this.tableProduction_Old != null)) {
+                    this.tableProduction_Old.InitVars();
+                }
+            }
+            this.tableCorrects = ((CorrectsDataTable)(base.Tables["Corrects"]));
+            if ((initTable == true)) {
+                if ((this.tableCorrects != null)) {
+                    this.tableCorrects.InitVars();
+                }
+            }
+            this.tableCZPRO_VPH = ((CZPRO_VPHDataTable)(base.Tables["CZPRO_VPH"]));
+            if ((initTable == true)) {
+                if ((this.tableCZPRO_VPH != null)) {
+                    this.tableCZPRO_VPH.InitVars();
+                }
+            }
+            this.tableLogins = ((LoginsDataTable)(base.Tables["Logins"]));
+            if ((initTable == true)) {
+                if ((this.tableLogins != null)) {
+                    this.tableLogins.InitVars();
+                }
+            }
+            this.tableUserEvents = ((UserEventsDataTable)(base.Tables["UserEvents"]));
+            if ((initTable == true)) {
+                if ((this.tableUserEvents != null)) {
+                    this.tableUserEvents.InitVars();
+                }
+            }
+            this.tableStatusTypes = ((StatusTypesDataTable)(base.Tables["StatusTypes"]));
+            if ((initTable == true)) {
+                if ((this.tableStatusTypes != null)) {
+                    this.tableStatusTypes.InitVars();
+                }
+            }
+            this.tableCZPRO_VPP = ((CZPRO_VPPDataTable)(base.Tables["CZPRO_VPP"]));
+            if ((initTable == true)) {
+                if ((this.tableCZPRO_VPP != null)) {
+                    this.tableCZPRO_VPP.InitVars();
+                }
+            }
+            this.tableProduction_Sources = ((Production_SourcesDataTable)(base.Tables["Production_Sources"]));
+            if ((initTable == true)) {
+                if ((this.tableProduction_Sources != null)) {
+                    this.tableProduction_Sources.InitVars();
+                }
+            }
+            this.tableFASK_CONS_095 = ((FASK_CONS_095DataTable)(base.Tables["FASK_CONS_095"]));
+            if ((initTable == true)) {
+                if ((this.tableFASK_CONS_095 != null)) {
+                    this.tableFASK_CONS_095.InitVars();
+                }
+            }
+            this.tableCZMST093 = ((CZMST093DataTable)(base.Tables["CZMST093"]));
+            if ((initTable == true)) {
+                if ((this.tableCZMST093 != null)) {
+                    this.tableCZMST093.InitVars();
+                }
+            }
+            this.tableCZMST094 = ((CZMST094DataTable)(base.Tables["CZMST094"]));
+            if ((initTable == true)) {
+                if ((this.tableCZMST094 != null)) {
+                    this.tableCZMST094.InitVars();
+                }
+            }
+            this.tableProduction = ((ProductionDataTable)(base.Tables["Production"]));
+            if ((initTable == true)) {
+                if ((this.tableProduction != null)) {
+                    this.tableProduction.InitVars();
+                }
+            }
+            this.tableFASK_Vyroba_TP = ((FASK_Vyroba_TPDataTable)(base.Tables["FASK_Vyroba_TP"]));
+            if ((initTable == true)) {
+                if ((this.tableFASK_Vyroba_TP != null)) {
+                    this.tableFASK_Vyroba_TP.InitVars();
+                }
+            }
+            this.tableMachines = ((MachinesDataTable)(base.Tables["Machines"]));
+            if ((initTable == true)) {
+                if ((this.tableMachines != null)) {
+                    this.tableMachines.InitVars();
+                }
+            }
+            this.tableOperations = ((OperationsDataTable)(base.Tables["Operations"]));
+            if ((initTable == true)) {
+                if ((this.tableOperations != null)) {
+                    this.tableOperations.InitVars();
+                }
+            }
+            this.tableVMachinesOperations = ((VMachinesOperationsDataTable)(base.Tables["VMachinesOperations"]));
+            if ((initTable == true)) {
+                if ((this.tableVMachinesOperations != null)) {
+                    this.tableVMachinesOperations.InitVars();
+                }
+            }
+            this.tableProductionHist = ((ProductionHistDataTable)(base.Tables["ProductionHist"]));
+            if ((initTable == true)) {
+                if ((this.tableProductionHist != null)) {
+                    this.tableProductionHist.InitVars();
+                }
+            }
+            this.tableProduction_orig = ((Production_origDataTable)(base.Tables["Production_orig"]));
+            if ((initTable == true)) {
+                if ((this.tableProduction_orig != null)) {
+                    this.tableProduction_orig.InitVars();
+                }
+            }
+            this.tableProduction_update = ((Production_updateDataTable)(base.Tables["Production_update"]));
+            if ((initTable == true)) {
+                if ((this.tableProduction_update != null)) {
+                    this.tableProduction_update.InitVars();
+                }
+            }
+            this.tableProduction_SN = ((Production_SNDataTable)(base.Tables["Production_SN"]));
+            if ((initTable == true)) {
+                if ((this.tableProduction_SN != null)) {
+                    this.tableProduction_SN.InitVars();
+                }
+            }
+            this.relationOperations_VMachinesOperations = this.Relations["Operations_VMachinesOperations"];
+            this.relationMachines_VMachinesOperations = this.Relations["Machines_VMachinesOperations"];
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void InitClass() {
+            this.DataSetName = "Vyroba";
+            this.Prefix = "";
+            this.Namespace = "http://vyroba.fask.cz/Vyroba.xsd";
+            this.Locale = new global::System.Globalization.CultureInfo("");
+            this.EnforceConstraints = false;
+            this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.ExcludeSchema;
+            this.tableProduction_Old = new Production_OldDataTable();
+            base.Tables.Add(this.tableProduction_Old);
+            this.tableCorrects = new CorrectsDataTable();
+            base.Tables.Add(this.tableCorrects);
+            this.tableCZPRO_VPH = new CZPRO_VPHDataTable();
+            base.Tables.Add(this.tableCZPRO_VPH);
+            this.tableLogins = new LoginsDataTable();
+            base.Tables.Add(this.tableLogins);
+            this.tableUserEvents = new UserEventsDataTable();
+            base.Tables.Add(this.tableUserEvents);
+            this.tableStatusTypes = new StatusTypesDataTable();
+            base.Tables.Add(this.tableStatusTypes);
+            this.tableCZPRO_VPP = new CZPRO_VPPDataTable();
+            base.Tables.Add(this.tableCZPRO_VPP);
+            this.tableProduction_Sources = new Production_SourcesDataTable();
+            base.Tables.Add(this.tableProduction_Sources);
+            this.tableFASK_CONS_095 = new FASK_CONS_095DataTable();
+            base.Tables.Add(this.tableFASK_CONS_095);
+            this.tableCZMST093 = new CZMST093DataTable();
+            base.Tables.Add(this.tableCZMST093);
+            this.tableCZMST094 = new CZMST094DataTable();
+            base.Tables.Add(this.tableCZMST094);
+            this.tableProduction = new ProductionDataTable();
+            base.Tables.Add(this.tableProduction);
+            this.tableFASK_Vyroba_TP = new FASK_Vyroba_TPDataTable();
+            base.Tables.Add(this.tableFASK_Vyroba_TP);
+            this.tableMachines = new MachinesDataTable();
+            base.Tables.Add(this.tableMachines);
+            this.tableOperations = new OperationsDataTable();
+            base.Tables.Add(this.tableOperations);
+            this.tableVMachinesOperations = new VMachinesOperationsDataTable();
+            base.Tables.Add(this.tableVMachinesOperations);
+            this.tableProductionHist = new ProductionHistDataTable();
+            base.Tables.Add(this.tableProductionHist);
+            this.tableProduction_orig = new Production_origDataTable();
+            base.Tables.Add(this.tableProduction_orig);
+            this.tableProduction_update = new Production_updateDataTable();
+            base.Tables.Add(this.tableProduction_update);
+            this.tableProduction_SN = new Production_SNDataTable();
+            base.Tables.Add(this.tableProduction_SN);
+            this.relationOperations_VMachinesOperations = new global::System.Data.DataRelation("Operations_VMachinesOperations", new global::System.Data.DataColumn[] {
+                        this.tableOperations.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableVMachinesOperations.operationidColumn}, false);
+            this.Relations.Add(this.relationOperations_VMachinesOperations);
+            this.relationMachines_VMachinesOperations = new global::System.Data.DataRelation("Machines_VMachinesOperations", new global::System.Data.DataColumn[] {
+                        this.tableMachines.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableVMachinesOperations.machineidColumn}, false);
+            this.Relations.Add(this.relationMachines_VMachinesOperations);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeProduction_Old() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeCorrects() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeCZPRO_VPH() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeLogins() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeUserEvents() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeStatusTypes() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeCZPRO_VPP() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeProduction_Sources() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeFASK_CONS_095() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeCZMST093() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeCZMST094() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeProduction() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeFASK_Vyroba_TP() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeMachines() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeOperations() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeVMachinesOperations() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeProductionHist() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeProduction_orig() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeProduction_update() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeProduction_SN() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
+            if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
+                this.InitVars();
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+            Vyroba ds = new Vyroba();
+            global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+            global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+            global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
+            any.Namespace = ds.Namespace;
+            sequence.Items.Add(any);
+            type.Particle = sequence;
+            global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+            if (xs.Contains(dsSchema.TargetNamespace)) {
+                global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                try {
+                    global::System.Xml.Schema.XmlSchema schema = null;
+                    dsSchema.Write(s1);
+                    for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                        schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                        s2.SetLength(0);
+                        schema.Write(s2);
+                        if ((s1.Length == s2.Length)) {
+                            s1.Position = 0;
+                            s2.Position = 0;
+                            for (; ((s1.Position != s1.Length) 
+                                        && (s1.ReadByte() == s2.ReadByte())); ) {
+                                ;
+                            }
+                            if ((s1.Position == s1.Length)) {
+                                return type;
+                            }
+                        }
+                    }
+                }
+                finally {
+                    if ((s1 != null)) {
+                        s1.Close();
+                    }
+                    if ((s2 != null)) {
+                        s2.Close();
+                    }
+                }
+            }
+            xs.Add(dsSchema);
+            return type;
+        }
+        
+        public delegate void Production_OldRowChangeEventHandler(object sender, Production_OldRowChangeEvent e);
+        
+        public delegate void CorrectsRowChangeEventHandler(object sender, CorrectsRowChangeEvent e);
+        
+        public delegate void CZPRO_VPHRowChangeEventHandler(object sender, CZPRO_VPHRowChangeEvent e);
+        
+        public delegate void LoginsRowChangeEventHandler(object sender, LoginsRowChangeEvent e);
+        
+        public delegate void UserEventsRowChangeEventHandler(object sender, UserEventsRowChangeEvent e);
+        
+        public delegate void StatusTypesRowChangeEventHandler(object sender, StatusTypesRowChangeEvent e);
+        
+        public delegate void CZPRO_VPPRowChangeEventHandler(object sender, CZPRO_VPPRowChangeEvent e);
+        
+        public delegate void Production_SourcesRowChangeEventHandler(object sender, Production_SourcesRowChangeEvent e);
+        
+        public delegate void FASK_CONS_095RowChangeEventHandler(object sender, FASK_CONS_095RowChangeEvent e);
+        
+        public delegate void CZMST093RowChangeEventHandler(object sender, CZMST093RowChangeEvent e);
+        
+        public delegate void CZMST094RowChangeEventHandler(object sender, CZMST094RowChangeEvent e);
+        
+        public delegate void ProductionRowChangeEventHandler(object sender, ProductionRowChangeEvent e);
+        
+        public delegate void FASK_Vyroba_TPRowChangeEventHandler(object sender, FASK_Vyroba_TPRowChangeEvent e);
+        
+        public delegate void MachinesRowChangeEventHandler(object sender, MachinesRowChangeEvent e);
+        
+        public delegate void OperationsRowChangeEventHandler(object sender, OperationsRowChangeEvent e);
+        
+        public delegate void VMachinesOperationsRowChangeEventHandler(object sender, VMachinesOperationsRowChangeEvent e);
+        
+        public delegate void ProductionHistRowChangeEventHandler(object sender, ProductionHistRowChangeEvent e);
+        
+        public delegate void Production_origRowChangeEventHandler(object sender, Production_origRowChangeEvent e);
+        
+        public delegate void Production_updateRowChangeEventHandler(object sender, Production_updateRowChangeEvent e);
+        
+        public delegate void Production_SNRowChangeEventHandler(object sender, Production_SNRowChangeEvent e);
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Production_OldDataTable : global::System.Data.TypedTableBase<Production_OldRow> {
+            
+            private global::System.Data.DataColumn columnCountEntries;
+            
+            private global::System.Data.DataColumn columnSOPNUMBE;
+            
+            private global::System.Data.DataColumn columnITEMNMBR;
+            
+            private global::System.Data.DataColumn columnORD;
+            
+            private global::System.Data.DataColumn columnTIMEPREP;
+            
+            private global::System.Data.DataColumn columnTIMEUNIT;
+            
+            private global::System.Data.DataColumn columnTIMESTART;
+            
+            private global::System.Data.DataColumn columnTIMESTOP;
+            
+            private global::System.Data.DataColumn columnTIMECOR;
+            
+            private global::System.Data.DataColumn columnTIMECRID;
+            
+            private global::System.Data.DataColumn columnid;
+            
+            private global::System.Data.DataColumn columnloginid;
+            
+            private global::System.Data.DataColumn columnmachineid;
+            
+            private global::System.Data.DataColumn columndateeve;
+            
+            private global::System.Data.DataColumn columnqty;
+            
+            private global::System.Data.DataColumn columnqtyReal;
+            
+            private global::System.Data.DataColumn columndescription;
+            
+            private global::System.Data.DataColumn columnBarcodeP;
+            
+            private global::System.Data.DataColumn columnUserID;
+            
+            private global::System.Data.DataColumn columnTermID;
+            
+            private global::System.Data.DataColumn columnISOK;
+            
+            private global::System.Data.DataColumn columnGUID;
+            
+            private global::System.Data.DataColumn columnITEMTYPE;
+            
+            private global::System.Data.DataColumn columnITEMMJ;
+            
+            private global::System.Data.DataColumn columnQTYPACK;
+            
+            private global::System.Data.DataColumn columnQTYPACKMJ;
+            
+            private global::System.Data.DataColumn columnTIMEMODE;
+            
+            private global::System.Data.DataColumn columnTIMEPREPSTART;
+            
+            private global::System.Data.DataColumn columnTIMEPREPSTOP;
+            
+            private global::System.Data.DataColumn columnTIMECORSTART;
+            
+            private global::System.Data.DataColumn columnTIMECORSTOP;
+            
+            private global::System.Data.DataColumn columnNMBRPAL;
+            
+            private global::System.Data.DataColumn columnTYPEPAL;
+            
+            private global::System.Data.DataColumn columnPackType;
+            
+            private global::System.Data.DataColumn columnstatus;
+            
+            private global::System.Data.DataColumn columnWEIGHT;
+            
+            private global::System.Data.DataColumn columnSTORNOGUID;
+            
+            private global::System.Data.DataColumn columnREZ_1;
+            
+            private global::System.Data.DataColumn columnREZ_2;
+            
+            private global::System.Data.DataColumn columnREZ_3;
+            
+            private global::System.Data.DataColumn columnREZ_4;
+            
+            private global::System.Data.DataColumn columnREZ_5;
+            
+            private global::System.Data.DataColumn columnWEIGHT_OLD;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_OldDataTable() {
+                this.TableName = "Production_Old";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal Production_OldDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CountEntriesColumn {
+                get {
+                    return this.columnCountEntries;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SOPNUMBEColumn {
+                get {
+                    return this.columnSOPNUMBE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMNMBRColumn {
+                get {
+                    return this.columnITEMNMBR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ORDColumn {
+                get {
+                    return this.columnORD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEPREPColumn {
+                get {
+                    return this.columnTIMEPREP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEUNITColumn {
+                get {
+                    return this.columnTIMEUNIT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMESTARTColumn {
+                get {
+                    return this.columnTIMESTART;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMESTOPColumn {
+                get {
+                    return this.columnTIMESTOP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMECORColumn {
+                get {
+                    return this.columnTIMECOR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMECRIDColumn {
+                get {
+                    return this.columnTIMECRID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn loginidColumn {
+                get {
+                    return this.columnloginid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn machineidColumn {
+                get {
+                    return this.columnmachineid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn dateeveColumn {
+                get {
+                    return this.columndateeve;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn qtyColumn {
+                get {
+                    return this.columnqty;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn qtyRealColumn {
+                get {
+                    return this.columnqtyReal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn descriptionColumn {
+                get {
+                    return this.columndescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn BarcodePColumn {
+                get {
+                    return this.columnBarcodeP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn UserIDColumn {
+                get {
+                    return this.columnUserID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TermIDColumn {
+                get {
+                    return this.columnTermID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ISOKColumn {
+                get {
+                    return this.columnISOK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn GUIDColumn {
+                get {
+                    return this.columnGUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMTYPEColumn {
+                get {
+                    return this.columnITEMTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMMJColumn {
+                get {
+                    return this.columnITEMMJ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYPACKColumn {
+                get {
+                    return this.columnQTYPACK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYPACKMJColumn {
+                get {
+                    return this.columnQTYPACKMJ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEMODEColumn {
+                get {
+                    return this.columnTIMEMODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEPREPSTARTColumn {
+                get {
+                    return this.columnTIMEPREPSTART;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEPREPSTOPColumn {
+                get {
+                    return this.columnTIMEPREPSTOP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMECORSTARTColumn {
+                get {
+                    return this.columnTIMECORSTART;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMECORSTOPColumn {
+                get {
+                    return this.columnTIMECORSTOP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn NMBRPALColumn {
+                get {
+                    return this.columnNMBRPAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TYPEPALColumn {
+                get {
+                    return this.columnTYPEPAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn PackTypeColumn {
+                get {
+                    return this.columnPackType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn statusColumn {
+                get {
+                    return this.columnstatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn WEIGHTColumn {
+                get {
+                    return this.columnWEIGHT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn STORNOGUIDColumn {
+                get {
+                    return this.columnSTORNOGUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_1Column {
+                get {
+                    return this.columnREZ_1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_2Column {
+                get {
+                    return this.columnREZ_2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_3Column {
+                get {
+                    return this.columnREZ_3;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_4Column {
+                get {
+                    return this.columnREZ_4;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_5Column {
+                get {
+                    return this.columnREZ_5;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn WEIGHT_OLDColumn {
+                get {
+                    return this.columnWEIGHT_OLD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_OldRow this[int index] {
+                get {
+                    return ((Production_OldRow)(this.Rows[index]));
+                }
+            }
+            
+            public event Production_OldRowChangeEventHandler Production_OldRowChanging;
+            
+            public event Production_OldRowChangeEventHandler Production_OldRowChanged;
+            
+            public event Production_OldRowChangeEventHandler Production_OldRowDeleting;
+            
+            public event Production_OldRowChangeEventHandler Production_OldRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddProduction_OldRow(Production_OldRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_OldRow AddProduction_OldRow(
+                        int CountEntries, 
+                        string SOPNUMBE, 
+                        string ITEMNMBR, 
+                        int ORD, 
+                        float TIMEPREP, 
+                        float TIMEUNIT, 
+                        System.DateTime TIMESTART, 
+                        System.DateTime TIMESTOP, 
+                        float TIMECOR, 
+                        int TIMECRID, 
+                        int id, 
+                        string loginid, 
+                        string machineid, 
+                        System.DateTime dateeve, 
+                        decimal qty, 
+                        decimal qtyReal, 
+                        string description, 
+                        string BarcodeP, 
+                        string UserID, 
+                        byte TermID, 
+                        System.DateTime ISOK, 
+                        System.Guid GUID, 
+                        string ITEMTYPE, 
+                        string ITEMMJ, 
+                        decimal QTYPACK, 
+                        string QTYPACKMJ, 
+                        int TIMEMODE, 
+                        System.DateTime TIMEPREPSTART, 
+                        System.DateTime TIMEPREPSTOP, 
+                        System.DateTime TIMECORSTART, 
+                        System.DateTime TIMECORSTOP, 
+                        string NMBRPAL, 
+                        string TYPEPAL, 
+                        string PackType, 
+                        int status, 
+                        decimal WEIGHT, 
+                        System.Guid STORNOGUID, 
+                        string REZ_1, 
+                        string REZ_2, 
+                        string REZ_3, 
+                        string REZ_4, 
+                        string REZ_5, 
+                        decimal WEIGHT_OLD) {
+                Production_OldRow rowProduction_OldRow = ((Production_OldRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        CountEntries,
+                        SOPNUMBE,
+                        ITEMNMBR,
+                        ORD,
+                        TIMEPREP,
+                        TIMEUNIT,
+                        TIMESTART,
+                        TIMESTOP,
+                        TIMECOR,
+                        TIMECRID,
+                        id,
+                        loginid,
+                        machineid,
+                        dateeve,
+                        qty,
+                        qtyReal,
+                        description,
+                        BarcodeP,
+                        UserID,
+                        TermID,
+                        ISOK,
+                        GUID,
+                        ITEMTYPE,
+                        ITEMMJ,
+                        QTYPACK,
+                        QTYPACKMJ,
+                        TIMEMODE,
+                        TIMEPREPSTART,
+                        TIMEPREPSTOP,
+                        TIMECORSTART,
+                        TIMECORSTOP,
+                        NMBRPAL,
+                        TYPEPAL,
+                        PackType,
+                        status,
+                        WEIGHT,
+                        STORNOGUID,
+                        REZ_1,
+                        REZ_2,
+                        REZ_3,
+                        REZ_4,
+                        REZ_5,
+                        WEIGHT_OLD};
+                rowProduction_OldRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowProduction_OldRow);
+                return rowProduction_OldRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                Production_OldDataTable cln = ((Production_OldDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Production_OldDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnCountEntries = base.Columns["CountEntries"];
+                this.columnSOPNUMBE = base.Columns["SOPNUMBE"];
+                this.columnITEMNMBR = base.Columns["ITEMNMBR"];
+                this.columnORD = base.Columns["ORD"];
+                this.columnTIMEPREP = base.Columns["TIMEPREP"];
+                this.columnTIMEUNIT = base.Columns["TIMEUNIT"];
+                this.columnTIMESTART = base.Columns["TIMESTART"];
+                this.columnTIMESTOP = base.Columns["TIMESTOP"];
+                this.columnTIMECOR = base.Columns["TIMECOR"];
+                this.columnTIMECRID = base.Columns["TIMECRID"];
+                this.columnid = base.Columns["id"];
+                this.columnloginid = base.Columns["loginid"];
+                this.columnmachineid = base.Columns["machineid"];
+                this.columndateeve = base.Columns["dateeve"];
+                this.columnqty = base.Columns["qty"];
+                this.columnqtyReal = base.Columns["qtyReal"];
+                this.columndescription = base.Columns["description"];
+                this.columnBarcodeP = base.Columns["BarcodeP"];
+                this.columnUserID = base.Columns["UserID"];
+                this.columnTermID = base.Columns["TermID"];
+                this.columnISOK = base.Columns["ISOK"];
+                this.columnGUID = base.Columns["GUID"];
+                this.columnITEMTYPE = base.Columns["ITEMTYPE"];
+                this.columnITEMMJ = base.Columns["ITEMMJ"];
+                this.columnQTYPACK = base.Columns["QTYPACK"];
+                this.columnQTYPACKMJ = base.Columns["QTYPACKMJ"];
+                this.columnTIMEMODE = base.Columns["TIMEMODE"];
+                this.columnTIMEPREPSTART = base.Columns["TIMEPREPSTART"];
+                this.columnTIMEPREPSTOP = base.Columns["TIMEPREPSTOP"];
+                this.columnTIMECORSTART = base.Columns["TIMECORSTART"];
+                this.columnTIMECORSTOP = base.Columns["TIMECORSTOP"];
+                this.columnNMBRPAL = base.Columns["NMBRPAL"];
+                this.columnTYPEPAL = base.Columns["TYPEPAL"];
+                this.columnPackType = base.Columns["PackType"];
+                this.columnstatus = base.Columns["status"];
+                this.columnWEIGHT = base.Columns["WEIGHT"];
+                this.columnSTORNOGUID = base.Columns["STORNOGUID"];
+                this.columnREZ_1 = base.Columns["REZ_1"];
+                this.columnREZ_2 = base.Columns["REZ_2"];
+                this.columnREZ_3 = base.Columns["REZ_3"];
+                this.columnREZ_4 = base.Columns["REZ_4"];
+                this.columnREZ_5 = base.Columns["REZ_5"];
+                this.columnWEIGHT_OLD = base.Columns["WEIGHT_OLD"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnCountEntries = new global::System.Data.DataColumn("CountEntries", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCountEntries);
+                this.columnSOPNUMBE = new global::System.Data.DataColumn("SOPNUMBE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSOPNUMBE);
+                this.columnITEMNMBR = new global::System.Data.DataColumn("ITEMNMBR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMNMBR);
+                this.columnORD = new global::System.Data.DataColumn("ORD", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnORD);
+                this.columnTIMEPREP = new global::System.Data.DataColumn("TIMEPREP", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEPREP);
+                this.columnTIMEUNIT = new global::System.Data.DataColumn("TIMEUNIT", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEUNIT);
+                this.columnTIMESTART = new global::System.Data.DataColumn("TIMESTART", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMESTART);
+                this.columnTIMESTOP = new global::System.Data.DataColumn("TIMESTOP", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMESTOP);
+                this.columnTIMECOR = new global::System.Data.DataColumn("TIMECOR", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMECOR);
+                this.columnTIMECRID = new global::System.Data.DataColumn("TIMECRID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMECRID);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columnloginid = new global::System.Data.DataColumn("loginid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnloginid);
+                this.columnmachineid = new global::System.Data.DataColumn("machineid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmachineid);
+                this.columndateeve = new global::System.Data.DataColumn("dateeve", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndateeve);
+                this.columnqty = new global::System.Data.DataColumn("qty", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnqty);
+                this.columnqtyReal = new global::System.Data.DataColumn("qtyReal", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnqtyReal);
+                this.columndescription = new global::System.Data.DataColumn("description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescription);
+                this.columnBarcodeP = new global::System.Data.DataColumn("BarcodeP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBarcodeP);
+                this.columnUserID = new global::System.Data.DataColumn("UserID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserID);
+                this.columnTermID = new global::System.Data.DataColumn("TermID", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTermID);
+                this.columnISOK = new global::System.Data.DataColumn("ISOK", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnISOK);
+                this.columnGUID = new global::System.Data.DataColumn("GUID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGUID);
+                this.columnITEMTYPE = new global::System.Data.DataColumn("ITEMTYPE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMTYPE);
+                this.columnITEMMJ = new global::System.Data.DataColumn("ITEMMJ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMMJ);
+                this.columnQTYPACK = new global::System.Data.DataColumn("QTYPACK", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTYPACK);
+                this.columnQTYPACKMJ = new global::System.Data.DataColumn("QTYPACKMJ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTYPACKMJ);
+                this.columnTIMEMODE = new global::System.Data.DataColumn("TIMEMODE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEMODE);
+                this.columnTIMEPREPSTART = new global::System.Data.DataColumn("TIMEPREPSTART", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEPREPSTART);
+                this.columnTIMEPREPSTOP = new global::System.Data.DataColumn("TIMEPREPSTOP", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEPREPSTOP);
+                this.columnTIMECORSTART = new global::System.Data.DataColumn("TIMECORSTART", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMECORSTART);
+                this.columnTIMECORSTOP = new global::System.Data.DataColumn("TIMECORSTOP", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMECORSTOP);
+                this.columnNMBRPAL = new global::System.Data.DataColumn("NMBRPAL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNMBRPAL);
+                this.columnTYPEPAL = new global::System.Data.DataColumn("TYPEPAL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTYPEPAL);
+                this.columnPackType = new global::System.Data.DataColumn("PackType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPackType);
+                this.columnstatus = new global::System.Data.DataColumn("status", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstatus);
+                this.columnWEIGHT = new global::System.Data.DataColumn("WEIGHT", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWEIGHT);
+                this.columnSTORNOGUID = new global::System.Data.DataColumn("STORNOGUID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSTORNOGUID);
+                this.columnREZ_1 = new global::System.Data.DataColumn("REZ_1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_1);
+                this.columnREZ_2 = new global::System.Data.DataColumn("REZ_2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_2);
+                this.columnREZ_3 = new global::System.Data.DataColumn("REZ_3", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_3);
+                this.columnREZ_4 = new global::System.Data.DataColumn("REZ_4", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_4);
+                this.columnREZ_5 = new global::System.Data.DataColumn("REZ_5", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_5);
+                this.columnWEIGHT_OLD = new global::System.Data.DataColumn("WEIGHT_OLD", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWEIGHT_OLD);
+                this.columnloginid.AllowDBNull = false;
+                this.columndateeve.AllowDBNull = false;
+                this.columnqty.AllowDBNull = false;
+                this.columnqtyReal.AllowDBNull = false;
+                this.columnUserID.AllowDBNull = false;
+                this.columnTermID.AllowDBNull = false;
+                this.columnGUID.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_OldRow NewProduction_OldRow() {
+                return ((Production_OldRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Production_OldRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(Production_OldRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Production_OldRowChanged != null)) {
+                    this.Production_OldRowChanged(this, new Production_OldRowChangeEvent(((Production_OldRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Production_OldRowChanging != null)) {
+                    this.Production_OldRowChanging(this, new Production_OldRowChangeEvent(((Production_OldRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Production_OldRowDeleted != null)) {
+                    this.Production_OldRowDeleted(this, new Production_OldRowChangeEvent(((Production_OldRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Production_OldRowDeleting != null)) {
+                    this.Production_OldRowDeleting(this, new Production_OldRowChangeEvent(((Production_OldRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveProduction_OldRow(Production_OldRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Production_OldDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CorrectsDataTable : global::System.Data.TypedTableBase<CorrectsRow> {
+            
+            private global::System.Data.DataColumn columnid;
+            
+            private global::System.Data.DataColumn columndesc;
+            
+            private global::System.Data.DataColumn columnTMFrom;
+            
+            private global::System.Data.DataColumn columnTMTo;
+            
+            private global::System.Data.DataColumn columnProduction;
+            
+            private global::System.Data.DataColumn columnProductionType;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CorrectsDataTable() {
+                this.TableName = "Corrects";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal CorrectsDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn descColumn {
+                get {
+                    return this.columndesc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TMFromColumn {
+                get {
+                    return this.columnTMFrom;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TMToColumn {
+                get {
+                    return this.columnTMTo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ProductionColumn {
+                get {
+                    return this.columnProduction;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ProductionTypeColumn {
+                get {
+                    return this.columnProductionType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CorrectsRow this[int index] {
+                get {
+                    return ((CorrectsRow)(this.Rows[index]));
+                }
+            }
+            
+            public event CorrectsRowChangeEventHandler CorrectsRowChanging;
+            
+            public event CorrectsRowChangeEventHandler CorrectsRowChanged;
+            
+            public event CorrectsRowChangeEventHandler CorrectsRowDeleting;
+            
+            public event CorrectsRowChangeEventHandler CorrectsRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddCorrectsRow(CorrectsRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CorrectsRow AddCorrectsRow(int id, string desc, float TMFrom, float TMTo, byte Production, byte ProductionType) {
+                CorrectsRow rowCorrectsRow = ((CorrectsRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        id,
+                        desc,
+                        TMFrom,
+                        TMTo,
+                        Production,
+                        ProductionType};
+                rowCorrectsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCorrectsRow);
+                return rowCorrectsRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                CorrectsDataTable cln = ((CorrectsDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CorrectsDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnid = base.Columns["id"];
+                this.columndesc = base.Columns["desc"];
+                this.columnTMFrom = base.Columns["TMFrom"];
+                this.columnTMTo = base.Columns["TMTo"];
+                this.columnProduction = base.Columns["Production"];
+                this.columnProductionType = base.Columns["ProductionType"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columndesc = new global::System.Data.DataColumn("desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndesc);
+                this.columnTMFrom = new global::System.Data.DataColumn("TMFrom", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTMFrom);
+                this.columnTMTo = new global::System.Data.DataColumn("TMTo", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTMTo);
+                this.columnProduction = new global::System.Data.DataColumn("Production", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProduction);
+                this.columnProductionType = new global::System.Data.DataColumn("ProductionType", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProductionType);
+                this.columndesc.AllowDBNull = false;
+                this.columnProduction.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CorrectsRow NewCorrectsRow() {
+                return ((CorrectsRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CorrectsRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(CorrectsRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CorrectsRowChanged != null)) {
+                    this.CorrectsRowChanged(this, new CorrectsRowChangeEvent(((CorrectsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CorrectsRowChanging != null)) {
+                    this.CorrectsRowChanging(this, new CorrectsRowChangeEvent(((CorrectsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CorrectsRowDeleted != null)) {
+                    this.CorrectsRowDeleted(this, new CorrectsRowChangeEvent(((CorrectsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CorrectsRowDeleting != null)) {
+                    this.CorrectsRowDeleting(this, new CorrectsRowChangeEvent(((CorrectsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveCorrectsRow(CorrectsRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CorrectsDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CZPRO_VPHDataTable : global::System.Data.TypedTableBase<CZPRO_VPHRow> {
+            
+            private global::System.Data.DataColumn columnCountEntries;
+            
+            private global::System.Data.DataColumn columnSOPNUMBE;
+            
+            private global::System.Data.DataColumn columnSOPTYPE;
+            
+            private global::System.Data.DataColumn columnSOPDESC;
+            
+            private global::System.Data.DataColumn columnVNDDOCNMH;
+            
+            private global::System.Data.DataColumn columnBarcodeH;
+            
+            private global::System.Data.DataColumn columnLOCNCODE;
+            
+            private global::System.Data.DataColumn columnDateProd;
+            
+            private global::System.Data.DataColumn columnRez1;
+            
+            private global::System.Data.DataColumn columnRez2;
+            
+            private global::System.Data.DataColumn columnTermID;
+            
+            private global::System.Data.DataColumn columnLSTMod;
+            
+            private global::System.Data.DataColumn columnDEX_ROW_ID;
+            
+            private global::System.Data.DataColumn columnUSERID;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZPRO_VPHDataTable() {
+                this.TableName = "CZPRO_VPH";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal CZPRO_VPHDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CountEntriesColumn {
+                get {
+                    return this.columnCountEntries;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SOPNUMBEColumn {
+                get {
+                    return this.columnSOPNUMBE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SOPTYPEColumn {
+                get {
+                    return this.columnSOPTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SOPDESCColumn {
+                get {
+                    return this.columnSOPDESC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn VNDDOCNMHColumn {
+                get {
+                    return this.columnVNDDOCNMH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn BarcodeHColumn {
+                get {
+                    return this.columnBarcodeH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn LOCNCODEColumn {
+                get {
+                    return this.columnLOCNCODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn DateProdColumn {
+                get {
+                    return this.columnDateProd;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn Rez1Column {
+                get {
+                    return this.columnRez1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn Rez2Column {
+                get {
+                    return this.columnRez2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TermIDColumn {
+                get {
+                    return this.columnTermID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn LSTModColumn {
+                get {
+                    return this.columnLSTMod;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn DEX_ROW_IDColumn {
+                get {
+                    return this.columnDEX_ROW_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn USERIDColumn {
+                get {
+                    return this.columnUSERID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZPRO_VPHRow this[int index] {
+                get {
+                    return ((CZPRO_VPHRow)(this.Rows[index]));
+                }
+            }
+            
+            public event CZPRO_VPHRowChangeEventHandler CZPRO_VPHRowChanging;
+            
+            public event CZPRO_VPHRowChangeEventHandler CZPRO_VPHRowChanged;
+            
+            public event CZPRO_VPHRowChangeEventHandler CZPRO_VPHRowDeleting;
+            
+            public event CZPRO_VPHRowChangeEventHandler CZPRO_VPHRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddCZPRO_VPHRow(CZPRO_VPHRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZPRO_VPHRow AddCZPRO_VPHRow(int CountEntries, string SOPNUMBE, string SOPTYPE, string SOPDESC, string VNDDOCNMH, string BarcodeH, string LOCNCODE, short DateProd, string Rez1, string Rez2, byte TermID, System.DateTime LSTMod, int DEX_ROW_ID, int USERID) {
+                CZPRO_VPHRow rowCZPRO_VPHRow = ((CZPRO_VPHRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        CountEntries,
+                        SOPNUMBE,
+                        SOPTYPE,
+                        SOPDESC,
+                        VNDDOCNMH,
+                        BarcodeH,
+                        LOCNCODE,
+                        DateProd,
+                        Rez1,
+                        Rez2,
+                        TermID,
+                        LSTMod,
+                        DEX_ROW_ID,
+                        USERID};
+                rowCZPRO_VPHRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCZPRO_VPHRow);
+                return rowCZPRO_VPHRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZPRO_VPHRow FindBySOPNUMBE(string SOPNUMBE) {
+                return ((CZPRO_VPHRow)(this.Rows.Find(new object[] {
+                            SOPNUMBE})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                CZPRO_VPHDataTable cln = ((CZPRO_VPHDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CZPRO_VPHDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnCountEntries = base.Columns["CountEntries"];
+                this.columnSOPNUMBE = base.Columns["SOPNUMBE"];
+                this.columnSOPTYPE = base.Columns["SOPTYPE"];
+                this.columnSOPDESC = base.Columns["SOPDESC"];
+                this.columnVNDDOCNMH = base.Columns["VNDDOCNMH"];
+                this.columnBarcodeH = base.Columns["BarcodeH"];
+                this.columnLOCNCODE = base.Columns["LOCNCODE"];
+                this.columnDateProd = base.Columns["DateProd"];
+                this.columnRez1 = base.Columns["Rez1"];
+                this.columnRez2 = base.Columns["Rez2"];
+                this.columnTermID = base.Columns["TermID"];
+                this.columnLSTMod = base.Columns["LSTMod"];
+                this.columnDEX_ROW_ID = base.Columns["DEX_ROW_ID"];
+                this.columnUSERID = base.Columns["USERID"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnCountEntries = new global::System.Data.DataColumn("CountEntries", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCountEntries);
+                this.columnSOPNUMBE = new global::System.Data.DataColumn("SOPNUMBE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSOPNUMBE);
+                this.columnSOPTYPE = new global::System.Data.DataColumn("SOPTYPE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSOPTYPE);
+                this.columnSOPDESC = new global::System.Data.DataColumn("SOPDESC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSOPDESC);
+                this.columnVNDDOCNMH = new global::System.Data.DataColumn("VNDDOCNMH", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVNDDOCNMH);
+                this.columnBarcodeH = new global::System.Data.DataColumn("BarcodeH", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBarcodeH);
+                this.columnLOCNCODE = new global::System.Data.DataColumn("LOCNCODE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLOCNCODE);
+                this.columnDateProd = new global::System.Data.DataColumn("DateProd", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateProd);
+                this.columnRez1 = new global::System.Data.DataColumn("Rez1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRez1);
+                this.columnRez2 = new global::System.Data.DataColumn("Rez2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRez2);
+                this.columnTermID = new global::System.Data.DataColumn("TermID", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTermID);
+                this.columnLSTMod = new global::System.Data.DataColumn("LSTMod", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLSTMod);
+                this.columnDEX_ROW_ID = new global::System.Data.DataColumn("DEX_ROW_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDEX_ROW_ID);
+                this.columnUSERID = new global::System.Data.DataColumn("USERID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUSERID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnSOPNUMBE}, true));
+                this.columnCountEntries.AllowDBNull = false;
+                this.columnSOPNUMBE.AllowDBNull = false;
+                this.columnSOPNUMBE.Unique = true;
+                this.columnSOPTYPE.AllowDBNull = false;
+                this.columnBarcodeH.AllowDBNull = false;
+                this.columnDateProd.AllowDBNull = false;
+                this.columnRez1.AllowDBNull = false;
+                this.columnRez2.AllowDBNull = false;
+                this.columnTermID.AllowDBNull = false;
+                this.columnLSTMod.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZPRO_VPHRow NewCZPRO_VPHRow() {
+                return ((CZPRO_VPHRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CZPRO_VPHRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(CZPRO_VPHRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CZPRO_VPHRowChanged != null)) {
+                    this.CZPRO_VPHRowChanged(this, new CZPRO_VPHRowChangeEvent(((CZPRO_VPHRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CZPRO_VPHRowChanging != null)) {
+                    this.CZPRO_VPHRowChanging(this, new CZPRO_VPHRowChangeEvent(((CZPRO_VPHRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CZPRO_VPHRowDeleted != null)) {
+                    this.CZPRO_VPHRowDeleted(this, new CZPRO_VPHRowChangeEvent(((CZPRO_VPHRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CZPRO_VPHRowDeleting != null)) {
+                    this.CZPRO_VPHRowDeleting(this, new CZPRO_VPHRowChangeEvent(((CZPRO_VPHRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveCZPRO_VPHRow(CZPRO_VPHRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CZPRO_VPHDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class LoginsDataTable : global::System.Data.TypedTableBase<LoginsRow> {
+            
+            #region TaD
+
+            private global::System.Data.DataColumn columnLogin;
+
+            #endregion
+
+            private global::System.Data.DataColumn columnid;
+            
+            private global::System.Data.DataColumn columnfirstname;
+            
+            private global::System.Data.DataColumn columnsurname;
+            
+            private global::System.Data.DataColumn columnpsswd;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public LoginsDataTable() {
+                this.TableName = "Logins";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal LoginsDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            #region TaD
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn LoginColumn
+            {
+                get {
+                    return this.columnLogin;
+                }
+            }
+
+            #endregion
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn firstnameColumn {
+                get {
+                    return this.columnfirstname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn surnameColumn {
+                get {
+                    return this.columnsurname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn psswdColumn {
+                get {
+                    return this.columnpsswd;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public LoginsRow this[int index] {
+                get {
+                    return ((LoginsRow)(this.Rows[index]));
+                }
+            }
+            
+            public event LoginsRowChangeEventHandler LoginsRowChanging;
+            
+            public event LoginsRowChangeEventHandler LoginsRowChanged;
+            
+            public event LoginsRowChangeEventHandler LoginsRowDeleting;
+            
+            public event LoginsRowChangeEventHandler LoginsRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddLoginsRow(LoginsRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public LoginsRow AddLoginsRow(string id, string firstname, string surname, string psswd) {
+                LoginsRow rowLoginsRow = ((LoginsRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        id,
+                        firstname,
+                        surname,
+                        psswd};
+                rowLoginsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowLoginsRow);
+                return rowLoginsRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                LoginsDataTable cln = ((LoginsDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new LoginsDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnLogin = base.Columns["Login"];
+                this.columnid = base.Columns["id"];
+                this.columnfirstname = base.Columns["firstname"];
+                this.columnsurname = base.Columns["surname"];
+                this.columnpsswd = base.Columns["psswd"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+
+                this.columnLogin = new global::System.Data.DataColumn("Login", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLogin);
+
+                this.columnid = new global::System.Data.DataColumn("id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columnfirstname = new global::System.Data.DataColumn("firstname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfirstname);
+                this.columnsurname = new global::System.Data.DataColumn("surname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsurname);
+                this.columnpsswd = new global::System.Data.DataColumn("psswd", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpsswd);
+                this.columnfirstname.AllowDBNull = false;
+                this.columnsurname.AllowDBNull = false;
+                this.columnpsswd.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public LoginsRow NewLoginsRow() {
+                return ((LoginsRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new LoginsRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(LoginsRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.LoginsRowChanged != null)) {
+                    this.LoginsRowChanged(this, new LoginsRowChangeEvent(((LoginsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.LoginsRowChanging != null)) {
+                    this.LoginsRowChanging(this, new LoginsRowChangeEvent(((LoginsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.LoginsRowDeleted != null)) {
+                    this.LoginsRowDeleted(this, new LoginsRowChangeEvent(((LoginsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.LoginsRowDeleting != null)) {
+                    this.LoginsRowDeleting(this, new LoginsRowChangeEvent(((LoginsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveLoginsRow(LoginsRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "LoginsDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class UserEventsDataTable : global::System.Data.TypedTableBase<UserEventsRow> {
+            
+            private global::System.Data.DataColumn columnid;
+            
+            private global::System.Data.DataColumn columnloginid;
+            
+            private global::System.Data.DataColumn columnmachineid;
+            
+            private global::System.Data.DataColumn columndateeve;
+            
+            private global::System.Data.DataColumn columnstatusid;
+            
+            private global::System.Data.DataColumn columnUserID;
+            
+            private global::System.Data.DataColumn columnTermID;
+            
+            private global::System.Data.DataColumn columnGUID;
+            
+            private global::System.Data.DataColumn columnREZ1;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public UserEventsDataTable() {
+                this.TableName = "UserEvents";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal UserEventsDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn loginidColumn {
+                get {
+                    return this.columnloginid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn machineidColumn {
+                get {
+                    return this.columnmachineid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn dateeveColumn {
+                get {
+                    return this.columndateeve;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn statusidColumn {
+                get {
+                    return this.columnstatusid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn UserIDColumn {
+                get {
+                    return this.columnUserID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TermIDColumn {
+                get {
+                    return this.columnTermID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn GUIDColumn {
+                get {
+                    return this.columnGUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ1Column {
+                get {
+                    return this.columnREZ1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public UserEventsRow this[int index] {
+                get {
+                    return ((UserEventsRow)(this.Rows[index]));
+                }
+            }
+            
+            public event UserEventsRowChangeEventHandler UserEventsRowChanging;
+            
+            public event UserEventsRowChangeEventHandler UserEventsRowChanged;
+            
+            public event UserEventsRowChangeEventHandler UserEventsRowDeleting;
+            
+            public event UserEventsRowChangeEventHandler UserEventsRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddUserEventsRow(UserEventsRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public UserEventsRow AddUserEventsRow(int id, string loginid, string machineid, System.DateTime dateeve, string statusid, string UserID, byte TermID, System.Guid GUID, string REZ1) {
+                UserEventsRow rowUserEventsRow = ((UserEventsRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        id,
+                        loginid,
+                        machineid,
+                        dateeve,
+                        statusid,
+                        UserID,
+                        TermID,
+                        GUID,
+                        REZ1};
+                rowUserEventsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowUserEventsRow);
+                return rowUserEventsRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                UserEventsDataTable cln = ((UserEventsDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new UserEventsDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnid = base.Columns["id"];
+                this.columnloginid = base.Columns["loginid"];
+                this.columnmachineid = base.Columns["machineid"];
+                this.columndateeve = base.Columns["dateeve"];
+                this.columnstatusid = base.Columns["statusid"];
+                this.columnUserID = base.Columns["UserID"];
+                this.columnTermID = base.Columns["TermID"];
+                this.columnGUID = base.Columns["GUID"];
+                this.columnREZ1 = base.Columns["REZ1"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columnloginid = new global::System.Data.DataColumn("loginid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnloginid);
+                this.columnmachineid = new global::System.Data.DataColumn("machineid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmachineid);
+                this.columndateeve = new global::System.Data.DataColumn("dateeve", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndateeve);
+                this.columnstatusid = new global::System.Data.DataColumn("statusid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstatusid);
+                this.columnUserID = new global::System.Data.DataColumn("UserID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserID);
+                this.columnTermID = new global::System.Data.DataColumn("TermID", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTermID);
+                this.columnGUID = new global::System.Data.DataColumn("GUID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGUID);
+                this.columnREZ1 = new global::System.Data.DataColumn("REZ1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ1);
+                this.columnloginid.AllowDBNull = false;
+                this.columndateeve.AllowDBNull = false;
+                this.columnstatusid.AllowDBNull = false;
+                this.columnUserID.AllowDBNull = false;
+                this.columnTermID.AllowDBNull = false;
+                this.columnGUID.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public UserEventsRow NewUserEventsRow() {
+                return ((UserEventsRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new UserEventsRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(UserEventsRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.UserEventsRowChanged != null)) {
+                    this.UserEventsRowChanged(this, new UserEventsRowChangeEvent(((UserEventsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.UserEventsRowChanging != null)) {
+                    this.UserEventsRowChanging(this, new UserEventsRowChangeEvent(((UserEventsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.UserEventsRowDeleted != null)) {
+                    this.UserEventsRowDeleted(this, new UserEventsRowChangeEvent(((UserEventsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.UserEventsRowDeleting != null)) {
+                    this.UserEventsRowDeleting(this, new UserEventsRowChangeEvent(((UserEventsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveUserEventsRow(UserEventsRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "UserEventsDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class StatusTypesDataTable : global::System.Data.TypedTableBase<StatusTypesRow> {
+            
+            private global::System.Data.DataColumn columnstatusid;
+            
+            private global::System.Data.DataColumn columnstatusdesc;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public StatusTypesDataTable() {
+                this.TableName = "StatusTypes";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal StatusTypesDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn statusidColumn {
+                get {
+                    return this.columnstatusid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn statusdescColumn {
+                get {
+                    return this.columnstatusdesc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public StatusTypesRow this[int index] {
+                get {
+                    return ((StatusTypesRow)(this.Rows[index]));
+                }
+            }
+            
+            public event StatusTypesRowChangeEventHandler StatusTypesRowChanging;
+            
+            public event StatusTypesRowChangeEventHandler StatusTypesRowChanged;
+            
+            public event StatusTypesRowChangeEventHandler StatusTypesRowDeleting;
+            
+            public event StatusTypesRowChangeEventHandler StatusTypesRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddStatusTypesRow(StatusTypesRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public StatusTypesRow AddStatusTypesRow(string statusid, string statusdesc) {
+                StatusTypesRow rowStatusTypesRow = ((StatusTypesRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        statusid,
+                        statusdesc};
+                rowStatusTypesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowStatusTypesRow);
+                return rowStatusTypesRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public StatusTypesRow FindBystatusid(string statusid) {
+                return ((StatusTypesRow)(this.Rows.Find(new object[] {
+                            statusid})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                StatusTypesDataTable cln = ((StatusTypesDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new StatusTypesDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnstatusid = base.Columns["statusid"];
+                this.columnstatusdesc = base.Columns["statusdesc"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnstatusid = new global::System.Data.DataColumn("statusid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstatusid);
+                this.columnstatusdesc = new global::System.Data.DataColumn("statusdesc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstatusdesc);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnstatusid}, true));
+                this.columnstatusid.AllowDBNull = false;
+                this.columnstatusid.Unique = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public StatusTypesRow NewStatusTypesRow() {
+                return ((StatusTypesRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new StatusTypesRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(StatusTypesRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.StatusTypesRowChanged != null)) {
+                    this.StatusTypesRowChanged(this, new StatusTypesRowChangeEvent(((StatusTypesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.StatusTypesRowChanging != null)) {
+                    this.StatusTypesRowChanging(this, new StatusTypesRowChangeEvent(((StatusTypesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.StatusTypesRowDeleted != null)) {
+                    this.StatusTypesRowDeleted(this, new StatusTypesRowChangeEvent(((StatusTypesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.StatusTypesRowDeleting != null)) {
+                    this.StatusTypesRowDeleting(this, new StatusTypesRowChangeEvent(((StatusTypesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveStatusTypesRow(StatusTypesRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "StatusTypesDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CZPRO_VPPDataTable : global::System.Data.TypedTableBase<CZPRO_VPPRow> {
+            
+            private global::System.Data.DataColumn columnCountEntries;
+            
+            private global::System.Data.DataColumn columnSOPNUMBE;
+            
+            private global::System.Data.DataColumn columnITEMNMBR;
+            
+            private global::System.Data.DataColumn columnITEMTYPE;
+            
+            private global::System.Data.DataColumn columnITEMDESC;
+            
+            private global::System.Data.DataColumn columnVNDDOCNMP;
+            
+            private global::System.Data.DataColumn columnVNDITNUM;
+            
+            private global::System.Data.DataColumn columnORD;
+            
+            private global::System.Data.DataColumn columnBarcodeP;
+            
+            private global::System.Data.DataColumn columnLOCNCODE;
+            
+            private global::System.Data.DataColumn columnQTYSHPPD;
+            
+            private global::System.Data.DataColumn columnQTYPACK;
+            
+            private global::System.Data.DataColumn columnTIMEPREP;
+            
+            private global::System.Data.DataColumn columnTIMEUNIT;
+            
+            private global::System.Data.DataColumn columnDtProdT;
+            
+            private global::System.Data.DataColumn columnDtProdL;
+            
+            private global::System.Data.DataColumn columnSerNumT;
+            
+            private global::System.Data.DataColumn columnSerNumL;
+            
+            private global::System.Data.DataColumn columnVerT;
+            
+            private global::System.Data.DataColumn columnVerL;
+            
+            private global::System.Data.DataColumn columnTermID;
+            
+            private global::System.Data.DataColumn columnLSTMod;
+            
+            private global::System.Data.DataColumn columnDEX_ROW_ID;
+            
+            private global::System.Data.DataColumn columnQTYODVEDENO;
+            
+            private global::System.Data.DataColumn columnCNTODVEDENO;
+            
+            private global::System.Data.DataColumn columnITEMMJ;
+            
+            private global::System.Data.DataColumn columnQTYPACKMJ;
+            
+            private global::System.Data.DataColumn columnTIMEMODE;
+            
+            private global::System.Data.DataColumn columnCZ_REZ1_Track;
+            
+            private global::System.Data.DataColumn columnCZ_REZ2_Track;
+            
+            private global::System.Data.DataColumn columnCZ_REZ3_Track;
+            
+            private global::System.Data.DataColumn columnCZ_REZ4_Track;
+            
+            private global::System.Data.DataColumn columnCZ_REZ5_Track;
+            
+            private global::System.Data.DataColumn columnWEIGHT_TARA;
+            
+            private global::System.Data.DataColumn columnWEIGHT_NETTO;
+            
+            private global::System.Data.DataColumn columnWEIGHT_TOL_PLUS;
+            
+            private global::System.Data.DataColumn columnWEIGHT_TOL_MINUS;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZPRO_VPPDataTable() {
+                this.TableName = "CZPRO_VPP";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal CZPRO_VPPDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CountEntriesColumn {
+                get {
+                    return this.columnCountEntries;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SOPNUMBEColumn {
+                get {
+                    return this.columnSOPNUMBE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMNMBRColumn {
+                get {
+                    return this.columnITEMNMBR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMTYPEColumn {
+                get {
+                    return this.columnITEMTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMDESCColumn {
+                get {
+                    return this.columnITEMDESC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn VNDDOCNMPColumn {
+                get {
+                    return this.columnVNDDOCNMP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn VNDITNUMColumn {
+                get {
+                    return this.columnVNDITNUM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ORDColumn {
+                get {
+                    return this.columnORD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn BarcodePColumn {
+                get {
+                    return this.columnBarcodeP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn LOCNCODEColumn {
+                get {
+                    return this.columnLOCNCODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYSHPPDColumn {
+                get {
+                    return this.columnQTYSHPPD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYPACKColumn {
+                get {
+                    return this.columnQTYPACK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEPREPColumn {
+                get {
+                    return this.columnTIMEPREP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEUNITColumn {
+                get {
+                    return this.columnTIMEUNIT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn DtProdTColumn {
+                get {
+                    return this.columnDtProdT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn DtProdLColumn {
+                get {
+                    return this.columnDtProdL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SerNumTColumn {
+                get {
+                    return this.columnSerNumT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SerNumLColumn {
+                get {
+                    return this.columnSerNumL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn VerTColumn {
+                get {
+                    return this.columnVerT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn VerLColumn {
+                get {
+                    return this.columnVerL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TermIDColumn {
+                get {
+                    return this.columnTermID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn LSTModColumn {
+                get {
+                    return this.columnLSTMod;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn DEX_ROW_IDColumn {
+                get {
+                    return this.columnDEX_ROW_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYODVEDENOColumn {
+                get {
+                    return this.columnQTYODVEDENO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CNTODVEDENOColumn {
+                get {
+                    return this.columnCNTODVEDENO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMMJColumn {
+                get {
+                    return this.columnITEMMJ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYPACKMJColumn {
+                get {
+                    return this.columnQTYPACKMJ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEMODEColumn {
+                get {
+                    return this.columnTIMEMODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CZ_REZ1_TrackColumn {
+                get {
+                    return this.columnCZ_REZ1_Track;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CZ_REZ2_TrackColumn {
+                get {
+                    return this.columnCZ_REZ2_Track;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CZ_REZ3_TrackColumn {
+                get {
+                    return this.columnCZ_REZ3_Track;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CZ_REZ4_TrackColumn {
+                get {
+                    return this.columnCZ_REZ4_Track;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CZ_REZ5_TrackColumn {
+                get {
+                    return this.columnCZ_REZ5_Track;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn WEIGHT_TARAColumn {
+                get {
+                    return this.columnWEIGHT_TARA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn WEIGHT_NETTOColumn {
+                get {
+                    return this.columnWEIGHT_NETTO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn WEIGHT_TOL_PLUSColumn {
+                get {
+                    return this.columnWEIGHT_TOL_PLUS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn WEIGHT_TOL_MINUSColumn {
+                get {
+                    return this.columnWEIGHT_TOL_MINUS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZPRO_VPPRow this[int index] {
+                get {
+                    return ((CZPRO_VPPRow)(this.Rows[index]));
+                }
+            }
+            
+            public event CZPRO_VPPRowChangeEventHandler CZPRO_VPPRowChanging;
+            
+            public event CZPRO_VPPRowChangeEventHandler CZPRO_VPPRowChanged;
+            
+            public event CZPRO_VPPRowChangeEventHandler CZPRO_VPPRowDeleting;
+            
+            public event CZPRO_VPPRowChangeEventHandler CZPRO_VPPRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddCZPRO_VPPRow(CZPRO_VPPRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZPRO_VPPRow AddCZPRO_VPPRow(
+                        int CountEntries, 
+                        string SOPNUMBE, 
+                        string ITEMNMBR, 
+                        string ITEMTYPE, 
+                        string ITEMDESC, 
+                        string VNDDOCNMP, 
+                        string VNDITNUM, 
+                        int ORD, 
+                        string BarcodeP, 
+                        string LOCNCODE, 
+                        decimal QTYSHPPD, 
+                        decimal QTYPACK, 
+                        float TIMEPREP, 
+                        float TIMEUNIT, 
+                        byte DtProdT, 
+                        short DtProdL, 
+                        byte SerNumT, 
+                        short SerNumL, 
+                        byte VerT, 
+                        short VerL, 
+                        byte TermID, 
+                        System.DateTime LSTMod, 
+                        int DEX_ROW_ID, 
+                        decimal QTYODVEDENO, 
+                        decimal CNTODVEDENO, 
+                        string ITEMMJ, 
+                        string QTYPACKMJ, 
+                        int TIMEMODE, 
+                        byte CZ_REZ1_Track, 
+                        byte CZ_REZ2_Track, 
+                        byte CZ_REZ3_Track, 
+                        byte CZ_REZ4_Track, 
+                        byte CZ_REZ5_Track, 
+                        decimal WEIGHT_TARA, 
+                        decimal WEIGHT_NETTO, 
+                        decimal WEIGHT_TOL_PLUS, 
+                        decimal WEIGHT_TOL_MINUS) {
+                CZPRO_VPPRow rowCZPRO_VPPRow = ((CZPRO_VPPRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        CountEntries,
+                        SOPNUMBE,
+                        ITEMNMBR,
+                        ITEMTYPE,
+                        ITEMDESC,
+                        VNDDOCNMP,
+                        VNDITNUM,
+                        ORD,
+                        BarcodeP,
+                        LOCNCODE,
+                        QTYSHPPD,
+                        QTYPACK,
+                        TIMEPREP,
+                        TIMEUNIT,
+                        DtProdT,
+                        DtProdL,
+                        SerNumT,
+                        SerNumL,
+                        VerT,
+                        VerL,
+                        TermID,
+                        LSTMod,
+                        DEX_ROW_ID,
+                        QTYODVEDENO,
+                        CNTODVEDENO,
+                        ITEMMJ,
+                        QTYPACKMJ,
+                        TIMEMODE,
+                        CZ_REZ1_Track,
+                        CZ_REZ2_Track,
+                        CZ_REZ3_Track,
+                        CZ_REZ4_Track,
+                        CZ_REZ5_Track,
+                        WEIGHT_TARA,
+                        WEIGHT_NETTO,
+                        WEIGHT_TOL_PLUS,
+                        WEIGHT_TOL_MINUS};
+                rowCZPRO_VPPRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCZPRO_VPPRow);
+                return rowCZPRO_VPPRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZPRO_VPPRow FindBySOPNUMBEITEMNMBR(string SOPNUMBE, string ITEMNMBR) {
+                return ((CZPRO_VPPRow)(this.Rows.Find(new object[] {
+                            SOPNUMBE,
+                            ITEMNMBR})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                CZPRO_VPPDataTable cln = ((CZPRO_VPPDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CZPRO_VPPDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnCountEntries = base.Columns["CountEntries"];
+                this.columnSOPNUMBE = base.Columns["SOPNUMBE"];
+                this.columnITEMNMBR = base.Columns["ITEMNMBR"];
+                this.columnITEMTYPE = base.Columns["ITEMTYPE"];
+                this.columnITEMDESC = base.Columns["ITEMDESC"];
+                this.columnVNDDOCNMP = base.Columns["VNDDOCNMP"];
+                this.columnVNDITNUM = base.Columns["VNDITNUM"];
+                this.columnORD = base.Columns["ORD"];
+                this.columnBarcodeP = base.Columns["BarcodeP"];
+                this.columnLOCNCODE = base.Columns["LOCNCODE"];
+                this.columnQTYSHPPD = base.Columns["QTYSHPPD"];
+                this.columnQTYPACK = base.Columns["QTYPACK"];
+                this.columnTIMEPREP = base.Columns["TIMEPREP"];
+                this.columnTIMEUNIT = base.Columns["TIMEUNIT"];
+                this.columnDtProdT = base.Columns["DtProdT"];
+                this.columnDtProdL = base.Columns["DtProdL"];
+                this.columnSerNumT = base.Columns["SerNumT"];
+                this.columnSerNumL = base.Columns["SerNumL"];
+                this.columnVerT = base.Columns["VerT"];
+                this.columnVerL = base.Columns["VerL"];
+                this.columnTermID = base.Columns["TermID"];
+                this.columnLSTMod = base.Columns["LSTMod"];
+                this.columnDEX_ROW_ID = base.Columns["DEX_ROW_ID"];
+                this.columnQTYODVEDENO = base.Columns["QTYODVEDENO"];
+                this.columnCNTODVEDENO = base.Columns["CNTODVEDENO"];
+                this.columnITEMMJ = base.Columns["ITEMMJ"];
+                this.columnQTYPACKMJ = base.Columns["QTYPACKMJ"];
+                this.columnTIMEMODE = base.Columns["TIMEMODE"];
+                this.columnCZ_REZ1_Track = base.Columns["CZ_REZ1_Track"];
+                this.columnCZ_REZ2_Track = base.Columns["CZ_REZ2_Track"];
+                this.columnCZ_REZ3_Track = base.Columns["CZ_REZ3_Track"];
+                this.columnCZ_REZ4_Track = base.Columns["CZ_REZ4_Track"];
+                this.columnCZ_REZ5_Track = base.Columns["CZ_REZ5_Track"];
+                this.columnWEIGHT_TARA = base.Columns["WEIGHT_TARA"];
+                this.columnWEIGHT_NETTO = base.Columns["WEIGHT_NETTO"];
+                this.columnWEIGHT_TOL_PLUS = base.Columns["WEIGHT_TOL_PLUS"];
+                this.columnWEIGHT_TOL_MINUS = base.Columns["WEIGHT_TOL_MINUS"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnCountEntries = new global::System.Data.DataColumn("CountEntries", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCountEntries);
+                this.columnSOPNUMBE = new global::System.Data.DataColumn("SOPNUMBE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSOPNUMBE);
+                this.columnITEMNMBR = new global::System.Data.DataColumn("ITEMNMBR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMNMBR);
+                this.columnITEMTYPE = new global::System.Data.DataColumn("ITEMTYPE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMTYPE);
+                this.columnITEMDESC = new global::System.Data.DataColumn("ITEMDESC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMDESC);
+                this.columnVNDDOCNMP = new global::System.Data.DataColumn("VNDDOCNMP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVNDDOCNMP);
+                this.columnVNDITNUM = new global::System.Data.DataColumn("VNDITNUM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVNDITNUM);
+                this.columnORD = new global::System.Data.DataColumn("ORD", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnORD);
+                this.columnBarcodeP = new global::System.Data.DataColumn("BarcodeP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBarcodeP);
+                this.columnLOCNCODE = new global::System.Data.DataColumn("LOCNCODE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLOCNCODE);
+                this.columnQTYSHPPD = new global::System.Data.DataColumn("QTYSHPPD", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTYSHPPD);
+                this.columnQTYPACK = new global::System.Data.DataColumn("QTYPACK", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTYPACK);
+                this.columnTIMEPREP = new global::System.Data.DataColumn("TIMEPREP", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEPREP);
+                this.columnTIMEUNIT = new global::System.Data.DataColumn("TIMEUNIT", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEUNIT);
+                this.columnDtProdT = new global::System.Data.DataColumn("DtProdT", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDtProdT);
+                this.columnDtProdL = new global::System.Data.DataColumn("DtProdL", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDtProdL);
+                this.columnSerNumT = new global::System.Data.DataColumn("SerNumT", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSerNumT);
+                this.columnSerNumL = new global::System.Data.DataColumn("SerNumL", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSerNumL);
+                this.columnVerT = new global::System.Data.DataColumn("VerT", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVerT);
+                this.columnVerL = new global::System.Data.DataColumn("VerL", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVerL);
+                this.columnTermID = new global::System.Data.DataColumn("TermID", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTermID);
+                this.columnLSTMod = new global::System.Data.DataColumn("LSTMod", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLSTMod);
+                this.columnDEX_ROW_ID = new global::System.Data.DataColumn("DEX_ROW_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDEX_ROW_ID);
+                this.columnQTYODVEDENO = new global::System.Data.DataColumn("QTYODVEDENO", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTYODVEDENO);
+                this.columnCNTODVEDENO = new global::System.Data.DataColumn("CNTODVEDENO", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCNTODVEDENO);
+                this.columnITEMMJ = new global::System.Data.DataColumn("ITEMMJ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMMJ);
+                this.columnQTYPACKMJ = new global::System.Data.DataColumn("QTYPACKMJ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTYPACKMJ);
+                this.columnTIMEMODE = new global::System.Data.DataColumn("TIMEMODE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEMODE);
+                this.columnCZ_REZ1_Track = new global::System.Data.DataColumn("CZ_REZ1_Track", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCZ_REZ1_Track);
+                this.columnCZ_REZ2_Track = new global::System.Data.DataColumn("CZ_REZ2_Track", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCZ_REZ2_Track);
+                this.columnCZ_REZ3_Track = new global::System.Data.DataColumn("CZ_REZ3_Track", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCZ_REZ3_Track);
+                this.columnCZ_REZ4_Track = new global::System.Data.DataColumn("CZ_REZ4_Track", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCZ_REZ4_Track);
+                this.columnCZ_REZ5_Track = new global::System.Data.DataColumn("CZ_REZ5_Track", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCZ_REZ5_Track);
+                this.columnWEIGHT_TARA = new global::System.Data.DataColumn("WEIGHT_TARA", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWEIGHT_TARA);
+                this.columnWEIGHT_NETTO = new global::System.Data.DataColumn("WEIGHT_NETTO", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWEIGHT_NETTO);
+                this.columnWEIGHT_TOL_PLUS = new global::System.Data.DataColumn("WEIGHT_TOL_PLUS", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWEIGHT_TOL_PLUS);
+                this.columnWEIGHT_TOL_MINUS = new global::System.Data.DataColumn("WEIGHT_TOL_MINUS", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWEIGHT_TOL_MINUS);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnSOPNUMBE,
+                                this.columnITEMNMBR}, true));
+                this.columnCountEntries.AllowDBNull = false;
+                this.columnSOPNUMBE.AllowDBNull = false;
+                this.columnITEMNMBR.AllowDBNull = false;
+                this.columnITEMTYPE.AllowDBNull = false;
+                this.columnORD.AllowDBNull = false;
+                this.columnBarcodeP.AllowDBNull = false;
+                this.columnQTYSHPPD.AllowDBNull = false;
+                this.columnQTYPACK.AllowDBNull = false;
+                this.columnTIMEPREP.AllowDBNull = false;
+                this.columnTIMEUNIT.AllowDBNull = false;
+                this.columnDtProdT.AllowDBNull = false;
+                this.columnDtProdL.AllowDBNull = false;
+                this.columnSerNumT.AllowDBNull = false;
+                this.columnSerNumL.AllowDBNull = false;
+                this.columnVerT.AllowDBNull = false;
+                this.columnVerL.AllowDBNull = false;
+                this.columnTermID.AllowDBNull = false;
+                this.columnLSTMod.AllowDBNull = false;
+                this.columnQTYODVEDENO.AllowDBNull = false;
+                this.columnCNTODVEDENO.AllowDBNull = false;
+                this.columnTIMEMODE.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZPRO_VPPRow NewCZPRO_VPPRow() {
+                return ((CZPRO_VPPRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CZPRO_VPPRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(CZPRO_VPPRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CZPRO_VPPRowChanged != null)) {
+                    this.CZPRO_VPPRowChanged(this, new CZPRO_VPPRowChangeEvent(((CZPRO_VPPRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CZPRO_VPPRowChanging != null)) {
+                    this.CZPRO_VPPRowChanging(this, new CZPRO_VPPRowChangeEvent(((CZPRO_VPPRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CZPRO_VPPRowDeleted != null)) {
+                    this.CZPRO_VPPRowDeleted(this, new CZPRO_VPPRowChangeEvent(((CZPRO_VPPRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CZPRO_VPPRowDeleting != null)) {
+                    this.CZPRO_VPPRowDeleting(this, new CZPRO_VPPRowChangeEvent(((CZPRO_VPPRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveCZPRO_VPPRow(CZPRO_VPPRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CZPRO_VPPDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Production_SourcesDataTable : global::System.Data.TypedTableBase<Production_SourcesRow> {
+            
+            private global::System.Data.DataColumn columnCountEntries;
+            
+            private global::System.Data.DataColumn columnSOPNUMBE;
+            
+            private global::System.Data.DataColumn columnITEMNMBR;
+            
+            private global::System.Data.DataColumn columnITEMTYPE;
+            
+            private global::System.Data.DataColumn columnITEMCODE;
+            
+            private global::System.Data.DataColumn columnLOCNCODE;
+            
+            private global::System.Data.DataColumn columnMJ;
+            
+            private global::System.Data.DataColumn columnQTYSHPPD;
+            
+            private global::System.Data.DataColumn columnQTYSHPPDMJ;
+            
+            private global::System.Data.DataColumn columnQTYPACK;
+            
+            private global::System.Data.DataColumn columnSERLTNUM;
+            
+            private global::System.Data.DataColumn columnGUID_Production;
+            
+            private global::System.Data.DataColumn columnGUID;
+            
+            private global::System.Data.DataColumn columnUSER_ID;
+            
+            private global::System.Data.DataColumn columnTERMINAL_ID;
+            
+            private global::System.Data.DataColumn columnDEX_ROW_ID;
+            
+            private global::System.Data.DataColumn columnWEIGHT;
+            
+            private global::System.Data.DataColumn columnNMBRPAL;
+            
+            private global::System.Data.DataColumn columnTYPEPAL;
+            
+            private global::System.Data.DataColumn columnPRINTED;
+            
+            private global::System.Data.DataColumn columnITEMNAME;
+            
+            private global::System.Data.DataColumn columnSKL_ID;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_SourcesDataTable() {
+                this.TableName = "Production_Sources";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal Production_SourcesDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CountEntriesColumn {
+                get {
+                    return this.columnCountEntries;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SOPNUMBEColumn {
+                get {
+                    return this.columnSOPNUMBE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMNMBRColumn {
+                get {
+                    return this.columnITEMNMBR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMTYPEColumn {
+                get {
+                    return this.columnITEMTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMCODEColumn {
+                get {
+                    return this.columnITEMCODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn LOCNCODEColumn {
+                get {
+                    return this.columnLOCNCODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn MJColumn {
+                get {
+                    return this.columnMJ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYSHPPDColumn {
+                get {
+                    return this.columnQTYSHPPD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYSHPPDMJColumn {
+                get {
+                    return this.columnQTYSHPPDMJ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYPACKColumn {
+                get {
+                    return this.columnQTYPACK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SERLTNUMColumn {
+                get {
+                    return this.columnSERLTNUM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn GUID_ProductionColumn {
+                get {
+                    return this.columnGUID_Production;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn GUIDColumn {
+                get {
+                    return this.columnGUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn USER_IDColumn {
+                get {
+                    return this.columnUSER_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TERMINAL_IDColumn {
+                get {
+                    return this.columnTERMINAL_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn DEX_ROW_IDColumn {
+                get {
+                    return this.columnDEX_ROW_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn WEIGHTColumn {
+                get {
+                    return this.columnWEIGHT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn NMBRPALColumn {
+                get {
+                    return this.columnNMBRPAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TYPEPALColumn {
+                get {
+                    return this.columnTYPEPAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn PRINTEDColumn {
+                get {
+                    return this.columnPRINTED;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMNAMEColumn {
+                get {
+                    return this.columnITEMNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SKL_IDColumn {
+                get {
+                    return this.columnSKL_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_SourcesRow this[int index] {
+                get {
+                    return ((Production_SourcesRow)(this.Rows[index]));
+                }
+            }
+            
+            public event Production_SourcesRowChangeEventHandler Production_SourcesRowChanging;
+            
+            public event Production_SourcesRowChangeEventHandler Production_SourcesRowChanged;
+            
+            public event Production_SourcesRowChangeEventHandler Production_SourcesRowDeleting;
+            
+            public event Production_SourcesRowChangeEventHandler Production_SourcesRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddProduction_SourcesRow(Production_SourcesRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_SourcesRow AddProduction_SourcesRow(
+                        int CountEntries, 
+                        string SOPNUMBE, 
+                        string ITEMNMBR, 
+                        string ITEMTYPE, 
+                        string ITEMCODE, 
+                        string LOCNCODE, 
+                        string MJ, 
+                        decimal QTYSHPPD, 
+                        decimal QTYSHPPDMJ, 
+                        decimal QTYPACK, 
+                        string SERLTNUM, 
+                        System.Guid GUID_Production, 
+                        System.Guid GUID, 
+                        string USER_ID, 
+                        int TERMINAL_ID, 
+                        int DEX_ROW_ID, 
+                        decimal WEIGHT, 
+                        string NMBRPAL, 
+                        string TYPEPAL, 
+                        byte PRINTED, 
+                        string ITEMNAME, 
+                        string SKL_ID) {
+                Production_SourcesRow rowProduction_SourcesRow = ((Production_SourcesRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        CountEntries,
+                        SOPNUMBE,
+                        ITEMNMBR,
+                        ITEMTYPE,
+                        ITEMCODE,
+                        LOCNCODE,
+                        MJ,
+                        QTYSHPPD,
+                        QTYSHPPDMJ,
+                        QTYPACK,
+                        SERLTNUM,
+                        GUID_Production,
+                        GUID,
+                        USER_ID,
+                        TERMINAL_ID,
+                        DEX_ROW_ID,
+                        WEIGHT,
+                        NMBRPAL,
+                        TYPEPAL,
+                        PRINTED,
+                        ITEMNAME,
+                        SKL_ID};
+                rowProduction_SourcesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowProduction_SourcesRow);
+                return rowProduction_SourcesRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                Production_SourcesDataTable cln = ((Production_SourcesDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Production_SourcesDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnCountEntries = base.Columns["CountEntries"];
+                this.columnSOPNUMBE = base.Columns["SOPNUMBE"];
+                this.columnITEMNMBR = base.Columns["ITEMNMBR"];
+                this.columnITEMTYPE = base.Columns["ITEMTYPE"];
+                this.columnITEMCODE = base.Columns["ITEMCODE"];
+                this.columnLOCNCODE = base.Columns["LOCNCODE"];
+                this.columnMJ = base.Columns["MJ"];
+                this.columnQTYSHPPD = base.Columns["QTYSHPPD"];
+                this.columnQTYSHPPDMJ = base.Columns["QTYSHPPDMJ"];
+                this.columnQTYPACK = base.Columns["QTYPACK"];
+                this.columnSERLTNUM = base.Columns["SERLTNUM"];
+                this.columnGUID_Production = base.Columns["GUID_Production"];
+                this.columnGUID = base.Columns["GUID"];
+                this.columnUSER_ID = base.Columns["USER_ID"];
+                this.columnTERMINAL_ID = base.Columns["TERMINAL_ID"];
+                this.columnDEX_ROW_ID = base.Columns["DEX_ROW_ID"];
+                this.columnWEIGHT = base.Columns["WEIGHT"];
+                this.columnNMBRPAL = base.Columns["NMBRPAL"];
+                this.columnTYPEPAL = base.Columns["TYPEPAL"];
+                this.columnPRINTED = base.Columns["PRINTED"];
+                this.columnITEMNAME = base.Columns["ITEMNAME"];
+                this.columnSKL_ID = base.Columns["SKL_ID"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnCountEntries = new global::System.Data.DataColumn("CountEntries", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCountEntries);
+                this.columnSOPNUMBE = new global::System.Data.DataColumn("SOPNUMBE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSOPNUMBE);
+                this.columnITEMNMBR = new global::System.Data.DataColumn("ITEMNMBR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMNMBR);
+                this.columnITEMTYPE = new global::System.Data.DataColumn("ITEMTYPE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMTYPE);
+                this.columnITEMCODE = new global::System.Data.DataColumn("ITEMCODE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMCODE);
+                this.columnLOCNCODE = new global::System.Data.DataColumn("LOCNCODE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLOCNCODE);
+                this.columnMJ = new global::System.Data.DataColumn("MJ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMJ);
+                this.columnQTYSHPPD = new global::System.Data.DataColumn("QTYSHPPD", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTYSHPPD);
+                this.columnQTYSHPPDMJ = new global::System.Data.DataColumn("QTYSHPPDMJ", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTYSHPPDMJ);
+                this.columnQTYPACK = new global::System.Data.DataColumn("QTYPACK", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTYPACK);
+                this.columnSERLTNUM = new global::System.Data.DataColumn("SERLTNUM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSERLTNUM);
+                this.columnGUID_Production = new global::System.Data.DataColumn("GUID_Production", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGUID_Production);
+                this.columnGUID = new global::System.Data.DataColumn("GUID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGUID);
+                this.columnUSER_ID = new global::System.Data.DataColumn("USER_ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUSER_ID);
+                this.columnTERMINAL_ID = new global::System.Data.DataColumn("TERMINAL_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTERMINAL_ID);
+                this.columnDEX_ROW_ID = new global::System.Data.DataColumn("DEX_ROW_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDEX_ROW_ID);
+                this.columnWEIGHT = new global::System.Data.DataColumn("WEIGHT", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWEIGHT);
+                this.columnNMBRPAL = new global::System.Data.DataColumn("NMBRPAL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNMBRPAL);
+                this.columnTYPEPAL = new global::System.Data.DataColumn("TYPEPAL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTYPEPAL);
+                this.columnPRINTED = new global::System.Data.DataColumn("PRINTED", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPRINTED);
+                this.columnITEMNAME = new global::System.Data.DataColumn("ITEMNAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMNAME);
+                this.columnSKL_ID = new global::System.Data.DataColumn("SKL_ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSKL_ID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnGUID}, false));
+                this.columnMJ.AllowDBNull = false;
+                this.columnQTYSHPPD.AllowDBNull = false;
+                this.columnQTYSHPPDMJ.AllowDBNull = false;
+                this.columnSERLTNUM.AllowDBNull = false;
+                this.columnGUID.Unique = true;
+                this.columnTERMINAL_ID.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_SourcesRow NewProduction_SourcesRow() {
+                return ((Production_SourcesRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Production_SourcesRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(Production_SourcesRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Production_SourcesRowChanged != null)) {
+                    this.Production_SourcesRowChanged(this, new Production_SourcesRowChangeEvent(((Production_SourcesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Production_SourcesRowChanging != null)) {
+                    this.Production_SourcesRowChanging(this, new Production_SourcesRowChangeEvent(((Production_SourcesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Production_SourcesRowDeleted != null)) {
+                    this.Production_SourcesRowDeleted(this, new Production_SourcesRowChangeEvent(((Production_SourcesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Production_SourcesRowDeleting != null)) {
+                    this.Production_SourcesRowDeleting(this, new Production_SourcesRowChangeEvent(((Production_SourcesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveProduction_SourcesRow(Production_SourcesRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Production_SourcesDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class FASK_CONS_095DataTable : global::System.Data.TypedTableBase<FASK_CONS_095Row> {
+            
+            private global::System.Data.DataColumn columnITEMNMBR;
+            
+            private global::System.Data.DataColumn columnITEMDESC;
+            
+            private global::System.Data.DataColumn columnVNDITNUM;
+            
+            private global::System.Data.DataColumn columnCZ_CarKod;
+            
+            private global::System.Data.DataColumn columnLOCNCODE;
+            
+            private global::System.Data.DataColumn columnSKL_ID;
+            
+            private global::System.Data.DataColumn columnQTY;
+            
+            private global::System.Data.DataColumn columnQTYPACK;
+            
+            private global::System.Data.DataColumn columnMJ;
+            
+            private global::System.Data.DataColumn columnDMJ;
+            
+            private global::System.Data.DataColumn columnTAXRATE;
+            
+            private global::System.Data.DataColumn columnPRICE0;
+            
+            private global::System.Data.DataColumn columnPRICE1;
+            
+            private global::System.Data.DataColumn columnPRICE2;
+            
+            private global::System.Data.DataColumn columnPRICE3;
+            
+            private global::System.Data.DataColumn columnPRICE4;
+            
+            private global::System.Data.DataColumn columnPRICE5;
+            
+            private global::System.Data.DataColumn columnCZ_SerNum_Track;
+            
+            private global::System.Data.DataColumn columnCZ_SerNum_Delka;
+            
+            private global::System.Data.DataColumn columnCZ_Rez1_Track;
+            
+            private global::System.Data.DataColumn columnCZ_Rez2_Track;
+            
+            private global::System.Data.DataColumn columnCZ_Rez3_Track;
+            
+            private global::System.Data.DataColumn columnCZ_Rez4_Track;
+            
+            private global::System.Data.DataColumn columnREZ1;
+            
+            private global::System.Data.DataColumn columnDEX_ROW_ID;
+            
+            private global::System.Data.DataColumn columnITEMCODE;
+            
+            private global::System.Data.DataColumn columnODB_ID;
+            
+            private global::System.Data.DataColumn columnTIMEMODE;
+            
+            private global::System.Data.DataColumn columnTIMEPREP;
+            
+            private global::System.Data.DataColumn columnTIMEUNIT;
+            
+            private global::System.Data.DataColumn columnTIMEFROM;
+            
+            private global::System.Data.DataColumn columnTIMETO;
+            
+            private global::System.Data.DataColumn columnLSTMod;
+            
+            private global::System.Data.DataColumn columnloginid;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public FASK_CONS_095DataTable() {
+                this.TableName = "FASK_CONS_095";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal FASK_CONS_095DataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMNMBRColumn {
+                get {
+                    return this.columnITEMNMBR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMDESCColumn {
+                get {
+                    return this.columnITEMDESC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn VNDITNUMColumn {
+                get {
+                    return this.columnVNDITNUM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CZ_CarKodColumn {
+                get {
+                    return this.columnCZ_CarKod;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn LOCNCODEColumn {
+                get {
+                    return this.columnLOCNCODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SKL_IDColumn {
+                get {
+                    return this.columnSKL_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYColumn {
+                get {
+                    return this.columnQTY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYPACKColumn {
+                get {
+                    return this.columnQTYPACK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn MJColumn {
+                get {
+                    return this.columnMJ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn DMJColumn {
+                get {
+                    return this.columnDMJ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TAXRATEColumn {
+                get {
+                    return this.columnTAXRATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn PRICE0Column {
+                get {
+                    return this.columnPRICE0;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn PRICE1Column {
+                get {
+                    return this.columnPRICE1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn PRICE2Column {
+                get {
+                    return this.columnPRICE2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn PRICE3Column {
+                get {
+                    return this.columnPRICE3;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn PRICE4Column {
+                get {
+                    return this.columnPRICE4;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn PRICE5Column {
+                get {
+                    return this.columnPRICE5;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CZ_SerNum_TrackColumn {
+                get {
+                    return this.columnCZ_SerNum_Track;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CZ_SerNum_DelkaColumn {
+                get {
+                    return this.columnCZ_SerNum_Delka;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CZ_Rez1_TrackColumn {
+                get {
+                    return this.columnCZ_Rez1_Track;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CZ_Rez2_TrackColumn {
+                get {
+                    return this.columnCZ_Rez2_Track;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CZ_Rez3_TrackColumn {
+                get {
+                    return this.columnCZ_Rez3_Track;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CZ_Rez4_TrackColumn {
+                get {
+                    return this.columnCZ_Rez4_Track;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ1Column {
+                get {
+                    return this.columnREZ1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn DEX_ROW_IDColumn {
+                get {
+                    return this.columnDEX_ROW_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMCODEColumn {
+                get {
+                    return this.columnITEMCODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ODB_IDColumn {
+                get {
+                    return this.columnODB_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEMODEColumn {
+                get {
+                    return this.columnTIMEMODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEPREPColumn {
+                get {
+                    return this.columnTIMEPREP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEUNITColumn {
+                get {
+                    return this.columnTIMEUNIT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEFROMColumn {
+                get {
+                    return this.columnTIMEFROM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMETOColumn {
+                get {
+                    return this.columnTIMETO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn LSTModColumn {
+                get {
+                    return this.columnLSTMod;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn loginidColumn {
+                get {
+                    return this.columnloginid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public FASK_CONS_095Row this[int index] {
+                get {
+                    return ((FASK_CONS_095Row)(this.Rows[index]));
+                }
+            }
+            
+            public event FASK_CONS_095RowChangeEventHandler FASK_CONS_095RowChanging;
+            
+            public event FASK_CONS_095RowChangeEventHandler FASK_CONS_095RowChanged;
+            
+            public event FASK_CONS_095RowChangeEventHandler FASK_CONS_095RowDeleting;
+            
+            public event FASK_CONS_095RowChangeEventHandler FASK_CONS_095RowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddFASK_CONS_095Row(FASK_CONS_095Row row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public FASK_CONS_095Row AddFASK_CONS_095Row(
+                        string ITEMNMBR, 
+                        string ITEMDESC, 
+                        string VNDITNUM, 
+                        string CZ_CarKod, 
+                        string LOCNCODE, 
+                        string SKL_ID, 
+                        decimal QTY, 
+                        decimal QTYPACK, 
+                        string MJ, 
+                        string DMJ, 
+                        decimal TAXRATE, 
+                        decimal PRICE0, 
+                        decimal PRICE1, 
+                        decimal PRICE2, 
+                        decimal PRICE3, 
+                        decimal PRICE4, 
+                        decimal PRICE5, 
+                        byte CZ_SerNum_Track, 
+                        short CZ_SerNum_Delka, 
+                        byte CZ_Rez1_Track, 
+                        byte CZ_Rez2_Track, 
+                        byte CZ_Rez3_Track, 
+                        byte CZ_Rez4_Track, 
+                        string REZ1, 
+                        int DEX_ROW_ID, 
+                        string ITEMCODE, 
+                        string ODB_ID, 
+                        int TIMEMODE, 
+                        float TIMEPREP, 
+                        float TIMEUNIT, 
+                        System.DateTime TIMEFROM, 
+                        System.DateTime TIMETO, 
+                        System.DateTime LSTMod, 
+                        string loginid) {
+                FASK_CONS_095Row rowFASK_CONS_095Row = ((FASK_CONS_095Row)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        ITEMNMBR,
+                        ITEMDESC,
+                        VNDITNUM,
+                        CZ_CarKod,
+                        LOCNCODE,
+                        SKL_ID,
+                        QTY,
+                        QTYPACK,
+                        MJ,
+                        DMJ,
+                        TAXRATE,
+                        PRICE0,
+                        PRICE1,
+                        PRICE2,
+                        PRICE3,
+                        PRICE4,
+                        PRICE5,
+                        CZ_SerNum_Track,
+                        CZ_SerNum_Delka,
+                        CZ_Rez1_Track,
+                        CZ_Rez2_Track,
+                        CZ_Rez3_Track,
+                        CZ_Rez4_Track,
+                        REZ1,
+                        DEX_ROW_ID,
+                        ITEMCODE,
+                        ODB_ID,
+                        TIMEMODE,
+                        TIMEPREP,
+                        TIMEUNIT,
+                        TIMEFROM,
+                        TIMETO,
+                        LSTMod,
+                        loginid};
+                rowFASK_CONS_095Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFASK_CONS_095Row);
+                return rowFASK_CONS_095Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                FASK_CONS_095DataTable cln = ((FASK_CONS_095DataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new FASK_CONS_095DataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnITEMNMBR = base.Columns["ITEMNMBR"];
+                this.columnITEMDESC = base.Columns["ITEMDESC"];
+                this.columnVNDITNUM = base.Columns["VNDITNUM"];
+                this.columnCZ_CarKod = base.Columns["CZ_CarKod"];
+                this.columnLOCNCODE = base.Columns["LOCNCODE"];
+                this.columnSKL_ID = base.Columns["SKL_ID"];
+                this.columnQTY = base.Columns["QTY"];
+                this.columnQTYPACK = base.Columns["QTYPACK"];
+                this.columnMJ = base.Columns["MJ"];
+                this.columnDMJ = base.Columns["DMJ"];
+                this.columnTAXRATE = base.Columns["TAXRATE"];
+                this.columnPRICE0 = base.Columns["PRICE0"];
+                this.columnPRICE1 = base.Columns["PRICE1"];
+                this.columnPRICE2 = base.Columns["PRICE2"];
+                this.columnPRICE3 = base.Columns["PRICE3"];
+                this.columnPRICE4 = base.Columns["PRICE4"];
+                this.columnPRICE5 = base.Columns["PRICE5"];
+                this.columnCZ_SerNum_Track = base.Columns["CZ_SerNum_Track"];
+                this.columnCZ_SerNum_Delka = base.Columns["CZ_SerNum_Delka"];
+                this.columnCZ_Rez1_Track = base.Columns["CZ_Rez1_Track"];
+                this.columnCZ_Rez2_Track = base.Columns["CZ_Rez2_Track"];
+                this.columnCZ_Rez3_Track = base.Columns["CZ_Rez3_Track"];
+                this.columnCZ_Rez4_Track = base.Columns["CZ_Rez4_Track"];
+                this.columnREZ1 = base.Columns["REZ1"];
+                this.columnDEX_ROW_ID = base.Columns["DEX_ROW_ID"];
+                this.columnITEMCODE = base.Columns["ITEMCODE"];
+                this.columnODB_ID = base.Columns["ODB_ID"];
+                this.columnTIMEMODE = base.Columns["TIMEMODE"];
+                this.columnTIMEPREP = base.Columns["TIMEPREP"];
+                this.columnTIMEUNIT = base.Columns["TIMEUNIT"];
+                this.columnTIMEFROM = base.Columns["TIMEFROM"];
+                this.columnTIMETO = base.Columns["TIMETO"];
+                this.columnLSTMod = base.Columns["LSTMod"];
+                this.columnloginid = base.Columns["loginid"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnITEMNMBR = new global::System.Data.DataColumn("ITEMNMBR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMNMBR);
+                this.columnITEMDESC = new global::System.Data.DataColumn("ITEMDESC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMDESC);
+                this.columnVNDITNUM = new global::System.Data.DataColumn("VNDITNUM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVNDITNUM);
+                this.columnCZ_CarKod = new global::System.Data.DataColumn("CZ_CarKod", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCZ_CarKod);
+                this.columnLOCNCODE = new global::System.Data.DataColumn("LOCNCODE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLOCNCODE);
+                this.columnSKL_ID = new global::System.Data.DataColumn("SKL_ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSKL_ID);
+                this.columnQTY = new global::System.Data.DataColumn("QTY", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTY);
+                this.columnQTYPACK = new global::System.Data.DataColumn("QTYPACK", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTYPACK);
+                this.columnMJ = new global::System.Data.DataColumn("MJ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMJ);
+                this.columnDMJ = new global::System.Data.DataColumn("DMJ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDMJ);
+                this.columnTAXRATE = new global::System.Data.DataColumn("TAXRATE", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTAXRATE);
+                this.columnPRICE0 = new global::System.Data.DataColumn("PRICE0", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPRICE0);
+                this.columnPRICE1 = new global::System.Data.DataColumn("PRICE1", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPRICE1);
+                this.columnPRICE2 = new global::System.Data.DataColumn("PRICE2", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPRICE2);
+                this.columnPRICE3 = new global::System.Data.DataColumn("PRICE3", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPRICE3);
+                this.columnPRICE4 = new global::System.Data.DataColumn("PRICE4", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPRICE4);
+                this.columnPRICE5 = new global::System.Data.DataColumn("PRICE5", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPRICE5);
+                this.columnCZ_SerNum_Track = new global::System.Data.DataColumn("CZ_SerNum_Track", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCZ_SerNum_Track);
+                this.columnCZ_SerNum_Delka = new global::System.Data.DataColumn("CZ_SerNum_Delka", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCZ_SerNum_Delka);
+                this.columnCZ_Rez1_Track = new global::System.Data.DataColumn("CZ_Rez1_Track", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCZ_Rez1_Track);
+                this.columnCZ_Rez2_Track = new global::System.Data.DataColumn("CZ_Rez2_Track", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCZ_Rez2_Track);
+                this.columnCZ_Rez3_Track = new global::System.Data.DataColumn("CZ_Rez3_Track", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCZ_Rez3_Track);
+                this.columnCZ_Rez4_Track = new global::System.Data.DataColumn("CZ_Rez4_Track", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCZ_Rez4_Track);
+                this.columnREZ1 = new global::System.Data.DataColumn("REZ1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ1);
+                this.columnDEX_ROW_ID = new global::System.Data.DataColumn("DEX_ROW_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDEX_ROW_ID);
+                this.columnITEMCODE = new global::System.Data.DataColumn("ITEMCODE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMCODE);
+                this.columnODB_ID = new global::System.Data.DataColumn("ODB_ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnODB_ID);
+                this.columnTIMEMODE = new global::System.Data.DataColumn("TIMEMODE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEMODE);
+                this.columnTIMEPREP = new global::System.Data.DataColumn("TIMEPREP", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEPREP);
+                this.columnTIMEUNIT = new global::System.Data.DataColumn("TIMEUNIT", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEUNIT);
+                this.columnTIMEFROM = new global::System.Data.DataColumn("TIMEFROM", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEFROM);
+                this.columnTIMETO = new global::System.Data.DataColumn("TIMETO", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMETO);
+                this.columnLSTMod = new global::System.Data.DataColumn("LSTMod", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLSTMod);
+                this.columnloginid = new global::System.Data.DataColumn("loginid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnloginid);
+                this.columnITEMNMBR.AllowDBNull = false;
+                this.columnQTY.AllowDBNull = false;
+                this.columnMJ.AllowDBNull = false;
+                this.columnCZ_SerNum_Track.AllowDBNull = false;
+                this.columnCZ_SerNum_Delka.AllowDBNull = false;
+                this.columnCZ_Rez1_Track.AllowDBNull = false;
+                this.columnCZ_Rez2_Track.AllowDBNull = false;
+                this.columnCZ_Rez3_Track.AllowDBNull = false;
+                this.columnCZ_Rez4_Track.AllowDBNull = false;
+                this.columnTIMEMODE.AllowDBNull = false;
+                this.columnTIMEPREP.AllowDBNull = false;
+                this.columnTIMEUNIT.AllowDBNull = false;
+                this.columnLSTMod.AllowDBNull = false;
+                this.columnloginid.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public FASK_CONS_095Row NewFASK_CONS_095Row() {
+                return ((FASK_CONS_095Row)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new FASK_CONS_095Row(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(FASK_CONS_095Row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.FASK_CONS_095RowChanged != null)) {
+                    this.FASK_CONS_095RowChanged(this, new FASK_CONS_095RowChangeEvent(((FASK_CONS_095Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.FASK_CONS_095RowChanging != null)) {
+                    this.FASK_CONS_095RowChanging(this, new FASK_CONS_095RowChangeEvent(((FASK_CONS_095Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.FASK_CONS_095RowDeleted != null)) {
+                    this.FASK_CONS_095RowDeleted(this, new FASK_CONS_095RowChangeEvent(((FASK_CONS_095Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.FASK_CONS_095RowDeleting != null)) {
+                    this.FASK_CONS_095RowDeleting(this, new FASK_CONS_095RowChangeEvent(((FASK_CONS_095Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveFASK_CONS_095Row(FASK_CONS_095Row row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "FASK_CONS_095DataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CZMST093DataTable : global::System.Data.TypedTableBase<CZMST093Row> {
+            
+            private global::System.Data.DataColumn columnskl_id;
+            
+            private global::System.Data.DataColumn columnskl_desc;
+            
+            private global::System.Data.DataColumn columnskl_typ;
+            
+            private global::System.Data.DataColumn columnskl_carcode;
+            
+            private global::System.Data.DataColumn columnDEX_ROW_ID;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZMST093DataTable() {
+                this.TableName = "CZMST093";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal CZMST093DataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn skl_idColumn {
+                get {
+                    return this.columnskl_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn skl_descColumn {
+                get {
+                    return this.columnskl_desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn skl_typColumn {
+                get {
+                    return this.columnskl_typ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn skl_carcodeColumn {
+                get {
+                    return this.columnskl_carcode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn DEX_ROW_IDColumn {
+                get {
+                    return this.columnDEX_ROW_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZMST093Row this[int index] {
+                get {
+                    return ((CZMST093Row)(this.Rows[index]));
+                }
+            }
+            
+            public event CZMST093RowChangeEventHandler CZMST093RowChanging;
+            
+            public event CZMST093RowChangeEventHandler CZMST093RowChanged;
+            
+            public event CZMST093RowChangeEventHandler CZMST093RowDeleting;
+            
+            public event CZMST093RowChangeEventHandler CZMST093RowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddCZMST093Row(CZMST093Row row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZMST093Row AddCZMST093Row(string skl_id, string skl_desc, string skl_typ, string skl_carcode, int DEX_ROW_ID) {
+                CZMST093Row rowCZMST093Row = ((CZMST093Row)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        skl_id,
+                        skl_desc,
+                        skl_typ,
+                        skl_carcode,
+                        DEX_ROW_ID};
+                rowCZMST093Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCZMST093Row);
+                return rowCZMST093Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                CZMST093DataTable cln = ((CZMST093DataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CZMST093DataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnskl_id = base.Columns["skl_id"];
+                this.columnskl_desc = base.Columns["skl_desc"];
+                this.columnskl_typ = base.Columns["skl_typ"];
+                this.columnskl_carcode = base.Columns["skl_carcode"];
+                this.columnDEX_ROW_ID = base.Columns["DEX_ROW_ID"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnskl_id = new global::System.Data.DataColumn("skl_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnskl_id);
+                this.columnskl_desc = new global::System.Data.DataColumn("skl_desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnskl_desc);
+                this.columnskl_typ = new global::System.Data.DataColumn("skl_typ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnskl_typ);
+                this.columnskl_carcode = new global::System.Data.DataColumn("skl_carcode", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnskl_carcode);
+                this.columnDEX_ROW_ID = new global::System.Data.DataColumn("DEX_ROW_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDEX_ROW_ID);
+                this.columnskl_id.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZMST093Row NewCZMST093Row() {
+                return ((CZMST093Row)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CZMST093Row(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(CZMST093Row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CZMST093RowChanged != null)) {
+                    this.CZMST093RowChanged(this, new CZMST093RowChangeEvent(((CZMST093Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CZMST093RowChanging != null)) {
+                    this.CZMST093RowChanging(this, new CZMST093RowChangeEvent(((CZMST093Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CZMST093RowDeleted != null)) {
+                    this.CZMST093RowDeleted(this, new CZMST093RowChangeEvent(((CZMST093Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CZMST093RowDeleting != null)) {
+                    this.CZMST093RowDeleting(this, new CZMST093RowChangeEvent(((CZMST093Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveCZMST093Row(CZMST093Row row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CZMST093DataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CZMST094DataTable : global::System.Data.TypedTableBase<CZMST094Row> {
+            
+            private global::System.Data.DataColumn columnSKL_ID;
+            
+            private global::System.Data.DataColumn columnLOCNCODE;
+            
+            private global::System.Data.DataColumn columnTYPE;
+            
+            private global::System.Data.DataColumn columnDescription;
+            
+            private global::System.Data.DataColumn columnBarcode;
+            
+            private global::System.Data.DataColumn columnDEX_ROW_ID;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZMST094DataTable() {
+                this.TableName = "CZMST094";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal CZMST094DataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SKL_IDColumn {
+                get {
+                    return this.columnSKL_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn LOCNCODEColumn {
+                get {
+                    return this.columnLOCNCODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TYPEColumn {
+                get {
+                    return this.columnTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn DescriptionColumn {
+                get {
+                    return this.columnDescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn BarcodeColumn {
+                get {
+                    return this.columnBarcode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn DEX_ROW_IDColumn {
+                get {
+                    return this.columnDEX_ROW_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZMST094Row this[int index] {
+                get {
+                    return ((CZMST094Row)(this.Rows[index]));
+                }
+            }
+            
+            public event CZMST094RowChangeEventHandler CZMST094RowChanging;
+            
+            public event CZMST094RowChangeEventHandler CZMST094RowChanged;
+            
+            public event CZMST094RowChangeEventHandler CZMST094RowDeleting;
+            
+            public event CZMST094RowChangeEventHandler CZMST094RowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddCZMST094Row(CZMST094Row row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZMST094Row AddCZMST094Row(string SKL_ID, string LOCNCODE, string TYPE, string Description, string Barcode, int DEX_ROW_ID) {
+                CZMST094Row rowCZMST094Row = ((CZMST094Row)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        SKL_ID,
+                        LOCNCODE,
+                        TYPE,
+                        Description,
+                        Barcode,
+                        DEX_ROW_ID};
+                rowCZMST094Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCZMST094Row);
+                return rowCZMST094Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                CZMST094DataTable cln = ((CZMST094DataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CZMST094DataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnSKL_ID = base.Columns["SKL_ID"];
+                this.columnLOCNCODE = base.Columns["LOCNCODE"];
+                this.columnTYPE = base.Columns["TYPE"];
+                this.columnDescription = base.Columns["Description"];
+                this.columnBarcode = base.Columns["Barcode"];
+                this.columnDEX_ROW_ID = base.Columns["DEX_ROW_ID"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnSKL_ID = new global::System.Data.DataColumn("SKL_ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSKL_ID);
+                this.columnLOCNCODE = new global::System.Data.DataColumn("LOCNCODE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLOCNCODE);
+                this.columnTYPE = new global::System.Data.DataColumn("TYPE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTYPE);
+                this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescription);
+                this.columnBarcode = new global::System.Data.DataColumn("Barcode", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBarcode);
+                this.columnDEX_ROW_ID = new global::System.Data.DataColumn("DEX_ROW_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDEX_ROW_ID);
+                this.columnLOCNCODE.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZMST094Row NewCZMST094Row() {
+                return ((CZMST094Row)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CZMST094Row(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(CZMST094Row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CZMST094RowChanged != null)) {
+                    this.CZMST094RowChanged(this, new CZMST094RowChangeEvent(((CZMST094Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CZMST094RowChanging != null)) {
+                    this.CZMST094RowChanging(this, new CZMST094RowChangeEvent(((CZMST094Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CZMST094RowDeleted != null)) {
+                    this.CZMST094RowDeleted(this, new CZMST094RowChangeEvent(((CZMST094Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CZMST094RowDeleting != null)) {
+                    this.CZMST094RowDeleting(this, new CZMST094RowChangeEvent(((CZMST094Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveCZMST094Row(CZMST094Row row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CZMST094DataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class ProductionDataTable : global::System.Data.TypedTableBase<ProductionRow> {
+            
+            private global::System.Data.DataColumn columnCountEntries;
+            
+            private global::System.Data.DataColumn columnSOPNUMBE;
+            
+            private global::System.Data.DataColumn columnITEMNMBR;
+            
+            private global::System.Data.DataColumn columnITEMTYPE;
+            
+            private global::System.Data.DataColumn columnITEMMJ;
+            
+            private global::System.Data.DataColumn columnORD;
+            
+            private global::System.Data.DataColumn columnTIMEPREP;
+            
+            private global::System.Data.DataColumn columnTIMEUNIT;
+            
+            private global::System.Data.DataColumn columnTIMESTART;
+            
+            private global::System.Data.DataColumn columnTIMESTOP;
+            
+            private global::System.Data.DataColumn columnTIMECOR;
+            
+            private global::System.Data.DataColumn columnTIMECRID;
+            
+            private global::System.Data.DataColumn columnid;
+            
+            private global::System.Data.DataColumn columnloginid;
+            
+            private global::System.Data.DataColumn columnmachineid;
+            
+            private global::System.Data.DataColumn columndateeve;
+            
+            private global::System.Data.DataColumn columnqty;
+            
+            private global::System.Data.DataColumn columnqtyReal;
+            
+            private global::System.Data.DataColumn columnQTYPACK;
+            
+            private global::System.Data.DataColumn columnQTYPACKMJ;
+            
+            private global::System.Data.DataColumn columndescription;
+            
+            private global::System.Data.DataColumn columnBarcodeP;
+            
+            private global::System.Data.DataColumn columnUserID;
+            
+            private global::System.Data.DataColumn columnTermID;
+            
+            private global::System.Data.DataColumn columnISOK;
+            
+            private global::System.Data.DataColumn columnGUID;
+            
+            private global::System.Data.DataColumn columnTIMEMODE;
+            
+            private global::System.Data.DataColumn columnTIMEPREPSTART;
+            
+            private global::System.Data.DataColumn columnTIMEPREPSTOP;
+            
+            private global::System.Data.DataColumn columnTIMECORSTART;
+            
+            private global::System.Data.DataColumn columnTIMECORSTOP;
+            
+            private global::System.Data.DataColumn columnoperationid;
+            
+            private global::System.Data.DataColumn columnSOUBEHGUID;
+            
+            private global::System.Data.DataColumn columnCORRGUID;
+            
+            private global::System.Data.DataColumn columnTIMECRIDTYPE;
+            
+            private global::System.Data.DataColumn columnSKL_ID;
+            
+            private global::System.Data.DataColumn columnLOCNCODE;
+            
+            private global::System.Data.DataColumn columnITEMDESC;
+            
+            private global::System.Data.DataColumn columnSERLTNUM;
+            
+            private global::System.Data.DataColumn columnNMBRPAL;
+            
+            private global::System.Data.DataColumn columnTYPEPAL;
+            
+            private global::System.Data.DataColumn columnPackType;
+            
+            private global::System.Data.DataColumn columnstatus;
+            
+            private global::System.Data.DataColumn columnWEIGHT;
+            
+            private global::System.Data.DataColumn columnSTORNOGUID;
+            
+            private global::System.Data.DataColumn columnREZ_1;
+            
+            private global::System.Data.DataColumn columnREZ_2;
+            
+            private global::System.Data.DataColumn columnREZ_3;
+            
+            private global::System.Data.DataColumn columnREZ_4;
+            
+            private global::System.Data.DataColumn columnREZ_5;
+            
+            private global::System.Data.DataColumn columnWEIGHT_OLD;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public ProductionDataTable() {
+                this.TableName = "Production";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal ProductionDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CountEntriesColumn {
+                get {
+                    return this.columnCountEntries;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SOPNUMBEColumn {
+                get {
+                    return this.columnSOPNUMBE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMNMBRColumn {
+                get {
+                    return this.columnITEMNMBR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMTYPEColumn {
+                get {
+                    return this.columnITEMTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMMJColumn {
+                get {
+                    return this.columnITEMMJ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ORDColumn {
+                get {
+                    return this.columnORD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEPREPColumn {
+                get {
+                    return this.columnTIMEPREP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEUNITColumn {
+                get {
+                    return this.columnTIMEUNIT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMESTARTColumn {
+                get {
+                    return this.columnTIMESTART;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMESTOPColumn {
+                get {
+                    return this.columnTIMESTOP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMECORColumn {
+                get {
+                    return this.columnTIMECOR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMECRIDColumn {
+                get {
+                    return this.columnTIMECRID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn loginidColumn {
+                get {
+                    return this.columnloginid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn machineidColumn {
+                get {
+                    return this.columnmachineid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn dateeveColumn {
+                get {
+                    return this.columndateeve;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn qtyColumn {
+                get {
+                    return this.columnqty;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn qtyRealColumn {
+                get {
+                    return this.columnqtyReal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYPACKColumn {
+                get {
+                    return this.columnQTYPACK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYPACKMJColumn {
+                get {
+                    return this.columnQTYPACKMJ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn descriptionColumn {
+                get {
+                    return this.columndescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn BarcodePColumn {
+                get {
+                    return this.columnBarcodeP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn UserIDColumn {
+                get {
+                    return this.columnUserID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TermIDColumn {
+                get {
+                    return this.columnTermID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ISOKColumn {
+                get {
+                    return this.columnISOK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn GUIDColumn {
+                get {
+                    return this.columnGUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEMODEColumn {
+                get {
+                    return this.columnTIMEMODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEPREPSTARTColumn {
+                get {
+                    return this.columnTIMEPREPSTART;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEPREPSTOPColumn {
+                get {
+                    return this.columnTIMEPREPSTOP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMECORSTARTColumn {
+                get {
+                    return this.columnTIMECORSTART;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMECORSTOPColumn {
+                get {
+                    return this.columnTIMECORSTOP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn operationidColumn {
+                get {
+                    return this.columnoperationid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SOUBEHGUIDColumn {
+                get {
+                    return this.columnSOUBEHGUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CORRGUIDColumn {
+                get {
+                    return this.columnCORRGUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMECRIDTYPEColumn {
+                get {
+                    return this.columnTIMECRIDTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SKL_IDColumn {
+                get {
+                    return this.columnSKL_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn LOCNCODEColumn {
+                get {
+                    return this.columnLOCNCODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMDESCColumn {
+                get {
+                    return this.columnITEMDESC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SERLTNUMColumn {
+                get {
+                    return this.columnSERLTNUM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn NMBRPALColumn {
+                get {
+                    return this.columnNMBRPAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TYPEPALColumn {
+                get {
+                    return this.columnTYPEPAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn PackTypeColumn {
+                get {
+                    return this.columnPackType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn statusColumn {
+                get {
+                    return this.columnstatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn WEIGHTColumn {
+                get {
+                    return this.columnWEIGHT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn STORNOGUIDColumn {
+                get {
+                    return this.columnSTORNOGUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_1Column {
+                get {
+                    return this.columnREZ_1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_2Column {
+                get {
+                    return this.columnREZ_2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_3Column {
+                get {
+                    return this.columnREZ_3;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_4Column {
+                get {
+                    return this.columnREZ_4;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_5Column {
+                get {
+                    return this.columnREZ_5;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn WEIGHT_OLDColumn {
+                get {
+                    return this.columnWEIGHT_OLD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public ProductionRow this[int index] {
+                get {
+                    return ((ProductionRow)(this.Rows[index]));
+                }
+            }
+            
+            public event ProductionRowChangeEventHandler ProductionRowChanging;
+            
+            public event ProductionRowChangeEventHandler ProductionRowChanged;
+            
+            public event ProductionRowChangeEventHandler ProductionRowDeleting;
+            
+            public event ProductionRowChangeEventHandler ProductionRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddProductionRow(ProductionRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public ProductionRow AddProductionRow(
+                        int CountEntries, 
+                        string SOPNUMBE, 
+                        string ITEMNMBR, 
+                        string ITEMTYPE, 
+                        string ITEMMJ, 
+                        int ORD, 
+                        float TIMEPREP, 
+                        float TIMEUNIT, 
+                        System.DateTime TIMESTART, 
+                        System.DateTime TIMESTOP, 
+                        float TIMECOR, 
+                        int TIMECRID, 
+                        int id, 
+                        string loginid, 
+                        string machineid, 
+                        System.DateTime dateeve, 
+                        decimal qty, 
+                        decimal qtyReal, 
+                        decimal QTYPACK, 
+                        string QTYPACKMJ, 
+                        string description, 
+                        string BarcodeP, 
+                        string UserID, 
+                        byte TermID, 
+                        System.DateTime ISOK, 
+                        System.Guid GUID, 
+                        int TIMEMODE, 
+                        System.DateTime TIMEPREPSTART, 
+                        System.DateTime TIMEPREPSTOP, 
+                        System.DateTime TIMECORSTART, 
+                        System.DateTime TIMECORSTOP, 
+                        string operationid, 
+                        System.Guid SOUBEHGUID, 
+                        System.Guid CORRGUID, 
+                        byte TIMECRIDTYPE, 
+                        string SKL_ID, 
+                        string LOCNCODE, 
+                        string ITEMDESC, 
+                        string SERLTNUM, 
+                        string NMBRPAL, 
+                        string TYPEPAL, 
+                        string PackType, 
+                        int status, 
+                        decimal WEIGHT, 
+                        System.Guid STORNOGUID, 
+                        string REZ_1, 
+                        string REZ_2, 
+                        string REZ_3, 
+                        string REZ_4, 
+                        string REZ_5, 
+                        decimal WEIGHT_OLD) {
+                ProductionRow rowProductionRow = ((ProductionRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        CountEntries,
+                        SOPNUMBE,
+                        ITEMNMBR,
+                        ITEMTYPE,
+                        ITEMMJ,
+                        ORD,
+                        TIMEPREP,
+                        TIMEUNIT,
+                        TIMESTART,
+                        TIMESTOP,
+                        TIMECOR,
+                        TIMECRID,
+                        id,
+                        loginid,
+                        machineid,
+                        dateeve,
+                        qty,
+                        qtyReal,
+                        QTYPACK,
+                        QTYPACKMJ,
+                        description,
+                        BarcodeP,
+                        UserID,
+                        TermID,
+                        ISOK,
+                        GUID,
+                        TIMEMODE,
+                        TIMEPREPSTART,
+                        TIMEPREPSTOP,
+                        TIMECORSTART,
+                        TIMECORSTOP,
+                        operationid,
+                        SOUBEHGUID,
+                        CORRGUID,
+                        TIMECRIDTYPE,
+                        SKL_ID,
+                        LOCNCODE,
+                        ITEMDESC,
+                        SERLTNUM,
+                        NMBRPAL,
+                        TYPEPAL,
+                        PackType,
+                        status,
+                        WEIGHT,
+                        STORNOGUID,
+                        REZ_1,
+                        REZ_2,
+                        REZ_3,
+                        REZ_4,
+                        REZ_5,
+                        WEIGHT_OLD};
+                rowProductionRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowProductionRow);
+                return rowProductionRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                ProductionDataTable cln = ((ProductionDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new ProductionDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnCountEntries = base.Columns["CountEntries"];
+                this.columnSOPNUMBE = base.Columns["SOPNUMBE"];
+                this.columnITEMNMBR = base.Columns["ITEMNMBR"];
+                this.columnITEMTYPE = base.Columns["ITEMTYPE"];
+                this.columnITEMMJ = base.Columns["ITEMMJ"];
+                this.columnORD = base.Columns["ORD"];
+                this.columnTIMEPREP = base.Columns["TIMEPREP"];
+                this.columnTIMEUNIT = base.Columns["TIMEUNIT"];
+                this.columnTIMESTART = base.Columns["TIMESTART"];
+                this.columnTIMESTOP = base.Columns["TIMESTOP"];
+                this.columnTIMECOR = base.Columns["TIMECOR"];
+                this.columnTIMECRID = base.Columns["TIMECRID"];
+                this.columnid = base.Columns["id"];
+                this.columnloginid = base.Columns["loginid"];
+                this.columnmachineid = base.Columns["machineid"];
+                this.columndateeve = base.Columns["dateeve"];
+                this.columnqty = base.Columns["qty"];
+                this.columnqtyReal = base.Columns["qtyReal"];
+                this.columnQTYPACK = base.Columns["QTYPACK"];
+                this.columnQTYPACKMJ = base.Columns["QTYPACKMJ"];
+                this.columndescription = base.Columns["description"];
+                this.columnBarcodeP = base.Columns["BarcodeP"];
+                this.columnUserID = base.Columns["UserID"];
+                this.columnTermID = base.Columns["TermID"];
+                this.columnISOK = base.Columns["ISOK"];
+                this.columnGUID = base.Columns["GUID"];
+                this.columnTIMEMODE = base.Columns["TIMEMODE"];
+                this.columnTIMEPREPSTART = base.Columns["TIMEPREPSTART"];
+                this.columnTIMEPREPSTOP = base.Columns["TIMEPREPSTOP"];
+                this.columnTIMECORSTART = base.Columns["TIMECORSTART"];
+                this.columnTIMECORSTOP = base.Columns["TIMECORSTOP"];
+                this.columnoperationid = base.Columns["operationid"];
+                this.columnSOUBEHGUID = base.Columns["SOUBEHGUID"];
+                this.columnCORRGUID = base.Columns["CORRGUID"];
+                this.columnTIMECRIDTYPE = base.Columns["TIMECRIDTYPE"];
+                this.columnSKL_ID = base.Columns["SKL_ID"];
+                this.columnLOCNCODE = base.Columns["LOCNCODE"];
+                this.columnITEMDESC = base.Columns["ITEMDESC"];
+                this.columnSERLTNUM = base.Columns["SERLTNUM"];
+                this.columnNMBRPAL = base.Columns["NMBRPAL"];
+                this.columnTYPEPAL = base.Columns["TYPEPAL"];
+                this.columnPackType = base.Columns["PackType"];
+                this.columnstatus = base.Columns["status"];
+                this.columnWEIGHT = base.Columns["WEIGHT"];
+                this.columnSTORNOGUID = base.Columns["STORNOGUID"];
+                this.columnREZ_1 = base.Columns["REZ_1"];
+                this.columnREZ_2 = base.Columns["REZ_2"];
+                this.columnREZ_3 = base.Columns["REZ_3"];
+                this.columnREZ_4 = base.Columns["REZ_4"];
+                this.columnREZ_5 = base.Columns["REZ_5"];
+                this.columnWEIGHT_OLD = base.Columns["WEIGHT_OLD"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnCountEntries = new global::System.Data.DataColumn("CountEntries", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCountEntries);
+                this.columnSOPNUMBE = new global::System.Data.DataColumn("SOPNUMBE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSOPNUMBE);
+                this.columnITEMNMBR = new global::System.Data.DataColumn("ITEMNMBR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMNMBR);
+                this.columnITEMTYPE = new global::System.Data.DataColumn("ITEMTYPE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMTYPE);
+                this.columnITEMMJ = new global::System.Data.DataColumn("ITEMMJ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMMJ);
+                this.columnORD = new global::System.Data.DataColumn("ORD", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnORD);
+                this.columnTIMEPREP = new global::System.Data.DataColumn("TIMEPREP", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEPREP);
+                this.columnTIMEUNIT = new global::System.Data.DataColumn("TIMEUNIT", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEUNIT);
+                this.columnTIMESTART = new global::System.Data.DataColumn("TIMESTART", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMESTART);
+                this.columnTIMESTOP = new global::System.Data.DataColumn("TIMESTOP", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMESTOP);
+                this.columnTIMECOR = new global::System.Data.DataColumn("TIMECOR", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMECOR);
+                this.columnTIMECRID = new global::System.Data.DataColumn("TIMECRID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMECRID);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columnloginid = new global::System.Data.DataColumn("loginid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnloginid);
+                this.columnmachineid = new global::System.Data.DataColumn("machineid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmachineid);
+                this.columndateeve = new global::System.Data.DataColumn("dateeve", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndateeve);
+                this.columnqty = new global::System.Data.DataColumn("qty", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnqty);
+                this.columnqtyReal = new global::System.Data.DataColumn("qtyReal", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnqtyReal);
+                this.columnQTYPACK = new global::System.Data.DataColumn("QTYPACK", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTYPACK);
+                this.columnQTYPACKMJ = new global::System.Data.DataColumn("QTYPACKMJ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTYPACKMJ);
+                this.columndescription = new global::System.Data.DataColumn("description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescription);
+                this.columnBarcodeP = new global::System.Data.DataColumn("BarcodeP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBarcodeP);
+                this.columnUserID = new global::System.Data.DataColumn("UserID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserID);
+                this.columnTermID = new global::System.Data.DataColumn("TermID", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTermID);
+                this.columnISOK = new global::System.Data.DataColumn("ISOK", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnISOK);
+                this.columnGUID = new global::System.Data.DataColumn("GUID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGUID);
+                this.columnTIMEMODE = new global::System.Data.DataColumn("TIMEMODE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEMODE);
+                this.columnTIMEPREPSTART = new global::System.Data.DataColumn("TIMEPREPSTART", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEPREPSTART);
+                this.columnTIMEPREPSTOP = new global::System.Data.DataColumn("TIMEPREPSTOP", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEPREPSTOP);
+                this.columnTIMECORSTART = new global::System.Data.DataColumn("TIMECORSTART", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMECORSTART);
+                this.columnTIMECORSTOP = new global::System.Data.DataColumn("TIMECORSTOP", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMECORSTOP);
+                this.columnoperationid = new global::System.Data.DataColumn("operationid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnoperationid);
+                this.columnSOUBEHGUID = new global::System.Data.DataColumn("SOUBEHGUID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSOUBEHGUID);
+                this.columnCORRGUID = new global::System.Data.DataColumn("CORRGUID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCORRGUID);
+                this.columnTIMECRIDTYPE = new global::System.Data.DataColumn("TIMECRIDTYPE", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMECRIDTYPE);
+                this.columnSKL_ID = new global::System.Data.DataColumn("SKL_ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSKL_ID);
+                this.columnLOCNCODE = new global::System.Data.DataColumn("LOCNCODE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLOCNCODE);
+                this.columnITEMDESC = new global::System.Data.DataColumn("ITEMDESC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMDESC);
+                this.columnSERLTNUM = new global::System.Data.DataColumn("SERLTNUM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSERLTNUM);
+                this.columnNMBRPAL = new global::System.Data.DataColumn("NMBRPAL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNMBRPAL);
+                this.columnTYPEPAL = new global::System.Data.DataColumn("TYPEPAL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTYPEPAL);
+                this.columnPackType = new global::System.Data.DataColumn("PackType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPackType);
+                this.columnstatus = new global::System.Data.DataColumn("status", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstatus);
+                this.columnWEIGHT = new global::System.Data.DataColumn("WEIGHT", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWEIGHT);
+                this.columnSTORNOGUID = new global::System.Data.DataColumn("STORNOGUID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSTORNOGUID);
+                this.columnREZ_1 = new global::System.Data.DataColumn("REZ_1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_1);
+                this.columnREZ_2 = new global::System.Data.DataColumn("REZ_2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_2);
+                this.columnREZ_3 = new global::System.Data.DataColumn("REZ_3", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_3);
+                this.columnREZ_4 = new global::System.Data.DataColumn("REZ_4", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_4);
+                this.columnREZ_5 = new global::System.Data.DataColumn("REZ_5", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_5);
+                this.columnWEIGHT_OLD = new global::System.Data.DataColumn("WEIGHT_OLD", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWEIGHT_OLD);
+                this.columnloginid.AllowDBNull = false;
+                this.columndateeve.AllowDBNull = false;
+                this.columnqty.AllowDBNull = false;
+                this.columnqtyReal.AllowDBNull = false;
+                this.columnUserID.AllowDBNull = false;
+                this.columnTermID.AllowDBNull = false;
+                this.columnGUID.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public ProductionRow NewProductionRow() {
+                return ((ProductionRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new ProductionRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(ProductionRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.ProductionRowChanged != null)) {
+                    this.ProductionRowChanged(this, new ProductionRowChangeEvent(((ProductionRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.ProductionRowChanging != null)) {
+                    this.ProductionRowChanging(this, new ProductionRowChangeEvent(((ProductionRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.ProductionRowDeleted != null)) {
+                    this.ProductionRowDeleted(this, new ProductionRowChangeEvent(((ProductionRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.ProductionRowDeleting != null)) {
+                    this.ProductionRowDeleting(this, new ProductionRowChangeEvent(((ProductionRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveProductionRow(ProductionRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "ProductionDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class FASK_Vyroba_TPDataTable : global::System.Data.TypedTableBase<FASK_Vyroba_TPRow> {
+            
+            private global::System.Data.DataColumn columnITEMNMBR_Def;
+            
+            private global::System.Data.DataColumn columnDESC_Def;
+            
+            private global::System.Data.DataColumn columnMJ_Def;
+            
+            private global::System.Data.DataColumn columnDESC_Fol;
+            
+            private global::System.Data.DataColumn columnMJ_Fol;
+            
+            private global::System.Data.DataColumn columnkoef;
+            
+            private global::System.Data.DataColumn columndateedit;
+            
+            private global::System.Data.DataColumn columnID;
+            
+            private global::System.Data.DataColumn columnID_USER;
+            
+            private global::System.Data.DataColumn columnITEMNMBR_fol;
+            
+            private global::System.Data.DataColumn columnID_L;
+            
+            private global::System.Data.DataColumn columnID_H;
+            
+            private global::System.Data.DataColumn columnalter;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public FASK_Vyroba_TPDataTable() {
+                this.TableName = "FASK_Vyroba_TP";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal FASK_Vyroba_TPDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMNMBR_DefColumn {
+                get {
+                    return this.columnITEMNMBR_Def;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn DESC_DefColumn {
+                get {
+                    return this.columnDESC_Def;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn MJ_DefColumn {
+                get {
+                    return this.columnMJ_Def;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn DESC_FolColumn {
+                get {
+                    return this.columnDESC_Fol;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn MJ_FolColumn {
+                get {
+                    return this.columnMJ_Fol;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn koefColumn {
+                get {
+                    return this.columnkoef;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn dateeditColumn {
+                get {
+                    return this.columndateedit;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn IDColumn {
+                get {
+                    return this.columnID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ID_USERColumn {
+                get {
+                    return this.columnID_USER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMNMBR_folColumn {
+                get {
+                    return this.columnITEMNMBR_fol;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ID_LColumn {
+                get {
+                    return this.columnID_L;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ID_HColumn {
+                get {
+                    return this.columnID_H;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn alterColumn {
+                get {
+                    return this.columnalter;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public FASK_Vyroba_TPRow this[int index] {
+                get {
+                    return ((FASK_Vyroba_TPRow)(this.Rows[index]));
+                }
+            }
+            
+            public event FASK_Vyroba_TPRowChangeEventHandler FASK_Vyroba_TPRowChanging;
+            
+            public event FASK_Vyroba_TPRowChangeEventHandler FASK_Vyroba_TPRowChanged;
+            
+            public event FASK_Vyroba_TPRowChangeEventHandler FASK_Vyroba_TPRowDeleting;
+            
+            public event FASK_Vyroba_TPRowChangeEventHandler FASK_Vyroba_TPRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddFASK_Vyroba_TPRow(FASK_Vyroba_TPRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public FASK_Vyroba_TPRow AddFASK_Vyroba_TPRow(string ITEMNMBR_Def, string DESC_Def, string MJ_Def, string DESC_Fol, string MJ_Fol, string koef, System.DateTime dateedit, int ID, string ID_USER, string ITEMNMBR_fol, string ID_L, string ID_H, string alter) {
+                FASK_Vyroba_TPRow rowFASK_Vyroba_TPRow = ((FASK_Vyroba_TPRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        ITEMNMBR_Def,
+                        DESC_Def,
+                        MJ_Def,
+                        DESC_Fol,
+                        MJ_Fol,
+                        koef,
+                        dateedit,
+                        ID,
+                        ID_USER,
+                        ITEMNMBR_fol,
+                        ID_L,
+                        ID_H,
+                        alter};
+                rowFASK_Vyroba_TPRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFASK_Vyroba_TPRow);
+                return rowFASK_Vyroba_TPRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                FASK_Vyroba_TPDataTable cln = ((FASK_Vyroba_TPDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new FASK_Vyroba_TPDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnITEMNMBR_Def = base.Columns["ITEMNMBR_Def"];
+                this.columnDESC_Def = base.Columns["DESC_Def"];
+                this.columnMJ_Def = base.Columns["MJ_Def"];
+                this.columnDESC_Fol = base.Columns["DESC_Fol"];
+                this.columnMJ_Fol = base.Columns["MJ_Fol"];
+                this.columnkoef = base.Columns["koef"];
+                this.columndateedit = base.Columns["dateedit"];
+                this.columnID = base.Columns["ID"];
+                this.columnID_USER = base.Columns["ID_USER"];
+                this.columnITEMNMBR_fol = base.Columns["ITEMNMBR_fol"];
+                this.columnID_L = base.Columns["ID_L"];
+                this.columnID_H = base.Columns["ID_H"];
+                this.columnalter = base.Columns["alter"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnITEMNMBR_Def = new global::System.Data.DataColumn("ITEMNMBR_Def", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMNMBR_Def);
+                this.columnDESC_Def = new global::System.Data.DataColumn("DESC_Def", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDESC_Def);
+                this.columnMJ_Def = new global::System.Data.DataColumn("MJ_Def", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMJ_Def);
+                this.columnDESC_Fol = new global::System.Data.DataColumn("DESC_Fol", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDESC_Fol);
+                this.columnMJ_Fol = new global::System.Data.DataColumn("MJ_Fol", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMJ_Fol);
+                this.columnkoef = new global::System.Data.DataColumn("koef", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnkoef);
+                this.columndateedit = new global::System.Data.DataColumn("dateedit", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndateedit);
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
+                this.columnID_USER = new global::System.Data.DataColumn("ID_USER", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_USER);
+                this.columnITEMNMBR_fol = new global::System.Data.DataColumn("ITEMNMBR_fol", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMNMBR_fol);
+                this.columnID_L = new global::System.Data.DataColumn("ID_L", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_L);
+                this.columnID_H = new global::System.Data.DataColumn("ID_H", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_H);
+                this.columnalter = new global::System.Data.DataColumn("alter", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnalter);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public FASK_Vyroba_TPRow NewFASK_Vyroba_TPRow() {
+                return ((FASK_Vyroba_TPRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new FASK_Vyroba_TPRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(FASK_Vyroba_TPRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.FASK_Vyroba_TPRowChanged != null)) {
+                    this.FASK_Vyroba_TPRowChanged(this, new FASK_Vyroba_TPRowChangeEvent(((FASK_Vyroba_TPRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.FASK_Vyroba_TPRowChanging != null)) {
+                    this.FASK_Vyroba_TPRowChanging(this, new FASK_Vyroba_TPRowChangeEvent(((FASK_Vyroba_TPRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.FASK_Vyroba_TPRowDeleted != null)) {
+                    this.FASK_Vyroba_TPRowDeleted(this, new FASK_Vyroba_TPRowChangeEvent(((FASK_Vyroba_TPRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.FASK_Vyroba_TPRowDeleting != null)) {
+                    this.FASK_Vyroba_TPRowDeleting(this, new FASK_Vyroba_TPRowChangeEvent(((FASK_Vyroba_TPRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveFASK_Vyroba_TPRow(FASK_Vyroba_TPRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "FASK_Vyroba_TPDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class MachinesDataTable : global::System.Data.TypedTableBase<MachinesRow> {
+            
+            private global::System.Data.DataColumn columnid;
+            
+            private global::System.Data.DataColumn columnname;
+            
+            private global::System.Data.DataColumn columndescription;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public MachinesDataTable() {
+                this.TableName = "Machines";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal MachinesDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn nameColumn {
+                get {
+                    return this.columnname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn descriptionColumn {
+                get {
+                    return this.columndescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public MachinesRow this[int index] {
+                get {
+                    return ((MachinesRow)(this.Rows[index]));
+                }
+            }
+            
+            public event MachinesRowChangeEventHandler MachinesRowChanging;
+            
+            public event MachinesRowChangeEventHandler MachinesRowChanged;
+            
+            public event MachinesRowChangeEventHandler MachinesRowDeleting;
+            
+            public event MachinesRowChangeEventHandler MachinesRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddMachinesRow(MachinesRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public MachinesRow AddMachinesRow(string id, string name, string description) {
+                MachinesRow rowMachinesRow = ((MachinesRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        id,
+                        name,
+                        description};
+                rowMachinesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowMachinesRow);
+                return rowMachinesRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public MachinesRow FindByid(string id) {
+                return ((MachinesRow)(this.Rows.Find(new object[] {
+                            id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                MachinesDataTable cln = ((MachinesDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new MachinesDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnid = base.Columns["id"];
+                this.columnname = base.Columns["name"];
+                this.columndescription = base.Columns["description"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnid = new global::System.Data.DataColumn("id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnname);
+                this.columndescription = new global::System.Data.DataColumn("description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescription);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid}, true));
+                this.columnid.AllowDBNull = false;
+                this.columnid.Unique = true;
+                this.columnname.AllowDBNull = false;
+                this.columndescription.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public MachinesRow NewMachinesRow() {
+                return ((MachinesRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new MachinesRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(MachinesRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.MachinesRowChanged != null)) {
+                    this.MachinesRowChanged(this, new MachinesRowChangeEvent(((MachinesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.MachinesRowChanging != null)) {
+                    this.MachinesRowChanging(this, new MachinesRowChangeEvent(((MachinesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.MachinesRowDeleted != null)) {
+                    this.MachinesRowDeleted(this, new MachinesRowChangeEvent(((MachinesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.MachinesRowDeleting != null)) {
+                    this.MachinesRowDeleting(this, new MachinesRowChangeEvent(((MachinesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveMachinesRow(MachinesRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "MachinesDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class OperationsDataTable : global::System.Data.TypedTableBase<OperationsRow> {
+            
+            private global::System.Data.DataColumn columnid;
+            
+            private global::System.Data.DataColumn columnname;
+            
+            private global::System.Data.DataColumn columndescription;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public OperationsDataTable() {
+                this.TableName = "Operations";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal OperationsDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn nameColumn {
+                get {
+                    return this.columnname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn descriptionColumn {
+                get {
+                    return this.columndescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public OperationsRow this[int index] {
+                get {
+                    return ((OperationsRow)(this.Rows[index]));
+                }
+            }
+            
+            public event OperationsRowChangeEventHandler OperationsRowChanging;
+            
+            public event OperationsRowChangeEventHandler OperationsRowChanged;
+            
+            public event OperationsRowChangeEventHandler OperationsRowDeleting;
+            
+            public event OperationsRowChangeEventHandler OperationsRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddOperationsRow(OperationsRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public OperationsRow AddOperationsRow(string id, string name, string description) {
+                OperationsRow rowOperationsRow = ((OperationsRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        id,
+                        name,
+                        description};
+                rowOperationsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowOperationsRow);
+                return rowOperationsRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public OperationsRow FindByid(string id) {
+                return ((OperationsRow)(this.Rows.Find(new object[] {
+                            id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                OperationsDataTable cln = ((OperationsDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new OperationsDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnid = base.Columns["id"];
+                this.columnname = base.Columns["name"];
+                this.columndescription = base.Columns["description"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnid = new global::System.Data.DataColumn("id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnname);
+                this.columndescription = new global::System.Data.DataColumn("description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescription);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid}, true));
+                this.columnid.AllowDBNull = false;
+                this.columnid.Unique = true;
+                this.columnname.AllowDBNull = false;
+                this.columndescription.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public OperationsRow NewOperationsRow() {
+                return ((OperationsRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new OperationsRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(OperationsRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.OperationsRowChanged != null)) {
+                    this.OperationsRowChanged(this, new OperationsRowChangeEvent(((OperationsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.OperationsRowChanging != null)) {
+                    this.OperationsRowChanging(this, new OperationsRowChangeEvent(((OperationsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.OperationsRowDeleted != null)) {
+                    this.OperationsRowDeleted(this, new OperationsRowChangeEvent(((OperationsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.OperationsRowDeleting != null)) {
+                    this.OperationsRowDeleting(this, new OperationsRowChangeEvent(((OperationsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveOperationsRow(OperationsRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "OperationsDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class VMachinesOperationsDataTable : global::System.Data.TypedTableBase<VMachinesOperationsRow> {
+            
+            private global::System.Data.DataColumn columnmachineid;
+            
+            private global::System.Data.DataColumn columnoperationid;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public VMachinesOperationsDataTable() {
+                this.TableName = "VMachinesOperations";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal VMachinesOperationsDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn machineidColumn {
+                get {
+                    return this.columnmachineid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn operationidColumn {
+                get {
+                    return this.columnoperationid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public VMachinesOperationsRow this[int index] {
+                get {
+                    return ((VMachinesOperationsRow)(this.Rows[index]));
+                }
+            }
+            
+            public event VMachinesOperationsRowChangeEventHandler VMachinesOperationsRowChanging;
+            
+            public event VMachinesOperationsRowChangeEventHandler VMachinesOperationsRowChanged;
+            
+            public event VMachinesOperationsRowChangeEventHandler VMachinesOperationsRowDeleting;
+            
+            public event VMachinesOperationsRowChangeEventHandler VMachinesOperationsRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddVMachinesOperationsRow(VMachinesOperationsRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public VMachinesOperationsRow AddVMachinesOperationsRow(MachinesRow parentMachinesRowByMachines_VMachinesOperations, OperationsRow parentOperationsRowByOperations_VMachinesOperations) {
+                VMachinesOperationsRow rowVMachinesOperationsRow = ((VMachinesOperationsRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        null};
+                if ((parentMachinesRowByMachines_VMachinesOperations != null)) {
+                    columnValuesArray[0] = parentMachinesRowByMachines_VMachinesOperations[0];
+                }
+                if ((parentOperationsRowByOperations_VMachinesOperations != null)) {
+                    columnValuesArray[1] = parentOperationsRowByOperations_VMachinesOperations[0];
+                }
+                rowVMachinesOperationsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowVMachinesOperationsRow);
+                return rowVMachinesOperationsRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                VMachinesOperationsDataTable cln = ((VMachinesOperationsDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new VMachinesOperationsDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnmachineid = base.Columns["machineid"];
+                this.columnoperationid = base.Columns["operationid"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnmachineid = new global::System.Data.DataColumn("machineid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmachineid);
+                this.columnoperationid = new global::System.Data.DataColumn("operationid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnoperationid);
+                this.columnmachineid.AllowDBNull = false;
+                this.columnoperationid.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public VMachinesOperationsRow NewVMachinesOperationsRow() {
+                return ((VMachinesOperationsRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new VMachinesOperationsRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(VMachinesOperationsRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.VMachinesOperationsRowChanged != null)) {
+                    this.VMachinesOperationsRowChanged(this, new VMachinesOperationsRowChangeEvent(((VMachinesOperationsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.VMachinesOperationsRowChanging != null)) {
+                    this.VMachinesOperationsRowChanging(this, new VMachinesOperationsRowChangeEvent(((VMachinesOperationsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.VMachinesOperationsRowDeleted != null)) {
+                    this.VMachinesOperationsRowDeleted(this, new VMachinesOperationsRowChangeEvent(((VMachinesOperationsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.VMachinesOperationsRowDeleting != null)) {
+                    this.VMachinesOperationsRowDeleting(this, new VMachinesOperationsRowChangeEvent(((VMachinesOperationsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveVMachinesOperationsRow(VMachinesOperationsRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "VMachinesOperationsDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class ProductionHistDataTable : global::System.Data.TypedTableBase<ProductionHistRow> {
+            
+            private global::System.Data.DataColumn columnCountEntries;
+            
+            private global::System.Data.DataColumn columnSOPNUMBE;
+            
+            private global::System.Data.DataColumn columnITEMNMBR;
+            
+            private global::System.Data.DataColumn columnITEMTYPE;
+            
+            private global::System.Data.DataColumn columnITEMMJ;
+            
+            private global::System.Data.DataColumn columnORD;
+            
+            private global::System.Data.DataColumn columnTIMEPREP;
+            
+            private global::System.Data.DataColumn columnTIMEUNIT;
+            
+            private global::System.Data.DataColumn columnTIMESTART;
+            
+            private global::System.Data.DataColumn columnTIMESTOP;
+            
+            private global::System.Data.DataColumn columnTIMECOR;
+            
+            private global::System.Data.DataColumn columnTIMECRID;
+            
+            private global::System.Data.DataColumn columnid;
+            
+            private global::System.Data.DataColumn columnloginid;
+            
+            private global::System.Data.DataColumn columnmachineid;
+            
+            private global::System.Data.DataColumn columndateeve;
+            
+            private global::System.Data.DataColumn columnqty;
+            
+            private global::System.Data.DataColumn columnqtyReal;
+            
+            private global::System.Data.DataColumn columnQTYPACK;
+            
+            private global::System.Data.DataColumn columnQTYPACKMJ;
+            
+            private global::System.Data.DataColumn columndescription;
+            
+            private global::System.Data.DataColumn columnBarcodeP;
+            
+            private global::System.Data.DataColumn columnUserID;
+            
+            private global::System.Data.DataColumn columnTermID;
+            
+            private global::System.Data.DataColumn columnISOK;
+            
+            private global::System.Data.DataColumn columnGUID;
+            
+            private global::System.Data.DataColumn columnTIMEMODE;
+            
+            private global::System.Data.DataColumn columnTIMEPREPSTART;
+            
+            private global::System.Data.DataColumn columnTIMEPREPSTOP;
+            
+            private global::System.Data.DataColumn columnTIMECORSTART;
+            
+            private global::System.Data.DataColumn columnTIMECORSTOP;
+            
+            private global::System.Data.DataColumn columnoperationid;
+            
+            private global::System.Data.DataColumn columnSOUBEHGUID;
+            
+            private global::System.Data.DataColumn columnfirstname;
+            
+            private global::System.Data.DataColumn columnsurname;
+            
+            private global::System.Data.DataColumn columnoperationName;
+            
+            private global::System.Data.DataColumn columnmachineName;
+            
+            private global::System.Data.DataColumn columnCORRGUID;
+            
+            private global::System.Data.DataColumn columnTIMECRIDTYPE;
+            
+            private global::System.Data.DataColumn columnTIMECRIDName;
+            
+            private global::System.Data.DataColumn columnNMBRPAL;
+            
+            private global::System.Data.DataColumn columnTYPEPAL;
+            
+            private global::System.Data.DataColumn columnPackType;
+            
+            private global::System.Data.DataColumn columnstatus;
+            
+            private global::System.Data.DataColumn columnWEIGHT;
+            
+            private global::System.Data.DataColumn columnSTORNOGUID;
+            
+            private global::System.Data.DataColumn columnREZ_1;
+            
+            private global::System.Data.DataColumn columnREZ_2;
+            
+            private global::System.Data.DataColumn columnREZ_3;
+            
+            private global::System.Data.DataColumn columnREZ_4;
+            
+            private global::System.Data.DataColumn columnREZ_5;
+            
+            private global::System.Data.DataColumn columnWEIGHT_OLD;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public ProductionHistDataTable() {
+                this.TableName = "ProductionHist";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal ProductionHistDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CountEntriesColumn {
+                get {
+                    return this.columnCountEntries;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SOPNUMBEColumn {
+                get {
+                    return this.columnSOPNUMBE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMNMBRColumn {
+                get {
+                    return this.columnITEMNMBR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMTYPEColumn {
+                get {
+                    return this.columnITEMTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMMJColumn {
+                get {
+                    return this.columnITEMMJ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ORDColumn {
+                get {
+                    return this.columnORD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEPREPColumn {
+                get {
+                    return this.columnTIMEPREP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEUNITColumn {
+                get {
+                    return this.columnTIMEUNIT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMESTARTColumn {
+                get {
+                    return this.columnTIMESTART;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMESTOPColumn {
+                get {
+                    return this.columnTIMESTOP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMECORColumn {
+                get {
+                    return this.columnTIMECOR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMECRIDColumn {
+                get {
+                    return this.columnTIMECRID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn loginidColumn {
+                get {
+                    return this.columnloginid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn machineidColumn {
+                get {
+                    return this.columnmachineid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn dateeveColumn {
+                get {
+                    return this.columndateeve;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn qtyColumn {
+                get {
+                    return this.columnqty;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn qtyRealColumn {
+                get {
+                    return this.columnqtyReal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYPACKColumn {
+                get {
+                    return this.columnQTYPACK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYPACKMJColumn {
+                get {
+                    return this.columnQTYPACKMJ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn descriptionColumn {
+                get {
+                    return this.columndescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn BarcodePColumn {
+                get {
+                    return this.columnBarcodeP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn UserIDColumn {
+                get {
+                    return this.columnUserID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TermIDColumn {
+                get {
+                    return this.columnTermID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ISOKColumn {
+                get {
+                    return this.columnISOK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn GUIDColumn {
+                get {
+                    return this.columnGUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEMODEColumn {
+                get {
+                    return this.columnTIMEMODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEPREPSTARTColumn {
+                get {
+                    return this.columnTIMEPREPSTART;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEPREPSTOPColumn {
+                get {
+                    return this.columnTIMEPREPSTOP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMECORSTARTColumn {
+                get {
+                    return this.columnTIMECORSTART;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMECORSTOPColumn {
+                get {
+                    return this.columnTIMECORSTOP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn operationidColumn {
+                get {
+                    return this.columnoperationid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SOUBEHGUIDColumn {
+                get {
+                    return this.columnSOUBEHGUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn firstnameColumn {
+                get {
+                    return this.columnfirstname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn surnameColumn {
+                get {
+                    return this.columnsurname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn operationNameColumn {
+                get {
+                    return this.columnoperationName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn machineNameColumn {
+                get {
+                    return this.columnmachineName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CORRGUIDColumn {
+                get {
+                    return this.columnCORRGUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMECRIDTYPEColumn {
+                get {
+                    return this.columnTIMECRIDTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMECRIDNameColumn {
+                get {
+                    return this.columnTIMECRIDName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn NMBRPALColumn {
+                get {
+                    return this.columnNMBRPAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TYPEPALColumn {
+                get {
+                    return this.columnTYPEPAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn PackTypeColumn {
+                get {
+                    return this.columnPackType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn statusColumn {
+                get {
+                    return this.columnstatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn WEIGHTColumn {
+                get {
+                    return this.columnWEIGHT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn STORNOGUIDColumn {
+                get {
+                    return this.columnSTORNOGUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_1Column {
+                get {
+                    return this.columnREZ_1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_2Column {
+                get {
+                    return this.columnREZ_2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_3Column {
+                get {
+                    return this.columnREZ_3;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_4Column {
+                get {
+                    return this.columnREZ_4;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_5Column {
+                get {
+                    return this.columnREZ_5;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn WEIGHT_OLDColumn {
+                get {
+                    return this.columnWEIGHT_OLD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public ProductionHistRow this[int index] {
+                get {
+                    return ((ProductionHistRow)(this.Rows[index]));
+                }
+            }
+            
+            public event ProductionHistRowChangeEventHandler ProductionHistRowChanging;
+            
+            public event ProductionHistRowChangeEventHandler ProductionHistRowChanged;
+            
+            public event ProductionHistRowChangeEventHandler ProductionHistRowDeleting;
+            
+            public event ProductionHistRowChangeEventHandler ProductionHistRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddProductionHistRow(ProductionHistRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public ProductionHistRow AddProductionHistRow(
+                        int CountEntries, 
+                        string SOPNUMBE, 
+                        string ITEMNMBR, 
+                        string ITEMTYPE, 
+                        string ITEMMJ, 
+                        int ORD, 
+                        float TIMEPREP, 
+                        float TIMEUNIT, 
+                        System.DateTime TIMESTART, 
+                        System.DateTime TIMESTOP, 
+                        float TIMECOR, 
+                        int TIMECRID, 
+                        int id, 
+                        string loginid, 
+                        string machineid, 
+                        System.DateTime dateeve, 
+                        decimal qty, 
+                        decimal qtyReal, 
+                        decimal QTYPACK, 
+                        string QTYPACKMJ, 
+                        string description, 
+                        string BarcodeP, 
+                        string UserID, 
+                        byte TermID, 
+                        System.DateTime ISOK, 
+                        System.Guid GUID, 
+                        int TIMEMODE, 
+                        System.DateTime TIMEPREPSTART, 
+                        System.DateTime TIMEPREPSTOP, 
+                        System.DateTime TIMECORSTART, 
+                        System.DateTime TIMECORSTOP, 
+                        string operationid, 
+                        System.Guid SOUBEHGUID, 
+                        string firstname, 
+                        string surname, 
+                        string operationName, 
+                        string machineName, 
+                        System.Guid CORRGUID, 
+                        byte TIMECRIDTYPE, 
+                        string TIMECRIDName, 
+                        string NMBRPAL, 
+                        string TYPEPAL, 
+                        string PackType, 
+                        int status, 
+                        decimal WEIGHT, 
+                        System.Guid STORNOGUID, 
+                        string REZ_1, 
+                        string REZ_2, 
+                        string REZ_3, 
+                        string REZ_4, 
+                        string REZ_5, 
+                        decimal WEIGHT_OLD) {
+                ProductionHistRow rowProductionHistRow = ((ProductionHistRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        CountEntries,
+                        SOPNUMBE,
+                        ITEMNMBR,
+                        ITEMTYPE,
+                        ITEMMJ,
+                        ORD,
+                        TIMEPREP,
+                        TIMEUNIT,
+                        TIMESTART,
+                        TIMESTOP,
+                        TIMECOR,
+                        TIMECRID,
+                        id,
+                        loginid,
+                        machineid,
+                        dateeve,
+                        qty,
+                        qtyReal,
+                        QTYPACK,
+                        QTYPACKMJ,
+                        description,
+                        BarcodeP,
+                        UserID,
+                        TermID,
+                        ISOK,
+                        GUID,
+                        TIMEMODE,
+                        TIMEPREPSTART,
+                        TIMEPREPSTOP,
+                        TIMECORSTART,
+                        TIMECORSTOP,
+                        operationid,
+                        SOUBEHGUID,
+                        firstname,
+                        surname,
+                        operationName,
+                        machineName,
+                        CORRGUID,
+                        TIMECRIDTYPE,
+                        TIMECRIDName,
+                        NMBRPAL,
+                        TYPEPAL,
+                        PackType,
+                        status,
+                        WEIGHT,
+                        STORNOGUID,
+                        REZ_1,
+                        REZ_2,
+                        REZ_3,
+                        REZ_4,
+                        REZ_5,
+                        WEIGHT_OLD};
+                rowProductionHistRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowProductionHistRow);
+                return rowProductionHistRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                ProductionHistDataTable cln = ((ProductionHistDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new ProductionHistDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnCountEntries = base.Columns["CountEntries"];
+                this.columnSOPNUMBE = base.Columns["SOPNUMBE"];
+                this.columnITEMNMBR = base.Columns["ITEMNMBR"];
+                this.columnITEMTYPE = base.Columns["ITEMTYPE"];
+                this.columnITEMMJ = base.Columns["ITEMMJ"];
+                this.columnORD = base.Columns["ORD"];
+                this.columnTIMEPREP = base.Columns["TIMEPREP"];
+                this.columnTIMEUNIT = base.Columns["TIMEUNIT"];
+                this.columnTIMESTART = base.Columns["TIMESTART"];
+                this.columnTIMESTOP = base.Columns["TIMESTOP"];
+                this.columnTIMECOR = base.Columns["TIMECOR"];
+                this.columnTIMECRID = base.Columns["TIMECRID"];
+                this.columnid = base.Columns["id"];
+                this.columnloginid = base.Columns["loginid"];
+                this.columnmachineid = base.Columns["machineid"];
+                this.columndateeve = base.Columns["dateeve"];
+                this.columnqty = base.Columns["qty"];
+                this.columnqtyReal = base.Columns["qtyReal"];
+                this.columnQTYPACK = base.Columns["QTYPACK"];
+                this.columnQTYPACKMJ = base.Columns["QTYPACKMJ"];
+                this.columndescription = base.Columns["description"];
+                this.columnBarcodeP = base.Columns["BarcodeP"];
+                this.columnUserID = base.Columns["UserID"];
+                this.columnTermID = base.Columns["TermID"];
+                this.columnISOK = base.Columns["ISOK"];
+                this.columnGUID = base.Columns["GUID"];
+                this.columnTIMEMODE = base.Columns["TIMEMODE"];
+                this.columnTIMEPREPSTART = base.Columns["TIMEPREPSTART"];
+                this.columnTIMEPREPSTOP = base.Columns["TIMEPREPSTOP"];
+                this.columnTIMECORSTART = base.Columns["TIMECORSTART"];
+                this.columnTIMECORSTOP = base.Columns["TIMECORSTOP"];
+                this.columnoperationid = base.Columns["operationid"];
+                this.columnSOUBEHGUID = base.Columns["SOUBEHGUID"];
+                this.columnfirstname = base.Columns["firstname"];
+                this.columnsurname = base.Columns["surname"];
+                this.columnoperationName = base.Columns["operationName"];
+                this.columnmachineName = base.Columns["machineName"];
+                this.columnCORRGUID = base.Columns["CORRGUID"];
+                this.columnTIMECRIDTYPE = base.Columns["TIMECRIDTYPE"];
+                this.columnTIMECRIDName = base.Columns["TIMECRIDName"];
+                this.columnNMBRPAL = base.Columns["NMBRPAL"];
+                this.columnTYPEPAL = base.Columns["TYPEPAL"];
+                this.columnPackType = base.Columns["PackType"];
+                this.columnstatus = base.Columns["status"];
+                this.columnWEIGHT = base.Columns["WEIGHT"];
+                this.columnSTORNOGUID = base.Columns["STORNOGUID"];
+                this.columnREZ_1 = base.Columns["REZ_1"];
+                this.columnREZ_2 = base.Columns["REZ_2"];
+                this.columnREZ_3 = base.Columns["REZ_3"];
+                this.columnREZ_4 = base.Columns["REZ_4"];
+                this.columnREZ_5 = base.Columns["REZ_5"];
+                this.columnWEIGHT_OLD = base.Columns["WEIGHT_OLD"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnCountEntries = new global::System.Data.DataColumn("CountEntries", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCountEntries);
+                this.columnSOPNUMBE = new global::System.Data.DataColumn("SOPNUMBE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSOPNUMBE);
+                this.columnITEMNMBR = new global::System.Data.DataColumn("ITEMNMBR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMNMBR);
+                this.columnITEMTYPE = new global::System.Data.DataColumn("ITEMTYPE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMTYPE);
+                this.columnITEMMJ = new global::System.Data.DataColumn("ITEMMJ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMMJ);
+                this.columnORD = new global::System.Data.DataColumn("ORD", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnORD);
+                this.columnTIMEPREP = new global::System.Data.DataColumn("TIMEPREP", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEPREP);
+                this.columnTIMEUNIT = new global::System.Data.DataColumn("TIMEUNIT", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEUNIT);
+                this.columnTIMESTART = new global::System.Data.DataColumn("TIMESTART", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMESTART);
+                this.columnTIMESTOP = new global::System.Data.DataColumn("TIMESTOP", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMESTOP);
+                this.columnTIMECOR = new global::System.Data.DataColumn("TIMECOR", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMECOR);
+                this.columnTIMECRID = new global::System.Data.DataColumn("TIMECRID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMECRID);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columnloginid = new global::System.Data.DataColumn("loginid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnloginid);
+                this.columnmachineid = new global::System.Data.DataColumn("machineid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmachineid);
+                this.columndateeve = new global::System.Data.DataColumn("dateeve", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndateeve);
+                this.columnqty = new global::System.Data.DataColumn("qty", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnqty);
+                this.columnqtyReal = new global::System.Data.DataColumn("qtyReal", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnqtyReal);
+                this.columnQTYPACK = new global::System.Data.DataColumn("QTYPACK", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTYPACK);
+                this.columnQTYPACKMJ = new global::System.Data.DataColumn("QTYPACKMJ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTYPACKMJ);
+                this.columndescription = new global::System.Data.DataColumn("description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescription);
+                this.columnBarcodeP = new global::System.Data.DataColumn("BarcodeP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBarcodeP);
+                this.columnUserID = new global::System.Data.DataColumn("UserID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserID);
+                this.columnTermID = new global::System.Data.DataColumn("TermID", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTermID);
+                this.columnISOK = new global::System.Data.DataColumn("ISOK", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnISOK);
+                this.columnGUID = new global::System.Data.DataColumn("GUID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGUID);
+                this.columnTIMEMODE = new global::System.Data.DataColumn("TIMEMODE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEMODE);
+                this.columnTIMEPREPSTART = new global::System.Data.DataColumn("TIMEPREPSTART", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEPREPSTART);
+                this.columnTIMEPREPSTOP = new global::System.Data.DataColumn("TIMEPREPSTOP", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEPREPSTOP);
+                this.columnTIMECORSTART = new global::System.Data.DataColumn("TIMECORSTART", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMECORSTART);
+                this.columnTIMECORSTOP = new global::System.Data.DataColumn("TIMECORSTOP", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMECORSTOP);
+                this.columnoperationid = new global::System.Data.DataColumn("operationid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnoperationid);
+                this.columnSOUBEHGUID = new global::System.Data.DataColumn("SOUBEHGUID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSOUBEHGUID);
+                this.columnfirstname = new global::System.Data.DataColumn("firstname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfirstname);
+                this.columnsurname = new global::System.Data.DataColumn("surname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsurname);
+                this.columnoperationName = new global::System.Data.DataColumn("operationName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnoperationName);
+                this.columnmachineName = new global::System.Data.DataColumn("machineName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmachineName);
+                this.columnCORRGUID = new global::System.Data.DataColumn("CORRGUID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCORRGUID);
+                this.columnTIMECRIDTYPE = new global::System.Data.DataColumn("TIMECRIDTYPE", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMECRIDTYPE);
+                this.columnTIMECRIDName = new global::System.Data.DataColumn("TIMECRIDName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMECRIDName);
+                this.columnNMBRPAL = new global::System.Data.DataColumn("NMBRPAL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNMBRPAL);
+                this.columnTYPEPAL = new global::System.Data.DataColumn("TYPEPAL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTYPEPAL);
+                this.columnPackType = new global::System.Data.DataColumn("PackType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPackType);
+                this.columnstatus = new global::System.Data.DataColumn("status", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstatus);
+                this.columnWEIGHT = new global::System.Data.DataColumn("WEIGHT", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWEIGHT);
+                this.columnSTORNOGUID = new global::System.Data.DataColumn("STORNOGUID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSTORNOGUID);
+                this.columnREZ_1 = new global::System.Data.DataColumn("REZ_1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_1);
+                this.columnREZ_2 = new global::System.Data.DataColumn("REZ_2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_2);
+                this.columnREZ_3 = new global::System.Data.DataColumn("REZ_3", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_3);
+                this.columnREZ_4 = new global::System.Data.DataColumn("REZ_4", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_4);
+                this.columnREZ_5 = new global::System.Data.DataColumn("REZ_5", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_5);
+                this.columnWEIGHT_OLD = new global::System.Data.DataColumn("WEIGHT_OLD", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWEIGHT_OLD);
+                this.columnloginid.AllowDBNull = false;
+                this.columndateeve.AllowDBNull = false;
+                this.columnqty.AllowDBNull = false;
+                this.columnqtyReal.AllowDBNull = false;
+                this.columnUserID.AllowDBNull = false;
+                this.columnTermID.AllowDBNull = false;
+                this.columnGUID.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public ProductionHistRow NewProductionHistRow() {
+                return ((ProductionHistRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new ProductionHistRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(ProductionHistRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.ProductionHistRowChanged != null)) {
+                    this.ProductionHistRowChanged(this, new ProductionHistRowChangeEvent(((ProductionHistRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.ProductionHistRowChanging != null)) {
+                    this.ProductionHistRowChanging(this, new ProductionHistRowChangeEvent(((ProductionHistRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.ProductionHistRowDeleted != null)) {
+                    this.ProductionHistRowDeleted(this, new ProductionHistRowChangeEvent(((ProductionHistRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.ProductionHistRowDeleting != null)) {
+                    this.ProductionHistRowDeleting(this, new ProductionHistRowChangeEvent(((ProductionHistRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveProductionHistRow(ProductionHistRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "ProductionHistDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Production_origDataTable : global::System.Data.TypedTableBase<Production_origRow> {
+            
+            private global::System.Data.DataColumn columnCountEntries;
+            
+            private global::System.Data.DataColumn columnSOPNUMBE;
+            
+            private global::System.Data.DataColumn columnITEMNMBR;
+            
+            private global::System.Data.DataColumn columnORD;
+            
+            private global::System.Data.DataColumn columnTIMEPREP;
+            
+            private global::System.Data.DataColumn columnTIMEUNIT;
+            
+            private global::System.Data.DataColumn columnTIMESTART;
+            
+            private global::System.Data.DataColumn columnTIMESTOP;
+            
+            private global::System.Data.DataColumn columnTIMECOR;
+            
+            private global::System.Data.DataColumn columnTIMECRID;
+            
+            private global::System.Data.DataColumn columnid;
+            
+            private global::System.Data.DataColumn columnloginid;
+            
+            private global::System.Data.DataColumn columnmachineid;
+            
+            private global::System.Data.DataColumn columndateeve;
+            
+            private global::System.Data.DataColumn columnqty;
+            
+            private global::System.Data.DataColumn columnqtyReal;
+            
+            private global::System.Data.DataColumn columndescription;
+            
+            private global::System.Data.DataColumn columnBarcodeP;
+            
+            private global::System.Data.DataColumn columnUserID;
+            
+            private global::System.Data.DataColumn columnTermID;
+            
+            private global::System.Data.DataColumn columnISOK;
+            
+            private global::System.Data.DataColumn columnGUID;
+            
+            private global::System.Data.DataColumn columnITEMTYPE;
+            
+            private global::System.Data.DataColumn columnITEMMJ;
+            
+            private global::System.Data.DataColumn columnQTYPACK;
+            
+            private global::System.Data.DataColumn columnQTYPACKMJ;
+            
+            private global::System.Data.DataColumn columnTIMEMODE;
+            
+            private global::System.Data.DataColumn columnTIMEPREPSTART;
+            
+            private global::System.Data.DataColumn columnTIMEPREPSTOP;
+            
+            private global::System.Data.DataColumn columnTIMECORSTART;
+            
+            private global::System.Data.DataColumn columnTIMECORSTOP;
+            
+            private global::System.Data.DataColumn columnoperationid;
+            
+            private global::System.Data.DataColumn columnSOUBEHGUID;
+            
+            private global::System.Data.DataColumn columnCORRGUID;
+            
+            private global::System.Data.DataColumn columnNMBRPAL;
+            
+            private global::System.Data.DataColumn columnTYPEPAL;
+            
+            private global::System.Data.DataColumn columnPackType;
+            
+            private global::System.Data.DataColumn columnstatus;
+            
+            private global::System.Data.DataColumn columnWEIGHT;
+            
+            private global::System.Data.DataColumn columnSTORNOGUID;
+            
+            private global::System.Data.DataColumn columnREZ_1;
+            
+            private global::System.Data.DataColumn columnREZ_2;
+            
+            private global::System.Data.DataColumn columnREZ_3;
+            
+            private global::System.Data.DataColumn columnREZ_4;
+            
+            private global::System.Data.DataColumn columnREZ_5;
+            
+            private global::System.Data.DataColumn columnWEIGHT_OLD;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_origDataTable() {
+                this.TableName = "Production_orig";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal Production_origDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CountEntriesColumn {
+                get {
+                    return this.columnCountEntries;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SOPNUMBEColumn {
+                get {
+                    return this.columnSOPNUMBE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMNMBRColumn {
+                get {
+                    return this.columnITEMNMBR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ORDColumn {
+                get {
+                    return this.columnORD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEPREPColumn {
+                get {
+                    return this.columnTIMEPREP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEUNITColumn {
+                get {
+                    return this.columnTIMEUNIT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMESTARTColumn {
+                get {
+                    return this.columnTIMESTART;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMESTOPColumn {
+                get {
+                    return this.columnTIMESTOP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMECORColumn {
+                get {
+                    return this.columnTIMECOR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMECRIDColumn {
+                get {
+                    return this.columnTIMECRID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn loginidColumn {
+                get {
+                    return this.columnloginid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn machineidColumn {
+                get {
+                    return this.columnmachineid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn dateeveColumn {
+                get {
+                    return this.columndateeve;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn qtyColumn {
+                get {
+                    return this.columnqty;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn qtyRealColumn {
+                get {
+                    return this.columnqtyReal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn descriptionColumn {
+                get {
+                    return this.columndescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn BarcodePColumn {
+                get {
+                    return this.columnBarcodeP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn UserIDColumn {
+                get {
+                    return this.columnUserID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TermIDColumn {
+                get {
+                    return this.columnTermID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ISOKColumn {
+                get {
+                    return this.columnISOK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn GUIDColumn {
+                get {
+                    return this.columnGUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMTYPEColumn {
+                get {
+                    return this.columnITEMTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMMJColumn {
+                get {
+                    return this.columnITEMMJ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYPACKColumn {
+                get {
+                    return this.columnQTYPACK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYPACKMJColumn {
+                get {
+                    return this.columnQTYPACKMJ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEMODEColumn {
+                get {
+                    return this.columnTIMEMODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEPREPSTARTColumn {
+                get {
+                    return this.columnTIMEPREPSTART;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMEPREPSTOPColumn {
+                get {
+                    return this.columnTIMEPREPSTOP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMECORSTARTColumn {
+                get {
+                    return this.columnTIMECORSTART;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TIMECORSTOPColumn {
+                get {
+                    return this.columnTIMECORSTOP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn operationidColumn {
+                get {
+                    return this.columnoperationid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SOUBEHGUIDColumn {
+                get {
+                    return this.columnSOUBEHGUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CORRGUIDColumn {
+                get {
+                    return this.columnCORRGUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn NMBRPALColumn {
+                get {
+                    return this.columnNMBRPAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TYPEPALColumn {
+                get {
+                    return this.columnTYPEPAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn PackTypeColumn {
+                get {
+                    return this.columnPackType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn statusColumn {
+                get {
+                    return this.columnstatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn WEIGHTColumn {
+                get {
+                    return this.columnWEIGHT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn STORNOGUIDColumn {
+                get {
+                    return this.columnSTORNOGUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_1Column {
+                get {
+                    return this.columnREZ_1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_2Column {
+                get {
+                    return this.columnREZ_2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_3Column {
+                get {
+                    return this.columnREZ_3;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_4Column {
+                get {
+                    return this.columnREZ_4;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_5Column {
+                get {
+                    return this.columnREZ_5;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn WEIGHT_OLDColumn {
+                get {
+                    return this.columnWEIGHT_OLD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_origRow this[int index] {
+                get {
+                    return ((Production_origRow)(this.Rows[index]));
+                }
+            }
+            
+            public event Production_origRowChangeEventHandler Production_origRowChanging;
+            
+            public event Production_origRowChangeEventHandler Production_origRowChanged;
+            
+            public event Production_origRowChangeEventHandler Production_origRowDeleting;
+            
+            public event Production_origRowChangeEventHandler Production_origRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddProduction_origRow(Production_origRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_origRow AddProduction_origRow(
+                        int CountEntries, 
+                        string SOPNUMBE, 
+                        string ITEMNMBR, 
+                        int ORD, 
+                        float TIMEPREP, 
+                        float TIMEUNIT, 
+                        System.DateTime TIMESTART, 
+                        System.DateTime TIMESTOP, 
+                        float TIMECOR, 
+                        int TIMECRID, 
+                        int id, 
+                        string loginid, 
+                        string machineid, 
+                        System.DateTime dateeve, 
+                        decimal qty, 
+                        decimal qtyReal, 
+                        string description, 
+                        string BarcodeP, 
+                        string UserID, 
+                        byte TermID, 
+                        System.DateTime ISOK, 
+                        System.Guid GUID, 
+                        string ITEMTYPE, 
+                        string ITEMMJ, 
+                        decimal QTYPACK, 
+                        string QTYPACKMJ, 
+                        int TIMEMODE, 
+                        System.DateTime TIMEPREPSTART, 
+                        System.DateTime TIMEPREPSTOP, 
+                        System.DateTime TIMECORSTART, 
+                        System.DateTime TIMECORSTOP, 
+                        string operationid, 
+                        System.Guid SOUBEHGUID, 
+                        System.Guid CORRGUID, 
+                        string NMBRPAL, 
+                        string TYPEPAL, 
+                        string PackType, 
+                        int status, 
+                        decimal WEIGHT, 
+                        System.Guid STORNOGUID, 
+                        string REZ_1, 
+                        string REZ_2, 
+                        string REZ_3, 
+                        string REZ_4, 
+                        string REZ_5, 
+                        decimal WEIGHT_OLD) {
+                Production_origRow rowProduction_origRow = ((Production_origRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        CountEntries,
+                        SOPNUMBE,
+                        ITEMNMBR,
+                        ORD,
+                        TIMEPREP,
+                        TIMEUNIT,
+                        TIMESTART,
+                        TIMESTOP,
+                        TIMECOR,
+                        TIMECRID,
+                        id,
+                        loginid,
+                        machineid,
+                        dateeve,
+                        qty,
+                        qtyReal,
+                        description,
+                        BarcodeP,
+                        UserID,
+                        TermID,
+                        ISOK,
+                        GUID,
+                        ITEMTYPE,
+                        ITEMMJ,
+                        QTYPACK,
+                        QTYPACKMJ,
+                        TIMEMODE,
+                        TIMEPREPSTART,
+                        TIMEPREPSTOP,
+                        TIMECORSTART,
+                        TIMECORSTOP,
+                        operationid,
+                        SOUBEHGUID,
+                        CORRGUID,
+                        NMBRPAL,
+                        TYPEPAL,
+                        PackType,
+                        status,
+                        WEIGHT,
+                        STORNOGUID,
+                        REZ_1,
+                        REZ_2,
+                        REZ_3,
+                        REZ_4,
+                        REZ_5,
+                        WEIGHT_OLD};
+                rowProduction_origRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowProduction_origRow);
+                return rowProduction_origRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                Production_origDataTable cln = ((Production_origDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Production_origDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnCountEntries = base.Columns["CountEntries"];
+                this.columnSOPNUMBE = base.Columns["SOPNUMBE"];
+                this.columnITEMNMBR = base.Columns["ITEMNMBR"];
+                this.columnORD = base.Columns["ORD"];
+                this.columnTIMEPREP = base.Columns["TIMEPREP"];
+                this.columnTIMEUNIT = base.Columns["TIMEUNIT"];
+                this.columnTIMESTART = base.Columns["TIMESTART"];
+                this.columnTIMESTOP = base.Columns["TIMESTOP"];
+                this.columnTIMECOR = base.Columns["TIMECOR"];
+                this.columnTIMECRID = base.Columns["TIMECRID"];
+                this.columnid = base.Columns["id"];
+                this.columnloginid = base.Columns["loginid"];
+                this.columnmachineid = base.Columns["machineid"];
+                this.columndateeve = base.Columns["dateeve"];
+                this.columnqty = base.Columns["qty"];
+                this.columnqtyReal = base.Columns["qtyReal"];
+                this.columndescription = base.Columns["description"];
+                this.columnBarcodeP = base.Columns["BarcodeP"];
+                this.columnUserID = base.Columns["UserID"];
+                this.columnTermID = base.Columns["TermID"];
+                this.columnISOK = base.Columns["ISOK"];
+                this.columnGUID = base.Columns["GUID"];
+                this.columnITEMTYPE = base.Columns["ITEMTYPE"];
+                this.columnITEMMJ = base.Columns["ITEMMJ"];
+                this.columnQTYPACK = base.Columns["QTYPACK"];
+                this.columnQTYPACKMJ = base.Columns["QTYPACKMJ"];
+                this.columnTIMEMODE = base.Columns["TIMEMODE"];
+                this.columnTIMEPREPSTART = base.Columns["TIMEPREPSTART"];
+                this.columnTIMEPREPSTOP = base.Columns["TIMEPREPSTOP"];
+                this.columnTIMECORSTART = base.Columns["TIMECORSTART"];
+                this.columnTIMECORSTOP = base.Columns["TIMECORSTOP"];
+                this.columnoperationid = base.Columns["operationid"];
+                this.columnSOUBEHGUID = base.Columns["SOUBEHGUID"];
+                this.columnCORRGUID = base.Columns["CORRGUID"];
+                this.columnNMBRPAL = base.Columns["NMBRPAL"];
+                this.columnTYPEPAL = base.Columns["TYPEPAL"];
+                this.columnPackType = base.Columns["PackType"];
+                this.columnstatus = base.Columns["status"];
+                this.columnWEIGHT = base.Columns["WEIGHT"];
+                this.columnSTORNOGUID = base.Columns["STORNOGUID"];
+                this.columnREZ_1 = base.Columns["REZ_1"];
+                this.columnREZ_2 = base.Columns["REZ_2"];
+                this.columnREZ_3 = base.Columns["REZ_3"];
+                this.columnREZ_4 = base.Columns["REZ_4"];
+                this.columnREZ_5 = base.Columns["REZ_5"];
+                this.columnWEIGHT_OLD = base.Columns["WEIGHT_OLD"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnCountEntries = new global::System.Data.DataColumn("CountEntries", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCountEntries);
+                this.columnSOPNUMBE = new global::System.Data.DataColumn("SOPNUMBE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSOPNUMBE);
+                this.columnITEMNMBR = new global::System.Data.DataColumn("ITEMNMBR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMNMBR);
+                this.columnORD = new global::System.Data.DataColumn("ORD", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnORD);
+                this.columnTIMEPREP = new global::System.Data.DataColumn("TIMEPREP", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEPREP);
+                this.columnTIMEUNIT = new global::System.Data.DataColumn("TIMEUNIT", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEUNIT);
+                this.columnTIMESTART = new global::System.Data.DataColumn("TIMESTART", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMESTART);
+                this.columnTIMESTOP = new global::System.Data.DataColumn("TIMESTOP", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMESTOP);
+                this.columnTIMECOR = new global::System.Data.DataColumn("TIMECOR", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMECOR);
+                this.columnTIMECRID = new global::System.Data.DataColumn("TIMECRID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMECRID);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columnloginid = new global::System.Data.DataColumn("loginid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnloginid);
+                this.columnmachineid = new global::System.Data.DataColumn("machineid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmachineid);
+                this.columndateeve = new global::System.Data.DataColumn("dateeve", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndateeve);
+                this.columnqty = new global::System.Data.DataColumn("qty", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnqty);
+                this.columnqtyReal = new global::System.Data.DataColumn("qtyReal", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnqtyReal);
+                this.columndescription = new global::System.Data.DataColumn("description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescription);
+                this.columnBarcodeP = new global::System.Data.DataColumn("BarcodeP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBarcodeP);
+                this.columnUserID = new global::System.Data.DataColumn("UserID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserID);
+                this.columnTermID = new global::System.Data.DataColumn("TermID", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTermID);
+                this.columnISOK = new global::System.Data.DataColumn("ISOK", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnISOK);
+                this.columnGUID = new global::System.Data.DataColumn("GUID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGUID);
+                this.columnITEMTYPE = new global::System.Data.DataColumn("ITEMTYPE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMTYPE);
+                this.columnITEMMJ = new global::System.Data.DataColumn("ITEMMJ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMMJ);
+                this.columnQTYPACK = new global::System.Data.DataColumn("QTYPACK", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTYPACK);
+                this.columnQTYPACKMJ = new global::System.Data.DataColumn("QTYPACKMJ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTYPACKMJ);
+                this.columnTIMEMODE = new global::System.Data.DataColumn("TIMEMODE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEMODE);
+                this.columnTIMEPREPSTART = new global::System.Data.DataColumn("TIMEPREPSTART", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEPREPSTART);
+                this.columnTIMEPREPSTOP = new global::System.Data.DataColumn("TIMEPREPSTOP", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMEPREPSTOP);
+                this.columnTIMECORSTART = new global::System.Data.DataColumn("TIMECORSTART", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMECORSTART);
+                this.columnTIMECORSTOP = new global::System.Data.DataColumn("TIMECORSTOP", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMECORSTOP);
+                this.columnoperationid = new global::System.Data.DataColumn("operationid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnoperationid);
+                this.columnSOUBEHGUID = new global::System.Data.DataColumn("SOUBEHGUID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSOUBEHGUID);
+                this.columnCORRGUID = new global::System.Data.DataColumn("CORRGUID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCORRGUID);
+                this.columnNMBRPAL = new global::System.Data.DataColumn("NMBRPAL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNMBRPAL);
+                this.columnTYPEPAL = new global::System.Data.DataColumn("TYPEPAL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTYPEPAL);
+                this.columnPackType = new global::System.Data.DataColumn("PackType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPackType);
+                this.columnstatus = new global::System.Data.DataColumn("status", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstatus);
+                this.columnWEIGHT = new global::System.Data.DataColumn("WEIGHT", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWEIGHT);
+                this.columnSTORNOGUID = new global::System.Data.DataColumn("STORNOGUID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSTORNOGUID);
+                this.columnREZ_1 = new global::System.Data.DataColumn("REZ_1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_1);
+                this.columnREZ_2 = new global::System.Data.DataColumn("REZ_2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_2);
+                this.columnREZ_3 = new global::System.Data.DataColumn("REZ_3", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_3);
+                this.columnREZ_4 = new global::System.Data.DataColumn("REZ_4", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_4);
+                this.columnREZ_5 = new global::System.Data.DataColumn("REZ_5", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_5);
+                this.columnWEIGHT_OLD = new global::System.Data.DataColumn("WEIGHT_OLD", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWEIGHT_OLD);
+                this.columnloginid.AllowDBNull = false;
+                this.columndateeve.AllowDBNull = false;
+                this.columnqty.AllowDBNull = false;
+                this.columnqtyReal.AllowDBNull = false;
+                this.columnUserID.AllowDBNull = false;
+                this.columnTermID.AllowDBNull = false;
+                this.columnGUID.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_origRow NewProduction_origRow() {
+                return ((Production_origRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Production_origRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(Production_origRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Production_origRowChanged != null)) {
+                    this.Production_origRowChanged(this, new Production_origRowChangeEvent(((Production_origRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Production_origRowChanging != null)) {
+                    this.Production_origRowChanging(this, new Production_origRowChangeEvent(((Production_origRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Production_origRowDeleted != null)) {
+                    this.Production_origRowDeleted(this, new Production_origRowChangeEvent(((Production_origRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Production_origRowDeleting != null)) {
+                    this.Production_origRowDeleting(this, new Production_origRowChangeEvent(((Production_origRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveProduction_origRow(Production_origRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Production_origDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Production_updateDataTable : global::System.Data.TypedTableBase<Production_updateRow> {
+            
+            private global::System.Data.DataColumn columnCountEntries;
+            
+            private global::System.Data.DataColumn columnSOPNUMBE;
+            
+            private global::System.Data.DataColumn columnITEMNMBR;
+            
+            private global::System.Data.DataColumn columnORD;
+            
+            private global::System.Data.DataColumn columnITEMTYPE;
+            
+            private global::System.Data.DataColumn columnQTYPACK;
+            
+            private global::System.Data.DataColumn columnQTYODVEDENO;
+            
+            private global::System.Data.DataColumn columnCNTODVEDENO;
+            
+            private global::System.Data.DataColumn columnLSTMod;
+            
+            private global::System.Data.DataColumn columnBarcodeP;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_updateDataTable() {
+                this.TableName = "Production_update";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal Production_updateDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CountEntriesColumn {
+                get {
+                    return this.columnCountEntries;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SOPNUMBEColumn {
+                get {
+                    return this.columnSOPNUMBE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMNMBRColumn {
+                get {
+                    return this.columnITEMNMBR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ORDColumn {
+                get {
+                    return this.columnORD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMTYPEColumn {
+                get {
+                    return this.columnITEMTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYPACKColumn {
+                get {
+                    return this.columnQTYPACK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYODVEDENOColumn {
+                get {
+                    return this.columnQTYODVEDENO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CNTODVEDENOColumn {
+                get {
+                    return this.columnCNTODVEDENO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn LSTModColumn {
+                get {
+                    return this.columnLSTMod;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn BarcodePColumn {
+                get {
+                    return this.columnBarcodeP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_updateRow this[int index] {
+                get {
+                    return ((Production_updateRow)(this.Rows[index]));
+                }
+            }
+            
+            public event Production_updateRowChangeEventHandler Production_updateRowChanging;
+            
+            public event Production_updateRowChangeEventHandler Production_updateRowChanged;
+            
+            public event Production_updateRowChangeEventHandler Production_updateRowDeleting;
+            
+            public event Production_updateRowChangeEventHandler Production_updateRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddProduction_updateRow(Production_updateRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_updateRow AddProduction_updateRow(int CountEntries, string SOPNUMBE, string ITEMNMBR, int ORD, string ITEMTYPE, decimal QTYPACK, decimal QTYODVEDENO, decimal CNTODVEDENO, System.DateTime LSTMod, string BarcodeP) {
+                Production_updateRow rowProduction_updateRow = ((Production_updateRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        CountEntries,
+                        SOPNUMBE,
+                        ITEMNMBR,
+                        ORD,
+                        ITEMTYPE,
+                        QTYPACK,
+                        QTYODVEDENO,
+                        CNTODVEDENO,
+                        LSTMod,
+                        BarcodeP};
+                rowProduction_updateRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowProduction_updateRow);
+                return rowProduction_updateRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                Production_updateDataTable cln = ((Production_updateDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Production_updateDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnCountEntries = base.Columns["CountEntries"];
+                this.columnSOPNUMBE = base.Columns["SOPNUMBE"];
+                this.columnITEMNMBR = base.Columns["ITEMNMBR"];
+                this.columnORD = base.Columns["ORD"];
+                this.columnITEMTYPE = base.Columns["ITEMTYPE"];
+                this.columnQTYPACK = base.Columns["QTYPACK"];
+                this.columnQTYODVEDENO = base.Columns["QTYODVEDENO"];
+                this.columnCNTODVEDENO = base.Columns["CNTODVEDENO"];
+                this.columnLSTMod = base.Columns["LSTMod"];
+                this.columnBarcodeP = base.Columns["BarcodeP"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnCountEntries = new global::System.Data.DataColumn("CountEntries", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCountEntries);
+                this.columnSOPNUMBE = new global::System.Data.DataColumn("SOPNUMBE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSOPNUMBE);
+                this.columnITEMNMBR = new global::System.Data.DataColumn("ITEMNMBR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMNMBR);
+                this.columnORD = new global::System.Data.DataColumn("ORD", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnORD);
+                this.columnITEMTYPE = new global::System.Data.DataColumn("ITEMTYPE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMTYPE);
+                this.columnQTYPACK = new global::System.Data.DataColumn("QTYPACK", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTYPACK);
+                this.columnQTYODVEDENO = new global::System.Data.DataColumn("QTYODVEDENO", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTYODVEDENO);
+                this.columnCNTODVEDENO = new global::System.Data.DataColumn("CNTODVEDENO", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCNTODVEDENO);
+                this.columnLSTMod = new global::System.Data.DataColumn("LSTMod", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLSTMod);
+                this.columnBarcodeP = new global::System.Data.DataColumn("BarcodeP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBarcodeP);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_updateRow NewProduction_updateRow() {
+                return ((Production_updateRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Production_updateRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(Production_updateRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Production_updateRowChanged != null)) {
+                    this.Production_updateRowChanged(this, new Production_updateRowChangeEvent(((Production_updateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Production_updateRowChanging != null)) {
+                    this.Production_updateRowChanging(this, new Production_updateRowChangeEvent(((Production_updateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Production_updateRowDeleted != null)) {
+                    this.Production_updateRowDeleted(this, new Production_updateRowChangeEvent(((Production_updateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Production_updateRowDeleting != null)) {
+                    this.Production_updateRowDeleting(this, new Production_updateRowChangeEvent(((Production_updateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveProduction_updateRow(Production_updateRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Production_updateDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Production_SNDataTable : global::System.Data.TypedTableBase<Production_SNRow> {
+            
+            private global::System.Data.DataColumn columnGUID_Production;
+            
+            private global::System.Data.DataColumn columnSERLNMBR;
+            
+            private global::System.Data.DataColumn columnITEMNMBR;
+            
+            private global::System.Data.DataColumn columnQTY;
+            
+            private global::System.Data.DataColumn columnExpirace;
+            
+            private global::System.Data.DataColumn columnREZ_1;
+            
+            private global::System.Data.DataColumn columnREZ_2;
+            
+            private global::System.Data.DataColumn columnREZ_3;
+            
+            private global::System.Data.DataColumn columnREZ_4;
+            
+            private global::System.Data.DataColumn columnGUID;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_SNDataTable() {
+                this.TableName = "Production_SN";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal Production_SNDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn GUID_ProductionColumn {
+                get {
+                    return this.columnGUID_Production;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SERLNMBRColumn {
+                get {
+                    return this.columnSERLNMBR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ITEMNMBRColumn {
+                get {
+                    return this.columnITEMNMBR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn QTYColumn {
+                get {
+                    return this.columnQTY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ExpiraceColumn {
+                get {
+                    return this.columnExpirace;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_1Column {
+                get {
+                    return this.columnREZ_1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_2Column {
+                get {
+                    return this.columnREZ_2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_3Column {
+                get {
+                    return this.columnREZ_3;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn REZ_4Column {
+                get {
+                    return this.columnREZ_4;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn GUIDColumn {
+                get {
+                    return this.columnGUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_SNRow this[int index] {
+                get {
+                    return ((Production_SNRow)(this.Rows[index]));
+                }
+            }
+            
+            public event Production_SNRowChangeEventHandler Production_SNRowChanging;
+            
+            public event Production_SNRowChangeEventHandler Production_SNRowChanged;
+            
+            public event Production_SNRowChangeEventHandler Production_SNRowDeleting;
+            
+            public event Production_SNRowChangeEventHandler Production_SNRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddProduction_SNRow(Production_SNRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_SNRow AddProduction_SNRow(System.Guid GUID_Production, string SERLNMBR, string ITEMNMBR, decimal QTY, System.DateTime Expirace, string REZ_1, string REZ_2, string REZ_3, string REZ_4, System.Guid GUID) {
+                Production_SNRow rowProduction_SNRow = ((Production_SNRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        GUID_Production,
+                        SERLNMBR,
+                        ITEMNMBR,
+                        QTY,
+                        Expirace,
+                        REZ_1,
+                        REZ_2,
+                        REZ_3,
+                        REZ_4,
+                        GUID};
+                rowProduction_SNRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowProduction_SNRow);
+                return rowProduction_SNRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                Production_SNDataTable cln = ((Production_SNDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Production_SNDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnGUID_Production = base.Columns["GUID_Production"];
+                this.columnSERLNMBR = base.Columns["SERLNMBR"];
+                this.columnITEMNMBR = base.Columns["ITEMNMBR"];
+                this.columnQTY = base.Columns["QTY"];
+                this.columnExpirace = base.Columns["Expirace"];
+                this.columnREZ_1 = base.Columns["REZ_1"];
+                this.columnREZ_2 = base.Columns["REZ_2"];
+                this.columnREZ_3 = base.Columns["REZ_3"];
+                this.columnREZ_4 = base.Columns["REZ_4"];
+                this.columnGUID = base.Columns["GUID"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnGUID_Production = new global::System.Data.DataColumn("GUID_Production", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGUID_Production);
+                this.columnSERLNMBR = new global::System.Data.DataColumn("SERLNMBR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSERLNMBR);
+                this.columnITEMNMBR = new global::System.Data.DataColumn("ITEMNMBR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEMNMBR);
+                this.columnQTY = new global::System.Data.DataColumn("QTY", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTY);
+                this.columnExpirace = new global::System.Data.DataColumn("Expirace", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpirace);
+                this.columnREZ_1 = new global::System.Data.DataColumn("REZ_1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_1);
+                this.columnREZ_2 = new global::System.Data.DataColumn("REZ_2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_2);
+                this.columnREZ_3 = new global::System.Data.DataColumn("REZ_3", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_3);
+                this.columnREZ_4 = new global::System.Data.DataColumn("REZ_4", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnREZ_4);
+                this.columnGUID = new global::System.Data.DataColumn("GUID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGUID);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_SNRow NewProduction_SNRow() {
+                return ((Production_SNRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Production_SNRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(Production_SNRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Production_SNRowChanged != null)) {
+                    this.Production_SNRowChanged(this, new Production_SNRowChangeEvent(((Production_SNRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Production_SNRowChanging != null)) {
+                    this.Production_SNRowChanging(this, new Production_SNRowChangeEvent(((Production_SNRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Production_SNRowDeleted != null)) {
+                    this.Production_SNRowDeleted(this, new Production_SNRowChangeEvent(((Production_SNRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Production_SNRowDeleting != null)) {
+                    this.Production_SNRowDeleting(this, new Production_SNRowChangeEvent(((Production_SNRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveProduction_SNRow(Production_SNRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Vyroba ds = new Vyroba();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Production_SNDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Production_OldRow : global::System.Data.DataRow {
+            
+            private Production_OldDataTable tableProduction_Old;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal Production_OldRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableProduction_Old = ((Production_OldDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int CountEntries {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction_Old.CountEntriesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CountEntries\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.CountEntriesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string SOPNUMBE {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Old.SOPNUMBEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SOPNUMBE\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.SOPNUMBEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMNMBR {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Old.ITEMNMBRColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMNMBR\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.ITEMNMBRColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int ORD {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction_Old.ORDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ORD\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.ORDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public float TIMEPREP {
+                get {
+                    try {
+                        return ((float)(this[this.tableProduction_Old.TIMEPREPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEPREP\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.TIMEPREPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public float TIMEUNIT {
+                get {
+                    try {
+                        return ((float)(this[this.tableProduction_Old.TIMEUNITColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEUNIT\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.TIMEUNITColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMESTART {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction_Old.TIMESTARTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMESTART\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.TIMESTARTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMESTOP {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction_Old.TIMESTOPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMESTOP\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.TIMESTOPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public float TIMECOR {
+                get {
+                    try {
+                        return ((float)(this[this.tableProduction_Old.TIMECORColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMECOR\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.TIMECORColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int TIMECRID {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction_Old.TIMECRIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMECRID\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.TIMECRIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int id {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction_Old.idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'id\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string loginid {
+                get {
+                    return ((string)(this[this.tableProduction_Old.loginidColumn]));
+                }
+                set {
+                    this[this.tableProduction_Old.loginidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string machineid {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Old.machineidColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'machineid\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.machineidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime dateeve {
+                get {
+                    return ((global::System.DateTime)(this[this.tableProduction_Old.dateeveColumn]));
+                }
+                set {
+                    this[this.tableProduction_Old.dateeveColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal qty {
+                get {
+                    return ((decimal)(this[this.tableProduction_Old.qtyColumn]));
+                }
+                set {
+                    this[this.tableProduction_Old.qtyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal qtyReal {
+                get {
+                    return ((decimal)(this[this.tableProduction_Old.qtyRealColumn]));
+                }
+                set {
+                    this[this.tableProduction_Old.qtyRealColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string description {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Old.descriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'description\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.descriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string BarcodeP {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Old.BarcodePColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BarcodeP\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.BarcodePColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string UserID {
+                get {
+                    return ((string)(this[this.tableProduction_Old.UserIDColumn]));
+                }
+                set {
+                    this[this.tableProduction_Old.UserIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte TermID {
+                get {
+                    return ((byte)(this[this.tableProduction_Old.TermIDColumn]));
+                }
+                set {
+                    this[this.tableProduction_Old.TermIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime ISOK {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction_Old.ISOKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ISOK\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.ISOKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.Guid GUID {
+                get {
+                    return ((global::System.Guid)(this[this.tableProduction_Old.GUIDColumn]));
+                }
+                set {
+                    this[this.tableProduction_Old.GUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMTYPE {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Old.ITEMTYPEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMTYPE\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.ITEMTYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMMJ {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Old.ITEMMJColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMMJ\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.ITEMMJColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal QTYPACK {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableProduction_Old.QTYPACKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QTYPACK\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.QTYPACKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string QTYPACKMJ {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Old.QTYPACKMJColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QTYPACKMJ\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.QTYPACKMJColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int TIMEMODE {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction_Old.TIMEMODEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEMODE\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.TIMEMODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMEPREPSTART {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction_Old.TIMEPREPSTARTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEPREPSTART\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.TIMEPREPSTARTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMEPREPSTOP {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction_Old.TIMEPREPSTOPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEPREPSTOP\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.TIMEPREPSTOPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMECORSTART {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction_Old.TIMECORSTARTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMECORSTART\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.TIMECORSTARTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMECORSTOP {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction_Old.TIMECORSTOPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMECORSTOP\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.TIMECORSTOPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string NMBRPAL {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Old.NMBRPALColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NMBRPAL\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.NMBRPALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string TYPEPAL {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Old.TYPEPALColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TYPEPAL\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.TYPEPALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string PackType {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Old.PackTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PackType\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.PackTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int status {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction_Old.statusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'status\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.statusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal WEIGHT {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableProduction_Old.WEIGHTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WEIGHT\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.WEIGHTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.Guid STORNOGUID {
+                get {
+                    try {
+                        return ((global::System.Guid)(this[this.tableProduction_Old.STORNOGUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'STORNOGUID\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.STORNOGUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_1 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Old.REZ_1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_1\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.REZ_1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_2 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Old.REZ_2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_2\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.REZ_2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_3 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Old.REZ_3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_3\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.REZ_3Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_4 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Old.REZ_4Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_4\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.REZ_4Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_5 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Old.REZ_5Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_5\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.REZ_5Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal WEIGHT_OLD {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableProduction_Old.WEIGHT_OLDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WEIGHT_OLD\' in table \'Production_Old\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Old.WEIGHT_OLDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCountEntriesNull() {
+                return this.IsNull(this.tableProduction_Old.CountEntriesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCountEntriesNull() {
+                this[this.tableProduction_Old.CountEntriesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSOPNUMBENull() {
+                return this.IsNull(this.tableProduction_Old.SOPNUMBEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSOPNUMBENull() {
+                this[this.tableProduction_Old.SOPNUMBEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMNMBRNull() {
+                return this.IsNull(this.tableProduction_Old.ITEMNMBRColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMNMBRNull() {
+                this[this.tableProduction_Old.ITEMNMBRColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsORDNull() {
+                return this.IsNull(this.tableProduction_Old.ORDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetORDNull() {
+                this[this.tableProduction_Old.ORDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEPREPNull() {
+                return this.IsNull(this.tableProduction_Old.TIMEPREPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEPREPNull() {
+                this[this.tableProduction_Old.TIMEPREPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEUNITNull() {
+                return this.IsNull(this.tableProduction_Old.TIMEUNITColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEUNITNull() {
+                this[this.tableProduction_Old.TIMEUNITColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMESTARTNull() {
+                return this.IsNull(this.tableProduction_Old.TIMESTARTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMESTARTNull() {
+                this[this.tableProduction_Old.TIMESTARTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMESTOPNull() {
+                return this.IsNull(this.tableProduction_Old.TIMESTOPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMESTOPNull() {
+                this[this.tableProduction_Old.TIMESTOPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMECORNull() {
+                return this.IsNull(this.tableProduction_Old.TIMECORColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMECORNull() {
+                this[this.tableProduction_Old.TIMECORColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMECRIDNull() {
+                return this.IsNull(this.tableProduction_Old.TIMECRIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMECRIDNull() {
+                this[this.tableProduction_Old.TIMECRIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsidNull() {
+                return this.IsNull(this.tableProduction_Old.idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetidNull() {
+                this[this.tableProduction_Old.idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsmachineidNull() {
+                return this.IsNull(this.tableProduction_Old.machineidColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetmachineidNull() {
+                this[this.tableProduction_Old.machineidColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsdescriptionNull() {
+                return this.IsNull(this.tableProduction_Old.descriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetdescriptionNull() {
+                this[this.tableProduction_Old.descriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsBarcodePNull() {
+                return this.IsNull(this.tableProduction_Old.BarcodePColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetBarcodePNull() {
+                this[this.tableProduction_Old.BarcodePColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsISOKNull() {
+                return this.IsNull(this.tableProduction_Old.ISOKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetISOKNull() {
+                this[this.tableProduction_Old.ISOKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMTYPENull() {
+                return this.IsNull(this.tableProduction_Old.ITEMTYPEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMTYPENull() {
+                this[this.tableProduction_Old.ITEMTYPEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMMJNull() {
+                return this.IsNull(this.tableProduction_Old.ITEMMJColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMMJNull() {
+                this[this.tableProduction_Old.ITEMMJColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsQTYPACKNull() {
+                return this.IsNull(this.tableProduction_Old.QTYPACKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetQTYPACKNull() {
+                this[this.tableProduction_Old.QTYPACKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsQTYPACKMJNull() {
+                return this.IsNull(this.tableProduction_Old.QTYPACKMJColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetQTYPACKMJNull() {
+                this[this.tableProduction_Old.QTYPACKMJColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEMODENull() {
+                return this.IsNull(this.tableProduction_Old.TIMEMODEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEMODENull() {
+                this[this.tableProduction_Old.TIMEMODEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEPREPSTARTNull() {
+                return this.IsNull(this.tableProduction_Old.TIMEPREPSTARTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEPREPSTARTNull() {
+                this[this.tableProduction_Old.TIMEPREPSTARTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEPREPSTOPNull() {
+                return this.IsNull(this.tableProduction_Old.TIMEPREPSTOPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEPREPSTOPNull() {
+                this[this.tableProduction_Old.TIMEPREPSTOPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMECORSTARTNull() {
+                return this.IsNull(this.tableProduction_Old.TIMECORSTARTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMECORSTARTNull() {
+                this[this.tableProduction_Old.TIMECORSTARTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMECORSTOPNull() {
+                return this.IsNull(this.tableProduction_Old.TIMECORSTOPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMECORSTOPNull() {
+                this[this.tableProduction_Old.TIMECORSTOPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsNMBRPALNull() {
+                return this.IsNull(this.tableProduction_Old.NMBRPALColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetNMBRPALNull() {
+                this[this.tableProduction_Old.NMBRPALColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTYPEPALNull() {
+                return this.IsNull(this.tableProduction_Old.TYPEPALColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTYPEPALNull() {
+                this[this.tableProduction_Old.TYPEPALColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsPackTypeNull() {
+                return this.IsNull(this.tableProduction_Old.PackTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetPackTypeNull() {
+                this[this.tableProduction_Old.PackTypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsstatusNull() {
+                return this.IsNull(this.tableProduction_Old.statusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetstatusNull() {
+                this[this.tableProduction_Old.statusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsWEIGHTNull() {
+                return this.IsNull(this.tableProduction_Old.WEIGHTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetWEIGHTNull() {
+                this[this.tableProduction_Old.WEIGHTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSTORNOGUIDNull() {
+                return this.IsNull(this.tableProduction_Old.STORNOGUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSTORNOGUIDNull() {
+                this[this.tableProduction_Old.STORNOGUIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_1Null() {
+                return this.IsNull(this.tableProduction_Old.REZ_1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_1Null() {
+                this[this.tableProduction_Old.REZ_1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_2Null() {
+                return this.IsNull(this.tableProduction_Old.REZ_2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_2Null() {
+                this[this.tableProduction_Old.REZ_2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_3Null() {
+                return this.IsNull(this.tableProduction_Old.REZ_3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_3Null() {
+                this[this.tableProduction_Old.REZ_3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_4Null() {
+                return this.IsNull(this.tableProduction_Old.REZ_4Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_4Null() {
+                this[this.tableProduction_Old.REZ_4Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_5Null() {
+                return this.IsNull(this.tableProduction_Old.REZ_5Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_5Null() {
+                this[this.tableProduction_Old.REZ_5Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsWEIGHT_OLDNull() {
+                return this.IsNull(this.tableProduction_Old.WEIGHT_OLDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetWEIGHT_OLDNull() {
+                this[this.tableProduction_Old.WEIGHT_OLDColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CorrectsRow : global::System.Data.DataRow {
+            
+            private CorrectsDataTable tableCorrects;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal CorrectsRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCorrects = ((CorrectsDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int id {
+                get {
+                    try {
+                        return ((int)(this[this.tableCorrects.idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'id\' in table \'Corrects\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCorrects.idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string desc {
+                get {
+                    return ((string)(this[this.tableCorrects.descColumn]));
+                }
+                set {
+                    this[this.tableCorrects.descColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public float TMFrom {
+                get {
+                    try {
+                        return ((float)(this[this.tableCorrects.TMFromColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TMFrom\' in table \'Corrects\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCorrects.TMFromColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public float TMTo {
+                get {
+                    try {
+                        return ((float)(this[this.tableCorrects.TMToColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TMTo\' in table \'Corrects\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCorrects.TMToColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte Production {
+                get {
+                    return ((byte)(this[this.tableCorrects.ProductionColumn]));
+                }
+                set {
+                    this[this.tableCorrects.ProductionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte ProductionType {
+                get {
+                    try {
+                        return ((byte)(this[this.tableCorrects.ProductionTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ProductionType\' in table \'Corrects\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCorrects.ProductionTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsidNull() {
+                return this.IsNull(this.tableCorrects.idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetidNull() {
+                this[this.tableCorrects.idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTMFromNull() {
+                return this.IsNull(this.tableCorrects.TMFromColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTMFromNull() {
+                this[this.tableCorrects.TMFromColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTMToNull() {
+                return this.IsNull(this.tableCorrects.TMToColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTMToNull() {
+                this[this.tableCorrects.TMToColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsProductionTypeNull() {
+                return this.IsNull(this.tableCorrects.ProductionTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetProductionTypeNull() {
+                this[this.tableCorrects.ProductionTypeColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CZPRO_VPHRow : global::System.Data.DataRow {
+            
+            private CZPRO_VPHDataTable tableCZPRO_VPH;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal CZPRO_VPHRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCZPRO_VPH = ((CZPRO_VPHDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int CountEntries {
+                get {
+                    return ((int)(this[this.tableCZPRO_VPH.CountEntriesColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPH.CountEntriesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string SOPNUMBE {
+                get {
+                    return ((string)(this[this.tableCZPRO_VPH.SOPNUMBEColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPH.SOPNUMBEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string SOPTYPE {
+                get {
+                    return ((string)(this[this.tableCZPRO_VPH.SOPTYPEColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPH.SOPTYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string SOPDESC {
+                get {
+                    try {
+                        return ((string)(this[this.tableCZPRO_VPH.SOPDESCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SOPDESC\' in table \'CZPRO_VPH\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPH.SOPDESCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string VNDDOCNMH {
+                get {
+                    try {
+                        return ((string)(this[this.tableCZPRO_VPH.VNDDOCNMHColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'VNDDOCNMH\' in table \'CZPRO_VPH\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPH.VNDDOCNMHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string BarcodeH {
+                get {
+                    return ((string)(this[this.tableCZPRO_VPH.BarcodeHColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPH.BarcodeHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string LOCNCODE {
+                get {
+                    try {
+                        return ((string)(this[this.tableCZPRO_VPH.LOCNCODEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LOCNCODE\' in table \'CZPRO_VPH\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPH.LOCNCODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public short DateProd {
+                get {
+                    return ((short)(this[this.tableCZPRO_VPH.DateProdColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPH.DateProdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string Rez1 {
+                get {
+                    return ((string)(this[this.tableCZPRO_VPH.Rez1Column]));
+                }
+                set {
+                    this[this.tableCZPRO_VPH.Rez1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string Rez2 {
+                get {
+                    return ((string)(this[this.tableCZPRO_VPH.Rez2Column]));
+                }
+                set {
+                    this[this.tableCZPRO_VPH.Rez2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte TermID {
+                get {
+                    return ((byte)(this[this.tableCZPRO_VPH.TermIDColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPH.TermIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime LSTMod {
+                get {
+                    return ((global::System.DateTime)(this[this.tableCZPRO_VPH.LSTModColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPH.LSTModColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int DEX_ROW_ID {
+                get {
+                    try {
+                        return ((int)(this[this.tableCZPRO_VPH.DEX_ROW_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DEX_ROW_ID\' in table \'CZPRO_VPH\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPH.DEX_ROW_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int USERID {
+                get {
+                    try {
+                        return ((int)(this[this.tableCZPRO_VPH.USERIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'USERID\' in table \'CZPRO_VPH\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPH.USERIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSOPDESCNull() {
+                return this.IsNull(this.tableCZPRO_VPH.SOPDESCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSOPDESCNull() {
+                this[this.tableCZPRO_VPH.SOPDESCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsVNDDOCNMHNull() {
+                return this.IsNull(this.tableCZPRO_VPH.VNDDOCNMHColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetVNDDOCNMHNull() {
+                this[this.tableCZPRO_VPH.VNDDOCNMHColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsLOCNCODENull() {
+                return this.IsNull(this.tableCZPRO_VPH.LOCNCODEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetLOCNCODENull() {
+                this[this.tableCZPRO_VPH.LOCNCODEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsDEX_ROW_IDNull() {
+                return this.IsNull(this.tableCZPRO_VPH.DEX_ROW_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetDEX_ROW_IDNull() {
+                this[this.tableCZPRO_VPH.DEX_ROW_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsUSERIDNull() {
+                return this.IsNull(this.tableCZPRO_VPH.USERIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetUSERIDNull() {
+                this[this.tableCZPRO_VPH.USERIDColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class LoginsRow : global::System.Data.DataRow {
+            
+            private LoginsDataTable tableLogins;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal LoginsRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableLogins = ((LoginsDataTable)(this.Table));
+            }
+            
+            #region TaD
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string Login
+            {
+                get
+                {
+                    try
+                    {
+                        return ((string)(this[this.tableLogins.LoginColumn]));
+                    }
+                    catch (global::System.InvalidCastException e)
+                    {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Login\' in table \'Logins\' is DBNull.", e);
+                    }
+                }
+                set
+                {
+                    this[this.tableLogins.LoginColumn] = value;
+                }
+            }
+
+            #endregion
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string id {
+                get {
+                    try {
+                        return ((string)(this[this.tableLogins.idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'id\' in table \'Logins\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLogins.idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string firstname {
+                get {
+                    return ((string)(this[this.tableLogins.firstnameColumn]));
+                }
+                set {
+                    this[this.tableLogins.firstnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string surname {
+                get {
+                    return ((string)(this[this.tableLogins.surnameColumn]));
+                }
+                set {
+                    this[this.tableLogins.surnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string psswd {
+                get {
+                    return ((string)(this[this.tableLogins.psswdColumn]));
+                }
+                set {
+                    this[this.tableLogins.psswdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsidNull() {
+                return this.IsNull(this.tableLogins.idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetidNull() {
+                this[this.tableLogins.idColumn] = global::System.Convert.DBNull;
+            }
+
+            #region TaD
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsLoginNull()
+            {
+                return this.IsNull(this.tableLogins.LoginColumn);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetLoginNull()
+            {
+                this[this.tableLogins.LoginColumn] = global::System.Convert.DBNull;
+            }
+
+            #endregion
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class UserEventsRow : global::System.Data.DataRow {
+            
+            private UserEventsDataTable tableUserEvents;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal UserEventsRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableUserEvents = ((UserEventsDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int id {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserEvents.idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'id\' in table \'UserEvents\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserEvents.idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string loginid {
+                get {
+                    return ((string)(this[this.tableUserEvents.loginidColumn]));
+                }
+                set {
+                    this[this.tableUserEvents.loginidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string machineid {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserEvents.machineidColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'machineid\' in table \'UserEvents\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserEvents.machineidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime dateeve {
+                get {
+                    return ((global::System.DateTime)(this[this.tableUserEvents.dateeveColumn]));
+                }
+                set {
+                    this[this.tableUserEvents.dateeveColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string statusid {
+                get {
+                    return ((string)(this[this.tableUserEvents.statusidColumn]));
+                }
+                set {
+                    this[this.tableUserEvents.statusidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string UserID {
+                get {
+                    return ((string)(this[this.tableUserEvents.UserIDColumn]));
+                }
+                set {
+                    this[this.tableUserEvents.UserIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte TermID {
+                get {
+                    return ((byte)(this[this.tableUserEvents.TermIDColumn]));
+                }
+                set {
+                    this[this.tableUserEvents.TermIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.Guid GUID {
+                get {
+                    return ((global::System.Guid)(this[this.tableUserEvents.GUIDColumn]));
+                }
+                set {
+                    this[this.tableUserEvents.GUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ1 {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserEvents.REZ1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ1\' in table \'UserEvents\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserEvents.REZ1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsidNull() {
+                return this.IsNull(this.tableUserEvents.idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetidNull() {
+                this[this.tableUserEvents.idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsmachineidNull() {
+                return this.IsNull(this.tableUserEvents.machineidColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetmachineidNull() {
+                this[this.tableUserEvents.machineidColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ1Null() {
+                return this.IsNull(this.tableUserEvents.REZ1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ1Null() {
+                this[this.tableUserEvents.REZ1Column] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class StatusTypesRow : global::System.Data.DataRow {
+            
+            private StatusTypesDataTable tableStatusTypes;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal StatusTypesRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableStatusTypes = ((StatusTypesDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string statusid {
+                get {
+                    return ((string)(this[this.tableStatusTypes.statusidColumn]));
+                }
+                set {
+                    this[this.tableStatusTypes.statusidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string statusdesc {
+                get {
+                    try {
+                        return ((string)(this[this.tableStatusTypes.statusdescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'statusdesc\' in table \'StatusTypes\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStatusTypes.statusdescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsstatusdescNull() {
+                return this.IsNull(this.tableStatusTypes.statusdescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetstatusdescNull() {
+                this[this.tableStatusTypes.statusdescColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CZPRO_VPPRow : global::System.Data.DataRow {
+            
+            private CZPRO_VPPDataTable tableCZPRO_VPP;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal CZPRO_VPPRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCZPRO_VPP = ((CZPRO_VPPDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int CountEntries {
+                get {
+                    return ((int)(this[this.tableCZPRO_VPP.CountEntriesColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.CountEntriesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string SOPNUMBE {
+                get {
+                    return ((string)(this[this.tableCZPRO_VPP.SOPNUMBEColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.SOPNUMBEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMNMBR {
+                get {
+                    return ((string)(this[this.tableCZPRO_VPP.ITEMNMBRColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.ITEMNMBRColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMTYPE {
+                get {
+                    return ((string)(this[this.tableCZPRO_VPP.ITEMTYPEColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.ITEMTYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMDESC {
+                get {
+                    try {
+                        return ((string)(this[this.tableCZPRO_VPP.ITEMDESCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMDESC\' in table \'CZPRO_VPP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPP.ITEMDESCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string VNDDOCNMP {
+                get {
+                    try {
+                        return ((string)(this[this.tableCZPRO_VPP.VNDDOCNMPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'VNDDOCNMP\' in table \'CZPRO_VPP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPP.VNDDOCNMPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string VNDITNUM {
+                get {
+                    try {
+                        return ((string)(this[this.tableCZPRO_VPP.VNDITNUMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'VNDITNUM\' in table \'CZPRO_VPP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPP.VNDITNUMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int ORD {
+                get {
+                    return ((int)(this[this.tableCZPRO_VPP.ORDColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.ORDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string BarcodeP {
+                get {
+                    return ((string)(this[this.tableCZPRO_VPP.BarcodePColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.BarcodePColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string LOCNCODE {
+                get {
+                    try {
+                        return ((string)(this[this.tableCZPRO_VPP.LOCNCODEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LOCNCODE\' in table \'CZPRO_VPP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPP.LOCNCODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal QTYSHPPD {
+                get {
+                    return ((decimal)(this[this.tableCZPRO_VPP.QTYSHPPDColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.QTYSHPPDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal QTYPACK {
+                get {
+                    return ((decimal)(this[this.tableCZPRO_VPP.QTYPACKColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.QTYPACKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public float TIMEPREP {
+                get {
+                    return ((float)(this[this.tableCZPRO_VPP.TIMEPREPColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.TIMEPREPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public float TIMEUNIT {
+                get {
+                    return ((float)(this[this.tableCZPRO_VPP.TIMEUNITColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.TIMEUNITColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte DtProdT {
+                get {
+                    return ((byte)(this[this.tableCZPRO_VPP.DtProdTColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.DtProdTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public short DtProdL {
+                get {
+                    return ((short)(this[this.tableCZPRO_VPP.DtProdLColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.DtProdLColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte SerNumT {
+                get {
+                    return ((byte)(this[this.tableCZPRO_VPP.SerNumTColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.SerNumTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public short SerNumL {
+                get {
+                    return ((short)(this[this.tableCZPRO_VPP.SerNumLColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.SerNumLColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte VerT {
+                get {
+                    return ((byte)(this[this.tableCZPRO_VPP.VerTColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.VerTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public short VerL {
+                get {
+                    return ((short)(this[this.tableCZPRO_VPP.VerLColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.VerLColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte TermID {
+                get {
+                    return ((byte)(this[this.tableCZPRO_VPP.TermIDColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.TermIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime LSTMod {
+                get {
+                    return ((global::System.DateTime)(this[this.tableCZPRO_VPP.LSTModColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.LSTModColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int DEX_ROW_ID {
+                get {
+                    try {
+                        return ((int)(this[this.tableCZPRO_VPP.DEX_ROW_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DEX_ROW_ID\' in table \'CZPRO_VPP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPP.DEX_ROW_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal QTYODVEDENO {
+                get {
+                    return ((decimal)(this[this.tableCZPRO_VPP.QTYODVEDENOColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.QTYODVEDENOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal CNTODVEDENO {
+                get {
+                    return ((decimal)(this[this.tableCZPRO_VPP.CNTODVEDENOColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.CNTODVEDENOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMMJ {
+                get {
+                    try {
+                        return ((string)(this[this.tableCZPRO_VPP.ITEMMJColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMMJ\' in table \'CZPRO_VPP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPP.ITEMMJColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string QTYPACKMJ {
+                get {
+                    try {
+                        return ((string)(this[this.tableCZPRO_VPP.QTYPACKMJColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QTYPACKMJ\' in table \'CZPRO_VPP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPP.QTYPACKMJColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int TIMEMODE {
+                get {
+                    return ((int)(this[this.tableCZPRO_VPP.TIMEMODEColumn]));
+                }
+                set {
+                    this[this.tableCZPRO_VPP.TIMEMODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte CZ_REZ1_Track {
+                get {
+                    try {
+                        return ((byte)(this[this.tableCZPRO_VPP.CZ_REZ1_TrackColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CZ_REZ1_Track\' in table \'CZPRO_VPP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPP.CZ_REZ1_TrackColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte CZ_REZ2_Track {
+                get {
+                    try {
+                        return ((byte)(this[this.tableCZPRO_VPP.CZ_REZ2_TrackColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CZ_REZ2_Track\' in table \'CZPRO_VPP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPP.CZ_REZ2_TrackColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte CZ_REZ3_Track {
+                get {
+                    try {
+                        return ((byte)(this[this.tableCZPRO_VPP.CZ_REZ3_TrackColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CZ_REZ3_Track\' in table \'CZPRO_VPP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPP.CZ_REZ3_TrackColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte CZ_REZ4_Track {
+                get {
+                    try {
+                        return ((byte)(this[this.tableCZPRO_VPP.CZ_REZ4_TrackColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CZ_REZ4_Track\' in table \'CZPRO_VPP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPP.CZ_REZ4_TrackColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte CZ_REZ5_Track {
+                get {
+                    try {
+                        return ((byte)(this[this.tableCZPRO_VPP.CZ_REZ5_TrackColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CZ_REZ5_Track\' in table \'CZPRO_VPP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPP.CZ_REZ5_TrackColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal WEIGHT_TARA {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableCZPRO_VPP.WEIGHT_TARAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WEIGHT_TARA\' in table \'CZPRO_VPP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPP.WEIGHT_TARAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal WEIGHT_NETTO {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableCZPRO_VPP.WEIGHT_NETTOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WEIGHT_NETTO\' in table \'CZPRO_VPP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPP.WEIGHT_NETTOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal WEIGHT_TOL_PLUS {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableCZPRO_VPP.WEIGHT_TOL_PLUSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WEIGHT_TOL_PLUS\' in table \'CZPRO_VPP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPP.WEIGHT_TOL_PLUSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal WEIGHT_TOL_MINUS {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableCZPRO_VPP.WEIGHT_TOL_MINUSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WEIGHT_TOL_MINUS\' in table \'CZPRO_VPP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZPRO_VPP.WEIGHT_TOL_MINUSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMDESCNull() {
+                return this.IsNull(this.tableCZPRO_VPP.ITEMDESCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMDESCNull() {
+                this[this.tableCZPRO_VPP.ITEMDESCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsVNDDOCNMPNull() {
+                return this.IsNull(this.tableCZPRO_VPP.VNDDOCNMPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetVNDDOCNMPNull() {
+                this[this.tableCZPRO_VPP.VNDDOCNMPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsVNDITNUMNull() {
+                return this.IsNull(this.tableCZPRO_VPP.VNDITNUMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetVNDITNUMNull() {
+                this[this.tableCZPRO_VPP.VNDITNUMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsLOCNCODENull() {
+                return this.IsNull(this.tableCZPRO_VPP.LOCNCODEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetLOCNCODENull() {
+                this[this.tableCZPRO_VPP.LOCNCODEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsDEX_ROW_IDNull() {
+                return this.IsNull(this.tableCZPRO_VPP.DEX_ROW_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetDEX_ROW_IDNull() {
+                this[this.tableCZPRO_VPP.DEX_ROW_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMMJNull() {
+                return this.IsNull(this.tableCZPRO_VPP.ITEMMJColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMMJNull() {
+                this[this.tableCZPRO_VPP.ITEMMJColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsQTYPACKMJNull() {
+                return this.IsNull(this.tableCZPRO_VPP.QTYPACKMJColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetQTYPACKMJNull() {
+                this[this.tableCZPRO_VPP.QTYPACKMJColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCZ_REZ1_TrackNull() {
+                return this.IsNull(this.tableCZPRO_VPP.CZ_REZ1_TrackColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCZ_REZ1_TrackNull() {
+                this[this.tableCZPRO_VPP.CZ_REZ1_TrackColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCZ_REZ2_TrackNull() {
+                return this.IsNull(this.tableCZPRO_VPP.CZ_REZ2_TrackColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCZ_REZ2_TrackNull() {
+                this[this.tableCZPRO_VPP.CZ_REZ2_TrackColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCZ_REZ3_TrackNull() {
+                return this.IsNull(this.tableCZPRO_VPP.CZ_REZ3_TrackColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCZ_REZ3_TrackNull() {
+                this[this.tableCZPRO_VPP.CZ_REZ3_TrackColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCZ_REZ4_TrackNull() {
+                return this.IsNull(this.tableCZPRO_VPP.CZ_REZ4_TrackColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCZ_REZ4_TrackNull() {
+                this[this.tableCZPRO_VPP.CZ_REZ4_TrackColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCZ_REZ5_TrackNull() {
+                return this.IsNull(this.tableCZPRO_VPP.CZ_REZ5_TrackColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCZ_REZ5_TrackNull() {
+                this[this.tableCZPRO_VPP.CZ_REZ5_TrackColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsWEIGHT_TARANull() {
+                return this.IsNull(this.tableCZPRO_VPP.WEIGHT_TARAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetWEIGHT_TARANull() {
+                this[this.tableCZPRO_VPP.WEIGHT_TARAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsWEIGHT_NETTONull() {
+                return this.IsNull(this.tableCZPRO_VPP.WEIGHT_NETTOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetWEIGHT_NETTONull() {
+                this[this.tableCZPRO_VPP.WEIGHT_NETTOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsWEIGHT_TOL_PLUSNull() {
+                return this.IsNull(this.tableCZPRO_VPP.WEIGHT_TOL_PLUSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetWEIGHT_TOL_PLUSNull() {
+                this[this.tableCZPRO_VPP.WEIGHT_TOL_PLUSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsWEIGHT_TOL_MINUSNull() {
+                return this.IsNull(this.tableCZPRO_VPP.WEIGHT_TOL_MINUSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetWEIGHT_TOL_MINUSNull() {
+                this[this.tableCZPRO_VPP.WEIGHT_TOL_MINUSColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Production_SourcesRow : global::System.Data.DataRow {
+            
+            private Production_SourcesDataTable tableProduction_Sources;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal Production_SourcesRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableProduction_Sources = ((Production_SourcesDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int CountEntries {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction_Sources.CountEntriesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CountEntries\' in table \'Production_Sources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Sources.CountEntriesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string SOPNUMBE {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Sources.SOPNUMBEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SOPNUMBE\' in table \'Production_Sources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Sources.SOPNUMBEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMNMBR {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Sources.ITEMNMBRColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMNMBR\' in table \'Production_Sources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Sources.ITEMNMBRColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMTYPE {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Sources.ITEMTYPEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMTYPE\' in table \'Production_Sources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Sources.ITEMTYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMCODE {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Sources.ITEMCODEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMCODE\' in table \'Production_Sources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Sources.ITEMCODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string LOCNCODE {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Sources.LOCNCODEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LOCNCODE\' in table \'Production_Sources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Sources.LOCNCODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string MJ {
+                get {
+                    return ((string)(this[this.tableProduction_Sources.MJColumn]));
+                }
+                set {
+                    this[this.tableProduction_Sources.MJColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal QTYSHPPD {
+                get {
+                    return ((decimal)(this[this.tableProduction_Sources.QTYSHPPDColumn]));
+                }
+                set {
+                    this[this.tableProduction_Sources.QTYSHPPDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal QTYSHPPDMJ {
+                get {
+                    return ((decimal)(this[this.tableProduction_Sources.QTYSHPPDMJColumn]));
+                }
+                set {
+                    this[this.tableProduction_Sources.QTYSHPPDMJColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal QTYPACK {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableProduction_Sources.QTYPACKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QTYPACK\' in table \'Production_Sources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Sources.QTYPACKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string SERLTNUM {
+                get {
+                    return ((string)(this[this.tableProduction_Sources.SERLTNUMColumn]));
+                }
+                set {
+                    this[this.tableProduction_Sources.SERLTNUMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.Guid GUID_Production {
+                get {
+                    try {
+                        return ((global::System.Guid)(this[this.tableProduction_Sources.GUID_ProductionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GUID_Production\' in table \'Production_Sources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Sources.GUID_ProductionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.Guid GUID {
+                get {
+                    try {
+                        return ((global::System.Guid)(this[this.tableProduction_Sources.GUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GUID\' in table \'Production_Sources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Sources.GUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string USER_ID {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Sources.USER_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'USER_ID\' in table \'Production_Sources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Sources.USER_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int TERMINAL_ID {
+                get {
+                    return ((int)(this[this.tableProduction_Sources.TERMINAL_IDColumn]));
+                }
+                set {
+                    this[this.tableProduction_Sources.TERMINAL_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int DEX_ROW_ID {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction_Sources.DEX_ROW_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DEX_ROW_ID\' in table \'Production_Sources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Sources.DEX_ROW_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal WEIGHT {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableProduction_Sources.WEIGHTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WEIGHT\' in table \'Production_Sources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Sources.WEIGHTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string NMBRPAL {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Sources.NMBRPALColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NMBRPAL\' in table \'Production_Sources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Sources.NMBRPALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string TYPEPAL {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Sources.TYPEPALColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TYPEPAL\' in table \'Production_Sources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Sources.TYPEPALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte PRINTED {
+                get {
+                    try {
+                        return ((byte)(this[this.tableProduction_Sources.PRINTEDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PRINTED\' in table \'Production_Sources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Sources.PRINTEDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMNAME {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Sources.ITEMNAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMNAME\' in table \'Production_Sources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Sources.ITEMNAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string SKL_ID {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_Sources.SKL_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SKL_ID\' in table \'Production_Sources\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_Sources.SKL_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCountEntriesNull() {
+                return this.IsNull(this.tableProduction_Sources.CountEntriesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCountEntriesNull() {
+                this[this.tableProduction_Sources.CountEntriesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSOPNUMBENull() {
+                return this.IsNull(this.tableProduction_Sources.SOPNUMBEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSOPNUMBENull() {
+                this[this.tableProduction_Sources.SOPNUMBEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMNMBRNull() {
+                return this.IsNull(this.tableProduction_Sources.ITEMNMBRColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMNMBRNull() {
+                this[this.tableProduction_Sources.ITEMNMBRColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMTYPENull() {
+                return this.IsNull(this.tableProduction_Sources.ITEMTYPEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMTYPENull() {
+                this[this.tableProduction_Sources.ITEMTYPEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMCODENull() {
+                return this.IsNull(this.tableProduction_Sources.ITEMCODEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMCODENull() {
+                this[this.tableProduction_Sources.ITEMCODEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsLOCNCODENull() {
+                return this.IsNull(this.tableProduction_Sources.LOCNCODEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetLOCNCODENull() {
+                this[this.tableProduction_Sources.LOCNCODEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsQTYPACKNull() {
+                return this.IsNull(this.tableProduction_Sources.QTYPACKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetQTYPACKNull() {
+                this[this.tableProduction_Sources.QTYPACKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsGUID_ProductionNull() {
+                return this.IsNull(this.tableProduction_Sources.GUID_ProductionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetGUID_ProductionNull() {
+                this[this.tableProduction_Sources.GUID_ProductionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsGUIDNull() {
+                return this.IsNull(this.tableProduction_Sources.GUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetGUIDNull() {
+                this[this.tableProduction_Sources.GUIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsUSER_IDNull() {
+                return this.IsNull(this.tableProduction_Sources.USER_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetUSER_IDNull() {
+                this[this.tableProduction_Sources.USER_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsDEX_ROW_IDNull() {
+                return this.IsNull(this.tableProduction_Sources.DEX_ROW_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetDEX_ROW_IDNull() {
+                this[this.tableProduction_Sources.DEX_ROW_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsWEIGHTNull() {
+                return this.IsNull(this.tableProduction_Sources.WEIGHTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetWEIGHTNull() {
+                this[this.tableProduction_Sources.WEIGHTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsNMBRPALNull() {
+                return this.IsNull(this.tableProduction_Sources.NMBRPALColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetNMBRPALNull() {
+                this[this.tableProduction_Sources.NMBRPALColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTYPEPALNull() {
+                return this.IsNull(this.tableProduction_Sources.TYPEPALColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTYPEPALNull() {
+                this[this.tableProduction_Sources.TYPEPALColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsPRINTEDNull() {
+                return this.IsNull(this.tableProduction_Sources.PRINTEDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetPRINTEDNull() {
+                this[this.tableProduction_Sources.PRINTEDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMNAMENull() {
+                return this.IsNull(this.tableProduction_Sources.ITEMNAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMNAMENull() {
+                this[this.tableProduction_Sources.ITEMNAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSKL_IDNull() {
+                return this.IsNull(this.tableProduction_Sources.SKL_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSKL_IDNull() {
+                this[this.tableProduction_Sources.SKL_IDColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class FASK_CONS_095Row : global::System.Data.DataRow {
+            
+            private FASK_CONS_095DataTable tableFASK_CONS_095;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal FASK_CONS_095Row(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableFASK_CONS_095 = ((FASK_CONS_095DataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMNMBR {
+                get {
+                    return ((string)(this[this.tableFASK_CONS_095.ITEMNMBRColumn]));
+                }
+                set {
+                    this[this.tableFASK_CONS_095.ITEMNMBRColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMDESC {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_CONS_095.ITEMDESCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMDESC\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.ITEMDESCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string VNDITNUM {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_CONS_095.VNDITNUMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'VNDITNUM\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.VNDITNUMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string CZ_CarKod {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_CONS_095.CZ_CarKodColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CZ_CarKod\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.CZ_CarKodColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string LOCNCODE {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_CONS_095.LOCNCODEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LOCNCODE\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.LOCNCODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string SKL_ID {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_CONS_095.SKL_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SKL_ID\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.SKL_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal QTY {
+                get {
+                    return ((decimal)(this[this.tableFASK_CONS_095.QTYColumn]));
+                }
+                set {
+                    this[this.tableFASK_CONS_095.QTYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal QTYPACK {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFASK_CONS_095.QTYPACKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QTYPACK\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.QTYPACKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string MJ {
+                get {
+                    return ((string)(this[this.tableFASK_CONS_095.MJColumn]));
+                }
+                set {
+                    this[this.tableFASK_CONS_095.MJColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string DMJ {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_CONS_095.DMJColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DMJ\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.DMJColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal TAXRATE {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFASK_CONS_095.TAXRATEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TAXRATE\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.TAXRATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal PRICE0 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFASK_CONS_095.PRICE0Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PRICE0\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.PRICE0Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal PRICE1 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFASK_CONS_095.PRICE1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PRICE1\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.PRICE1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal PRICE2 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFASK_CONS_095.PRICE2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PRICE2\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.PRICE2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal PRICE3 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFASK_CONS_095.PRICE3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PRICE3\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.PRICE3Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal PRICE4 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFASK_CONS_095.PRICE4Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PRICE4\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.PRICE4Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal PRICE5 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFASK_CONS_095.PRICE5Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PRICE5\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.PRICE5Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte CZ_SerNum_Track {
+                get {
+                    return ((byte)(this[this.tableFASK_CONS_095.CZ_SerNum_TrackColumn]));
+                }
+                set {
+                    this[this.tableFASK_CONS_095.CZ_SerNum_TrackColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public short CZ_SerNum_Delka {
+                get {
+                    return ((short)(this[this.tableFASK_CONS_095.CZ_SerNum_DelkaColumn]));
+                }
+                set {
+                    this[this.tableFASK_CONS_095.CZ_SerNum_DelkaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte CZ_Rez1_Track {
+                get {
+                    return ((byte)(this[this.tableFASK_CONS_095.CZ_Rez1_TrackColumn]));
+                }
+                set {
+                    this[this.tableFASK_CONS_095.CZ_Rez1_TrackColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte CZ_Rez2_Track {
+                get {
+                    return ((byte)(this[this.tableFASK_CONS_095.CZ_Rez2_TrackColumn]));
+                }
+                set {
+                    this[this.tableFASK_CONS_095.CZ_Rez2_TrackColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte CZ_Rez3_Track {
+                get {
+                    return ((byte)(this[this.tableFASK_CONS_095.CZ_Rez3_TrackColumn]));
+                }
+                set {
+                    this[this.tableFASK_CONS_095.CZ_Rez3_TrackColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte CZ_Rez4_Track {
+                get {
+                    return ((byte)(this[this.tableFASK_CONS_095.CZ_Rez4_TrackColumn]));
+                }
+                set {
+                    this[this.tableFASK_CONS_095.CZ_Rez4_TrackColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ1 {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_CONS_095.REZ1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ1\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.REZ1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int DEX_ROW_ID {
+                get {
+                    try {
+                        return ((int)(this[this.tableFASK_CONS_095.DEX_ROW_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DEX_ROW_ID\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.DEX_ROW_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMCODE {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_CONS_095.ITEMCODEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMCODE\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.ITEMCODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ODB_ID {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_CONS_095.ODB_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ODB_ID\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.ODB_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int TIMEMODE {
+                get {
+                    return ((int)(this[this.tableFASK_CONS_095.TIMEMODEColumn]));
+                }
+                set {
+                    this[this.tableFASK_CONS_095.TIMEMODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public float TIMEPREP {
+                get {
+                    return ((float)(this[this.tableFASK_CONS_095.TIMEPREPColumn]));
+                }
+                set {
+                    this[this.tableFASK_CONS_095.TIMEPREPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public float TIMEUNIT {
+                get {
+                    return ((float)(this[this.tableFASK_CONS_095.TIMEUNITColumn]));
+                }
+                set {
+                    this[this.tableFASK_CONS_095.TIMEUNITColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMEFROM {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableFASK_CONS_095.TIMEFROMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEFROM\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.TIMEFROMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMETO {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableFASK_CONS_095.TIMETOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMETO\' in table \'FASK_CONS_095\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_CONS_095.TIMETOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime LSTMod {
+                get {
+                    return ((global::System.DateTime)(this[this.tableFASK_CONS_095.LSTModColumn]));
+                }
+                set {
+                    this[this.tableFASK_CONS_095.LSTModColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string loginid {
+                get {
+                    return ((string)(this[this.tableFASK_CONS_095.loginidColumn]));
+                }
+                set {
+                    this[this.tableFASK_CONS_095.loginidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMDESCNull() {
+                return this.IsNull(this.tableFASK_CONS_095.ITEMDESCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMDESCNull() {
+                this[this.tableFASK_CONS_095.ITEMDESCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsVNDITNUMNull() {
+                return this.IsNull(this.tableFASK_CONS_095.VNDITNUMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetVNDITNUMNull() {
+                this[this.tableFASK_CONS_095.VNDITNUMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCZ_CarKodNull() {
+                return this.IsNull(this.tableFASK_CONS_095.CZ_CarKodColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCZ_CarKodNull() {
+                this[this.tableFASK_CONS_095.CZ_CarKodColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsLOCNCODENull() {
+                return this.IsNull(this.tableFASK_CONS_095.LOCNCODEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetLOCNCODENull() {
+                this[this.tableFASK_CONS_095.LOCNCODEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSKL_IDNull() {
+                return this.IsNull(this.tableFASK_CONS_095.SKL_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSKL_IDNull() {
+                this[this.tableFASK_CONS_095.SKL_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsQTYPACKNull() {
+                return this.IsNull(this.tableFASK_CONS_095.QTYPACKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetQTYPACKNull() {
+                this[this.tableFASK_CONS_095.QTYPACKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsDMJNull() {
+                return this.IsNull(this.tableFASK_CONS_095.DMJColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetDMJNull() {
+                this[this.tableFASK_CONS_095.DMJColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTAXRATENull() {
+                return this.IsNull(this.tableFASK_CONS_095.TAXRATEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTAXRATENull() {
+                this[this.tableFASK_CONS_095.TAXRATEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsPRICE0Null() {
+                return this.IsNull(this.tableFASK_CONS_095.PRICE0Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetPRICE0Null() {
+                this[this.tableFASK_CONS_095.PRICE0Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsPRICE1Null() {
+                return this.IsNull(this.tableFASK_CONS_095.PRICE1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetPRICE1Null() {
+                this[this.tableFASK_CONS_095.PRICE1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsPRICE2Null() {
+                return this.IsNull(this.tableFASK_CONS_095.PRICE2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetPRICE2Null() {
+                this[this.tableFASK_CONS_095.PRICE2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsPRICE3Null() {
+                return this.IsNull(this.tableFASK_CONS_095.PRICE3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetPRICE3Null() {
+                this[this.tableFASK_CONS_095.PRICE3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsPRICE4Null() {
+                return this.IsNull(this.tableFASK_CONS_095.PRICE4Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetPRICE4Null() {
+                this[this.tableFASK_CONS_095.PRICE4Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsPRICE5Null() {
+                return this.IsNull(this.tableFASK_CONS_095.PRICE5Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetPRICE5Null() {
+                this[this.tableFASK_CONS_095.PRICE5Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ1Null() {
+                return this.IsNull(this.tableFASK_CONS_095.REZ1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ1Null() {
+                this[this.tableFASK_CONS_095.REZ1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsDEX_ROW_IDNull() {
+                return this.IsNull(this.tableFASK_CONS_095.DEX_ROW_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetDEX_ROW_IDNull() {
+                this[this.tableFASK_CONS_095.DEX_ROW_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMCODENull() {
+                return this.IsNull(this.tableFASK_CONS_095.ITEMCODEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMCODENull() {
+                this[this.tableFASK_CONS_095.ITEMCODEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsODB_IDNull() {
+                return this.IsNull(this.tableFASK_CONS_095.ODB_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetODB_IDNull() {
+                this[this.tableFASK_CONS_095.ODB_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEFROMNull() {
+                return this.IsNull(this.tableFASK_CONS_095.TIMEFROMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEFROMNull() {
+                this[this.tableFASK_CONS_095.TIMEFROMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMETONull() {
+                return this.IsNull(this.tableFASK_CONS_095.TIMETOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMETONull() {
+                this[this.tableFASK_CONS_095.TIMETOColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CZMST093Row : global::System.Data.DataRow {
+            
+            private CZMST093DataTable tableCZMST093;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal CZMST093Row(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCZMST093 = ((CZMST093DataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string skl_id {
+                get {
+                    return ((string)(this[this.tableCZMST093.skl_idColumn]));
+                }
+                set {
+                    this[this.tableCZMST093.skl_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string skl_desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableCZMST093.skl_descColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'skl_desc\' in table \'CZMST093\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZMST093.skl_descColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string skl_typ {
+                get {
+                    try {
+                        return ((string)(this[this.tableCZMST093.skl_typColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'skl_typ\' in table \'CZMST093\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZMST093.skl_typColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string skl_carcode {
+                get {
+                    try {
+                        return ((string)(this[this.tableCZMST093.skl_carcodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'skl_carcode\' in table \'CZMST093\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZMST093.skl_carcodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int DEX_ROW_ID {
+                get {
+                    try {
+                        return ((int)(this[this.tableCZMST093.DEX_ROW_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DEX_ROW_ID\' in table \'CZMST093\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZMST093.DEX_ROW_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Isskl_descNull() {
+                return this.IsNull(this.tableCZMST093.skl_descColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Setskl_descNull() {
+                this[this.tableCZMST093.skl_descColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Isskl_typNull() {
+                return this.IsNull(this.tableCZMST093.skl_typColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Setskl_typNull() {
+                this[this.tableCZMST093.skl_typColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Isskl_carcodeNull() {
+                return this.IsNull(this.tableCZMST093.skl_carcodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Setskl_carcodeNull() {
+                this[this.tableCZMST093.skl_carcodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsDEX_ROW_IDNull() {
+                return this.IsNull(this.tableCZMST093.DEX_ROW_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetDEX_ROW_IDNull() {
+                this[this.tableCZMST093.DEX_ROW_IDColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CZMST094Row : global::System.Data.DataRow {
+            
+            private CZMST094DataTable tableCZMST094;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal CZMST094Row(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCZMST094 = ((CZMST094DataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string SKL_ID {
+                get {
+                    try {
+                        return ((string)(this[this.tableCZMST094.SKL_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SKL_ID\' in table \'CZMST094\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZMST094.SKL_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string LOCNCODE {
+                get {
+                    return ((string)(this[this.tableCZMST094.LOCNCODEColumn]));
+                }
+                set {
+                    this[this.tableCZMST094.LOCNCODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string TYPE {
+                get {
+                    try {
+                        return ((string)(this[this.tableCZMST094.TYPEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TYPE\' in table \'CZMST094\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZMST094.TYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string Description {
+                get {
+                    try {
+                        return ((string)(this[this.tableCZMST094.DescriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Description\' in table \'CZMST094\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZMST094.DescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string Barcode {
+                get {
+                    try {
+                        return ((string)(this[this.tableCZMST094.BarcodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Barcode\' in table \'CZMST094\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZMST094.BarcodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int DEX_ROW_ID {
+                get {
+                    try {
+                        return ((int)(this[this.tableCZMST094.DEX_ROW_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DEX_ROW_ID\' in table \'CZMST094\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCZMST094.DEX_ROW_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSKL_IDNull() {
+                return this.IsNull(this.tableCZMST094.SKL_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSKL_IDNull() {
+                this[this.tableCZMST094.SKL_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTYPENull() {
+                return this.IsNull(this.tableCZMST094.TYPEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTYPENull() {
+                this[this.tableCZMST094.TYPEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsDescriptionNull() {
+                return this.IsNull(this.tableCZMST094.DescriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetDescriptionNull() {
+                this[this.tableCZMST094.DescriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsBarcodeNull() {
+                return this.IsNull(this.tableCZMST094.BarcodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetBarcodeNull() {
+                this[this.tableCZMST094.BarcodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsDEX_ROW_IDNull() {
+                return this.IsNull(this.tableCZMST094.DEX_ROW_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetDEX_ROW_IDNull() {
+                this[this.tableCZMST094.DEX_ROW_IDColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class ProductionRow : global::System.Data.DataRow {
+            
+            private ProductionDataTable tableProduction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal ProductionRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableProduction = ((ProductionDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int CountEntries {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction.CountEntriesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CountEntries\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.CountEntriesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string SOPNUMBE {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.SOPNUMBEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SOPNUMBE\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.SOPNUMBEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMNMBR {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.ITEMNMBRColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMNMBR\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.ITEMNMBRColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMTYPE {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.ITEMTYPEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMTYPE\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.ITEMTYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMMJ {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.ITEMMJColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMMJ\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.ITEMMJColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int ORD {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction.ORDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ORD\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.ORDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public float TIMEPREP {
+                get {
+                    try {
+                        return ((float)(this[this.tableProduction.TIMEPREPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEPREP\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.TIMEPREPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public float TIMEUNIT {
+                get {
+                    try {
+                        return ((float)(this[this.tableProduction.TIMEUNITColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEUNIT\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.TIMEUNITColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMESTART {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction.TIMESTARTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMESTART\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.TIMESTARTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMESTOP {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction.TIMESTOPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMESTOP\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.TIMESTOPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public float TIMECOR {
+                get {
+                    try {
+                        return ((float)(this[this.tableProduction.TIMECORColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMECOR\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.TIMECORColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int TIMECRID {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction.TIMECRIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMECRID\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.TIMECRIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int id {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction.idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'id\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string loginid {
+                get {
+                    return ((string)(this[this.tableProduction.loginidColumn]));
+                }
+                set {
+                    this[this.tableProduction.loginidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string machineid {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.machineidColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'machineid\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.machineidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime dateeve {
+                get {
+                    return ((global::System.DateTime)(this[this.tableProduction.dateeveColumn]));
+                }
+                set {
+                    this[this.tableProduction.dateeveColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal qty {
+                get {
+                    return ((decimal)(this[this.tableProduction.qtyColumn]));
+                }
+                set {
+                    this[this.tableProduction.qtyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal qtyReal {
+                get {
+                    return ((decimal)(this[this.tableProduction.qtyRealColumn]));
+                }
+                set {
+                    this[this.tableProduction.qtyRealColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal QTYPACK {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableProduction.QTYPACKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QTYPACK\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.QTYPACKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string QTYPACKMJ {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.QTYPACKMJColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QTYPACKMJ\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.QTYPACKMJColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string description {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.descriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'description\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.descriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string BarcodeP {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.BarcodePColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BarcodeP\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.BarcodePColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string UserID {
+                get {
+                    return ((string)(this[this.tableProduction.UserIDColumn]));
+                }
+                set {
+                    this[this.tableProduction.UserIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte TermID {
+                get {
+                    return ((byte)(this[this.tableProduction.TermIDColumn]));
+                }
+                set {
+                    this[this.tableProduction.TermIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime ISOK {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction.ISOKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ISOK\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.ISOKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.Guid GUID {
+                get {
+                    return ((global::System.Guid)(this[this.tableProduction.GUIDColumn]));
+                }
+                set {
+                    this[this.tableProduction.GUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int TIMEMODE {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction.TIMEMODEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEMODE\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.TIMEMODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMEPREPSTART {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction.TIMEPREPSTARTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEPREPSTART\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.TIMEPREPSTARTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMEPREPSTOP {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction.TIMEPREPSTOPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEPREPSTOP\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.TIMEPREPSTOPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMECORSTART {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction.TIMECORSTARTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMECORSTART\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.TIMECORSTARTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMECORSTOP {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction.TIMECORSTOPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMECORSTOP\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.TIMECORSTOPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string operationid {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.operationidColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'operationid\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.operationidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.Guid SOUBEHGUID {
+                get {
+                    try {
+                        return ((global::System.Guid)(this[this.tableProduction.SOUBEHGUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SOUBEHGUID\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.SOUBEHGUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.Guid CORRGUID {
+                get {
+                    try {
+                        return ((global::System.Guid)(this[this.tableProduction.CORRGUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CORRGUID\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.CORRGUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte TIMECRIDTYPE {
+                get {
+                    try {
+                        return ((byte)(this[this.tableProduction.TIMECRIDTYPEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMECRIDTYPE\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.TIMECRIDTYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string SKL_ID {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.SKL_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SKL_ID\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.SKL_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string LOCNCODE {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.LOCNCODEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LOCNCODE\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.LOCNCODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMDESC {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.ITEMDESCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMDESC\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.ITEMDESCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string SERLTNUM {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.SERLTNUMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SERLTNUM\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.SERLTNUMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string NMBRPAL {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.NMBRPALColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NMBRPAL\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.NMBRPALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string TYPEPAL {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.TYPEPALColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TYPEPAL\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.TYPEPALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string PackType {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.PackTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PackType\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.PackTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int status {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction.statusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'status\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.statusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal WEIGHT {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableProduction.WEIGHTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WEIGHT\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.WEIGHTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.Guid STORNOGUID {
+                get {
+                    try {
+                        return ((global::System.Guid)(this[this.tableProduction.STORNOGUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'STORNOGUID\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.STORNOGUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_1 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.REZ_1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_1\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.REZ_1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_2 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.REZ_2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_2\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.REZ_2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_3 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.REZ_3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_3\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.REZ_3Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_4 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.REZ_4Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_4\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.REZ_4Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_5 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction.REZ_5Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_5\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.REZ_5Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal WEIGHT_OLD {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableProduction.WEIGHT_OLDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WEIGHT_OLD\' in table \'Production\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction.WEIGHT_OLDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCountEntriesNull() {
+                return this.IsNull(this.tableProduction.CountEntriesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCountEntriesNull() {
+                this[this.tableProduction.CountEntriesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSOPNUMBENull() {
+                return this.IsNull(this.tableProduction.SOPNUMBEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSOPNUMBENull() {
+                this[this.tableProduction.SOPNUMBEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMNMBRNull() {
+                return this.IsNull(this.tableProduction.ITEMNMBRColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMNMBRNull() {
+                this[this.tableProduction.ITEMNMBRColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMTYPENull() {
+                return this.IsNull(this.tableProduction.ITEMTYPEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMTYPENull() {
+                this[this.tableProduction.ITEMTYPEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMMJNull() {
+                return this.IsNull(this.tableProduction.ITEMMJColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMMJNull() {
+                this[this.tableProduction.ITEMMJColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsORDNull() {
+                return this.IsNull(this.tableProduction.ORDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetORDNull() {
+                this[this.tableProduction.ORDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEPREPNull() {
+                return this.IsNull(this.tableProduction.TIMEPREPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEPREPNull() {
+                this[this.tableProduction.TIMEPREPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEUNITNull() {
+                return this.IsNull(this.tableProduction.TIMEUNITColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEUNITNull() {
+                this[this.tableProduction.TIMEUNITColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMESTARTNull() {
+                return this.IsNull(this.tableProduction.TIMESTARTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMESTARTNull() {
+                this[this.tableProduction.TIMESTARTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMESTOPNull() {
+                return this.IsNull(this.tableProduction.TIMESTOPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMESTOPNull() {
+                this[this.tableProduction.TIMESTOPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMECORNull() {
+                return this.IsNull(this.tableProduction.TIMECORColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMECORNull() {
+                this[this.tableProduction.TIMECORColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMECRIDNull() {
+                return this.IsNull(this.tableProduction.TIMECRIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMECRIDNull() {
+                this[this.tableProduction.TIMECRIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsidNull() {
+                return this.IsNull(this.tableProduction.idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetidNull() {
+                this[this.tableProduction.idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsmachineidNull() {
+                return this.IsNull(this.tableProduction.machineidColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetmachineidNull() {
+                this[this.tableProduction.machineidColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsQTYPACKNull() {
+                return this.IsNull(this.tableProduction.QTYPACKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetQTYPACKNull() {
+                this[this.tableProduction.QTYPACKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsQTYPACKMJNull() {
+                return this.IsNull(this.tableProduction.QTYPACKMJColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetQTYPACKMJNull() {
+                this[this.tableProduction.QTYPACKMJColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsdescriptionNull() {
+                return this.IsNull(this.tableProduction.descriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetdescriptionNull() {
+                this[this.tableProduction.descriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsBarcodePNull() {
+                return this.IsNull(this.tableProduction.BarcodePColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetBarcodePNull() {
+                this[this.tableProduction.BarcodePColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsISOKNull() {
+                return this.IsNull(this.tableProduction.ISOKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetISOKNull() {
+                this[this.tableProduction.ISOKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEMODENull() {
+                return this.IsNull(this.tableProduction.TIMEMODEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEMODENull() {
+                this[this.tableProduction.TIMEMODEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEPREPSTARTNull() {
+                return this.IsNull(this.tableProduction.TIMEPREPSTARTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEPREPSTARTNull() {
+                this[this.tableProduction.TIMEPREPSTARTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEPREPSTOPNull() {
+                return this.IsNull(this.tableProduction.TIMEPREPSTOPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEPREPSTOPNull() {
+                this[this.tableProduction.TIMEPREPSTOPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMECORSTARTNull() {
+                return this.IsNull(this.tableProduction.TIMECORSTARTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMECORSTARTNull() {
+                this[this.tableProduction.TIMECORSTARTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMECORSTOPNull() {
+                return this.IsNull(this.tableProduction.TIMECORSTOPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMECORSTOPNull() {
+                this[this.tableProduction.TIMECORSTOPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsoperationidNull() {
+                return this.IsNull(this.tableProduction.operationidColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetoperationidNull() {
+                this[this.tableProduction.operationidColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSOUBEHGUIDNull() {
+                return this.IsNull(this.tableProduction.SOUBEHGUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSOUBEHGUIDNull() {
+                this[this.tableProduction.SOUBEHGUIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCORRGUIDNull() {
+                return this.IsNull(this.tableProduction.CORRGUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCORRGUIDNull() {
+                this[this.tableProduction.CORRGUIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMECRIDTYPENull() {
+                return this.IsNull(this.tableProduction.TIMECRIDTYPEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMECRIDTYPENull() {
+                this[this.tableProduction.TIMECRIDTYPEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSKL_IDNull() {
+                return this.IsNull(this.tableProduction.SKL_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSKL_IDNull() {
+                this[this.tableProduction.SKL_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsLOCNCODENull() {
+                return this.IsNull(this.tableProduction.LOCNCODEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetLOCNCODENull() {
+                this[this.tableProduction.LOCNCODEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMDESCNull() {
+                return this.IsNull(this.tableProduction.ITEMDESCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMDESCNull() {
+                this[this.tableProduction.ITEMDESCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSERLTNUMNull() {
+                return this.IsNull(this.tableProduction.SERLTNUMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSERLTNUMNull() {
+                this[this.tableProduction.SERLTNUMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsNMBRPALNull() {
+                return this.IsNull(this.tableProduction.NMBRPALColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetNMBRPALNull() {
+                this[this.tableProduction.NMBRPALColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTYPEPALNull() {
+                return this.IsNull(this.tableProduction.TYPEPALColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTYPEPALNull() {
+                this[this.tableProduction.TYPEPALColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsPackTypeNull() {
+                return this.IsNull(this.tableProduction.PackTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetPackTypeNull() {
+                this[this.tableProduction.PackTypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsstatusNull() {
+                return this.IsNull(this.tableProduction.statusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetstatusNull() {
+                this[this.tableProduction.statusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsWEIGHTNull() {
+                return this.IsNull(this.tableProduction.WEIGHTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetWEIGHTNull() {
+                this[this.tableProduction.WEIGHTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSTORNOGUIDNull() {
+                return this.IsNull(this.tableProduction.STORNOGUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSTORNOGUIDNull() {
+                this[this.tableProduction.STORNOGUIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_1Null() {
+                return this.IsNull(this.tableProduction.REZ_1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_1Null() {
+                this[this.tableProduction.REZ_1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_2Null() {
+                return this.IsNull(this.tableProduction.REZ_2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_2Null() {
+                this[this.tableProduction.REZ_2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_3Null() {
+                return this.IsNull(this.tableProduction.REZ_3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_3Null() {
+                this[this.tableProduction.REZ_3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_4Null() {
+                return this.IsNull(this.tableProduction.REZ_4Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_4Null() {
+                this[this.tableProduction.REZ_4Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_5Null() {
+                return this.IsNull(this.tableProduction.REZ_5Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_5Null() {
+                this[this.tableProduction.REZ_5Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsWEIGHT_OLDNull() {
+                return this.IsNull(this.tableProduction.WEIGHT_OLDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetWEIGHT_OLDNull() {
+                this[this.tableProduction.WEIGHT_OLDColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class FASK_Vyroba_TPRow : global::System.Data.DataRow {
+            
+            private FASK_Vyroba_TPDataTable tableFASK_Vyroba_TP;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal FASK_Vyroba_TPRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableFASK_Vyroba_TP = ((FASK_Vyroba_TPDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMNMBR_Def {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_Vyroba_TP.ITEMNMBR_DefColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMNMBR_Def\' in table \'FASK_Vyroba_TP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_Vyroba_TP.ITEMNMBR_DefColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string DESC_Def {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_Vyroba_TP.DESC_DefColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DESC_Def\' in table \'FASK_Vyroba_TP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_Vyroba_TP.DESC_DefColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string MJ_Def {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_Vyroba_TP.MJ_DefColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MJ_Def\' in table \'FASK_Vyroba_TP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_Vyroba_TP.MJ_DefColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string DESC_Fol {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_Vyroba_TP.DESC_FolColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DESC_Fol\' in table \'FASK_Vyroba_TP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_Vyroba_TP.DESC_FolColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string MJ_Fol {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_Vyroba_TP.MJ_FolColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MJ_Fol\' in table \'FASK_Vyroba_TP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_Vyroba_TP.MJ_FolColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string koef {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_Vyroba_TP.koefColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'koef\' in table \'FASK_Vyroba_TP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_Vyroba_TP.koefColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime dateedit {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableFASK_Vyroba_TP.dateeditColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'dateedit\' in table \'FASK_Vyroba_TP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_Vyroba_TP.dateeditColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int ID {
+                get {
+                    try {
+                        return ((int)(this[this.tableFASK_Vyroba_TP.IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ID\' in table \'FASK_Vyroba_TP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_Vyroba_TP.IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ID_USER {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_Vyroba_TP.ID_USERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ID_USER\' in table \'FASK_Vyroba_TP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_Vyroba_TP.ID_USERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMNMBR_fol {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_Vyroba_TP.ITEMNMBR_folColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMNMBR_fol\' in table \'FASK_Vyroba_TP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_Vyroba_TP.ITEMNMBR_folColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ID_L {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_Vyroba_TP.ID_LColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ID_L\' in table \'FASK_Vyroba_TP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_Vyroba_TP.ID_LColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ID_H {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_Vyroba_TP.ID_HColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ID_H\' in table \'FASK_Vyroba_TP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_Vyroba_TP.ID_HColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string alter {
+                get {
+                    try {
+                        return ((string)(this[this.tableFASK_Vyroba_TP.alterColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'alter\' in table \'FASK_Vyroba_TP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFASK_Vyroba_TP.alterColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMNMBR_DefNull() {
+                return this.IsNull(this.tableFASK_Vyroba_TP.ITEMNMBR_DefColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMNMBR_DefNull() {
+                this[this.tableFASK_Vyroba_TP.ITEMNMBR_DefColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsDESC_DefNull() {
+                return this.IsNull(this.tableFASK_Vyroba_TP.DESC_DefColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetDESC_DefNull() {
+                this[this.tableFASK_Vyroba_TP.DESC_DefColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsMJ_DefNull() {
+                return this.IsNull(this.tableFASK_Vyroba_TP.MJ_DefColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetMJ_DefNull() {
+                this[this.tableFASK_Vyroba_TP.MJ_DefColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsDESC_FolNull() {
+                return this.IsNull(this.tableFASK_Vyroba_TP.DESC_FolColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetDESC_FolNull() {
+                this[this.tableFASK_Vyroba_TP.DESC_FolColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsMJ_FolNull() {
+                return this.IsNull(this.tableFASK_Vyroba_TP.MJ_FolColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetMJ_FolNull() {
+                this[this.tableFASK_Vyroba_TP.MJ_FolColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IskoefNull() {
+                return this.IsNull(this.tableFASK_Vyroba_TP.koefColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetkoefNull() {
+                this[this.tableFASK_Vyroba_TP.koefColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsdateeditNull() {
+                return this.IsNull(this.tableFASK_Vyroba_TP.dateeditColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetdateeditNull() {
+                this[this.tableFASK_Vyroba_TP.dateeditColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsIDNull() {
+                return this.IsNull(this.tableFASK_Vyroba_TP.IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetIDNull() {
+                this[this.tableFASK_Vyroba_TP.IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsID_USERNull() {
+                return this.IsNull(this.tableFASK_Vyroba_TP.ID_USERColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetID_USERNull() {
+                this[this.tableFASK_Vyroba_TP.ID_USERColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMNMBR_folNull() {
+                return this.IsNull(this.tableFASK_Vyroba_TP.ITEMNMBR_folColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMNMBR_folNull() {
+                this[this.tableFASK_Vyroba_TP.ITEMNMBR_folColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsID_LNull() {
+                return this.IsNull(this.tableFASK_Vyroba_TP.ID_LColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetID_LNull() {
+                this[this.tableFASK_Vyroba_TP.ID_LColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsID_HNull() {
+                return this.IsNull(this.tableFASK_Vyroba_TP.ID_HColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetID_HNull() {
+                this[this.tableFASK_Vyroba_TP.ID_HColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsalterNull() {
+                return this.IsNull(this.tableFASK_Vyroba_TP.alterColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetalterNull() {
+                this[this.tableFASK_Vyroba_TP.alterColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class MachinesRow : global::System.Data.DataRow {
+            
+            private MachinesDataTable tableMachines;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal MachinesRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableMachines = ((MachinesDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string id {
+                get {
+                    return ((string)(this[this.tableMachines.idColumn]));
+                }
+                set {
+                    this[this.tableMachines.idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string name {
+                get {
+                    return ((string)(this[this.tableMachines.nameColumn]));
+                }
+                set {
+                    this[this.tableMachines.nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string description {
+                get {
+                    return ((string)(this[this.tableMachines.descriptionColumn]));
+                }
+                set {
+                    this[this.tableMachines.descriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public VMachinesOperationsRow[] GetVMachinesOperationsRows() {
+                if ((this.Table.ChildRelations["Machines_VMachinesOperations"] == null)) {
+                    return new VMachinesOperationsRow[0];
+                }
+                else {
+                    return ((VMachinesOperationsRow[])(base.GetChildRows(this.Table.ChildRelations["Machines_VMachinesOperations"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class OperationsRow : global::System.Data.DataRow {
+            
+            private OperationsDataTable tableOperations;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal OperationsRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableOperations = ((OperationsDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string id {
+                get {
+                    return ((string)(this[this.tableOperations.idColumn]));
+                }
+                set {
+                    this[this.tableOperations.idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string name {
+                get {
+                    return ((string)(this[this.tableOperations.nameColumn]));
+                }
+                set {
+                    this[this.tableOperations.nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string description {
+                get {
+                    return ((string)(this[this.tableOperations.descriptionColumn]));
+                }
+                set {
+                    this[this.tableOperations.descriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public VMachinesOperationsRow[] GetVMachinesOperationsRows() {
+                if ((this.Table.ChildRelations["Operations_VMachinesOperations"] == null)) {
+                    return new VMachinesOperationsRow[0];
+                }
+                else {
+                    return ((VMachinesOperationsRow[])(base.GetChildRows(this.Table.ChildRelations["Operations_VMachinesOperations"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class VMachinesOperationsRow : global::System.Data.DataRow {
+            
+            private VMachinesOperationsDataTable tableVMachinesOperations;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal VMachinesOperationsRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableVMachinesOperations = ((VMachinesOperationsDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string machineid {
+                get {
+                    return ((string)(this[this.tableVMachinesOperations.machineidColumn]));
+                }
+                set {
+                    this[this.tableVMachinesOperations.machineidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string operationid {
+                get {
+                    return ((string)(this[this.tableVMachinesOperations.operationidColumn]));
+                }
+                set {
+                    this[this.tableVMachinesOperations.operationidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public OperationsRow OperationsRow {
+                get {
+                    return ((OperationsRow)(this.GetParentRow(this.Table.ParentRelations["Operations_VMachinesOperations"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Operations_VMachinesOperations"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public MachinesRow MachinesRow {
+                get {
+                    return ((MachinesRow)(this.GetParentRow(this.Table.ParentRelations["Machines_VMachinesOperations"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Machines_VMachinesOperations"]);
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class ProductionHistRow : global::System.Data.DataRow {
+            
+            private ProductionHistDataTable tableProductionHist;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal ProductionHistRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableProductionHist = ((ProductionHistDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int CountEntries {
+                get {
+                    try {
+                        return ((int)(this[this.tableProductionHist.CountEntriesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CountEntries\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.CountEntriesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string SOPNUMBE {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.SOPNUMBEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SOPNUMBE\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.SOPNUMBEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMNMBR {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.ITEMNMBRColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMNMBR\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.ITEMNMBRColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMTYPE {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.ITEMTYPEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMTYPE\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.ITEMTYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMMJ {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.ITEMMJColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMMJ\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.ITEMMJColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int ORD {
+                get {
+                    try {
+                        return ((int)(this[this.tableProductionHist.ORDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ORD\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.ORDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public float TIMEPREP {
+                get {
+                    try {
+                        return ((float)(this[this.tableProductionHist.TIMEPREPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEPREP\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.TIMEPREPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public float TIMEUNIT {
+                get {
+                    try {
+                        return ((float)(this[this.tableProductionHist.TIMEUNITColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEUNIT\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.TIMEUNITColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMESTART {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProductionHist.TIMESTARTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMESTART\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.TIMESTARTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMESTOP {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProductionHist.TIMESTOPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMESTOP\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.TIMESTOPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public float TIMECOR {
+                get {
+                    try {
+                        return ((float)(this[this.tableProductionHist.TIMECORColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMECOR\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.TIMECORColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int TIMECRID {
+                get {
+                    try {
+                        return ((int)(this[this.tableProductionHist.TIMECRIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMECRID\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.TIMECRIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int id {
+                get {
+                    try {
+                        return ((int)(this[this.tableProductionHist.idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'id\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string loginid {
+                get {
+                    return ((string)(this[this.tableProductionHist.loginidColumn]));
+                }
+                set {
+                    this[this.tableProductionHist.loginidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string machineid {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.machineidColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'machineid\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.machineidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime dateeve {
+                get {
+                    return ((global::System.DateTime)(this[this.tableProductionHist.dateeveColumn]));
+                }
+                set {
+                    this[this.tableProductionHist.dateeveColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal qty {
+                get {
+                    return ((decimal)(this[this.tableProductionHist.qtyColumn]));
+                }
+                set {
+                    this[this.tableProductionHist.qtyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal qtyReal {
+                get {
+                    return ((decimal)(this[this.tableProductionHist.qtyRealColumn]));
+                }
+                set {
+                    this[this.tableProductionHist.qtyRealColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal QTYPACK {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableProductionHist.QTYPACKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QTYPACK\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.QTYPACKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string QTYPACKMJ {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.QTYPACKMJColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QTYPACKMJ\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.QTYPACKMJColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string description {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.descriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'description\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.descriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string BarcodeP {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.BarcodePColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BarcodeP\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.BarcodePColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string UserID {
+                get {
+                    return ((string)(this[this.tableProductionHist.UserIDColumn]));
+                }
+                set {
+                    this[this.tableProductionHist.UserIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte TermID {
+                get {
+                    return ((byte)(this[this.tableProductionHist.TermIDColumn]));
+                }
+                set {
+                    this[this.tableProductionHist.TermIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime ISOK {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProductionHist.ISOKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ISOK\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.ISOKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.Guid GUID {
+                get {
+                    return ((global::System.Guid)(this[this.tableProductionHist.GUIDColumn]));
+                }
+                set {
+                    this[this.tableProductionHist.GUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int TIMEMODE {
+                get {
+                    try {
+                        return ((int)(this[this.tableProductionHist.TIMEMODEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEMODE\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.TIMEMODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMEPREPSTART {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProductionHist.TIMEPREPSTARTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEPREPSTART\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.TIMEPREPSTARTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMEPREPSTOP {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProductionHist.TIMEPREPSTOPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEPREPSTOP\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.TIMEPREPSTOPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMECORSTART {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProductionHist.TIMECORSTARTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMECORSTART\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.TIMECORSTARTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMECORSTOP {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProductionHist.TIMECORSTOPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMECORSTOP\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.TIMECORSTOPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string operationid {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.operationidColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'operationid\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.operationidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.Guid SOUBEHGUID {
+                get {
+                    try {
+                        return ((global::System.Guid)(this[this.tableProductionHist.SOUBEHGUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SOUBEHGUID\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.SOUBEHGUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string firstname {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.firstnameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'firstname\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.firstnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string surname {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.surnameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'surname\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.surnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string operationName {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.operationNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'operationName\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.operationNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string machineName {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.machineNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'machineName\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.machineNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.Guid CORRGUID {
+                get {
+                    try {
+                        return ((global::System.Guid)(this[this.tableProductionHist.CORRGUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CORRGUID\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.CORRGUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte TIMECRIDTYPE {
+                get {
+                    try {
+                        return ((byte)(this[this.tableProductionHist.TIMECRIDTYPEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMECRIDTYPE\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.TIMECRIDTYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string TIMECRIDName {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.TIMECRIDNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMECRIDName\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.TIMECRIDNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string NMBRPAL {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.NMBRPALColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NMBRPAL\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.NMBRPALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string TYPEPAL {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.TYPEPALColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TYPEPAL\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.TYPEPALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string PackType {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.PackTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PackType\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.PackTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int status {
+                get {
+                    try {
+                        return ((int)(this[this.tableProductionHist.statusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'status\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.statusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal WEIGHT {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableProductionHist.WEIGHTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WEIGHT\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.WEIGHTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.Guid STORNOGUID {
+                get {
+                    try {
+                        return ((global::System.Guid)(this[this.tableProductionHist.STORNOGUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'STORNOGUID\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.STORNOGUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_1 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.REZ_1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_1\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.REZ_1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_2 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.REZ_2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_2\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.REZ_2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_3 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.REZ_3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_3\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.REZ_3Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_4 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.REZ_4Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_4\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.REZ_4Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_5 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductionHist.REZ_5Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_5\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.REZ_5Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal WEIGHT_OLD {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableProductionHist.WEIGHT_OLDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WEIGHT_OLD\' in table \'ProductionHist\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductionHist.WEIGHT_OLDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCountEntriesNull() {
+                return this.IsNull(this.tableProductionHist.CountEntriesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCountEntriesNull() {
+                this[this.tableProductionHist.CountEntriesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSOPNUMBENull() {
+                return this.IsNull(this.tableProductionHist.SOPNUMBEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSOPNUMBENull() {
+                this[this.tableProductionHist.SOPNUMBEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMNMBRNull() {
+                return this.IsNull(this.tableProductionHist.ITEMNMBRColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMNMBRNull() {
+                this[this.tableProductionHist.ITEMNMBRColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMTYPENull() {
+                return this.IsNull(this.tableProductionHist.ITEMTYPEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMTYPENull() {
+                this[this.tableProductionHist.ITEMTYPEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMMJNull() {
+                return this.IsNull(this.tableProductionHist.ITEMMJColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMMJNull() {
+                this[this.tableProductionHist.ITEMMJColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsORDNull() {
+                return this.IsNull(this.tableProductionHist.ORDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetORDNull() {
+                this[this.tableProductionHist.ORDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEPREPNull() {
+                return this.IsNull(this.tableProductionHist.TIMEPREPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEPREPNull() {
+                this[this.tableProductionHist.TIMEPREPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEUNITNull() {
+                return this.IsNull(this.tableProductionHist.TIMEUNITColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEUNITNull() {
+                this[this.tableProductionHist.TIMEUNITColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMESTARTNull() {
+                return this.IsNull(this.tableProductionHist.TIMESTARTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMESTARTNull() {
+                this[this.tableProductionHist.TIMESTARTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMESTOPNull() {
+                return this.IsNull(this.tableProductionHist.TIMESTOPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMESTOPNull() {
+                this[this.tableProductionHist.TIMESTOPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMECORNull() {
+                return this.IsNull(this.tableProductionHist.TIMECORColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMECORNull() {
+                this[this.tableProductionHist.TIMECORColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMECRIDNull() {
+                return this.IsNull(this.tableProductionHist.TIMECRIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMECRIDNull() {
+                this[this.tableProductionHist.TIMECRIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsidNull() {
+                return this.IsNull(this.tableProductionHist.idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetidNull() {
+                this[this.tableProductionHist.idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsmachineidNull() {
+                return this.IsNull(this.tableProductionHist.machineidColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetmachineidNull() {
+                this[this.tableProductionHist.machineidColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsQTYPACKNull() {
+                return this.IsNull(this.tableProductionHist.QTYPACKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetQTYPACKNull() {
+                this[this.tableProductionHist.QTYPACKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsQTYPACKMJNull() {
+                return this.IsNull(this.tableProductionHist.QTYPACKMJColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetQTYPACKMJNull() {
+                this[this.tableProductionHist.QTYPACKMJColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsdescriptionNull() {
+                return this.IsNull(this.tableProductionHist.descriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetdescriptionNull() {
+                this[this.tableProductionHist.descriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsBarcodePNull() {
+                return this.IsNull(this.tableProductionHist.BarcodePColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetBarcodePNull() {
+                this[this.tableProductionHist.BarcodePColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsISOKNull() {
+                return this.IsNull(this.tableProductionHist.ISOKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetISOKNull() {
+                this[this.tableProductionHist.ISOKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEMODENull() {
+                return this.IsNull(this.tableProductionHist.TIMEMODEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEMODENull() {
+                this[this.tableProductionHist.TIMEMODEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEPREPSTARTNull() {
+                return this.IsNull(this.tableProductionHist.TIMEPREPSTARTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEPREPSTARTNull() {
+                this[this.tableProductionHist.TIMEPREPSTARTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEPREPSTOPNull() {
+                return this.IsNull(this.tableProductionHist.TIMEPREPSTOPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEPREPSTOPNull() {
+                this[this.tableProductionHist.TIMEPREPSTOPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMECORSTARTNull() {
+                return this.IsNull(this.tableProductionHist.TIMECORSTARTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMECORSTARTNull() {
+                this[this.tableProductionHist.TIMECORSTARTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMECORSTOPNull() {
+                return this.IsNull(this.tableProductionHist.TIMECORSTOPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMECORSTOPNull() {
+                this[this.tableProductionHist.TIMECORSTOPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsoperationidNull() {
+                return this.IsNull(this.tableProductionHist.operationidColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetoperationidNull() {
+                this[this.tableProductionHist.operationidColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSOUBEHGUIDNull() {
+                return this.IsNull(this.tableProductionHist.SOUBEHGUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSOUBEHGUIDNull() {
+                this[this.tableProductionHist.SOUBEHGUIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsfirstnameNull() {
+                return this.IsNull(this.tableProductionHist.firstnameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetfirstnameNull() {
+                this[this.tableProductionHist.firstnameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IssurnameNull() {
+                return this.IsNull(this.tableProductionHist.surnameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetsurnameNull() {
+                this[this.tableProductionHist.surnameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsoperationNameNull() {
+                return this.IsNull(this.tableProductionHist.operationNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetoperationNameNull() {
+                this[this.tableProductionHist.operationNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsmachineNameNull() {
+                return this.IsNull(this.tableProductionHist.machineNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetmachineNameNull() {
+                this[this.tableProductionHist.machineNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCORRGUIDNull() {
+                return this.IsNull(this.tableProductionHist.CORRGUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCORRGUIDNull() {
+                this[this.tableProductionHist.CORRGUIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMECRIDTYPENull() {
+                return this.IsNull(this.tableProductionHist.TIMECRIDTYPEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMECRIDTYPENull() {
+                this[this.tableProductionHist.TIMECRIDTYPEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMECRIDNameNull() {
+                return this.IsNull(this.tableProductionHist.TIMECRIDNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMECRIDNameNull() {
+                this[this.tableProductionHist.TIMECRIDNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsNMBRPALNull() {
+                return this.IsNull(this.tableProductionHist.NMBRPALColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetNMBRPALNull() {
+                this[this.tableProductionHist.NMBRPALColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTYPEPALNull() {
+                return this.IsNull(this.tableProductionHist.TYPEPALColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTYPEPALNull() {
+                this[this.tableProductionHist.TYPEPALColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsPackTypeNull() {
+                return this.IsNull(this.tableProductionHist.PackTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetPackTypeNull() {
+                this[this.tableProductionHist.PackTypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsstatusNull() {
+                return this.IsNull(this.tableProductionHist.statusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetstatusNull() {
+                this[this.tableProductionHist.statusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsWEIGHTNull() {
+                return this.IsNull(this.tableProductionHist.WEIGHTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetWEIGHTNull() {
+                this[this.tableProductionHist.WEIGHTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSTORNOGUIDNull() {
+                return this.IsNull(this.tableProductionHist.STORNOGUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSTORNOGUIDNull() {
+                this[this.tableProductionHist.STORNOGUIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_1Null() {
+                return this.IsNull(this.tableProductionHist.REZ_1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_1Null() {
+                this[this.tableProductionHist.REZ_1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_2Null() {
+                return this.IsNull(this.tableProductionHist.REZ_2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_2Null() {
+                this[this.tableProductionHist.REZ_2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_3Null() {
+                return this.IsNull(this.tableProductionHist.REZ_3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_3Null() {
+                this[this.tableProductionHist.REZ_3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_4Null() {
+                return this.IsNull(this.tableProductionHist.REZ_4Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_4Null() {
+                this[this.tableProductionHist.REZ_4Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_5Null() {
+                return this.IsNull(this.tableProductionHist.REZ_5Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_5Null() {
+                this[this.tableProductionHist.REZ_5Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsWEIGHT_OLDNull() {
+                return this.IsNull(this.tableProductionHist.WEIGHT_OLDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetWEIGHT_OLDNull() {
+                this[this.tableProductionHist.WEIGHT_OLDColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Production_origRow : global::System.Data.DataRow {
+            
+            private Production_origDataTable tableProduction_orig;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal Production_origRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableProduction_orig = ((Production_origDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int CountEntries {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction_orig.CountEntriesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CountEntries\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.CountEntriesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string SOPNUMBE {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_orig.SOPNUMBEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SOPNUMBE\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.SOPNUMBEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMNMBR {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_orig.ITEMNMBRColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMNMBR\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.ITEMNMBRColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int ORD {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction_orig.ORDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ORD\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.ORDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public float TIMEPREP {
+                get {
+                    try {
+                        return ((float)(this[this.tableProduction_orig.TIMEPREPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEPREP\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.TIMEPREPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public float TIMEUNIT {
+                get {
+                    try {
+                        return ((float)(this[this.tableProduction_orig.TIMEUNITColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEUNIT\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.TIMEUNITColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMESTART {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction_orig.TIMESTARTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMESTART\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.TIMESTARTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMESTOP {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction_orig.TIMESTOPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMESTOP\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.TIMESTOPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public float TIMECOR {
+                get {
+                    try {
+                        return ((float)(this[this.tableProduction_orig.TIMECORColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMECOR\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.TIMECORColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int TIMECRID {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction_orig.TIMECRIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMECRID\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.TIMECRIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int id {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction_orig.idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'id\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string loginid {
+                get {
+                    return ((string)(this[this.tableProduction_orig.loginidColumn]));
+                }
+                set {
+                    this[this.tableProduction_orig.loginidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string machineid {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_orig.machineidColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'machineid\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.machineidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime dateeve {
+                get {
+                    return ((global::System.DateTime)(this[this.tableProduction_orig.dateeveColumn]));
+                }
+                set {
+                    this[this.tableProduction_orig.dateeveColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal qty {
+                get {
+                    return ((decimal)(this[this.tableProduction_orig.qtyColumn]));
+                }
+                set {
+                    this[this.tableProduction_orig.qtyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal qtyReal {
+                get {
+                    return ((decimal)(this[this.tableProduction_orig.qtyRealColumn]));
+                }
+                set {
+                    this[this.tableProduction_orig.qtyRealColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string description {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_orig.descriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'description\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.descriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string BarcodeP {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_orig.BarcodePColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BarcodeP\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.BarcodePColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string UserID {
+                get {
+                    return ((string)(this[this.tableProduction_orig.UserIDColumn]));
+                }
+                set {
+                    this[this.tableProduction_orig.UserIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public byte TermID {
+                get {
+                    return ((byte)(this[this.tableProduction_orig.TermIDColumn]));
+                }
+                set {
+                    this[this.tableProduction_orig.TermIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime ISOK {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction_orig.ISOKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ISOK\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.ISOKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.Guid GUID {
+                get {
+                    return ((global::System.Guid)(this[this.tableProduction_orig.GUIDColumn]));
+                }
+                set {
+                    this[this.tableProduction_orig.GUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMTYPE {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_orig.ITEMTYPEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMTYPE\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.ITEMTYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMMJ {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_orig.ITEMMJColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMMJ\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.ITEMMJColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal QTYPACK {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableProduction_orig.QTYPACKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QTYPACK\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.QTYPACKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string QTYPACKMJ {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_orig.QTYPACKMJColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QTYPACKMJ\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.QTYPACKMJColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int TIMEMODE {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction_orig.TIMEMODEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEMODE\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.TIMEMODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMEPREPSTART {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction_orig.TIMEPREPSTARTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEPREPSTART\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.TIMEPREPSTARTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMEPREPSTOP {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction_orig.TIMEPREPSTOPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMEPREPSTOP\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.TIMEPREPSTOPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMECORSTART {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction_orig.TIMECORSTARTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMECORSTART\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.TIMECORSTARTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime TIMECORSTOP {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction_orig.TIMECORSTOPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIMECORSTOP\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.TIMECORSTOPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string operationid {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_orig.operationidColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'operationid\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.operationidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.Guid SOUBEHGUID {
+                get {
+                    try {
+                        return ((global::System.Guid)(this[this.tableProduction_orig.SOUBEHGUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SOUBEHGUID\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.SOUBEHGUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.Guid CORRGUID {
+                get {
+                    try {
+                        return ((global::System.Guid)(this[this.tableProduction_orig.CORRGUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CORRGUID\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.CORRGUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string NMBRPAL {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_orig.NMBRPALColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NMBRPAL\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.NMBRPALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string TYPEPAL {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_orig.TYPEPALColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TYPEPAL\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.TYPEPALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string PackType {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_orig.PackTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PackType\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.PackTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int status {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction_orig.statusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'status\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.statusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal WEIGHT {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableProduction_orig.WEIGHTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WEIGHT\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.WEIGHTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.Guid STORNOGUID {
+                get {
+                    try {
+                        return ((global::System.Guid)(this[this.tableProduction_orig.STORNOGUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'STORNOGUID\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.STORNOGUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_1 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_orig.REZ_1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_1\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.REZ_1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_2 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_orig.REZ_2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_2\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.REZ_2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_3 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_orig.REZ_3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_3\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.REZ_3Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_4 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_orig.REZ_4Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_4\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.REZ_4Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_5 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_orig.REZ_5Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_5\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.REZ_5Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal WEIGHT_OLD {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableProduction_orig.WEIGHT_OLDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WEIGHT_OLD\' in table \'Production_orig\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_orig.WEIGHT_OLDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCountEntriesNull() {
+                return this.IsNull(this.tableProduction_orig.CountEntriesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCountEntriesNull() {
+                this[this.tableProduction_orig.CountEntriesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSOPNUMBENull() {
+                return this.IsNull(this.tableProduction_orig.SOPNUMBEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSOPNUMBENull() {
+                this[this.tableProduction_orig.SOPNUMBEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMNMBRNull() {
+                return this.IsNull(this.tableProduction_orig.ITEMNMBRColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMNMBRNull() {
+                this[this.tableProduction_orig.ITEMNMBRColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsORDNull() {
+                return this.IsNull(this.tableProduction_orig.ORDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetORDNull() {
+                this[this.tableProduction_orig.ORDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEPREPNull() {
+                return this.IsNull(this.tableProduction_orig.TIMEPREPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEPREPNull() {
+                this[this.tableProduction_orig.TIMEPREPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEUNITNull() {
+                return this.IsNull(this.tableProduction_orig.TIMEUNITColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEUNITNull() {
+                this[this.tableProduction_orig.TIMEUNITColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMESTARTNull() {
+                return this.IsNull(this.tableProduction_orig.TIMESTARTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMESTARTNull() {
+                this[this.tableProduction_orig.TIMESTARTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMESTOPNull() {
+                return this.IsNull(this.tableProduction_orig.TIMESTOPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMESTOPNull() {
+                this[this.tableProduction_orig.TIMESTOPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMECORNull() {
+                return this.IsNull(this.tableProduction_orig.TIMECORColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMECORNull() {
+                this[this.tableProduction_orig.TIMECORColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMECRIDNull() {
+                return this.IsNull(this.tableProduction_orig.TIMECRIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMECRIDNull() {
+                this[this.tableProduction_orig.TIMECRIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsidNull() {
+                return this.IsNull(this.tableProduction_orig.idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetidNull() {
+                this[this.tableProduction_orig.idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsmachineidNull() {
+                return this.IsNull(this.tableProduction_orig.machineidColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetmachineidNull() {
+                this[this.tableProduction_orig.machineidColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsdescriptionNull() {
+                return this.IsNull(this.tableProduction_orig.descriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetdescriptionNull() {
+                this[this.tableProduction_orig.descriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsBarcodePNull() {
+                return this.IsNull(this.tableProduction_orig.BarcodePColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetBarcodePNull() {
+                this[this.tableProduction_orig.BarcodePColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsISOKNull() {
+                return this.IsNull(this.tableProduction_orig.ISOKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetISOKNull() {
+                this[this.tableProduction_orig.ISOKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMTYPENull() {
+                return this.IsNull(this.tableProduction_orig.ITEMTYPEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMTYPENull() {
+                this[this.tableProduction_orig.ITEMTYPEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMMJNull() {
+                return this.IsNull(this.tableProduction_orig.ITEMMJColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMMJNull() {
+                this[this.tableProduction_orig.ITEMMJColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsQTYPACKNull() {
+                return this.IsNull(this.tableProduction_orig.QTYPACKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetQTYPACKNull() {
+                this[this.tableProduction_orig.QTYPACKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsQTYPACKMJNull() {
+                return this.IsNull(this.tableProduction_orig.QTYPACKMJColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetQTYPACKMJNull() {
+                this[this.tableProduction_orig.QTYPACKMJColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEMODENull() {
+                return this.IsNull(this.tableProduction_orig.TIMEMODEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEMODENull() {
+                this[this.tableProduction_orig.TIMEMODEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEPREPSTARTNull() {
+                return this.IsNull(this.tableProduction_orig.TIMEPREPSTARTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEPREPSTARTNull() {
+                this[this.tableProduction_orig.TIMEPREPSTARTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMEPREPSTOPNull() {
+                return this.IsNull(this.tableProduction_orig.TIMEPREPSTOPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMEPREPSTOPNull() {
+                this[this.tableProduction_orig.TIMEPREPSTOPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMECORSTARTNull() {
+                return this.IsNull(this.tableProduction_orig.TIMECORSTARTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMECORSTARTNull() {
+                this[this.tableProduction_orig.TIMECORSTARTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTIMECORSTOPNull() {
+                return this.IsNull(this.tableProduction_orig.TIMECORSTOPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTIMECORSTOPNull() {
+                this[this.tableProduction_orig.TIMECORSTOPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsoperationidNull() {
+                return this.IsNull(this.tableProduction_orig.operationidColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetoperationidNull() {
+                this[this.tableProduction_orig.operationidColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSOUBEHGUIDNull() {
+                return this.IsNull(this.tableProduction_orig.SOUBEHGUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSOUBEHGUIDNull() {
+                this[this.tableProduction_orig.SOUBEHGUIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCORRGUIDNull() {
+                return this.IsNull(this.tableProduction_orig.CORRGUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCORRGUIDNull() {
+                this[this.tableProduction_orig.CORRGUIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsNMBRPALNull() {
+                return this.IsNull(this.tableProduction_orig.NMBRPALColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetNMBRPALNull() {
+                this[this.tableProduction_orig.NMBRPALColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTYPEPALNull() {
+                return this.IsNull(this.tableProduction_orig.TYPEPALColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTYPEPALNull() {
+                this[this.tableProduction_orig.TYPEPALColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsPackTypeNull() {
+                return this.IsNull(this.tableProduction_orig.PackTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetPackTypeNull() {
+                this[this.tableProduction_orig.PackTypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsstatusNull() {
+                return this.IsNull(this.tableProduction_orig.statusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetstatusNull() {
+                this[this.tableProduction_orig.statusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsWEIGHTNull() {
+                return this.IsNull(this.tableProduction_orig.WEIGHTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetWEIGHTNull() {
+                this[this.tableProduction_orig.WEIGHTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSTORNOGUIDNull() {
+                return this.IsNull(this.tableProduction_orig.STORNOGUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSTORNOGUIDNull() {
+                this[this.tableProduction_orig.STORNOGUIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_1Null() {
+                return this.IsNull(this.tableProduction_orig.REZ_1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_1Null() {
+                this[this.tableProduction_orig.REZ_1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_2Null() {
+                return this.IsNull(this.tableProduction_orig.REZ_2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_2Null() {
+                this[this.tableProduction_orig.REZ_2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_3Null() {
+                return this.IsNull(this.tableProduction_orig.REZ_3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_3Null() {
+                this[this.tableProduction_orig.REZ_3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_4Null() {
+                return this.IsNull(this.tableProduction_orig.REZ_4Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_4Null() {
+                this[this.tableProduction_orig.REZ_4Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_5Null() {
+                return this.IsNull(this.tableProduction_orig.REZ_5Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_5Null() {
+                this[this.tableProduction_orig.REZ_5Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsWEIGHT_OLDNull() {
+                return this.IsNull(this.tableProduction_orig.WEIGHT_OLDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetWEIGHT_OLDNull() {
+                this[this.tableProduction_orig.WEIGHT_OLDColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Production_updateRow : global::System.Data.DataRow {
+            
+            private Production_updateDataTable tableProduction_update;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal Production_updateRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableProduction_update = ((Production_updateDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int CountEntries {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction_update.CountEntriesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CountEntries\' in table \'Production_update\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_update.CountEntriesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string SOPNUMBE {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_update.SOPNUMBEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SOPNUMBE\' in table \'Production_update\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_update.SOPNUMBEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMNMBR {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_update.ITEMNMBRColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMNMBR\' in table \'Production_update\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_update.ITEMNMBRColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int ORD {
+                get {
+                    try {
+                        return ((int)(this[this.tableProduction_update.ORDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ORD\' in table \'Production_update\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_update.ORDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMTYPE {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_update.ITEMTYPEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMTYPE\' in table \'Production_update\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_update.ITEMTYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal QTYPACK {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableProduction_update.QTYPACKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QTYPACK\' in table \'Production_update\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_update.QTYPACKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal QTYODVEDENO {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableProduction_update.QTYODVEDENOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QTYODVEDENO\' in table \'Production_update\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_update.QTYODVEDENOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal CNTODVEDENO {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableProduction_update.CNTODVEDENOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CNTODVEDENO\' in table \'Production_update\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_update.CNTODVEDENOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime LSTMod {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction_update.LSTModColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LSTMod\' in table \'Production_update\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_update.LSTModColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string BarcodeP {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_update.BarcodePColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BarcodeP\' in table \'Production_update\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_update.BarcodePColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCountEntriesNull() {
+                return this.IsNull(this.tableProduction_update.CountEntriesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCountEntriesNull() {
+                this[this.tableProduction_update.CountEntriesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSOPNUMBENull() {
+                return this.IsNull(this.tableProduction_update.SOPNUMBEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSOPNUMBENull() {
+                this[this.tableProduction_update.SOPNUMBEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMNMBRNull() {
+                return this.IsNull(this.tableProduction_update.ITEMNMBRColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMNMBRNull() {
+                this[this.tableProduction_update.ITEMNMBRColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsORDNull() {
+                return this.IsNull(this.tableProduction_update.ORDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetORDNull() {
+                this[this.tableProduction_update.ORDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMTYPENull() {
+                return this.IsNull(this.tableProduction_update.ITEMTYPEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMTYPENull() {
+                this[this.tableProduction_update.ITEMTYPEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsQTYPACKNull() {
+                return this.IsNull(this.tableProduction_update.QTYPACKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetQTYPACKNull() {
+                this[this.tableProduction_update.QTYPACKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsQTYODVEDENONull() {
+                return this.IsNull(this.tableProduction_update.QTYODVEDENOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetQTYODVEDENONull() {
+                this[this.tableProduction_update.QTYODVEDENOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCNTODVEDENONull() {
+                return this.IsNull(this.tableProduction_update.CNTODVEDENOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCNTODVEDENONull() {
+                this[this.tableProduction_update.CNTODVEDENOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsLSTModNull() {
+                return this.IsNull(this.tableProduction_update.LSTModColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetLSTModNull() {
+                this[this.tableProduction_update.LSTModColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsBarcodePNull() {
+                return this.IsNull(this.tableProduction_update.BarcodePColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetBarcodePNull() {
+                this[this.tableProduction_update.BarcodePColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Production_SNRow : global::System.Data.DataRow {
+            
+            private Production_SNDataTable tableProduction_SN;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal Production_SNRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableProduction_SN = ((Production_SNDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.Guid GUID_Production {
+                get {
+                    try {
+                        return ((global::System.Guid)(this[this.tableProduction_SN.GUID_ProductionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GUID_Production\' in table \'Production_SN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_SN.GUID_ProductionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string SERLNMBR {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_SN.SERLNMBRColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SERLNMBR\' in table \'Production_SN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_SN.SERLNMBRColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ITEMNMBR {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_SN.ITEMNMBRColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ITEMNMBR\' in table \'Production_SN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_SN.ITEMNMBRColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal QTY {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableProduction_SN.QTYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QTY\' in table \'Production_SN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_SN.QTYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime Expirace {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableProduction_SN.ExpiraceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Expirace\' in table \'Production_SN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_SN.ExpiraceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_1 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_SN.REZ_1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_1\' in table \'Production_SN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_SN.REZ_1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_2 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_SN.REZ_2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_2\' in table \'Production_SN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_SN.REZ_2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_3 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_SN.REZ_3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_3\' in table \'Production_SN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_SN.REZ_3Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string REZ_4 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProduction_SN.REZ_4Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'REZ_4\' in table \'Production_SN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_SN.REZ_4Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.Guid GUID {
+                get {
+                    try {
+                        return ((global::System.Guid)(this[this.tableProduction_SN.GUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GUID\' in table \'Production_SN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProduction_SN.GUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsGUID_ProductionNull() {
+                return this.IsNull(this.tableProduction_SN.GUID_ProductionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetGUID_ProductionNull() {
+                this[this.tableProduction_SN.GUID_ProductionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSERLNMBRNull() {
+                return this.IsNull(this.tableProduction_SN.SERLNMBRColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSERLNMBRNull() {
+                this[this.tableProduction_SN.SERLNMBRColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsITEMNMBRNull() {
+                return this.IsNull(this.tableProduction_SN.ITEMNMBRColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetITEMNMBRNull() {
+                this[this.tableProduction_SN.ITEMNMBRColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsQTYNull() {
+                return this.IsNull(this.tableProduction_SN.QTYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetQTYNull() {
+                this[this.tableProduction_SN.QTYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsExpiraceNull() {
+                return this.IsNull(this.tableProduction_SN.ExpiraceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetExpiraceNull() {
+                this[this.tableProduction_SN.ExpiraceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_1Null() {
+                return this.IsNull(this.tableProduction_SN.REZ_1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_1Null() {
+                this[this.tableProduction_SN.REZ_1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_2Null() {
+                return this.IsNull(this.tableProduction_SN.REZ_2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_2Null() {
+                this[this.tableProduction_SN.REZ_2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_3Null() {
+                return this.IsNull(this.tableProduction_SN.REZ_3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_3Null() {
+                this[this.tableProduction_SN.REZ_3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsREZ_4Null() {
+                return this.IsNull(this.tableProduction_SN.REZ_4Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetREZ_4Null() {
+                this[this.tableProduction_SN.REZ_4Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsGUIDNull() {
+                return this.IsNull(this.tableProduction_SN.GUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetGUIDNull() {
+                this[this.tableProduction_SN.GUIDColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class Production_OldRowChangeEvent : global::System.EventArgs {
+            
+            private Production_OldRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_OldRowChangeEvent(Production_OldRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_OldRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class CorrectsRowChangeEvent : global::System.EventArgs {
+            
+            private CorrectsRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CorrectsRowChangeEvent(CorrectsRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CorrectsRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class CZPRO_VPHRowChangeEvent : global::System.EventArgs {
+            
+            private CZPRO_VPHRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZPRO_VPHRowChangeEvent(CZPRO_VPHRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZPRO_VPHRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class LoginsRowChangeEvent : global::System.EventArgs {
+            
+            private LoginsRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public LoginsRowChangeEvent(LoginsRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public LoginsRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class UserEventsRowChangeEvent : global::System.EventArgs {
+            
+            private UserEventsRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public UserEventsRowChangeEvent(UserEventsRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public UserEventsRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class StatusTypesRowChangeEvent : global::System.EventArgs {
+            
+            private StatusTypesRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public StatusTypesRowChangeEvent(StatusTypesRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public StatusTypesRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class CZPRO_VPPRowChangeEvent : global::System.EventArgs {
+            
+            private CZPRO_VPPRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZPRO_VPPRowChangeEvent(CZPRO_VPPRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZPRO_VPPRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class Production_SourcesRowChangeEvent : global::System.EventArgs {
+            
+            private Production_SourcesRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_SourcesRowChangeEvent(Production_SourcesRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_SourcesRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class FASK_CONS_095RowChangeEvent : global::System.EventArgs {
+            
+            private FASK_CONS_095Row eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public FASK_CONS_095RowChangeEvent(FASK_CONS_095Row row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public FASK_CONS_095Row Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class CZMST093RowChangeEvent : global::System.EventArgs {
+            
+            private CZMST093Row eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZMST093RowChangeEvent(CZMST093Row row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZMST093Row Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class CZMST094RowChangeEvent : global::System.EventArgs {
+            
+            private CZMST094Row eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZMST094RowChangeEvent(CZMST094Row row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZMST094Row Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class ProductionRowChangeEvent : global::System.EventArgs {
+            
+            private ProductionRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public ProductionRowChangeEvent(ProductionRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public ProductionRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class FASK_Vyroba_TPRowChangeEvent : global::System.EventArgs {
+            
+            private FASK_Vyroba_TPRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public FASK_Vyroba_TPRowChangeEvent(FASK_Vyroba_TPRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public FASK_Vyroba_TPRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class MachinesRowChangeEvent : global::System.EventArgs {
+            
+            private MachinesRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public MachinesRowChangeEvent(MachinesRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public MachinesRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class OperationsRowChangeEvent : global::System.EventArgs {
+            
+            private OperationsRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public OperationsRowChangeEvent(OperationsRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public OperationsRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class VMachinesOperationsRowChangeEvent : global::System.EventArgs {
+            
+            private VMachinesOperationsRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public VMachinesOperationsRowChangeEvent(VMachinesOperationsRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public VMachinesOperationsRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class ProductionHistRowChangeEvent : global::System.EventArgs {
+            
+            private ProductionHistRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public ProductionHistRowChangeEvent(ProductionHistRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public ProductionHistRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class Production_origRowChangeEvent : global::System.EventArgs {
+            
+            private Production_origRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_origRowChangeEvent(Production_origRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_origRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class Production_updateRowChangeEvent : global::System.EventArgs {
+            
+            private Production_updateRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_updateRowChangeEvent(Production_updateRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_updateRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class Production_SNRowChangeEvent : global::System.EventArgs {
+            
+            private Production_SNRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_SNRowChangeEvent(Production_SNRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public Production_SNRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+    }
+}
+namespace VyrobaUtil {
+    using System;
+    using System.Data;
+    
+    
+    public partial class DesignerUtil {
+        
+        public static bool IsDesignTime() {
+            // Determine if this instance is running against .NET Framework by using the MSCoreLib PublicKeyToken
+            System.Reflection.Assembly mscorlibAssembly = typeof(int).Assembly;
+            if ((mscorlibAssembly != null)) {
+                if (mscorlibAssembly.FullName.ToUpper().EndsWith("B77A5C561934E089")) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        
+        public static bool IsRunTime() {
+            // Determine if this instance is running against .NET Compact Framework by using the MSCoreLib PublicKeyToken
+            System.Reflection.Assembly mscorlibAssembly = typeof(int).Assembly;
+            if ((mscorlibAssembly != null)) {
+                if (mscorlibAssembly.FullName.ToUpper().EndsWith("969DB8053D3322AC")) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+}

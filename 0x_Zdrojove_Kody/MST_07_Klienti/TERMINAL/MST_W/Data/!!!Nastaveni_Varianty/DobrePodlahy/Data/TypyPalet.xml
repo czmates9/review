@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<TypyPalet xmlns="http://fask.cz/TypyPalet.xsd">
+  <Palety>
+    <ID>C </ID>
+    <Name>čtvrtpaleta                   </Name>
+  </Palety>
+  <Palety>
+    <ID>CD</ID>
+    <Name>čtvrtpaleta s displayem       </Name>
+  </Palety>
+  <Palety>
+    <ID>E1</ID>
+    <Name>EUROPALETY                    </Name>
+  </Palety>
+  <Palety>
+    <ID>N </ID>
+    <Name>nevratná paleta (+atyp)       </Name>
+  </Palety>
+  <Palety>
+    <ID>P </ID>
+    <Name>půlpaleta                     </Name>
+  </Palety>
+  <Palety>
+    <ID>PD</ID>
+    <Name>půlpaleta s displayem         </Name>
+  </Palety>
+</TypyPalet>

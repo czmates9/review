@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <appSettings>
+    <add key="ScannerType" value="COM" />
+    <add key="ApplicationPosition" value="-8; -8" />
+    <add key="FiltryVazatNaUzivatele" value="False" />
+    <add key="DataGridVazatNaUzivatele" value="False" />
+    <add key="PouzivatTabulkuZbozi" value="False" />
+    <add key="TerminalID" value="99" />
+    <add key="Loging" value="True" />
+    <!-- Ukolovani -->
+    <add key="UkolovaniPovolit" value="false" />
+    <add key="UkolovaniUzivatelePovolit" value="true" />
+    <add key="UkolovaniUkolyPovolit" value="true" />
+    <add key="UkolovaniPrehledUkoluPovolit" value="true" />
+    <add key="UkolovaniHistorieUkoluPovolit" value="true" />
+    <add key="UkolovaniPovolitBarevneZvyrazneniStavu" value="true" />
+    <!-- Vyroba -->
+    <add key="VyrobaPovolit" value="False" />
+    <add key="VyrobaPouzivatTabulkuZbozi" value="false" />
+    <add key="VyrobaUzivatelePovolit" value="true" />
+    <add key="VyrobaSkupinyPovolit" value="true" />
+    <add key="VyrobaZboziPovolit" value="true" />
+    <add key="VyrobaVyrobniPrikazyPovolit" value="true" />
+    <add key="VyrobaPrehledPovolit" value="true" />
+    <!-- MD Let -->
+    <add key="StavSkladuPovolit" value="false" />
+    <!-- Servis -->
+    <add key="ServisPovolit" value="false" />
+    <add key="ServisTvorbaZdrojePriraditStavOkruhPovolit" value="true" />
+    <add key="ServisImagesDataFileDirectory" value="d:\_work_\_Vyvoj_Subversion_01\MST_04.01\SERVER\MST_Win_Kom_Server\Logs\ImagesDataFileDirectory" />
+    <add key="ServisCinnostiPovolit" value="true" />
+    <add key="ServisOdberatelePovolit" value="true" />
+    <add key="ServisStavyPovolit" value="true" />
+    <add key="ServisOkruhyPovolit" value="true" />
+    <add key="ServisUzivatelePovolit" value="true" />
+    <add key="ServisVazbyStavStavNextPovolit" value="true" />
+    <add key="ServisVazbyCinnostCinnostNextPovolit" value="true" />
+    <add key="ServisVazbyZdrojZdrojSeznamPovolit" value="true" />
+    <add key="ServisVazbyOkruhZdrojSeznamPovolit" value="true" />
+    <add key="ServisVazbyDynamickeTabulkyPovolit" value="true" />
+    <add key="ServisZdrojePovolit" value="true" />
+    <add key="ServisStavyZdrojuPovolit" value="true" />
+    <add key="ServisPohybyZdrojuPovolit" value="true" />
+    <!-- Sklady -->
+    <add key="SkladyPovolit" value="True" />
+    <add key="SkladyStavAutomatickyAktualizovatData"  value="true" />
+    <!-- Pohledy na data -->
+    <add key="SkladyPohledAktualni" value="fask_view_pohyby_aktualni" />
+    <add key="SkladyPohledArchivni" value="fask_view_pohyby_archivni" />
+    <add key="SkladyPohledAktualniAArchivni" value="fask_view_pohyby_aktualni_a_archivni" />
+    <!-- Ciselniky -->
+    <add key="SkladyCiselnikyPovolit" value="True" />
+    <add key="SkladyCiselnikMapaLokaciPovolit" value="false" />
+    <add key="SkladyCiselnikOdberatelePovolit" value="true" />
+    <add key="SkladyCiselnikSkladyPovolit" value="true" />
+    <add key="SkladyCiselnikStrediskaPovolit" value="true" />
+    <add key="SkladyCiselnikUzivatelePovolit" value="true" />
+    <add key="SkladyCiselnikZboziPovolit" value="true" />
+    <add key="SkladyCiselnikTypyLokaciPovolit" value="false" />
+    <add key="SkladyCiselnikLokaceVariantySortimentPovolit" value="false" />
+    <add key="SkladyCiselnikPracovniciPovolit" value="true" />
+
+    <!-- Pohyby a stavy skladu -->
+    <add key="SkladyTransakcePohybyPovolit" value="True" />
+    <add key="SkladyTransakceStavyPovolit" value="true" />
+    <add key="SkladyPodledyNaDataArchivniPovolit" value ="false" />
+    <add key="SkladyTransakceInventuraPohybyPovolit" value="false" />
+    <add key="SkladyTransakceInventuraPohybyVariantyLokaciPovolit" value="false" />
+    <add key="SkladyTransakceInventuraStavyPovolit" value="false" />
+    <add key="SkladyTransakceVydejPrirazeniPrioritPovolit" value="true" />
+    <add key="SkladyTransakceLokacniMechanismusStavSkladuPovolit" value="false" />
+
+    <add key="SkladyRFID_Enable" value="false" />
+    <add key="SkladyRFID_ComPort" value="COM4" />
+    <add key="SkladyRFID_Baudrate" value="_57600bps" />
+    <add key="SkladyRFID_Address" value="FF" />
+
+    <!-- Exporty do excelu -->
+    <add key="ExportyExcelOtevritPoVygenerovani" value="false" />
+    <add key="ExportyExcelFormatDatum" value="d.M.yyyy H:m.s" />
+    <!-- Expedice-->
+    <add key="ExpedicePovolit" value="false" />
+    <!-- Prijem-->
+    <add key="PrijemPovolit" value="false" />
+
+
+    <!--
+    Provider
+    <add key="Provider.Konzola" value="Fask.ModuleFirebird.dll" />
+    <add key="Provider.Konzola" value="Fask.ModuleSql.dll" />
+    <add key="Provider.Konzola" value="Fask.ModulePohodaXML.dll" />
+        <add key="Provider.Konzola" value="Fask.ModulePohodaXML.dll" />
+    -->
+    <add key="Provider.Konzola" value="Fask.ModuleSql.dll" />
+    <!--Poloha SplitContaineru v Vazby Materialy-->
+    <add key="VazbyMaterialySplitPoloha" value="" />
+
+  </appSettings>
+</configuration>

@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D2235007-DEB0-4D51-A54A-6F203506BC96}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vrtacka_stara</RootNamespace>
+    <AssemblyName>Vrtacka_stara</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\!Build!\Vyroba\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\!Build!\Vyroba\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\Config.cs" />
+    <Compile Include="Configuration\ConfigTable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConfigTable.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmPotvrzeniKusu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPotvrzeniKusu.designer.cs">
+      <DependentUpon>frmPotvrzeniKusu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVrtacka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVrtacka.designer.cs">
+      <DependentUpon>frmVrtacka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmPotvrzeniKusu.resx">
+      <DependentUpon>frmPotvrzeniKusu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVrtacka.resx">
+      <DependentUpon>frmVrtacka.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\Fask.Logging\Fask.Logging.csproj">
+      <Project>{89e8c070-4694-4f11-ab01-a674bf8b9f80}</Project>
+      <Name>Fask.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BarCodeParser\BarCodeParser.csproj">
+      <Project>{CD794B4A-2F39-4467-B225-08C3C35CB720}</Project>
+      <Name>BarCodeParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Database\Database.csproj">
+      <Project>{53601A7B-F9FC-47DA-A99F-E8A47DDDF947}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ErrorLog\ErrorLog.csproj">
+      <Project>{3151DDC5-73BA-4E7A-AD51-873EFBBA0FDC}</Project>
+      <Name>ErrorLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ICommDatabase\ICommDatabase.csproj">
+      <Project>{091B2F54-A19D-426A-9B7A-6B9065685BA2}</Project>
+      <Name>ICommDatabase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Logging\Logging.csproj">
+      <Project>{8B038B30-3962-410F-A306-1DA2CDC74266}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VyrobaIfc\VyrobaIfc.csproj">
+      <Project>{AEF304CD-C27C-46A4-ACA9-D3EBECAF0F5F}</Project>
+      <Name>VyrobaIfc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Configuration\ConfigTable.xsc">
+      <DependentUpon>ConfigTable.xsd</DependentUpon>
+    </None>
+    <None Include="Configuration\ConfigTable.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConfigTable.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Configuration\ConfigTable.xss">
+      <DependentUpon>ConfigTable.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

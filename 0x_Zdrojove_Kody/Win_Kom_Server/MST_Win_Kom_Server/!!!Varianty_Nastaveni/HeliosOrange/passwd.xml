@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<passfile xmlns="http://fask.cz/passwd.xsd">
+  <user>
+    <login>1111</login>
+    <password>1234</password>
+    <id>1</id>
+  </user>
+</passfile>

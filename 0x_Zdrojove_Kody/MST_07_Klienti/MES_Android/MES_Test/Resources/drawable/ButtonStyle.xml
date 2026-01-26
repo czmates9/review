@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item android:state_pressed="false" android:bottom="2dp" android:left="2dp" >
+
+    <layer-list>
+      <item android:right="5dp" android:top="5dp">
+        <shape>
+          <!--zaobleni rohu okolo tlacitka-->
+          <corners android:radius="2dp"/>
+          <!-- farba tlacitka celkova full-->
+          <solid android:color="#D6D6D6"/>
+        </shape>
+      </item>
+
+      <item android:bottom="2dp" android:left="2dp">
+        <shape>
+
+          <!-- farba tlacitka od hora dole prechod-->
+          <gradient
+        android:startColor="#4A6EA9"
+        android:endColor="#4A6EA9"
+        android:angle="270" />
+
+          <!--ramecek okolo tlacitka-->
+          <stroke
+              android:width="1dp"
+              android:color="#BABABA" />
+
+          <!--zaobleni rohu okolo tlacitka-->
+          <corners
+              android:radius="4dp" />
+
+
+          <padding
+              android:left="10dp"
+              android:top="10dp"
+              android:right="10dp"
+              android:bottom="10dp" />
+        </shape>
+      </item>
+
+    </layer-list>
+
+  </item>
+
+  <!-- ked neni tlacitko stlacene-->
+  <item android:state_pressed="true" android:bottom="2dp" android:left="2dp">
+
+    <layer-list>
+      <item android:right="5dp" android:top="5dp">
+        <shape>
+          <corner android:radius="2dp"/>
+          <solid android:color="#D6D6D6"/>
+        </shape>
+      </item>
+
+      <item android:bottom="2dp" android:left="2dp">
+        <shape>
+
+          <!-- farba tlacitka od hora dole prechod-->
+          <gradient
+              android:startColor="#0AAAA0"
+              android:endColor="#7C97C1"
+              android:angle="270" />
+
+          <!--ramecek okolo tlacitka-->
+          <stroke
+              android:width="1dp"
+              android:color="#BABABA" />
+
+          <!--zaobleni rohu okolo tlacitka-->
+          <corners
+              android:radius="4dp" />
+
+          <padding
+              android:left="10dp"
+              android:top="10dp"
+              android:right="10dp"
+              android:bottom="10dp" />
+
+        </shape>
+
+      </item>
+
+
+    </layer-list>
+
+  </item>
+</selector>

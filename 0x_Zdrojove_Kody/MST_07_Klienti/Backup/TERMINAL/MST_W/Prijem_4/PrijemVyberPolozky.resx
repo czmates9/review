@@ -1,0 +1,1230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="mainMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="menuItem1.Text" xml:space="preserve">
+    <value>Příjem</value>
+  </data>
+  <data name="menuItem3.Text" xml:space="preserve">
+    <value>Esc - Storno</value>
+  </data>
+  <data name="menuItem2.Text" xml:space="preserve">
+    <value>Ent - OK</value>
+  </data>
+  <data name="menuItem4.Text" xml:space="preserve">
+    <value>Zobrazení</value>
+  </data>
+  <data name="menuItem5.Text" xml:space="preserve">
+    <value>F1 - List</value>
+  </data>
+  <data name="menuItem6.Text" xml:space="preserve">
+    <value>F2 - Detail</value>
+  </data>
+  <data name="&gt;&gt;buttonOK.Name" xml:space="preserve">
+    <value>buttonOK</value>
+  </data>
+  <data name="&gt;&gt;buttonOK.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonOK.Parent" xml:space="preserve">
+    <value>panelButtons</value>
+  </data>
+  <data name="&gt;&gt;buttonOK.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;buttonStorno.Name" xml:space="preserve">
+    <value>buttonStorno</value>
+  </data>
+  <data name="&gt;&gt;buttonStorno.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonStorno.Parent" xml:space="preserve">
+    <value>panelButtons</value>
+  </data>
+  <data name="&gt;&gt;buttonStorno.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panelButtons.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="panelButtons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 390</value>
+  </data>
+  <data name="panelButtons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>661, 35</value>
+  </data>
+  <data name="&gt;&gt;panelButtons.Name" xml:space="preserve">
+    <value>panelButtons</value>
+  </data>
+  <data name="&gt;&gt;panelButtons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelButtons.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelButtons.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonOK.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="buttonOK.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="buttonOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>315, 35</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonOK.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="buttonOK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;buttonOK.Name" xml:space="preserve">
+    <value>buttonOK</value>
+  </data>
+  <data name="&gt;&gt;buttonOK.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonOK.Parent" xml:space="preserve">
+    <value>panelButtons</value>
+  </data>
+  <data name="&gt;&gt;buttonOK.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonStorno.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="buttonStorno.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="buttonStorno.Location" type="System.Drawing.Point, System.Drawing">
+    <value>315, 0</value>
+  </data>
+  <data name="buttonStorno.Size" type="System.Drawing.Size, System.Drawing">
+    <value>346, 35</value>
+  </data>
+  <data name="buttonStorno.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="buttonStorno.Text" xml:space="preserve">
+    <value>Storno</value>
+  </data>
+  <data name="&gt;&gt;buttonStorno.Name" xml:space="preserve">
+    <value>buttonStorno</value>
+  </data>
+  <data name="&gt;&gt;buttonStorno.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonStorno.Parent" xml:space="preserve">
+    <value>panelButtons</value>
+  </data>
+  <data name="&gt;&gt;buttonStorno.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="cZMSTPEBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>209, 17</value>
+  </metadata>
+  <metadata name="prijem.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>126, 17</value>
+  </metadata>
+  <data name="dataGrid1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dataGrid1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dataGrid1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 257</value>
+  </data>
+  <data name="dataGrid1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgPONUMBER.HeaderText" xml:space="preserve">
+    <value>Objednávka</value>
+  </data>
+  <data name="dgPONUMBER.MappingName" xml:space="preserve">
+    <value>PONUMBER</value>
+  </data>
+  <data name="dgITEMNMBR.HeaderText" xml:space="preserve">
+    <value>Položka č.</value>
+  </data>
+  <data name="dgITEMNMBR.MappingName" xml:space="preserve">
+    <value>ITEMNMBR</value>
+  </data>
+  <data name="dgITEMDESC.HeaderText" xml:space="preserve">
+    <value>Název</value>
+  </data>
+  <data name="dgITEMDESC.MappingName" xml:space="preserve">
+    <value>ITEMDESC</value>
+  </data>
+  <data name="dgORD.HeaderText" xml:space="preserve">
+    <value>Pořadí</value>
+  </data>
+  <data name="dgORD.MappingName" xml:space="preserve">
+    <value>ORD</value>
+  </data>
+  <data name="dgVNDDOCNM.HeaderText" xml:space="preserve">
+    <value>VNDDOCNM</value>
+  </data>
+  <data name="dgVNDDOCNM.MappingName" xml:space="preserve">
+    <value>VNDDOCNM</value>
+  </data>
+  <data name="dgVNDITNUM.HeaderText" xml:space="preserve">
+    <value>Čár.kód</value>
+  </data>
+  <data name="dgVNDITNUM.MappingName" xml:space="preserve">
+    <value>VNDITNUM</value>
+  </data>
+  <data name="dgCZCARKOD.HeaderText" xml:space="preserve">
+    <value>Čár.kód vlastní</value>
+  </data>
+  <data name="dgCZCARKOD.MappingName" xml:space="preserve">
+    <value>CZ_CarKod</value>
+  </data>
+  <data name="dgLOCNCODE.HeaderText" xml:space="preserve">
+    <value>Lokace</value>
+  </data>
+  <data name="dgLOCNCODE.MappingName" xml:space="preserve">
+    <value>LOCNCODE</value>
+  </data>
+  <data name="dgQTYSHPPD.HeaderText" xml:space="preserve">
+    <value>Množství</value>
+  </data>
+  <data name="dgQTYSHPPD.MappingName" xml:space="preserve">
+    <value>QTYSHPPD</value>
+  </data>
+  <data name="dgQTYPACK.HeaderText" xml:space="preserve">
+    <value>Balení</value>
+  </data>
+  <data name="dgQTYPACK.MappingName" xml:space="preserve">
+    <value>QTYPACK</value>
+  </data>
+  <data name="dgNasnimano.HeaderText" xml:space="preserve">
+    <value>Nasnímáno</value>
+  </data>
+  <data name="dgNasnimano.MappingName" xml:space="preserve">
+    <value>Nasnimano</value>
+  </data>
+  <data name="dgZbyva.HeaderText" xml:space="preserve">
+    <value>Zbývá</value>
+  </data>
+  <data name="dgZbyva.MappingName" xml:space="preserve">
+    <value>Zbyva</value>
+  </data>
+  <data name="dgMJ.HeaderText" xml:space="preserve">
+    <value>MJ</value>
+  </data>
+  <data name="dgMJ.MappingName" xml:space="preserve">
+    <value>MJ</value>
+  </data>
+  <data name="dgWEIGHT.HeaderText" xml:space="preserve">
+    <value>Váha</value>
+  </data>
+  <data name="dgWEIGHT.MappingName" xml:space="preserve">
+    <value>WEIGHT</value>
+  </data>
+  <data name="dgITEMCODE.HeaderText" xml:space="preserve">
+    <value>Kód položky</value>
+  </data>
+  <data name="dgITEMCODE.MappingName" xml:space="preserve">
+    <value>ITEMCODE</value>
+  </data>
+  <data name="dgNMBRPAL.HeaderText" xml:space="preserve">
+    <value>SSCC palety</value>
+  </data>
+  <data name="dgNMBRPAL.MappingName" xml:space="preserve">
+    <value>NMBRPAL</value>
+  </data>
+  <data name="&gt;&gt;dataGrid1.Name" xml:space="preserve">
+    <value>dataGrid1</value>
+  </data>
+  <data name="&gt;&gt;dataGrid1.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dataGrid1.Parent" xml:space="preserve">
+    <value>panelGrid</value>
+  </data>
+  <data name="&gt;&gt;dataGrid1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelGrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 53</value>
+  </data>
+  <data name="panelGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 257</value>
+  </data>
+  <data name="&gt;&gt;panelGrid.Name" xml:space="preserve">
+    <value>panelGrid</value>
+  </data>
+  <data name="&gt;&gt;panelGrid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelGrid.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelGrid.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="prijem.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>126, 17</value>
+  </metadata>
+  <data name="panelDetail.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;dfNMBRPAL.Name" xml:space="preserve">
+    <value>dfNMBRPAL</value>
+  </data>
+  <data name="&gt;&gt;dfNMBRPAL.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfNMBRPAL.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dfNMBRPAL.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dfWEIGHT.Name" xml:space="preserve">
+    <value>dfWEIGHT</value>
+  </data>
+  <data name="&gt;&gt;dfWEIGHT.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfWEIGHT.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dfWEIGHT.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dfITEMCODE.Name" xml:space="preserve">
+    <value>dfITEMCODE</value>
+  </data>
+  <data name="&gt;&gt;dfITEMCODE.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfITEMCODE.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dfITEMCODE.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;dfMJ.Name" xml:space="preserve">
+    <value>dfMJ</value>
+  </data>
+  <data name="&gt;&gt;dfMJ.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfMJ.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dfMJ.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dfZbyva.Name" xml:space="preserve">
+    <value>dfZbyva</value>
+  </data>
+  <data name="&gt;&gt;dfZbyva.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfZbyva.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dfZbyva.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dfNasnimano.Name" xml:space="preserve">
+    <value>dfNasnimano</value>
+  </data>
+  <data name="&gt;&gt;dfNasnimano.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfNasnimano.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dfNasnimano.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;dfQTYSHPPD.Name" xml:space="preserve">
+    <value>dfQTYSHPPD</value>
+  </data>
+  <data name="&gt;&gt;dfQTYSHPPD.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfQTYSHPPD.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dfQTYSHPPD.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dfPONUMBER.Name" xml:space="preserve">
+    <value>dfPONUMBER</value>
+  </data>
+  <data name="&gt;&gt;dfPONUMBER.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfPONUMBER.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dfPONUMBER.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;dfORD.Name" xml:space="preserve">
+    <value>dfORD</value>
+  </data>
+  <data name="&gt;&gt;dfORD.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfORD.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dfORD.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;df_LOCNCODE.Name" xml:space="preserve">
+    <value>df_LOCNCODE</value>
+  </data>
+  <data name="&gt;&gt;df_LOCNCODE.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_LOCNCODE.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_LOCNCODE.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;df_CZCARKOD.Name" xml:space="preserve">
+    <value>df_CZCARKOD</value>
+  </data>
+  <data name="&gt;&gt;df_CZCARKOD.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_CZCARKOD.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_CZCARKOD.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;df_ITEMDESC.Name" xml:space="preserve">
+    <value>df_ITEMDESC</value>
+  </data>
+  <data name="&gt;&gt;df_ITEMDESC.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_ITEMDESC.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_ITEMDESC.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;df_VNDDOCNM.Name" xml:space="preserve">
+    <value>df_VNDDOCNM</value>
+  </data>
+  <data name="&gt;&gt;df_VNDDOCNM.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_VNDDOCNM.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_VNDDOCNM.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;df_VNDITNUM.Name" xml:space="preserve">
+    <value>df_VNDITNUM</value>
+  </data>
+  <data name="&gt;&gt;df_VNDITNUM.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_VNDITNUM.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_VNDITNUM.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;df_QTYPACK.Name" xml:space="preserve">
+    <value>df_QTYPACK</value>
+  </data>
+  <data name="&gt;&gt;df_QTYPACK.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_QTYPACK.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_QTYPACK.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;df_itemnmbr.Name" xml:space="preserve">
+    <value>df_itemnmbr</value>
+  </data>
+  <data name="&gt;&gt;df_itemnmbr.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_itemnmbr.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_itemnmbr.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="panelDetail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>256, 72</value>
+  </data>
+  <data name="panelDetail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 312</value>
+  </data>
+  <data name="&gt;&gt;panelDetail.Name" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;panelDetail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelDetail.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelDetail.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dfWEIGHT.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="dfWEIGHT.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="dfWEIGHT.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 270</value>
+  </data>
+  <data name="dfWEIGHT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 16</value>
+  </data>
+  <data name="dfWEIGHT.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;dfWEIGHT.Name" xml:space="preserve">
+    <value>dfWEIGHT</value>
+  </data>
+  <data name="&gt;&gt;dfWEIGHT.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfWEIGHT.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dfWEIGHT.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dfITEMCODE.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="dfITEMCODE.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="dfITEMCODE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 253</value>
+  </data>
+  <data name="dfITEMCODE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 16</value>
+  </data>
+  <data name="dfITEMCODE.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;dfITEMCODE.Name" xml:space="preserve">
+    <value>dfITEMCODE</value>
+  </data>
+  <data name="&gt;&gt;dfITEMCODE.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfITEMCODE.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dfITEMCODE.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="dfMJ.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="dfMJ.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="dfMJ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 236</value>
+  </data>
+  <data name="dfMJ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 16</value>
+  </data>
+  <data name="dfMJ.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dfMJ.Name" xml:space="preserve">
+    <value>dfMJ</value>
+  </data>
+  <data name="&gt;&gt;dfMJ.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfMJ.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dfMJ.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="dfZbyva.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="dfZbyva.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="dfZbyva.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 219</value>
+  </data>
+  <data name="dfZbyva.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 16</value>
+  </data>
+  <data name="dfZbyva.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dfZbyva.Name" xml:space="preserve">
+    <value>dfZbyva</value>
+  </data>
+  <data name="&gt;&gt;dfZbyva.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfZbyva.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dfZbyva.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="dfNasnimano.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="dfNasnimano.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="dfNasnimano.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 202</value>
+  </data>
+  <data name="dfNasnimano.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 16</value>
+  </data>
+  <data name="dfNasnimano.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;dfNasnimano.Name" xml:space="preserve">
+    <value>dfNasnimano</value>
+  </data>
+  <data name="&gt;&gt;dfNasnimano.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfNasnimano.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dfNasnimano.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="dfQTYSHPPD.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="dfQTYSHPPD.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="dfQTYSHPPD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 100</value>
+  </data>
+  <data name="dfQTYSHPPD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 16</value>
+  </data>
+  <data name="dfQTYSHPPD.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dfQTYSHPPD.Name" xml:space="preserve">
+    <value>dfQTYSHPPD</value>
+  </data>
+  <data name="&gt;&gt;dfQTYSHPPD.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfQTYSHPPD.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dfQTYSHPPD.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="dfPONUMBER.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="dfPONUMBER.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="dfPONUMBER.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 83</value>
+  </data>
+  <data name="dfPONUMBER.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 16</value>
+  </data>
+  <data name="dfPONUMBER.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dfPONUMBER.Name" xml:space="preserve">
+    <value>dfPONUMBER</value>
+  </data>
+  <data name="&gt;&gt;dfPONUMBER.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfPONUMBER.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dfPONUMBER.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="dfORD.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="dfORD.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="dfORD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 66</value>
+  </data>
+  <data name="dfORD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 16</value>
+  </data>
+  <data name="dfORD.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dfORD.Name" xml:space="preserve">
+    <value>dfORD</value>
+  </data>
+  <data name="&gt;&gt;dfORD.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfORD.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dfORD.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="df_LOCNCODE.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="df_LOCNCODE.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="df_LOCNCODE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 168</value>
+  </data>
+  <data name="df_LOCNCODE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 16</value>
+  </data>
+  <data name="df_LOCNCODE.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;df_LOCNCODE.Name" xml:space="preserve">
+    <value>df_LOCNCODE</value>
+  </data>
+  <data name="&gt;&gt;df_LOCNCODE.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_LOCNCODE.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_LOCNCODE.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="df_CZCARKOD.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="df_CZCARKOD.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="df_CZCARKOD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 151</value>
+  </data>
+  <data name="df_CZCARKOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 16</value>
+  </data>
+  <data name="df_CZCARKOD.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;df_CZCARKOD.Name" xml:space="preserve">
+    <value>df_CZCARKOD</value>
+  </data>
+  <data name="&gt;&gt;df_CZCARKOD.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_CZCARKOD.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_CZCARKOD.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="df_ITEMDESC.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="df_ITEMDESC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt, style=Bold</value>
+  </data>
+  <data name="df_ITEMDESC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 21</value>
+  </data>
+  <data name="df_ITEMDESC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 44</value>
+  </data>
+  <data name="df_ITEMDESC.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;df_ITEMDESC.Name" xml:space="preserve">
+    <value>df_ITEMDESC</value>
+  </data>
+  <data name="&gt;&gt;df_ITEMDESC.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_ITEMDESC.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_ITEMDESC.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="df_VNDDOCNM.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="df_VNDDOCNM.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="df_VNDDOCNM.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 185</value>
+  </data>
+  <data name="df_VNDDOCNM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 16</value>
+  </data>
+  <data name="df_VNDDOCNM.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;df_VNDDOCNM.Name" xml:space="preserve">
+    <value>df_VNDDOCNM</value>
+  </data>
+  <data name="&gt;&gt;df_VNDDOCNM.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_VNDDOCNM.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_VNDDOCNM.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="df_VNDITNUM.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="df_VNDITNUM.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="df_VNDITNUM.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 134</value>
+  </data>
+  <data name="df_VNDITNUM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 16</value>
+  </data>
+  <data name="df_VNDITNUM.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;df_VNDITNUM.Name" xml:space="preserve">
+    <value>df_VNDITNUM</value>
+  </data>
+  <data name="&gt;&gt;df_VNDITNUM.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_VNDITNUM.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_VNDITNUM.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="df_QTYPACK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="df_QTYPACK.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="df_QTYPACK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 117</value>
+  </data>
+  <data name="df_QTYPACK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 16</value>
+  </data>
+  <data name="df_QTYPACK.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;df_QTYPACK.Name" xml:space="preserve">
+    <value>df_QTYPACK</value>
+  </data>
+  <data name="&gt;&gt;df_QTYPACK.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_QTYPACK.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_QTYPACK.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="df_itemnmbr.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="df_itemnmbr.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="df_itemnmbr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="df_itemnmbr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 16</value>
+  </data>
+  <data name="df_itemnmbr.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;df_itemnmbr.Name" xml:space="preserve">
+    <value>df_itemnmbr</value>
+  </data>
+  <data name="&gt;&gt;df_itemnmbr.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_itemnmbr.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_itemnmbr.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <metadata name="cZMST_PETableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>377, 17</value>
+  </metadata>
+  <data name="dfNMBRPAL.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="dfNMBRPAL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="dfNMBRPAL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 287</value>
+  </data>
+  <data name="dfNMBRPAL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 16</value>
+  </data>
+  <data name="dfNMBRPAL.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;dfNMBRPAL.Name" xml:space="preserve">
+    <value>dfNMBRPAL</value>
+  </data>
+  <data name="&gt;&gt;dfNMBRPAL.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dfNMBRPAL.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dfNMBRPAL.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.FormFactorShadowProperty" xml:space="preserve">
+    <value>WEBPAD</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Skin" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>661, 425</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Příjem - Výběr položky</value>
+  </data>
+  <data name="&gt;&gt;mainMenu1.Name" xml:space="preserve">
+    <value>mainMenu1</value>
+  </data>
+  <data name="&gt;&gt;mainMenu1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MainMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem1.Name" xml:space="preserve">
+    <value>menuItem1</value>
+  </data>
+  <data name="&gt;&gt;menuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem3.Name" xml:space="preserve">
+    <value>menuItem3</value>
+  </data>
+  <data name="&gt;&gt;menuItem3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem2.Name" xml:space="preserve">
+    <value>menuItem2</value>
+  </data>
+  <data name="&gt;&gt;menuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem4.Name" xml:space="preserve">
+    <value>menuItem4</value>
+  </data>
+  <data name="&gt;&gt;menuItem4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem5.Name" xml:space="preserve">
+    <value>menuItem5</value>
+  </data>
+  <data name="&gt;&gt;menuItem5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem6.Name" xml:space="preserve">
+    <value>menuItem6</value>
+  </data>
+  <data name="&gt;&gt;menuItem6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cZMSTPEBindingSource.Name" xml:space="preserve">
+    <value>cZMSTPEBindingSource</value>
+  </data>
+  <data name="&gt;&gt;cZMSTPEBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;prijem.Name" xml:space="preserve">
+    <value>prijem</value>
+  </data>
+  <data name="&gt;&gt;prijem.Type" xml:space="preserve">
+    <value>Fask.MST_W.SqlCEDBs.DataSets.Prijem, Fask.SQLiteDBs.DataSets.Prijem.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dataGridTableStyle1.Name" xml:space="preserve">
+    <value>dataGridTableStyle1</value>
+  </data>
+  <data name="&gt;&gt;dataGridTableStyle1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridTableStyle, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgPONUMBER.Name" xml:space="preserve">
+    <value>dgPONUMBER</value>
+  </data>
+  <data name="&gt;&gt;dgPONUMBER.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2TextBoxColumn, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgITEMNMBR.Name" xml:space="preserve">
+    <value>dgITEMNMBR</value>
+  </data>
+  <data name="&gt;&gt;dgITEMNMBR.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2TextBoxColumn, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgITEMDESC.Name" xml:space="preserve">
+    <value>dgITEMDESC</value>
+  </data>
+  <data name="&gt;&gt;dgITEMDESC.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2TextBoxColumn, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgORD.Name" xml:space="preserve">
+    <value>dgORD</value>
+  </data>
+  <data name="&gt;&gt;dgORD.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2NumberBoxColumn, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgVNDDOCNM.Name" xml:space="preserve">
+    <value>dgVNDDOCNM</value>
+  </data>
+  <data name="&gt;&gt;dgVNDDOCNM.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2TextBoxColumn, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgVNDITNUM.Name" xml:space="preserve">
+    <value>dgVNDITNUM</value>
+  </data>
+  <data name="&gt;&gt;dgVNDITNUM.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2TextBoxColumn, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgCZCARKOD.Name" xml:space="preserve">
+    <value>dgCZCARKOD</value>
+  </data>
+  <data name="&gt;&gt;dgCZCARKOD.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2TextBoxColumn, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgLOCNCODE.Name" xml:space="preserve">
+    <value>dgLOCNCODE</value>
+  </data>
+  <data name="&gt;&gt;dgLOCNCODE.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2TextBoxColumn, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgQTYSHPPD.Name" xml:space="preserve">
+    <value>dgQTYSHPPD</value>
+  </data>
+  <data name="&gt;&gt;dgQTYSHPPD.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2NumberBoxColumn, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgQTYPACK.Name" xml:space="preserve">
+    <value>dgQTYPACK</value>
+  </data>
+  <data name="&gt;&gt;dgQTYPACK.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2NumberBoxColumn, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgNasnimano.Name" xml:space="preserve">
+    <value>dgNasnimano</value>
+  </data>
+  <data name="&gt;&gt;dgNasnimano.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2NumberBoxColumn, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgZbyva.Name" xml:space="preserve">
+    <value>dgZbyva</value>
+  </data>
+  <data name="&gt;&gt;dgZbyva.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2NumberBoxColumn, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgMJ.Name" xml:space="preserve">
+    <value>dgMJ</value>
+  </data>
+  <data name="&gt;&gt;dgMJ.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2NumberBoxColumn, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgWEIGHT.Name" xml:space="preserve">
+    <value>dgWEIGHT</value>
+  </data>
+  <data name="&gt;&gt;dgWEIGHT.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2TextBoxColumn, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgITEMCODE.Name" xml:space="preserve">
+    <value>dgITEMCODE</value>
+  </data>
+  <data name="&gt;&gt;dgITEMCODE.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2TextBoxColumn, Fask.Graphic, Version=1.11.5966.16507, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cZMST_PETableAdapter.Name" xml:space="preserve">
+    <value>cZMST_PETableAdapter</value>
+  </data>
+  <data name="&gt;&gt;cZMST_PETableAdapter.Type" xml:space="preserve">
+    <value>Fask.MST_W.SqlCEDBs.DataSets.PrijemTableAdapters.CZMST_PETableAdapter, Fask.SQLiteDBs.DataSets.Prijem.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgNMBRPAL.Name" xml:space="preserve">
+    <value>dgNMBRPAL</value>
+  </data>
+  <data name="&gt;&gt;dgNMBRPAL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PrijemVyberPolozky</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

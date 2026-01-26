@@ -1,0 +1,166 @@
+﻿/*body {
+    position: relative;
+    background-color: #333;
+}*/
+
+/**  BACK TO TOP  **/
+
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 30px;
+    z-index: 10;
+    display: block;
+    opacity: .85;
+}
+
+    .back-to-top:hover,
+    .back-to-top:focus {
+        opacity: 1;
+        transition: opacit .8s;
+    }
+
+/**  SCROLL  **/
+
+ul.nav-pills {
+    position: fixed;
+}
+
+
+#section1 {
+    border: 1px solid #fff;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#section2 {
+    border: 1px solid #fff;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#section3 {
+    border: 1px solid #fff;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#section4 {
+    border: 1px solid #fff;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#section5 {
+    border: 1px solid #fff;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#section6 {
+    border: 1px solid #fff;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+
+@media screen and (max-width: 810px) {
+    #section1,
+    #section2,
+    #section3,
+    #section4,
+    #section5,
+    #section6
+    {
+        margin-left: 150px;
+    }
+}
+
+/**  TABULKA **/
+
+table {
+    color: #fff;
+    background: #34495E;
+    border-collapse: collapse;
+    border-radius: 8px;
+    margin: 0px 0px 15px 0px;
+    width: 100%;
+}
+
+th, td {
+    padding: 1px 18px;
+    border: 1px solid #46627f;
+    max-width: 20px;
+}
+
+th {
+    color: #f25f5c;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    vertical-align: middle;
+    height: 100%;
+    padding: 20px;
+}
+
+
+/**  BUTTON, LABEL INPUT  **/
+
+input {
+    background: #fff;
+    border: none;
+    padding: 10px 10px;
+    margin: 10px 0px 5px 0px;
+    border-radius: 4px;
+    box-shadow: 0 0 3px;
+    color: #000000;
+    width: 100%;
+}
+
+.BTN {
+    color: #fdeaea;
+    background: #f25f5c;
+    width: 100%;
+    height: 75px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    cursor: pointer;
+    margin-left: 24px;
+}
+
+
+/********* TABULKA ********/
+
+.container {
+    width: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+/*************Chechbox***********/
+
+.checkbox {
+    text-align: center;
+}
+
+
+/******KOMENTARE*****/
+
+/*.Comment_Display {
+    display: none;
+}*/
+
+.Comment {
+    padding: 20px;
+}
+
+.ClickCommentCursor {
+    cursor: help;
+}

@@ -1,0 +1,2590 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using ZXing;
+using ZXing.Common;
+using System.Windows.Forms;
+using Fask.Logging;
+using Konzola.Extensions;
+using System.Reflection;
+using Konzola.Vyroba.Transakce;
+using QRCoder;
+using Konzola.Vyroba.Rozbory;
+
+namespace Konzola.Vyroba
+{
+    public partial class FormVyrobniPrikazList : Form
+    {
+
+        #region Nazvy pro filtry
+
+        private string _ClassName { get { return this.GetType().ToString(); } }
+        private string _filtrName_VPH { get { return _ClassName + "VPH"; } }
+        private string _filtrName_VPP { get { return _ClassName + "VPP"; } }
+
+        private string _filtrName_VPH_Filtr { get { return _ClassName + "_VPH.filtr"; } }
+        private string _filtrName_VPP_Filtr { get { return _ClassName + "_VPP.filtr"; } }
+
+        #endregion
+
+        private const string OrderByPS = "DEX_ROW_ID";
+
+        private Fask.Interfaces.IMES providerVPH = null;
+        private Fask.Interfaces.IMES providerVPP = null;
+
+        public Fask.Interfaces.DataSets.Vyroba.CZPRO_VPHRow SelectedVPHRow
+        {
+            get
+            {
+                try
+                {
+                    return ((DataRowView)(dgVPH.BindingContext[this.bsVPH].Current)).Row as Fask.Interfaces.DataSets.Vyroba.CZPRO_VPHRow;
+
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+        }
+
+        public Fask.Interfaces.DataSets.Vyroba.CZPRO_VPPRow SelectedVPPRow
+        {
+            get
+            {
+                try
+                {
+                    return ((DataRowView)(dgVPP.BindingContext[this.bsVPP].Current)).Row as Fask.Interfaces.DataSets.Vyroba.CZPRO_VPPRow;
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+        }
+
+        #region Parametry filtru
+
+        #region Parametry VPH
+
+
+        /// <summary>
+        /// Seznam vsech nactenych filtru.
+        /// </summary>
+        private List<Fask.Interfaces.Filtry.Vyroba_VPH_Filtr> filtry_VPH = new List<Fask.Interfaces.Filtry.Vyroba_VPH_Filtr>();
+
+        /// <summary>
+        /// Vybrany filtr.
+        /// </summary>
+        private Fask.Interfaces.Filtry.Vyroba_VPH_Filtr rowFiltr_VPH
+        {
+            get
+            {
+                try
+                {
+                    return tscbFiltry_VPH.SelectedItem as Fask.Interfaces.Filtry.Vyroba_VPH_Filtr;
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+        }
+
+
+        #endregion
+
+        #region VPP
+
+
+        /// <summary>
+        /// Seznam vsech nactenych filtru.
+        /// </summary>
+        private List<Fask.Interfaces.Filtry.Vyroba_VPP_Filtr> filtry_VPP = new List<Fask.Interfaces.Filtry.Vyroba_VPP_Filtr>();
+
+        /// <summary>
+        /// Vybrany filtr.
+        /// </summary>
+        private Fask.Interfaces.Filtry.Vyroba_VPP_Filtr rowFiltr_VPP
+        {
+            get
+            {
+                try
+                {
+                    return tscbFiltry_VPP.SelectedItem as Fask.Interfaces.Filtry.Vyroba_VPP_Filtr;
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+        }
+
+
+        #endregion
+
+
+        #endregion
+
+        #region Eventy formu + konstruktor
+
+        public FormVyrobniPrikazList()
+        {
+            InitializeComponent();
+            this.dgVPH.UpdateColumnHeaderCellsByDatasource();
+            this.dgVPP.UpdateColumnHeaderCellsByDatasource();
+            panelButtons.Menu = menuStrip2;
+        }
+
+        private void FormVyrobniPrikazList_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (!e.Shift && !e.Control && !e.Alt)
+            {
+                if (e.KeyCode == Keys.Escape)
+                {
+                    PerformCancel();
+                }
+                else if (e.KeyCode == Keys.Enter)
+                {
+                    //PerformOK();
+                }
+                else
+                    return;
+            }
+            else
+                return;
+
+            e.Handled = true;
+        }
+
+        private void FormVyrobniPrikazList_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                this.ShowIcon = false;
+                this.WindowState = FormWindowState.Maximized;
+                this.dgVPH.LoadConfiguration(_filtrName_VPH);
+                this.dgVPP.LoadConfiguration(_filtrName_VPP);
+
+                panelButtons.LoadConfiguration(_ClassName);
+                panelButtons.Init();
+
+                advancedDataGridViewSearchToolBarVPP.SetColumns(dgVPP.Columns);
+                advancedDataGridViewSearchToolBarVPH.SetColumns(dgVPH.Columns);
+
+                InitProvider();
+
+                if (providerVPH == null)
+                    throw new Exception("Provider 'VPH' není inicializován");
+
+                if (providerVPP == null)
+                    throw new Exception("Provider 'VPP' není inicializován");
+
+                cb_OrderBy_VPP.SelectedIndex = 0;
+
+                cb_Active.DataSource = Enum.GetValues(typeof(Fask.Interfaces.Classes.VyrobaStavPrikazu));
+                cb_Active.SelectedIndex = -1;
+
+                //// načtení konfigurace vytvořených filtrů
+                this.filtry_VPH = Extensions.ListExt.ReadFromXML<Fask.Interfaces.Filtry.Vyroba_VPH_Filtr>(_filtrName_VPH_Filtr);
+                tscbFiltry_VPH.ComboBox.DataSource = this.filtry_VPH;
+                tscbFiltry_VPH.SelectedItem = null;
+                tscbFiltry_VPH.ComboBox.DropDownWitdhAutosize();
+
+                //// načtení konfigurace vytvořených filtrů
+                this.filtry_VPP = Extensions.ListExt.ReadFromXML<Fask.Interfaces.Filtry.Vyroba_VPP_Filtr>(_filtrName_VPP_Filtr);
+                tscbFiltry_VPP.ComboBox.DataSource = this.filtry_VPP;
+                tscbFiltry_VPP.SelectedItem = null;
+                tscbFiltry_VPP.ComboBox.DropDownWitdhAutosize();
+
+                SetStatusLabelText_VPH(-1);
+                SetStatusLabelText_VPP(-1);
+
+                //buttonOdznacitVse_VPP_Click(null, null);
+
+
+                // UpdateForm();
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void FormVyrobniPrikazList_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                this.dgVPH.SaveConfiguration(_filtrName_VPH);
+                this.dgVPP.SaveConfiguration(_filtrName_VPP);
+
+                panelButtons.SaveConfiguration(_ClassName);
+
+                this.filtry_VPH.WriteXML(_filtrName_VPH_Filtr);
+                this.filtry_VPP.WriteXML(_filtrName_VPP_Filtr);
+
+                Konfigurace.Globals_Konfig_Konzola.Konfigurace.Vyroba_Ostatni[0].FormVyrobniPrikazList_SplitPoloha = splitContainer1.SplitterDistance;
+                Konfigurace.Globals_Konfig_Konzola.SaveConfiguration();
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(this, ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void FormVyrobniPrikazList_Shown(object sender, EventArgs e)
+        {
+            try
+            {
+                splitContainer1.SplitterDistance = Konfigurace.Globals_Konfig_Konzola.Konfigurace.Vyroba_Ostatni[0].FormVyrobniPrikazList_SplitPoloha;
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(ex);
+                splitContainer1.SplitterDistance = 1000;
+            }
+        }
+
+        #endregion
+
+        #region Inicializace provideru
+
+        private void InitProvider()
+        {
+            #region providerVPH
+
+            try
+            {
+                if (String.IsNullOrEmpty(Konfigurace.Globals_Konfig_Konzola.Konfigurace.Provider[0].ProviderKonzola))
+                    return;
+
+                if (providerVPH == null) //inicializace se provede pouze pokud nebyla provedena ... 
+                {
+                    Assembly providerAssemlby = Assembly.LoadFrom(System.IO.Path.Combine(Konzola.MySystem.MyPath.CurrentDirectory, Konfigurace.Globals_Konfig_Konzola.Konfigurace.Provider[0].ProviderKonzola));
+                    Type[] types = providerAssemlby.GetTypes();
+                    foreach (Type t in types)
+                    {
+                        try
+                        {
+                            if (typeof(Fask.Interfaces.Vyroba.VPH.IVPH).IsAssignableFrom(t))
+                            {
+                                providerVPH = (Fask.Interfaces.Vyroba.VPH.IVPH)providerAssemlby.CreateInstance(t.FullName);
+                                if (providerVPH != null)
+                                    break;
+                            }
+                        }
+                        catch { }
+                    }
+                    //return config;
+                }
+
+                providerVPH.InitProvider();
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            #endregion
+
+            #region providerVPP
+
+            try
+            {
+                if (String.IsNullOrEmpty(Konfigurace.Globals_Konfig_Konzola.Konfigurace.Provider[0].ProviderKonzola))
+                    return;
+
+                if (providerVPP == null) //inicializace se provede pouze pokud nebyla provedena ... 
+                {
+                    Assembly providerAssemlby = Assembly.LoadFrom(System.IO.Path.Combine(Konzola.MySystem.MyPath.CurrentDirectory, Konfigurace.Globals_Konfig_Konzola.Konfigurace.Provider[0].ProviderKonzola));
+                    Type[] types = providerAssemlby.GetTypes();
+                    foreach (Type t in types)
+                    {
+                        try
+                        {
+                            if (typeof(Fask.Interfaces.Vyroba.VPP.IVPP).IsAssignableFrom(t))
+                            {
+                                providerVPP = (Fask.Interfaces.Vyroba.VPP.IVPP)providerAssemlby.CreateInstance(t.FullName);
+                                if (providerVPP != null)
+                                    break;
+                            }
+                        }
+                        catch { }
+                    }
+                    //return config;
+                }
+
+                providerVPP.InitProvider();
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            #endregion
+
+        }
+
+        #endregion
+
+        #region Update Formu  OLD
+
+        /// <summary>
+        /// Aktualizace dat.
+        /// </summary>
+        //private void UpdateForm()
+        //{
+        //    try
+        //    {
+        //        int FirstDisplayedScrollingRowIndex = this.dgVPH.FirstDisplayedScrollingRowIndex; //Save Current Scroll Index
+        //        this.ds.Clear();
+        //        //this.vyrobaDataSet1.AcceptChanges();
+
+        //        //var adapterVPH = new Production.DataServices.VyrobaDataSetTableAdapters.CZPRO_VPHTableAdapter();
+        //        //adapterVPH.Connection.ConnectionString = Properties.Settings.Default.Konzola_ConnectionString;
+        //        //adapterVPH.Fill(this.vyrobaDataSet1.CZPRO_VPH);
+
+
+        //        if (providerVPH is Fask.Interfaces.Vyroba.VPH.IVPH_Fill)
+        //            ((Fask.Interfaces.Vyroba.VPH.IVPH_Fill)providerVPH).VPH_Fill(this.ds);
+        //        else
+        //            throw new Exception("IVPH_Fill not implementet");
+
+
+
+        //        if ((FirstDisplayedScrollingRowIndex >= 0) && ((this.dgVPH.Rows.Count - 1) >= FirstDisplayedScrollingRowIndex)) this.dgVPH.FirstDisplayedScrollingRowIndex = FirstDisplayedScrollingRowIndex; //Restore Scroll Index
+        //        if (SelectedVPHRow != null)
+        //        {
+        //            //var adapterVPP = new Production.DataServices.VyrobaDataSetTableAdapters.CZPRO_VPPTableAdapter();
+        //            //adapterVPP.Connection.ConnectionString = Properties.Settings.Default.Konzola_ConnectionString;
+        //            ////adapterVPP.Fill(this.vyrobaDataSet1.CZPRO_VPP);
+        //            //adapterVPP.FillByCountEntriesAndSOPNUMBE(this.vyrobaDataSet1.CZPRO_VPP, SelectedVPHRow.CountEntries, SelectedVPHRow.SOPNUMBE);
+
+
+        //            if (providerVPP is Fask.Interfaces.Vyroba.VPP.IVPP_FillByCountEntriesAndSOPNUMBE)
+        //                ((Fask.Interfaces.Vyroba.VPP.IVPP_FillByCountEntriesAndSOPNUMBE)providerVPP).FillByCountEntriesAndSOPNUMBE(this.ds, GetSearch_OrderBy(), SelectedVPHRow.CountEntries, SelectedVPHRow.SOPNUMBE);
+        //            else
+        //                throw new Exception("IVPP_FillByCountEntriesAndSOPNUMBE not implementet");
+
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+        //        MessageBox.Show("Nepodařilo se obnovit záznamy", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
+
+        /// <summary>
+        /// Aktualizace dat.
+        /// </summary>
+        //private void UpdateFormVpp(string itemnmbr)
+        //{
+        //    try
+        //    {
+        //        if (SelectedVPHRow != null)
+        //        {
+        //            //var adapterVPP = new Production.DataServices.VyrobaDataSetTableAdapters.CZPRO_VPPTableAdapter();
+        //            //adapterVPP.Connection.ConnectionString = Properties.Settings.Default.Konzola_ConnectionString;
+        //            //adapterVPP.FillByCountEntriesAndSOPNUMBE(this.vyrobaDataSet1.CZPRO_VPP, SelectedVPHRow.CountEntries, SelectedVPHRow.SOPNUMBE);
+
+        //            if (providerVPP is Fask.Interfaces.Vyroba.VPP.IVPP_FillByCountEntriesAndSOPNUMBE)
+        //                ((Fask.Interfaces.Vyroba.VPP.IVPP_FillByCountEntriesAndSOPNUMBE)providerVPP).FillByCountEntriesAndSOPNUMBE(this.ds, GetSearch_OrderBy(), SelectedVPHRow.CountEntries, SelectedVPHRow.SOPNUMBE);
+        //            else
+        //                throw new Exception("IVPP_FillByCountEntriesAndSOPNUMBE not implementet");
+
+        //            int index = bsVPP.Find(this.ds.CZPRO_VPP.ITEMNMBRColumn.ColumnName, itemnmbr);
+        //            bsVPP.Position = index;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+        //        MessageBox.Show("Nepodařilo se obnovit záznamy", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
+
+        /// <summary>
+        /// Aktualizace dat.
+        /// </summary>
+        //private void UpdateForm(string sopnumbe)
+        //{
+        //    try
+        //    {
+        //        //int FirstDisplayedScrollingRowIndex = this.dataGridView1.FirstDisplayedScrollingRowIndex; //Save Current Scroll Index
+        //        this.ds.Clear();
+        //        //this.vyrobaDataSet1.AcceptChanges();
+
+        //        //var adapterVPH = new Production.DataServices.VyrobaDataSetTableAdapters.CZPRO_VPHTableAdapter();
+        //        //adapterVPH.Connection.ConnectionString = Properties.Settings.Default.Konzola_ConnectionString;
+        //        //adapterVPH.Fill(this.vyrobaDataSet1.CZPRO_VPH);
+
+        //        if (providerVPH is Fask.Interfaces.Vyroba.VPH.IVPH_Fill)
+        //            ((Fask.Interfaces.Vyroba.VPH.IVPH_Fill)providerVPH).VPH_Fill(this.ds);
+        //        else
+        //            throw new Exception("IVPH_Fill not implementet");
+
+        //        //if ((FirstDisplayedScrollingRowIndex >= 0) && ((this.dataGridView1.Rows.Count - 1) >= FirstDisplayedScrollingRowIndex)) this.dataGridView1.FirstDisplayedScrollingRowIndex = FirstDisplayedScrollingRowIndex; //Restore Scroll Index
+        //        int index = bsVPH.Find(this.ds.CZPRO_VPH.SOPNUMBEColumn.ColumnName, sopnumbe);
+        //        bsVPH.Position = index;
+        //        if (SelectedVPHRow != null)
+        //        {
+        //            //var adapterVPP = new Production.DataServices.VyrobaDataSetTableAdapters.CZPRO_VPPTableAdapter();
+        //            //adapterVPP.Connection.ConnectionString = Properties.Settings.Default.Konzola_ConnectionString;
+        //            ////adapterVPP.Fill(this.vyrobaDataSet1.CZPRO_VPP);
+        //            //adapterVPP.FillByCountEntriesAndSOPNUMBE(this.vyrobaDataSet1.CZPRO_VPP, SelectedVPHRow.CountEntries, SelectedVPHRow.SOPNUMBE);
+
+        //            if (providerVPP is Fask.Interfaces.Vyroba.VPP.IVPP_FillByCountEntriesAndSOPNUMBE)
+        //                ((Fask.Interfaces.Vyroba.VPP.IVPP_FillByCountEntriesAndSOPNUMBE)providerVPP).FillByCountEntriesAndSOPNUMBE(this.ds, GetSearch_OrderBy(), SelectedVPHRow.CountEntries, SelectedVPHRow.SOPNUMBE);
+        //            else
+        //                throw new Exception("IVPP_FillByCountEntriesAndSOPNUMBE not implementet");
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+        //        MessageBox.Show("Nepodařilo se obnovit záznamy", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
+
+        #endregion
+
+        #region tsmi_  Events
+
+        private void tsmi_Tisky_Click(object sender, EventArgs e)
+        {
+            PerformPrint();
+            //PerformPrint_QR();
+        }
+
+        private void tsmi_konec_Click(object sender, EventArgs e)
+        {
+            PerformCancel();
+        }
+        #endregion
+
+        #region Perform Metody
+
+        #region Tisky
+        private void PerformPrint()
+        {
+            try
+            {
+                if (!MySystem.LoginTest.UserLoginTest())
+                    return;
+
+                if (SelectedVPHRow == null)
+                {
+                    MessageBox.Show("Není vybrán záznam pro tisk!", this.Text, MessageBoxButtons.OK);
+                    return;
+                }
+
+                if (dgVPH.SelectedRows.Count > 1)
+                {
+                    MessageBox.Show("Je vybráno více záznamů než jeden.", this.Text, MessageBoxButtons.OK);
+                    return;
+                }
+
+                Fask.Interfaces.DataSets.Vyroba.CZPRO_VPPDataTable dt = (Fask.Interfaces.DataSets.Vyroba.CZPRO_VPPDataTable)ds.CZPRO_VPP.Copy();
+
+                dt.Columns.Add("BarcodeP_IMG", typeof(string));
+                dt.Columns.Add("VNDITNUM_IMG", typeof(string));
+
+                dt.Columns.Add("A_2D_DataMatrix_IMG", typeof(string));
+                dt.Columns.Add("A_2D_DataMatrix_kod", typeof(string));
+                string A_2D_kod = string.Empty;
+                string SERLTNUM = string.Empty;
+                string VNDITNUM = string.Empty;
+                DateTime? EXPIRACE = null;
+
+                string datumexpirace01 = string.Empty;
+                string sn = string.Empty;
+                dt.Columns.Add("datumExpirace", typeof(string));
+                dt.Columns.Add("SN", typeof(string));
+
+                dt.Columns.Add("QTY_Paleta", typeof(decimal));
+                dt.Columns.Add("MJ_Paleta", typeof(string));
+
+
+                foreach (Fask.Interfaces.DataSets.Vyroba.CZPRO_VPPRow item in dt)
+                {
+
+                    if (!string.IsNullOrEmpty(item.VNDITNUM))
+                    {
+                        ZXing.BarcodeWriter zw = new ZXing.BarcodeWriter();
+                        zw.Format = ZXing.BarcodeFormat.CODE_128;
+                        zw.Options.Height = 50; //50
+                        zw.Options.PureBarcode = true;
+                        System.Drawing.Bitmap image1 = zw.Write(item.VNDITNUM);
+
+                        System.IO.MemoryStream ms = new System.IO.MemoryStream();
+                        image1.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
+                        byte[] imgReportBarcode = ms.ToArray();
+                        ms.Close();
+
+                        string Base64Imahe = Convert.ToBase64String(imgReportBarcode);
+
+                        item["VNDITNUM_IMG"] = Base64Imahe;
+
+
+                        EXPIRACE = DateTime.Now;
+                        if (EXPIRACE.HasValue)
+                        {
+
+                            datumexpirace01 = EXPIRACE.Value.ToString("yyyy-MM-dd");
+                            sn = EXPIRACE.Value.ToString("yy");
+                        }
+
+                        //2D kod
+                        VNDITNUM = item.VNDITNUM;
+                        if (VNDITNUM.Length < 14)
+                        {
+                            VNDITNUM = VNDITNUM.PadLeft(14, '0');
+                        }
+
+                        if (VNDITNUM.Length != 14)
+                        {
+                            throw new Exception("GTIN nemá 14 znaků");
+                        }
+                        
+                        A_2D_kod += "(01)" + VNDITNUM;
+
+                    }
+
+                    EXPIRACE = DateTime.Now;
+                    if (EXPIRACE.HasValue)
+                    {
+                        string datumexpirace = EXPIRACE.Value.ToString("yyMMdd");
+                        A_2D_kod += "(11)" + datumexpirace;
+
+                    }
+
+                   // A_2D_kod += "(11)" + DateTime.Now.ToString() + @"\n";
+
+                    if (!string.IsNullOrEmpty(item.BarcodeP))
+                    {
+                        ZXing.BarcodeWriter zw = new ZXing.BarcodeWriter();
+                        zw.Format = ZXing.BarcodeFormat.CODE_128;
+                        zw.Options.Height = 50; //50
+                        zw.Options.PureBarcode = true;
+                        System.Drawing.Bitmap image1 = zw.Write(item.BarcodeP);
+
+                        System.IO.MemoryStream ms = new System.IO.MemoryStream();
+                        image1.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
+                        byte[] imgReportBarcode = ms.ToArray();
+                        ms.Close();
+
+                        string Base64Imahe = Convert.ToBase64String(imgReportBarcode);
+
+                        item["BarcodeP_IMG"] = Base64Imahe;
+
+                        //2D kod
+                        A_2D_kod += "(21)" + item.BarcodeP;
+                        sn += "-" + item.BarcodeP;
+
+                    }
+
+
+                    #region 2D_Datamatrix GS1
+
+                    //// Vytvoření instance BarcodeWriter pro DataMatrix
+                    //BarcodeWriter barcodeWriter = new BarcodeWriter();
+                    //barcodeWriter.Format = BarcodeFormat.DATA_MATRIX;
+
+                    //// Nastavení parametrů pro GS1 formát
+                    //EncodingOptions encodingOptions = new EncodingOptions();
+                    //encodingOptions.IsGS1Format = true;
+                    //barcodeWriter.Options = encodingOptions;
+
+                    //// Text, který chceš zakódovat
+                    //string data = A_2D_kod;
+
+                    //// Generování kódu
+                    //ZXing.Common.BitMatrix bitMatrix = barcodeWriter.Encode(data);
+
+                    //// Vytvoření MemoryStream
+                    //MemoryStream memoryStream = new MemoryStream();
+
+                    //// Zápis bitMatrix do MemoryStream
+                    //ZXing.Common.MatrixToImageWriter.WriteToStream(bitMatrix, System.Drawing.Imaging.ImageFormat.Bmp, memoryStream);
+
+                    //// Nyní můžete získat pole bytů z MemoryStream
+                    //byte[] imgReportBarcode = memoryStream.ToArray();
+
+
+                    //// Vygenerování obrázku
+
+                    //Bitmap image11 = barcodeWriter.Write(data);
+
+                    //MemoryStream ms1 = new MemoryStream();
+                    //image11.Save(ms1, System.Drawing.Imaging.ImageFormat.Bmp);
+                    //byte[] imgReportBarcode1 = ms1.ToArray();
+                    //ms1.Close();
+
+                    //string Base64Imahe1 = Convert.ToBase64String(imgReportBarcode1);
+
+
+
+                    //item["A_2D_DataMatrix_IMG"] = Base64Imahe1;
+                    //item["A_2D_DataMatrix_kod"] = A_2D_kod;
+
+                    //item["datumExpirace"] = datumexpirace01;
+                    //item["SN"] = sn;
+                    //A_2D_kod = string.Empty;
+                    #endregion
+
+                    #region 2D_Datamatrix old
+
+                    ZXing.BarcodeWriter zw1 = new ZXing.BarcodeWriter();
+                    zw1.Format = ZXing.BarcodeFormat.DATA_MATRIX;
+                    //zw1.Options.Height = 40; //50
+                    //zw1.Options.Margin = -2;
+                    //zw1.Options.Width = 40;
+                    //zw1.Options.PureBarcode = true;
+
+                    #region pouzit
+                    System.Drawing.Bitmap image11 = zw1.Write(A_2D_kod);
+
+                    System.IO.MemoryStream ms1 = new System.IO.MemoryStream();
+                    image11.Save(ms1, System.Drawing.Imaging.ImageFormat.Bmp);
+                    byte[] imgReportBarcode1 = ms1.ToArray();
+                    ms1.Close();
+
+                    string Base64Imahe1 = Convert.ToBase64String(imgReportBarcode1);
+                    #endregion
+
+                    //QRCodeGenerator qrGenerator = new QRCodeGenerator();
+                    //QRCodeData qrCodeData = qrGenerator.CreateQrCode(A_2D_kod, QRCodeGenerator.ECCLevel.Q);
+                    //QRCode qrCode = new QRCode(qrCodeData);
+
+                    //Bitmap image11 = qrCode.GetGraphic(20); // Velikost jednoho modulu (pixelu) je 20x20
+                    //System.IO.MemoryStream ms1 = new System.IO.MemoryStream();
+                    //image11.Save(ms1, System.Drawing.Imaging.ImageFormat.Bmp);
+                    //byte[] imgReportBarcode1 = ms1.ToArray();
+                    //ms1.Close();
+
+                    //string Base64Imahe1 = Convert.ToBase64String(imgReportBarcode1);
+
+                    //item["A_2D_DataMatrix_IMG"] = aaa;
+
+
+
+                    item["A_2D_DataMatrix_IMG"] = Base64Imahe1;
+                    item["A_2D_DataMatrix_kod"] = A_2D_kod;
+
+                    item["datumExpirace"] = datumexpirace01;
+                    item["SN"] = sn;
+                    A_2D_kod = string.Empty;
+                    #endregion
+
+
+
+
+                    if (item.QTYPACK > 0)
+                        item["QTY_Paleta"] = item.QTYSHPPD / item.QTYPACK;
+                    else
+                        item["QTY_Paleta"] = 0;
+
+                    item["MJ_Paleta"] = "Pal";
+
+                    if (string.IsNullOrEmpty(item.ITEMMJ))
+                        item.ITEMMJ = "-";
+                }
+
+                //metoda na UDI code
+                //ProviderTisk tisk = new ProviderTisk();
+                //string temp = string.Empty;
+                //tisk.TiskMetodaEtiketa_GS1(ref dt);
+
+                string sopdesc = SelectedVPHRow.IsSOPDESCNull() ? string.Empty : SelectedVPHRow.SOPDESC.Trim();
+
+                PrintReport(SelectedVPHRow.CountEntries, SelectedVPHRow.SOPNUMBE, dt, sopdesc);
+
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+            }
+        }
+
+
+     
+
+
+        private void PerformPrint_QR()
+        {
+            try
+            {
+                if (!MySystem.LoginTest.UserLoginTest())
+                    return;
+
+                if (SelectedVPHRow == null)
+                {
+                    MessageBox.Show("Není vybrán záznam pro tisk!", this.Text, MessageBoxButtons.OK);
+                    return;
+                }
+
+                if (dgVPH.SelectedRows.Count > 1)
+                {
+                    MessageBox.Show("Je vybráno více záznamů než jeden.", this.Text, MessageBoxButtons.OK);
+                    return;
+                }
+
+                Fask.Interfaces.DataSets.Vyroba.CZPRO_VPPDataTable dt = (Fask.Interfaces.DataSets.Vyroba.CZPRO_VPPDataTable)ds.CZPRO_VPP.Copy();
+
+                
+                dt.Columns.Add("EAN_IMG", typeof(string));
+                dt.Columns.Add("DATUM_VYROBY_IMG", typeof(string));
+                dt.Columns.Add("SER_CISLO_IMG", typeof(string));
+
+                string retezec = string.Empty;
+
+
+                dt.Columns.Add("BarcodeP_IMG", typeof(string));
+                dt.Columns.Add("VNDITNUM_IMG", typeof(string));
+
+                dt.Columns.Add("QTY_Paleta", typeof(decimal));
+                dt.Columns.Add("MJ_Paleta", typeof(string));
+
+
+                foreach (Fask.Interfaces.DataSets.Vyroba.CZPRO_VPPRow item in dt)
+                {
+
+                    if (!string.IsNullOrEmpty(item.VNDITNUM))
+                    {
+                        retezec += "(21)" + item.VNDITNUM + @"\n";
+
+                    }
+
+                       retezec += "(11)" + DateTime.Now.ToString() + @"\n";
+
+                    if (!string.IsNullOrEmpty(item.BarcodeP))
+                    {
+                        retezec += "(21)" + item.BarcodeP;
+                    }
+
+                    ZXing.BarcodeWriter zw = new ZXing.BarcodeWriter();
+                    zw.Format = ZXing.BarcodeFormat.DATA_MATRIX;
+                    
+                    //zw.Format = ZXing.BarcodeFormat.QR_CODE;
+                    zw.Options.Height = 10; //50
+                    zw.Options.Margin = 5;
+                    zw.Options.Width = 10;
+                    zw.Options.PureBarcode = true;
+                    System.Drawing.Bitmap image1 = zw.Write(retezec);
+
+                    System.IO.MemoryStream ms = new System.IO.MemoryStream();
+                    image1.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
+                    byte[] imgReportBarcode = ms.ToArray();
+                    ms.Close();
+
+                    string Base64Imahe = Convert.ToBase64String(imgReportBarcode);
+
+                    item["BarcodeP_IMG"] = Base64Imahe;
+                    item["VNDITNUM_IMG"] = Base64Imahe;
+
+
+                    if (item.QTYPACK > 0)
+                        item["QTY_Paleta"] = item.QTYSHPPD / item.QTYPACK;
+                    else
+                        item["QTY_Paleta"] = 0;
+
+                    item["MJ_Paleta"] = "Pal";
+
+                    if (string.IsNullOrEmpty(item.ITEMMJ))
+                        item.ITEMMJ = "-";
+                }
+
+                string sopdesc = SelectedVPHRow.IsSOPDESCNull() ? string.Empty : SelectedVPHRow.SOPDESC.Trim();
+
+                PrintReport(SelectedVPHRow.CountEntries, SelectedVPHRow.SOPNUMBE, dt, sopdesc);
+
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+            }
+        }
+
+        private void PrintReport(int CountEntries, string SOPNUMBE, Fask.Interfaces.DataSets.Vyroba.CZPRO_VPPDataTable dt, string SOPDESC = "")
+        {
+            try
+            {
+
+                using (PrintReportLibrary.CoolPrintPreviewDialog plr = new PrintReportLibrary.CoolPrintPreviewDialog())
+                {
+
+                    plr.Params = new Microsoft.Reporting.WinForms.ReportParameter[]
+                    {
+                    new Microsoft.Reporting.WinForms.ReportParameter("Param_Firma", Konfigurace.Globals_Konfig_Konzola.Konfigurace.Vyroba_Ostatni[0].Vyroba_Param_Firma),
+                    new Microsoft.Reporting.WinForms.ReportParameter("Param_Adresa", Konfigurace.Globals_Konfig_Konzola.Konfigurace.Vyroba_Ostatni[0].Vyroba_Param_Adresa),
+                    new Microsoft.Reporting.WinForms.ReportParameter("Param_PSC", Konfigurace.Globals_Konfig_Konzola.Konfigurace.Vyroba_Ostatni[0].Vyroba_Param_PSC),
+                    new Microsoft.Reporting.WinForms.ReportParameter("Param_Obec", Konfigurace.Globals_Konfig_Konzola.Konfigurace.Vyroba_Ostatni[0].Vyroba_Param_Obec),
+
+                    new Microsoft.Reporting.WinForms.ReportParameter("Param_Datum", DateTime.Now.ToShortDateString()),
+                    new Microsoft.Reporting.WinForms.ReportParameter("Param_SOPDESC", SOPDESC)
+                    };
+
+                    plr.NazevDataTable = "DataSet";
+                    plr.DataTable = dt;
+
+                    List<PrintReportLibrary.TypeData> tmplist = new List<PrintReportLibrary.TypeData>();
+                    tmplist.Add(PrintReportLibrary.TypeData.DataTable);
+                    plr.typedata = new List<PrintReportLibrary.TypeData>(tmplist);
+                    plr.Projekt = PrintReportLibrary.Projekt.MST;
+                    plr.ShowPreview = true;
+
+                    #region vybrani tiskove sablony
+                    //formular na vybrani tiskove ulohy
+                    DataGridViewRow dataGridView = new DataGridViewRow();
+
+
+
+                    #region old vybrani tiskove  sablony
+                    //// Vytvoření instance formuláře
+                    //FormVyrobniPrikazList_Tisk form = new FormVyrobniPrikazList_Tisk();
+
+                    //DialogResult result = form.ShowDialog();
+                    //// Zobrazení formuláře
+                    //if (result == DialogResult.OK)
+                    //{
+                    //    dataGridView = (DataGridViewRow)form.Tag;
+                    //    // uživatel stiskl OK
+                    //}
+                    //else if (result == DialogResult.Cancel)
+                    //{
+                    //    // uživatel stiskl Cancel
+                    //    MessageBox.Show("Není vybraná tisková šablona");
+                    //    return;
+                    //}
+                    #endregion
+
+                    #region new vybrani tiskove  sablony
+                    // Vytvoření instance formuláře
+                    FormOdvod_TiskoveSablony form = new FormOdvod_TiskoveSablony(this.Text, FASK.Logins.Uzivatel.Instance.GetPravaKonzole_Admin(), SelectedVPHRow.SOPTYPE);
+                    string path = string.Empty;
+                    DialogResult result = form.ShowDialog();
+                    // Zobrazení formuláře
+                    if (result == DialogResult.OK)
+                    {
+                        //dataGridView = (DataGridViewRow)form.Tag;
+                        path = form.ResultString;
+                        // uživatel stiskl OK
+                    }
+                    else if (result == DialogResult.Cancel)
+                    {
+                        // uživatel stiskl Cancel
+                        MessageBox.Show("Není vybraná tisková šablona");
+                        return;
+                    }
+                    #endregion
+
+                    //plr.Path = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "PrintTemplates", dataGridView.Cells["Název tiskové šablony"].Value.ToString());
+
+
+                    plr.Path = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, path);
+
+                    #endregion
+
+
+                    //TODO ošetreny, zda existuje tiskova sestava
+                    //plr.Path = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Servis", "Print", "Templates", Konfigurace.Globals_Konfig_Konzola.Konfigurace.Vyroba_Ostatni[0].VyrobnyPrikazTiskTemplate);
+
+                    Fask.Logging.ExceptionHandler2.Handle(LogLevel.Info, "Path Tisk VPH:'" + plr.Path);
+                    Fask.Logging.ExceptionHandler2.Handle(LogLevel.Info, "Path to PrinterDirectory:'" + MySystem.MyPath.PrintDirectory);
+
+                    PrintReportLibrary.MyPath.PrintTemplateDirectory = Path.Combine(MySystem.MyPath.PrintDirectory);
+
+
+                    plr.CountEntries = CountEntries.ToString();
+                    plr.HlavickaKod = SOPNUMBE;
+                    plr.HlavickaKodIMG = SOPNUMBE.Trim();
+
+                    plr.Print(this);
+
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(ex);
+                throw ex;
+            }
+        }
+
+        #endregion
+
+        #region VPH
+
+        private void PerformCreateVPHRecord()
+        {
+            try
+            {
+                if (!MySystem.LoginTest.UserLoginTest())
+                    return;
+
+                string sopnumbe = string.Empty;
+
+                using (FormVPHEdit frmzb = new FormVPHEdit())
+                {
+                    frmzb.Text = "Nový výrobní příkaz";
+                    if (frmzb.ShowDialog(this) != DialogResult.OK)
+                        return;
+                    sopnumbe = frmzb.SOPNUMBE;
+                }
+
+                PerformVyhledat_VPH();
+                //UpdateForm(sopnumbe);
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void PerformEditVPHRecord()
+        {
+            try
+            {
+                if (!MySystem.LoginTest.UserLoginTest())
+                    return;
+
+                if (dgVPH.SelectedRows.Count > 1)
+                {
+                    MessageBox.Show("Je zvoleno vícero výrobních příkazů", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+
+
+                if ((SelectedVPHRow == null) || (dgVPH.SelectedRows.Count == 0))
+                {
+                    MessageBox.Show("Není zvolen příkaz", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+
+                string sopnumbe = string.Empty;
+
+                using (FormVPHEdit frmzb = new FormVPHEdit())
+                {
+                    frmzb.Text = "Úprava výrobního příkazu";
+                    frmzb.VPHrow = SelectedVPHRow;
+                    frmzb.ShowDialog();
+
+                    sopnumbe = frmzb.SOPNUMBE;
+                }
+
+                PerformVyhledat_VPH();
+                //UpdateForm(sopnumbe);
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void PerformDeleteVPHRecord()
+        {
+            try
+            {
+                if (!MySystem.LoginTest.UserLoginTest())
+                    return;
+
+                if (dgVPH.SelectedRows.Count > 1)
+                {
+                    MessageBox.Show("Je zvoleno vícero výrobních příkazů", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if ((SelectedVPHRow == null) || (dgVPH.SelectedRows.Count == 0))
+                {
+                    MessageBox.Show("Není vybrán záznam pro odstranění", this.Text, MessageBoxButtons.OK);
+                    return;
+                }
+
+                if (SelectedVPHRow.Active >= 1)
+                {
+                    MessageBox.Show("Je zvoleno aktivní výrobní příkaz", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (MessageBox.Show("Chcete odstranit příkaz " + SelectedVPHRow.SOPNUMBE.Trim() + "?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                    return;
+
+                int CountEntries = SelectedVPHRow.CountEntries;
+                string SOPNUMBE = SelectedVPHRow.SOPNUMBE;
+
+
+                if (providerVPP is Fask.Interfaces.Vyroba.VPP.IVPP_DeleteByCountEntriesSOPNUMBE)
+                    ((Fask.Interfaces.Vyroba.VPP.IVPP_DeleteByCountEntriesSOPNUMBE)providerVPP).DeleteByCountEntriesSOPNUMBE(CountEntries, SOPNUMBE);
+                else
+                    throw new Exception("IVPP_DeleteByCountEntriesSOPNUMBE not implementet");
+
+                Fask.Interfaces.DataSets.Vyroba.CZPRO_VPHDataTable dt = new Fask.Interfaces.DataSets.Vyroba.CZPRO_VPHDataTable();
+                dt.ImportRow(SelectedVPHRow);
+                dt.AcceptChanges();
+                dt[0].Delete();
+
+
+
+                if (providerVPH is Fask.Interfaces.Vyroba.VPH.IVPH_Update)
+                    ((Fask.Interfaces.Vyroba.VPH.IVPH_Update)providerVPH).Update(dt);
+                else
+                    throw new Exception("IVPH_Update not implementet");
+
+                //ds.AcceptChanges();
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void PerformVyhledat_VPH()
+        {
+            try
+            {
+                DataTable dtchanged = this.ds.CZPRO_VPH.GetChanges();
+                if (dtchanged != null && dtchanged.Rows.Count > 0) //obsahuje zmeny ... 
+                {
+                    DialogResult dr = MessageBox.Show("Obsahuje změny, pokračovat?", "data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dr == System.Windows.Forms.DialogResult.No)
+                        return;
+                }
+
+                if (bw_VPH.IsBusy)
+                {
+                    bw_VPH.CancelAsync();
+                    while (bw_VPH.IsBusy)
+                    {
+                        Application.DoEvents();
+                    }
+                }
+
+                ProgressIndicatorVyrobekStart_VPH();
+
+                Fask.Interfaces.Filtry.Vyroba_VPH_Filtr filtr = new Fask.Interfaces.Filtry.Vyroba_VPH_Filtr();
+                if (!CreateFilter_VPH(ref filtr))
+                    return;
+
+                int FirstDisplayedScrollingRowIndex = this.dgVPH.FirstDisplayedScrollingRowIndex; //Save Current Scroll Index
+
+                bw_VPH.RunWorkerAsync(filtr);
+
+                if ((FirstDisplayedScrollingRowIndex >= 0) && ((this.dgVPH.Rows.Count - 1) >= FirstDisplayedScrollingRowIndex)) this.dgVPH.FirstDisplayedScrollingRowIndex = FirstDisplayedScrollingRowIndex; //Restore Scroll Index
+            }
+            catch (Exception ex)
+            {
+                ProgressIndicatorVyrobekStop_VPH();
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        #endregion
+
+        #region VPP
+
+        private void PerformCreateVPPRecord()
+        {
+            try
+            {
+                if (!MySystem.LoginTest.UserLoginTest())
+                    return;
+
+                if (dgVPH.SelectedRows.Count > 1)
+                {
+                    MessageBox.Show("Je zvoleno vícero výrobních příkazů", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if ((SelectedVPHRow == null) || (dgVPH.SelectedRows.Count == 0))
+                {
+                    MessageBox.Show("Není zvolena hlavička výrobního příkazu", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (SelectedVPHRow.Active >= 1)
+                {
+                    MessageBox.Show("Je zvoleno aktivní výrobní příkaz", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string itemnmbr = string.Empty;
+
+                using (FormVPPEdit frmzb = new FormVPPEdit())
+                {
+                    frmzb.Text = "Nové položky pro: " + SelectedVPHRow.SOPDESC;
+                    frmzb.rowVPH = SelectedVPHRow;
+
+                    if (frmzb.ShowDialog(this) != DialogResult.OK)
+                        return;
+
+                    itemnmbr = frmzb.ITEMNMBR;
+                }
+
+                if (SelectedVPHRow != null)
+                    PerformVyhledat_VPP(SelectedVPHRow.CountEntries, SelectedVPHRow.SOPNUMBE);
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void PerformEditVPPRecord()
+        {
+            try
+            {
+                if (!MySystem.LoginTest.UserLoginTest())
+                    return;
+
+                if (dgVPH.SelectedRows.Count > 1)
+                {
+                    MessageBox.Show("Je zvoleno vícero výrobních příkazů", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (SelectedVPHRow.Active >= 1)
+                {
+                    MessageBox.Show("Je zvoleno aktivní výrobní příkaz", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (SelectedVPPRow == null)
+                {
+                    MessageBox.Show("Není zvolena položka příkazu", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                string itemnmbr = string.Empty;
+
+                using (FormVPPEdit frmzb = new FormVPPEdit())
+                {
+                    frmzb.Text = "Nové položky pro: " + SelectedVPHRow.SOPDESC;
+                    frmzb.rowVPP = SelectedVPPRow;
+                    frmzb.rowVPH = SelectedVPHRow;
+                    frmzb.ShowDialog();
+                    itemnmbr = frmzb.ITEMNMBR;
+                }
+
+                if (SelectedVPHRow != null)
+                    PerformVyhledat_VPP(SelectedVPHRow.CountEntries, SelectedVPHRow.SOPNUMBE);
+                //UpdateFormVpp(itemnmbr);
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void PerformDeleteVPPRecord()
+        {
+            try
+            {
+                if (!MySystem.LoginTest.UserLoginTest())
+                    return;
+
+                if (dgVPH.SelectedRows.Count > 1)
+                {
+                    MessageBox.Show("Je zvoleno vícero výrobních příkazů", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (SelectedVPHRow.Active >= 1)
+                {
+                    MessageBox.Show("Je zvoleno aktivní výrobní příkaz", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (SelectedVPPRow == null)
+                {
+                    MessageBox.Show("Není vybrán záznam pro odstranění", this.Text, MessageBoxButtons.OK);
+                    return;
+                }
+
+                if (MessageBox.Show("Chcete odstranit příkaz " + SelectedVPPRow.ITEMDESC.Trim() + "?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                    return;
+
+                
+                //var lta = new Production.DataServices.VyrobaDataSetTableAdapters.CZPRO_VPPTableAdapter();
+                //lta.Connection.ConnectionString = Properties.Settings.Default.Konzola_ConnectionString;
+                //lta.Update(vyrobaDataSet1.CZPRO_VPP);
+
+                Fask.Interfaces.DataSets.Vyroba.CZPRO_VPPDataTable dt_delete = new Fask.Interfaces.DataSets.Vyroba.CZPRO_VPPDataTable();
+                dt_delete.ImportRow(SelectedVPPRow);
+
+                dt_delete.Rows[0].Delete();
+
+                SelectedVPPRow.Delete();
+
+                if (providerVPP is Fask.Interfaces.Vyroba.VPP.IVPP_Update)
+                    ((Fask.Interfaces.Vyroba.VPP.IVPP_Update)providerVPP).VPP_Update(dt_delete);
+                else
+                    throw new Exception("IVPP_Update not implementet");
+
+                ds.AcceptChanges();
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void PerformVyhledat_VPP(int CountEntries, string SOPNUMBE)
+        {
+            try
+            {
+                DataTable dtchanged = this.ds.CZPRO_VPP.GetChanges();
+                if (dtchanged != null && dtchanged.Rows.Count > 0) //obsahuje zmeny ... 
+                {
+                    DialogResult dr = MessageBox.Show("Obsahuje změny, pokračovat?", "data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dr == System.Windows.Forms.DialogResult.No)
+                        return;
+                }
+
+                if (dgVPH.SelectedRows.Count > 1)
+                {
+                    ClearVPP();
+                    return;
+                }
+
+                if (bw_VPP.IsBusy)
+                {
+                    bw_VPP.CancelAsync();
+                    while (bw_VPP.IsBusy)
+                    {
+                        Application.DoEvents();
+                    }
+                }
+
+                ProgressIndicatorVyrobekStart_VPP();
+
+                Fask.Interfaces.Filtry.Vyroba_VPP_Filtr filtr = new Fask.Interfaces.Filtry.Vyroba_VPP_Filtr();
+
+                filtr.CountEntries = CountEntries;
+                filtr.SOPNUMBE = SOPNUMBE;
+
+                if (!CreateFilter_VPP(ref filtr))
+                    return;
+
+                int FirstDisplayedScrollingRowIndex = this.dgVPP.FirstDisplayedScrollingRowIndex; //Save Current Scroll Index
+
+                bw_VPP.RunWorkerAsync(filtr);
+
+                if ((FirstDisplayedScrollingRowIndex >= 0) && ((this.dgVPP.Rows.Count - 1) >= FirstDisplayedScrollingRowIndex)) this.dgVPP.FirstDisplayedScrollingRowIndex = FirstDisplayedScrollingRowIndex; //Restore Scroll Index
+            }
+            catch (Exception ex)
+            {
+                ProgressIndicatorVyrobekStop_VPP();
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ClearVPP()
+        {
+            ds.CZPRO_VPP.Clear();
+            bsVPP.DataSource = this.ds;
+            SetStatusLabelText_VPP(-1);
+            return;
+        }
+
+        #endregion
+
+        private void PerformCancel()
+        {
+            try
+            {
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        #region Potřeba materialu
+
+
+        private void PerformPotrebaMaterialu()
+        {
+            //throw new NotImplementedException();
+
+            try
+            {
+                if (!MySystem.LoginTest.UserLoginTest())
+                    return;
+
+                if ((SelectedVPHRow == null) || (dgVPH.SelectedRows.Count == 0))
+                {
+                    MessageBox.Show("Není zvolen příkaz", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+
+                Fask.Interfaces.DataSets.Vyroba.CZPRO_VPHDataTable dt_VPH = new Fask.Interfaces.DataSets.Vyroba.CZPRO_VPHDataTable();
+
+                foreach (DataGridViewRow item in dgVPH.SelectedRows)
+                {
+
+                    Fask.Interfaces.DataSets.Vyroba.CZPRO_VPHRow row = GetSelectedRow(item);
+                    dt_VPH.ImportRow(row);
+                }
+
+                using(FormPotrebaMaterialu frm = new FormPotrebaMaterialu())
+                {
+                    frm.dt_VPH = dt_VPH;
+                    frm.ShowDialog();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        public Fask.Interfaces.DataSets.Vyroba.CZPRO_VPHRow GetSelectedRow(DataGridViewRow item)
+        {
+            try
+            {
+                return ((item.DataBoundItem as DataRowView).Row) as Fask.Interfaces.DataSets.Vyroba.CZPRO_VPHRow;
+            }
+            catch (Exception ex)
+            {
+
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                return null;
+            }
+        }
+
+        #endregion
+
+        private void tsmiOdstranitPrikaz_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Přejete si odstranit výrobní příkaz/y?", this.Text, MessageBoxButtons.YesNo);
+            if (dialog != DialogResult.Yes)
+            {
+                return;
+            }
+
+            PerformDeleteVPHRecord();
+            PerformVyhledat_VPH();
+
+            //UpdateForm();
+        }
+
+        #endregion
+
+        private void tsmiUpravitPrikaz_Click(object sender, EventArgs e)
+        {
+            PerformEditVPHRecord();
+            //UpdateForm();
+        }
+
+        private void tsmiNovyPrikaz_Click(object sender, EventArgs e)
+        {
+            PerformCreateVPHRecord();
+        }
+
+        private void tsmiPridatPolozku_Click(object sender, EventArgs e)
+        {
+            PerformCreateVPPRecord();
+        }
+
+        private void tsmiUpravitPolozku_Click(object sender, EventArgs e)
+        {
+            PerformEditVPPRecord();
+        }
+
+        private void tsmiOdstranitPolozku_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Přejete si odstranit položku/y?", this.Text, MessageBoxButtons.YesNo);
+            if (dialog != DialogResult.Yes)
+            {
+                return;
+            }
+
+            PerformDeleteVPPRecord();
+        }
+
+        private void tsmiPridatPolozkuHromadne_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!MySystem.LoginTest.UserLoginTest())
+                    return;
+
+                if (SelectedVPHRow == null)
+                {
+                    MessageBox.Show("Není zvolena hlavička výrobního příkazu", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (SelectedVPHRow.Active >= 1)
+                {
+                    MessageBox.Show("Je zvoleno aktivní výrobní příkaz", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string itemnmbr = string.Empty;
+
+                using (Wizard.VyrobniPrikazList_VPP.Form_01_Vyber_Vyrobku fw01 = new Wizard.VyrobniPrikazList_VPP.Form_01_Vyber_Vyrobku())
+                {
+                    fw01._VPHrow = this.SelectedVPHRow;
+                    //fw01._VPPdt = (Fask.Interfaces.DataSets.Vyroba.CZPRO_VPPDataTable)((DataRowView)(dataGridView2.BindingContext[this.bindingSourceVPP].Current)).DataView.Table;
+                    fw01._VPPdt = this.ds.CZPRO_VPP;
+                    if (DialogResult.Cancel == fw01.ShowDialog(this))
+                        return;
+                }
+
+                //UpdateFormVpp(string.Empty);
+                if (SelectedVPHRow != null)
+                    PerformVyhledat_VPP(SelectedVPHRow.CountEntries, SelectedVPHRow.SOPNUMBE);
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(this, ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void tsmiDuplikace_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!MySystem.LoginTest.UserLoginTest())
+                    return;
+
+                if (dgVPH.SelectedRows.Count > 1)
+                {
+                    MessageBox.Show("Je zvoleno vícero výrobních příkazů", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if ((SelectedVPHRow == null) || (dgVPH.SelectedRows.Count == 0))
+                {
+                    MessageBox.Show("Není zvolena hlavička výrobního příkazu pro duplikaci", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                string sopnumbe = string.Empty;
+                Fask.Interfaces.DataSets.Vyroba ds = this.ds;
+                using (FormVPHEdit frmzb = new FormVPHEdit())
+                {
+                    frmzb.Text = "Duplikace výrobního příkazu";
+                    frmzb.Duplikace = true;
+                    if (frmzb.ShowDialog(this) != DialogResult.OK)
+                        return;
+
+                    //var lta = new Production.DataServices.VyrobaDataSetTableAdapters.CZPRO_VPPTableAdapter();
+                    //lta.Connection.ConnectionString = Properties.Settings.Default.Konzola_ConnectionString;
+
+                    foreach (var item in ds.CZPRO_VPP)
+                    {
+                        sopnumbe = frmzb.VPHrowCreated.SOPNUMBE;
+
+                        if (providerVPP is Fask.Interfaces.Vyroba.VPP.IVPP_Insert)
+                        {
+
+                            Fask.Interfaces.DataSets.Vyroba.CZPRO_VPPDataTable dd = new Fask.Interfaces.DataSets.Vyroba.CZPRO_VPPDataTable();
+                            Fask.Interfaces.DataSets.Vyroba.CZPRO_VPPRow row = dd.NewCZPRO_VPPRow();
+                            row.SetRealization_StartNull();
+                            //parametry radku VPP:
+                            row.CountEntries = frmzb.VPHrowCreated.CountEntries;
+                            row.SOPNUMBE = frmzb.VPHrowCreated.SOPNUMBE;
+                            row.ITEMNMBR = item.ITEMNMBR;
+                            row.ITEMTYPE = item.ITEMTYPE;
+                            row.ITEMDESC = item.ITEMDESC;
+                            row.ITEMMJ = item.ITEMMJ;
+                            row.VNDDOCNMP = item.VNDDOCNMP;
+                            row.VNDITNUM = item.VNDITNUM;
+                            row.ORD = item.ORD;
+                            row.BarcodeP = item.BarcodeP;
+                            row.LOCNCODE = item.LOCNCODE;
+                            row.QTYSHPPD = item.QTYSHPPD = (frmzb.DuplikovatMnozstvi) ? item.QTYSHPPD : 0;
+                            row.QTYDOKON = item.QTYDOKON;
+                            row.QTYPACK = item.QTYPACK;
+                            row.QTYPACKMJ = item.QTYPACKMJ;
+                            row.TIMEMODE = item.TIMEMODE;
+                            row.TIMEPREP = item.TIMEPREP;
+                            row.TIMEUNIT = item.TIMEUNIT;
+                            row.DtProdT = item.DtProdT;
+                            row.DtProdL = item.DtProdL;
+                            row.SerNumT = item.SerNumT;
+                            row.SerNumL = item.SerNumL;
+                            row.VerT = item.VerT;
+                            row.VerL = item.VerL;
+                            row.TermID = item.TermID;
+                            row.LSTMod = DateTime.Now;
+                            row.SetRealization_StartNull();
+                            row.SetRealization_StopNull();
+                            row.BarcodeT = item.BarcodeT;
+                            row.CZ_REZ1_Track = item.CZ_REZ1_Track;
+                            row.CZ_REZ2_Track = item.CZ_REZ2_Track;
+                            row.CZ_REZ3_Track = item.CZ_REZ3_Track;
+                            row.CZ_REZ4_Track = item.CZ_REZ4_Track;
+                            row.CZ_REZ5_Track = item.CZ_REZ5_Track;
+
+
+                            if (item.IsWEIGHT_TARANull())
+                                row.SetWEIGHT_TARANull();
+                            else
+                                row.WEIGHT_TARA =  item.WEIGHT_TARA;
+
+                            if (item.IsWEIGHT_NETTONull())
+                                row.SetWEIGHT_NETTONull();
+                            else
+                                row.WEIGHT_NETTO = item.WEIGHT_NETTO;
+
+                            if (item.IsWEIGHT_TOL_PLUSNull())
+                                row.SetWEIGHT_TOL_PLUSNull();
+                            else
+                                row.WEIGHT_TOL_PLUS = item.WEIGHT_TOL_PLUS;
+
+                            if (item.IsWEIGHT_TOL_MINUSNull())
+                                row.SetWEIGHT_TOL_MINUSNull();
+                            else
+                                row.WEIGHT_TOL_MINUS = item.WEIGHT_TOL_MINUS;
+
+                            dd.AddCZPRO_VPPRow(row);
+
+                        
+                            ((Fask.Interfaces.Vyroba.VPP.IVPP_Insert)providerVPP).VPP_Insert_Row(row);
+
+                        }
+                        else
+                            throw new Exception("IVPP_Insert not implementet");
+
+                    }
+                }
+
+                PerformVyhledat_VPH();
+                //UpdateForm(sopnumbe);
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void tsmiPotrebaMaterialu_Click(object sender, EventArgs e)
+        {
+            PerformPotrebaMaterialu();
+        }
+
+        private void advancedDataGridViewSearchToolBarVPH_Search(object sender, Zuby.ADGV.AdvancedDataGridViewSearchToolBarSearchEventArgs e)
+        {
+            bool restartsearch = true;
+            int startColumn = 0;
+            int startRow = 0;
+            if (!e.FromBegin)
+            {
+                bool endcol = dgVPH.CurrentCell.ColumnIndex + 1 >= dgVPH.ColumnCount;
+                bool endrow = dgVPH.CurrentCell.RowIndex + 1 >= dgVPH.RowCount;
+
+                if (endcol && endrow)
+                {
+                    startColumn = dgVPH.CurrentCell.ColumnIndex;
+                    startRow = dgVPH.CurrentCell.RowIndex;
+                }
+                else
+                {
+                    startColumn = endcol ? 0 : dgVPH.CurrentCell.ColumnIndex + 1;
+                    startRow = dgVPH.CurrentCell.RowIndex + (endcol ? 1 : 0);
+                }
+            }
+            DataGridViewCell c = dgVPH.FindCell(
+                e.ValueToSearch,
+                e.ColumnToSearch != null ? e.ColumnToSearch.Name : null,
+                startRow,
+                startColumn,
+                e.WholeWord,
+                e.CaseSensitive);
+            if (c == null && restartsearch)
+                c = dgVPH.FindCell(
+                    e.ValueToSearch,
+                    e.ColumnToSearch != null ? e.ColumnToSearch.Name : null,
+                    0,
+                    0,
+                    e.WholeWord,
+                    e.CaseSensitive);
+            if (c != null)
+                dgVPH.CurrentCell = c;
+        }
+
+        private void advancedDataGridViewSearchToolBarVPP_Search(object sender, Zuby.ADGV.AdvancedDataGridViewSearchToolBarSearchEventArgs e)
+        {
+            bool restartsearch = true;
+            int startColumn = 0;
+            int startRow = 0;
+            if (!e.FromBegin)
+            {
+                bool endcol = dgVPH.CurrentCell.ColumnIndex + 1 >= dgVPH.ColumnCount;
+                bool endrow = dgVPH.CurrentCell.RowIndex + 1 >= dgVPH.RowCount;
+
+                if (endcol && endrow)
+                {
+                    startColumn = dgVPH.CurrentCell.ColumnIndex;
+                    startRow = dgVPH.CurrentCell.RowIndex;
+                }
+                else
+                {
+                    startColumn = endcol ? 0 : dgVPH.CurrentCell.ColumnIndex + 1;
+                    startRow = dgVPH.CurrentCell.RowIndex + (endcol ? 1 : 0);
+                }
+            }
+            DataGridViewCell c = dgVPH.FindCell(
+                e.ValueToSearch,
+                e.ColumnToSearch != null ? e.ColumnToSearch.Name : null,
+                startRow,
+                startColumn,
+                e.WholeWord,
+                e.CaseSensitive);
+            if (c == null && restartsearch)
+                c = dgVPH.FindCell(
+                    e.ValueToSearch,
+                    e.ColumnToSearch != null ? e.ColumnToSearch.Name : null,
+                    0,
+                    0,
+                    e.WholeWord,
+                    e.CaseSensitive);
+            if (c != null)
+                dgVPH.CurrentCell = c;
+        }
+
+        private void buttonVyhledatVPH_Click(object sender, EventArgs e)
+        {
+            NastavDatagrid();
+
+            PerformVyhledat_VPH();
+            //UpdateForm();
+        }
+
+        private void buttonVyhledatVPP_Click(object sender, EventArgs e)
+        {
+            NastavDatagrid();
+
+            if (SelectedVPHRow != null)
+                PerformVyhledat_VPP(SelectedVPHRow.CountEntries, SelectedVPHRow.SOPNUMBE);
+            else
+                ClearVPP();
+        }
+
+
+       private string GetSearch_OrderBy()
+        {
+            if (cb_OrderBy_VPP.SelectedItem == null)
+                return string.Empty;
+
+            string tmp = cb_OrderBy_VPP.SelectedItem.ToString();
+
+            string OrderSearch = OrderByPS;
+
+            if (tmp.Trim() == "sestupně (desc)")
+            {
+                OrderSearch += " desc";
+            }
+            else if (tmp.Trim() == "vzestupně (asc)")
+            {
+                OrderSearch += " asc";
+            }
+
+            return OrderSearch;
+        }
+
+        private void SetSearch_OrderBy(string order)
+        {
+            if (order == " desc")
+                cb_OrderBy_VPP.SelectedItem = "sestupně (desc)";
+
+
+            if (order == " asc")
+                cb_OrderBy_VPP.SelectedItem = "vzestupně (asc)";
+
+        }
+
+        #region Oznacit/ Odznacit Vse
+
+        private void buttonOdznacitVse_VPP_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.dgVPP.ClearSelection();
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonOdznacitVse_VPH_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.dgVPH.ClearSelection();
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonOznacitVse_VPH_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.dgVPH.SelectAll();
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        #endregion
+
+        #region Filtre click metody VPH
+
+        private void tsbVycistit_VPH_Click(object sender, EventArgs e)
+        {
+            PerformVycistitFiltr_VPH();
+        }
+
+        private void tsbZmena_VPH_Click(object sender, EventArgs e)
+        {
+            PerformZmenitFiltr_VPH();
+        }
+
+        private void tsbPridat_VPH_Click(object sender, EventArgs e)
+        {
+            PerformPridatFiltr_VPH();
+        }
+        private void tsbOdebrat_VPH_Click(object sender, EventArgs e)
+        {
+            PerformOdebratFiltr_VPH();
+        }
+
+        private void tsbNastavit_VPH_Click(object sender, EventArgs e)
+        {
+            PerformNastavitFiltr_VPH(rowFiltr_VPH);
+        }
+
+        #endregion
+
+        #region Filtre click metody VPP
+
+        private void tsbVycistit_VPP_Click(object sender, EventArgs e)
+        {
+            PerformVycistitFiltr_VPP();
+        }
+
+        private void tsbZmena_VPP_Click(object sender, EventArgs e)
+        {
+            PerformZmenitFiltr_VPP();
+        }
+
+        private void tsbPridat_VPP_Click(object sender, EventArgs e)
+        {
+            PerformPridatFiltr_VPP();
+        }
+        private void tsbOdebrat_VPP_Click(object sender, EventArgs e)
+        {
+            PerformOdebratFiltr_VPP();
+        }
+
+        private void tsbNastavit_VPP_Click(object sender, EventArgs e)
+        {
+            PerformNastavitFiltr_VPP(rowFiltr_VPP);
+        }
+
+        #endregion
+
+        #region Filtry VPH
+
+        /// <summary>
+        /// Vytvořeni filtru pro dotazeni dat
+        /// </summary>
+        /// <param name="filtr"></param>
+        /// <returns></returns>
+        private bool CreateFilter_VPH(ref Fask.Interfaces.Filtry.Vyroba_VPH_Filtr filtr)
+        {
+            if (filtr == null)
+                filtr = new Fask.Interfaces.Filtry.Vyroba_VPH_Filtr();
+
+            if (cb_Active.SelectedItem != null)
+            {
+                int a = (int)cb_Active.SelectedItem;
+                filtr.Active = (byte)a;
+            }
+
+            filtr.SOPNUMBE = tb_VyrZak.Text;
+
+            return true;
+        }
+
+
+        /// <summary>
+        /// Odstrani vybrany filtr
+        /// </summary>
+        public void PerformOdebratFiltr_VPH()
+        {
+            try
+            {
+                if (!MySystem.LoginTest.UserLoginTest())
+                    return;
+
+                if (rowFiltr_VPH == null)
+                    return;
+
+                DialogResult dr = MessageBox.Show("Opravdu chcete odstranit filtr '" + (string.IsNullOrEmpty(rowFiltr_VPH.NazevFiltru) ? string.Empty : rowFiltr_VPH.NazevFiltru.Trim()) + "'?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr != System.Windows.Forms.DialogResult.Yes)
+                    return;
+
+                filtry_VPH.Remove(rowFiltr_VPH);
+                this.tscbFiltry_VPH.ComboBox.DataSource = null;
+                this.tscbFiltry_VPH.ComboBox.DataSource = filtry_VPH;
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show("Nepodařilo se odstranit filtr.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Ulozeni filtru do souboru.
+        /// </summary>
+        public void PerformPridatFiltr_VPH()
+        {
+            try
+            {
+                if (!MySystem.LoginTest.UserLoginTest())
+                    return;
+
+                Fask.Interfaces.Filtry.Vyroba_VPH_Filtr filtr = new Fask.Interfaces.Filtry.Vyroba_VPH_Filtr();
+                string nazev = string.Empty;
+                DialogResult dr = Forms.InputBox.Show("Název filtru", "Zadejte název filtru", string.Empty, false, out nazev);
+                if (dr != System.Windows.Forms.DialogResult.OK)
+                    return;
+
+                string nameFile = Guid.NewGuid().ToString() + "_" + _filtrName_VPH;
+                this.dgVPH.SaveConfiguration(nameFile);
+
+                bool result = CreateFilter_VPH(ref filtr);
+                filtr.NameFileDataGridView = nameFile;
+
+                if (result)
+                {
+                    filtr.NazevFiltru = nazev;
+                    filtry_VPH.Add(filtr);
+                    //this.tscbFiltry.Items.Clear();
+                    this.tscbFiltry_VPH.ComboBox.DataSource = null;
+                    this.tscbFiltry_VPH.ComboBox.DataSource = filtry_VPH;
+                    this.tscbFiltry_VPH.SelectedItem = filtr;
+                    tscbFiltry_VPH.ComboBox.DropDownWitdhAutosize();
+                }
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show("Nepodařilo se uložit data filtru.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Upravi zvoleny filtr.
+        /// </summary>
+        public void PerformZmenitFiltr_VPH()
+        {
+            try
+            {
+                if (!MySystem.LoginTest.UserLoginTest())
+                    return;
+
+                if (rowFiltr_VPH == null)
+                    return;
+
+                DialogResult dr = MessageBox.Show("Opravdu chcete změnit vybraný filtr '" + rowFiltr_VPH.NazevFiltru.Trim() + "'?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr != System.Windows.Forms.DialogResult.Yes)
+                    return;
+
+                var filtr = rowFiltr_VPH;
+
+                string nameFile = string.Empty;
+
+                if (string.IsNullOrEmpty(filtr.NameFileDataGridView))
+                {
+                    nameFile = Guid.NewGuid().ToString() + "_" + _filtrName_VPH;
+                }
+                else
+                    nameFile = filtr.NameFileDataGridView;
+
+                this.dgVPH.SaveConfiguration(nameFile);
+
+                bool result = CreateFilter_VPH(ref filtr);
+                filtr.NameFileDataGridView = nameFile;
+
+                if (!result)
+                    return;
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show("Nepodařilo se upravit filtr.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Vyčistí filtr
+        /// </summary>
+        public void PerformVycistitFiltr_VPH()
+        {
+            try
+            {
+                    cb_Active.Text =
+                    string.Empty;
+
+                tb_VyrZak.Text = string.Empty;
+
+                try
+                {
+
+                    cb_Active.SelectedIndex = -1;
+                }
+                catch (System.Exception ex)
+                {
+                    Fask.Logging.ExceptionHandler2.Handle(ex);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Nastavit Filter
+        /// </summary>
+        public void PerformNastavitFiltr_VPH(Fask.Interfaces.Filtry.Vyroba_VPH_Filtr filtr)
+        {
+            try
+            {
+                if (filtr == null)
+                    return;
+
+                if (!MySystem.LoginTest.UserLoginTest())
+                    return;
+
+                PerformVycistitFiltr_VPH();
+
+                if (filtr.Active.HasValue)
+                {
+                    switch (filtr.Active.Value)
+                    {
+                        case 1:
+                                cb_Active.SelectedItem = Fask.Interfaces.Classes.VyrobaStavPrikazu.Aktivni;
+                                break;
+                        case 0:
+                                cb_Active.SelectedItem = Fask.Interfaces.Classes.VyrobaStavPrikazu.Neaktivni;
+                                break;
+                        case 200:
+                                cb_Active.SelectedItem = Fask.Interfaces.Classes.VyrobaStavPrikazu.Ukoncen;
+                                break;
+                        default:
+                            cb_Active.SelectedIndex = -1;
+                            break;
+                    }
+                }
+
+
+                tb_VyrZak.Text = filtr.SOPNUMBE ;
+
+                if (string.IsNullOrEmpty(filtr.NameFileDataGridView))
+                    this.dgVPH.LoadConfiguration(_filtrName_VPH);
+                else
+                    this.dgVPH.LoadConfiguration(filtr.NameFileDataGridView);
+
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show("Nepodařilo se načíst data filtru.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        #endregion
+
+        #region Filtry VPP
+
+        /// <summary>
+        /// Vytvořeni filtru pro dotazeni dat
+        /// </summary>
+        /// <param name="filtr"></param>
+        /// <returns></returns>
+        private bool CreateFilter_VPP(ref Fask.Interfaces.Filtry.Vyroba_VPP_Filtr filtr)
+        {
+            if (filtr == null)
+                filtr = new Fask.Interfaces.Filtry.Vyroba_VPP_Filtr();
+
+            filtr.OrderBy = GetSearch_OrderBy();
+
+            return true;
+        }
+
+
+        /// <summary>
+        /// Odstrani vybrany filtr
+        /// </summary>
+        public void PerformOdebratFiltr_VPP()
+        {
+            try
+            {
+                if (!MySystem.LoginTest.UserLoginTest())
+                    return;
+
+                if (rowFiltr_VPP == null)
+                    return;
+
+                DialogResult dr = MessageBox.Show("Opravdu chcete odstranit filtr '" + (string.IsNullOrEmpty(rowFiltr_VPP.NazevFiltru) ? string.Empty : rowFiltr_VPP.NazevFiltru.Trim()) + "'?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr != System.Windows.Forms.DialogResult.Yes)
+                    return;
+
+                filtry_VPP.Remove(rowFiltr_VPP);
+                this.tscbFiltry_VPP.ComboBox.DataSource = null;
+                this.tscbFiltry_VPP.ComboBox.DataSource = filtry_VPP;
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show("Nepodařilo se odstranit filtr.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Ulozeni filtru do souboru.
+        /// </summary>
+        public void PerformPridatFiltr_VPP()
+        {
+            try
+            {
+                if (!MySystem.LoginTest.UserLoginTest())
+                    return;
+
+                Fask.Interfaces.Filtry.Vyroba_VPP_Filtr filtr = new Fask.Interfaces.Filtry.Vyroba_VPP_Filtr();
+                string nazev = string.Empty;
+                DialogResult dr = Forms.InputBox.Show("Název filtru", "Zadejte název filtru", string.Empty, false, out nazev);
+                if (dr != System.Windows.Forms.DialogResult.OK)
+                    return;
+
+                string nameFile = Guid.NewGuid().ToString() + "_" + _filtrName_VPP;
+                this.dgVPP.SaveConfiguration(nameFile);
+
+                bool result = CreateFilter_VPP(ref filtr);
+                filtr.NameFileDataGridView = nameFile;
+
+                if (result)
+                {
+                    filtr.NazevFiltru = nazev;
+                    filtry_VPP.Add(filtr);
+                    //this.tscbFiltry.Items.Clear();
+                    this.tscbFiltry_VPP.ComboBox.DataSource = null;
+                    this.tscbFiltry_VPP.ComboBox.DataSource = filtry_VPP;
+                    this.tscbFiltry_VPP.SelectedItem = filtr;
+                    tscbFiltry_VPP.ComboBox.DropDownWitdhAutosize();
+                }
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show("Nepodařilo se uložit data filtru.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Upravi zvoleny filtr.
+        /// </summary>
+        public void PerformZmenitFiltr_VPP()
+        {
+            try
+            {
+                if (!MySystem.LoginTest.UserLoginTest())
+                    return;
+
+                if (rowFiltr_VPP == null)
+                    return;
+
+                DialogResult dr = MessageBox.Show("Opravdu chcete změnit vybraný filtr '" + rowFiltr_VPP.NazevFiltru.Trim() + "'?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr != System.Windows.Forms.DialogResult.Yes)
+                    return;
+
+                var filtr = rowFiltr_VPP;
+
+                string nameFile = string.Empty;
+
+                if (string.IsNullOrEmpty(filtr.NameFileDataGridView))
+                {
+                    nameFile = Guid.NewGuid().ToString() + "_" + _filtrName_VPP;
+                }
+                else
+                    nameFile = filtr.NameFileDataGridView;
+
+                this.dgVPP.SaveConfiguration(nameFile);
+
+                bool result = CreateFilter_VPP(ref filtr);
+                filtr.NameFileDataGridView = nameFile;
+
+                if (!result)
+                    return;
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show("Nepodařilo se upravit filtr.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Vyčistí filtr
+        /// </summary>
+        public void PerformVycistitFiltr_VPP()
+        {
+            try
+            {
+                cb_OrderBy_VPP.Text =
+                string.Empty;
+
+
+                try
+                {
+
+                    cb_OrderBy_VPP.SelectedIndex = -1;
+                }
+                catch (System.Exception ex)
+                {
+                    Fask.Logging.ExceptionHandler2.Handle(ex);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Nastavit Filter
+        /// </summary>
+        public void PerformNastavitFiltr_VPP(Fask.Interfaces.Filtry.Vyroba_VPP_Filtr filtr)
+        {
+            try
+            {
+                if (filtr == null)
+                    return;
+
+                if (!MySystem.LoginTest.UserLoginTest())
+                    return;
+
+                PerformVycistitFiltr_VPP();
+
+                SetSearch_OrderBy(filtr.OrderBy);
+
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show("Nepodařilo se načíst data filtru.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        #endregion
+
+        #region BackGround Worker
+
+        private void bw_VPH_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                Fask.Interfaces.Filtry.Vyroba_VPH_Filtr filtr = (Fask.Interfaces.Filtry.Vyroba_VPH_Filtr)e.Argument;
+                Fask.Interfaces.DataSets.Vyroba dset = new Fask.Interfaces.DataSets.Vyroba();
+
+                if (bw_VPH.CancellationPending)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+
+                if (providerVPH is Fask.Interfaces.Vyroba.VPH.IVPH_GetFiltrovanyVPHList)
+                    dset = ((Fask.Interfaces.Vyroba.VPH.IVPH_GetFiltrovanyVPHList)providerVPH).GetFiltrovanyVPHList(filtr);
+                else
+                    throw new Exception("IVPH_GetFiltrovanyVPHList not implementet");
+
+                if (bw_VPH.CancellationPending)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+
+                e.Result = dset;
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void bw_VPH_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            try
+            {
+                // check error, check cancel, then use result
+                if (e.Error != null)
+                {
+                    // handle the error
+                    this.ds = new Fask.Interfaces.DataSets.Vyroba();
+                    bsVPH.DataSource = this.ds;
+                    Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, e.Error);
+                    MessageBox.Show(e.Error.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    SetStatusLabelText_VPH(-1);
+
+                }
+                else if (e.Cancelled)
+                {
+                    // handle cancellation
+                    this.ds = new Fask.Interfaces.DataSets.Vyroba();
+                    bsVPH.DataSource = this.ds;
+
+                    SetStatusLabelText_VPH(-1);
+                }
+                else
+                {
+                    // uspesne dokonceno ...
+                    // use it on the UI thread
+                    this.ds = (Fask.Interfaces.DataSets.Vyroba)e.Result;
+                    if (this.ds == null)
+                        this.ds = new Fask.Interfaces.DataSets.Vyroba();
+
+                    bsVPH.DataSource = this.ds;
+
+                    if (ds.CZPRO_VPH.Count == 0)
+                        SetStatusLabelText_VPH(-1);
+                    else
+                    {
+                        foreach (DataGridViewRow row in dgVPH.SelectedRows)
+                        {
+                            SetStatusLabelText_VPH(row.Index);
+                        }
+                    }
+
+                    if (SelectedVPHRow != null)
+                        PerformVyhledat_VPP(SelectedVPHRow.CountEntries, SelectedVPHRow.SOPNUMBE);
+                    else
+                        ClearVPP();
+                }
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                ProgressIndicatorVyrobekStop_VPH();
+            }
+        }
+
+        private void bw_VPP_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                Fask.Interfaces.Filtry.Vyroba_VPP_Filtr filtr = (Fask.Interfaces.Filtry.Vyroba_VPP_Filtr)e.Argument;
+                Fask.Interfaces.DataSets.Vyroba dset = new Fask.Interfaces.DataSets.Vyroba();
+
+                if (bw_VPP.CancellationPending)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+
+                if (providerVPP is Fask.Interfaces.Vyroba.VPP.IVPP_GetFiltrovanyVPPList)
+                    dset = ((Fask.Interfaces.Vyroba.VPP.IVPP_GetFiltrovanyVPPList)providerVPP).GetFiltrovanyVPPList(filtr);
+                else
+                    throw new Exception("IVPP_GetFiltrovanyVPPList not implementet");
+
+
+                if (bw_VPP.CancellationPending)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+
+                e.Result = dset;
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void bw_VPP_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            try
+            {
+                // check error, check cancel, then use result
+                if (e.Error != null)
+                {
+                    // handle the error
+                    //this.ds = new Fask.Interfaces.DataSets.Vyroba();
+                    this.ds.CZPRO_VPP.Clear();
+                    bsVPP.DataSource = this.ds;
+                    Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, e.Error);
+                    MessageBox.Show(e.Error.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    SetStatusLabelText_VPP(-1);
+
+                }
+                else if (e.Cancelled)
+                {
+                    // handle cancellation
+                    //this.ds = new Fask.Interfaces.DataSets.Vyroba();
+                    this.ds.CZPRO_VPP.Clear();
+                    bsVPP.DataSource = this.ds;
+
+                    SetStatusLabelText_VPP(-1);
+                }
+                else
+                {
+                    // uspesne dokonceno ...
+                    // use it on the UI thread
+                    var dset = (Fask.Interfaces.DataSets.Vyroba)e.Result;
+                    if (dset != null)
+                    {
+                        this.ds.CZPRO_VPP.Clear();
+                        foreach (var item in dset.CZPRO_VPP)
+                        {
+                            this.ds.CZPRO_VPP.ImportRow(item);
+                        }
+                        this.ds.CZPRO_VPP.AcceptChanges();
+                    }
+
+                    bsVPP.DataSource = this.ds;
+
+                    if (ds.CZPRO_VPP.Count == 0)
+                        SetStatusLabelText_VPP(-1);
+                    else
+                    {
+                        foreach (DataGridViewRow row in dgVPP.SelectedRows)
+                        {
+                            SetStatusLabelText_VPP(row.Index);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Fask.Logging.ExceptionHandler2.Handle(_ClassName, System.Reflection.MethodBase.GetCurrentMethod().Name, ex);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                ProgressIndicatorVyrobekStop_VPP();
+                //buttonOdznacitVse_VPP_Click(null,null);
+            }
+        }
+
+        #endregion
+
+        #region Progres
+
+        private void ProgressIndicatorVyrobekStop_VPH()
+        {
+            progressIndicatorVyrobek_VPH.Stop();
+            progressIndicatorVyrobek_VPH.Visible = false;
+        }
+
+        private void ProgressIndicatorVyrobekStart_VPH()
+        {
+            try
+            {
+                // prepocet stredu datagridu
+                this.progressIndicatorVyrobek_VPH.Location = new Point(this.dgVPH.Location.X + (this.dgVPH.Width / 2) - (progressIndicatorVyrobek_VPH.Size.Width / 2), this.dgVPH.Location.Y + (this.dgVPH.Height / 2) - (progressIndicatorVyrobek_VPH.Size.Height / 2));
+            }
+            catch { }
+            progressIndicatorVyrobek_VPH.Start();
+            progressIndicatorVyrobek_VPH.Visible = true;
+        }
+
+        private void ProgressIndicatorVyrobekStop_VPP()
+        {
+            progressIndicatorVyrobek_VPP.Stop();
+            progressIndicatorVyrobek_VPP.Visible = false;
+        }
+
+        private void ProgressIndicatorVyrobekStart_VPP()
+        {
+            try
+            {
+                // prepocet stredu datagridu
+                this.progressIndicatorVyrobek_VPP.Location = new Point(this.dgVPP.Location.X + (this.dgVPP.Width / 2) - (progressIndicatorVyrobek_VPP.Size.Width / 2), this.dgVPP.Location.Y + (this.dgVPP.Height / 2) - (progressIndicatorVyrobek_VPP.Size.Height / 2));
+            }
+            catch { }
+            progressIndicatorVyrobek_VPP.Start();
+            progressIndicatorVyrobek_VPP.Visible = true;
+        }
+
+        #endregion
+
+        #region County
+
+        private void SetStatusLabelText_VPH(int index)
+        {
+            if (InvokeRequired)
+            {
+                BeginInvoke(new Action(() =>
+                {
+                    SetStatusLabelText_VPH(index);
+                }));
+
+                return;
+            }
+
+            tsl_VPH.Text = string.Format("{0}/{1}", index + 1, ds.CZPRO_VPH.Count);
+        }
+
+        private void NastavDatagrid()
+        {
+            #region prace s datagridem - nastaveni numeric hodnot na pocet desetinnych mist
+            try
+            {
+                // Procházení sloupců v DataGridView
+                foreach (DataGridViewColumn column in dgVPP.Columns)
+                {
+                    // Získání typu dat pro sloupec
+                    Type dataType = null;
+
+                    if (dgVPP.DataSource is DataTable dataTable)
+                    {
+                        // Pokud je datový zdroj DataTable
+                        if (dataTable.Columns.Contains(column.DataPropertyName))
+                        {
+                            dataType = dataTable.Columns[column.DataPropertyName].DataType;
+                        }
+                    }
+                    else if (dgVPP.DataSource is BindingSource bindingSource)
+                    {
+                        // Pokud je datový zdroj BindingSource
+                        if (bindingSource.DataSource is DataTable dataSourceTable)
+                        {
+                            if (dataSourceTable.Columns.Contains(column.DataPropertyName))
+                            {
+                                dataType = dataSourceTable.Columns[column.DataPropertyName].DataType;
+                            }
+                        }
+                        else if (bindingSource.DataSource is DataSet dataSet)
+                        {
+                            // Pokud je datový zdroj DataSet
+                            DataTable dataTable2 = dataSet.Tables[bindingSource.DataMember];
+                            if (dataTable2.Columns.Contains(column.DataPropertyName))
+                            {
+                                dataType = dataTable2.Columns[column.DataPropertyName].DataType;
+                            }
+                        }
+                    }
+
+                    //nastaveni poctu desetinnych mist pokud je sloupec typu Decimal
+                    if (dataType.Name == "Decimal")
+                    {
+                        //column.DefaultCellStyle.Format = "N2";
+                        if (!string.IsNullOrEmpty(Konfigurace.Globals_Konfig_Konzola.Konfigurace.Vyroba_Rozbory[0].PocetDesetinnychMist))
+                        {
+                            column.DefaultCellStyle.Format = Konfigurace.Globals_Konfig_Konzola.Konfigurace.Vyroba_Rozbory[0].PocetDesetinnychMist;
+
+                        }
+                        else
+                        {
+                            column.DefaultCellStyle.Format = "N5";
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Fask.Logging.ExceptionHandler2.Handle(ex);
+                MessageBox.Show("Chyba při nastavení desetinnych míst.");
+            }
+            #endregion
+        }
+
+        private void dgVPH_SelectionChanged(object sender, EventArgs e)
+        {
+            NastavDatagrid();
+
+            foreach (DataGridViewRow row in dgVPH.SelectedRows)
+            {
+                SetStatusLabelText_VPH(row.Index);
+            }
+
+            if(SelectedVPHRow != null)
+                PerformVyhledat_VPP(SelectedVPHRow.CountEntries, SelectedVPHRow.SOPNUMBE);
+            else
+                ClearVPP();
+
+
+            //buttonOdznacitVse_VPP_Click(null, null);
+        }
+
+
+        private void SetStatusLabelText_VPP(int index)
+        {
+            if (InvokeRequired)
+            {
+                BeginInvoke(new Action(() =>
+                {
+                    SetStatusLabelText_VPP(index);
+                }));
+
+                return;
+            }
+
+            tsl_VPP.Text = string.Format("{0}/{1}", index + 1, ds.CZPRO_VPP.Count);
+        }
+
+        private void dgVPP_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgVPP.SelectedRows)
+            {
+                SetStatusLabelText_VPP(row.Index);
+            }
+        }
+        #endregion
+    }
+}

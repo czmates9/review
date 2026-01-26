@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+  <string name="Prodej_VyberPalety">Zadejte SSCC</string>
+  <string name="Prodej_VyberPalety_OK">OK</string>
+  <string name="Prodej_VyberPalety_Storno">Zrušit</string>
+
+  <string name="Prodej_VyberPalety_Label_1">Typ balení:</string>
+  <string name="Prodej_VyberPalety_Label_2">Číslo:</string>
+  <string name="Prodej_VyberPalety_hint1">Zadejte typ</string>
+  <string name="Prodej_VyberPalety_hint2">Zadejte číslo</string>
+
+  <string name="Prodej_VyberPalety_VyberTyp">Vyber Typ</string>
+
+</resources>

@@ -1,0 +1,35 @@
+;I8,A,001   A=Windows 1252, B=Windows 1250 (Latin2)
+I8,B,001
+
+
+Q799,024
+q831
+rN
+S2
+D7
+ZT
+JF
+O
+R16,0
+f100
+N
+
+
+A790,750,2,3,1,1,N,"Èíslo dokladu:"
+A560,750,2,3,1,1,R,"SOVS-12-07300"
+
+A790,700,2,3,1,1,N,"Dodací adresa:"
+A560,700,2,3,1,1,R,"Albert hypermarket 193"
+A560,650,2,3,1,1,R,"Kutnohorská 226"
+A560,600,2,3,1,1,R,"500 04 Hradec Králové"
+
+A790,500,2,3,1,1,N,"Zpùsob úhrady:"
+A560,500,2,3,1,1,R,"Bankovním pøevodem"
+
+A790,450,2,3,1,1,N,"Zboží vychystal:"
+A560,450,2,3,1,1,R,"Miroslav Pøibyl"
+
+
+
+
+P1

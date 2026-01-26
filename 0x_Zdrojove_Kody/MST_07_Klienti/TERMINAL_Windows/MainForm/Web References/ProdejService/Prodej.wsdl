@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://fask.cz/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://fask.cz/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba přenosu dat prodeje</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://fask.cz/">
+      <s:import namespace="http://tempuri.org/Location.xsd" />
+      <s:import namespace="http://fask.cz/ProdejData.xsd" />
+      <s:import schemaLocation="http://localhost/MST_Win_Kom_Server_6_alfa/Prodej.asmx?schema=Location" namespace="http://tempuri.org/Location.xsd" />
+      <s:import schemaLocation="http://localhost/MST_Win_Kom_Server_6_alfa/Prodej.asmx?schema=ProdejData" namespace="http://fask.cz/ProdejData.xsd" />
+      <s:element name="ProcessProdejDB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="countentries" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataProdej" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessProdejDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessProdejDBResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StatusObject">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="_statusFile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusText" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Exception" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DatumZapisu" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" default="false" name="Finished" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ProcessProdejDB2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="countentries" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessProdejDB2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessProdejDB2Result" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessProdejFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="countentries" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dstFile" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessProdejFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessProdejFileResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AfterProcessedAction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="countentries" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AfterProcessedActionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AfterProcessedActionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OverPohyb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prodejPohyb" type="tns:ProdejPohyb" />
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ProdejPohyb">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Serltnum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Doc_id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Doc_id2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Itemnmbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="qtyshppd" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="OverPohybResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OverPohybResult" type="tns:StatusOverPohyb" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StatusOverPohyb">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PohybOK" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="a_dispozice" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSkladTest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doc_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemnmbr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serltnum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSkladTestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSkladTestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSklad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="doc_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemnmbr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serltnum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSkladResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSkladResult" type="tns:STATUS" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id_dest" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="STATUS">
+        <s:restriction base="s:string">
+          <s:enumeration value="OK" />
+          <s:enumeration value="ERROR" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="Online_GetMaterial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemnmbr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serltnum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="doc_id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShowEmpty" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_GetMaterialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Online_GetMaterialResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Location.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_OverLokace">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemnmbr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serltnum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="locncode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="qtyshppd" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="doc_id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="locationType" type="tns:TYPLokace" />
+            <s:element minOccurs="1" maxOccurs="1" name="recordType" type="tns:TypeOfRecord" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="TYPLokace">
+        <s:restriction base="s:string">
+          <s:enumeration value="SOURCE" />
+          <s:enumeration value="DEST" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="TypeOfRecord">
+        <s:restriction base="s:string">
+          <s:enumeration value="E" />
+          <s:enumeration value="P" />
+          <s:enumeration value="V" />
+          <s:enumeration value="I" />
+          <s:enumeration value="D" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="Online_OverLokaceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Online_OverLokaceResult" type="tns:StatusOverLokace" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StatusOverLokace">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="tns:STATUSOverLokace" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="STATUSOverLokace">
+        <s:restriction base="s:string">
+          <s:enumeration value="OK" />
+          <s:enumeration value="WARNING" />
+          <s:enumeration value="ERROR" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ProcessSoupis">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/ProdejData.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessSoupisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessSoupisResult" type="tns:StatusResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StatusResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:StatusResultEnum" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="StatusResultEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="OK" />
+          <s:enumeration value="WARNING" />
+          <s:enumeration value="ERROR" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ProcessProdejDBSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessProdejDB" />
+  </wsdl:message>
+  <wsdl:message name="ProcessProdejDBSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessProdejDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessProdejDB2SoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessProdejDB2" />
+  </wsdl:message>
+  <wsdl:message name="ProcessProdejDB2SoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessProdejDB2Response" />
+  </wsdl:message>
+  <wsdl:message name="ProcessProdejFileSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessProdejFile" />
+  </wsdl:message>
+  <wsdl:message name="ProcessProdejFileSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessProdejFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="AfterProcessedActionSoapIn">
+    <wsdl:part name="parameters" element="tns:AfterProcessedAction" />
+  </wsdl:message>
+  <wsdl:message name="AfterProcessedActionSoapOut">
+    <wsdl:part name="parameters" element="tns:AfterProcessedActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="OverPohybSoapIn">
+    <wsdl:part name="parameters" element="tns:OverPohyb" />
+  </wsdl:message>
+  <wsdl:message name="OverPohybSoapOut">
+    <wsdl:part name="parameters" element="tns:OverPohybResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSkladTestSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSkladTest" />
+  </wsdl:message>
+  <wsdl:message name="GetSkladTestSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSkladTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSkladSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSklad" />
+  </wsdl:message>
+  <wsdl:message name="GetSkladSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSkladResponse" />
+  </wsdl:message>
+  <wsdl:message name="Online_GetMaterialSoapIn">
+    <wsdl:part name="parameters" element="tns:Online_GetMaterial" />
+  </wsdl:message>
+  <wsdl:message name="Online_GetMaterialSoapOut">
+    <wsdl:part name="parameters" element="tns:Online_GetMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="Online_OverLokaceSoapIn">
+    <wsdl:part name="parameters" element="tns:Online_OverLokace" />
+  </wsdl:message>
+  <wsdl:message name="Online_OverLokaceSoapOut">
+    <wsdl:part name="parameters" element="tns:Online_OverLokaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessSoupisSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessSoupis" />
+  </wsdl:message>
+  <wsdl:message name="ProcessSoupisSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessSoupisResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ProdejServiceSoap">
+    <wsdl:operation name="ProcessProdejDB">
+      <wsdl:input message="tns:ProcessProdejDBSoapIn" />
+      <wsdl:output message="tns:ProcessProdejDBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessProdejDB2">
+      <wsdl:input message="tns:ProcessProdejDB2SoapIn" />
+      <wsdl:output message="tns:ProcessProdejDB2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessProdejFile">
+      <wsdl:input message="tns:ProcessProdejFileSoapIn" />
+      <wsdl:output message="tns:ProcessProdejFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AfterProcessedAction">
+      <wsdl:input message="tns:AfterProcessedActionSoapIn" />
+      <wsdl:output message="tns:AfterProcessedActionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OverPohyb">
+      <wsdl:input message="tns:OverPohybSoapIn" />
+      <wsdl:output message="tns:OverPohybSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSkladTest">
+      <wsdl:input message="tns:GetSkladTestSoapIn" />
+      <wsdl:output message="tns:GetSkladTestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSklad">
+      <wsdl:input message="tns:GetSkladSoapIn" />
+      <wsdl:output message="tns:GetSkladSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Online_GetMaterial">
+      <wsdl:input message="tns:Online_GetMaterialSoapIn" />
+      <wsdl:output message="tns:Online_GetMaterialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Online_OverLokace">
+      <wsdl:input message="tns:Online_OverLokaceSoapIn" />
+      <wsdl:output message="tns:Online_OverLokaceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessSoupis">
+      <wsdl:input message="tns:ProcessSoupisSoapIn" />
+      <wsdl:output message="tns:ProcessSoupisSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProdejServiceSoap" type="tns:ProdejServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcessProdejDB">
+      <soap:operation soapAction="http://fask.cz/ProcessProdejDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessProdejDB2">
+      <soap:operation soapAction="http://fask.cz/ProcessProdejDB2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessProdejFile">
+      <soap:operation soapAction="http://fask.cz/ProcessProdejFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AfterProcessedAction">
+      <soap:operation soapAction="http://fask.cz/AfterProcessedAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OverPohyb">
+      <soap:operation soapAction="http://fask.cz/OverPohyb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSkladTest">
+      <soap:operation soapAction="http://fask.cz/GetSkladTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSklad">
+      <soap:operation soapAction="http://fask.cz/GetSklad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_GetMaterial">
+      <soap:operation soapAction="http://fask.cz/Online_GetMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_OverLokace">
+      <soap:operation soapAction="http://fask.cz/Online_OverLokace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessSoupis">
+      <soap:operation soapAction="http://fask.cz/ProcessSoupis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ProdejServiceSoap12" type="tns:ProdejServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcessProdejDB">
+      <soap12:operation soapAction="http://fask.cz/ProcessProdejDB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessProdejDB2">
+      <soap12:operation soapAction="http://fask.cz/ProcessProdejDB2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessProdejFile">
+      <soap12:operation soapAction="http://fask.cz/ProcessProdejFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AfterProcessedAction">
+      <soap12:operation soapAction="http://fask.cz/AfterProcessedAction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OverPohyb">
+      <soap12:operation soapAction="http://fask.cz/OverPohyb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSkladTest">
+      <soap12:operation soapAction="http://fask.cz/GetSkladTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSklad">
+      <soap12:operation soapAction="http://fask.cz/GetSklad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_GetMaterial">
+      <soap12:operation soapAction="http://fask.cz/Online_GetMaterial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_OverLokace">
+      <soap12:operation soapAction="http://fask.cz/Online_OverLokace" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessSoupis">
+      <soap12:operation soapAction="http://fask.cz/ProcessSoupis" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProdejService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba přenosu dat prodeje</wsdl:documentation>
+    <wsdl:port name="ProdejServiceSoap" binding="tns:ProdejServiceSoap">
+      <soap:address location="http://localhost/MST_Win_Kom_Server_6_alfa/Prodej.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ProdejServiceSoap12" binding="tns:ProdejServiceSoap12">
+      <soap12:address location="http://localhost/MST_Win_Kom_Server_6_alfa/Prodej.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

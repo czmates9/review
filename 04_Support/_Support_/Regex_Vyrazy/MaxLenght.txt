@@ -1,0 +1,5 @@
+Regularny vyraz na ostraneni MaxLenght z Datasetu přimo z XML, a nasledne se Designer sam pregeneruje už bez MaxLenght
+
+
+
+\s{0,}<xs:maxLength value="\d{1,}" \/>\s{0,}

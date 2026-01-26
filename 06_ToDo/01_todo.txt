@@ -1,0 +1,93 @@
+Sloucit zmeny ve verzich
+- MST_W_04.01
+- MST_W_04.01_Perlacasa
+- MST_W_04.01_Husky
+- MST_W_05
+
+Pracovat na bodech z dokumentu: !!!_Pripominky_!!!\20160825_PeV_podklady_zakazky.doc
+
+
+4.01 vs perlacasa HOTOVO
+
+
+JE zamìøit se na 4.01 struktury a porovnat s perlacasa a hodit do 6.1
+JE 6.1 zmenit v assamblyinfo
+   dokumentovat kazdu jedu zmenu
+   do dokumentu zvlast pisat vsetky zmeny detale
+
+JE porovnane 6.1 a Perlacasa server\mst_winkomserver sqlCEDBs ... template a porovnat medzi sebu
+
+   prva prejit server a potom terminaly kody projit
+
+   husky obsahuje RFID navic
+   perlacasa bylo meneno
+
+prejdene TERMINAL
+
+ok prejdene PC a SERVER
+
+
+
+
+
+6.1 a perlacasa
+ok	!!!support!!!
+ok	Emailing
+ok	loggin
+ok	myPath
+ok	Server.Interfaces
+projite zmeny zaznamenane	Server.Modules
+ok	Tracking
+ok	XDatabase
+prejite a zaznamenane zmeny	MST_Win_Kom_Server
+ok	MST_Win_Print_Server
+
+
+
+
+6.1 a Husky
+prejdene !!!Struktury!!! dopisat dokumentaci co je nakopirovane
+ostatne s !!! prejdene
+prejdene PC
+
+SERVER
+ok	!!!support!!!
+emailovy server ?? smtp.fask.cz ?? a posilani pošty asynch or normal ?? 	Emailing
+ok	loggin
+ok	myPath
+pridane veci 	Server.Interfaces
+prekopirovane 	Server.Modules
+ok	Tracking
+ok	XDatabase
+prejdene a zaznamenane zmeny	MST_Win_Kom_Server
+prejdene a veci zmenene zaznamenane   MST_Win_Print_Server 
+
+
+MST 6 a MST Husky prekopirovane RFID viz. obrazek
+
+
+
+6.1 a 5
+PRejdene a nic nove !!!Struktury!!!
+ostatne s !!!  prejdene
+projdene PC
+Projdeny TERMINAL
+
+
+SERVER
+OK  !!!support!!!
+OK  Emailing
+prikopirovany FileExtance     myPath
+OK   Server.Interfaces
+ok   Server.Modules
+OK   Tracking
+OK   XDatabase
+ok   MST_Win_Kom_Server
+ok   MST_Win_Print_Server 
+
+
+
+
+
+
+

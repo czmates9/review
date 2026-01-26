@@ -1,0 +1,276 @@
+// GraphViz picture: Project's files hierarchy by: TaD 2019
+// $Id: project_hierarchy.gv 138 2019-07-25 12:00:00Z tdivacky $
+
+digraph ProjectHierarchy
+	{
+
+graph[size="11,11"];
+rankdir="RL";
+
+	node[color="gray25", fontname="Helvetica", shape="Mrecord", style="solid"];
+		top[label="Konzola project 2019", URL="\ref index"];
+
+	node[color="green", fontname="Helvetica", shape="Mrecord", style="dotted"];
+		Doxygen[label="Doxygen\ndokumentace", tooltip="Doxygen documentation", URL="\ref doc"];
+
+	node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+		FormMain[label="Hlavné okno", tooltip="Main class", URL="\ref FormMain.cs"];
+
+	node[color="greenyellow", fontname="Helvetica", shape="polygon", style="solid"];
+		Aplikace[label="Aplikace", tooltip="Aplikace menu"];
+		Vyroba[label="Výroba", tooltip="Výroba menu"];
+		Ukolovani[label="Úkolování", tooltip="Úkolování menu"];
+		Stav_skladu[label="Stav skladu", tooltip="Stav skladu menu"];
+		Servis[label="Servis", tooltip="Servis menu"];
+		Sklady[label="Sklady", tooltip="Sklady menu"];
+		IT_cast[label="IT èást", tooltip="IT èást menu"];
+		
+	
+	node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+		PrihlasitSe[label="Pøihlásit se...", tooltip="Pøihlásit se...", URL="\ref FormIDPracovnikaLogin.cs"];
+		SpravaPristupu[label="Správa pøístupù", tooltip="Správa pøístupù", URL="\ref Form_FASK_Logins.cs"];
+		Pracovnici[label="Pracovníci", tooltip="Pracovníci", URL="\ref FormPracovniciList.cs"];
+		Konfigurace[label="Konfigurace", tooltip="Konfigurace", URL="\ref FormConfig.cs"];
+		About[label="O aplikaci", tooltip="O aplikaci", URL="\ref AboutBox.cs"];
+		
+	node[color="red", fontname="Helvetica", shape="Mrecord", style="solid"];	
+		Konec[label="Konec", tooltip="Konec"];
+		
+		
+	node[color="greenyellow", fontname="Helvetica", shape="polygon", style="solid"];
+        Ciselniky[label="Èíselníky", tooltip="Èíselníky"];
+        Rozbory[label="Rozbory", tooltip="Rozbory"];
+        Transakce[label="Transakce", tooltip="Transakce"];
+        KapPlan[label="Kapacitní plánovaní", tooltip="Kapacitní plánovaní"];
+        
+    node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+        Skupiny[label="Skupiny", tooltip="Skupiny", URL="\ref FormSkupinyList.cs"];
+        VazbaMaterialy[label="Vazba materiály", tooltip="Vazba materiály", URL="\ref FormVazbyMaterialy.cs"];
+        
+        
+    node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+        PrehMaterialy[label="Pøehled materiály", tooltip="Pøehled materiály", URL="\ref FormProductionSourecesList.cs"];
+        PrehVyrobky[label="Pøehled výrobky", tooltip="Pøehled výrobky", URL="\ref FormProductionList.cs"];
+        PrehPlanVyroby[label="Pøehled plán výroby", tooltip="Pøehled plán výroby", URL="\ref FormPlanovaniVyroby_Rozbor.cs"];
+        PrehOdvod[label="Pøehled odvod", tooltip="Pøehled odvod", URL="\ref FormOdvod_EventsList.cs"];
+
+
+    node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+        PlanVyroba[label="Plánování výroby", tooltip="Plánování výroby", URL="\ref FormPlanovaniVyrobyList.cs"];
+        VyrPrikazy[label="Výrobní pøíkazy", tooltip="Výrobní pøíkazy", URL="\ref FormVyrobniPrikazList.cs"];
+        OdvodPohoda[label="Odvod POHODA", tooltip="Odvod POHODA", URL="\ref FormVazby_P_PS_List.cs"];
+        
+    node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+        Material[label="Materál", tooltip="Materál", URL="\ref FormMaterial.cs"];
+        
+    
+    node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+        Ukoly[label="Úkoly", tooltip="Úkoly", URL="\ref FormUkolyUzivList.cs"];
+        PrehledUkolu[label="Pøehled úkolù", tooltip="Pøehled úkolù", URL="\ref FormUkolyAktualniList.cs"];
+        HistorieUkolu[label="Historie úkolù", tooltip="Historie úkolù", URL="\ref FormUkolyHistoryList.cs"];
+        
+        
+    node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+        AktualnyStavSkladu[label="Aktuální stav skladu", tooltip="Aktuální stav skladu", URL="\ref FormStavSkladuList.cs"];
+        HistoriePohybu[label="Historie pohybù", tooltip="Historie pohybù", URL="\ref FormStavSkladuHistorieList.cs"];
+
+
+    node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+        Servis_Cinnosti[label="Èinnosti", tooltip="Èinnosti", URL="\ref FormCinnostiList.cs"];
+        Servis_Stavy[label="Stavy", tooltip="Stavy", URL="\ref FormStavyList.cs"];
+        Servis_Okruhy[label="Okruhy", tooltip="Okruhy", URL="\ref FormOkruhyList.cs"];
+        Servis_Zdroje[label="Zdroje", tooltip="Zdroje", URL="\ref FormZdrojeList.cs"];
+        Servis_Stavy_zdroju[label="Stavy zdrojù", tooltip="Stavy zdrojù", URL="\ref FormZdrojeStavyList.cs"];
+        Servis_Pohyby_zdroju[label="Pohyby zdrojù", tooltip="Pohyby zdrojù", URL="\ref FormZdrojePohybList.cs"];
+        Servis_Report_Sestava[label="Report Sestava", tooltip="Report Sestava", URL="\ref FormReportSestava.cs"];
+        Odberatele[label="Odbìratelé", tooltip="Odbìratelé", URL="\ref FormOdberateleList.cs"];
+
+    node[color="greenyellow", fontname="Helvetica", shape="polygon", style="solid"];
+        Servis_Vazby[label="Vazby", tooltip="Vazby"];
+        
+        
+    node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+        SSN[label="Stav - StavNext", tooltip="Stav - StavNext", URL="\ref FormOdberateleList.cs"];
+        CCN[label="Èinnost - ÈinnostNext", tooltip="Èinnost - ÈinnostNext", URL="\ref FormOdberateleList.cs"];
+        OZS[label="Okruh - ZdrojSeznam", tooltip="Okruh - ZdrojSeznam", URL="\ref FormOdberateleList.cs"];
+        DT[label="Dynamické tabulky", tooltip="Dynamické tabulky", URL="\ref FormOdberateleList.cs"];
+        
+        
+    node[color="greenyellow", fontname="Helvetica", shape="polygon", style="solid"];
+        SKLAD_Ciselniky[label="Èíselníky", tooltip="Èíselníky"];
+        SKLAD_Rozbory[label="Rozbory", tooltip="Rozbory"];
+        SKLAD_Transakce[label="Transakce", tooltip="Transakce"];
+        
+        
+    node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+        Zasoby[label="Zásoby", tooltip="Zásoby", URL="\ref FormZboziList.cs"];
+        
+        
+    node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+        Sklady[label="Sklady", tooltip="Sklady", URL="\ref FormSkladyList.cs"];
+        Strediska[label="Støediska", tooltip="Støediska", URL="\ref FormStrediskaList.cs"];
+        MapaLokace[label="Mapa lokací", tooltip="Mapa lokací", URL="\ref FormLokaceMapaList.cs"];
+        VariantaLokaceMat[label="Varianty lokací materiálu", tooltip="Varianty lokací materiálu", URL="\ref FormLokaceVariantySortimentList.cs"];
+        TypyLokace[label="Typy lokací", tooltip="Typy lokací", URL="\ref FormLokaceTypyList.cs"];
+        Adresar[label="Adresáø", tooltip="Adresáø", URL="\ref FormOdberateleList.cs"];
+        
+    node[color="greenyellow", fontname="Helvetica", shape="polygon", style="solid"];
+        PrsPr[label="Pøíjem s pøedlohou", tooltip="Pøíjem s pøedlohou"];
+        VysPr[label="Výdej s pøedlohou", tooltip="Výdej s pøedlohou"];
+        Expedice[label="Expedice", tooltip="Expedice"];
+        VPohyb[label="Volný pohyb", tooltip="Volný pohyb"];
+        Prevod[label="Pøevod", tooltip="Pøevod"];
+        Inventura[label="Inventura", tooltip="Inventura"];
+        
+
+    node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+        PrsPr_Predloha[label="Pøedloha", tooltip="Pøedloha", URL="\ref FormDavkyPrijmuList.cs"];
+        PrsPr_RizeniPriorit[label="Øízení priorit", tooltip="Øízení priorit"];
+        PrsPr_Nasnimane[label="Nasnímané", tooltip="Nasnímané", URL="\ref FormPrijemNasnimaneList.cs"];
+        
+    node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+        VysPr_Predloha[label="Pøedloha", tooltip="Pøedloha", URL="\ref FormDavkyVydejeList.cs"];
+        VysPr_RozeniPriorit[label="Øízení priorit", tooltip="Øízení priorit", URL="\ref FormVydejDavkyList.cs"];
+        VysPr_Nasnimane[label="Nasnímané", tooltip="Nasnímané", URL="\ref FormVydejNasnimaneList.cs"];
+        
+    node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+        Expe_DodaciListy[label="Dodací listy", tooltip="Dodací listy", URL="\ref FormDodaciListyList.cs"];
+        Expe_B_P[label="Balení a paletizace", tooltip="Balení a paletizace", URL="\ref FormBufferBaleniList.cs"];
+    
+    node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+        VPohyb_Nasnimane[label="Nasnímané", tooltip="Nasnímané", URL="\ref FormVolnyPohybNasnimaneList.cs"];
+        
+    node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+        INV_Predloha[label="Pøedloha", tooltip="Pøedloha", URL="\ref FormInventuraPredlohaList.cs"];
+        INV_Nasnimane[label="Nasnímané", tooltip="Nasnímané", URL="\ref FormInventuraNasnimaneList.cs"];
+         
+    node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+        Pohyby[label="Pohyby", tooltip="Pohyby", URL="\ref FormSkladPohybList.cs"];  
+        Stavy[label="Stavy", tooltip="Stavy", URL="\ref FormSkladStavLokaceList.cs"];  
+        
+    node[color="greenyellow", fontname="Helvetica", shape="polygon", style="solid"];
+        LokMech[label="Lokaèní mechanismus", tooltip="Lokaèní mechanismus"];
+        
+    node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+        LokMech_StavSklad[label="Stav skladu", tooltip="Stav skladu", URL="\ref FormSkladLokaceStavList.cs"];  
+        
+
+    node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+        IPTerminaly[label="IP Terminálù", tooltip="IP Terminálù", URL="\ref TestDisp.cs"];
+        TestDisp[label="Test Disponibility", tooltip="Test Disponibility", URL="\ref FormSkupinyList.cs"];
+        TypyDokladu[label="Typu Dokladu", tooltip="Typu Dokladu", URL="\ref FormTypyDokladuList.cs"];
+        Rady[label="Øady", tooltip="Øady", URL="\ref FormRADYList.cs"];
+        
+
+        Doxygen -> top [color="green"];
+        
+        	edge[color="goldenrod2"];
+		FormMain -> top;
+
+
+        Aplikace-> FormMain;
+        Vyroba-> FormMain;
+        Ukolovani-> FormMain;
+        Stav_skladu-> FormMain;
+        Servis-> FormMain;
+        Sklady-> FormMain;
+        IT_cast -> FormMain;
+        
+        PrihlasitSe-> Aplikace;
+        SpravaPristupu-> Aplikace;
+        Pracovnici-> Aplikace;
+        Konfigurace-> Aplikace;
+        About-> Aplikace;
+        Konec-> Aplikace;
+        
+        Ciselniky-> Vyroba;
+        Rozbory-> Vyroba;
+        Transakce-> Vyroba;
+        KapPlan-> Vyroba;
+        
+        Skupiny-> Ciselniky;
+        Zasoby-> Ciselniky;
+        VazbaMaterialy-> Ciselniky;
+        
+        PrehMaterialy-> Rozbory;
+        PrehVyrobky-> Rozbory;
+        PrehPlanVyroby-> Rozbory;
+        PrehOdvod-> Rozbory;
+        
+        PlanVyroba-> Transakce;
+        VyrPrikazy-> Transakce;
+        OdvodPohoda-> Transakce;
+        
+        Material-> KapPlan;
+        
+        Ukoly->Ukolovani;
+        PrehledUkolu->Ukolovani;
+        HistorieUkolu->Ukolovani;
+        
+        AktualnyStavSkladu->Stav_skladu;
+        HistoriePohybu->Stav_skladu;
+        
+        Servis_Cinnosti->Servis;
+        Odberatele->Servis;
+        Servis_Stavy->Servis;
+        Servis_Okruhy->Servis;
+        Servis_Vazby->Servis;
+        Servis_Zdroje->Servis;
+        Servis_Stavy_zdroju->Servis;
+        Servis_Pohyby_zdroju->Servis;
+        Servis_Report_Sestava->Servis;
+        
+        SSN->Servis_Vazby;
+        CCN->Servis_Vazby;
+        OZS->Servis_Vazby;
+        DT->Servis_Vazby;
+        
+        
+        SKLAD_Ciselniky->Sklady;
+        SKLAD_Rozbory->Sklady;
+        SKLAD_Transakce->Sklady;
+        
+        Sklady->SKLAD_Ciselniky;
+        Strediska->SKLAD_Ciselniky;
+        MapaLokace->SKLAD_Ciselniky;
+        VariantaLokaceMat->SKLAD_Ciselniky;
+        TypyLokace->SKLAD_Ciselniky;
+        Zasoby->SKLAD_Ciselniky;
+        Adresar->SKLAD_Ciselniky;
+        
+        PrsPr->SKLAD_Transakce;
+        VysPr->SKLAD_Transakce;
+        Expedice->SKLAD_Transakce;
+        VPohyb->SKLAD_Transakce;
+        Prevod->SKLAD_Transakce;
+        Inventura->SKLAD_Transakce;
+        
+        PrsPr_Predloha->PrsPr;
+        PrsPr_RizeniPriorit->PrsPr;
+        PrsPr_Nasnimane->PrsPr;
+        
+        VysPr_Predloha->VysPr;
+        VysPr_RozeniPriorit->VysPr;
+        VysPr_Nasnimane->VysPr;
+        
+        Expe_DodaciListy->Expedice;
+        Expe_B_P->Expedice;
+        
+        VPohyb_Nasnimane->VPohyb;
+        
+        INV_Predloha->Inventura;
+        INV_Nasnimane->Inventura;
+        
+        Pohyby->SKLAD_Transakce;
+        Stavy->SKLAD_Transakce;
+        LokMech->SKLAD_Transakce;
+        
+        LokMech_StavSklad->LokMech;
+        
+        IPTerminaly->IT_cast;
+        TestDisp->IT_cast;
+        TypyDokladu->IT_cast;
+        Rady->IT_cast;
+        
+
+}

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <appSettings>
+    <add key="TerminalID" value="25" />
+    <add key="TimeOut" value="6000000" />
+    <add key="isHTTPS" value="False" />
+    <add key="Adresa_API" value="192.168.1.101/MST_Win_Kom_Server_7_Dasenka" />
+    <add key="API_Autorizace" value="MDox" />
+    <add key="API_konstant" value="api" />
+    <add key="UIFormatDesCisel" value="N" />
+    <add key="ServerAccessCertificatesTrust" value="TrustAll" />
+    <add key="serverAccessAllowDecompression" value="False" />
+    <add key="serverAccessAllowRedirection" value="False" />
+    <add key="serverAccessPreauthenticate" value="False" />
+    <add key="serverAccessDomain" value="" />
+    <add key="serverAccessPassword" value="" />
+    <add key="serverAccessUsername" value="" />
+    <add key="ServerAccess" value="Anonymous" />
+    <add key="ONOFF_ZXing" value="False" />
+    <add key="ONOFF_ZEBRA" value="True" />
+  </appSettings>
+</configuration>

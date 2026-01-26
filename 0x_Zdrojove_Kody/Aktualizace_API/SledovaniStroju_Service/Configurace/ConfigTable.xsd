@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Configurace" targetNamespace="http://tempuri.org/Configurace.xsd" xmlns:mstns="http://tempuri.org/Configurace.xsd" xmlns="http://tempuri.org/Configurace.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Configurace" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Configurace" msprop:Generator_UserDSName="Configurace">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="WEBAPI" msprop:Generator_TableClassName="WEBAPIDataTable" msprop:Generator_TableVarName="tableWEBAPI" msprop:Generator_TablePropName="WEBAPI" msprop:Generator_RowDeletingName="WEBAPIRowDeleting" msprop:Generator_RowChangingName="WEBAPIRowChanging" msprop:Generator_RowEvHandlerName="WEBAPIRowChangeEventHandler" msprop:Generator_RowDeletedName="WEBAPIRowDeleted" msprop:Generator_UserTableName="WEBAPI" msprop:Generator_RowChangedName="WEBAPIRowChanged" msprop:Generator_RowEvArgName="WEBAPIRowChangeEvent" msprop:Generator_RowClassName="WEBAPIRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Autorizace_DoAPI" msprop:Generator_ColumnVarNameInTable="columnAutorizace_DoAPI" msprop:Generator_ColumnPropNameInRow="Autorizace_DoAPI" msprop:Generator_ColumnPropNameInTable="Autorizace_DoAPIColumn" msprop:Generator_UserColumnName="Autorizace_DoAPI" type="xs:string" minOccurs="0" />
+              <xs:element name="Adresa" msprop:Generator_ColumnVarNameInTable="columnAdresa" msprop:Generator_ColumnPropNameInRow="Adresa" msprop:Generator_ColumnPropNameInTable="AdresaColumn" msprop:Generator_UserColumnName="Adresa" type="xs:string" minOccurs="0" />
+              <xs:element name="AliasDB" msprop:Generator_ColumnVarNameInTable="columnAliasDB" msprop:Generator_ColumnPropNameInRow="AliasDB" msprop:Generator_ColumnPropNameInTable="AliasDBColumn" msprop:Generator_UserColumnName="AliasDB" type="xs:string" minOccurs="0" />
+              <xs:element name="isHTTPS" msprop:Generator_ColumnVarNameInTable="columnisHTTPS" msprop:Generator_ColumnPropNameInRow="isHTTPS" msprop:Generator_ColumnPropNameInTable="isHTTPSColumn" msprop:Generator_UserColumnName="isHTTPS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="API_TimeOut" msprop:Generator_ColumnVarNameInTable="columnAPI_TimeOut" msprop:Generator_ColumnPropNameInRow="API_TimeOut" msprop:Generator_ColumnPropNameInTable="API_TimeOutColumn" msprop:Generator_UserColumnName="API_TimeOut" type="xs:int" minOccurs="0" />
+              <xs:element name="Enable" msprop:Generator_ColumnVarNameInTable="columnEnable" msprop:Generator_ColumnPropNameInRow="Enable" msprop:Generator_ColumnPropNameInTable="EnableColumn" msprop:Generator_UserColumnName="Enable" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ADAM_communication_TCP" msprop:Generator_ColumnVarNameInTable="columnADAM_communication_TCP" msprop:Generator_ColumnPropNameInRow="ADAM_communication_TCP" msprop:Generator_ColumnPropNameInTable="ADAM_communication_TCPColumn" msprop:Generator_UserColumnName="ADAM_communication_TCP" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ADAM_communication_P2P" msprop:Generator_ColumnVarNameInTable="columnADAM_communication_P2P" msprop:Generator_ColumnPropNameInRow="ADAM_communication_P2P" msprop:Generator_ColumnPropNameInTable="ADAM_communication_P2PColumn" msprop:Generator_UserColumnName="ADAM_communication_P2P" type="xs:boolean" minOccurs="0" />
+              <xs:element name="cisloSluzby" msprop:Generator_ColumnVarNameInTable="columncisloSluzby" msprop:Generator_ColumnPropNameInRow="cisloSluzby" msprop:Generator_ColumnPropNameInTable="cisloSluzbyColumn" msprop:Generator_UserColumnName="cisloSluzby" type="xs:int" />
+              <xs:element name="cisloAlgoritmu" msprop:Generator_ColumnVarNameInTable="columncisloAlgoritmu" msprop:Generator_ColumnPropNameInRow="cisloAlgoritmu" msprop:Generator_ColumnPropNameInTable="cisloAlgoritmuColumn" msprop:Generator_UserColumnName="cisloAlgoritmu" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

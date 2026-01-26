@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+<string name="Report_PopisPolozky">Popis položky:</string>
+<string name="Report_IDPolozky">ID položky:</string>
+  <string name="Report_CarKod"> Čar. kod :</string>
+  <string name="Report_Sklad">Sklad</string>
+  <string name="Report_Expedice">Expedice</string>
+  <string name="Report_PozadovanoOdDodavatele">Požadováno od dodavatele:</string>
+  <string name="Report_JizDodano">Již dodáno:</string>
+  <string name="Report_ZbyvaNaObjednavce">Zbývá na objednávce:</string>
+  <string name="Report_PozadovanoOdberateli">Požadováno odběrateli:</string>
+  <string name="Report_btn_Storno">Storno</string>
+  <string name="Report_btn_OK">OK</string>
+</resources>

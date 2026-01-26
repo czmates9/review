@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://localhost/MST_Win_Kom_Server_7_Cipisek/Prijem.asmx?disco" filename="Prijem.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost/MST_Win_Kom_Server_7_Cipisek/Prijem.asmx?wsdl" filename="Prijem.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost/MST_Win_Kom_Server_7_Cipisek/Prijem.asmx?schema=PrijemDavky" filename="PrijemDavky.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost/MST_Win_Kom_Server_7_Cipisek/Prijem.asmx?schema=Obecne" filename="Obecne.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost/MST_Win_Kom_Server_7_Cipisek/Prijem.asmx?schema=Prijem" filename="Prijem.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

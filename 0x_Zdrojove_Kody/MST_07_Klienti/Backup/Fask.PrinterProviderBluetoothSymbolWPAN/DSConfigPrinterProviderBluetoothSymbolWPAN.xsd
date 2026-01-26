@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSConfigPrinterProviderBluetoothSymbolWPAN" targetNamespace="http://fask.cz/DSConfigPrinterProviderBluetoothSymbolWPAN.xsd" xmlns:mstns="http://fask.cz/DSConfigPrinterProviderBluetoothSymbolWPAN.xsd" xmlns="http://fask.cz/DSConfigPrinterProviderBluetoothSymbolWPAN.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="ExcludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSConfigPrinterProviderBluetoothSymbolWPAN" msdata:IsDataSet="true" msdata:Locale="" msprop:Generator_DataSetName="DSConfigPrinterProviderBluetoothSymbolWPAN" msprop:Generator_UserDSName="DSConfigPrinterProviderBluetoothSymbolWPAN" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Params" msprop:Generator_UserTableName="Params" msprop:Generator_RowDeletedName="ParamsRowDeleted" msprop:Generator_TableClassName="ParamsDataTable" msprop:Generator_RowChangedName="ParamsRowChanged" msprop:Generator_RowClassName="ParamsRow" msprop:Generator_RowChangingName="ParamsRowChanging" msprop:Generator_RowEvArgName="ParamsRowChangeEvent" msprop:Generator_RowEvHandlerName="ParamsRowChangeEventHandler" msprop:Generator_TablePropName="Params" msprop:Generator_TableVarName="tableParams" msprop:Generator_RowDeletingName="ParamsRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Address" msprop:Generator_UserColumnName="Address" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInTable="AddressColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInTable="NameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Timeout" msprop:Generator_UserColumnName="Timeout" msprop:Generator_ColumnPropNameInRow="Timeout" msprop:Generator_ColumnVarNameInTable="columnTimeout" msprop:Generator_ColumnPropNameInTable="TimeoutColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Encoding" msprop:Generator_UserColumnName="Encoding" msprop:Generator_ColumnPropNameInRow="Encoding" msprop:Generator_ColumnVarNameInTable="columnEncoding" msprop:Generator_ColumnPropNameInTable="EncodingColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PIN" msprop:Generator_UserColumnName="PIN" msprop:Generator_ColumnPropNameInRow="PIN" msprop:Generator_ColumnVarNameInTable="columnPIN" msprop:Generator_ColumnPropNameInTable="PINColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

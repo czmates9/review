@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://Test.fask.cz/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://Test.fask.cz/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Testovací webová služba s šikovnima utilitama.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Test.fask.cz/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Error">
+        <s:complexType />
+      </s:element>
+      <s:element name="ErrorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WriteTo_Log_Server_Info_File">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WriteTo_Log_Server_Info_FileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WriteTo_Log_Server_Info_FileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WriteTo_Trace_Server_Info_File">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WriteTo_Trace_Server_Info_FileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WriteTo_Trace_Server_Info_FileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WindowsIdentity">
+        <s:complexType />
+      </s:element>
+      <s:element name="WindowsIdentityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WindowsIdentityResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestMailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TestMailResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Encodings">
+        <s:complexType />
+      </s:element>
+      <s:element name="EncodingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncodingsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="StatusObjectReturn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fullpath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StatusObjectReturnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StatusObjectReturnResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StatusObject">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="_statusFile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusText" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Exception" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DatumZapisu" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" default="false" name="Finished" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Labels">
+        <s:complexType />
+      </s:element>
+      <s:element name="LabelsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LabelsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Test_Get_Rada">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Modul" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SKL_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Test_Get_RadaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Test_Get_RadaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateSQLiteFile">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateSQLiteFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateSQLiteFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Test_Provider_Komunikace">
+        <s:complexType />
+      </s:element>
+      <s:element name="Test_Provider_KomunikaceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Test_Provider_KomunikaceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ErrorSoapIn">
+    <wsdl:part name="parameters" element="tns:Error" />
+  </wsdl:message>
+  <wsdl:message name="ErrorSoapOut">
+    <wsdl:part name="parameters" element="tns:ErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="WriteTo_Log_Server_Info_FileSoapIn">
+    <wsdl:part name="parameters" element="tns:WriteTo_Log_Server_Info_File" />
+  </wsdl:message>
+  <wsdl:message name="WriteTo_Log_Server_Info_FileSoapOut">
+    <wsdl:part name="parameters" element="tns:WriteTo_Log_Server_Info_FileResponse" />
+  </wsdl:message>
+  <wsdl:message name="WriteTo_Trace_Server_Info_FileSoapIn">
+    <wsdl:part name="parameters" element="tns:WriteTo_Trace_Server_Info_File" />
+  </wsdl:message>
+  <wsdl:message name="WriteTo_Trace_Server_Info_FileSoapOut">
+    <wsdl:part name="parameters" element="tns:WriteTo_Trace_Server_Info_FileResponse" />
+  </wsdl:message>
+  <wsdl:message name="WindowsIdentitySoapIn">
+    <wsdl:part name="parameters" element="tns:WindowsIdentity" />
+  </wsdl:message>
+  <wsdl:message name="WindowsIdentitySoapOut">
+    <wsdl:part name="parameters" element="tns:WindowsIdentityResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestMailSoapIn">
+    <wsdl:part name="parameters" element="tns:TestMail" />
+  </wsdl:message>
+  <wsdl:message name="TestMailSoapOut">
+    <wsdl:part name="parameters" element="tns:TestMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncodingsSoapIn">
+    <wsdl:part name="parameters" element="tns:Encodings" />
+  </wsdl:message>
+  <wsdl:message name="EncodingsSoapOut">
+    <wsdl:part name="parameters" element="tns:EncodingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="StatusObjectReturnSoapIn">
+    <wsdl:part name="parameters" element="tns:StatusObjectReturn" />
+  </wsdl:message>
+  <wsdl:message name="StatusObjectReturnSoapOut">
+    <wsdl:part name="parameters" element="tns:StatusObjectReturnResponse" />
+  </wsdl:message>
+  <wsdl:message name="LabelsSoapIn">
+    <wsdl:part name="parameters" element="tns:Labels" />
+  </wsdl:message>
+  <wsdl:message name="LabelsSoapOut">
+    <wsdl:part name="parameters" element="tns:LabelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Test_Get_RadaSoapIn">
+    <wsdl:part name="parameters" element="tns:Test_Get_Rada" />
+  </wsdl:message>
+  <wsdl:message name="Test_Get_RadaSoapOut">
+    <wsdl:part name="parameters" element="tns:Test_Get_RadaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateSQLiteFileSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateSQLiteFile" />
+  </wsdl:message>
+  <wsdl:message name="CreateSQLiteFileSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateSQLiteFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="Test_Provider_KomunikaceSoapIn">
+    <wsdl:part name="parameters" element="tns:Test_Provider_Komunikace" />
+  </wsdl:message>
+  <wsdl:message name="Test_Provider_KomunikaceSoapOut">
+    <wsdl:part name="parameters" element="tns:Test_Provider_KomunikaceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TestSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Testovací Ahoj od FASK!</wsdl:documentation>
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Error">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Testovací která hodí chybu!</wsdl:documentation>
+      <wsdl:input message="tns:ErrorSoapIn" />
+      <wsdl:output message="tns:ErrorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteTo_Log_Server_Info_File">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která zapiše zadaný text do Log_Server_Info.txt souboru</wsdl:documentation>
+      <wsdl:input message="tns:WriteTo_Log_Server_Info_FileSoapIn" />
+      <wsdl:output message="tns:WriteTo_Log_Server_Info_FileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteTo_Trace_Server_Info_File">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která zapiše zadaný text do Log_Server_Info.txt souboru</wsdl:documentation>
+      <wsdl:input message="tns:WriteTo_Trace_Server_Info_FileSoapIn" />
+      <wsdl:output message="tns:WriteTo_Trace_Server_Info_FileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WindowsIdentity">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Vrací uživatele pod kterím běží server na IIS</wsdl:documentation>
+      <wsdl:input message="tns:WindowsIdentitySoapIn" />
+      <wsdl:output message="tns:WindowsIdentitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestMail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Testovací metoda která pošle email na nastavenu adresu sledování</wsdl:documentation>
+      <wsdl:input message="tns:TestMailSoapIn" />
+      <wsdl:output message="tns:TestMailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Encodings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vratí seznam všech kodovaní na konkretním stroji</wsdl:documentation>
+      <wsdl:input message="tns:EncodingsSoapIn" />
+      <wsdl:output message="tns:EncodingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StatusObjectReturn">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda sloužící pro načteni binarne uložene StatusObject souboru</wsdl:documentation>
+      <wsdl:input message="tns:StatusObjectReturnSoapIn" />
+      <wsdl:output message="tns:StatusObjectReturnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Labels">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vraci seznam všech šablon na serveru</wsdl:documentation>
+      <wsdl:input message="tns:LabelsSoapIn" />
+      <wsdl:output message="tns:LabelsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test_Get_Rada">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda slouží pro dotažení ID číselnej řady</wsdl:documentation>
+      <wsdl:input message="tns:Test_Get_RadaSoapIn" />
+      <wsdl:output message="tns:Test_Get_RadaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSQLiteFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro tvorbu SQLite soborů</wsdl:documentation>
+      <wsdl:input message="tns:CreateSQLiteFileSoapIn" />
+      <wsdl:output message="tns:CreateSQLiteFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test_Provider_Komunikace">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro test komunikace s IS, at už je jakakoliv</wsdl:documentation>
+      <wsdl:input message="tns:Test_Provider_KomunikaceSoapIn" />
+      <wsdl:output message="tns:Test_Provider_KomunikaceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TestSoap" type="tns:TestSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://Test.fask.cz/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Error">
+      <soap:operation soapAction="http://Test.fask.cz/Error" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteTo_Log_Server_Info_File">
+      <soap:operation soapAction="http://Test.fask.cz/WriteTo_Log_Server_Info_File" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteTo_Trace_Server_Info_File">
+      <soap:operation soapAction="http://Test.fask.cz/WriteTo_Trace_Server_Info_File" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WindowsIdentity">
+      <soap:operation soapAction="http://Test.fask.cz/WindowsIdentity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestMail">
+      <soap:operation soapAction="http://Test.fask.cz/TestMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encodings">
+      <soap:operation soapAction="http://Test.fask.cz/Encodings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StatusObjectReturn">
+      <soap:operation soapAction="http://Test.fask.cz/StatusObjectReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Labels">
+      <soap:operation soapAction="http://Test.fask.cz/Labels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test_Get_Rada">
+      <soap:operation soapAction="http://Test.fask.cz/Test_Get_Rada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSQLiteFile">
+      <soap:operation soapAction="http://Test.fask.cz/CreateSQLiteFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test_Provider_Komunikace">
+      <soap:operation soapAction="http://Test.fask.cz/Test_Provider_Komunikace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TestSoap12" type="tns:TestSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://Test.fask.cz/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Error">
+      <soap12:operation soapAction="http://Test.fask.cz/Error" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteTo_Log_Server_Info_File">
+      <soap12:operation soapAction="http://Test.fask.cz/WriteTo_Log_Server_Info_File" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteTo_Trace_Server_Info_File">
+      <soap12:operation soapAction="http://Test.fask.cz/WriteTo_Trace_Server_Info_File" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WindowsIdentity">
+      <soap12:operation soapAction="http://Test.fask.cz/WindowsIdentity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestMail">
+      <soap12:operation soapAction="http://Test.fask.cz/TestMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encodings">
+      <soap12:operation soapAction="http://Test.fask.cz/Encodings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StatusObjectReturn">
+      <soap12:operation soapAction="http://Test.fask.cz/StatusObjectReturn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Labels">
+      <soap12:operation soapAction="http://Test.fask.cz/Labels" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test_Get_Rada">
+      <soap12:operation soapAction="http://Test.fask.cz/Test_Get_Rada" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSQLiteFile">
+      <soap12:operation soapAction="http://Test.fask.cz/CreateSQLiteFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test_Provider_Komunikace">
+      <soap12:operation soapAction="http://Test.fask.cz/Test_Provider_Komunikace" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Test">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Testovací webová služba s šikovnima utilitama.</wsdl:documentation>
+    <wsdl:port name="TestSoap" binding="tns:TestSoap">
+      <soap:address location="http://localhost/MST_Win_Kom_Server_7_Dasenka/Test.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TestSoap12" binding="tns:TestSoap12">
+      <soap12:address location="http://localhost/MST_Win_Kom_Server_7_Dasenka/Test.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

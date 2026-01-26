@@ -1,0 +1,369 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{850C6EBA-F251-4277-A0B4-94C4DC6A5AA7}|_Modules_\\Vyroba_Agro_SV_Modbus\\_Module_.Vyroba_Agro_SV_Modbus.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\sledovanivyroby2\\_modules_\\vyroba_agro_sv_modbus\\classes\\logika_voziky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{850C6EBA-F251-4277-A0B4-94C4DC6A5AA7}|_Modules_\\Vyroba_Agro_SV_Modbus\\_Module_.Vyroba_Agro_SV_Modbus.csproj|solutionrelative:_modules_\\vyroba_agro_sv_modbus\\classes\\logika_voziky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{850C6EBA-F251-4277-A0B4-94C4DC6A5AA7}|_Modules_\\Vyroba_Agro_SV_Modbus\\_Module_.Vyroba_Agro_SV_Modbus.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\sledovanivyroby2\\_modules_\\vyroba_agro_sv_modbus\\classes\\komunikace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{850C6EBA-F251-4277-A0B4-94C4DC6A5AA7}|_Modules_\\Vyroba_Agro_SV_Modbus\\_Module_.Vyroba_Agro_SV_Modbus.csproj|solutionrelative:_modules_\\vyroba_agro_sv_modbus\\classes\\komunikace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F442B4D9-FBBE-4917-A546-2EB0F66FA086}|_Modules_\\Vyroba_Agro_Kapalky_SV\\_Module_.Vyroba_Agro_Kapalky_SV.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\sledovanivyroby2\\_modules_\\vyroba_agro_kapalky_sv\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F442B4D9-FBBE-4917-A546-2EB0F66FA086}|_Modules_\\Vyroba_Agro_Kapalky_SV\\_Module_.Vyroba_Agro_Kapalky_SV.csproj|solutionrelative:_modules_\\vyroba_agro_kapalky_sv\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F442B4D9-FBBE-4917-A546-2EB0F66FA086}|_Modules_\\Vyroba_Agro_Kapalky_SV\\_Module_.Vyroba_Agro_Kapalky_SV.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\sledovanivyroby2\\_modules_\\vyroba_agro_kapalky_sv\\forms\\frmarchivacezaznamu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F442B4D9-FBBE-4917-A546-2EB0F66FA086}|_Modules_\\Vyroba_Agro_Kapalky_SV\\_Module_.Vyroba_Agro_Kapalky_SV.csproj|solutionrelative:_modules_\\vyroba_agro_kapalky_sv\\forms\\frmarchivacezaznamu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{850C6EBA-F251-4277-A0B4-94C4DC6A5AA7}|_Modules_\\Vyroba_Agro_SV_Modbus\\_Module_.Vyroba_Agro_SV_Modbus.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\sledovanivyroby2\\_modules_\\vyroba_agro_sv_modbus\\forms\\frmarchivacezaznamu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{850C6EBA-F251-4277-A0B4-94C4DC6A5AA7}|_Modules_\\Vyroba_Agro_SV_Modbus\\_Module_.Vyroba_Agro_SV_Modbus.csproj|solutionrelative:_modules_\\vyroba_agro_sv_modbus\\forms\\frmarchivacezaznamu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53601A7B-F9FC-47DA-A99F-E8A47DDDF947}|Database\\Database.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\sledovanivyroby2\\database\\classes\\vyroba_remote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53601A7B-F9FC-47DA-A99F-E8A47DDDF947}|Database\\Database.csproj|solutionrelative:database\\classes\\vyroba_remote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5296763-F051-4096-AED2-21FFB91904EB}|APIRemoteLib\\APIRemoteLib.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\sledovanivyroby2\\apiremotelib\\remote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5296763-F051-4096-AED2-21FFB91904EB}|APIRemoteLib\\APIRemoteLib.csproj|solutionrelative:apiremotelib\\remote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6FA07CB-2E79-475C-B67D-0DB642D8D6CF}|SQLiteCommLib\\SQLiteCommLib.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\_sdilenetridy_\\sqlite\\controllers\\sqlite_static.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6FA07CB-2E79-475C-B67D-0DB642D8D6CF}|SQLiteCommLib\\SQLiteCommLib.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\_sdilenetridy_\\sqlite\\controllers\\sqlite_controller_vyroba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6FA07CB-2E79-475C-B67D-0DB642D8D6CF}|SQLiteCommLib\\SQLiteCommLib.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\_sdilenetridy_\\sqlite\\controllers\\sqlite_controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6FA07CB-2E79-475C-B67D-0DB642D8D6CF}|SQLiteCommLib\\SQLiteCommLib.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\_sdilenetridy_\\sqlite\\controllers\\_routines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{850C6EBA-F251-4277-A0B4-94C4DC6A5AA7}|_Modules_\\Vyroba_Agro_SV_Modbus\\_Module_.Vyroba_Agro_SV_Modbus.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\sledovanivyroby2\\_modules_\\vyroba_agro_sv_modbus\\forms\\frmarchivacezaznamu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{850C6EBA-F251-4277-A0B4-94C4DC6A5AA7}|_Modules_\\Vyroba_Agro_SV_Modbus\\_Module_.Vyroba_Agro_SV_Modbus.csproj|solutionrelative:_modules_\\vyroba_agro_sv_modbus\\forms\\frmarchivacezaznamu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64C6227A-1171-4F03-BAA5-5B76D4B4C7F1}|SQLRemoteLib\\SQLRemoteLib.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\sledovanivyroby2\\sqlremotelib\\remote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64C6227A-1171-4F03-BAA5-5B76D4B4C7F1}|SQLRemoteLib\\SQLRemoteLib.csproj|solutionrelative:sqlremotelib\\remote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6FA07CB-2E79-475C-B67D-0DB642D8D6CF}|SQLiteCommLib\\SQLiteCommLib.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\sledovanivyroby2\\sqlitecommlib\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6FA07CB-2E79-475C-B67D-0DB642D8D6CF}|SQLiteCommLib\\SQLiteCommLib.csproj|solutionrelative:sqlitecommlib\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6FA07CB-2E79-475C-B67D-0DB642D8D6CF}|SQLiteCommLib\\SQLiteCommLib.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\sledovanivyroby2\\sqlitecommlib\\sqlitecommlib.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{C6FA07CB-2E79-475C-B67D-0DB642D8D6CF}|SQLiteCommLib\\SQLiteCommLib.csproj|solutionrelative:sqlitecommlib\\sqlitecommlib.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6FA07CB-2E79-475C-B67D-0DB642D8D6CF}|SQLiteCommLib\\SQLiteCommLib.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\sledovanivyroby2\\sqlitecommlib\\classes\\sqlite_helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6FA07CB-2E79-475C-B67D-0DB642D8D6CF}|SQLiteCommLib\\SQLiteCommLib.csproj|solutionrelative:sqlitecommlib\\classes\\sqlite_helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{850C6EBA-F251-4277-A0B4-94C4DC6A5AA7}|_Modules_\\Vyroba_Agro_SV_Modbus\\_Module_.Vyroba_Agro_SV_Modbus.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\sledovanivyroby2\\_modules_\\vyroba_agro_sv_modbus\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{850C6EBA-F251-4277-A0B4-94C4DC6A5AA7}|_Modules_\\Vyroba_Agro_SV_Modbus\\_Module_.Vyroba_Agro_SV_Modbus.csproj|solutionrelative:_modules_\\vyroba_agro_sv_modbus\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{850C6EBA-F251-4277-A0B4-94C4DC6A5AA7}|_Modules_\\Vyroba_Agro_SV_Modbus\\_Module_.Vyroba_Agro_SV_Modbus.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\sledovanivyroby2\\_modules_\\vyroba_agro_sv_modbus\\forms\\formidpracovnikalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{850C6EBA-F251-4277-A0B4-94C4DC6A5AA7}|_Modules_\\Vyroba_Agro_SV_Modbus\\_Module_.Vyroba_Agro_SV_Modbus.csproj|solutionrelative:_modules_\\vyroba_agro_sv_modbus\\forms\\formidpracovnikalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{850C6EBA-F251-4277-A0B4-94C4DC6A5AA7}|_Modules_\\Vyroba_Agro_SV_Modbus\\_Module_.Vyroba_Agro_SV_Modbus.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\sledovanivyroby2\\_modules_\\vyroba_agro_sv_modbus\\forms\\formidpracovnikalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{850C6EBA-F251-4277-A0B4-94C4DC6A5AA7}|_Modules_\\Vyroba_Agro_SV_Modbus\\_Module_.Vyroba_Agro_SV_Modbus.csproj|solutionrelative:_modules_\\vyroba_agro_sv_modbus\\forms\\formidpracovnikalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{850C6EBA-F251-4277-A0B4-94C4DC6A5AA7}|_Modules_\\Vyroba_Agro_SV_Modbus\\_Module_.Vyroba_Agro_SV_Modbus.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\sledovanivyroby2\\_modules_\\vyroba_agro_sv_modbus\\forms\\aboutbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{850C6EBA-F251-4277-A0B4-94C4DC6A5AA7}|_Modules_\\Vyroba_Agro_SV_Modbus\\_Module_.Vyroba_Agro_SV_Modbus.csproj|solutionrelative:_modules_\\vyroba_agro_sv_modbus\\forms\\aboutbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{850C6EBA-F251-4277-A0B4-94C4DC6A5AA7}|_Modules_\\Vyroba_Agro_SV_Modbus\\_Module_.Vyroba_Agro_SV_Modbus.csproj|d:\\_w\\mes-projekt\\0x_zdrojove_kody\\sledovanivyroby2\\_modules_\\vyroba_agro_sv_modbus\\forms\\formdeaktivace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{850C6EBA-F251-4277-A0B4-94C4DC6A5AA7}|_Modules_\\Vyroba_Agro_SV_Modbus\\_Module_.Vyroba_Agro_SV_Modbus.csproj|solutionrelative:_modules_\\vyroba_agro_sv_modbus\\forms\\formdeaktivace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Logika_Voziky.cs",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_SV_Modbus\\Classes\\Logika_Voziky.cs",
+              "RelativeDocumentMoniker": "_Modules_\\Vyroba_Agro_SV_Modbus\\Classes\\Logika_Voziky.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_SV_Modbus\\Classes\\Logika_Voziky.cs",
+              "RelativeToolTip": "_Modules_\\Vyroba_Agro_SV_Modbus\\Classes\\Logika_Voziky.cs",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAkwBMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:38:52.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Komunikace.cs",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_SV_Modbus\\Classes\\Komunikace.cs",
+              "RelativeDocumentMoniker": "_Modules_\\Vyroba_Agro_SV_Modbus\\Classes\\Komunikace.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_SV_Modbus\\Classes\\Komunikace.cs",
+              "RelativeToolTip": "_Modules_\\Vyroba_Agro_SV_Modbus\\Classes\\Komunikace.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:38:42.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_Kapalky_SV\\frmMain.cs",
+              "RelativeDocumentMoniker": "_Modules_\\Vyroba_Agro_Kapalky_SV\\frmMain.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_Kapalky_SV\\frmMain.cs",
+              "RelativeToolTip": "_Modules_\\Vyroba_Agro_Kapalky_SV\\frmMain.cs",
+              "ViewState": "AgIAAKAEAAAAAAAAAAApwLsEAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:33:49.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmArchivaceZaznamu.cs",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_Kapalky_SV\\Forms\\frmArchivaceZaznamu.cs",
+              "RelativeDocumentMoniker": "_Modules_\\Vyroba_Agro_Kapalky_SV\\Forms\\frmArchivaceZaznamu.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_Kapalky_SV\\Forms\\frmArchivaceZaznamu.cs",
+              "RelativeToolTip": "_Modules_\\Vyroba_Agro_Kapalky_SV\\Forms\\frmArchivaceZaznamu.cs",
+              "ViewState": "AgIAAOYAAAAAAAAAAAAQwPIAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:30:20.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Vyroba_Remote.cs",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\Database\\Classes\\Vyroba_Remote.cs",
+              "RelativeDocumentMoniker": "Database\\Classes\\Vyroba_Remote.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\Database\\Classes\\Vyroba_Remote.cs",
+              "RelativeToolTip": "Database\\Classes\\Vyroba_Remote.cs",
+              "ViewState": "AgIAABYCAAAAAAAAAAAQwB0CAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:29:40.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Remote.cs",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\APIRemoteLib\\Remote.cs",
+              "RelativeDocumentMoniker": "APIRemoteLib\\Remote.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\APIRemoteLib\\Remote.cs",
+              "RelativeToolTip": "APIRemoteLib\\Remote.cs",
+              "ViewState": "AgIAAMABAAAAAAAAAAAAAMEBAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:19:29.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Remote.cs",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\SQLRemoteLib\\Remote.cs",
+              "RelativeDocumentMoniker": "SQLRemoteLib\\Remote.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\SQLRemoteLib\\Remote.cs",
+              "RelativeToolTip": "SQLRemoteLib\\Remote.cs",
+              "ViewState": "AgIAABsEAAAAAAAAAAAqwCMEAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:19:22.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SQLite_Static.cs",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\_SdileneTridy_\\SQLite\\Controllers\\SQLite_Static.cs",
+              "RelativeDocumentMoniker": "..\\_SdileneTridy_\\SQLite\\Controllers\\SQLite_Static.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\_SdileneTridy_\\SQLite\\Controllers\\SQLite_Static.cs",
+              "RelativeToolTip": "..\\_SdileneTridy_\\SQLite\\Controllers\\SQLite_Static.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:12:34.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SQLite_Controller_Vyroba.cs",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\_SdileneTridy_\\SQLite\\Controllers\\SQLite_Controller_Vyroba.cs",
+              "RelativeDocumentMoniker": "..\\_SdileneTridy_\\SQLite\\Controllers\\SQLite_Controller_Vyroba.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\_SdileneTridy_\\SQLite\\Controllers\\SQLite_Controller_Vyroba.cs*",
+              "RelativeToolTip": "..\\_SdileneTridy_\\SQLite\\Controllers\\SQLite_Controller_Vyroba.cs*",
+              "ViewState": "AgIAAPkSAAAAAAAAAAAIwP4SAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:12:19.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Routines.cs",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\_SdileneTridy_\\SQLite\\Controllers\\_Routines.cs",
+              "RelativeDocumentMoniker": "..\\_SdileneTridy_\\SQLite\\Controllers\\_Routines.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\_SdileneTridy_\\SQLite\\Controllers\\_Routines.cs",
+              "RelativeToolTip": "..\\_SdileneTridy_\\SQLite\\Controllers\\_Routines.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:11:48.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SQLite_Controller.cs",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\_SdileneTridy_\\SQLite\\Controllers\\SQLite_Controller.cs",
+              "RelativeDocumentMoniker": "..\\_SdileneTridy_\\SQLite\\Controllers\\SQLite_Controller.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\_SdileneTridy_\\SQLite\\Controllers\\SQLite_Controller.cs",
+              "RelativeToolTip": "..\\_SdileneTridy_\\SQLite\\Controllers\\SQLite_Controller.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:09:57.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Main.cs",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\SQLiteCommLib\\Main.cs",
+              "RelativeDocumentMoniker": "SQLiteCommLib\\Main.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\SQLiteCommLib\\Main.cs",
+              "RelativeToolTip": "SQLiteCommLib\\Main.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:09:07.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmArchivaceZaznamu.cs",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\frmArchivaceZaznamu.cs",
+              "RelativeDocumentMoniker": "_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\frmArchivaceZaznamu.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\frmArchivaceZaznamu.cs",
+              "RelativeToolTip": "_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\frmArchivaceZaznamu.cs",
+              "ViewState": "AgIAAOYAAAAAAAAAAAAQwPIAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T14:45:56.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SQLiteCommLib.xml",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\SQLiteCommLib\\SQLiteCommLib.xml",
+              "RelativeDocumentMoniker": "SQLiteCommLib\\SQLiteCommLib.xml",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\SQLiteCommLib\\SQLiteCommLib.xml",
+              "RelativeToolTip": "SQLiteCommLib\\SQLiteCommLib.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-03-03T15:12:54.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmArchivaceZaznamu.cs [N\u00E1vrh]",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\frmArchivaceZaznamu.cs",
+              "RelativeDocumentMoniker": "_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\frmArchivaceZaznamu.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\frmArchivaceZaznamu.cs [N\u00E1vrh]",
+              "RelativeToolTip": "_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\frmArchivaceZaznamu.cs [N\u00E1vrh]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T14:45:45.58Z",
+              "EditorCaption": " [N\u00E1vrh]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SQLite_Helper.cs",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\SQLiteCommLib\\Classes\\SQLite_Helper.cs",
+              "RelativeDocumentMoniker": "SQLiteCommLib\\Classes\\SQLite_Helper.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\SQLiteCommLib\\Classes\\SQLite_Helper.cs",
+              "RelativeToolTip": "SQLiteCommLib\\Classes\\SQLite_Helper.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:09:38.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_SV_Modbus\\frmMain.cs",
+              "RelativeDocumentMoniker": "_Modules_\\Vyroba_Agro_SV_Modbus\\frmMain.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_SV_Modbus\\frmMain.cs",
+              "RelativeToolTip": "_Modules_\\Vyroba_Agro_SV_Modbus\\frmMain.cs",
+              "ViewState": "AgIAAGcEAAAAAAAAAAAtwKIEAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T14:54:58.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FormIDPracovnikaLogin.cs",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\FormIDPracovnikaLogin.cs",
+              "RelativeDocumentMoniker": "_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\FormIDPracovnikaLogin.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\FormIDPracovnikaLogin.cs",
+              "RelativeToolTip": "_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\FormIDPracovnikaLogin.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAtwIMAAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:01:36.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FormIDPracovnikaLogin.cs [N\u00E1vrh]",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\FormIDPracovnikaLogin.cs",
+              "RelativeDocumentMoniker": "_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\FormIDPracovnikaLogin.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\FormIDPracovnikaLogin.cs [N\u00E1vrh]",
+              "RelativeToolTip": "_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\FormIDPracovnikaLogin.cs [N\u00E1vrh]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T14:45:42.592Z",
+              "EditorCaption": " [N\u00E1vrh]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AboutBox.cs [N\u00E1vrh]",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\AboutBox.cs",
+              "RelativeDocumentMoniker": "_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\AboutBox.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\AboutBox.cs [N\u00E1vrh]*",
+              "RelativeToolTip": "_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\AboutBox.cs [N\u00E1vrh]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T14:45:39.479Z",
+              "EditorCaption": " [N\u00E1vrh]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FormDeaktivace.cs [N\u00E1vrh]",
+              "DocumentMoniker": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\FormDeaktivace.cs",
+              "RelativeDocumentMoniker": "_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\FormDeaktivace.cs",
+              "ToolTip": "D:\\_w\\MES-Projekt\\0x_Zdrojove_Kody\\SledovaniVyroby2\\_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\FormDeaktivace.cs [N\u00E1vrh]",
+              "RelativeToolTip": "_Modules_\\Vyroba_Agro_SV_Modbus\\Forms\\FormDeaktivace.cs [N\u00E1vrh]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T14:45:34.336Z",
+              "EditorCaption": " [N\u00E1vrh]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ZdrojeStav" targetNamespace="http://sqlce.fask.cz/ZdrojeStav.xsd" xmlns:mstns="http://sqlce.fask.cz/ZdrojeStav.xsd" xmlns="http://sqlce.fask.cz/ZdrojeStav.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ZdrojeStav" msdata:IsDataSet="true" msdata:Locale="" msprop:Generator_UserDSName="ZdrojeStav" msprop:Generator_DataSetName="ZdrojeStav" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ZdrojStav" msprop:Generator_UserTableName="ZdrojStav" msprop:Generator_RowDeletedName="ZdrojStavRowDeleted" msprop:Generator_RowChangedName="ZdrojStavRowChanged" msprop:Generator_RowClassName="ZdrojStavRow" msprop:Generator_RowChangingName="ZdrojStavRowChanging" msprop:Generator_RowEvArgName="ZdrojStavRowChangeEvent" msprop:Generator_RowEvHandlerName="ZdrojStavRowChangeEventHandler" msprop:Generator_TableClassName="ZdrojStavDataTable" msprop:Generator_TableVarName="tableZdrojStav" msprop:Generator_RowDeletingName="ZdrojStavRowDeleting" msprop:Generator_TablePropName="ZdrojStav">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ZdrojID" msprop:Generator_UserColumnName="ZdrojID" msprop:Generator_ColumnVarNameInTable="columnZdrojID" msprop:Generator_ColumnPropNameInRow="ZdrojID" msprop:Generator_ColumnPropNameInTable="ZdrojIDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ZdrojNazev" msprop:Generator_UserColumnName="ZdrojNazev" msprop:Generator_ColumnVarNameInTable="columnZdrojNazev" msprop:Generator_ColumnPropNameInRow="ZdrojNazev" msprop:Generator_ColumnPropNameInTable="ZdrojNazevColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ZdrojMisto" msprop:Generator_UserColumnName="ZdrojMisto" msprop:Generator_ColumnPropNameInRow="ZdrojMisto" msprop:Generator_ColumnVarNameInTable="columnZdrojMisto" msprop:Generator_ColumnPropNameInTable="ZdrojMistoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ZdrojBarcode" msprop:Generator_UserColumnName="ZdrojBarcode" msprop:Generator_ColumnVarNameInTable="columnZdrojBarcode" msprop:Generator_ColumnPropNameInRow="ZdrojBarcode" msprop:Generator_ColumnPropNameInTable="ZdrojBarcodeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ZdrojModified" msprop:Generator_UserColumnName="ZdrojModified" msprop:Generator_ColumnVarNameInTable="columnZdrojModified" msprop:Generator_ColumnPropNameInRow="ZdrojModified" msprop:Generator_ColumnPropNameInTable="ZdrojModifiedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ZdrojGUID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="ZdrojGUID" msprop:Generator_ColumnVarNameInTable="columnZdrojGUID" msprop:Generator_ColumnPropNameInRow="ZdrojGUID" msprop:Generator_ColumnPropNameInTable="ZdrojGUIDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="StavID" msprop:Generator_UserColumnName="StavID" msprop:Generator_ColumnVarNameInTable="columnStavID" msprop:Generator_ColumnPropNameInRow="StavID" msprop:Generator_ColumnPropNameInTable="StavIDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="StavNazev" msprop:Generator_UserColumnName="StavNazev" msprop:Generator_ColumnVarNameInTable="columnStavNazev" msprop:Generator_ColumnPropNameInRow="StavNazev" msprop:Generator_ColumnPropNameInTable="StavNazevColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CinnostID" msprop:Generator_UserColumnName="CinnostID" msprop:Generator_ColumnPropNameInRow="CinnostID" msprop:Generator_ColumnVarNameInTable="columnCinnostID" msprop:Generator_ColumnPropNameInTable="CinnostIDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CinnostNazev" msprop:Generator_UserColumnName="CinnostNazev" msprop:Generator_ColumnPropNameInRow="CinnostNazev" msprop:Generator_ColumnVarNameInTable="columnCinnostNazev" msprop:Generator_ColumnPropNameInTable="CinnostNazevColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TerminalID" msprop:Generator_UserColumnName="TerminalID" msprop:Generator_ColumnPropNameInRow="TerminalID" msprop:Generator_ColumnVarNameInTable="columnTerminalID" msprop:Generator_ColumnPropNameInTable="TerminalIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="UserID" msprop:Generator_UserColumnName="UserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ZdrojCinnostValue" msprop:Generator_UserColumnName="ZdrojCinnostValue" msprop:Generator_ColumnVarNameInTable="columnZdrojCinnostValue" msprop:Generator_ColumnPropNameInRow="ZdrojCinnostValue" msprop:Generator_ColumnPropNameInTable="ZdrojCinnostValueColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ZdrojCinnostType" msprop:Generator_UserColumnName="ZdrojCinnostType" msprop:Generator_ColumnVarNameInTable="columnZdrojCinnostType" msprop:Generator_ColumnPropNameInRow="ZdrojCinnostType" msprop:Generator_ColumnPropNameInTable="ZdrojCinnostTypeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CountEntries" msprop:Generator_UserColumnName="CountEntries" msprop:Generator_ColumnPropNameInRow="CountEntries" msprop:Generator_ColumnVarNameInTable="columnCountEntries" msprop:Generator_ColumnPropNameInTable="CountEntriesColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ODB_ID" msprop:Generator_UserColumnName="ODB_ID" msprop:Generator_ColumnPropNameInRow="ODB_ID" msprop:Generator_ColumnVarNameInTable="columnODB_ID" msprop:Generator_ColumnPropNameInTable="ODB_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OkruhID" msprop:Generator_UserColumnName="OkruhID" msprop:Generator_ColumnPropNameInRow="OkruhID" msprop:Generator_ColumnVarNameInTable="columnOkruhID" msprop:Generator_ColumnPropNameInTable="OkruhIDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Rozpracovano" msprop:Generator_UserColumnName="Rozpracovano" msprop:Generator_ColumnVarNameInTable="columnRozpracovano" msprop:Generator_ColumnPropNameInRow="Rozpracovano" msprop:Generator_ColumnPropNameInTable="RozpracovanoColumn" type="xs:unsignedByte" default="0" minOccurs="0" />
+              <xs:element name="CinnostOznaceni" msprop:Generator_UserColumnName="CinnostOznaceni" msprop:Generator_ColumnVarNameInTable="columnCinnostOznaceni" msprop:Generator_ColumnPropNameInRow="CinnostOznaceni" msprop:Generator_ColumnPropNameInTable="CinnostOznaceniColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GPS_X" msprop:Generator_UserColumnName="GPS_X" msprop:Generator_ColumnVarNameInTable="columnGPS_X" msprop:Generator_ColumnPropNameInRow="GPS_X" msprop:Generator_ColumnPropNameInTable="GPS_XColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="GPS_Y" msprop:Generator_UserColumnName="GPS_Y" msprop:Generator_ColumnVarNameInTable="columnGPS_Y" msprop:Generator_ColumnPropNameInRow="GPS_Y" msprop:Generator_ColumnPropNameInTable="GPS_YColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="GPS_Z" msprop:Generator_UserColumnName="GPS_Z" msprop:Generator_ColumnVarNameInTable="columnGPS_Z" msprop:Generator_ColumnPropNameInRow="GPS_Z" msprop:Generator_ColumnPropNameInTable="GPS_ZColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

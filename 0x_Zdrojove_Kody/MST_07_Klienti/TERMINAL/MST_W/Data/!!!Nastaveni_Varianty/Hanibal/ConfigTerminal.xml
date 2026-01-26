@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Terminal>
+    <ID>11</ID>
+    <Address>http://192.168.1.114:8086/</Address>
+    <ServiceTimeOut>30000</ServiceTimeOut>
+    <ServiceTimeOut>30000</ServiceTimeOut>
+    <ServiceTimeOut>30000</ServiceTimeOut>
+    <!--
+		<ScannerType>None</ScannerType>
+		<ScannerType>Serial</ScannerType>
+		<ScannerType>Symbol_MC3000</ScannerType>
+		<ScannerType>Symbol_PT8800</ScannerType>
+		<ScannerType>Unitech_HT660</ScannerType>
+		<ScannerType>Netcom_TT8000</ScannerType>
+		-->
+    <ScannerType>Symbol_MC3000</ScannerType>
+    <!--
+		<RFIDScannerType>None</RFIDScannerType>
+		<RFIDScannerType>TT8000</RFIDScannerType>
+		<RFIDScannerType>MC9090</RFIDScannerType>
+		<RFIDScannerType>MC319Z</RFIDScannerType>
+    <RFIDScannerType>MC319Z_v2</RFIDScannerType>
+		-->
+    <RFIDScannerType>None</RFIDScannerType>
+    <RFIDAllowUHF>False</RFIDAllowUHF>
+    <RFIDLoadAsciiTextData>False</RFIDLoadAsciiTextData>
+    <RFIDPowerLevel>0</RFIDPowerLevel>
+    <Storage>
+    </Storage>
+    <Log>True</Log>
+    <LogAdvanced>False</LogAdvanced>
+    <ShowPanelButtons>True</ShowPanelButtons>
+    <SqlCe>True</SqlCe>
+    <!--
+    <PrintServerAddress>http://faskcz-cv004/MST_Win_Print_Server_6/</PrintServerAddress>
+    <PrintServerAddress>http://faskcz-ct002/MST_Win_Print_Server_6/</PrintServerAddress>
+		<PrintServerAddress>http://faskcz-cv004/MST_Win_Print_Server_6/</PrintServerAddress>
+    <PrintServerTimeOut>20000</PrintServerTimeOut>
+		<PrintServerPrinterName>Label 300</PrintServerPrinterName>
+		<PrintServerTemplateName>MSTW</PrintServerTemplateName>
+    -->
+    <!-- Lokalizace -->
+    <LokalizacePovolit>False</LokalizacePovolit>
+    <LokalizaceVlastniPovolit>False</LokalizaceVlastniPovolit>
+    <!--
+    cs, sk
+    -->
+    <LokalizaceZvolena>cs</LokalizaceZvolena>
+    <ScrollDataGridUp>D8</ScrollDataGridUp>
+    <ScrollDataGridDown>D5</ScrollDataGridDown>
+    <ServerAccess>Anonymous</ServerAccess>
+    <ServerAccessUsername>fask</ServerAccessUsername>
+    <ServerAccessPassword>fask</ServerAccessPassword>
+    <ServerAccessDomain>
+    </ServerAccessDomain>
+    <ServerAccessPreauthenticate>True</ServerAccessPreauthenticate>
+    <ServerAccessAllowRedirection>False</ServerAccessAllowRedirection>
+    <ServerAccessAllowDecompression>False</ServerAccessAllowDecompression>
+    <ServerAccessCertificatesTrust>TrustAll</ServerAccessCertificatesTrust>
+    <PrintServerTemplateNamePrijemPredloha>stitek</PrintServerTemplateNamePrijemPredloha>
+    <PrintServerTemplateNamePrijemNasnimane>stitek</PrintServerTemplateNamePrijemNasnimane>
+    <PrintServerTemplateNameVydejPredloha>stitek</PrintServerTemplateNameVydejPredloha>
+    <PrintServerTemplateNameVydejNasnimane>stitek</PrintServerTemplateNameVydejNasnimane>
+    <PrintServerTemplateNameInventuraPredloha>inventuramicra.txt</PrintServerTemplateNameInventuraPredloha>
+    <PrintServerTemplateNameInventuraNasnimane>inventuramicra.txt</PrintServerTemplateNameInventuraNasnimane>
+    <PrintServerTemplateNameProdejPredloha>prodejmicra.txt</PrintServerTemplateNameProdejPredloha>
+    <PrintServerTemplateNameProdejNasnimane>prodejmicra.txt</PrintServerTemplateNameProdejNasnimane>
+    <PovolitAktualizacePristupu>True</PovolitAktualizacePristupu>
+    <PrintServer>True</PrintServer>
+    <PrintServerTemplateNameVydejPalListek>nekupto_stitek.txt</PrintServerTemplateNameVydejPalListek>
+    <LogUploadInterval>100</LogUploadInterval>
+    <Trace>False</Trace>
+    <Trace_Separator>
+    </Trace_Separator>
+    <RFID_memoryEPC>True</RFID_memoryEPC>
+    <RFID_memoryUSER>True</RFID_memoryUSER>
+    <RFID_memoryRESERVED>True</RFID_memoryRESERVED>
+    <RFID_memoryTID>True</RFID_memoryTID>
+    <MemorySize>5</MemorySize>
+    <MemoryChecked>False</MemoryChecked>
+  </Terminal>
+  <Strings>
+    <EAN_L>EAN kód</EAN_L>
+    <EAN_S>EAN</EAN_S>
+    <SN_L>Sériové číslo</SN_L>
+    <SN_S>SN</SN_S>
+    <SW_L>Softwarová verze</SW_L>
+    <SW_S>SW</SW_S>
+    <DV_L>Datum výroby</DV_L>
+    <DV_S>DV</DV_S>
+    <PON_NAME>PO č.</PON_NAME>
+    <LC_NAME>Lokace</LC_NAME>
+    <REZ1_PRIJ_NAME>Šarze</REZ1_PRIJ_NAME>
+    <REZ2_PRIJ_NAME>Paleta č.</REZ2_PRIJ_NAME>
+    <REZ1_VYDE_NAME>REZ1</REZ1_VYDE_NAME>
+    <REZ2_VYDE_NAME>REZ2</REZ2_VYDE_NAME>
+    <REZ1_PROD_NAME>Počet kusů</REZ1_PROD_NAME>
+    <REZ2_PROD_NAME>Požadované množství</REZ2_PROD_NAME>
+    <REZ3_PROD_NAME>Rez3</REZ3_PROD_NAME>
+    <REZ4_PROD_NAME>Rez4</REZ4_PROD_NAME>
+  </Strings>
+</Config>

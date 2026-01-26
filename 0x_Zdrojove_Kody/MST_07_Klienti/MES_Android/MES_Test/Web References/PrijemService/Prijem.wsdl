@@ -1,0 +1,1070 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://fask.cz/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://fask.cz/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba přenosu dat příjmu</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://fask.cz/">
+      <s:import namespace="http://fask.cz/PrijemDavky.xsd" />
+      <s:import namespace="http://fask.cz/Prijem.xsd" />
+      <s:import namespace="http://tempuri.org/Obecne.xsd" />
+      <s:import schemaLocation="http://localhost/MST_Win_Kom_Server_7_Dasenka/Prijem.asmx?schema=Obecne" namespace="http://tempuri.org/Obecne.xsd" />
+      <s:import schemaLocation="http://localhost/MST_Win_Kom_Server_7_Dasenka/Prijem.asmx?schema=Prijem" namespace="http://fask.cz/Prijem.xsd" />
+      <s:import schemaLocation="http://localhost/MST_Win_Kom_Server_7_Dasenka/Prijem.asmx?schema=PrijemDavky" namespace="http://fask.cz/PrijemDavky.xsd" />
+      <s:element name="FinishPrijemka">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="idCountEntries" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinishPrijemkaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinishPrijemkaResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StatusObject">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="_statusFile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusText" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Exception" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DatumZapisu" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" default="false" name="Finished" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Online_GetSkladExpedice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ITEMNMBR" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MnozstviZadane" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="MnozstviNasnimane" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_GetSkladExpediceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Online_GetSkladExpediceResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="MnozstviDodavatelePozadovano" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="MnozstviDodavateleDodano" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="MnozstviDodavateleDodat" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="MnozstviOdberateliPozadovano" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="MnozstviOdberatelumDodano" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="MnozstviOdberatelumDodat" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Vysledek" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StornoPrijemka">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="idCountEntries" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StornoPrijemkaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StornoPrijemkaResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrijemky">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="prefixskladu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrijemkyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPrijemkyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/PrijemDavky.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PreparePrijemkaDB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="countentries" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PreparePrijemkaDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PreparePrijemkaDBResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrijemkaReceived">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="countentries" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrijemkaReceivedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPrijemkaReceivedResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessPrijemDBFile2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="countentries" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="processState" type="tns:ProcessPrijemState" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="ProcessPrijemState">
+        <s:restriction base="s:string">
+          <s:enumeration value="Uvolnit" />
+          <s:enumeration value="Zpracovat" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ProcessPrijemDBFile2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessPrijemDBFile2Result" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Detail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ponumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetailItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ponumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serltnum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetailItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetailItemResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateDavkaRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ponumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateDavkaRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerateDavkaRequestResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateDavka">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ponumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateDavkaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GenerateDavkaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateDavkaStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ponumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateDavkaStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerateDavkaStatusResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateDavkaStatusDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ponumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateDavkaStatusDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerateDavkaStatusDeleteResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_Add">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="countentries" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="prijemRows">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/Prijem.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_AddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Online_AddResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_Del">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="countentries" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="prijemRows">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/Prijem.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_DelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Online_DelResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_Quantity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="countentries" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="prijemRows">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/Prijem.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_QuantityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Online_QuantityResult" type="tns:StatusObject" />
+            <s:element minOccurs="0" maxOccurs="1" name="prijemRows">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/Prijem.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_GenerateSerltnum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemnmbr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oldSerltnum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_GenerateSerltnumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Online_GenerateSerltnumResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_OverLokace">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="serltnum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemnmbr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="locncode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="qtyshppd" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_OverLokaceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Online_OverLokaceResult" type="tns:StatusOverLokace" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StatusOverLokace">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="tns:STATUSOverLokace" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="STATUSOverLokace">
+        <s:restriction base="s:string">
+          <s:enumeration value="OK" />
+          <s:enumeration value="WARNING" />
+          <s:enumeration value="ERROR" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="Online_GetNezrealizovanePrijemky_Vyber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalid" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="skladid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemtype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListCarKod" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Online_GetNezrealizovanePrijemky_VyberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Online_GetNezrealizovanePrijemky_VyberResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Obecne.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_GetDoporuceneLokace">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemnmbr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serltnum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_GetDoporuceneLokaceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Online_GetDoporuceneLokaceResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Obecne.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_GetNezrealizovanePrijemky">
+        <s:complexType />
+      </s:element>
+      <s:element name="Online_GetNezrealizovanePrijemkyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Online_GetNezrealizovanePrijemkyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Obecne.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="FinishPrijemkaSoapIn">
+    <wsdl:part name="parameters" element="tns:FinishPrijemka" />
+  </wsdl:message>
+  <wsdl:message name="FinishPrijemkaSoapOut">
+    <wsdl:part name="parameters" element="tns:FinishPrijemkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Online_GetSkladExpediceSoapIn">
+    <wsdl:part name="parameters" element="tns:Online_GetSkladExpedice" />
+  </wsdl:message>
+  <wsdl:message name="Online_GetSkladExpediceSoapOut">
+    <wsdl:part name="parameters" element="tns:Online_GetSkladExpediceResponse" />
+  </wsdl:message>
+  <wsdl:message name="StornoPrijemkaSoapIn">
+    <wsdl:part name="parameters" element="tns:StornoPrijemka" />
+  </wsdl:message>
+  <wsdl:message name="StornoPrijemkaSoapOut">
+    <wsdl:part name="parameters" element="tns:StornoPrijemkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPrijemkySoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrijemky" />
+  </wsdl:message>
+  <wsdl:message name="GetPrijemkySoapOut">
+    <wsdl:part name="parameters" element="tns:GetPrijemkyResponse" />
+  </wsdl:message>
+  <wsdl:message name="PreparePrijemkaDBSoapIn">
+    <wsdl:part name="parameters" element="tns:PreparePrijemkaDB" />
+  </wsdl:message>
+  <wsdl:message name="PreparePrijemkaDBSoapOut">
+    <wsdl:part name="parameters" element="tns:PreparePrijemkaDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPrijemkaReceivedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrijemkaReceived" />
+  </wsdl:message>
+  <wsdl:message name="GetPrijemkaReceivedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPrijemkaReceivedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessPrijemDBFile2SoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessPrijemDBFile2" />
+  </wsdl:message>
+  <wsdl:message name="ProcessPrijemDBFile2SoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessPrijemDBFile2Response" />
+  </wsdl:message>
+  <wsdl:message name="DetailSoapIn">
+    <wsdl:part name="parameters" element="tns:Detail" />
+  </wsdl:message>
+  <wsdl:message name="DetailSoapOut">
+    <wsdl:part name="parameters" element="tns:DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="DetailItemSoapIn">
+    <wsdl:part name="parameters" element="tns:DetailItem" />
+  </wsdl:message>
+  <wsdl:message name="DetailItemSoapOut">
+    <wsdl:part name="parameters" element="tns:DetailItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerateDavkaRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateDavkaRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenerateDavkaRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateDavkaRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerateDavkaSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateDavka" />
+  </wsdl:message>
+  <wsdl:message name="GenerateDavkaSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateDavkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerateDavkaStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateDavkaStatus" />
+  </wsdl:message>
+  <wsdl:message name="GenerateDavkaStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateDavkaStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerateDavkaStatusDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateDavkaStatusDelete" />
+  </wsdl:message>
+  <wsdl:message name="GenerateDavkaStatusDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateDavkaStatusDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Online_AddSoapIn">
+    <wsdl:part name="parameters" element="tns:Online_Add" />
+  </wsdl:message>
+  <wsdl:message name="Online_AddSoapOut">
+    <wsdl:part name="parameters" element="tns:Online_AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="Online_DelSoapIn">
+    <wsdl:part name="parameters" element="tns:Online_Del" />
+  </wsdl:message>
+  <wsdl:message name="Online_DelSoapOut">
+    <wsdl:part name="parameters" element="tns:Online_DelResponse" />
+  </wsdl:message>
+  <wsdl:message name="Online_QuantitySoapIn">
+    <wsdl:part name="parameters" element="tns:Online_Quantity" />
+  </wsdl:message>
+  <wsdl:message name="Online_QuantitySoapOut">
+    <wsdl:part name="parameters" element="tns:Online_QuantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="Online_GenerateSerltnumSoapIn">
+    <wsdl:part name="parameters" element="tns:Online_GenerateSerltnum" />
+  </wsdl:message>
+  <wsdl:message name="Online_GenerateSerltnumSoapOut">
+    <wsdl:part name="parameters" element="tns:Online_GenerateSerltnumResponse" />
+  </wsdl:message>
+  <wsdl:message name="Online_OverLokaceSoapIn">
+    <wsdl:part name="parameters" element="tns:Online_OverLokace" />
+  </wsdl:message>
+  <wsdl:message name="Online_OverLokaceSoapOut">
+    <wsdl:part name="parameters" element="tns:Online_OverLokaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="Online_GetNezrealizovanePrijemky_VyberSoapIn">
+    <wsdl:part name="parameters" element="tns:Online_GetNezrealizovanePrijemky_Vyber" />
+  </wsdl:message>
+  <wsdl:message name="Online_GetNezrealizovanePrijemky_VyberSoapOut">
+    <wsdl:part name="parameters" element="tns:Online_GetNezrealizovanePrijemky_VyberResponse" />
+  </wsdl:message>
+  <wsdl:message name="Online_GetDoporuceneLokaceSoapIn">
+    <wsdl:part name="parameters" element="tns:Online_GetDoporuceneLokace" />
+  </wsdl:message>
+  <wsdl:message name="Online_GetDoporuceneLokaceSoapOut">
+    <wsdl:part name="parameters" element="tns:Online_GetDoporuceneLokaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="Online_GetNezrealizovanePrijemkySoapIn">
+    <wsdl:part name="parameters" element="tns:Online_GetNezrealizovanePrijemky" />
+  </wsdl:message>
+  <wsdl:message name="Online_GetNezrealizovanePrijemkySoapOut">
+    <wsdl:part name="parameters" element="tns:Online_GetNezrealizovanePrijemkyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PrijemServiceSoap">
+    <wsdl:operation name="FinishPrijemka">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která ukončí přijemku tym že na CZ_DOSLO natsaví ID TErminal + 100 </wsdl:documentation>
+      <wsdl:input message="tns:FinishPrijemkaSoapIn" />
+      <wsdl:output message="tns:FinishPrijemkaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Online_GetSkladExpedice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda sloužíci pro vypočet položky zda se ma dát na Sklad, Exedici aleno rozdelit</wsdl:documentation>
+      <wsdl:input message="tns:Online_GetSkladExpediceSoapIn" />
+      <wsdl:output message="tns:Online_GetSkladExpediceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StornoPrijemka">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda sloužíci pro Storno přijemky (Nastaví CZ_Doslo na 100)</wsdl:documentation>
+      <wsdl:input message="tns:StornoPrijemkaSoapIn" />
+      <wsdl:output message="tns:StornoPrijemkaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrijemky">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vratí přijemky z předlohy podle ID Terminalu a Prefixu ID Skladu</wsdl:documentation>
+      <wsdl:input message="tns:GetPrijemkySoapIn" />
+      <wsdl:output message="tns:GetPrijemkySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PreparePrijemkaDB">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda slouží pro nachystaní souboru pro terminál</wsdl:documentation>
+      <wsdl:input message="tns:PreparePrijemkaDBSoapIn" />
+      <wsdl:output message="tns:PreparePrijemkaDBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrijemkaReceived">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda slouží pro označení davku za uspešne staženou pro daný terminal</wsdl:documentation>
+      <wsdl:input message="tns:GetPrijemkaReceivedSoapIn" />
+      <wsdl:output message="tns:GetPrijemkaReceivedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessPrijemDBFile2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda sloužící pro rozbalení ZIP souboru, a vytažení dat z souboru do pameti. Nasledne zavolá metodu ProcessPrijemka která zpracuje data. </wsdl:documentation>
+      <wsdl:input message="tns:ProcessPrijemDBFile2SoapIn" />
+      <wsdl:output message="tns:ProcessPrijemDBFile2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Detail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vrací Netypovy dataset podle dotazu v konfiguraci</wsdl:documentation>
+      <wsdl:input message="tns:DetailSoapIn" />
+      <wsdl:output message="tns:DetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetailItem">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda kter vraci netypovy dataset podle dotazu v konfiguraci</wsdl:documentation>
+      <wsdl:input message="tns:DetailItemSoapIn" />
+      <wsdl:output message="tns:DetailItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavkaRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která započne připravu generovaní předlohy IS do Našich struktur</wsdl:documentation>
+      <wsdl:input message="tns:GenerateDavkaRequestSoapIn" />
+      <wsdl:output message="tns:GenerateDavkaRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavka">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která provadí samotne generování dokladu z IS do našich struktur</wsdl:documentation>
+      <wsdl:input message="tns:GenerateDavkaSoapIn" />
+      <wsdl:output message="tns:GenerateDavkaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavkaStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vrací status o prubehu generování</wsdl:documentation>
+      <wsdl:input message="tns:GenerateDavkaStatusSoapIn" />
+      <wsdl:output message="tns:GenerateDavkaStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavkaStatusDelete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda slouzi terminalu ke smazani statusu a znovu generovani prikazu(davky)</wsdl:documentation>
+      <wsdl:input message="tns:GenerateDavkaStatusDeleteSoapIn" />
+      <wsdl:output message="tns:GenerateDavkaStatusDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Online_Add">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pravdepodobne pro praci s Lok. Mechanizmem, přidávani položky</wsdl:documentation>
+      <wsdl:input message="tns:Online_AddSoapIn" />
+      <wsdl:output message="tns:Online_AddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Online_Del">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pravdepodobne pro praci s Lok. Mechanizmem, mazani položky</wsdl:documentation>
+      <wsdl:input message="tns:Online_DelSoapIn" />
+      <wsdl:output message="tns:Online_DelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Online_Quantity">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pravdepodobne pro praci s Lok. Mechanizmem, neco s množstvím</wsdl:documentation>
+      <wsdl:input message="tns:Online_QuantitySoapIn" />
+      <wsdl:output message="tns:Online_QuantitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Online_GenerateSerltnum">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro zavolaní procedury Prijem_GenerateSerltnum_Action</wsdl:documentation>
+      <wsdl:input message="tns:Online_GenerateSerltnumSoapIn" />
+      <wsdl:output message="tns:Online_GenerateSerltnumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Online_OverLokace">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro Online overeni lokace</wsdl:documentation>
+      <wsdl:input message="tns:Online_OverLokaceSoapIn" />
+      <wsdl:output message="tns:Online_OverLokaceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Online_GetNezrealizovanePrijemky_Vyber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vraci nerealizovane přijemky, dle čarovych kodu.</wsdl:documentation>
+      <wsdl:input message="tns:Online_GetNezrealizovanePrijemky_VyberSoapIn" />
+      <wsdl:output message="tns:Online_GetNezrealizovanePrijemky_VyberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Online_GetDoporuceneLokace">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která zavolá proceduru Prijem_GetDoporuceneLokace_Action a vrati doporučene lokace</wsdl:documentation>
+      <wsdl:input message="tns:Online_GetDoporuceneLokaceSoapIn" />
+      <wsdl:output message="tns:Online_GetDoporuceneLokaceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Online_GetNezrealizovanePrijemky">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která zavola proceduru Prijem_GetNezrealizovanePrijemky_Action a vrati nerealizovane prjemky</wsdl:documentation>
+      <wsdl:input message="tns:Online_GetNezrealizovanePrijemkySoapIn" />
+      <wsdl:output message="tns:Online_GetNezrealizovanePrijemkySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PrijemServiceSoap" type="tns:PrijemServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FinishPrijemka">
+      <soap:operation soapAction="http://fask.cz/FinishPrijemka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_GetSkladExpedice">
+      <soap:operation soapAction="http://fask.cz/Online_GetSkladExpedice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StornoPrijemka">
+      <soap:operation soapAction="http://fask.cz/StornoPrijemka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrijemky">
+      <soap:operation soapAction="http://fask.cz/GetPrijemky" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PreparePrijemkaDB">
+      <soap:operation soapAction="http://fask.cz/PreparePrijemkaDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrijemkaReceived">
+      <soap:operation soapAction="http://fask.cz/GetPrijemkaReceived" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessPrijemDBFile2">
+      <soap:operation soapAction="http://fask.cz/ProcessPrijemDBFile2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Detail">
+      <soap:operation soapAction="http://fask.cz/Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailItem">
+      <soap:operation soapAction="http://fask.cz/DetailItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavkaRequest">
+      <soap:operation soapAction="http://fask.cz/GenerateDavkaRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavka">
+      <soap:operation soapAction="http://fask.cz/GenerateDavka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavkaStatus">
+      <soap:operation soapAction="http://fask.cz/GenerateDavkaStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavkaStatusDelete">
+      <soap:operation soapAction="http://fask.cz/GenerateDavkaStatusDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_Add">
+      <soap:operation soapAction="http://fask.cz/Online_Add" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_Del">
+      <soap:operation soapAction="http://fask.cz/Online_Del" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_Quantity">
+      <soap:operation soapAction="http://fask.cz/Online_Quantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_GenerateSerltnum">
+      <soap:operation soapAction="http://fask.cz/Online_GenerateSerltnum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_OverLokace">
+      <soap:operation soapAction="http://fask.cz/Online_OverLokace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_GetNezrealizovanePrijemky_Vyber">
+      <soap:operation soapAction="http://fask.cz/Online_GetNezrealizovanePrijemky_Vyber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_GetDoporuceneLokace">
+      <soap:operation soapAction="http://fask.cz/Online_GetDoporuceneLokace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_GetNezrealizovanePrijemky">
+      <soap:operation soapAction="http://fask.cz/Online_GetNezrealizovanePrijemky" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PrijemServiceSoap12" type="tns:PrijemServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FinishPrijemka">
+      <soap12:operation soapAction="http://fask.cz/FinishPrijemka" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_GetSkladExpedice">
+      <soap12:operation soapAction="http://fask.cz/Online_GetSkladExpedice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StornoPrijemka">
+      <soap12:operation soapAction="http://fask.cz/StornoPrijemka" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrijemky">
+      <soap12:operation soapAction="http://fask.cz/GetPrijemky" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PreparePrijemkaDB">
+      <soap12:operation soapAction="http://fask.cz/PreparePrijemkaDB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrijemkaReceived">
+      <soap12:operation soapAction="http://fask.cz/GetPrijemkaReceived" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessPrijemDBFile2">
+      <soap12:operation soapAction="http://fask.cz/ProcessPrijemDBFile2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Detail">
+      <soap12:operation soapAction="http://fask.cz/Detail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailItem">
+      <soap12:operation soapAction="http://fask.cz/DetailItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavkaRequest">
+      <soap12:operation soapAction="http://fask.cz/GenerateDavkaRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavka">
+      <soap12:operation soapAction="http://fask.cz/GenerateDavka" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavkaStatus">
+      <soap12:operation soapAction="http://fask.cz/GenerateDavkaStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavkaStatusDelete">
+      <soap12:operation soapAction="http://fask.cz/GenerateDavkaStatusDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_Add">
+      <soap12:operation soapAction="http://fask.cz/Online_Add" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_Del">
+      <soap12:operation soapAction="http://fask.cz/Online_Del" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_Quantity">
+      <soap12:operation soapAction="http://fask.cz/Online_Quantity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_GenerateSerltnum">
+      <soap12:operation soapAction="http://fask.cz/Online_GenerateSerltnum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_OverLokace">
+      <soap12:operation soapAction="http://fask.cz/Online_OverLokace" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_GetNezrealizovanePrijemky_Vyber">
+      <soap12:operation soapAction="http://fask.cz/Online_GetNezrealizovanePrijemky_Vyber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_GetDoporuceneLokace">
+      <soap12:operation soapAction="http://fask.cz/Online_GetDoporuceneLokace" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_GetNezrealizovanePrijemky">
+      <soap12:operation soapAction="http://fask.cz/Online_GetNezrealizovanePrijemky" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PrijemService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba přenosu dat příjmu</wsdl:documentation>
+    <wsdl:port name="PrijemServiceSoap" binding="tns:PrijemServiceSoap">
+      <soap:address location="http://localhost/MST_Win_Kom_Server_7_Dasenka/Prijem.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PrijemServiceSoap12" binding="tns:PrijemServiceSoap12">
+      <soap12:address location="http://localhost/MST_Win_Kom_Server_7_Dasenka/Prijem.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

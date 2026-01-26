@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GlobalConfig" targetNamespace="http://tempuri.org/GlobalConfig.xsd" xmlns:mstns="http://tempuri.org/GlobalConfig.xsd" xmlns="http://tempuri.org/GlobalConfig.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GlobalConfig" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="GlobalConfig" msprop:Generator_UserDSName="GlobalConfig">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Main" msprop:Generator_UserTableName="Main" msprop:Generator_RowEvArgName="MainRowChangeEvent" msprop:Generator_TableVarName="tableMain" msprop:Generator_TablePropName="Main" msprop:Generator_RowDeletingName="MainRowDeleting" msprop:Generator_RowChangingName="MainRowChanging" msprop:Generator_RowDeletedName="MainRowDeleted" msprop:Generator_RowEvHandlerName="MainRowChangeEventHandler" msprop:Generator_TableClassName="MainDataTable" msprop:Generator_RowChangedName="MainRowChanged" msprop:Generator_RowClassName="MainRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ModuleAutoStart" msprop:Generator_ColumnVarNameInTable="columnModuleAutoStart" msprop:Generator_ColumnPropNameInRow="ModuleAutoStart" msprop:Generator_ColumnPropNameInTable="ModuleAutoStartColumn" msprop:Generator_UserColumnName="ModuleAutoStart" type="xs:string" minOccurs="0" />
+              <xs:element name="KomServer" msprop:Generator_ColumnVarNameInTable="columnKomServer" msprop:Generator_ColumnPropNameInRow="KomServer" msprop:Generator_ColumnPropNameInTable="KomServerColumn" msprop:Generator_UserColumnName="KomServer" type="xs:string" minOccurs="0" />
+              <xs:element name="TerminalID" msprop:Generator_ColumnVarNameInTable="columnTerminalID" msprop:Generator_ColumnPropNameInRow="TerminalID" msprop:Generator_ColumnPropNameInTable="TerminalIDColumn" msprop:Generator_UserColumnName="TerminalID" type="xs:string" minOccurs="0" />
+              <xs:element name="OverVuciAD" msprop:Generator_ColumnVarNameInTable="columnOverVuciAD" msprop:Generator_ColumnPropNameInRow="OverVuciAD" msprop:Generator_ColumnPropNameInTable="OverVuciADColumn" msprop:Generator_UserColumnName="OverVuciAD" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DomenaProAD" msprop:Generator_ColumnVarNameInTable="columnDomenaProAD" msprop:Generator_ColumnPropNameInRow="DomenaProAD" msprop:Generator_ColumnPropNameInTable="DomenaProADColumn" msprop:Generator_UserColumnName="DomenaProAD" type="xs:string" minOccurs="0" />
+              <xs:element name="TimeOut" msprop:Generator_ColumnVarNameInTable="columnTimeOut" msprop:Generator_ColumnPropNameInRow="TimeOut" msprop:Generator_ColumnPropNameInTable="TimeOutColumn" msprop:Generator_UserColumnName="TimeOut" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RFID" msprop:Generator_TableClassName="RFIDDataTable" msprop:Generator_TableVarName="tableRFID" msprop:Generator_TablePropName="RFID" msprop:Generator_RowDeletingName="RFIDRowDeleting" msprop:Generator_RowChangingName="RFIDRowChanging" msprop:Generator_RowEvHandlerName="RFIDRowChangeEventHandler" msprop:Generator_RowDeletedName="RFIDRowDeleted" msprop:Generator_UserTableName="RFID" msprop:Generator_RowChangedName="RFIDRowChanged" msprop:Generator_RowEvArgName="RFIDRowChangeEvent" msprop:Generator_RowClassName="RFIDRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ComPort" msprop:Generator_ColumnVarNameInTable="columnComPort" msprop:Generator_ColumnPropNameInRow="ComPort" msprop:Generator_ColumnPropNameInTable="ComPortColumn" msprop:Generator_UserColumnName="ComPort" type="xs:string" minOccurs="0" />
+              <xs:element name="Baudrate" msprop:Generator_ColumnVarNameInTable="columnBaudrate" msprop:Generator_ColumnPropNameInRow="Baudrate" msprop:Generator_ColumnPropNameInTable="BaudrateColumn" msprop:Generator_UserColumnName="Baudrate" type="xs:string" minOccurs="0" />
+              <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LoginMetod" msprop:Generator_TableClassName="LoginMetodDataTable" msprop:Generator_TableVarName="tableLoginMetod" msprop:Generator_TablePropName="LoginMetod" msprop:Generator_RowDeletingName="LoginMetodRowDeleting" msprop:Generator_RowChangingName="LoginMetodRowChanging" msprop:Generator_RowEvHandlerName="LoginMetodRowChangeEventHandler" msprop:Generator_RowDeletedName="LoginMetodRowDeleted" msprop:Generator_UserTableName="LoginMetod" msprop:Generator_RowChangedName="LoginMetodRowChanged" msprop:Generator_RowEvArgName="LoginMetodRowChangeEvent" msprop:Generator_RowClassName="LoginMetodRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Method" msprop:Generator_ColumnVarNameInTable="columnMethod" msprop:Generator_ColumnPropNameInRow="Method" msprop:Generator_ColumnPropNameInTable="MethodColumn" msprop:Generator_UserColumnName="Method" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="Login" msprop:Generator_ColumnVarNameInTable="columnLogin" msprop:Generator_ColumnPropNameInRow="Login" msprop:Generator_ColumnPropNameInTable="LoginColumn" msprop:Generator_UserColumnName="Login" type="xs:string" minOccurs="0" />
+              <xs:element name="Password" msprop:Generator_ColumnVarNameInTable="columnPassword" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_ColumnPropNameInTable="PasswordColumn" msprop:Generator_UserColumnName="Password" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Modules" msprop:Generator_TableClassName="ModulesDataTable" msprop:Generator_TableVarName="tableModules" msprop:Generator_TablePropName="Modules" msprop:Generator_RowDeletingName="ModulesRowDeleting" msprop:Generator_RowChangingName="ModulesRowChanging" msprop:Generator_RowEvHandlerName="ModulesRowChangeEventHandler" msprop:Generator_RowDeletedName="ModulesRowDeleted" msprop:Generator_UserTableName="Modules" msprop:Generator_RowChangedName="ModulesRowChanged" msprop:Generator_RowEvArgName="ModulesRowChangeEvent" msprop:Generator_RowClassName="ModulesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Assembly" msprop:Generator_ColumnVarNameInTable="columnAssembly" msprop:Generator_ColumnPropNameInRow="Assembly" msprop:Generator_ColumnPropNameInTable="AssemblyColumn" msprop:Generator_UserColumnName="Assembly" type="xs:string" minOccurs="0" />
+              <xs:element name="Object" msprop:Generator_ColumnVarNameInTable="columnObject" msprop:Generator_ColumnPropNameInRow="Object" msprop:Generator_ColumnPropNameInTable="ObjectColumn" msprop:Generator_UserColumnName="Object" type="xs:string" minOccurs="0" />
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Komunikace_HTTPs" msprop:Generator_TableClassName="Komunikace_HTTPsDataTable" msprop:Generator_TableVarName="tableKomunikace_HTTPs" msprop:Generator_TablePropName="Komunikace_HTTPs" msprop:Generator_RowDeletingName="Komunikace_HTTPsRowDeleting" msprop:Generator_RowChangingName="Komunikace_HTTPsRowChanging" msprop:Generator_RowEvHandlerName="Komunikace_HTTPsRowChangeEventHandler" msprop:Generator_RowDeletedName="Komunikace_HTTPsRowDeleted" msprop:Generator_UserTableName="Komunikace_HTTPs" msprop:Generator_RowChangedName="Komunikace_HTTPsRowChanged" msprop:Generator_RowEvArgName="Komunikace_HTTPsRowChangeEvent" msprop:Generator_RowClassName="Komunikace_HTTPsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ServerAccess" msprop:Generator_ColumnVarNameInTable="columnServerAccess" msprop:Generator_ColumnPropNameInRow="ServerAccess" msprop:Generator_ColumnPropNameInTable="ServerAccessColumn" msprop:Generator_UserColumnName="ServerAccess" type="xs:string" minOccurs="0" />
+              <xs:element name="ServerAccessUsername" msprop:Generator_ColumnVarNameInTable="columnServerAccessUsername" msprop:Generator_ColumnPropNameInRow="ServerAccessUsername" msprop:Generator_ColumnPropNameInTable="ServerAccessUsernameColumn" msprop:Generator_UserColumnName="ServerAccessUsername" type="xs:string" minOccurs="0" />
+              <xs:element name="ServerAccessPassword" msprop:Generator_ColumnVarNameInTable="columnServerAccessPassword" msprop:Generator_ColumnPropNameInRow="ServerAccessPassword" msprop:Generator_ColumnPropNameInTable="ServerAccessPasswordColumn" msprop:Generator_UserColumnName="ServerAccessPassword" type="xs:string" minOccurs="0" />
+              <xs:element name="ServerAccessDomain" msprop:Generator_ColumnVarNameInTable="columnServerAccessDomain" msprop:Generator_ColumnPropNameInRow="ServerAccessDomain" msprop:Generator_ColumnPropNameInTable="ServerAccessDomainColumn" msprop:Generator_UserColumnName="ServerAccessDomain" type="xs:string" minOccurs="0" />
+              <xs:element name="ServerAccessPreauthenticate" msprop:Generator_ColumnVarNameInTable="columnServerAccessPreauthenticate" msprop:Generator_ColumnPropNameInRow="ServerAccessPreauthenticate" msprop:Generator_ColumnPropNameInTable="ServerAccessPreauthenticateColumn" msprop:Generator_UserColumnName="ServerAccessPreauthenticate" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ServerAccessAllowRedirection" msprop:Generator_ColumnVarNameInTable="columnServerAccessAllowRedirection" msprop:Generator_ColumnPropNameInRow="ServerAccessAllowRedirection" msprop:Generator_ColumnPropNameInTable="ServerAccessAllowRedirectionColumn" msprop:Generator_UserColumnName="ServerAccessAllowRedirection" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ServerAccessAllowDecompression" msprop:Generator_ColumnVarNameInTable="columnServerAccessAllowDecompression" msprop:Generator_ColumnPropNameInRow="ServerAccessAllowDecompression" msprop:Generator_ColumnPropNameInTable="ServerAccessAllowDecompressionColumn" msprop:Generator_UserColumnName="ServerAccessAllowDecompression" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ServerAccessCertificateTrust" msprop:Generator_ColumnVarNameInTable="columnServerAccessCertificateTrust" msprop:Generator_ColumnPropNameInRow="ServerAccessCertificateTrust" msprop:Generator_ColumnPropNameInTable="ServerAccessCertificateTrustColumn" msprop:Generator_UserColumnName="ServerAccessCertificateTrust" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

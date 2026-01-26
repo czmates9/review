@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="PrikazVyber_Label">Zadejte stroj</string>
+  <string name="PrikazVyber_OK">OK</string>
+  <string name="PrikazVyber_Storno">Zrušit</string>
+
+
+  <string name="PrikazVyber_CountEntries">Dávka: {0}</string>
+  <string name="PrikazVyber_SOPDESC">Popis: {0}</string>
+  <string name="PrikazVyber_BarcodeH">Čár. kód: {0}</string>
+  <string name="PrikazVyber_DateProd">Datum: {0}</string>
+
+</resources>

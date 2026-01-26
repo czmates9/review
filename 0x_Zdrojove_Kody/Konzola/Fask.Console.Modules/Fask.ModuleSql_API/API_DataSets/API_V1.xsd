@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="API_V1" targetNamespace="http://tempuri.org/API_V1.xsd" xmlns:mstns="http://tempuri.org/API_V1.xsd" xmlns="http://tempuri.org/API_V1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="API_V1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="API_V1" msprop:Generator_UserDSName="API_V1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Nastaveni" msprop:Generator_TableClassName="NastaveniDataTable" msprop:Generator_TableVarName="tableNastaveni" msprop:Generator_RowChangedName="NastaveniRowChanged" msprop:Generator_TablePropName="Nastaveni" msprop:Generator_RowDeletingName="NastaveniRowDeleting" msprop:Generator_RowChangingName="NastaveniRowChanging" msprop:Generator_RowEvHandlerName="NastaveniRowChangeEventHandler" msprop:Generator_RowDeletedName="NastaveniRowDeleted" msprop:Generator_RowClassName="NastaveniRow" msprop:Generator_UserTableName="Nastaveni" msprop:Generator_RowEvArgName="NastaveniRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Adresa" msprop:Generator_ColumnVarNameInTable="columnAdresa" msprop:Generator_ColumnPropNameInRow="Adresa" msprop:Generator_ColumnPropNameInTable="AdresaColumn" msprop:Generator_UserColumnName="Adresa" type="xs:string" minOccurs="0" />
+              <xs:element name="Autorizace_DoAPI" msprop:Generator_ColumnVarNameInTable="columnAutorizace_DoAPI" msprop:Generator_ColumnPropNameInRow="Autorizace_DoAPI" msprop:Generator_ColumnPropNameInTable="Autorizace_DoAPIColumn" msprop:Generator_UserColumnName="Autorizace_DoAPI" type="xs:string" minOccurs="0" />
+              <xs:element name="AliasDB" msprop:Generator_ColumnVarNameInTable="columnAliasDB" msprop:Generator_ColumnPropNameInRow="AliasDB" msprop:Generator_ColumnPropNameInTable="AliasDBColumn" msprop:Generator_UserColumnName="AliasDB" type="xs:string" minOccurs="0" />
+              <xs:element name="isHTTPS" msprop:Generator_ColumnVarNameInTable="columnisHTTPS" msprop:Generator_ColumnPropNameInRow="isHTTPS" msprop:Generator_ColumnPropNameInTable="isHTTPSColumn" msprop:Generator_UserColumnName="isHTTPS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="API_TimeOut" msprop:Generator_ColumnVarNameInTable="columnAPI_TimeOut" msprop:Generator_ColumnPropNameInRow="API_TimeOut" msprop:Generator_ColumnPropNameInTable="API_TimeOutColumn" msprop:Generator_UserColumnName="API_TimeOut" type="xs:int" minOccurs="0" />
+              <xs:element name="LogovatRequestyResponsy_Path" msprop:Generator_ColumnVarNameInTable="columnLogovatRequestyResponsy_Path" msprop:Generator_ColumnPropNameInRow="LogovatRequestyResponsy_Path" msprop:Generator_ColumnPropNameInTable="LogovatRequestyResponsy_PathColumn" msprop:Generator_UserColumnName="LogovatRequestyResponsy_Path" type="xs:string" minOccurs="0" />
+              <xs:element name="LogovatRequestyResponsy" msprop:Generator_ColumnVarNameInTable="columnLogovatRequestyResponsy" msprop:Generator_ColumnPropNameInRow="LogovatRequestyResponsy" msprop:Generator_ColumnPropNameInTable="LogovatRequestyResponsyColumn" msprop:Generator_UserColumnName="LogovatRequestyResponsy" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

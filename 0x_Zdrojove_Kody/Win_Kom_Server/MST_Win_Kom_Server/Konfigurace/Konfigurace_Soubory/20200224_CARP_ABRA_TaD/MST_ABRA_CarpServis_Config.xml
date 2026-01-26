@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="yes"?>
+<ABRA_V1 xmlns="http://tempuri.org/ABRA_V1.xsd">
+  <ConnectionStrings>
+    <ABRADB>User=SYSDBA;Password=masterkey;Database=C:\AbraGen\DATAFB3.FDB;DataSource=localhost;Charset=WIN1250;Connection lifetime=15;Pooling=true;MinPoolSize=0;MaxPoolSize=50;Packet Size=8192;ServerType=0;</ABRADB>
+    <FASKDB>Data Source=192.168.1.121\SQLEXPRESS;Initial Catalog=Abra_CARP_Servis_SQLite;User ID=sa;Password=sasa</FASKDB>
+  </ConnectionStrings>
+  <Vydej>
+    <PokracovatNaJinemTerminalu>false</PokracovatNaJinemTerminalu>
+    <HesloStornoVydejka>1234</HesloStornoVydejka>
+    <StatusObjectsDirectory>Logs\SoDir\</StatusObjectsDirectory>
+  </Vydej>
+  <Prijem>
+    <HesloStornoPrijemka>1234</HesloStornoPrijemka>
+    <StatusObjectsDirectory>Logs\SoDir\</StatusObjectsDirectory>
+  </Prijem>
+  <Inventura1>
+    <PathToXSLT>C:\FASK\ABRA\</PathToXSLT>
+    <PathDataOutputFile>C:\FASK\ABRA\</PathDataOutputFile>
+    <DavkaTerminalVice>false</DavkaTerminalVice>
+    <PathStateDataFile>C:\FASK\ABRA\</PathStateDataFile>
+  </Inventura1>
+  <Prodej>
+    <Empty />
+  </Prodej>
+</ABRA_V1>

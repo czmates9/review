@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://fask.cz/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://fask.cz/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba pro synchronizaci času Serveru a Terminalu</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://fask.cz/">
+      <s:element name="GetSystemTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSystemTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSystemTimeResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSystemTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSystemTime" />
+  </wsdl:message>
+  <wsdl:message name="GetSystemTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSystemTimeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SystemTimeSoap">
+    <wsdl:operation name="GetSystemTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vrací aktualny čas na serveru</wsdl:documentation>
+      <wsdl:input message="tns:GetSystemTimeSoapIn" />
+      <wsdl:output message="tns:GetSystemTimeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SystemTimeSoap" type="tns:SystemTimeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSystemTime">
+      <soap:operation soapAction="http://fask.cz/GetSystemTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SystemTimeSoap12" type="tns:SystemTimeSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSystemTime">
+      <soap12:operation soapAction="http://fask.cz/GetSystemTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SystemTime">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba pro synchronizaci času Serveru a Terminalu</wsdl:documentation>
+    <wsdl:port name="SystemTimeSoap" binding="tns:SystemTimeSoap">
+      <soap:address location="http://localhost/MST_Win_Kom_Server_7_Cipisek/SystemTime.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SystemTimeSoap12" binding="tns:SystemTimeSoap12">
+      <soap12:address location="http://localhost/MST_Win_Kom_Server_7_Cipisek/SystemTime.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

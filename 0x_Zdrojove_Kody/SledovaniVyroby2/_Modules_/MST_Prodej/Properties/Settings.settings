@@ -1,0 +1,66 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FASK.SledovaniVyroby.Module.MST_Prodej.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TypDokladuConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=|DataDirectory|\SQLDBs\TypDokladu.sdf&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Microsoft.SqlServerCe.Client.3.5&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=|DataDirectory|\SQLDBs\TypDokladu.sdf</Value>
+    </Setting>
+    <Setting Name="TypDokladuConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=D:\_work_\_Vyvoj_Subversion_01\MST_06_alfa\SERVER\MST_Win_Kom_Server\SqlCEDBs\TypDokladu.sdf&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Microsoft.SqlServerCe.Client.3.5&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=D:\_work_\_Vyvoj_Subversion_01\MST_06_alfa\SERVER\MST_Win_Kom_Server\SqlCEDBs\TypDokladu.sdf</Value>
+    </Setting>
+    <Setting Name="ProdejConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=D:\_work_\_Vyvoj_Subversion_01\MST_06_alfa\SERVER\MST_Win_Kom_Server\SqlCEDBs\Prodej.sdf&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Microsoft.SqlServerCe.Client.3.5&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=D:\_work_\_Vyvoj_Subversion_01\MST_06_alfa\SERVER\MST_Win_Kom_Server\SqlCEDBs\Prodej.sdf</Value>
+    </Setting>
+    <Setting Name="OdberateleConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=D:\_work_\_Vyvoj_Subversion_01\MST_06_alfa\SERVER\MST_Win_Kom_Server\SqlCEDBs\Odberatele.sdf&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Microsoft.SqlServerCe.Client.3.5&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=D:\_work_\_Vyvoj_Subversion_01\MST_06_alfa\SERVER\MST_Win_Kom_Server\SqlCEDBs\Odberatele.sdf</Value>
+    </Setting>
+    <Setting Name="MenyConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=D:\_work_\_Vyvoj_Subversion_01\MST_06_alfa\SERVER\MST_Win_Kom_Server\SqlCEDBs\Meny.sdf&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Microsoft.SqlServerCe.Client.3.5&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=D:\_work_\_Vyvoj_Subversion_01\MST_06_alfa\SERVER\MST_Win_Kom_Server\SqlCEDBs\Meny.sdf</Value>
+    </Setting>
+    <Setting Name="SkladyConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=D:\_work_\_Vyvoj_Subversion_01\MST_06_alfa\SERVER\MST_Win_Kom_Server\SqlCEDBs\Sklady.sdf&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Microsoft.SqlServerCe.Client.3.5&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=D:\_work_\_Vyvoj_Subversion_01\MST_06_alfa\SERVER\MST_Win_Kom_Server\SqlCEDBs\Sklady.sdf</Value>
+    </Setting>
+    <Setting Name="MST_Prodej_ProdejService_ProdejService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/MST_Win_Kom_Server_6_alfa/Prodej.asmx</Value>
+    </Setting>
+    <Setting Name="MST_Prodej_InformationService_InformationsService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/MST_Win_Kom_Server_6_alfa/Informations.asmx</Value>
+    </Setting>
+    <Setting Name="MST_Prodej_ConfigurationService_Configuration" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/MST_Win_Kom_Server_6_alfa/Configuration.asmx</Value>
+    </Setting>
+    <Setting Name="MST_Prodej_CiselnikService_CiselnikService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/MST_Win_Kom_Server_6_alfa/Ciselnik.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

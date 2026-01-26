@@ -1,0 +1,67 @@
+<?xml version="1.0" standalone="yes"?>
+<ABRA_V1 xmlns="http://tempuri.org/ABRA_V1.xsd">
+  <ConnectionStrings>
+    <ABRADB>User=SYSDBA;Password=masterkey;Database=C:\FASK\ABRA_DB\DATAFB3.FDB;DataSource=localhost;Charset=WIN1250;Connection lifetime=15;Pooling=true;MinPoolSize=0;MaxPoolSize=50;Packet Size=8192;ServerType=0;</ABRADB>
+    <FASKDB>Data Source=192.168.1.121\SQLEXPRESS;Initial Catalog=FASKABRA_SAB_POLOHOVANI;User ID=fask_dbowner;Password=pro147fask</FASKDB>
+  </ConnectionStrings>
+  <ExportZasoby>
+    <ExportSkladFilter />
+    <SerNumTrack_Vsude>false</SerNumTrack_Vsude>
+  </ExportZasoby>
+  <Vydej>
+    <PokracovatNaJinemTerminalu>false</PokracovatNaJinemTerminalu>
+    <HesloStornoVydejka>1234</HesloStornoVydejka>
+    <StatusObjectsDirectory>Logs\SoDir\</StatusObjectsDirectory>
+    <GenerovatFakturu>false</GenerovatFakturu>
+    <ZpracovatDokladDoISABRA>false</ZpracovatDokladDoISABRA>
+    <FEFO_FIFO_Expirace_Po_PocetDni>30</FEFO_FIFO_Expirace_Po_PocetDni>
+    <GenerovatPrevodkaPrijem>false</GenerovatPrevodkaPrijem>
+  </Vydej>
+  <Prodej>
+    <StatusObjectsDirectory>Logs\SoDir\</StatusObjectsDirectory>
+  </Prodej>
+  <Inventura1>
+    <PathToXSLT>C:\FASK\ABRA\</PathToXSLT>
+    <PathDataOutputFile>C:\FASK\ABRA\</PathDataOutputFile>
+    <DavkaTerminalVice>false</DavkaTerminalVice>
+    <PathStateDataFile>C:\FASK\ABRA\</PathStateDataFile>
+    <IDTerm_Predloha>false</IDTerm_Predloha>
+  </Inventura1>
+  <Prijem>
+    <HesloStornoPrijemka>1234</HesloStornoPrijemka>
+    <StatusObjectsDirectory>Logs\SoDir\</StatusObjectsDirectory>
+    <ZpracovatDokladDoISABRA>false</ZpracovatDokladDoISABRA>
+  </Prijem>
+  <WEBAPI>
+    <Autorizace_DoAPI>U3VwZXJ2aXNvcjo=</Autorizace_DoAPI>
+    <Adresa>localhost:80</Adresa>
+    <AliasDB>data</AliasDB>
+    <isHTTPS>false</isHTTPS>
+    <LogovatRequestyResponsy>true</LogovatRequestyResponsy>
+    <LogovatRequestyResponsy_Path>C:\FASK\ABRA\</LogovatRequestyResponsy_Path>
+    <API_TimeOut>-1</API_TimeOut>
+  </WEBAPI>
+  <Procesni_Rizeni>
+    <StavID_Vydej_KVydeji>X</StavID_Vydej_KVydeji>
+    <StavID_Vydej_VyskladnujeSe>X</StavID_Vydej_VyskladnujeSe>
+    <StavID_Vydej_Vyskladneno>X</StavID_Vydej_Vyskladneno>
+    <StavID_Vydej_KeKontrole>X</StavID_Vydej_KeKontrole>
+    <StavID_Prijem_KNaskladneni>X</StavID_Prijem_KNaskladneni>
+    <StavID_Prijem_NaskladnujeSe>X</StavID_Prijem_NaskladnujeSe>
+    <StavID_Prijem_Naskladneno>X</StavID_Prijem_Naskladneno>
+    <StavID_Prijem_KeKontrole>X</StavID_Prijem_KeKontrole>
+    <StavID_PrevodVydej_VPriprave>X</StavID_PrevodVydej_VPriprave>
+    <StavID_PrevodVydej_VTerminalu>X</StavID_PrevodVydej_VTerminalu>
+    <StavID_PrevodVydej_Prevedeno>X</StavID_PrevodVydej_Prevedeno>
+  </Procesni_Rizeni>
+  <ID_Rady>
+    <RadaID_Vydej_DodaciList>X</RadaID_Vydej_DodaciList>
+    <RadaID_Prijem_Prijemka>X</RadaID_Prijem_Prijemka>
+  </ID_Rady>
+  <Informations>
+    <FEFOFIFO_I_L_CommandType>StoredProcedure</FEFOFIFO_I_L_CommandType>
+    <FEFOFIFO_proc>FASK_proc_FEFOFIFO_4</FEFOFIFO_proc>
+    <FEFOFIFO_pouzita_metoda>4</FEFOFIFO_pouzita_metoda>
+    <FEFOFIFO_M3>ms-sql</FEFOFIFO_M3>
+  </Informations>
+</ABRA_V1>

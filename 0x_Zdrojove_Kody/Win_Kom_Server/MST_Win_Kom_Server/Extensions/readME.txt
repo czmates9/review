@@ -1,0 +1,3 @@
+﻿-Jedna se o testovani knihoven pro Kompresi (Pomoci  SharpZipLib.dll ) SOAP komunikace, mnelo by to zrychlit komunikaci
+
+-pravdepodobne nutno implementovat i na Terminal, aby prijaty packet devet odkompresovat...

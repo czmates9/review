@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://fask.cz/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://fask.cz/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba přenosu dat číselníků</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://fask.cz/">
+      <s:element name="KatalogZboziExport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="prefixskladu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogZboziExportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KatalogZboziExportResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StatusObject">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="_statusFile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusText" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Exception" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DatumZapisu" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" default="false" name="Finished" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="KatalogOdberateleExport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogOdberateleExportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KatalogOdberateleExportResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogStrediskaExport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogStrediskaExportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KatalogStrediskaExportResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogPracovniciExport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogPracovniciExportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KatalogPracovniciExportResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogMenyExport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogMenyExportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KatalogMenyExportResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogSkladyExport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogSkladyExportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KatalogSkladyExportResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogZboziDBPrepare">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="prefixskladu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogZboziDBPrepareResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KatalogZboziDBPrepareResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogMenyDBPrepare">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogMenyDBPrepareResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KatalogMenyDBPrepareResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogOdberateleDBPrepare">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="prefixskladu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogOdberateleDBPrepareResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KatalogOdberateleDBPrepareResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogStrediskaDBPrepare">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="prefixskladu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogStrediskaDBPrepareResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KatalogStrediskaDBPrepareResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogPracovniciDBPrepare">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="prefixskladu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogPracovniciDBPrepareResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KatalogPracovniciDBPrepareResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogTypDokladuDBPrepare">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="prefixskladu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogTypDokladuDBPrepareResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KatalogTypDokladuDBPrepareResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogSkladyDBPrepare">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogSkladyDBPrepareResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KatalogSkladyDBPrepareResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogLokaceDBPrepare">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="prefixskladu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogLokaceDBPrepareResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KatalogLokaceDBPrepareResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogEventTypesDBPrepare">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogEventTypesDBPrepareResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KatalogEventTypesDBPrepareResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogTiskarnyDBPrepare">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KatalogTiskarnyDBPrepareResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KatalogTiskarnyDBPrepareResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="KatalogZboziExportSoapIn">
+    <wsdl:part name="parameters" element="tns:KatalogZboziExport" />
+  </wsdl:message>
+  <wsdl:message name="KatalogZboziExportSoapOut">
+    <wsdl:part name="parameters" element="tns:KatalogZboziExportResponse" />
+  </wsdl:message>
+  <wsdl:message name="KatalogOdberateleExportSoapIn">
+    <wsdl:part name="parameters" element="tns:KatalogOdberateleExport" />
+  </wsdl:message>
+  <wsdl:message name="KatalogOdberateleExportSoapOut">
+    <wsdl:part name="parameters" element="tns:KatalogOdberateleExportResponse" />
+  </wsdl:message>
+  <wsdl:message name="KatalogStrediskaExportSoapIn">
+    <wsdl:part name="parameters" element="tns:KatalogStrediskaExport" />
+  </wsdl:message>
+  <wsdl:message name="KatalogStrediskaExportSoapOut">
+    <wsdl:part name="parameters" element="tns:KatalogStrediskaExportResponse" />
+  </wsdl:message>
+  <wsdl:message name="KatalogPracovniciExportSoapIn">
+    <wsdl:part name="parameters" element="tns:KatalogPracovniciExport" />
+  </wsdl:message>
+  <wsdl:message name="KatalogPracovniciExportSoapOut">
+    <wsdl:part name="parameters" element="tns:KatalogPracovniciExportResponse" />
+  </wsdl:message>
+  <wsdl:message name="KatalogMenyExportSoapIn">
+    <wsdl:part name="parameters" element="tns:KatalogMenyExport" />
+  </wsdl:message>
+  <wsdl:message name="KatalogMenyExportSoapOut">
+    <wsdl:part name="parameters" element="tns:KatalogMenyExportResponse" />
+  </wsdl:message>
+  <wsdl:message name="KatalogSkladyExportSoapIn">
+    <wsdl:part name="parameters" element="tns:KatalogSkladyExport" />
+  </wsdl:message>
+  <wsdl:message name="KatalogSkladyExportSoapOut">
+    <wsdl:part name="parameters" element="tns:KatalogSkladyExportResponse" />
+  </wsdl:message>
+  <wsdl:message name="KatalogZboziDBPrepareSoapIn">
+    <wsdl:part name="parameters" element="tns:KatalogZboziDBPrepare" />
+  </wsdl:message>
+  <wsdl:message name="KatalogZboziDBPrepareSoapOut">
+    <wsdl:part name="parameters" element="tns:KatalogZboziDBPrepareResponse" />
+  </wsdl:message>
+  <wsdl:message name="KatalogMenyDBPrepareSoapIn">
+    <wsdl:part name="parameters" element="tns:KatalogMenyDBPrepare" />
+  </wsdl:message>
+  <wsdl:message name="KatalogMenyDBPrepareSoapOut">
+    <wsdl:part name="parameters" element="tns:KatalogMenyDBPrepareResponse" />
+  </wsdl:message>
+  <wsdl:message name="KatalogOdberateleDBPrepareSoapIn">
+    <wsdl:part name="parameters" element="tns:KatalogOdberateleDBPrepare" />
+  </wsdl:message>
+  <wsdl:message name="KatalogOdberateleDBPrepareSoapOut">
+    <wsdl:part name="parameters" element="tns:KatalogOdberateleDBPrepareResponse" />
+  </wsdl:message>
+  <wsdl:message name="KatalogStrediskaDBPrepareSoapIn">
+    <wsdl:part name="parameters" element="tns:KatalogStrediskaDBPrepare" />
+  </wsdl:message>
+  <wsdl:message name="KatalogStrediskaDBPrepareSoapOut">
+    <wsdl:part name="parameters" element="tns:KatalogStrediskaDBPrepareResponse" />
+  </wsdl:message>
+  <wsdl:message name="KatalogPracovniciDBPrepareSoapIn">
+    <wsdl:part name="parameters" element="tns:KatalogPracovniciDBPrepare" />
+  </wsdl:message>
+  <wsdl:message name="KatalogPracovniciDBPrepareSoapOut">
+    <wsdl:part name="parameters" element="tns:KatalogPracovniciDBPrepareResponse" />
+  </wsdl:message>
+  <wsdl:message name="KatalogTypDokladuDBPrepareSoapIn">
+    <wsdl:part name="parameters" element="tns:KatalogTypDokladuDBPrepare" />
+  </wsdl:message>
+  <wsdl:message name="KatalogTypDokladuDBPrepareSoapOut">
+    <wsdl:part name="parameters" element="tns:KatalogTypDokladuDBPrepareResponse" />
+  </wsdl:message>
+  <wsdl:message name="KatalogSkladyDBPrepareSoapIn">
+    <wsdl:part name="parameters" element="tns:KatalogSkladyDBPrepare" />
+  </wsdl:message>
+  <wsdl:message name="KatalogSkladyDBPrepareSoapOut">
+    <wsdl:part name="parameters" element="tns:KatalogSkladyDBPrepareResponse" />
+  </wsdl:message>
+  <wsdl:message name="KatalogLokaceDBPrepareSoapIn">
+    <wsdl:part name="parameters" element="tns:KatalogLokaceDBPrepare" />
+  </wsdl:message>
+  <wsdl:message name="KatalogLokaceDBPrepareSoapOut">
+    <wsdl:part name="parameters" element="tns:KatalogLokaceDBPrepareResponse" />
+  </wsdl:message>
+  <wsdl:message name="KatalogEventTypesDBPrepareSoapIn">
+    <wsdl:part name="parameters" element="tns:KatalogEventTypesDBPrepare" />
+  </wsdl:message>
+  <wsdl:message name="KatalogEventTypesDBPrepareSoapOut">
+    <wsdl:part name="parameters" element="tns:KatalogEventTypesDBPrepareResponse" />
+  </wsdl:message>
+  <wsdl:message name="KatalogTiskarnyDBPrepareSoapIn">
+    <wsdl:part name="parameters" element="tns:KatalogTiskarnyDBPrepare" />
+  </wsdl:message>
+  <wsdl:message name="KatalogTiskarnyDBPrepareSoapOut">
+    <wsdl:part name="parameters" element="tns:KatalogTiskarnyDBPrepareResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CiselnikServiceSoap">
+    <wsdl:operation name="KatalogZboziExport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro export Zásob z IS do SQL DB</wsdl:documentation>
+      <wsdl:input message="tns:KatalogZboziExportSoapIn" />
+      <wsdl:output message="tns:KatalogZboziExportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KatalogOdberateleExport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro export Odběratele z IS do SQL DB</wsdl:documentation>
+      <wsdl:input message="tns:KatalogOdberateleExportSoapIn" />
+      <wsdl:output message="tns:KatalogOdberateleExportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KatalogStrediskaExport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro export Střediska z IS do SQL DB</wsdl:documentation>
+      <wsdl:input message="tns:KatalogStrediskaExportSoapIn" />
+      <wsdl:output message="tns:KatalogStrediskaExportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KatalogPracovniciExport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro export Precovnici z IS do SQL DB</wsdl:documentation>
+      <wsdl:input message="tns:KatalogPracovniciExportSoapIn" />
+      <wsdl:output message="tns:KatalogPracovniciExportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KatalogMenyExport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro export Měny z IS do SQL DB</wsdl:documentation>
+      <wsdl:input message="tns:KatalogMenyExportSoapIn" />
+      <wsdl:output message="tns:KatalogMenyExportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KatalogSkladyExport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro export Sklady z IS do SQL DB</wsdl:documentation>
+      <wsdl:input message="tns:KatalogSkladyExportSoapIn" />
+      <wsdl:output message="tns:KatalogSkladyExportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KatalogZboziDBPrepare">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro přípravu Souboru Zboží pro terminal</wsdl:documentation>
+      <wsdl:input message="tns:KatalogZboziDBPrepareSoapIn" />
+      <wsdl:output message="tns:KatalogZboziDBPrepareSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KatalogMenyDBPrepare">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro přípravu Souboru Měny pro terminal</wsdl:documentation>
+      <wsdl:input message="tns:KatalogMenyDBPrepareSoapIn" />
+      <wsdl:output message="tns:KatalogMenyDBPrepareSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KatalogOdberateleDBPrepare">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro přípravu Souboru Odběratele pro terminal</wsdl:documentation>
+      <wsdl:input message="tns:KatalogOdberateleDBPrepareSoapIn" />
+      <wsdl:output message="tns:KatalogOdberateleDBPrepareSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KatalogStrediskaDBPrepare">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro přípravu Souboru Střediska pro terminal</wsdl:documentation>
+      <wsdl:input message="tns:KatalogStrediskaDBPrepareSoapIn" />
+      <wsdl:output message="tns:KatalogStrediskaDBPrepareSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KatalogPracovniciDBPrepare">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro přípravu Souboru Precovnici pro terminal</wsdl:documentation>
+      <wsdl:input message="tns:KatalogPracovniciDBPrepareSoapIn" />
+      <wsdl:output message="tns:KatalogPracovniciDBPrepareSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KatalogTypDokladuDBPrepare">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro přípravu Souboru Typy Dokladu pro terminal</wsdl:documentation>
+      <wsdl:input message="tns:KatalogTypDokladuDBPrepareSoapIn" />
+      <wsdl:output message="tns:KatalogTypDokladuDBPrepareSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KatalogSkladyDBPrepare">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro přípravu Souboru SKlady pro terminal</wsdl:documentation>
+      <wsdl:input message="tns:KatalogSkladyDBPrepareSoapIn" />
+      <wsdl:output message="tns:KatalogSkladyDBPrepareSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KatalogLokaceDBPrepare">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro přípravu Souboru Lokace pro terminal</wsdl:documentation>
+      <wsdl:input message="tns:KatalogLokaceDBPrepareSoapIn" />
+      <wsdl:output message="tns:KatalogLokaceDBPrepareSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KatalogEventTypesDBPrepare">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro přípravu Souboru Typy udalosti pro terminal</wsdl:documentation>
+      <wsdl:input message="tns:KatalogEventTypesDBPrepareSoapIn" />
+      <wsdl:output message="tns:KatalogEventTypesDBPrepareSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KatalogTiskarnyDBPrepare">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro přípravu Souboru Tiskarny pro terminal</wsdl:documentation>
+      <wsdl:input message="tns:KatalogTiskarnyDBPrepareSoapIn" />
+      <wsdl:output message="tns:KatalogTiskarnyDBPrepareSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CiselnikServiceSoap" type="tns:CiselnikServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="KatalogZboziExport">
+      <soap:operation soapAction="http://fask.cz/KatalogZboziExport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogOdberateleExport">
+      <soap:operation soapAction="http://fask.cz/KatalogOdberateleExport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogStrediskaExport">
+      <soap:operation soapAction="http://fask.cz/KatalogStrediskaExport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogPracovniciExport">
+      <soap:operation soapAction="http://fask.cz/KatalogPracovniciExport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogMenyExport">
+      <soap:operation soapAction="http://fask.cz/KatalogMenyExport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogSkladyExport">
+      <soap:operation soapAction="http://fask.cz/KatalogSkladyExport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogZboziDBPrepare">
+      <soap:operation soapAction="http://fask.cz/KatalogZboziDBPrepare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogMenyDBPrepare">
+      <soap:operation soapAction="http://fask.cz/KatalogMenyDBPrepare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogOdberateleDBPrepare">
+      <soap:operation soapAction="http://fask.cz/KatalogOdberateleDBPrepare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogStrediskaDBPrepare">
+      <soap:operation soapAction="http://fask.cz/KatalogStrediskaDBPrepare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogPracovniciDBPrepare">
+      <soap:operation soapAction="http://fask.cz/KatalogPracovniciDBPrepare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogTypDokladuDBPrepare">
+      <soap:operation soapAction="http://fask.cz/KatalogTypDokladuDBPrepare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogSkladyDBPrepare">
+      <soap:operation soapAction="http://fask.cz/KatalogSkladyDBPrepare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogLokaceDBPrepare">
+      <soap:operation soapAction="http://fask.cz/KatalogLokaceDBPrepare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogEventTypesDBPrepare">
+      <soap:operation soapAction="http://fask.cz/KatalogEventTypesDBPrepare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogTiskarnyDBPrepare">
+      <soap:operation soapAction="http://fask.cz/KatalogTiskarnyDBPrepare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CiselnikServiceSoap12" type="tns:CiselnikServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="KatalogZboziExport">
+      <soap12:operation soapAction="http://fask.cz/KatalogZboziExport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogOdberateleExport">
+      <soap12:operation soapAction="http://fask.cz/KatalogOdberateleExport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogStrediskaExport">
+      <soap12:operation soapAction="http://fask.cz/KatalogStrediskaExport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogPracovniciExport">
+      <soap12:operation soapAction="http://fask.cz/KatalogPracovniciExport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogMenyExport">
+      <soap12:operation soapAction="http://fask.cz/KatalogMenyExport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogSkladyExport">
+      <soap12:operation soapAction="http://fask.cz/KatalogSkladyExport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogZboziDBPrepare">
+      <soap12:operation soapAction="http://fask.cz/KatalogZboziDBPrepare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogMenyDBPrepare">
+      <soap12:operation soapAction="http://fask.cz/KatalogMenyDBPrepare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogOdberateleDBPrepare">
+      <soap12:operation soapAction="http://fask.cz/KatalogOdberateleDBPrepare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogStrediskaDBPrepare">
+      <soap12:operation soapAction="http://fask.cz/KatalogStrediskaDBPrepare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogPracovniciDBPrepare">
+      <soap12:operation soapAction="http://fask.cz/KatalogPracovniciDBPrepare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogTypDokladuDBPrepare">
+      <soap12:operation soapAction="http://fask.cz/KatalogTypDokladuDBPrepare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogSkladyDBPrepare">
+      <soap12:operation soapAction="http://fask.cz/KatalogSkladyDBPrepare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogLokaceDBPrepare">
+      <soap12:operation soapAction="http://fask.cz/KatalogLokaceDBPrepare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogEventTypesDBPrepare">
+      <soap12:operation soapAction="http://fask.cz/KatalogEventTypesDBPrepare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KatalogTiskarnyDBPrepare">
+      <soap12:operation soapAction="http://fask.cz/KatalogTiskarnyDBPrepare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CiselnikService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba přenosu dat číselníků</wsdl:documentation>
+    <wsdl:port name="CiselnikServiceSoap" binding="tns:CiselnikServiceSoap">
+      <soap:address location="http://localhost/MST_Win_Kom_Server_7_Dasenka/Ciselnik.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CiselnikServiceSoap12" binding="tns:CiselnikServiceSoap12">
+      <soap12:address location="http://localhost/MST_Win_Kom_Server_7_Dasenka/Ciselnik.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>tryExFinLog</Title>
+			<Shortcut>tryExFinLog</Shortcut>
+			<Description>Code snippet for try catch + Log  finnaly</Description>
+			<Author>FASK Tadeas Divacky</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>expression</ID>
+					<ToolTip>Exception type</ToolTip>
+					<Function>SimpleTypeName(global::System.Exception)</Function>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[try 
+	{	        
+		$selected$
+	}
+	catch ($expression$ ex)
+	{
+		$end$
+                Log.Write(ex);
+	}
+	finnaly
+	{
+	}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

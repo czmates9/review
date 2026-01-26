@@ -1,0 +1,128 @@
+<?xml version="1.0" standalone="yes"?>
+<POHODA_V1 xmlns="http://tempuri.org/POHODA_V1.xsd">
+  <ComunicatorDriveMapping>
+    <Letter />
+    <Domain />
+    <Password />
+    <UNCPath />
+    <User />
+  </ComunicatorDriveMapping>
+  <ConnectionStrings>
+    <PohodaDB>Provider=SQLNCLI11;Data Source=192.168.1.121\SQLEXPRESS;Initial Catalog=StwPh_04535667_2020;Password=pro147fask;User ID=fask_dbowner;Persist Security Info=True</PohodaDB>
+    <FASKDB >Data Source=192.168.1.121\SQLEXPRESS;Initial Catalog=FASKPOH_BIOMAG;User ID=fask_dbowner;Password=pro147fask</FASKDB >
+  </ConnectionStrings>
+  <PohodaInfo>
+    <Login_pohoda>Admin</Login_pohoda>
+    <Login_IDS_pohoda>@</Login_IDS_pohoda>
+    <Password_pohoda>admin</Password_pohoda>
+    <ICO>04535667</ICO>
+    <DB_Name_pohoda>StwPh_04535667_2020</DB_Name_pohoda>
+    <PathToPOHODAexe>c:\Program Files (x86)\STORMWARE\POHODA E1\Pohoda.exe</PathToPOHODAexe>
+    <POHODA_E1>true</POHODA_E1>
+    <PathToInputDirectory>c:\FASK\BIOMAG\Pohoda_Server_TEST\export\</PathToInputDirectory>
+    <Process_UseShellExecute>false</Process_UseShellExecute>
+    <PathToINIFile>c:\FASK\BIOMAG\Pohoda_Server_TEST\xml_imp.ini</PathToINIFile>
+  </PohodaInfo>
+  <Vydej>
+    <PokracovatNaJinemTerminalu>false</PokracovatNaJinemTerminalu>
+    <GrupujDataVydejka>true</GrupujDataVydejka>
+    <Validace_Mnozstvi_import>true</Validace_Mnozstvi_import>
+    <GenerovatVydejku>true</GenerovatVydejku>
+    <GenerovatPrenesenePolozky>false</GenerovatPrenesenePolozky>
+    <GenerovatFakturu>false</GenerovatFakturu>
+    <Expedice_Baleni>true</Expedice_Baleni>
+    <Pohoda_Objednavka_Prijata_Vyrizeno_Nastavit_Castecne_Plneni>false</Pohoda_Objednavka_Prijata_Vyrizeno_Nastavit_Castecne_Plneni>
+    <Pohoda_Objednavka_Prijata_Vyrizeno_Nastavit>true</Pohoda_Objednavka_Prijata_Vyrizeno_Nastavit>
+    <HlavnySkladID>1</HlavnySkladID>
+    <HesloStornoVydejka>1234</HesloStornoVydejka>
+    <StatusObjednavky>false</StatusObjednavky>
+    <Delivered>false</Delivered>
+    <Executed>false</Executed>
+    <Zbyva>true</Zbyva>
+    <MerneJednotky_DotahovatDalsiVarianty>true</MerneJednotky_DotahovatDalsiVarianty>
+    <VydejkaDetail_CommandType>StoredProcedure</VydejkaDetail_CommandType>
+    <VydejkaDetailDavka_CommandType>StoredProcedure</VydejkaDetailDavka_CommandType>
+    <vydejkadetailpolozka_CommandType>StoredProcedure</vydejkadetailpolozka_CommandType>
+    <vydejkadetailpolozka>FASK_procGetpolozka</vydejkadetailpolozka>
+    <vydejkadetailpolozka_paramname>@ITEMNMBR</vydejkadetailpolozka_paramname>
+    <VydejkaDetail>FASK_procGetAdresa</VydejkaDetail>
+    <VydejkaDetail_paramName>@SOPNUMBE</VydejkaDetail_paramName>
+    <VydejkaDetailDavka>fask_VydejDetailDavka</VydejkaDetailDavka>
+    <VydejkaDetailDavka_paramName>:pDavka</VydejkaDetailDavka_paramName>
+    <GenerovatPrevodku_TO_Pozadavek>false</GenerovatPrevodku_TO_Pozadavek>
+    <Faktura_Importovat_SluzbyPodPolozky>false</Faktura_Importovat_SluzbyPodPolozky>
+    <Predloha_Generovat_PodleTypuPolozky>false</Predloha_Generovat_PodleTypuPolozky>
+    <Predloha_Generovat_PodleTypuPolozky_Seznam>1,5</Predloha_Generovat_PodleTypuPolozky_Seznam>
+    <FEFO_FIFO_Expirace_Po_PocetDni>30</FEFO_FIFO_Expirace_Po_PocetDni>
+  </Vydej>
+  <Prijem>
+    <GrupujDataPrijemka>true</GrupujDataPrijemka>
+    <Pohoda_Objednavka_Vydana_Vyrizeno_Nastavit>true</Pohoda_Objednavka_Vydana_Vyrizeno_Nastavit>
+    <Pohoda_Objednavka_Vydana_Vyrizeno_Nastavit_Castecne_Plneni>false</Pohoda_Objednavka_Vydana_Vyrizeno_Nastavit_Castecne_Plneni>
+    <HlavnySkladID>1</HlavnySkladID>
+    <ObjednavkaDetail>SELECT o.Cislo 'ocislo'  , isnull(z.Cislo, '') 'zcislo'  , z.SText 'zstext'  , c.ID 'cid'  , isnull(c.IDS, '') 'cids'  , c.SText 'cstext'  from OBJ o  left join sZAK z on z.Cislo = o.CisloZAK  left join sCIN c on c.ID = o.RefCin  where o.Cislo =? </ObjednavkaDetail>
+    <ObjednavkaDetailPolozka> SELECT  o.Cislo 'ocislo'  , isnull(z.Cislo, '') 'zcislo'  , z.SText 'zstext'  , c.ID 'cid'  , isnull(c.IDS, '') 'cids'  , c.SText 'cstext'  , isnull(op.Pozn, '') 'oppozn'  from OBJ o  left join sZAK z on z.Cislo = o.CisloZAK  left join sCIN c on c.ID = o.RefCin  join OBJPol op on op.RefAg = o.ID  where o.Cislo =? and op.refskz =? and op.ID =? </ObjednavkaDetailPolozka>
+    <HesloStornoPrijemka>4321</HesloStornoPrijemka>
+    <StatusObjednavky>false</StatusObjednavky>
+    <Delivered>false</Delivered>
+    <Executed>false</Executed>
+    <Zbyva>true</Zbyva>
+    <MerneJednotky_DotahovatDalsiVarianty>true</MerneJednotky_DotahovatDalsiVarianty>
+    <GenerateSerltnum_Action>procGenerateSerltnum</GenerateSerltnum_Action>
+    <GetDoporuceneLokace_Action>procPrijemGetDoporuceneLokace</GetDoporuceneLokace_Action>
+    <GetNezrealizovanePrijemky_Action>procPrijemNezrealizovane</GetNezrealizovanePrijemky_Action>
+  </Prijem>
+  <Prodej>
+    <GrupujDataImport>true</GrupujDataImport>
+    <ImportDokladPohoda>true</ImportDokladPohoda>
+    <AfterDataProcessed_Action_Asynchronous>false</AfterDataProcessed_Action_Asynchronous>
+    <AfterDataProcessed_Action_P1 />
+    <AfterDataProcessed_Action_P2 />
+    <AfterDataProcessed_Action />
+    <KodFormaUhrady>příkazem</KodFormaUhrady>
+    <RadaCiziMenaText>cizí měna</RadaCiziMenaText>
+    <KodCiziMena>EUR</KodCiziMena>
+    <GetSklad_procName>getSklad</GetSklad_procName>
+    <GetSklad_paramName1>doc_id</GetSklad_paramName1>
+    <GetSklad_paramName2>matID</GetSklad_paramName2>
+    <GetSklad_paramName3>serialID</GetSklad_paramName3>
+    <GetSklad_paramName4>skladSrc</GetSklad_paramName4>
+    <GetSklad_paramName5>skladDest</GetSklad_paramName5>
+  </Prodej>
+  <Inventura1>
+    <DavkaTerminalVice>true</DavkaTerminalVice>
+    <PrepisovatZkontrolovanePolozky>false</PrepisovatZkontrolovanePolozky>
+    <PathStateDataFile>..\Data</PathStateDataFile>
+    <PathDataOutputFile>C:\FASK\Pohoda\</PathDataOutputFile>
+    <PathToXSLT>C:\FASK\Pohoda\</PathToXSLT>
+    <DotahovatInformaceDodavatele>false</DotahovatInformaceDodavatele>
+    <I_DotahovatAlternativniDodavatele>false</I_DotahovatAlternativniDodavatele>
+  </Inventura1>
+  <Sdilene>
+    <StatusObjectsDirectory>Logs\SoDir\</StatusObjectsDirectory>
+    <LokaceVychoziParametrNazevPohoda>fask_vychozi_lokace</LokaceVychoziParametrNazevPohoda>
+    <EvidenceVyrobnichCisel>false</EvidenceVyrobnichCisel>
+    <EvidenceSarzi>true</EvidenceSarzi>
+  </Sdilene>
+  <ExportZasoby>
+    <ExportSkladFilter>01</ExportSkladFilter>
+    <ExportTypFilter>1,5</ExportTypFilter>
+    <ExportovatPouzeAktivniPolozky>true</ExportovatPouzeAktivniPolozky>
+    <EXZas_DotahovatAlternativniDodavatele>false</EXZas_DotahovatAlternativniDodavatele>
+  </ExportZasoby>
+  <Ukolovani>
+    <ServiceMan_Email_From />
+    <ServiceMan_Email_Heslo />
+    <ServiceMan_Email_Text>Servisni Zasah.</ServiceMan_Email_Text>
+    <ServiceMan_Email_Timeout>10000</ServiceMan_Email_Timeout>
+    <ServiceMan_Email_SMTP>smtp.fask.cz</ServiceMan_Email_SMTP>
+    <ServiceMan_Email_port>587</ServiceMan_Email_port>
+    <ServiceMan_Email_UserName />
+    <ServiceMan_Email_SSL>true</ServiceMan_Email_SSL>
+    <ServiceMan_Email_Skip_Certifikaty>false</ServiceMan_Email_Skip_Certifikaty>
+    <ServiceMan_Email_IsBodyHtml>false</ServiceMan_Email_IsBodyHtml>
+  </Ukolovani>
+  <LokMech>
+    <Vydej_PovolZapornyStav>true</Vydej_PovolZapornyStav>
+  </LokMech>
+</POHODA_V1>

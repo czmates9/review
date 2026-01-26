@@ -1,0 +1,1607 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B0431BD8-2948-453B-AD4A-C6BFEAADCBD7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fask.Console.Interfaces</RootNamespace>
+    <AssemblyName>Fask.Console.Interfaces</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\!Build!\Konzola\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\!Build!\Konzola\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CsvHelper, Version=32.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.32.0.3\lib\net47\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.1.35\lib\net461\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.0\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ILokace2\ILokace2.cs">
+      <Link>Ciselniky\ILokace2\ILokace2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ILokace2\ILokace2_Fill.cs">
+      <Link>Ciselniky\ILokace2\ILokace2_Fill.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IOdberatele2\IOdberatele2.cs">
+      <Link>Ciselniky\IOdberatele2\IOdberatele2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IOdberatele2\IOdberatele2_DeleteOdberatel.cs">
+      <Link>Ciselniky\IOdberatele2\IOdberatele2_DeleteOdberatel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IOdberatele2\IOdberatele2_GetFiltrovaneOdberatele.cs">
+      <Link>Ciselniky\IOdberatele2\IOdberatele2_GetFiltrovaneOdberatele.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IOdberatele2\IOdberatele2_GetOdberatelByID.cs">
+      <Link>Ciselniky\IOdberatele2\IOdberatele2_GetOdberatelByID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IOdberatele2\IOdberatele2_GetOdberatele.cs">
+      <Link>Ciselniky\IOdberatele2\IOdberatele2_GetOdberatele.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IOdberatele2\IOdberatele2_ImportOdberatel.cs">
+      <Link>Ciselniky\IOdberatele2\IOdberatele2_ImportOdberatel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IOdberatele2\IOdberatele2_InsertOdberatel.cs">
+      <Link>Ciselniky\IOdberatele2\IOdberatele2_InsertOdberatel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IOdberatele2\IOdberatele2_UpdateOdberatel.cs">
+      <Link>Ciselniky\IOdberatele2\IOdberatele2_UpdateOdberatel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IPracovnici2\IPracovnici2.cs">
+      <Link>Ciselniky\IPracovnici2\IPracovnici2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IPracovnici2\IPracovnici2_DeletePracovnici.cs">
+      <Link>Ciselniky\IPracovnici2\IPracovnici2_DeletePracovnici.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IPracovnici2\IPracovnici2_GetFiltrovanePracovniky.cs">
+      <Link>Ciselniky\IPracovnici2\IPracovnici2_GetFiltrovanePracovniky.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IPracovnici2\IPracovnici2_GetPracovnici.cs">
+      <Link>Ciselniky\IPracovnici2\IPracovnici2_GetPracovnici.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IPracovnici2\IPracovnici2_GetPracovnikByID.cs">
+      <Link>Ciselniky\IPracovnici2\IPracovnici2_GetPracovnikByID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IPracovnici2\IPracovnici2_ImportPracovnici.cs">
+      <Link>Ciselniky\IPracovnici2\IPracovnici2_ImportPracovnici.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IPracovnici2\IPracovnici2_InsertPracovnici.cs">
+      <Link>Ciselniky\IPracovnici2\IPracovnici2_InsertPracovnici.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IPracovnici2\IPracovnici2_SynchronizacePracovniciAD.cs">
+      <Link>Ciselniky\IPracovnici2\IPracovnici2_SynchronizacePracovniciAD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IPracovnici2\IPracovnici2_UpdatePracovnici.cs">
+      <Link>Ciselniky\IPracovnici2\IPracovnici2_UpdatePracovnici.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IRady2\IRady2.cs">
+      <Link>Ciselniky\IRady2\IRady2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IRady2\IRady2_Detete.cs">
+      <Link>Ciselniky\IRady2\IRady2_Detete.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IRady2\IRady2_GetFiltrovaneData.cs">
+      <Link>Ciselniky\IRady2\IRady2_GetFiltrovaneData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IRady2\IRady2_Insert.cs">
+      <Link>Ciselniky\IRady2\IRady2_Insert.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IRady2\IRady2_Update.cs">
+      <Link>Ciselniky\IRady2\IRady2_Update.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_LokaceTypy2\ISkladLokace_LokaceTypy2.cs">
+      <Link>Ciselniky\ISkladLokace_LokaceTypy2\ISkladLokace_LokaceTypy2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_LokaceTypy2\ISkladLokace_LokaceTypy2_DeleteSkladLokace_LokaceTypy.cs">
+      <Link>Ciselniky\ISkladLokace_LokaceTypy2\ISkladLokace_LokaceTypy2_DeleteSkladLokace_LokaceTypy.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_LokaceTypy2\ISkladLokace_LokaceTypy2_GetFiltrovaneSkladLokace_LokaceTypy.cs">
+      <Link>Ciselniky\ISkladLokace_LokaceTypy2\ISkladLokace_LokaceTypy2_GetFiltrovaneSkladLokace_LokaceTypy.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_LokaceTypy2\ISkladLokace_LokaceTypy2_GetSkladLokace_LokaceTypy.cs">
+      <Link>Ciselniky\ISkladLokace_LokaceTypy2\ISkladLokace_LokaceTypy2_GetSkladLokace_LokaceTypy.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_LokaceTypy2\ISkladLokace_LokaceTypy2_GetSkladLokace_LokaceTypyByType.cs">
+      <Link>Ciselniky\ISkladLokace_LokaceTypy2\ISkladLokace_LokaceTypy2_GetSkladLokace_LokaceTypyByType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_LokaceTypy2\ISkladLokace_LokaceTypy2_InsertSkladLokace_LokaceTypy.cs">
+      <Link>Ciselniky\ISkladLokace_LokaceTypy2\ISkladLokace_LokaceTypy2_InsertSkladLokace_LokaceTypy.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_LokaceTypy2\ISkladLokace_LokaceTypy2_UpdateSkladLokace_LokaceTypy.cs">
+      <Link>Ciselniky\ISkladLokace_LokaceTypy2\ISkladLokace_LokaceTypy2_UpdateSkladLokace_LokaceTypy.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_LVS2\ISkladLokace_LVS2.cs">
+      <Link>Ciselniky\ISkladLokace_LokaceVariantySortiment2\ISkladLokace_LVS2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_LVS2\ISkladLokace_LVS2_DeleteSkladLokace_LokaceVariantySortiment.cs">
+      <Link>Ciselniky\ISkladLokace_LokaceVariantySortiment2\ISkladLokace_LVS2_DeleteSkladLokace_LokaceVariantySortiment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_LVS2\ISkladLokace_LVS2_GetFiltrovanySkladLokace_LokaceVariantySortiment.cs">
+      <Link>Ciselniky\ISkladLokace_LokaceVariantySortiment2\ISkladLokace_LVS2_GetFiltrovanySkladLokace_LokaceVariantySortiment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_LVS2\ISkladLokace_LVS2_GetSkladLokace_LokaceVariantySortiment.cs">
+      <Link>Ciselniky\ISkladLokace_LokaceVariantySortiment2\ISkladLokace_LVS2_GetSkladLokace_LokaceVariantySortiment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_LVS2\ISkladLokace_LVS2_GetSkladLokace_LokaceVariantySortimentBySklidLocncodeItemnmbr.cs">
+      <Link>Ciselniky\ISkladLokace_LokaceVariantySortiment2\ISkladLokace_LVS2_GetSkladLokace_LokaceVariantySortimentBySklidLocncodeItemnmbr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_LVS2\ISkladLokace_LVS2_InsertSkladLokace_LokaceVariantySortiment.cs">
+      <Link>Ciselniky\ISkladLokace_LokaceVariantySortiment2\ISkladLokace_LVS2_InsertSkladLokace_LokaceVariantySortiment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_LVS2\ISkladLokace_LVS2_InsertSkladLokace_LokaceVariantySortiment_Row.cs">
+      <Link>Ciselniky\ISkladLokace_LokaceVariantySortiment2\ISkladLokace_LVS2_InsertSkladLokace_LokaceVariantySortiment_Row.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_LVS2\ISkladLokace_LVS2_UpdateSkladLokace_LokaceVariantySortiment.cs">
+      <Link>Ciselniky\ISkladLokace_LokaceVariantySortiment2\ISkladLokace_LVS2_UpdateSkladLokace_LokaceVariantySortiment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_Mapa2\ISkladLokace_Mapa2.cs">
+      <Link>Ciselniky\ISkladLokace_Mapa2\ISkladLokace_Mapa2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_Mapa2\ISkladLokace_Mapa2_DeleteSkladLokace_Mapa.cs">
+      <Link>Ciselniky\ISkladLokace_Mapa2\ISkladLokace_Mapa2_DeleteSkladLokace_Mapa.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_Mapa2\ISkladLokace_Mapa2_GenerovatLokace_SkladLokace_Mapa.cs">
+      <Link>Ciselniky\ISkladLokace_Mapa2\ISkladLokace_Mapa2_GenerovatLokace_SkladLokace_Mapa.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_Mapa2\ISkladLokace_Mapa2_GetFiltrovaneSkladLokace_Mapa.cs">
+      <Link>Ciselniky\ISkladLokace_Mapa2\ISkladLokace_Mapa2_GetFiltrovaneSkladLokace_Mapa.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_Mapa2\ISkladLokace_Mapa2_GetSkladLokace_Mapa.cs">
+      <Link>Ciselniky\ISkladLokace_Mapa2\ISkladLokace_Mapa2_GetSkladLokace_Mapa.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_Mapa2\ISkladLokace_Mapa2_GetSkladLokace_MapaBySklIDAndLocncode.cs">
+      <Link>Ciselniky\ISkladLokace_Mapa2\ISkladLokace_Mapa2_GetSkladLokace_MapaBySklIDAndLocncode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_Mapa2\ISkladLokace_Mapa2_InsertSkladLokace_Mapa.cs">
+      <Link>Ciselniky\ISkladLokace_Mapa2\ISkladLokace_Mapa2_InsertSkladLokace_Mapa.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISkladLokace_Mapa2\ISkladLokace_Mapa2_UpdateSkladLokace_Mapa.cs">
+      <Link>Ciselniky\ISkladLokace_Mapa2\ISkladLokace_Mapa2_UpdateSkladLokace_Mapa.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISklady2\ISklady2.cs">
+      <Link>Ciselniky\ISklady2\ISklady2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISklady2\ISklady2_DeleteSklad.cs">
+      <Link>Ciselniky\ISklady2\ISklady2_DeleteSklad.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISklady2\ISklady2_GetFiltrovaneSklady.cs">
+      <Link>Ciselniky\ISklady2\ISklady2_GetFiltrovaneSklady.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISklady2\ISklady2_GetSkladByID.cs">
+      <Link>Ciselniky\ISklady2\ISklady2_GetSkladByID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISklady2\ISklady2_GetSklady.cs">
+      <Link>Ciselniky\ISklady2\ISklady2_GetSklady.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISklady2\ISklady2_ImportSklad.cs">
+      <Link>Ciselniky\ISklady2\ISklady2_ImportSklad.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISklady2\ISklady2_InsertSklad.cs">
+      <Link>Ciselniky\ISklady2\ISklady2_InsertSklad.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISklady2\ISklady2_UpdateSklad.cs">
+      <Link>Ciselniky\ISklady2\ISklady2_UpdateSklad.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ISklady2\ISklady2_Vyroba_Fill.cs">
+      <Link>Ciselniky\ISklady2\ISklady2_Vyroba_Fill.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IStrediska2\IStrediska2.cs">
+      <Link>Ciselniky\IStrediska2\IStrediska2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IStrediska2\IStrediska2_DeleteStredisko.cs">
+      <Link>Ciselniky\IStrediska2\IStrediska2_DeleteStredisko.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IStrediska2\IStrediska2_GetFiltrovaneStrediska.cs">
+      <Link>Ciselniky\IStrediska2\IStrediska2_GetFiltrovaneStrediska.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IStrediska2\IStrediska2_GetStrediska.cs">
+      <Link>Ciselniky\IStrediska2\IStrediska2_GetStrediska.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IStrediska2\IStrediska2_GetStrediskoByID.cs">
+      <Link>Ciselniky\IStrediska2\IStrediska2_GetStrediskoByID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IStrediska2\IStrediska2_ImportStrediska.cs">
+      <Link>Ciselniky\IStrediska2\IStrediska2_ImportStrediska.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IStrediska2\IStrediska2_InsertStredisko.cs">
+      <Link>Ciselniky\IStrediska2\IStrediska2_InsertStredisko.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IStrediska2\IStrediska2_UpdateStredisko.cs">
+      <Link>Ciselniky\IStrediska2\IStrediska2_UpdateStredisko.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ITypyDokladu2\ITypyDokladu2.cs">
+      <Link>Ciselniky\ITypyDokladu2\ITypyDokladu2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ITypyDokladu2\ITypyDokladu2_Delete.cs">
+      <Link>Ciselniky\ITypyDokladu2\ITypyDokladu2_Delete.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ITypyDokladu2\ITypyDokladu2_GetFiltrovaneData.cs">
+      <Link>Ciselniky\ITypyDokladu2\ITypyDokladu2_GetFiltrovaneData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ITypyDokladu2\ITypyDokladu2_Insert.cs">
+      <Link>Ciselniky\ITypyDokladu2\ITypyDokladu2_Insert.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\ITypyDokladu2\ITypyDokladu2_Update.cs">
+      <Link>Ciselniky\ITypyDokladu2\ITypyDokladu2_Update.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IZbozi2\IZbozi2.cs">
+      <Link>Ciselniky\IZbozi2\IZbozi2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IZbozi2\IZbozi2_DeleteZbozi.cs">
+      <Link>Ciselniky\IZbozi2\IZbozi2_DeleteZbozi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IZbozi2\IZbozi2_ExportKatalogZasoby_Procedura.cs">
+      <Link>Ciselniky\IZbozi2\IZbozi2_ExportKatalogZasoby_Procedura.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IZbozi2\IZbozi2_GetFiltrovaneZbozi.cs">
+      <Link>Ciselniky\IZbozi2\IZbozi2_GetFiltrovaneZbozi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IZbozi2\IZbozi2_GetParametry.cs">
+      <Link>Ciselniky\IZbozi2\IZbozi2_GetParametry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IZbozi2\IZbozi2_GetParametrybyID.cs">
+      <Link>Ciselniky\IZbozi2\IZbozi2_GetParametrybyID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IZbozi2\IZbozi2_GetZbozi.cs">
+      <Link>Ciselniky\IZbozi2\IZbozi2_GetZbozi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IZbozi2\IZbozi2_GetZboziByID.cs">
+      <Link>Ciselniky\IZbozi2\IZbozi2_GetZboziByID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IZbozi2\IZbozi2_ImportZbozi.cs">
+      <Link>Ciselniky\IZbozi2\IZbozi2_ImportZbozi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IZbozi2\IZbozi2_InsertZbozi.cs">
+      <Link>Ciselniky\IZbozi2\IZbozi2_InsertZbozi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IZbozi2\IZbozi2_InsertZboziParams.cs">
+      <Link>Ciselniky\IZbozi2\IZbozi2_InsertZboziParams.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IZbozi2\IZbozi2_UpdateParametry.cs">
+      <Link>Ciselniky\IZbozi2\IZbozi2_UpdateParametry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IZbozi2\IZbozi2_UpdateZbozi.cs">
+      <Link>Ciselniky\IZbozi2\IZbozi2_UpdateZbozi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Ciselniky\IZbozi2\IZbozi2_UpdateZboziParams.cs">
+      <Link>Ciselniky\IZbozi2\IZbozi2_UpdateZboziParams.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Classes\Enums.cs">
+      <Link>Classes\Enums.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Classes\GenerovaniLokaci.cs">
+      <Link>Classes\GenerovaniLokaci.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Classes\GenerovaniSN.cs">
+      <Link>Classes\GenerovaniSN.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Classes\Parametry.cs">
+      <Link>Classes\Parametry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Classes\StatusInfo_Dispo.cs">
+      <Link>Classes\StatusInfo_Dispo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Classes\TimeFilters.cs">
+      <Link>Classes\TimeFilters.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Extension\CZMST093_Extension.cs">
+      <Link>Extension\CZMST093_Extension.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Extension\FaskEvents_Extensions.cs">
+      <Link>Extension\FaskEvents_Extensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Extension\FASK_Events_Extension.cs">
+      <Link>Extension\FASK_Events_Extension.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Extension\Fask_Zasoby_All_Extension.cs">
+      <Link>Extension\Fask_Zasoby_All_Extension.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Extension\Fask_Zasoby_Extension.cs">
+      <Link>Extension\Fask_Zasoby_Extension.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Extension\Fask_Zasoby_Parametry_Extension.cs">
+      <Link>Extension\Fask_Zasoby_Parametry_Extension.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\AdresarListFiltr.cs">
+      <Link>Filtry\AdresarListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\CiselnikModuly_MachinesDefinitionFiltr.cs">
+      <Link>Filtry\CiselnikModuly_MachinesDefinitionFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\ExpediceFormDodaciListyListFiltr.cs">
+      <Link>Filtry\ExpediceFormDodaciListyListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\FilterBase.cs">
+      <Link>Filtry\FilterBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\Import_SKzNC_ListFiltr.cs">
+      <Link>Filtry\Import_SKzNC_ListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\InventuraCompare.cs">
+      <Link>Filtry\InventuraCompare.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\InventuraNasnimaneListFiltr.cs">
+      <Link>Filtry\InventuraNasnimaneListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\InventuraPredlohaListFiltr.cs">
+      <Link>Filtry\InventuraPredlohaListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\Inv_PredlohaListFiltr.cs">
+      <Link>Filtry\Inv_PredlohaListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\LokaceTypyListFiltr.cs">
+      <Link>Filtry\LokaceTypyListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\LokaceVariantySortimentListFiltr.cs">
+      <Link>Filtry\LokaceVariantySortimentListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\Odvod_EventsErrListFiltr.cs">
+      <Link>Filtry\Odvod_EventsErrListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\Odvod_EventsListFiltr.cs">
+      <Link>Filtry\Odvod_EventsListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\Odvod_MachineStateSetListFiltr.cs">
+      <Link>Filtry\Odvod_MachineStateSetListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\Odvod_TiskoveSablony.cs">
+      <Link>Filtry\Odvod_TiskoveSablony.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\PohybyISListFiltr.cs">
+      <Link>Filtry\PohybyISListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\PotrebaMaterialu_Filtr.cs">
+      <Link>Filtry\PotrebaMaterialu_Filtr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\PracovniciListFiltr.cs">
+      <Link>Filtry\PracovniciListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\PrijemDavkyFiltr.cs">
+      <Link>Filtry\PrijemDavkyFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\PrijemNasnimaneFiltr.cs">
+      <Link>Filtry\PrijemNasnimaneFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\ProdejFiltr.cs">
+      <Link>Filtry\ProdejFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\ProductionListFiltr.cs">
+      <Link>Filtry\ProductionListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\ProductionSourcesListFiltr.cs">
+      <Link>Filtry\ProductionSourcesListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\Production_SNListFiltr.cs">
+      <Link>Filtry\Production_SNListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\RadyListFiltr.cs">
+      <Link>Filtry\RadyListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\ReportSestavaFiltr.cs">
+      <Link>Filtry\ReportSestavaFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\SkladLokaceCompareToISFiltr.cs">
+      <Link>Filtry\SkladLokaceCompareToISFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\SkladLokaceMapaListFiltr.cs">
+      <Link>Filtry\SkladLokaceMapaListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\SkladLokaceStavListFiltr.cs">
+      <Link>Filtry\SkladLokaceStavListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\SkladPohybListFiltr.cs">
+      <Link>Filtry\SkladPohybListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\SkladyListFiltr.cs">
+      <Link>Filtry\SkladyListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\StavSkladuHistorieFiltr.cs">
+      <Link>Filtry\StavSkladuHistorieFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\StavSkladuListFiltr.cs">
+      <Link>Filtry\StavSkladuListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\StrediskaListFiltr.cs">
+      <Link>Filtry\StrediskaListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\TypDokladuList.cs">
+      <Link>Filtry\TypDokladuList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\UzivateleListFiltr.cs">
+      <Link>Filtry\UzivateleListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\VazbyMaterialyFiltr.cs">
+      <Link>Filtry\VazbyMaterialyFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\VazbyModifikace_TP.cs">
+      <Link>Filtry\VazbyModifikace_TP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\Vazby_P_PS_Filtr.cs">
+      <Link>Filtry\Vazby_P_PS_Filtr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\VydejDavkyFiltr.cs">
+      <Link>Filtry\VydejDavkyFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\VydejHlavickyFiltr.cs">
+      <Link>Filtry\VydejHlavickyFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\VydejNasnimaneFiltr.cs">
+      <Link>Filtry\VydejNasnimaneFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\Vyroba_KapPla_MatProVyr_Filtr.cs">
+      <Link>Filtry\Vyroba_KapPla_MatProVyr_Filtr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\Vyroba_PV_Filtr.cs">
+      <Link>Filtry\Vyroba_PV_Filtr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\Vyroba_PV_Zap_Filtr.cs">
+      <Link>Filtry\Vyroba_PV_Zap_Filtr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\Vyroba_VPH_Filtr.cs">
+      <Link>Filtry\Vyroba_VPH_Filtr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\Vyroba_VPP_Filtr.cs">
+      <Link>Filtry\Vyroba_VPP_Filtr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\ZboziListFiltr.cs">
+      <Link>Filtry\ZboziListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\ZboziVyrobaListFiltr.cs">
+      <Link>Filtry\ZboziVyrobaListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\ZdrojeListFiltr.cs">
+      <Link>Filtry\ZdrojeListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Filtry\ZdrojePohybListFiltr.cs">
+      <Link>Filtry\ZdrojePohybListFiltr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\IMES.cs">
+      <Link>IMES.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\IT_cast\IIT_cast.cs">
+      <Link>IT_cast\IIT_cast.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\IT_cast\IIT_cast_Events_Archivace.cs">
+      <Link>IT_cast\IIT_cast_Events_Archivace.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\IT_cast\IIT_cast_Production_Archivace.cs">
+      <Link>IT_cast\IIT_cast_Production_Archivace.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Prodej\IProdej2.cs">
+      <Link>Prodej\IProdej2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Prodej\IProdej2_DeleteDI.cs">
+      <Link>Prodej\IProdej2_DeleteDI.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Prodej\IProdej2_ImportDavka.cs">
+      <Link>Prodej\IProdej2_ImportDavka.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Prodej\IProdej2_Prodej_GetFiltrovaneDavky.cs">
+      <Link>Prodej\IProdej2_Prodej_GetFiltrovaneDavky.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Prodej\IProdej2_UpdateDI.cs">
+      <Link>Prodej\IProdej2_UpdateDI.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Prodej\IProdej2_UpdateDI_storno.cs">
+      <Link>Prodej\IProdej2_UpdateDI_storno.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Terminal\ITerminal.cs">
+      <Link>Terminal\ITerminal.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Terminal\ITerminal_DeleteFileTerminalKonfigurace_MESAndroid.cs">
+      <Link>Terminal\ITerminal_DeleteFileTerminalKonfigurace_MESAndroid.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Terminal\ITerminal_GetTerminalAkt.cs">
+      <Link>Terminal\ITerminal_GetTerminalAkt.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Terminal\ITerminal_GetTerminalAll.cs">
+      <Link>Terminal\ITerminal_GetTerminalAll.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Terminal\ITerminal_GetTerminalDefinition.cs">
+      <Link>Terminal\ITerminal_GetTerminalDefinition.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Terminal\ITerminal_GetTerminalKonfigurace_MESAndroid.cs">
+      <Link>Terminal\ITerminal_GetTerminalKonfigurace_MESAndroid.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Terminal\ITerminal_GetTerminalKonfigurace_MESAndroid_Validace .cs">
+      <Link>Terminal\ITerminal_GetTerminalKonfigurace_MESAndroid_Validace .cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Tisky\ITisk_TiskovaSablona.cs">
+      <Link>Tisky\ITisk_TiskovaSablona.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Corrects\ICorrects.cs">
+      <Link>Vyroba\Corrects\ICorrects.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Corrects\ICorrects_GetDataByID.cs">
+      <Link>Vyroba\Corrects\ICorrects_GetDataByID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Groups\IGroups.cs">
+      <Link>Vyroba\Groups\IGroups.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Groups\IGroups_FillGroups.cs">
+      <Link>Vyroba\Groups\IGroups_FillGroups.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Groups\IGroups_GetDataByID.cs">
+      <Link>Vyroba\Groups\IGroups_GetDataByID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Groups\IGroups_Insert.cs">
+      <Link>Vyroba\Groups\IGroups_Insert.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Groups\IGroups_Update.cs">
+      <Link>Vyroba\Groups\IGroups_Update.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Groups\IGroups_Update_Row.cs">
+      <Link>Vyroba\Groups\IGroups_Update_Row.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\KapacitniPlanovani\IKapacitniPlanovani.cs">
+      <Link>Vyroba\KapacitniPlanovani\IKapacitniPlanovani.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\KapacitniPlanovani\IKapacitniPlanovani_GetMatProVyr.cs">
+      <Link>Vyroba\KapacitniPlanovani\IKapacitniPlanovani_GetMatProVyr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\KapacitniPlanovani\IKapacitniPlanovani_Get_Vypocet.cs">
+      <Link>Vyroba\KapacitniPlanovani\IKapacitniPlanovani_Get_Vypocet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Machines\IMachines.cs">
+      <Link>Vyroba\Machines\IMachines.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Machines\IMachines_Fill.cs">
+      <Link>Vyroba\Machines\IMachines_Fill.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Machines\IMachines_GetDataByID.cs">
+      <Link>Vyroba\Machines\IMachines_GetDataByID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Odvod_EventsErr\IOdvod_EventsErr.cs">
+      <Link>Vyroba\Odvod_EventsErr\IOdvod_EventsErr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Odvod_EventsErr\IOdvod_EventsErr_GetFiltrovanyOdvodEvents.cs">
+      <Link>Vyroba\Odvod_EventsErr\IOdvod_EventsErr_GetFiltrovanyOdvodEvents.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Odvod_Events\IOdvod_Events.cs">
+      <Link>Vyroba\Odvod_Events\IOdvod_Events.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Odvod_Events\IOdvod_Events_CallProcedura.cs">
+      <Link>Vyroba\Odvod_Events\IOdvod_Events_CallProcedura.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Odvod_Events\IOdvod_Events_GetFiltrovanyOdvodEvents.cs">
+      <Link>Vyroba\Odvod_Events\IOdvod_Events_GetFiltrovanyOdvodEvents.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Odvod_Events\IOdvod_Events_GetMaterials.cs">
+      <Link>Vyroba\Odvod_Events\IOdvod_Events_GetMaterials.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Odvod_Events\IOdvod_Events_StornoEvent.cs">
+      <Link>Vyroba\Odvod_Events\IOdvod_Events_StornoEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Odvod_Events\IOdvod_Events_StornoEvent_OnlineCheck.cs">
+      <Link>Vyroba\Odvod_Events\IOdvod_Events_StornoEvent_OnlineCheck.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Odvod_MachineStateSet\IOdvod_MachineStateSet.cs">
+      <Link>Vyroba\Odvod_MachineStateSet\IOdvod_MachineStateSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Odvod_MachineStateSet\IOdvod_MachineStateSet_GetFiltrovanyOdvodMachineStateSet.cs">
+      <Link>Vyroba\Odvod_MachineStateSet\IOdvod_MachineStateSet_GetFiltrovanyOdvodMachineStateSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Odvod_MachineStateSet\Odvod_MachineStateSet_GetEnum_description.cs">
+      <Link>Vyroba\Odvod_MachineStateSet\Odvod_MachineStateSet_GetEnum_description.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Odvod_TiskoveSablony\IOdvod_TiskoveSablony.cs">
+      <Link>Vyroba\Odvod_TiskoveSablony\IOdvod_TiskoveSablony.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Odvod_TiskoveSablony\IOdvod_TiskoveSablony_GetFiltrovanyOdvodTiskoveSablony.cs">
+      <Link>Vyroba\Odvod_TiskoveSablony\IOdvod_TiskoveSablony_GetFiltrovanyOdvodTiskoveSablony.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Operations\IOperations.cs">
+      <Link>Vyroba\Operations\IOperations.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Operations\IOperations_Fill.cs">
+      <Link>Vyroba\Operations\IOperations_Fill.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Operations\IOperations_GetDataByID.cs">
+      <Link>Vyroba\Operations\IOperations_GetDataByID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\ProductionSources\IProductionSources.cs">
+      <Link>Vyroba\ProductionSources\IProductionSources.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\ProductionSources\IProductionSources_GetDataSelectListImport.cs">
+      <Link>Vyroba\ProductionSources\IProductionSources_GetDataSelectListImport.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\ProductionSources\IProductionSources_GetFiltrovanyProductionSourcesList.cs">
+      <Link>Vyroba\ProductionSources\IProductionSources_GetFiltrovanyProductionSourcesList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\ProductionSources\IProductionSources_GetFiltrovanyVazby.cs">
+      <Link>Vyroba\ProductionSources\IProductionSources_GetFiltrovanyVazby.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\ProductionSources\IProductionSources_ImportVydejkaPohoda.cs">
+      <Link>Vyroba\ProductionSources\IProductionSources_ImportVydejkaPohoda.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\ProductionSources\IProductionSources_Update.cs">
+      <Link>Vyroba\ProductionSources\IProductionSources_Update.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\ProductionSources\IProductionSources_Update_Row.cs">
+      <Link>Vyroba\ProductionSources\IProductionSources_Update_Row.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Production\IProduction.cs">
+      <Link>Vyroba\Production\IProduction.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Production\IProduction_Delete_ISOK.cs">
+      <Link>Vyroba\Production\IProduction_Delete_ISOK.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Production\IProduction_FillByCORRGUID.cs">
+      <Link>Vyroba\Production\IProduction_FillByCORRGUID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Production\IProduction_FillBySOUBEHGUID.cs">
+      <Link>Vyroba\Production\IProduction_FillBySOUBEHGUID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Production\IProduction_GetDataByCORRGUID.cs">
+      <Link>Vyroba\Production\IProduction_GetDataByCORRGUID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Production\IProduction_GetDataBySOUBEHGUID.cs">
+      <Link>Vyroba\Production\IProduction_GetDataBySOUBEHGUID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Production\IProduction_GetDataSelectListImport.cs">
+      <Link>Vyroba\Production\IProduction_GetDataSelectListImport.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Production\IProduction_GetFiltrovanyProductionList.cs">
+      <Link>Vyroba\Production\IProduction_GetFiltrovanyProductionList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Production\IProduction_GetFiltrovanyProductionVazby.cs">
+      <Link>Vyroba\Production\IProduction_GetFiltrovanyProductionVazby.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Production\IProduction_ImportPohoda_Zdroj_P_Vyroba.cs">
+      <Link>Vyroba\Production\IProduction_ImportPohoda_Zdroj_P_Vyroba.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Production\IProduction_ImportPrijemkaPohoda_Zdroj_P.cs">
+      <Link>Vyroba\Production\IProduction_ImportPrijemkaPohoda_Zdroj_P.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Production\IProduction_ImportPrijemkaPohoda_Zdroj_P_PS.cs">
+      <Link>Vyroba\Production\IProduction_ImportPrijemkaPohoda_Zdroj_P_PS.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Production\IProduction_ImportPrijemkaPohoda_Zdroj_P_TP.cs">
+      <Link>Vyroba\Production\IProduction_ImportPrijemkaPohoda_Zdroj_P_TP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Production\IProduction_Update.cs">
+      <Link>Vyroba\Production\IProduction_Update.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Production\IProduction_Update_Row.cs">
+      <Link>Vyroba\Production\IProduction_Update_Row.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Production_SN\IProduction_SN.cs">
+      <Link>Vyroba\Production_SN\IProduction_SN.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\Production_SN\IProduction_SN_GetFiltrovanyProduction_SNList.cs">
+      <Link>Vyroba\Production_SN\IProduction_SN_GetFiltrovanyProduction_SNList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV.cs">
+      <Link>Vyroba\PV\IPV.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Delete_PV.cs">
+      <Link>Vyroba\PV\IPV_Delete_PV.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Edit_QTY_PV.cs">
+      <Link>Vyroba\PV\IPV_Edit_QTY_PV.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Edit_RefPVH_in_PVP.cs">
+      <Link>Vyroba\PV\IPV_Edit_RefPVH_in_PVP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Edit_Zaplanovane.cs">
+      <Link>Vyroba\PV\IPV_Edit_Zaplanovane.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_FillByRefPVH.cs">
+      <Link>Vyroba\PV\IPV_FillByRefPVH.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_FillPVH.cs">
+      <Link>Vyroba\PV\IPV_FillPVH.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_GetDEX_ROW_ID_from_PVH.cs">
+      <Link>Vyroba\PV\IPV_GetDEX_ROW_ID_from_PVH.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_GetFiltrovanyPVList.cs">
+      <Link>Vyroba\PV\IPV_GetFiltrovanyPVList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_GetSKzInfo_PV.cs">
+      <Link>Vyroba\PV\IPV_GetSKzInfo_PV.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_GetZaplanovani.cs">
+      <Link>Vyroba\PV\IPV_GetZaplanovani.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Get_Zaplanovane.cs">
+      <Link>Vyroba\PV\IPV_Get_Zaplanovane.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_ImportPV.cs">
+      <Link>Vyroba\PV\IPV_ImportPV.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Insert_PV.cs">
+      <Link>Vyroba\PV\IPV_Insert_PV.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Insert_PVH.cs">
+      <Link>Vyroba\PV\IPV_Insert_PVH.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Navrh_DeleteVariantu.cs">
+      <Link>Vyroba\PV\IPV_Navrh_DeleteVariantu.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Navrh_FillStav.cs">
+      <Link>Vyroba\PV\IPV_Navrh_FillStav.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Navrh_GetDetailStav.cs">
+      <Link>Vyroba\PV\IPV_Navrh_GetDetailStav.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Navrh_GetRow_Parametry.cs">
+      <Link>Vyroba\PV\IPV_Navrh_GetRow_Parametry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Navrh_GetStav_ParamsNastaveni.cs">
+      <Link>Vyroba\PV\IPV_Navrh_GetStav_ParamsNastaveni.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Navrh_InitEmptyParams.cs">
+      <Link>Vyroba\PV\IPV_Navrh_InitEmptyParams.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Navrh_InsertParams.cs">
+      <Link>Vyroba\PV\IPV_Navrh_InsertParams.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Navrh_InsertVariantu.cs">
+      <Link>Vyroba\PV\IPV_Navrh_InsertVariantu.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Navrh_PARAMS_Disponibilita.cs">
+      <Link>Vyroba\PV\IPV_Navrh_PARAMS_Disponibilita.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Navrh_PARAMS_OnLine_FIFO_OBJ.cs">
+      <Link>Vyroba\PV\IPV_Navrh_PARAMS_OnLine_FIFO_OBJ.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Navrh_UpdateNaplanovane.cs">
+      <Link>Vyroba\PV\IPV_Navrh_UpdateNaplanovane.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Navrh_UpdateParams.cs">
+      <Link>Vyroba\PV\IPV_Navrh_UpdateParams.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Navrh_UpdateVariantu.cs">
+      <Link>Vyroba\PV\IPV_Navrh_UpdateVariantu.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Update_PV.cs">
+      <Link>Vyroba\PV\IPV_Update_PV.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Update_QTY_ByID_PV.cs">
+      <Link>Vyroba\PV\IPV_Update_QTY_ByID_PV.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\PV\IPV_Zaplanovani_PV.cs">
+      <Link>Vyroba\PV\IPV_Zaplanovani_PV.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VLoginsGroups\IVLoginsGroups.cs">
+      <Link>Vyroba\VLoginsGroups\IVLoginsGroups.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VLoginsGroups\IVLoginsGroups_DeleteByGoupID.cs">
+      <Link>Vyroba\VLoginsGroups\IVLoginsGroups_DeleteByGoupID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VLoginsGroups\IVLoginsGroups_DeleteByLoginID.cs">
+      <Link>Vyroba\VLoginsGroups\IVLoginsGroups_DeleteByLoginID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VLoginsGroups\IVLoginsGroups_GetDataByLoginID.cs">
+      <Link>Vyroba\VLoginsGroups\IVLoginsGroups_GetDataByLoginID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VLoginsGroups\IVLoginsGroups_Insert.cs">
+      <Link>Vyroba\VLoginsGroups\IVLoginsGroups_Insert.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VMachinesOperations\IVMachinesOperations.cs">
+      <Link>Vyroba\VMachinesOperations\IVMachinesOperations.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VMachinesOperations\IVMachinesOperations_GetDataByMachineIDoperationID.cs">
+      <Link>Vyroba\VMachinesOperations\IVMachinesOperations_GetDataByMachineIDoperationID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VPH\IVPH.cs">
+      <Link>Vyroba\VPH\IVPH.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VPH\IVPH_Fill.cs">
+      <Link>Vyroba\VPH\IVPH_Fill.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VPH\IVPH_GetDataByCountEntriesSOPNUMBE.cs">
+      <Link>Vyroba\VPH\IVPH_GetDataByCountEntriesSOPNUMBE.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VPH\IVPH_GetFiltrovanyVPHList.cs">
+      <Link>Vyroba\VPH\IVPH_GetFiltrovanyVPHList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VPH\IVPH_GetPotrebaMaterialu.cs">
+      <Link>Vyroba\VPH\IVPH_GetPotrebaMaterialu.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VPH\IVPH_Insert.cs">
+      <Link>Vyroba\VPH\IVPH_Insert.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VPH\IVPH_Update.cs">
+      <Link>Vyroba\VPH\IVPH_Update.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VPH\IVPH_Update_Row.cs">
+      <Link>Vyroba\VPH\IVPH_Update_Row.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VPP\IVPP.cs">
+      <Link>Vyroba\VPP\IVPP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VPP\IVPP_DeleteByCountEntriesSOPNUMBE.cs">
+      <Link>Vyroba\VPP\IVPP_DeleteByCountEntriesSOPNUMBE.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VPP\IVPP_Fill.cs">
+      <Link>Vyroba\VPP\IVPP_Fill.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VPP\IVPP_FillByCountEntriesAndSOPNUMBE.cs">
+      <Link>Vyroba\VPP\IVPP_FillByCountEntriesAndSOPNUMBE.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VPP\IVPP_GenerovatSN_CZPRO_VPP.cs">
+      <Link>Vyroba\VPP\IVPP_GenerovatSN_CZPRO_VPP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VPP\IVPP_GetDataByCountEntriesSOPNUMBEITEMNMBR.cs">
+      <Link>Vyroba\VPP\IVPP_GetDataByCountEntriesSOPNUMBEITEMNMBR.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VPP\IVPP_GetDataByCountEntriesSopnumbeItemnmbrBarcodeP.cs">
+      <Link>Vyroba\VPP\IVPP_GetDataByCountEntriesSopnumbeItemnmbrBarcodeP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VPP\IVPP_GetFiltrovanyVPPList.cs">
+      <Link>Vyroba\VPP\IVPP_GetFiltrovanyVPPList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VPP\IVPP_Insert.cs">
+      <Link>Vyroba\VPP\IVPP_Insert.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VPP\IVPP_Update.cs">
+      <Link>Vyroba\VPP\IVPP_Update.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Interface\Vyroba\VPP\IVPP_Update_Row.cs">
+      <Link>Vyroba\VPP\IVPP_Update_Row.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQL\Common.cs">
+      <Link>Constants\Common.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Tisk\MST_Print_Server_ZPL_Printing\TiskParams.cs">
+      <Link>ZPL_Printing\TiskParams.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\WEBAPI\API_BO\Tisk_Etiketa.cs">
+      <Link>API_BO\Tisk_Etiketa.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\WEBAPI\API_BO\Vyroba.cs">
+      <Link>API_BO\Vyroba.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\WEBAPI\API_BO\Zbozi.cs">
+      <Link>API_BO\Zbozi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\WEBAPI\TransformBO.cs">
+      <Link>Classes\TransformBO.cs</Link>
+    </Compile>
+    <Compile Include="API_BO\SkladLokaceCZMST094.cs" />
+    <Compile Include="API_BO\SkladLokaceMapa.cs" />
+    <Compile Include="API_BO\Sklady.cs" />
+    <Compile Include="API_BO\Strediska.cs" />
+    <Compile Include="API_BO\Odberatele.cs" />
+    <Compile Include="Ciselniky\ISkladLokace_CZMST094\ISkladLokace_CZMST094.cs" />
+    <Compile Include="Ciselniky\ISkladLokace_CZMST094\ISkladLokace_CZMST094_DeleteSkladLokace.cs" />
+    <Compile Include="Ciselniky\ISkladLokace_CZMST094\ISkladLokace_CZMST094_GetFiltrovaneSkladLokace.cs" />
+    <Compile Include="Ciselniky\ISkladLokace_CZMST094\ISkladLokace_CZMST094_GetSkladLokaceByLOCNCODE.cs" />
+    <Compile Include="Ciselniky\ISkladLokace_CZMST094\ISkladLokace_CZMST094_ImportSkladLokace.cs" />
+    <Compile Include="Ciselniky\ISkladLokace_CZMST094\ISkladLokace_CZMST094_InsertSkladLokace.cs" />
+    <Compile Include="Ciselniky\ISkladLokace_CZMST094\ISkladLokace_CZMST094_UpdateSkladLokace.cs" />
+    <Compile Include="Ciselniky\ISkladLokace_Mapa2\ISkladLokace_Mapa2_ImportSkladLokace_Mapa.cs" />
+    <Compile Include="Classes\DataDavky.cs" />
+    <Compile Include="Classes\Davka.cs" />
+    <Compile Include="Classes\Objednavka.cs" />
+    <Compile Include="Classes\Sklad.cs" />
+    <Compile Include="Classes\StatusInfo.cs" />
+    <Compile Include="DataObalka\DataObalka_VyrabenePolozky.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSets\DSValues.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSValues.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Hlavni.cs">
+      <DependentUpon>Hlavni.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Hlavni.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hlavni.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Inventura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Inventura_Compare.cs">
+      <DependentUpon>Inventura_Compare.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Inventura_Compare.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventura_Compare.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Location.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Location.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Odberatele.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Pracovnici.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Prijem.cs">
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Prijem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Prodej.cs">
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Prodej.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Rady.cs">
+      <DependentUpon>Rady.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Rady.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rady.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Servis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Servis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\SkladLokace.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkladLokace.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\SkladLokace_CompareToIS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkladLokace_CompareToIS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\SkladPohyb.cs">
+      <DependentUpon>SkladPohyb.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\SkladPohyb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkladPohyb.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Sklady.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\StavSkladu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StavSkladu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Strediska.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strediska.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Terminal.cs">
+      <DependentUpon>Terminal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Terminal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Terminal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\TypyDokladu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TypyDokladu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Ukolovani.cs">
+      <DependentUpon>Ukolovani.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Ukolovani.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ukolovani.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Vydej.cs">
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Vydej.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Vyroba.cs">
+      <DependentUpon>Vyroba.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Vyroba.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vyroba.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Vyroba_Planovani.cs">
+      <DependentUpon>Vyroba_Planovani.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Vyroba_Planovani.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vyroba_Planovani.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Zbozi.cs">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Zbozi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets_Import\ImportPOHODA_FromExcel.cs">
+      <DependentUpon>ImportPOHODA_FromExcel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets_Import\ImportPOHODA_FromExcel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImportPOHODA_FromExcel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Entity_framework\DataImport.cs" />
+    <Compile Include="Entity_framework\MyDbContext.cs" />
+    <Compile Include="Expedice\IExpedice2.cs" />
+    <Compile Include="Expedice\IExpedice2_GetBufferPolozky.cs" />
+    <Compile Include="Expedice\IExpedice2_GetExpedicePolozky.cs" />
+    <Compile Include="Expedice\IExpedice2_GetFiltrovaneExpedicePolozky.cs" />
+    <Compile Include="Filtry\SkladLokaceCZMST094ListFiltr.cs" />
+    <Compile Include="Filtry\VyrabenePolozkyFiltr.cs" />
+    <Compile Include="ImportniMustky\IImportnyMustky.cs" />
+    <Compile Include="ImportniMustky\IImportnyMustky_ImportPohoda_SKzNC_EXIST.cs" />
+    <Compile Include="ImportniMustky\IImportnyMustky_ImportPohoda_SKzNC_AddRefAg.cs" />
+    <Compile Include="ImportniMustky\IImportnyMustky_Insert_ImportSKzNC.cs" />
+    <Compile Include="ImportniMustky\IImportnyMustky_Delete_ImportSKzNC.cs" />
+    <Compile Include="ImportniMustky\IImportnyMustky_GetImportPohoda_SKzNC.cs" />
+    <Compile Include="ImportniMustky\IImportnyMustky_UpdateImportPohoda_SKzNC.cs" />
+    <Compile Include="ImportniMustky\IImportnyMustky_ImportPohoda_SKzNC.cs" />
+    <Compile Include="Inventura\IInventura2_Generate_FromFile_Inventura.cs" />
+    <Compile Include="Inventura\IInventura2_GetCompare_I123.cs.cs" />
+    <Compile Include="Inventura\IInventura2_GetCompare_I4.cs" />
+    <Compile Include="Inventura\IInventura2_GetFiltrovanaINVPredloha.cs" />
+    <Compile Include="Inventura\IInventura2_Import_ToXML_Inventura.cs" />
+    <Compile Include="Inventura\IInventura2_RozdelitInventury.cs" />
+    <Compile Include="Inventura\IInventura2_ImportInventura.cs" />
+    <Compile Include="Inventura\IInventura2.cs" />
+    <Compile Include="Inventura\IInventura2_GenerateInventura.cs" />
+    <Compile Include="Inventura\IInventura2_GetFiltrovanaPredloha.cs" />
+    <Compile Include="Inventura\IInventura2_GetFiltrovaneNasnimane.cs" />
+    <Compile Include="Inventura\IInventura2_GetHlavickaByID.cs" />
+    <Compile Include="Inventura\IInventura2_GetHlavicky.cs" />
+    <Compile Include="Inventura\IInventura2_SloucitInventury.cs" />
+    <Compile Include="Inventura\IInventura2_UpdateI1.cs" />
+    <Compile Include="Parametry\IParametry2.cs" />
+    <Compile Include="Parametry\IParametry2_ConnectionString.cs" />
+    <Compile Include="DataSets\Expedice.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Expedice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Inventura.cs">
+      <DependentUpon>Inventura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Odberatele.cs">
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Servis.cs">
+      <DependentUpon>Servis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\SkladLokace.cs">
+      <DependentUpon>SkladLokace.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Sklady.cs">
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\StavSkladu.cs">
+      <DependentUpon>StavSkladu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Parametry\IParametry2_Get_APIConnection.cs" />
+    <Compile Include="Parametry\IParametry2_Get_ConnectionStrings.cs" />
+    <Compile Include="Parametry\IParametry2_Terminal_ID.cs" />
+    <Compile Include="Prijem\IPrijem2.cs" />
+    <Compile Include="Prijem\IPrijem2_DeletePE.cs" />
+    <Compile Include="Prijem\IPrijem2_DeletePI.cs" />
+    <Compile Include="Prijem\IPrijem2_GetFiltrovaneDavkyPE.cs" />
+    <Compile Include="Prijem\IPrijem2_GetFiltrovaneDavkyPI.cs" />
+    <Compile Include="Prijem\IPrijem2_UpdatePE.cs" />
+    <Compile Include="Prijem\IPrijem2_UpdatePE_storno.cs" />
+    <Compile Include="Prijem\IPrijem2_UpdatePI.cs" />
+    <Compile Include="Prijem\IPrijem2_UpdatePI_storno.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\IVyrabenePolozky2_Get.cs" />
+    <Compile Include="Providers\IVyrabenePolozky2.cs" />
+    <Compile Include="Servis\IServis.cs" />
+    <Compile Include="SkladLokace\ISkladLokace2.cs" />
+    <Compile Include="SkladLokace\ISkladLokace2_ClearLokMech.cs" />
+    <Compile Include="SkladLokace\ISkladLokace2_GetPohybyIS.cs" />
+    <Compile Include="SkladLokace\ISkladLokace2_GetFilt_CopareToIS_FASK.cs" />
+    <Compile Include="SkladLokace\ISkladLokace2_GetFilt_CopareToIS_IS.cs" />
+    <Compile Include="SkladLokace\ISkladLokace2_GetFiltrovanySkladLokaceStav.cs" />
+    <Compile Include="SkladLokace\ISkladLokace2_ImportLokMech_From_I4.cs" />
+    <Compile Include="SkladLokace\ISkladLokace2_InsertStavPohyb.cs" />
+    <Compile Include="SkladLokace\LokacePohyb.cs" />
+    <Compile Include="SkladPohyb\ISkladPohyb2_GetFiltrovanySkladLokace.cs" />
+    <Compile Include="SkladPohyb\ISkladPohyb2_GetTypPohybu.cs" />
+    <Compile Include="SkladPohyb\ISkladPohyb2.cs" />
+    <Compile Include="StavSkladu\IStavSkladu2_GetFiltrovanyStavSkladu.cs" />
+    <Compile Include="StavSkladu\IStavSkladu2_GetFiltrovanyStavSkladuHistorie.cs" />
+    <Compile Include="StavSkladu\IStavSkladu2_GetStavSkladu.cs" />
+    <Compile Include="StavSkladu\IStavSkladu2_getUzivatele.cs" />
+    <Compile Include="StavSkladu\IStavSkladu2_GetSklady.cs" />
+    <Compile Include="StavSkladu\IStavSkladu2.cs" />
+    <Compile Include="Tisky\ITisky2_EtiketaTisk.cs" />
+    <Compile Include="Tisky\ITisky2.cs" />
+    <Compile Include="Tisky\ITisky2_MetodaEtiketa.cs" />
+    <Compile Include="Tisky\ITisky2_MetodaEtiketa_GS1.cs" />
+    <Compile Include="Ukolovani\IUkolovani_Update_Row_CZ_UKOL.cs" />
+    <Compile Include="Ukolovani\IUkolovani_GetDataByID_CZ_UKOL.cs" />
+    <Compile Include="Ukolovani\IUkolovani_Update_Row_CZ_UKOL_UZIV.cs" />
+    <Compile Include="Ukolovani\IUkolovani_Fill_CZ_UKOL_STATE.cs" />
+    <Compile Include="Ukolovani\IUkolovani_GetDataByID_CZ_UKOL_UZIV.cs" />
+    <Compile Include="Ukolovani\IUkolovani_Update_CZ_UKOL_UZIV.cs" />
+    <Compile Include="Ukolovani\IUkolovani_Update_CZ_UKOL.cs" />
+    <Compile Include="Ukolovani\IUkolovani_GetDataByState_CZ_UKOL_STATE.cs" />
+    <Compile Include="Ukolovani\IUkolovani_Delete_CZ_UKOL.cs" />
+    <Compile Include="Ukolovani\IUkolovani_DeleteByUkolID_CZ_UKOL_UZIV.cs" />
+    <Compile Include="Ukolovani\IUkolovani_Insert_CZ_UKOL.cs" />
+    <Compile Include="Ukolovani\IUkolovani_Insert_CZ_UKOL_UZIV.cs" />
+    <Compile Include="Ukolovani\IUkolovani_GetDataByUkolIDAndUserID_CZ_UKOL_UZIV.cs" />
+    <Compile Include="Ukolovani\IUkolovani_Fill_CZ_UKOL.cs" />
+    <Compile Include="Ukolovani\IUkolovani_GetCZ_UKOL_STATE.cs" />
+    <Compile Include="Ukolovani\IUkolovani.cs" />
+    <Compile Include="Uzivatele\IUzivatele2 _OverUzivatele.cs" />
+    <Compile Include="Uzivatele\IUzivatele2.cs" />
+    <Compile Include="Vazby\IVazby2_ImportVyrobky.cs" />
+    <Compile Include="Vazby\IVazby2_Modifikace_TP_SetZamenZdrojCil.cs" />
+    <Compile Include="Vazby\IVazby2_Modifikace_TP_GetFiltrovaneData.cs" />
+    <Compile Include="Vazby\IVazby2_DeleteMaterial.cs" />
+    <Compile Include="Vazby\IVazby2_Fill_only_Koef_and_Alter.cs" />
+    <Compile Include="Vazby\IVazby2_Fill_onlyALTERtable.cs" />
+    <Compile Include="Vazby\IVazby2_ImportVydejkaPohoda.cs" />
+    <Compile Include="Vazby\IVazby2_UpdateEdit.cs" />
+    <Compile Include="Vazby\IVazby2_DeleteVyrobek.cs" />
+    <Compile Include="Vazby\IVazby2_Scalar_Vyrobky_Count.cs" />
+    <Compile Include="Vazby\IVazby2_Scalar_MAX_IDL.cs" />
+    <Compile Include="Vazby\IVazby2_GetFiltrovanyVazbyAddVyrobky.cs" />
+    <Compile Include="Vazby\IVazby2_GetFiltrovanyVazbyVyrobky.cs" />
+    <Compile Include="Vazby\IVazby2.cs" />
+    <Compile Include="Vazby\IVazby2_GetFiltrovanyVazbyMaterialy.cs" />
+    <Compile Include="Vazby\IVazby2_Insert_VazbyAddVyrobky.cs" />
+    <Compile Include="Vydej\IVydej2_DeleteSI.cs" />
+    <Compile Include="Vydej\IVydej2_Get_SE_MaxCountEntries.cs" />
+    <Compile Include="Vydej\IVydej2_InsertSI.cs" />
+    <Compile Include="Vydej\IVydej2_KontrolaDavky_TEST.cs" />
+    <Compile Include="Vydej\IVydej2_GetAdresy.cs" />
+    <Compile Include="Vydej\IVydej2_GetFiltrovaneDavkySI.cs" />
+    <Compile Include="Vydej\IVydej2_UpdateSE_QTY_ByDEXROWID.cs" />
+    <Compile Include="Vydej\IVydej2.cs" />
+    <Compile Include="Vydej\IVydej2_DeleteSE.cs" />
+    <Compile Include="Vydej\IVydej2_GenerateDavka.cs" />
+    <Compile Include="Vydej\IVydej2_GetFiltrovaneDavky.cs" />
+    <Compile Include="Vydej\IVydej2_GetFiltrovaneHlavicky.cs" />
+    <Compile Include="Vydej\IVydej2_GetHlavickaByCountEntries.cs" />
+    <Compile Include="Vydej\IVydej2_GetHlavicky.cs" />
+    <Compile Include="Vydej\IVydej2_InsertSE.cs" />
+    <Compile Include="Vydej\IVydej2_KontrolaDavky.cs" />
+    <Compile Include="Vydej\IVydej2_UpdatePriorityDavka_byPriority.cs" />
+    <Compile Include="Vydej\IVydej2_UpdatePriorityDavka_byUserID.cs" />
+    <Compile Include="Vydej\IVydej2_UpdateSE.cs" />
+    <Compile Include="Vydej\IVydej2_UpdateSE_storno.cs" />
+    <Compile Include="Vydej\IVydej2_UpdateSI.cs" />
+    <Compile Include="Vydej\IVydej2_UvolnitDavku.cs" />
+    <Compile Include="Vyroba\MachinesDefinition\IMachinesDefinition.cs" />
+    <Compile Include="Vyroba\MachinesDefinition\IMachinesDefinition_GetFilterData.cs" />
+    <Compile Include="Vyroba\MachinesDefinition\IMachinesDefinition_IudCommand.cs" />
+    <Compile Include="Vyroba\Machines\IMachines_GetFilterData.cs" />
+    <Compile Include="Vyroba\Machines\IMachines_IudCommand.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="DataSets\DSValues.xsc">
+      <DependentUpon>DSValues.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DSValues.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSValues.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\DSValues.xss">
+      <DependentUpon>DSValues.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Expedice.xsc">
+      <DependentUpon>Expedice.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Expedice.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Expedice.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Expedice.xss">
+      <DependentUpon>Expedice.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Hlavni.xsc">
+      <DependentUpon>Hlavni.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Hlavni.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Hlavni.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Hlavni.xss">
+      <DependentUpon>Hlavni.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Inventura.xsc">
+      <DependentUpon>Inventura.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Inventura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventura.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Inventura.xss">
+      <DependentUpon>Inventura.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Inventura_Compare.xsc">
+      <DependentUpon>Inventura_Compare.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Inventura_Compare.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventura_Compare.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Inventura_Compare.xss">
+      <DependentUpon>Inventura_Compare.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Location.xsc">
+      <DependentUpon>Location.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Location.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Location.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Location.xss">
+      <DependentUpon>Location.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Odberatele.xsc">
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Odberatele.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Odberatele.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Odberatele.xss">
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Pracovnici.xsc">
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Pracovnici.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pracovnici.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Pracovnici.xss">
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Prijem.xsc">
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Prijem.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Prijem.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Prijem.xss">
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Prodej.xsc">
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Prodej.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Prodej.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Prodej.xss">
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Rady.xsc">
+      <DependentUpon>Rady.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Rady.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Rady.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Rady.xss">
+      <DependentUpon>Rady.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Servis.xsc">
+      <DependentUpon>Servis.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Servis.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Servis.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Servis.xss">
+      <DependentUpon>Servis.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\SkladLokace.xsc">
+      <DependentUpon>SkladLokace.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\SkladLokace.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SkladLokace.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\SkladLokace.xss">
+      <DependentUpon>SkladLokace.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\SkladLokace_CompareToIS.xsc">
+      <DependentUpon>SkladLokace_CompareToIS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\SkladLokace_CompareToIS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SkladLokace_CompareToIS.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\SkladLokace_CompareToIS.xss">
+      <DependentUpon>SkladLokace_CompareToIS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\SkladPohyb.xsc">
+      <DependentUpon>SkladPohyb.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\SkladPohyb.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SkladPohyb.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\SkladPohyb.xss">
+      <DependentUpon>SkladPohyb.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Sklady.xsc">
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Sklady.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sklady.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Sklady.xss">
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\StavSkladu.xsc">
+      <DependentUpon>StavSkladu.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\StavSkladu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StavSkladu.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\StavSkladu.xss">
+      <DependentUpon>StavSkladu.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Strediska.xsc">
+      <DependentUpon>Strediska.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Strediska.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Strediska.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Strediska.xss">
+      <DependentUpon>Strediska.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Terminal.xsc">
+      <DependentUpon>Terminal.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Terminal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Terminal.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Terminal.xss">
+      <DependentUpon>Terminal.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\TypyDokladu.xsc">
+      <DependentUpon>TypyDokladu.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\TypyDokladu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TypyDokladu.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\TypyDokladu.xss">
+      <DependentUpon>TypyDokladu.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Ukolovani.xsc">
+      <DependentUpon>Ukolovani.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Ukolovani.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ukolovani.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Ukolovani.xss">
+      <DependentUpon>Ukolovani.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Vydej.xsc">
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Vydej.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Vydej.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Vydej.xss">
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Vyroba.xsc">
+      <DependentUpon>Vyroba.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Vyroba.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Vyroba.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Vyroba.xss">
+      <DependentUpon>Vyroba.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Vyroba_Planovani.xsc">
+      <DependentUpon>Vyroba_Planovani.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Vyroba_Planovani.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Vyroba_Planovani.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Vyroba_Planovani.xss">
+      <DependentUpon>Vyroba_Planovani.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Zbozi.xsc">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Zbozi.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Zbozi.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Zbozi.xss">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets_Import\ImportPOHODA_FromExcel.xsc">
+      <DependentUpon>ImportPOHODA_FromExcel.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets_Import\ImportPOHODA_FromExcel.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ImportPOHODA_FromExcel.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.Interfaces.DataSets_Import</CustomToolNamespace>
+    </None>
+    <None Include="DataSets_Import\ImportPOHODA_FromExcel.xss">
+      <DependentUpon>ImportPOHODA_FromExcel.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vazby\ModifikaceTP\ModifikaceTP.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\_SdileneProjekty_\Fask.Logging\Fask.Logging.csproj">
+      <Project>{89e8c070-4694-4f11-ab01-a674bf8b9f80}</Project>
+      <Name>Fask.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\FASK.Logins\FASK.Logins.csproj">
+      <Project>{bc4b8c29-bb68-4e66-9257-356603fcf7d2}</Project>
+      <Name>FASK.Logins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\Fask.POHODA.Disponibility\Fask.POHODA.Disponibility.csproj">
+      <Project>{35a80609-485a-490f-9ca3-b5d302fe5b48}</Project>
+      <Name>Fask.POHODA.Disponibility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

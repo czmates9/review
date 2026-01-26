@@ -1,0 +1,23 @@
+Dat jak návrh pro JiS
+
+-Udelat pro každou tabulku, funkci, proceduru, pohled zvlašt textovy soubor, lepší přehlednost, lepší editovatelnost...
+
+- Nazvy mnet v tvari  XXXXX_NazevObsahu.sql
+-nasledne pomoci powershell scriptu, brat XXXXX jak číslo, a v tomto pořadí brat soubory a 
+
+-Najdene, nevyskoušene...
+
+1. cat example*.txt | sc allexamples.txt 
+
+2. Get-Content files.* | Set-Content newfile.file
+
+3. cmd /c copy one.txt+two.txt+three.txt four.txt
+
+... určite se najde neco lepčí...
+
+-A pomoci tohoto scriptu vytvořit jeden soubor , který bude dočasny, vždy se použije a pak zlikviduje, anebo zazalohuje že tento byl použit...
+-Ale bude se generovat nový čerstvy aktualny :) 
+
+
+
+

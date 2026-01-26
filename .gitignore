@@ -1,0 +1,44 @@
+#################
+## Visual Studio
+#################
+## Ignorovat Visual Studio docasne soubory
+#################
+
+# User-specific files
+
+*.suo
+*.user
+*.sln.docstates
+
+# Build results
+
+[Dd]ebug/
+[Rr]elease/
+[Bb]uild/
+[Bb]in/
+[Oo]bj/
+
+/0x_Zdrojove_Kody/!Build!/
+
+/0x_Zdrojove_Kody/Win_Kom_Server/MST_Win_Kom_Server/Konfigurace/Konfigurace_Soubory/Fask_Module_Pohod_I_Tec.xml
+/0x_Zdrojove_Kody/Win_Kom_Server/MST_Win_Kom_Server/Konfigurace/Konfigurace_Soubory/Fask_Module_Print_Hanibal.xml
+/0x_Zdrojove_Kody/Win_Kom_Server/MST_Win_Kom_Server/Konfigurace/Konfigurace_Soubory/MST_ABRA_CarpServis_Config.xml
+/0x_Zdrojove_Kody/Win_Kom_Server/MST_Win_Kom_Server/Konfigurace/Konfigurace_Soubory/MST_ABRA_SAB_Config.xml
+/0x_Zdrojove_Kody/Win_Kom_Server/MST_Win_Kom_Server/Konfigurace/Konfigurace_Soubory/MST_Konfig_Agendy.xml
+/0x_Zdrojove_Kody/Win_Kom_Server/MST_Win_Kom_Server/Konfigurace/Konfigurace_Soubory/MST_Konfig_WebConfig.xml
+/0x_Zdrojove_Kody/Win_Kom_Server/MST_Win_Kom_Server/Konfigurace/Konfigurace_Soubory/MST_Pohoda_Config.xml
+/0x_Zdrojove_Kody/Win_Kom_Server/MST_Win_Kom_Server/Konfigurace/Konfigurace_Soubory/MST_SQL_Config.xml
+
+/0x_Zdrojove_Kody/Win_Kom_Server/MST_Win_Kom_Server/Logs
+/0x_Zdrojove_Kody/Win_Kom_Server/MST_Win_Kom_Server/Konfigurace/Konfigurace_Soubory_Terminal
+/0x_Zdrojove_Kody/Win_Kom_Server/packages
+
+/0x_Zdrojove_Kody/_SdileneProjekty_/WIN_CE/Fask.Logging/!Build!/Debug online with SQLCE/Fask.Logging.dll
+/0x_Zdrojove_Kody/_SdileneProjekty_/WIN_CE/Fask.Logging/!Build!/Debug online with SQLCE/Fask.Logging.pdb
+
+/0x_Zdrojove_Kody/SledovaniVyroby2/packages
+
+/0x_Zdrojove_Kody/Konzola/packages
+/0x_Zdrojove_Kody/Vyroba_2_Klienti/packages
+
+/0x_Zdrojove_Kody/Konzola/.vs

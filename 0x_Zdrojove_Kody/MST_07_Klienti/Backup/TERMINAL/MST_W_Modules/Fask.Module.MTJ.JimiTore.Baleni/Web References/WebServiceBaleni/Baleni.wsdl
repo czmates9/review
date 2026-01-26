@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://tempuri.org/VydejJimiTore.xsd" />
+      <s:import schemaLocation="http://localhost/MST_Win_Kom_Server_7/Baleni.asmx?schema=VydejJimiTore" namespace="http://tempuri.org/VydejJimiTore.xsd" />
+      <s:element name="GetBaleniData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objednavkacislo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBaleniDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBaleniDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="balikcislo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BaleniDataCommit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="terminalid" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="objednavkacislo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="balikcislo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="printedtime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BaleniDataCommitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BaleniDataCommitResult" type="tns:StatusBaleni" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StatusBaleni">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="tns:STATUS" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="STATUS">
+        <s:restriction base="s:string">
+          <s:enumeration value="OK" />
+          <s:enumeration value="ERROR" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="OverObjednavka">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="terminalid" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="objednavkacislo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OverObjednavkaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OverObjednavkaResult" type="tns:StatusObjednavka" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StatusObjednavka">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="tns:STATUS" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ProcessVydej">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="terminalid" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="objednavkacislo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/VydejJimiTore.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessVydejResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessVydejResult" type="tns:StatusObjednavka" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VydejGetZbozi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="terminalid" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="objednavkacislo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="barcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VydejGetZboziResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VydejGetZboziResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/VydejJimiTore.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="sp" type="tns:StatusPolozka" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StatusPolozka">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="tns:STATUSPolozkaRes" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="STATUSPolozkaRes">
+        <s:restriction base="s:string">
+          <s:enumeration value="OK" />
+          <s:enumeration value="WARNING" />
+          <s:enumeration value="ERROR" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="PrijemZbytkuGetZbozi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="terminalid" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="objednavkacislo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="barcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrijemZbytkuGetZboziResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrijemZbytkuGetZboziResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/VydejJimiTore.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="sp" type="tns:StatusObjednavka" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrijemZbytkuOverDelka">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="terminalid" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="objednavkacislo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="matid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="delka" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="mnozstvi" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrijemZbytkuOverDelkaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrijemZbytkuOverDelkaResult" type="tns:StatusObjednavka" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OverPrijemka">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="terminalid" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="prijemkacislo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OverPrijemkaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OverPrijemkaResult" type="tns:StatusObjednavka" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrijemGetZbozi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="terminalid" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="prijemkacislo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="barcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrijemGetZboziResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrijemGetZboziResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/VydejJimiTore.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="sp" type="tns:StatusPolozka" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessPrijem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="terminalid" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="prijemkacislo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/VydejJimiTore.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessPrijemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessPrijemResult" type="tns:StatusObjednavka" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Kontrola_OverObjednavka">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="terminalid" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="objednavkacislo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Kontrola_OverObjednavkaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Kontrola_OverObjednavkaResult" type="tns:StatusObjednavka" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Kontrola_GetZbozi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="terminalid" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="objednavkacislo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Kontrola_GetZboziResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Kontrola_GetZboziResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/VydejJimiTore.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBaleniDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBaleniData" />
+  </wsdl:message>
+  <wsdl:message name="GetBaleniDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBaleniDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="BaleniDataCommitSoapIn">
+    <wsdl:part name="parameters" element="tns:BaleniDataCommit" />
+  </wsdl:message>
+  <wsdl:message name="BaleniDataCommitSoapOut">
+    <wsdl:part name="parameters" element="tns:BaleniDataCommitResponse" />
+  </wsdl:message>
+  <wsdl:message name="OverObjednavkaSoapIn">
+    <wsdl:part name="parameters" element="tns:OverObjednavka" />
+  </wsdl:message>
+  <wsdl:message name="OverObjednavkaSoapOut">
+    <wsdl:part name="parameters" element="tns:OverObjednavkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessVydejSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessVydej" />
+  </wsdl:message>
+  <wsdl:message name="ProcessVydejSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessVydejResponse" />
+  </wsdl:message>
+  <wsdl:message name="VydejGetZboziSoapIn">
+    <wsdl:part name="parameters" element="tns:VydejGetZbozi" />
+  </wsdl:message>
+  <wsdl:message name="VydejGetZboziSoapOut">
+    <wsdl:part name="parameters" element="tns:VydejGetZboziResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrijemZbytkuGetZboziSoapIn">
+    <wsdl:part name="parameters" element="tns:PrijemZbytkuGetZbozi" />
+  </wsdl:message>
+  <wsdl:message name="PrijemZbytkuGetZboziSoapOut">
+    <wsdl:part name="parameters" element="tns:PrijemZbytkuGetZboziResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrijemZbytkuOverDelkaSoapIn">
+    <wsdl:part name="parameters" element="tns:PrijemZbytkuOverDelka" />
+  </wsdl:message>
+  <wsdl:message name="PrijemZbytkuOverDelkaSoapOut">
+    <wsdl:part name="parameters" element="tns:PrijemZbytkuOverDelkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="OverPrijemkaSoapIn">
+    <wsdl:part name="parameters" element="tns:OverPrijemka" />
+  </wsdl:message>
+  <wsdl:message name="OverPrijemkaSoapOut">
+    <wsdl:part name="parameters" element="tns:OverPrijemkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrijemGetZboziSoapIn">
+    <wsdl:part name="parameters" element="tns:PrijemGetZbozi" />
+  </wsdl:message>
+  <wsdl:message name="PrijemGetZboziSoapOut">
+    <wsdl:part name="parameters" element="tns:PrijemGetZboziResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessPrijemSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessPrijem" />
+  </wsdl:message>
+  <wsdl:message name="ProcessPrijemSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessPrijemResponse" />
+  </wsdl:message>
+  <wsdl:message name="Kontrola_OverObjednavkaSoapIn">
+    <wsdl:part name="parameters" element="tns:Kontrola_OverObjednavka" />
+  </wsdl:message>
+  <wsdl:message name="Kontrola_OverObjednavkaSoapOut">
+    <wsdl:part name="parameters" element="tns:Kontrola_OverObjednavkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Kontrola_GetZboziSoapIn">
+    <wsdl:part name="parameters" element="tns:Kontrola_GetZbozi" />
+  </wsdl:message>
+  <wsdl:message name="Kontrola_GetZboziSoapOut">
+    <wsdl:part name="parameters" element="tns:Kontrola_GetZboziResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BaleniSoap">
+    <wsdl:operation name="GetBaleniData">
+      <wsdl:input message="tns:GetBaleniDataSoapIn" />
+      <wsdl:output message="tns:GetBaleniDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BaleniDataCommit">
+      <wsdl:input message="tns:BaleniDataCommitSoapIn" />
+      <wsdl:output message="tns:BaleniDataCommitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OverObjednavka">
+      <wsdl:input message="tns:OverObjednavkaSoapIn" />
+      <wsdl:output message="tns:OverObjednavkaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessVydej">
+      <wsdl:input message="tns:ProcessVydejSoapIn" />
+      <wsdl:output message="tns:ProcessVydejSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VydejGetZbozi">
+      <wsdl:input message="tns:VydejGetZboziSoapIn" />
+      <wsdl:output message="tns:VydejGetZboziSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrijemZbytkuGetZbozi">
+      <wsdl:input message="tns:PrijemZbytkuGetZboziSoapIn" />
+      <wsdl:output message="tns:PrijemZbytkuGetZboziSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrijemZbytkuOverDelka">
+      <wsdl:input message="tns:PrijemZbytkuOverDelkaSoapIn" />
+      <wsdl:output message="tns:PrijemZbytkuOverDelkaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OverPrijemka">
+      <wsdl:input message="tns:OverPrijemkaSoapIn" />
+      <wsdl:output message="tns:OverPrijemkaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrijemGetZbozi">
+      <wsdl:input message="tns:PrijemGetZboziSoapIn" />
+      <wsdl:output message="tns:PrijemGetZboziSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessPrijem">
+      <wsdl:input message="tns:ProcessPrijemSoapIn" />
+      <wsdl:output message="tns:ProcessPrijemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Kontrola_OverObjednavka">
+      <wsdl:input message="tns:Kontrola_OverObjednavkaSoapIn" />
+      <wsdl:output message="tns:Kontrola_OverObjednavkaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Kontrola_GetZbozi">
+      <wsdl:input message="tns:Kontrola_GetZboziSoapIn" />
+      <wsdl:output message="tns:Kontrola_GetZboziSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BaleniSoap" type="tns:BaleniSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBaleniData">
+      <soap:operation soapAction="http://tempuri.org/GetBaleniData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BaleniDataCommit">
+      <soap:operation soapAction="http://tempuri.org/BaleniDataCommit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OverObjednavka">
+      <soap:operation soapAction="http://tempuri.org/OverObjednavka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessVydej">
+      <soap:operation soapAction="http://tempuri.org/ProcessVydej" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VydejGetZbozi">
+      <soap:operation soapAction="http://tempuri.org/VydejGetZbozi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrijemZbytkuGetZbozi">
+      <soap:operation soapAction="http://tempuri.org/PrijemZbytkuGetZbozi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrijemZbytkuOverDelka">
+      <soap:operation soapAction="http://tempuri.org/PrijemZbytkuOverDelka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OverPrijemka">
+      <soap:operation soapAction="http://tempuri.org/OverPrijemka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrijemGetZbozi">
+      <soap:operation soapAction="http://tempuri.org/PrijemGetZbozi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessPrijem">
+      <soap:operation soapAction="http://tempuri.org/ProcessPrijem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Kontrola_OverObjednavka">
+      <soap:operation soapAction="http://tempuri.org/Kontrola_OverObjednavka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Kontrola_GetZbozi">
+      <soap:operation soapAction="http://tempuri.org/Kontrola_GetZbozi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BaleniSoap12" type="tns:BaleniSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBaleniData">
+      <soap12:operation soapAction="http://tempuri.org/GetBaleniData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BaleniDataCommit">
+      <soap12:operation soapAction="http://tempuri.org/BaleniDataCommit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OverObjednavka">
+      <soap12:operation soapAction="http://tempuri.org/OverObjednavka" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessVydej">
+      <soap12:operation soapAction="http://tempuri.org/ProcessVydej" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VydejGetZbozi">
+      <soap12:operation soapAction="http://tempuri.org/VydejGetZbozi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrijemZbytkuGetZbozi">
+      <soap12:operation soapAction="http://tempuri.org/PrijemZbytkuGetZbozi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrijemZbytkuOverDelka">
+      <soap12:operation soapAction="http://tempuri.org/PrijemZbytkuOverDelka" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OverPrijemka">
+      <soap12:operation soapAction="http://tempuri.org/OverPrijemka" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrijemGetZbozi">
+      <soap12:operation soapAction="http://tempuri.org/PrijemGetZbozi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessPrijem">
+      <soap12:operation soapAction="http://tempuri.org/ProcessPrijem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Kontrola_OverObjednavka">
+      <soap12:operation soapAction="http://tempuri.org/Kontrola_OverObjednavka" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Kontrola_GetZbozi">
+      <soap12:operation soapAction="http://tempuri.org/Kontrola_GetZbozi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Baleni">
+    <wsdl:port name="BaleniSoap" binding="tns:BaleniSoap">
+      <soap:address location="http://localhost/MST_Win_Kom_Server_7/Baleni.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BaleniSoap12" binding="tns:BaleniSoap12">
+      <soap12:address location="http://localhost/MST_Win_Kom_Server_7/Baleni.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

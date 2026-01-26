@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://fask.cz/Odberatele.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://fask.cz/Odberatele.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://fask.cz/Odberatele.xsd" id="Odberatele" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="" name="Odberatele">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST090">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="odb_id" type="xs:string" />
+              <xs:element minOccurs="0" name="odb_desc" type="xs:string" />
+              <xs:element minOccurs="0" name="odb_typ" type="xs:string" />
+              <xs:element minOccurs="0" name="odb_carcode" type="xs:string" />
+              <xs:element msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="DEX_ROW_ID" type="xs:int" />
+              <xs:element minOccurs="0" name="odb_ico" type="xs:string" />
+              <xs:element minOccurs="0" name="mena_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="odb_misto" type="xs:string" />
+              <xs:element minOccurs="0" name="odb_ulice" type="xs:string" />
+              <xs:element minOccurs="0" name="odb_cisloOr" type="xs:string" />
+              <xs:element minOccurs="0" name="odb_psc" type="xs:string" />
+              <xs:element minOccurs="0" name="odb_dic" type="xs:string" />
+              <xs:element minOccurs="0" name="odb_Odberatel" type="xs:boolean" />
+              <xs:element minOccurs="0" name="odb_Dodavatel" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

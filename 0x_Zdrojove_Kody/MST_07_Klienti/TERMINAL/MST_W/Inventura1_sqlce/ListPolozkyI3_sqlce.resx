@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="mainMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="menuItemVyber.Text" xml:space="preserve">
+    <value>Ent - Výběr</value>
+  </data>
+  <data name="menuItem3.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="menuItemStorno.Text" xml:space="preserve">
+    <value>Esc - Storno</value>
+  </data>
+  <data name="menuItem1.Text" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dataGrid1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="dataGrid1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt</value>
+  </data>
+  <data name="dataGrid1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dataGrid1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>289, 289</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dataGrid1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgDavka.HeaderText" xml:space="preserve">
+    <value>Dávka</value>
+  </data>
+  <data name="dgDavka.MappingName" xml:space="preserve">
+    <value>CountEntries</value>
+  </data>
+  <data name="dgDavka.NullText" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="dgItemnmbr.HeaderText" xml:space="preserve">
+    <value>Č.pol.</value>
+  </data>
+  <data name="dgItemnmbr.MappingName" xml:space="preserve">
+    <value>ITEMNMBR</value>
+  </data>
+  <data name="dgItemnmbr.NullText" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="dgCZCarkod.HeaderText" xml:space="preserve">
+    <value>Č.k. vlastní</value>
+  </data>
+  <data name="dgCZCarkod.MappingName" xml:space="preserve">
+    <value>CZ_CarKod</value>
+  </data>
+  <data name="dgCZCarkod.NullText" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="dgQTYPACK.HeaderText" xml:space="preserve">
+    <value>Balení</value>
+  </data>
+  <data name="dgQTYPACK.MappingName" xml:space="preserve">
+    <value>QTYPACK</value>
+  </data>
+  <data name="dgQTYPACK.NullText" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="dgVNDITNUM.HeaderText" xml:space="preserve">
+    <value>Č.k.</value>
+  </data>
+  <data name="dgVNDITNUM.MappingName" xml:space="preserve">
+    <value>VNDITNUM</value>
+  </data>
+  <data name="dgVNDITNUM.NullText" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="dgMJ.HeaderText" xml:space="preserve">
+    <value>MJ</value>
+  </data>
+  <data name="dgMJ.MappingName" xml:space="preserve">
+    <value>MJ</value>
+  </data>
+  <data name="dgMJ.NullText" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="dgVENDNAME.HeaderText" xml:space="preserve">
+    <value>Partner</value>
+  </data>
+  <data name="dgVENDNAME.MappingName" xml:space="preserve">
+    <value>VENDNAME</value>
+  </data>
+  <data name="dgVENDNAME.NullText" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="dgVENDORID.HeaderText" xml:space="preserve">
+    <value>Parter ID</value>
+  </data>
+  <data name="dgVENDORID.MappingName" xml:space="preserve">
+    <value>VENDORID</value>
+  </data>
+  <data name="dgVENDORID.NullText" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="dgItemdesc.HeaderText" xml:space="preserve">
+    <value>Popis</value>
+  </data>
+  <data name="dgItemdesc.MappingName" xml:space="preserve">
+    <value>ITEMDESC</value>
+  </data>
+  <data name="dgItemdesc.NullText" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;dataGrid1.Name" xml:space="preserve">
+    <value>dataGrid1</value>
+  </data>
+  <data name="&gt;&gt;dataGrid1.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dataGrid1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dataGrid1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.FormFactorShadowProperty" xml:space="preserve">
+    <value>WEBPAD</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Skin" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>289, 289</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Výběr položky</value>
+  </data>
+  <data name="&gt;&gt;mainMenu1.Name" xml:space="preserve">
+    <value>mainMenu1</value>
+  </data>
+  <data name="&gt;&gt;mainMenu1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MainMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem1.Name" xml:space="preserve">
+    <value>menuItem1</value>
+  </data>
+  <data name="&gt;&gt;menuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItemVyber.Name" xml:space="preserve">
+    <value>menuItemVyber</value>
+  </data>
+  <data name="&gt;&gt;menuItemVyber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem3.Name" xml:space="preserve">
+    <value>menuItem3</value>
+  </data>
+  <data name="&gt;&gt;menuItem3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItemStorno.Name" xml:space="preserve">
+    <value>menuItemStorno</value>
+  </data>
+  <data name="&gt;&gt;menuItemStorno.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridTableStyle1.Name" xml:space="preserve">
+    <value>dataGridTableStyle1</value>
+  </data>
+  <data name="&gt;&gt;dataGridTableStyle1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridTableStyle, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgDavka.Name" xml:space="preserve">
+    <value>dgDavka</value>
+  </data>
+  <data name="&gt;&gt;dgDavka.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2TextBoxColumn, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgItemnmbr.Name" xml:space="preserve">
+    <value>dgItemnmbr</value>
+  </data>
+  <data name="&gt;&gt;dgItemnmbr.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2TextBoxColumn, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgCZCarkod.Name" xml:space="preserve">
+    <value>dgCZCarkod</value>
+  </data>
+  <data name="&gt;&gt;dgCZCarkod.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2TextBoxColumn, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgQTYPACK.Name" xml:space="preserve">
+    <value>dgQTYPACK</value>
+  </data>
+  <data name="&gt;&gt;dgQTYPACK.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2TextBoxColumn, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgVNDITNUM.Name" xml:space="preserve">
+    <value>dgVNDITNUM</value>
+  </data>
+  <data name="&gt;&gt;dgVNDITNUM.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2TextBoxColumn, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgMJ.Name" xml:space="preserve">
+    <value>dgMJ</value>
+  </data>
+  <data name="&gt;&gt;dgMJ.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2TextBoxColumn, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgVENDNAME.Name" xml:space="preserve">
+    <value>dgVENDNAME</value>
+  </data>
+  <data name="&gt;&gt;dgVENDNAME.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2TextBoxColumn, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgVENDORID.Name" xml:space="preserve">
+    <value>dgVENDORID</value>
+  </data>
+  <data name="&gt;&gt;dgVENDORID.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2TextBoxColumn, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgItemdesc.Name" xml:space="preserve">
+    <value>dgItemdesc</value>
+  </data>
+  <data name="&gt;&gt;dgItemdesc.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2TextBoxColumn, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ListPolozkyI3_sqlce</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

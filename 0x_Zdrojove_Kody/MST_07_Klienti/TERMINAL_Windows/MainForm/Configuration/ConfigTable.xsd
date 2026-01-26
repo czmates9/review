@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ConfigTable" targetNamespace="http://tempuri.org/ConfigTable.xsd" xmlns:mstns="http://tempuri.org/ConfigTable.xsd" xmlns="http://tempuri.org/ConfigTable.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ConfigTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ConfigTable" msprop:Generator_UserDSName="ConfigTable">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RFID" msprop:Generator_TableClassName="RFIDDataTable" msprop:Generator_TableVarName="tableRFID" msprop:Generator_TablePropName="RFID" msprop:Generator_RowDeletingName="RFIDRowDeleting" msprop:Generator_RowChangingName="RFIDRowChanging" msprop:Generator_RowEvHandlerName="RFIDRowChangeEventHandler" msprop:Generator_RowDeletedName="RFIDRowDeleted" msprop:Generator_UserTableName="RFID" msprop:Generator_RowChangedName="RFIDRowChanged" msprop:Generator_RowEvArgName="RFIDRowChangeEvent" msprop:Generator_RowClassName="RFIDRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ComPort" msprop:Generator_ColumnVarNameInTable="columnComPort" msprop:Generator_ColumnPropNameInRow="ComPort" msprop:Generator_ColumnPropNameInTable="ComPortColumn" msprop:Generator_UserColumnName="ComPort" type="xs:string" minOccurs="0" />
+              <xs:element name="Baudrate" msprop:Generator_ColumnVarNameInTable="columnBaudrate" msprop:Generator_ColumnPropNameInRow="Baudrate" msprop:Generator_ColumnPropNameInTable="BaudrateColumn" msprop:Generator_UserColumnName="Baudrate" type="xs:string" minOccurs="0" />
+              <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LoginMetod" msprop:Generator_TableClassName="LoginMetodDataTable" msprop:Generator_TableVarName="tableLoginMetod" msprop:Generator_TablePropName="LoginMetod" msprop:Generator_RowDeletingName="LoginMetodRowDeleting" msprop:Generator_RowChangingName="LoginMetodRowChanging" msprop:Generator_RowEvHandlerName="LoginMetodRowChangeEventHandler" msprop:Generator_RowDeletedName="LoginMetodRowDeleted" msprop:Generator_UserTableName="LoginMetod" msprop:Generator_RowChangedName="LoginMetodRowChanged" msprop:Generator_RowEvArgName="LoginMetodRowChangeEvent" msprop:Generator_RowClassName="LoginMetodRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Method" msprop:Generator_ColumnVarNameInTable="columnMethod" msprop:Generator_ColumnPropNameInRow="Method" msprop:Generator_ColumnPropNameInTable="MethodColumn" msprop:Generator_UserColumnName="Method" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="Login" msprop:Generator_ColumnVarNameInTable="columnLogin" msprop:Generator_ColumnPropNameInRow="Login" msprop:Generator_ColumnPropNameInTable="LoginColumn" msprop:Generator_UserColumnName="Login" type="xs:string" minOccurs="0" />
+              <xs:element name="Password" msprop:Generator_ColumnVarNameInTable="columnPassword" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_ColumnPropNameInTable="PasswordColumn" msprop:Generator_UserColumnName="Password" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

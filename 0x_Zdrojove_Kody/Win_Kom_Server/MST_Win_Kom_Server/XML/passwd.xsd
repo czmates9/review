@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="passwd" targetNamespace="http://fask.cz/passwd.xsd" elementFormDefault="qualified" xmlns="http://fask.cz/passwd.xsd" xmlns:mstns="http://fask.cz/passwd.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="passfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="user" minOccurs="1" maxOccurs="99999">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="login" type="xs:string" minOccurs="1" maxOccurs="1" />
+              <xs:element name="password" type="xs:string" minOccurs="1" maxOccurs="1" />
+              <xs:element name="id" type="xs:decimal" minOccurs="1" maxOccurs="1" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

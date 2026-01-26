@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E4DCC2AA-A9D4-4C14-AD3F-A2CE4A35EC9E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fask.ModulePohodaXML</RootNamespace>
+    <AssemblyName>Fask.ModulePohodaXML</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\!Build!\Konzola\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\!Build!\Konzola\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Dapper.2.1.35\lib\net461\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Doklady.cs" />
+    <Compile Include="Classes\Importni_Mustek.cs" />
+    <Compile Include="Classes\Inventura.cs" />
+    <Compile Include="Classes\Pohoda.cs" />
+    <Compile Include="Classes\Prijem.cs" />
+    <Compile Include="Classes\Prodej2.cs" />
+    <Compile Include="Database\Ciselniky.cs" />
+    <Compile Include="Database\SkladLokace_Mapa.cs" />
+    <Compile Include="Classes\Vydej.cs" />
+    <Compile Include="Classes\Vyroba.cs" />
+    <Compile Include="Database\Sklady_CZMST_DI.cs" />
+    <Compile Include="Database\Sklady_CZMST_SI.cs" />
+    <Compile Include="Database\Tisk_FASK_FORMULARE.cs" />
+    <Compile Include="Database\Vazby.cs" />
+    <Compile Include="Database\Inventura.cs" />
+    <Compile Include="Database\Pohoda.cs" />
+    <Compile Include="Database\Prijem.cs" />
+    <Compile Include="Database\Vydej.cs" />
+    <Compile Include="Database\Vyroba_Corrects.cs" />
+    <Compile Include="Database\Vyroba_CZPRO_VPH.cs" />
+    <Compile Include="Database\Vyroba_CZPRO_VPP.cs" />
+    <Compile Include="Database\Vyroba_FASK_Vyroba_PVH.cs" />
+    <Compile Include="Database\Vyroba_FASK_Vyroba_TP.cs" />
+    <Compile Include="Database\Vyroba_Groups.cs" />
+    <Compile Include="Database\Vyroba_Machines.cs" />
+    <Compile Include="Database\Vyroba_Production.cs" />
+    <Compile Include="Database\Vyroba_Production_Sources.cs" />
+    <Compile Include="Database\Vyroba_VLoginsGroups.cs" />
+    <Compile Include="Konfigurace\Form_Properties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Konfigurace\Form_Properties.Designer.cs">
+      <DependentUpon>Form_Properties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals_V1.cs" />
+    <Compile Include="Konfigurace\Konfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Konfigurace\Konfig.Designer.cs">
+      <DependentUpon>Konfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Konfigurace\Wrapper\RowWrapper.cs" />
+    <Compile Include="Konfigurace\Wrapper\RowWrapperConverter.cs" />
+    <Compile Include="Konfigurace\Wrapper\RowWrapperDescriptor.cs" />
+    <Compile Include="Pohoda_DataSets\DatabasePohoda.cs">
+      <DependentUpon>DatabasePohoda.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\DatabasePohoda.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabasePohoda.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\Inventura.cs">
+      <DependentUpon>Inventura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\Inventura1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\Odberatele.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\POHODA_V1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POHODA_V1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\Pracovnici.cs">
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\Pracovnici.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\Prijem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\Prodej.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\Rady.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rady.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\SkladLokace.cs">
+      <DependentUpon>SkladLokace.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\SkladLokace.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkladLokace.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\Sklady.cs">
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\Sklady.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\Strediska.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strediska.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\TypyDokladu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TypyDokladu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\Uzivatele.cs">
+      <DependentUpon>Uzivatele.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\Uzivatele.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Uzivatele.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\Vydej.cs">
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\Vydej.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\VyrobaDataSet.cs">
+      <DependentUpon>VyrobaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\VyrobaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VyrobaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\Zbozi.cs">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pohoda_DataSets\Zbozi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Provider\Ciselniky\ProviderCiselniky_Lokace.cs" />
+    <Compile Include="Provider\Ciselniky\ProviderCiselniky_Odberatele.cs" />
+    <Compile Include="Provider\Ciselniky\ProviderCiselniky_Pracovnici.cs" />
+    <Compile Include="Provider\Ciselniky\ProviderCiselniky_Rady.cs" />
+    <Compile Include="Provider\Ciselniky\ProviderCiselniky_SkladLokace_LokaceTypy.cs" />
+    <Compile Include="Provider\Ciselniky\ProviderCiselniky_SkladLokace_LokaceVariantySortiment.cs" />
+    <Compile Include="Provider\Ciselniky\ProviderCiselniky_SkladLokace_Mapa.cs" />
+    <Compile Include="Provider\Ciselniky\ProviderCiselniky_Sklady.cs" />
+    <Compile Include="Provider\Ciselniky\ProviderCiselniky_Strediska.cs" />
+    <Compile Include="Provider\Ciselniky\ProviderCiselniky_TypyDokladu.cs" />
+    <Compile Include="Provider\Ciselniky\ProviderCiselniky_Zbozi.cs" />
+    <Compile Include="Provider\ProviderAll.cs" />
+    <Compile Include="Provider\ProviderExpedice.cs" />
+    <Compile Include="Provider\ProviderImportMustek.cs" />
+    <Compile Include="Provider\ProviderInventura.cs" />
+    <Compile Include="Provider\ProviderLokace.cs" />
+    <Compile Include="Provider\ProviderHlavni.cs" />
+    <Compile Include="Provider\ProviderPrijem.cs" />
+    <Compile Include="Provider\ProviderProdej.cs" />
+    <Compile Include="Provider\ProviderSkladLokace.cs" />
+    <Compile Include="Provider\ProviderSkladPohyb.cs" />
+    <Compile Include="Provider\ProviderStavSkladu.cs" />
+    <Compile Include="Provider\ProviderTerminal.cs" />
+    <Compile Include="Provider\ProviderUzivatele.cs" />
+    <Compile Include="Provider\Vyroba\ProviderKapacitniPlanovani.cs" />
+    <Compile Include="Provider\Vyroba\ProviderOdvodEvents.cs" />
+    <Compile Include="Provider\Vyroba\ProviderOdvodEventsErr.cs" />
+    <Compile Include="Provider\Vyroba\ProviderProduction_SN.cs" />
+    <Compile Include="Provider\Vyroba\ProviderPV.cs" />
+    <Compile Include="Provider\Vyroba\ProviderVazby.cs" />
+    <Compile Include="Provider\ProviderVydej.cs" />
+    <Compile Include="Provider\Vyroba\ProviderCorrects.cs" />
+    <Compile Include="Provider\Vyroba\ProviderGroups.cs" />
+    <Compile Include="Provider\Vyroba\ProviderMachines.cs" />
+    <Compile Include="Provider\Vyroba\ProviderOperations.cs" />
+    <Compile Include="Provider\Vyroba\ProviderProduction.cs" />
+    <Compile Include="Provider\Vyroba\ProviderProductionSources.cs" />
+    <Compile Include="Provider\Vyroba\ProviderVLoginsGroups.cs" />
+    <Compile Include="Provider\Vyroba\ProviderVMachinesOperations.cs" />
+    <Compile Include="Provider\Vyroba\ProviderVPH.cs" />
+    <Compile Include="Provider\Vyroba\ProviderVPP.cs" />
+    <Compile Include="SettingsModified.cs" />
+    <Compile Include="XML\Classes\Response2.cs" />
+    <Compile Include="XML\MST_Pohoda.cs" />
+    <Compile Include="XML\NetworkDrives.cs" />
+    <Compile Include="XML\PohodaComunication.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Pohoda_DataSets\DatabasePohoda.xsc">
+      <DependentUpon>DatabasePohoda.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\DatabasePohoda.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabasePohoda.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pohoda_DataSets\DatabasePohoda.xss">
+      <DependentUpon>DatabasePohoda.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Inventura.xsc">
+      <DependentUpon>Inventura.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Inventura.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Inventura1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pohoda_DataSets\Inventura.xss">
+      <DependentUpon>Inventura.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Odberatele.xsc">
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Odberatele.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Odberatele.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pohoda_DataSets\Odberatele.xss">
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\POHODA_V1.xsc">
+      <DependentUpon>POHODA_V1.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\POHODA_V1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>POHODA_V1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pohoda_DataSets\POHODA_V1.xss">
+      <DependentUpon>POHODA_V1.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Pracovnici.xsc">
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Pracovnici.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pracovnici.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pohoda_DataSets\Pracovnici.xss">
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Prijem.xsc">
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Prijem.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Prijem.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pohoda_DataSets\Prijem.xss">
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Prodej.xsc">
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Prodej.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Prodej.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pohoda_DataSets\Prodej.xss">
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Rady.xsc">
+      <DependentUpon>Rady.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Rady.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Rady.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Pohoda_DataSets\Rady.xss">
+      <DependentUpon>Rady.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\SkladLokace.xsc">
+      <DependentUpon>SkladLokace.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\SkladLokace.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SkladLokace.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pohoda_DataSets\SkladLokace.xss">
+      <DependentUpon>SkladLokace.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Sklady.xsc">
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Sklady.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sklady.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pohoda_DataSets\Sklady.xss">
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Strediska.xsc">
+      <DependentUpon>Strediska.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Strediska.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Strediska.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Pohoda_DataSets\Strediska.xss">
+      <DependentUpon>Strediska.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\TypyDokladu.xsc">
+      <DependentUpon>TypyDokladu.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\TypyDokladu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TypyDokladu.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pohoda_DataSets\TypyDokladu.xss">
+      <DependentUpon>TypyDokladu.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Uzivatele.xsc">
+      <DependentUpon>Uzivatele.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Uzivatele.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Uzivatele.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pohoda_DataSets\Uzivatele.xss">
+      <DependentUpon>Uzivatele.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Vydej.xsc">
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Vydej.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Vydej.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pohoda_DataSets\Vydej.xss">
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\VyrobaDataSet.xsc">
+      <DependentUpon>VyrobaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\VyrobaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VyrobaDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pohoda_DataSets\VyrobaDataSet.xss">
+      <DependentUpon>VyrobaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Zbozi.xsc">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+    <None Include="Pohoda_DataSets\Zbozi.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Zbozi.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pohoda_DataSets\Zbozi.xss">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fask.ModulePohodaXML.ReadMe.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\Fask.Columns\Fask.Columns.csproj">
+      <Project>{9fe07d18-7a04-4a20-8ee8-929f9be5df16}</Project>
+      <Name>Fask.Columns</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\Fask.Logging\Fask.Logging.csproj">
+      <Project>{89e8c070-4694-4f11-ab01-a674bf8b9f80}</Project>
+      <Name>Fask.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\FASK.Logins\FASK.Logins.csproj">
+      <Project>{bc4b8c29-bb68-4e66-9257-356603fcf7d2}</Project>
+      <Name>FASK.Logins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\Fask.POHODA.Disponibility\Fask.POHODA.Disponibility.csproj">
+      <Project>{35a80609-485a-490f-9ca3-b5d302fe5b48}</Project>
+      <Name>Fask.POHODA.Disponibility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\Fask.Rady\Fask.Rady.csproj">
+      <Project>{789768c6-60f7-43a3-b9a9-9a4b169b9514}</Project>
+      <Name>Fask.Rady</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fask.Console.Interfaces\Fask.Console.Interfaces.csproj">
+      <Project>{B0431BD8-2948-453B-AD4A-C6BFEAADCBD7}</Project>
+      <Name>Fask.Console.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Konfigurace\Form_Properties.resx">
+      <DependentUpon>Form_Properties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Konfigurace\Konfig.resx">
+      <DependentUpon>Konfig.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

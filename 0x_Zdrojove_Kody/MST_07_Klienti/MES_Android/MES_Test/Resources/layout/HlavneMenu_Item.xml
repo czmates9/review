@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+ xmlns:android="http://schemas.android.com/apk/res/android"
+ android:layout_width="fill_parent"
+ android:layout_height="wrap_content"
+ android:background="#0093dd"
+    >
+ <LinearLayout
+        android:id="@+id/linearLayout1"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ android:orientation="horizontal"
+ android:padding="5dp">
+        <ImageButton
+            android:id="@+id/btn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/Def_Text"
+            android:padding="30dp"
+            />
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="@string/Def_Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000"
+            android:textSize="35dp"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            />
+ </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ConfigTable" targetNamespace="http://tempuri.org/ConfigTable.xsd" xmlns:mstns="http://tempuri.org/ConfigTable.xsd" xmlns="http://tempuri.org/ConfigTable.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ConfigTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="ConfigTable" msprop:Generator_UserDSName="ConfigTable" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Vrtacka" msprop:Generator_UserTableName="Vrtacka" msprop:Generator_RowDeletedName="VrtackaRowDeleted" msprop:Generator_TableClassName="VrtackaDataTable" msprop:Generator_RowChangedName="VrtackaRowChanged" msprop:Generator_RowClassName="VrtackaRow" msprop:Generator_RowChangingName="VrtackaRowChanging" msprop:Generator_RowEvArgName="VrtackaRowChangeEvent" msprop:Generator_RowEvHandlerName="VrtackaRowChangeEventHandler" msprop:Generator_TablePropName="Vrtacka" msprop:Generator_TableVarName="tableVrtacka" msprop:Generator_RowDeletingName="VrtackaRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SP_OUT_PortName" msdata:Caption="SP_IN_PortName" msprop:Generator_UserColumnName="SP_OUT_PortName" msprop:Generator_ColumnPropNameInRow="SP_OUT_PortName" msprop:Generator_ColumnVarNameInTable="columnSP_OUT_PortName" msprop:Generator_ColumnPropNameInTable="SP_OUT_PortNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SP_IN_PortName" msprop:Generator_UserColumnName="SP_IN_PortName" msprop:Generator_ColumnPropNameInRow="SP_IN_PortName" msprop:Generator_ColumnVarNameInTable="columnSP_IN_PortName" msprop:Generator_ColumnPropNameInTable="SP_IN_PortNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SP_OUT_DataBits" msdata:Caption="SP_IN_DataBits" msprop:Generator_UserColumnName="SP_OUT_DataBits" msprop:Generator_ColumnPropNameInRow="SP_OUT_DataBits" msprop:Generator_ColumnVarNameInTable="columnSP_OUT_DataBits" msprop:Generator_ColumnPropNameInTable="SP_OUT_DataBitsColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SP_IN_DataBits" msprop:Generator_UserColumnName="SP_IN_DataBits" msprop:Generator_ColumnPropNameInRow="SP_IN_DataBits" msprop:Generator_ColumnVarNameInTable="columnSP_IN_DataBits" msprop:Generator_ColumnPropNameInTable="SP_IN_DataBitsColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SP_OUT_Parity" msdata:Caption="SP_IN_Parity" msprop:Generator_UserColumnName="SP_OUT_Parity" msprop:Generator_ColumnPropNameInRow="SP_OUT_Parity" msprop:Generator_ColumnVarNameInTable="columnSP_OUT_Parity" msprop:Generator_ColumnPropNameInTable="SP_OUT_ParityColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SP_IN_Parity" msprop:Generator_UserColumnName="SP_IN_Parity" msprop:Generator_ColumnPropNameInRow="SP_IN_Parity" msprop:Generator_ColumnVarNameInTable="columnSP_IN_Parity" msprop:Generator_ColumnPropNameInTable="SP_IN_ParityColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SP_OUT_StopBits" msdata:Caption="SP_IN_StopBits" msprop:Generator_UserColumnName="SP_OUT_StopBits" msprop:Generator_ColumnPropNameInRow="SP_OUT_StopBits" msprop:Generator_ColumnVarNameInTable="columnSP_OUT_StopBits" msprop:Generator_ColumnPropNameInTable="SP_OUT_StopBitsColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SP_IN_StopBits" msprop:Generator_UserColumnName="SP_IN_StopBits" msprop:Generator_ColumnPropNameInRow="SP_IN_StopBits" msprop:Generator_ColumnVarNameInTable="columnSP_IN_StopBits" msprop:Generator_ColumnPropNameInTable="SP_IN_StopBitsColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SP_OUT_BaudRate" msdata:Caption="SP_IN_BaudRate" msprop:Generator_UserColumnName="SP_OUT_BaudRate" msprop:Generator_ColumnPropNameInRow="SP_OUT_BaudRate" msprop:Generator_ColumnVarNameInTable="columnSP_OUT_BaudRate" msprop:Generator_ColumnPropNameInTable="SP_OUT_BaudRateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SP_IN_BaudRate" msprop:Generator_UserColumnName="SP_IN_BaudRate" msprop:Generator_ColumnPropNameInRow="SP_IN_BaudRate" msprop:Generator_ColumnVarNameInTable="columnSP_IN_BaudRate" msprop:Generator_ColumnPropNameInTable="SP_IN_BaudRateColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Vrtacka_Barcode" msprop:Generator_UserTableName="Vrtacka_Barcode" msprop:Generator_RowDeletedName="Vrtacka_BarcodeRowDeleted" msprop:Generator_TableClassName="Vrtacka_BarcodeDataTable" msprop:Generator_RowChangedName="Vrtacka_BarcodeRowChanged" msprop:Generator_RowClassName="Vrtacka_BarcodeRow" msprop:Generator_RowChangingName="Vrtacka_BarcodeRowChanging" msprop:Generator_RowEvArgName="Vrtacka_BarcodeRowChangeEvent" msprop:Generator_RowEvHandlerName="Vrtacka_BarcodeRowChangeEventHandler" msprop:Generator_TablePropName="Vrtacka_Barcode" msprop:Generator_TableVarName="tableVrtacka_Barcode" msprop:Generator_RowDeletingName="Vrtacka_BarcodeRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BarcodeInput" msprop:Generator_UserColumnName="BarcodeInput" msprop:Generator_ColumnPropNameInRow="BarcodeInput" msprop:Generator_ColumnVarNameInTable="columnBarcodeInput" msprop:Generator_ColumnPropNameInTable="BarcodeInputColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BarcodeOutput" msprop:Generator_UserColumnName="BarcodeOutput" msprop:Generator_ColumnPropNameInRow="BarcodeOutput" msprop:Generator_ColumnVarNameInTable="columnBarcodeOutput" msprop:Generator_ColumnPropNameInTable="BarcodeOutputColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

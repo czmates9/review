@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<DSConfigPrinterProviderBluetoothSymbolWPAN xmlns="http://fask.cz/DSConfigPrinterProviderBluetoothSymbolWPAN.xsd">
+  <Params>
+    <Address />
+    <Name />
+    <Timeout>10000</Timeout>
+    <Encoding>windows-1250</Encoding>
+    <PIN>0000</PIN>
+  </Params>
+</DSConfigPrinterProviderBluetoothSymbolWPAN>

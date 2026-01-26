@@ -1,0 +1,57 @@
+<?xml version="1.0" standalone="yes"?>
+<ABRA_V1 xmlns="http://tempuri.org/ABRA_V1.xsd">
+  <ConnectionStrings>
+    <ABRADB>User=SYSDBA;Password=masterkey;Database=abrademo;DataSource=192.168.1.49;Port=3050;Charset=WIN1250;Connection lifetime=15;Pooling=true;MinPoolSize=0;MaxPoolSize=50;Packet Size=8192;ServerType=0;</ABRADB>
+    <FASKDB>Data Source=192.168.1.121\SQLEXPRESS;Initial Catalog=FASKABRA_SAB_TEST;User ID=sa;Password=sasa</FASKDB>
+  </ConnectionStrings>
+  <ExportZasoby>
+    <ExportSkladFilter />
+    <SerNumTrack_Vsude>true</SerNumTrack_Vsude>
+  </ExportZasoby>
+  <Vydej>
+    <PokracovatNaJinemTerminalu>false</PokracovatNaJinemTerminalu>
+    <HesloStornoVydejka>1234</HesloStornoVydejka>
+    <StatusObjectsDirectory>Logs\SoDir\</StatusObjectsDirectory>
+    <GenerovatFakturu>true</GenerovatFakturu>
+    <ZpracovatDokladDoISABRA>true</ZpracovatDokladDoISABRA>
+  </Vydej>
+  <Prodej>
+    <StatusObjectsDirectory>Logs\SoDir\</StatusObjectsDirectory>
+  </Prodej>
+  <Inventura1>
+    <PathToXSLT>C:\FASK\ABRA\</PathToXSLT>
+    <PathDataOutputFile>C:\FASK\ABRA\</PathDataOutputFile>
+    <DavkaTerminalVice>false</DavkaTerminalVice>
+    <PathStateDataFile>C:\FASK\ABRA\</PathStateDataFile>
+    <IDTerm_Predloha>true</IDTerm_Predloha>
+  </Inventura1>
+  <Prijem>
+    <HesloStornoPrijemka>1234</HesloStornoPrijemka>
+    <StatusObjectsDirectory>Logs\SoDir\</StatusObjectsDirectory>
+    <ZpracovatDokladDoISABRA>true</ZpracovatDokladDoISABRA>
+  </Prijem>
+  <WEBAPI>
+    <Autorizace_DoAPI>U3VwZXJ2aXNvcjo=</Autorizace_DoAPI>
+    <PORT>8085</PORT>
+    <IPAdresa>192.168.1.49</IPAdresa>
+    <AliasDB>demodata</AliasDB>
+    <isHTTPS>false</isHTTPS>
+    <LogovatRequestyResponsy>true</LogovatRequestyResponsy>
+    <LogovatRequestyResponsy_Path>C:\FASK\ABRA\RESPONSY\</LogovatRequestyResponsy_Path>
+  </WEBAPI>
+  <Procesni_Rizeni>
+    <StavID_Vydej_KVydeji>2000000001</StavID_Vydej_KVydeji>
+    <StavID_Vydej_VyskladnujeSe>4010000101</StavID_Vydej_VyskladnujeSe>
+    <StavID_Vydej_Vyskladneno>SDDEF00000</StavID_Vydej_Vyskladneno>
+    <StavID_Vydej_KeKontrole>5010000101</StavID_Vydej_KeKontrole>
+    <StavID_Prijem_KNaskladneni>2020000101</StavID_Prijem_KNaskladneni>
+    <StavID_Prijem_NaskladnujeSe>3020000101</StavID_Prijem_NaskladnujeSe>
+    <StavID_Prijem_Naskladneno>4020000101</StavID_Prijem_Naskladneno>
+    <StavID_Prijem_KeKontrole>5010000101</StavID_Prijem_KeKontrole>
+  </Procesni_Rizeni>
+  <ID_Rady>
+    <RadaID_Vydej_FakturaVydana>5600000101</RadaID_Vydej_FakturaVydana>
+    <RadaID_Vydej_DodaciList>P600000101</RadaID_Vydej_DodaciList>
+    <RadaID_Prijem_Prijemka>O600000101</RadaID_Prijem_Prijemka>
+  </ID_Rady>
+</ABRA_V1>

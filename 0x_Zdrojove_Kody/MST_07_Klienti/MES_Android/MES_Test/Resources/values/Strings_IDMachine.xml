@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="IDMachine_Label">Zadejte stroj</string>
+  <string name="IDMachine_OK">OK</string>
+  <string name="IDMachine_Storno">Zrušit</string>
+  
+  <string name="IDMachine_Label_IDStroje">ID Stroje</string>
+
+</resources>

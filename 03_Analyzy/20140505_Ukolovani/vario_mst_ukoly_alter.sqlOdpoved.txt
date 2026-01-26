@@ -1,0 +1,186 @@
+/*
+
+Plnìní tabulek úkolù v MST (CZ_UKOL, CZ_UKOL_UZIV) 
+- uloženou procedurou, která je spouštìna v pravidelných intervalech (tøeba 5 min.)
+- plní se úkoly, kde ve variu Popis != '' && Kategorie == 'Terminál' && Referen v seznamu uživatelù terminálù
+- pøi plnìní se 
+-- vloží nové úkoly (není vyplnìn vario.ict_mst_id), 
+-- aktualizují zmìny (vario.upsize_ts != mst.upsize_ts) a 
+-- z mst se odstraní úkoly, které byly ve variu smazány (mst.Rowguid not in Vario)
+
+
+Zpracování zmìn z MST do varia
+-- bude se spouštìt procedura, s jakými parametry, pøi které akci?
+
+FASK: Trerminály volají komunikaèní server. Ten poskytuje nové úkoly a zpìt plní tabulky a mìní stavy podle terminálu. 
+Jako post akci mùže spustit proceduru pro aktualizaci daného úkolu do Varia pripadne muze byt aktualizace vyresena pomoci triggeru after update ... 
+
+-- co všechno uživatel mùže editovat, vytváøet a mazat na terminálu? Podle toho se vymyslí zpracování zmìn z mst.
+
+FASK: Terminál pouze odpovídá na zadané úkoly. Pokud je úkol již splnìn, data tohoto úkolu se na terminálu smažou a zùstává jen živý zásobník nezrealizovaných nebo rozpracovných úkolù.
+uzivatel na terminalu nemuze nic mazat. V jistych pripadech muze novy ukol zalozit, ale toto nebude predpokladam soucasti reseni ...
+
+-- doplní se historie o nové zmìny
+
+Ostatní nejasnosti:
+-- jak je to s možnosti nastavit pøipomenutí úkolu (v tolik a tolik dej o sobì vìdìt)?
+
+FASK: V souèasnosti se s pøijetím nového úkolu objeví ve statusbaru info o poètu nových úkolù naèrtených serverem a dosud nepøeètených. 
+Dále je ve statusbaru poèet ještì nesplnìných úkolù (nepøeèteno/rozpracováno). 
+na urovni ukolu uzivatele je sloupec [DateNotify] [datetime] NULL, ktery slouzi pro indikaci casu pripomenuti ukolu. Pokud je nastaven cas, tak se v tento cas zobrazi upozorneni ukolu ...
+
+
+Stavy úkolu ve variu
+- Probíhá - 2
+- Nezahájeno - 1
+- Dokonèeno - 0
+- Èeká na nìkoho dalšího - 3
+- Odloženo - 4
+
+
+Stavy úkolu [State] v tabulce úkolù CZ_UKOL:
+
+- naèteno z nadøízeného systému
+- dononèen nebo odmítnut nebo odložen alespoò jedním uživatelem uživateli
+- dononèen nebo odmítnut nebo odložen všemi uživateli
+- zrušen (stornován)
+
+
+Stavy úkolu [State] v tabulce CZ_UKOL_UZIV a následnì ve èteèkách:
+
+- naèteno z nadøízeného systému
+- pøenesen do terminálu
+- pøeèten uživaletem - pøijet
+- pøeèten uživaletem - odmítnut a v terminálu smazán
+- pøeèten uživaletem - odložen
+- èásteènì rozpracován (mùže se k úkolu vracet vícekrát a napøíklad doplòovat poznámku k úkolu)
+- dononèen a v terminálu smazán
+- zrušen (stornován)
+
+
+
+
+Mapování sloupcù z Varia do MST
+CZ_UKOL
+[ID] [int] IDENTITY(1,1) NOT NULL, -> automatické èíslo
+[Name] [nvarchar](50) NOT NULL, -> Kratke Oznaceni ukolu
+[Description] [ntext] NOT NULL, -> Popis ukolu
+
+JaS - proè nNOT NULL?
+JiS - zde je dlouhy popis ukolu, respektive jeho zneni ... 
+
+[Code] [nvarchar](50) NULL, -> ???
+[CreatorID] [int] NOT NULL, .> ???, jak se bude plnit tabulka s uživateli (ruènì, nebo se doplní chybìjící, ...), jednáli se o tvùrce úkolu, tak ten ani 
+nemusí být mezi uživateli terminálù?
+
+FASK: Hodnota by mìla odpovídat èíselníku uživatelù synchronizovanému s Variem. Pokud budou další uživatelé je možno èísrelník rozšíøit, nebo zavést uživatle "Vario". Potom pøi zppìtné synchronizaci pùvodního uživatele dohledat podle [Rowguid]
+
+[DateCreated] [datetime] NOT NULL, -> Datum zadání
+[DateFrom] [datetime] NULL, -> Datum zahájení
+[DateTo] [datetime] NULL, -> Splnit úkol do
+[State] [nvarchar](1) NOT NULL, -> ???, viz stavy úkolù ve Variu. Jaké jsou a budou stavy úkolu v MST, jake bude mapování? 
+
+FASK:viz Stavy...
+
+[Kind] [nvarchar](1) NULL, -> ???, pøedpokládám, že nebudeme používat 
+
+FASK:OK
+
+[Type] [nvarchar](1) NULL, -> ???, pøedpokládám, že nebudeme používat
+
+FASK:OK
+
+[Priority] [int] NOT NULL, -> Priorita - 1 (Vario = 1 -> MST = 0)
+
+FASK:OK - tedy zatím nepoužívat
+
+[PartnerID] [nvarchar](20) NULL, -> nebude použito
+
+FASK:OK
+
+[Rowguid] [uniqueidentifier] ROWGUIDCOL  NOT NULL -> Rowguid, pøidaný sloupec, odkaz na úkol z Varia, plní se plnicí procedurou
+
+FASK:OK
+
+----------------------------------------------
+
+
+CZ_UKOL_UZIV -> opravdu se jedná o pøíøazení více vlastníku k jednomu úkolu? V pøípadì nekupta bude vždy pouze jeden vlastník
+
+FASK:OK
+
+[ID] [int] IDENTITY(1,1) NOT NULL, -> automatické èíslo
+[UkolID] [int] NOT NULL, -> vazba na úkol
+[UserID] [int] NOT NULL, -> vazba na vlastníka úkolu
+[State] [nvarchar](1) NOT NULL, ??? -> doplnit specifikaci stavù
+
+FASK:viz Stavy...
+
+[DateChanged] [datetime] NULL, ???
+
+FASK: Poslední datum, kdy byla provedena zmìna
+
+[UserIDChanged] [int] NULL, ???
+
+FASK: Poslední uživatel kdo provedl zmìnu
+
+[Note] [nvarchar](200) NULL, ???
+
+FASK: Poslední stav poznámky k úkolu (postupnì se dopisuje)
+muze byt upraveno uzivatelem pri provadeni ukolu, sem si muze k ukolu zapisovat sve poznamky ... 
+
+[DateNotify] [datetime] NULL, ???
+
+FASK:datum a cas pro pripomenuti ukolu
+
+[DateFinished] [datetime] NULL, datum dokonèení (úkolu), opravdu?
+
+FASK:Ano - za daného uživatele
+
+----------------------------------------------
+
+CZ_UKOL_UZIV_HIST -> z tabulky budeme pouze èíst a vytváøet historii ve variu, je možné v terminálu editovat stávající záznam, nebo se vytváøí pouze nové?
+
+FASK:Do této tabulky se zapisuje minulý stav úkolu za uživatele - tedy v podstatì se nejprve zkopíruje sem a poté aktualizuje v hlavní tabulce CZ_UKOL_UZIV.
+Uzavøeno v transakci, tedy potvrzeno po dokonèení nebo rolldown.
+je aktualizovano triggerem z hlavni tabulky cz_ukol_uziv pri insert, update ...
+
+[ID_HIST] [int] IDENTITY(1,1) NOT NULL, -> automatické èíslo
+
+FASK:poøadí pro klíè (více záznamù k jenomu úkolu uživatele - vývoj plnìní úkolu)
+
+[ID] [int] NOT NULL, -> ???
+
+FASK:kopie z hlavní tabulky
+ID z cz_ukol
+
+[UkolID] [int] NOT NULL, -> id úkolu
+[UserID] [int] NOT NULL, -> id uživatele, který udìlal zmìnu na úkolu, nemìl by to být pouze jeho vlastník?
+
+FASK: Ne, úkol mùže být generován systémem jako neadresný napøíklad pro skupinu sevisních pracovníkù. Nebo naopak pracovník mùže generovat úkol pro nìkoho do Varia nebo i úkol pro systém (prozatím v terminálu nerealizováno).
+
+[State] [nvarchar](1) NOT NULL, -> doplnit specifikaci stavù
+[DateChanged] [datetime] NULL, -> datum vzniku zmìny
+[UserIDChanged] [int] NULL, -> ???
+
+FASK:kopie z hlavní tabulky
+
+[Note] [nvarchar](200) NULL, -> ???, jedná se o výsledek úkolu, kam se výsledek úkolu zapisuje?
+
+FASK:kopie z hlavní tabulky
+
+[DateNotify] [datetime] NULL, -> ???
+
+FASK:kopie z hlavní tabulky
+
+[DateFinished] [datetime] NULL, -> ???
+
+FASK:kopie z hlavní tabulky
+
+*/
+
+
+-- doplnìní vazby na úkol do Varia
+ALTER TABLE cz_ukol ADD [Rowguid] [uniqueidentifier] ROWGUIDCOL  NOT NULL
+-- doplnìní timestamp úkolu z Varia, identifikuje zmìnu úkolu ve Variu
+ALTER TABLE cz_ukol ADD [upsize_ts] [bigint] NOT NULL

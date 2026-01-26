@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://Vydej.fask.cz/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://Vydej.fask.cz/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba pøenosu dat výdeje. Tato služna slouží pro WebReferenci MSTW øešení pro WindowsCE, Windows a v budoucnu i Android øešení. Jedná se o SOAP komunikaci. V budoucnu muže pøibudnou i komprimace a šifrovani SOAP pøenosu</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Vydej.fask.cz/">
+      <s:import namespace="http://fask.cz/Vydejky.xsd" />
+      <s:import namespace="http://fask.cz/Vydej.xsd" />
+      <s:import namespace="http://fask.cz/Vydej_Items_Online.xsd" />
+      <s:import schemaLocation="http://localhost/MST_Win_Kom_Server_7_Dasenka/Vydej.asmx?schema=Vydej" namespace="http://fask.cz/Vydej.xsd" />
+      <s:import schemaLocation="http://localhost/MST_Win_Kom_Server_7_Dasenka/Vydej.asmx?schema=Vydej_Items_Online" namespace="http://fask.cz/Vydej_Items_Online.xsd" />
+      <s:import schemaLocation="http://localhost/MST_Win_Kom_Server_7_Dasenka/Vydej.asmx?schema=Vydejky" namespace="http://fask.cz/Vydejky.xsd" />
+      <s:element name="GetVydejky">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="prefixskladu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemtype" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVydejkyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVydejkyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/Vydejky.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVydejka">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="countentries" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemtype" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVydejkaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVydejkaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/Vydej.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrepareVydejkaDB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="countentries" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemtype" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrepareVydejkaDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PrepareVydejkaDBResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVydejkaReceived">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="countentries" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemtype" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVydejkaReceivedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetVydejkaReceivedResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessVydejkaDBFile2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="countentries" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="processVydejState" type="tns:ProcessVydejState" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="ProcessVydejState">
+        <s:restriction base="s:string">
+          <s:enumeration value="Uvolnit" />
+          <s:enumeration value="Zpracovat" />
+          <s:enumeration value="ZpracovatAPokracovat" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ProcessVydejkaDBFile2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessVydejkaDBFile2Result" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StatusObject">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="_statusFile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusText" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Exception" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DatumZapisu" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" default="false" name="Finished" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Detail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopnumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetailDavka">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="countentries" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetailDavkaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetailDavkaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetailPolozka">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemnmbr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetailPolozkaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetailPolozkaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PridatPaletu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PridatPaletuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PridatPaletuResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SmazatPaletu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SmazatPaletuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SmazatPaletuResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Terminal_GetSSCCCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="seq_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="terminalID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Terminal_GetSSCCCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Terminal_GetSSCCCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StornoVydejka">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="idCountEntries" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StornoVydejkaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StornoVydejkaResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_GetMaterial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemnmbr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serltnum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_GetMaterialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Online_GetMaterialResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/Vydej_Items_Online.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_Expirace_Verify">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemnmbr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sklad_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serltnum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="expirace" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_Expirace_VerifyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Online_Expirace_VerifyResult" type="tns:StatusOverExpirace" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StatusOverExpirace">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="tns:StatusOverExpiraceState" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="StatusOverExpiraceState">
+        <s:restriction base="s:string">
+          <s:enumeration value="OK" />
+          <s:enumeration value="WARNING" />
+          <s:enumeration value="ERROR" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="Online_Expirace_Confirm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalID" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Online_Expirace_ConfirmResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Online_Expirace_ConfirmResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateDavkaRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopnumbe" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateDavkaRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerateDavkaRequestResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateDavka">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopnumbe" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateDavkaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GenerateDavkaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateDavkaStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopnumbe" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateDavkaStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerateDavkaStatusResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateDavkaStatusDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopnumbe" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateDavkaStatusDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerateDavkaStatusDeleteResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetVydejkySoapIn">
+    <wsdl:part name="parameters" element="tns:GetVydejky" />
+  </wsdl:message>
+  <wsdl:message name="GetVydejkySoapOut">
+    <wsdl:part name="parameters" element="tns:GetVydejkyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVydejkaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVydejka" />
+  </wsdl:message>
+  <wsdl:message name="GetVydejkaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVydejkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrepareVydejkaDBSoapIn">
+    <wsdl:part name="parameters" element="tns:PrepareVydejkaDB" />
+  </wsdl:message>
+  <wsdl:message name="PrepareVydejkaDBSoapOut">
+    <wsdl:part name="parameters" element="tns:PrepareVydejkaDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVydejkaReceivedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVydejkaReceived" />
+  </wsdl:message>
+  <wsdl:message name="GetVydejkaReceivedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVydejkaReceivedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessVydejkaDBFile2SoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessVydejkaDBFile2" />
+  </wsdl:message>
+  <wsdl:message name="ProcessVydejkaDBFile2SoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessVydejkaDBFile2Response" />
+  </wsdl:message>
+  <wsdl:message name="DetailSoapIn">
+    <wsdl:part name="parameters" element="tns:Detail" />
+  </wsdl:message>
+  <wsdl:message name="DetailSoapOut">
+    <wsdl:part name="parameters" element="tns:DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="DetailDavkaSoapIn">
+    <wsdl:part name="parameters" element="tns:DetailDavka" />
+  </wsdl:message>
+  <wsdl:message name="DetailDavkaSoapOut">
+    <wsdl:part name="parameters" element="tns:DetailDavkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="DetailPolozkaSoapIn">
+    <wsdl:part name="parameters" element="tns:DetailPolozka" />
+  </wsdl:message>
+  <wsdl:message name="DetailPolozkaSoapOut">
+    <wsdl:part name="parameters" element="tns:DetailPolozkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PridatPaletuSoapIn">
+    <wsdl:part name="parameters" element="tns:PridatPaletu" />
+  </wsdl:message>
+  <wsdl:message name="PridatPaletuSoapOut">
+    <wsdl:part name="parameters" element="tns:PridatPaletuResponse" />
+  </wsdl:message>
+  <wsdl:message name="SmazatPaletuSoapIn">
+    <wsdl:part name="parameters" element="tns:SmazatPaletu" />
+  </wsdl:message>
+  <wsdl:message name="SmazatPaletuSoapOut">
+    <wsdl:part name="parameters" element="tns:SmazatPaletuResponse" />
+  </wsdl:message>
+  <wsdl:message name="Terminal_GetSSCCCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:Terminal_GetSSCCCode" />
+  </wsdl:message>
+  <wsdl:message name="Terminal_GetSSCCCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:Terminal_GetSSCCCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="StornoVydejkaSoapIn">
+    <wsdl:part name="parameters" element="tns:StornoVydejka" />
+  </wsdl:message>
+  <wsdl:message name="StornoVydejkaSoapOut">
+    <wsdl:part name="parameters" element="tns:StornoVydejkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Online_GetMaterialSoapIn">
+    <wsdl:part name="parameters" element="tns:Online_GetMaterial" />
+  </wsdl:message>
+  <wsdl:message name="Online_GetMaterialSoapOut">
+    <wsdl:part name="parameters" element="tns:Online_GetMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="Online_Expirace_VerifySoapIn">
+    <wsdl:part name="parameters" element="tns:Online_Expirace_Verify" />
+  </wsdl:message>
+  <wsdl:message name="Online_Expirace_VerifySoapOut">
+    <wsdl:part name="parameters" element="tns:Online_Expirace_VerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Online_Expirace_ConfirmSoapIn">
+    <wsdl:part name="parameters" element="tns:Online_Expirace_Confirm" />
+  </wsdl:message>
+  <wsdl:message name="Online_Expirace_ConfirmSoapOut">
+    <wsdl:part name="parameters" element="tns:Online_Expirace_ConfirmResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerateDavkaRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateDavkaRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenerateDavkaRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateDavkaRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerateDavkaSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateDavka" />
+  </wsdl:message>
+  <wsdl:message name="GenerateDavkaSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateDavkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerateDavkaStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateDavkaStatus" />
+  </wsdl:message>
+  <wsdl:message name="GenerateDavkaStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateDavkaStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerateDavkaStatusDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateDavkaStatusDelete" />
+  </wsdl:message>
+  <wsdl:message name="GenerateDavkaStatusDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateDavkaStatusDeleteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="VydejServiceSoap">
+    <wsdl:operation name="GetVydejky">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vraci výdejky</wsdl:documentation>
+      <wsdl:input message="tns:GetVydejkySoapIn" />
+      <wsdl:output message="tns:GetVydejkySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVydejka">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro dotažení Výdejky podle èísla dávky.</wsdl:documentation>
+      <wsdl:input message="tns:GetVydejkaSoapIn" />
+      <wsdl:output message="tns:GetVydejkaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareVydejkaDB">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda sloužící pro vygenerovaní .PRD souboru pro terminál s datama dávky podle èísla dávky</wsdl:documentation>
+      <wsdl:input message="tns:PrepareVydejkaDBSoapIn" />
+      <wsdl:output message="tns:PrepareVydejkaDBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVydejkaReceived">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která potvrzuje prevzeti davky vydejky</wsdl:documentation>
+      <wsdl:input message="tns:GetVydejkaReceivedSoapIn" />
+      <wsdl:output message="tns:GetVydejkaReceivedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessVydejkaDBFile2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda sloužící pro rozbalení ZIP souboru, a vytažení dat z souboru do pameti. Nasledne zavolá metodu ProcessVydejka která zpracuje data.</wsdl:documentation>
+      <wsdl:input message="tns:ProcessVydejkaDBFile2SoapIn" />
+      <wsdl:output message="tns:ProcessVydejkaDBFile2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Detail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda slouží pro custom volaní bud Procesury anebo select podle nastaveni </wsdl:documentation>
+      <wsdl:input message="tns:DetailSoapIn" />
+      <wsdl:output message="tns:DetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetailDavka">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda slouží pro custom volaní bud Procesury anebo select podle nastaveni </wsdl:documentation>
+      <wsdl:input message="tns:DetailDavkaSoapIn" />
+      <wsdl:output message="tns:DetailDavkaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetailPolozka">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda slouží pro custom volaní bud Procesury anebo select podle nastaveni </wsdl:documentation>
+      <wsdl:input message="tns:DetailPolozkaSoapIn" />
+      <wsdl:output message="tns:DetailPolozkaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PridatPaletu">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda sloužící pro vložení palety do tabulky CZMST_Palety</wsdl:documentation>
+      <wsdl:input message="tns:PridatPaletuSoapIn" />
+      <wsdl:output message="tns:PridatPaletuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SmazatPaletu">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda slouží pro smazaní palety podle Jmena</wsdl:documentation>
+      <wsdl:input message="tns:SmazatPaletuSoapIn" />
+      <wsdl:output message="tns:SmazatPaletuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Terminal_GetSSCCCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda sloužící pro vraceni Vygenerovaneho SSCC Kodu</wsdl:documentation>
+      <wsdl:input message="tns:Terminal_GetSSCCCodeSoapIn" />
+      <wsdl:output message="tns:Terminal_GetSSCCCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StornoVydejka">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro Storno výdejky</wsdl:documentation>
+      <wsdl:input message="tns:StornoVydejkaSoapIn" />
+      <wsdl:output message="tns:StornoVydejkaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Online_GetMaterial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda, ktera vraci nalezene materialy a jejich lokace a dalsi atributy z lokacniho mechanismu</wsdl:documentation>
+      <wsdl:input message="tns:Online_GetMaterialSoapIn" />
+      <wsdl:output message="tns:Online_GetMaterialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Online_Expirace_Verify">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda, ktera vraci stav expirace, zda je mozne ji vydat</wsdl:documentation>
+      <wsdl:input message="tns:Online_Expirace_VerifySoapIn" />
+      <wsdl:output message="tns:Online_Expirace_VerifySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Online_Expirace_Confirm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda, ktera overuje heslo pro vydani expirace, ktera neni vhodna</wsdl:documentation>
+      <wsdl:input message="tns:Online_Expirace_ConfirmSoapIn" />
+      <wsdl:output message="tns:Online_Expirace_ConfirmSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavkaRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která zapoène pøipravu generovaní pøedlohy IS do Našich struktur</wsdl:documentation>
+      <wsdl:input message="tns:GenerateDavkaRequestSoapIn" />
+      <wsdl:output message="tns:GenerateDavkaRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavka">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která provadí damotne generování dokladu z IS do našich struktur</wsdl:documentation>
+      <wsdl:input message="tns:GenerateDavkaSoapIn" />
+      <wsdl:output message="tns:GenerateDavkaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavkaStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vrací status o prubehu generování</wsdl:documentation>
+      <wsdl:input message="tns:GenerateDavkaStatusSoapIn" />
+      <wsdl:output message="tns:GenerateDavkaStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavkaStatusDelete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která slouzi terminalu ke smazani statusu a znovu generovani prikazu(davky)</wsdl:documentation>
+      <wsdl:input message="tns:GenerateDavkaStatusDeleteSoapIn" />
+      <wsdl:output message="tns:GenerateDavkaStatusDeleteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VydejServiceSoap" type="tns:VydejServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetVydejky">
+      <soap:operation soapAction="http://Vydej.fask.cz/GetVydejky" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVydejka">
+      <soap:operation soapAction="http://Vydej.fask.cz/GetVydejka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareVydejkaDB">
+      <soap:operation soapAction="http://Vydej.fask.cz/PrepareVydejkaDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVydejkaReceived">
+      <soap:operation soapAction="http://Vydej.fask.cz/GetVydejkaReceived" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessVydejkaDBFile2">
+      <soap:operation soapAction="http://Vydej.fask.cz/ProcessVydejkaDBFile2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Detail">
+      <soap:operation soapAction="http://Vydej.fask.cz/Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailDavka">
+      <soap:operation soapAction="http://Vydej.fask.cz/DetailDavka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailPolozka">
+      <soap:operation soapAction="http://Vydej.fask.cz/DetailPolozka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PridatPaletu">
+      <soap:operation soapAction="http://Vydej.fask.cz/PridatPaletu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SmazatPaletu">
+      <soap:operation soapAction="http://Vydej.fask.cz/SmazatPaletu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Terminal_GetSSCCCode">
+      <soap:operation soapAction="http://Vydej.fask.cz/Terminal_GetSSCCCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StornoVydejka">
+      <soap:operation soapAction="http://Vydej.fask.cz/StornoVydejka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_GetMaterial">
+      <soap:operation soapAction="http://Vydej.fask.cz/Online_GetMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_Expirace_Verify">
+      <soap:operation soapAction="http://Vydej.fask.cz/Online_Expirace_Verify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_Expirace_Confirm">
+      <soap:operation soapAction="http://Vydej.fask.cz/Online_Expirace_Confirm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavkaRequest">
+      <soap:operation soapAction="http://Vydej.fask.cz/GenerateDavkaRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavka">
+      <soap:operation soapAction="http://Vydej.fask.cz/GenerateDavka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavkaStatus">
+      <soap:operation soapAction="http://Vydej.fask.cz/GenerateDavkaStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavkaStatusDelete">
+      <soap:operation soapAction="http://Vydej.fask.cz/GenerateDavkaStatusDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VydejServiceSoap12" type="tns:VydejServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetVydejky">
+      <soap12:operation soapAction="http://Vydej.fask.cz/GetVydejky" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVydejka">
+      <soap12:operation soapAction="http://Vydej.fask.cz/GetVydejka" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareVydejkaDB">
+      <soap12:operation soapAction="http://Vydej.fask.cz/PrepareVydejkaDB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVydejkaReceived">
+      <soap12:operation soapAction="http://Vydej.fask.cz/GetVydejkaReceived" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessVydejkaDBFile2">
+      <soap12:operation soapAction="http://Vydej.fask.cz/ProcessVydejkaDBFile2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Detail">
+      <soap12:operation soapAction="http://Vydej.fask.cz/Detail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailDavka">
+      <soap12:operation soapAction="http://Vydej.fask.cz/DetailDavka" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailPolozka">
+      <soap12:operation soapAction="http://Vydej.fask.cz/DetailPolozka" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PridatPaletu">
+      <soap12:operation soapAction="http://Vydej.fask.cz/PridatPaletu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SmazatPaletu">
+      <soap12:operation soapAction="http://Vydej.fask.cz/SmazatPaletu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Terminal_GetSSCCCode">
+      <soap12:operation soapAction="http://Vydej.fask.cz/Terminal_GetSSCCCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StornoVydejka">
+      <soap12:operation soapAction="http://Vydej.fask.cz/StornoVydejka" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_GetMaterial">
+      <soap12:operation soapAction="http://Vydej.fask.cz/Online_GetMaterial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_Expirace_Verify">
+      <soap12:operation soapAction="http://Vydej.fask.cz/Online_Expirace_Verify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Online_Expirace_Confirm">
+      <soap12:operation soapAction="http://Vydej.fask.cz/Online_Expirace_Confirm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavkaRequest">
+      <soap12:operation soapAction="http://Vydej.fask.cz/GenerateDavkaRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavka">
+      <soap12:operation soapAction="http://Vydej.fask.cz/GenerateDavka" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavkaStatus">
+      <soap12:operation soapAction="http://Vydej.fask.cz/GenerateDavkaStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDavkaStatusDelete">
+      <soap12:operation soapAction="http://Vydej.fask.cz/GenerateDavkaStatusDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VydejService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba pøenosu dat výdeje. Tato služna slouží pro WebReferenci MSTW øešení pro WindowsCE, Windows a v budoucnu i Android øešení. Jedná se o SOAP komunikaci. V budoucnu muže pøibudnou i komprimace a šifrovani SOAP pøenosu</wsdl:documentation>
+    <wsdl:port name="VydejServiceSoap" binding="tns:VydejServiceSoap">
+      <soap:address location="http://localhost/MST_Win_Kom_Server_7_Dasenka/Vydej.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VydejServiceSoap12" binding="tns:VydejServiceSoap12">
+      <soap12:address location="http://localhost/MST_Win_Kom_Server_7_Dasenka/Vydej.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

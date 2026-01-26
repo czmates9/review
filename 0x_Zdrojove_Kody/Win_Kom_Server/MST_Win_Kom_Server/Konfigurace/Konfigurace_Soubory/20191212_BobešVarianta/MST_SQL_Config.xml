@@ -1,0 +1,6 @@
+<?xml version="1.0" standalone="yes"?>
+<SQL xmlns="http://tempuri.org/SQL.xsd">
+  <ConnectionString>
+    <FASKDB />
+  </ConnectionString>
+</SQL>

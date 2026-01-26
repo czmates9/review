@@ -1,0 +1,9 @@
+- sdk ke stažení (MDSDK 7.0 - Libraries, Headers and Source Code):
+http://www.ingenuityworking.com/downloads/developer_sdkhdk/m/mobile_devices_sdk/
+
+- Veškeré možnosti nastavení scanneru:
+http://www.ingenuityworking.com/knowledge/w/knowledgebase/1312.scanners-8000271.aspx
+
+- pøidány do projektu tyto dll:
+C:\Program Files\Motorola Solutions\Mobile Devices SDK V7.0\windows ce 5.00\mdsdkcore.dll
+C:\Program Files\Motorola Solutions\Mobile Devices SDK V7.0\DotNet3.5\MdsdkNet.dll

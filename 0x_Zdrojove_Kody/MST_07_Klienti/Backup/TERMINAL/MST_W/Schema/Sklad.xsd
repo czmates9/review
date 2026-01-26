@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Sklad" targetNamespace="http://tempuri.org/Sklad.xsd" xmlns:mstns="http://tempuri.org/Sklad.xsd" xmlns="http://tempuri.org/Sklad.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Sklad" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Sklad" msprop:Generator_DataSetName="Sklad">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SkladMnozstvi" msprop:Generator_UserTableName="SkladMnozstvi" msprop:Generator_RowDeletedName="SkladMnozstviRowDeleted" msprop:Generator_RowChangedName="SkladMnozstviRowChanged" msprop:Generator_RowClassName="SkladMnozstviRow" msprop:Generator_RowChangingName="SkladMnozstviRowChanging" msprop:Generator_RowEvArgName="SkladMnozstviRowChangeEvent" msprop:Generator_RowEvHandlerName="SkladMnozstviRowChangeEventHandler" msprop:Generator_TableClassName="SkladMnozstviDataTable" msprop:Generator_TableVarName="tableSkladMnozstvi" msprop:Generator_RowDeletingName="SkladMnozstviRowDeleting" msprop:Generator_TablePropName="SkladMnozstvi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ITEMNMBR" msprop:Generator_UserColumnName="ITEMNMBR" msprop:Generator_ColumnVarNameInTable="columnITEMNMBR" msprop:Generator_ColumnPropNameInRow="ITEMNMBR" msprop:Generator_ColumnPropNameInTable="ITEMNMBRColumn" type="xs:string" />
+              <xs:element name="QTY" msprop:Generator_UserColumnName="QTY" msprop:Generator_ColumnVarNameInTable="columnQTY" msprop:Generator_ColumnPropNameInRow="QTY" msprop:Generator_ColumnPropNameInTable="QTYColumn" type="xs:float" minOccurs="0" />
+              <xs:element name="LastDownloadSuccess" msprop:Generator_UserColumnName="LastDownloadSuccess" msprop:Generator_ColumnVarNameInTable="columnLastDownloadSuccess" msprop:Generator_ColumnPropNameInRow="LastDownloadSuccess" msprop:Generator_ColumnPropNameInTable="LastDownloadSuccessColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastDownloadTry" msprop:Generator_UserColumnName="LastDownloadTry" msprop:Generator_ColumnVarNameInTable="columnLastDownloadTry" msprop:Generator_ColumnPropNameInRow="LastDownloadTry" msprop:Generator_ColumnPropNameInTable="LastDownloadTryColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Location" msprop:Generator_UserColumnName="Location" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInTable="LocationColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="SkladMnozstviKey2" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SkladMnozstvi" />
+      <xs:field xpath="mstns:ITEMNMBR" />
+      <xs:field xpath="mstns:Location" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

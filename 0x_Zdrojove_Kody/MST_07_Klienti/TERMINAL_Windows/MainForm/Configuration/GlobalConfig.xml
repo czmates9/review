@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<GlobalConfig xmlns="http://tempuri.org/GlobalConfig.xsd">
+  <Main>
+    <ModuleAutoStart>0</ModuleAutoStart>
+    <KomServer>http://192.168.1.101:8085/</KomServer>
+    <TerminalID>1</TerminalID>
+    <OverVuciAD>true</OverVuciAD>
+    <DomenaProAD>FASKCZ-S06</DomenaProAD>
+</Main>
+  <RFID>
+    <ComPort>COM10</ComPort>
+    <Baudrate>_57600bps</Baudrate>
+    <Address>FF</Address>
+  </RFID>
+  <LoginMetod>
+    <Method>0</Method>
+    <Description>Pouze ručně</Description>
+    <Login />
+    <Password />
+  </LoginMetod>
+  <Modules>
+    <Name>ZZS</Name>
+    <Assembly>ZZS.dll</Assembly>
+    <Object>FASK.MST_WINDOWS.Module.ZZS.frmMainZZS</Object>
+    <Id>0</Id>
+  </Modules>
+  <Komunikace_HTTPs>
+    <ServerAccess>Anonymous</ServerAccess>
+    <ServerAccessUsername>fask</ServerAccessUsername>
+    <ServerAccessPassword>fask</ServerAccessPassword>
+    <ServerAccessDomain />
+    <ServerAccessPreauthenticate>true</ServerAccessPreauthenticate>
+    <ServerAccessAllowRedirection>false</ServerAccessAllowRedirection>
+    <ServerAccessAllowDecompression>false</ServerAccessAllowDecompression>
+    <ServerAccessCertificatesTrust>TrustAll</ServerAccessCertificatesTrust>
+  </Komunikace_HTTPs>
+  </GlobalConfig>

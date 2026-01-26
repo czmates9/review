@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/Pristupy.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/Pristupy.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/Pristupy.xsd" id="Pristupy" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="Pristupy">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FASK_AGENDA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="AGENDAID" type="xs:string" />
+              <xs:element minOccurs="0" name="NAME" type="xs:string" />
+              <xs:element minOccurs="0" name="DESCIPTION" type="xs:string" />
+              <xs:element name="AUTH" type="xs:unsignedByte" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FASK_Logins">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="USERID" type="xs:string" />
+              <xs:element name="firstname" type="xs:string" />
+              <xs:element name="surname" type="xs:string" />
+              <xs:element name="psswd" type="xs:string" />
+              <xs:element minOccurs="0" name="CREATED" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VALIDFROM" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VALIDTO" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="RFID" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FASK_Logins_Auth">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="USERID" type="xs:string" />
+              <xs:element minOccurs="0" name="AGENDAID" type="xs:string" />
+              <xs:element minOccurs="0" name="AUTH" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="DEX_ROW_ID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FASK_Logins_View_Prava">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="USERID" type="xs:string" />
+              <xs:element name="firstname" type="xs:string" />
+              <xs:element name="surname" type="xs:string" />
+              <xs:element name="psswd" type="xs:string" />
+              <xs:element minOccurs="0" name="CREATED" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VALIDFROM" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VALIDTO" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="AGENDAID" type="xs:string" />
+              <xs:element minOccurs="0" name="RFID" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://fask.cz/Servis.xsd" xmlns="http://fask.cz/Servis.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://fask.cz/Servis.xsd" id="Servis" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="" name="Servis">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST_Servis_Stav">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:string" />
+              <xs:element name="Oznaceni" type="xs:string" />
+              <xs:element minOccurs="0" name="IDCinnost" type="xs:string" />
+              <xs:element minOccurs="0" name="Barcode" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_Servis_StavNext">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:string" />
+              <xs:element name="IDNext" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_Servis_Zdroj">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:string" />
+              <xs:element name="Oznaceni" type="xs:string" />
+              <xs:element minOccurs="0" name="Misto" type="xs:string" />
+              <xs:element minOccurs="0" name="Barcode" type="xs:string" />
+              <xs:element minOccurs="0" name="Type" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_Servis_Cinnost">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:string" />
+              <xs:element name="Oznaceni" type="xs:string" />
+              <xs:element minOccurs="0" name="Barcode" type="xs:string" />
+              <xs:element name="TYPE" type="xs:string" />
+              <xs:element minOccurs="0" name="TYPEVALUE" type="xs:string" />
+              <xs:element name="Mandatory" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="RequiredLength" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_Servis_CinnostNext">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:string" />
+              <xs:element minOccurs="0" name="IDNext" type="xs:string" />
+              <xs:element minOccurs="0" name="IDValue" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_Servis_ZdrojStav">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDZdroj" type="xs:string" />
+              <xs:element name="IDStav" type="xs:string" />
+              <xs:element minOccurs="0" name="IDCinnost" type="xs:string" />
+              <xs:element name="Modified" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="IDTerminal" type="xs:int" />
+              <xs:element minOccurs="0" name="IDUser" type="xs:int" />
+              <xs:element msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" minOccurs="0" name="GUID" type="xs:string" />
+              <xs:element minOccurs="0" name="CinnostValue" type="xs:string" />
+              <xs:element minOccurs="0" name="CinnostType" type="xs:string" />
+              <xs:element minOccurs="0" name="CountEntries" type="xs:int" />
+              <xs:element minOccurs="0" name="ODB_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="OkruhID" type="xs:string" />
+              <xs:element minOccurs="0" name="CinnostOznaceni" type="xs:string" />
+              <xs:element minOccurs="0" name="GPS_X" type="xs:double" />
+              <xs:element minOccurs="0" name="GPS_Y" type="xs:double" />
+              <xs:element minOccurs="0" name="GPS_Z" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_Servis_ZdrojPohyb">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDZdroj" type="xs:string" />
+              <xs:element name="IDStav" type="xs:string" />
+              <xs:element minOccurs="0" name="IDCinnost" type="xs:string" />
+              <xs:element name="Modified" type="xs:dateTime" />
+              <xs:element name="IDTerminal" type="xs:int" />
+              <xs:element name="IDUser" type="xs:int" />
+              <xs:element msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GUID" type="xs:string" />
+              <xs:element minOccurs="0" name="CinnostValue" type="xs:string" />
+              <xs:element minOccurs="0" name="CinnostType" type="xs:string" />
+              <xs:element minOccurs="0" name="CountEntries" type="xs:int" />
+              <xs:element minOccurs="0" name="ODB_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="OkruhID" type="xs:string" />
+              <xs:element minOccurs="0" name="CinnostOznaceni" type="xs:string" />
+              <xs:element minOccurs="0" name="GPS_X" type="xs:double" />
+              <xs:element minOccurs="0" name="GPS_Y" type="xs:double" />
+              <xs:element minOccurs="0" name="GPS_Z" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_Servis_Dynamic_Table_Definition">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FullName" type="xs:string" />
+              <xs:element name="TypeName" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_Servis_Dynamic_Table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:string" />
+              <xs:element minOccurs="0" name="Oznaceni" type="xs:string" />
+              <xs:element minOccurs="0" name="BarCode" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_Servis_Predloha">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CountEntries" type="xs:int" />
+              <xs:element minOccurs="0" name="DOCUMENT_NUMBER" type="xs:string" />
+              <xs:element name="Rozpracovano" type="xs:unsignedByte" />
+              <xs:element name="OkruhID" type="xs:string" />
+              <xs:element minOccurs="0" name="UserID" type="xs:int" />
+              <xs:element minOccurs="0" name="Barcode" type="xs:string" />
+              <xs:element minOccurs="0" name="ODB_ID" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_Servis_Okruh">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:string" />
+              <xs:element name="Oznaceni" type="xs:string" />
+              <xs:element minOccurs="0" name="ODB_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="Barcode" type="xs:string" />
+              <xs:element name="ZdrojSeznamID" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_Servis_ZdrojSeznam">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:string" />
+              <xs:element name="ZdrojID" type="xs:string" />
+              <xs:element minOccurs="0" name="Poradi" type="xs:int" />
+              <xs:element minOccurs="0" name="IDStav" type="xs:string" />
+              <xs:element minOccurs="0" name="IDCinnost" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Parametry">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CONFIG_KONT_DOKONCENOSTI" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:CZMST_Servis_Stav" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="CZMST_Servis_StavNext_Constraint1">
+      <xs:selector xpath=".//mstns:CZMST_Servis_StavNext" />
+      <xs:field xpath="mstns:ID" />
+      <xs:field xpath="mstns:IDNext" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="CZMST_Servis_Zdroj_Constraint1">
+      <xs:selector xpath=".//mstns:CZMST_Servis_Zdroj" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" name="CZMST_Servis_CinnostNext_Constraint1">
+      <xs:selector xpath=".//mstns:CZMST_Servis_CinnostNext" />
+      <xs:field xpath="mstns:ID" />
+      <xs:field xpath="mstns:IDNext" />
+      <xs:field xpath="mstns:IDValue" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="CZMST_Servis_Dynamic_Table_Definition_Constraint1">
+      <xs:selector xpath=".//mstns:CZMST_Servis_Dynamic_Table_Definition" />
+      <xs:field xpath="mstns:FullName" />
+      <xs:field xpath="mstns:TypeName" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="CZMST_Servis_Dynamic_Table_Constraint1">
+      <xs:selector xpath=".//mstns:CZMST_Servis_Dynamic_Table" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="CZMST_Servis_Okruh_Constraint1">
+      <xs:selector xpath=".//mstns:CZMST_Servis_Okruh" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="CZMST_Servis_ZdrojSeznam_Constraint1">
+      <xs:selector xpath=".//mstns:CZMST_Servis_ZdrojSeznam" />
+      <xs:field xpath="mstns:ID" />
+      <xs:field xpath="mstns:ZdrojID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

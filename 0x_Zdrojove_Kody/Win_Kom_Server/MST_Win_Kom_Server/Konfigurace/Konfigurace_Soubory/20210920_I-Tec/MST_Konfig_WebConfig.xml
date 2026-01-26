@@ -1,0 +1,67 @@
+<?xml version="1.0" standalone="yes"?>
+<Konfig_WebConfig xmlns="http://tempuri.org/Konfig_WebConfig.xsd">
+  <Providers>
+    <Provider>bin\Fask.ModulePohodaXML.dll</Provider>
+    <Provider_Ciselniky />
+    <Provider_Vydej />
+    <Provider_Prijem />
+    <Provider_Prodej />
+    <Provider_Inventura1 />
+    <Provider_Inventura2 />
+    <Provider_Login />
+    <Provider_Servis />
+    <Provider_Lokace />
+    <Provider_Expedice>bin\Fask.Module.Pohoda.I_Tec.dll</Provider_Expedice>
+    <Provider_Tisky />
+    <Provider_Tisky2>bin\Fask.Module.Pohoda.I_Tec.dll</Provider_Tisky2>
+    <Provider_RFID />
+    <Provider_PaletovyListek />
+    <Provider_Graphics />
+    <Provider_Informations />
+    <Provider_Vyroba />
+    <Provider_Baleni />
+    <Provider_Ukolovani />
+  </Providers>
+  <ConnectionString>
+    <FASKDB>Data Source=192.168.1.121\SQLEXPRESS;Initial Catalog=FASKPOH_I_Tec_Dasenka;User ID=sa;Password=sasa</FASKDB>
+  </ConnectionString>
+  <Logs>
+    <Errors>true</Errors>
+    <Prints>true</Prints>
+    <Traces>true</Traces>
+    <ErrorsSendByMail>false</ErrorsSendByMail>
+  </Logs>
+  <Licenses>
+    <Check_Application_BeginRequest>false</Check_Application_BeginRequest>
+    <Show_Info_On_Terminal_Before_Expiration>1</Show_Info_On_Terminal_Before_Expiration>
+    <Collecting_Stats>false</Collecting_Stats>
+    <Collecting_Stats_Time_Hours>12</Collecting_Stats_Time_Hours>
+  </Licenses>
+  <Directories>
+    <Error>Logs\ErrorDataFileDirectory\</Error>
+    <Print>Logs\PrintLogDirectory\</Print>
+    <Processed>Logs\ProcessedDataFileDirectory\</Processed>
+    <StatusObjects>Logs\SoDir\</StatusObjects>
+    <Images>Logs\ImagesDataFileDirectory\</Images>
+    <Tracing>Logs\</Tracing>
+    <TemplateDirectory>.\PrintTemplates\</TemplateDirectory>
+  </Directories>
+  <Image>
+    <ImagesUserName />
+    <ImagesUserPassword />
+    <ImagesDomainName />
+  </Image>
+  <PaletovyListek>
+    <PrinterName>HP LaserJet 2430 PCL6 Class Driver</PrinterName>
+    <RemoveDiacritic>false</RemoveDiacritic>
+    <PrintEncodingPage>1250</PrintEncodingPage>
+    <UserPassword />
+    <UserName />
+    <DomainName />
+  </PaletovyListek>
+  <Vyroba>
+    <ApplicationEndPass>1</ApplicationEndPass>
+    <AllowUserProductionOnMoreMachines>true</AllowUserProductionOnMoreMachines>
+    <ProcessProductionDataMainThread>true</ProcessProductionDataMainThread>
+  </Vyroba>
+</Konfig_WebConfig>

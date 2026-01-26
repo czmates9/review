@@ -1,0 +1,5 @@
+INSERT [StatusTypes] ([statusid], [statusdesc]) VALUES (N'1', N'Smena login')
+INSERT [StatusTypes] ([statusid], [statusdesc]) VALUES (N'2', N'Smena logout')
+INSERT [StatusTypes] ([statusid], [statusdesc]) VALUES (N'3', N'Prihlaseni pracovníka')
+INSERT [StatusTypes] ([statusid], [statusdesc]) VALUES (N'4', N'Odhlaseni pracovníka')
+INSERT [StatusTypes] ([statusid], [statusdesc]) VALUES (N'5', N'Tisk Etiketa')

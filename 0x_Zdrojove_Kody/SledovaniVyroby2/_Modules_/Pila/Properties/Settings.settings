@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Pila.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PotvrzeniLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="PotvrzeniSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">304, 291</Value>
+    </Setting>
+    <Setting Name="TiskLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="TiskSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">304, 291</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

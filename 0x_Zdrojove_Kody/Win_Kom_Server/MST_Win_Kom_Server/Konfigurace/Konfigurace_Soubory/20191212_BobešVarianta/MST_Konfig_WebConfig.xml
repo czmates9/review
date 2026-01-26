@@ -1,0 +1,184 @@
+<?xml version="1.0" standalone="yes"?>
+<Konfig_WebConfig xmlns="http://tempuri.org/Konfig_WebConfig.xsd">
+  <Tabulky>
+    <TABLE_FASK_Logins>FASK_Logins</TABLE_FASK_Logins>
+    <TABLE_CZMST090>CZMST090</TABLE_CZMST090>
+    <TABLE_CZMST091>CZMST091</TABLE_CZMST091>
+    <TABLE_CZMST092>CZMST092</TABLE_CZMST092>
+    <TABLE_CZMST093>CZMST093</TABLE_CZMST093>
+    <TABLE_CZMST094>CZMST094</TABLE_CZMST094>
+    <TABLE_CZMST095>CZMST095</TABLE_CZMST095>
+    <TABLE_CZMST095M>CZMST095M</TABLE_CZMST095M>
+    <TABLE_CZMST096>CZMST096</TABLE_CZMST096>
+    <TABLE_CZMST_SE>CZMST_SE</TABLE_CZMST_SE>
+    <TABLE_CZMST_SE_SN>CZMST_SE_SN</TABLE_CZMST_SE_SN>
+    <TABLE_CZMST_SI>CZMST_SI</TABLE_CZMST_SI>
+    <TABLE_CZMST_SIH>CZMST_SIH</TABLE_CZMST_SIH>
+    <TABLE_CZMST_PE>CZMST_PE</TABLE_CZMST_PE>
+    <TABLE_CZMST_PE_SN>CZMST_PE_SN</TABLE_CZMST_PE_SN>
+    <TABLE_CZMST_PI>CZMST_PI</TABLE_CZMST_PI>
+    <TABLE_CZMST_DI>CZMST_DI</TABLE_CZMST_DI>
+    <TABLE_CZMST_DIH>CZMST_DIH</TABLE_CZMST_DIH>
+    <TABLE_CZMST_I1>CZMST_I1</TABLE_CZMST_I1>
+    <TABLE_CZMST_I2>CZMST_I2</TABLE_CZMST_I2>
+    <TABLE_CZMST_I3>CZMST_I3</TABLE_CZMST_I3>
+    <TABLE_CZMST_I4>CZMST_I4</TABLE_CZMST_I4>
+    <TABLE_Inventura>Inventura</TABLE_Inventura>
+    <TABLE_Majetek>Majetek</TABLE_Majetek>
+    <TABLE_CZMST_EVENTSTYPES>CZMST_EVENTSTYPES</TABLE_CZMST_EVENTSTYPES>
+    <TABLE_CZMST_EVENTSUSER>CZMST_EVENTSUSER</TABLE_CZMST_EVENTSUSER>
+    <TABLE_CZMST_TISKARNA>CZMST_TISKARNA</TABLE_CZMST_TISKARNA>
+  </Tabulky>
+  <Providers>
+    <Provider>bin\Fask.ModulePohodaXML.dll</Provider>
+    <Provider.Ciselniky />
+    <Provider.Vydej />
+    <Provider.Prijem />
+    <Provider.Prodej />
+    <Provider.Inventura1 />
+    <Provider.Inventura2 />
+    <Provider.Login />
+    <Provider.Servis />
+    <Provider.Lokace />
+    <Provider.Expedice />
+    <Provider.Tisky />
+    <Provider.Tisky2 />
+    <Provider.RFID />
+  </Providers>
+  <Directory>
+    <ErrorDataFileDirectory>Logs\ErrorDataFileDirectory\</ErrorDataFileDirectory>
+    <PrintLogDirectory>Logs\PrintLogDirectory\</PrintLogDirectory>
+    <ProcessedDataFileDirectory>Logs\ProcessedDataFileDirectory\</ProcessedDataFileDirectory>
+    <StatusObjectDirectory>Logs\SoDir\</StatusObjectDirectory>
+    <ImagesDataFileDirectory>Logs\ImagesDataFileDirectory\</ImagesDataFileDirectory>
+    <TracingDataFileDirectory>Logs\</TracingDataFileDirectory>
+  </Directory>
+  <ConnectionString>
+    <FASKDB>Data Source=.\SQLEXPRESS;Initial Catalog=FASKPOH_BOBES_TEST;User ID=sa;Password=sasa</FASKDB>
+  </ConnectionString>
+  <ParametryA>
+    <check_license_Application_BeginRequest>false</check_license_Application_BeginRequest>
+    <Licence_Application_BeginRequest_Check_TerminalNumber>false</Licence_Application_BeginRequest_Check_TerminalNumber>
+    <Collecting_Stats>false</Collecting_Stats>
+    <Collecting_Stats_Time_Hours>12</Collecting_Stats_Time_Hours>
+    <showLicenceInfoInTerminalBeforeExpiration>1</showLicenceInfoInTerminalBeforeExpiration>
+    <DexRowIdInsert>false</DexRowIdInsert>
+    <ErrorLogFile>Logs\log.txt</ErrorLogFile>
+    <Logging_Print_Enable>true</Logging_Print_Enable>
+    <ImagesUserName />
+    <ImagesUserPassword />
+    <ImagesDomainName />
+    <TracingLogFile>true</TracingLogFile>
+    <SendErrorEmail>false</SendErrorEmail>
+  </ParametryA>
+  <OnlineDotazy>
+    <CommandType>StoredProcedure</CommandType>
+    <command1>czmst_se_volne</command1>
+    <command1_paramName1>@param1</command1_paramName1>
+    <command1_paramName2>@param2</command1_paramName2>
+    <MnozstviNaSklade>fask_mnozstvinasklade</MnozstviNaSklade>
+    <MnozstviNaSklade_paramName>@itemnmbr</MnozstviNaSklade_paramName>
+    <MnozstviNaSklade2>fask_mnozstvinasklade2</MnozstviNaSklade2>
+    <MnozstviNaSklade2_paramName1>@itemnmbr</MnozstviNaSklade2_paramName1>
+    <MnozstviNaSklade2_paramName2>@location</MnozstviNaSklade2_paramName2>
+    <OverPohyb_procName>ocp_kont_mn</OverPohyb_procName>
+    <OverPohyb_tableName>czmst_di</OverPohyb_tableName>
+    <OverPohyb_paramName1>a_tab</OverPohyb_paramName1>
+    <OverPohyb_paramName2>a_sd_dokl</OverPohyb_paramName2>
+    <OverPohyb_paramName3>a_id_mat</OverPohyb_paramName3>
+    <OverPohyb_paramName4>a_vc</OverPohyb_paramName4>
+    <OverPohyb_paramName5>a_text</OverPohyb_paramName5>
+    <OverPohyb_paramName6>a_cislo_skladu</OverPohyb_paramName6>
+    <OverPohyb_paramName7>a_dispozice</OverPohyb_paramName7>
+    <GetSklad_procName>getSklad</GetSklad_procName>
+    <GetSklad_paramName1>doc_id</GetSklad_paramName1>
+    <GetSklad_paramName2>matID</GetSklad_paramName2>
+    <GetSklad_paramName3>serialID</GetSklad_paramName3>
+    <GetSklad_paramName4>skladSrc</GetSklad_paramName4>
+    <GetSklad_paramName5>skladDest</GetSklad_paramName5>
+    <DetailItemnumber>fask_polozka_detail</DetailItemnumber>
+    <DetailItemnumber_paramName1>@itemnmbr</DetailItemnumber_paramName1>
+    <DetailItemnumber_paramName2>@doklad</DetailItemnumber_paramName2>
+    <PrijemkaDetail>FASK_FIRMAOBJEDNAVKAVYDANA</PrijemkaDetail>
+    <PrijemkaDetail_paramName>IN_DISPLAYNAME</PrijemkaDetail_paramName>
+    <PrijemkaDetailItem>procPrijemDetailItem</PrijemkaDetailItem>
+    <PrijemkaDetailItem_paramName1>p1</PrijemkaDetailItem_paramName1>
+    <PrijemkaDetailItem_paramName2>p2</PrijemkaDetailItem_paramName2>
+    <VydejkaDetail>FASK_procGetAdresa</VydejkaDetail>
+    <VydejkaDetail_paramName>@SOPNUMBE</VydejkaDetail_paramName>
+    <VydejkaDetailDavka>fask_VydejDetailDavka</VydejkaDetailDavka>
+    <VydejkaDetailDavka_paramName>:pDavka</VydejkaDetailDavka_paramName>
+    <VydejkaDetailPolozka>FASK_procGetpolozka</VydejkaDetailPolozka>
+    <VydejkaDetailPolozka_paramName>@ITEMNMBR</VydejkaDetailPolozka_paramName>
+    <ZavozkaDetail>czmst_zavozka_detail_view</ZavozkaDetail>
+    <ZavozkaDetail_paramName>Objednávka</ZavozkaDetail_paramName>
+    <ProdejDisponibilita>FASK_STAV_MAT</ProdejDisponibilita>
+    <ProdejDisponibilita_paramName1>@itemnmbr</ProdejDisponibilita_paramName1>
+    <ProdejDisponibilita_paramName2>@locncode</ProdejDisponibilita_paramName2>
+    <VydejInfo1Allow>false</VydejInfo1Allow>
+    <VydejInfo1Field>Disp.č.</VydejInfo1Field>
+    <VydejVydejkaDetail2Hlavicka>false</VydejVydejkaDetail2Hlavicka>
+    <PrijemPrijemkaDetail2Hlavicka>false</PrijemPrijemkaDetail2Hlavicka>
+  </OnlineDotazy>
+  <OnlineDotazy2>
+    <VydejPokracovatNaJinemTerminalu>false</VydejPokracovatNaJinemTerminalu>
+    <VydejSeznamDavekRazeni>A.PRIORITY, B.CNTITEMS DESC</VydejSeznamDavekRazeni>
+    <Inventura1DavkaTerminalVice>true</Inventura1DavkaTerminalVice>
+    <Inventura2DavkaTerminalVice>true</Inventura2DavkaTerminalVice>
+    <InformationsLogging>false</InformationsLogging>
+    <FileDeleteAfterTransfer>false</FileDeleteAfterTransfer>
+    <SqlCeDoShrinkDatabase>true</SqlCeDoShrinkDatabase>
+    <AfterDataProcessed_Action_CommandTimeout>30</AfterDataProcessed_Action_CommandTimeout>
+    <BeforeDataProcessed_Action_CommandTimeout>30</BeforeDataProcessed_Action_CommandTimeout>
+    <Prodej_AfterDataProcessed_Action />
+    <Prodej_AfterDataProcessed_Action_P1>@a1</Prodej_AfterDataProcessed_Action_P1>
+    <Prodej_AfterDataProcessed_Action_P2>@a2</Prodej_AfterDataProcessed_Action_P2>
+    <Prodej_AfterDataProcessed_Action_Asynchronous>false</Prodej_AfterDataProcessed_Action_Asynchronous>
+    <Prodej_OverLokaci_Action>procProdejOverLokaci</Prodej_OverLokaci_Action>
+    <Prodej_GetLokaci_Action>procProdejOverLokaci2</Prodej_GetLokaci_Action>
+    <Vydej_GenerateData_Action />
+    <Vydej_AfterDataProcessed_Action />
+    <Vydej_AfterDataProcessed_Action_P1>tbl</Vydej_AfterDataProcessed_Action_P1>
+    <Vydej_AfterDataProcessed_Action_P2>davka</Vydej_AfterDataProcessed_Action_P2>
+    <Vydej_AfterDataProcessed_Action_Asynchronous>false</Vydej_AfterDataProcessed_Action_Asynchronous>
+    <Prijem_GenerateData_Action />
+    <Prijem_GenerateSerltnum_Action>procGenerateSerltnum</Prijem_GenerateSerltnum_Action>
+    <Prijem_OverLokaci_Action>procPrijemOverLokaci</Prijem_OverLokaci_Action>
+    <Prijem_GetDoporuceneLokace_Action>procPrijemGetDoporuceneLokace</Prijem_GetDoporuceneLokace_Action>
+    <Prijem_GetNezrealizovanePrijemky_Action>procPrijemNezrealizovane</Prijem_GetNezrealizovanePrijemky_Action>
+    <Prijem_AfterDataProcessed_Action />
+    <Prijem_AfterDataProcessed_Action_P1 />
+    <Prijem_AfterDataProcessed_Action_P2 />
+    <Prijem_AfterDataProcessed_Action_Asynchronous>true</Prijem_AfterDataProcessed_Action_Asynchronous>
+    <Inventura1_AfterDataProcessed_Action />
+    <Inventura1_AfterDataProcessed_Action_P1 />
+    <Inventura1_AfterDataProcessed_Action_P2 />
+    <Inventura1_AfterDataProcessed_Action_Asynchronous>true</Inventura1_AfterDataProcessed_Action_Asynchronous>
+    <Inventura2_BeforeDataProcessed_Action />
+    <Inventura2_BeforeDataProcessed_Action_P1>@tab_majetek</Inventura2_BeforeDataProcessed_Action_P1>
+    <Inventura2_BeforeDataProcessed_Action_P2>@id_inv</Inventura2_BeforeDataProcessed_Action_P2>
+    <Inventura2_AfterDataProcessed_Action />
+    <Inventura2_AfterDataProcessed_Action_P1 />
+    <Inventura2_AfterDataProcessed_Action_P2 />
+    <Inventura2_AfterDataProcessed_Action_Asynchronous>true</Inventura2_AfterDataProcessed_Action_Asynchronous>
+    <Events_AfterDataProcessed_Action />
+    <Events_AfterDataProcessed_Action_P1>@a1</Events_AfterDataProcessed_Action_P1>
+    <Events_AfterDataProcessed_Action_P2>@a2</Events_AfterDataProcessed_Action_P2>
+    <Events_AfterDataProcessed_Action_Asynchronous>false</Events_AfterDataProcessed_Action_Asynchronous>
+    <Tasks_AfterDataProcessed_Action />
+    <Tasks_AfterDataProcessed_Action_P1>@ukolid</Tasks_AfterDataProcessed_Action_P1>
+    <Tasks_AfterDataProcessed_Action_Asynchronous>false</Tasks_AfterDataProcessed_Action_Asynchronous>
+  </OnlineDotazy2>
+  <Settings>
+    <PaletovyListek_PrinterName>HP LaserJet 2430 PCL6 Class Driver</PaletovyListek_PrinterName>
+    <Logging>true</Logging>
+    <LoggingFile>logPrintPart.txt</LoggingFile>
+    <TemplateDirectory>.\PrintTemplates</TemplateDirectory>
+    <RemoveDiacritic>false</RemoveDiacritic>
+    <SendErrorMail>false</SendErrorMail>
+    <PrintEncodingPage>1250</PrintEncodingPage>
+    <UserPassword />
+    <UserName />
+    <DomainName />
+  </Settings>
+</Konfig_WebConfig>

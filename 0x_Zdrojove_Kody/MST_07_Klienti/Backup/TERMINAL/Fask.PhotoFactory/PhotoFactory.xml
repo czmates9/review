@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+	<!--
+  <Photo Type="Base" Path="Fask.PhotoProviderBase.dll" /> defaultni
+	<Photo Type="MC2180" Path="Fask.PhotoProviderMC21802D.dll" />
+	<Photo Type="ES400" Path="Fask.PhotoProviderES400.dll" />  
+  <Photo Type="Dolphin60S2D" Path="Fask.PhotoProviderDolphin60S2D.dll" />
+  <Photo Type="Dolphin60S" Path="Fask.PhotoProviderDolphin60S.dll" />
+  -->
+	<Photo Type="ES400" Path="Fask.PhotoProviderES400.dll" />
+</Settings>

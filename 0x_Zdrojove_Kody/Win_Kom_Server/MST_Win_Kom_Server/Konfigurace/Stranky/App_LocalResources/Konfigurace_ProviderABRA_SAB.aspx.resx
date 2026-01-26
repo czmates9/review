@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Button_Save.Text" xml:space="preserve">
+    <value>Uložit</value>
+  </data>
+  <data name="ConnectionStrings.FASKDB" xml:space="preserve">
+    <value>FASK DB</value>
+    <comment>Jedná se o Connection string na FASK Databázi na SQL serveru.</comment>
+  </data>
+  <data name="Inventura1.PathDataOutputFile" xml:space="preserve">
+    <value>Cesta k Vystupnym souborom</value>
+    <comment>Cesta do ktere se ukladaji vyexportovane soubory a to : &lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;XML&lt;/li&gt;
+&lt;li&gt;HTML&lt;/li&gt;
+&lt;li&gt;CSV&lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Inventura1.PathToXSLT" xml:space="preserve">
+    <value>Cesta k XSLT</value>
+    <comment>Cesta v ktere su uložene .xslt transformačne soubory, šablony... jak to nazvat? :D </comment>
+  </data>
+  <data name="Prijem.HesloStornoPrijemka" xml:space="preserve">
+    <value>Heslo Storno Prijemka</value>
+    <comment>Heslo pro stornovani přijemky</comment>
+  </data>
+  <data name="Prijem.StatusObjectsDirectory" xml:space="preserve">
+    <value>Cesta k StatusObjects</value>
+    <comment>Cesta do ktere se ukladji status objekty. </comment>
+  </data>
+  <data name="ConnectionStrings.ABRADB" xml:space="preserve">
+    <value>ABRA DB</value>
+    <comment>Jedná se o Connection string na ABRA Databázi na FireBire.</comment>
+  </data>
+  <data name="Prodej.StatusObjectsDirectory" xml:space="preserve">
+    <value>Cesta k StatusObjects</value>
+    <comment>Cesta do ktere se ukladji status objekty.</comment>
+  </data>
+  <data name="Vydej.HesloStornoVydejka" xml:space="preserve">
+    <value>Heslo Storno Vydejka</value>
+    <comment>Heslo Storno Vydejka</comment>
+  </data>
+  <data name="Vydej.PokracovatNaJinemTerminalu" xml:space="preserve">
+    <value>Pokracovat Na Jinem Terminalu</value>
+    <comment>Pokud je povolen tak lze pokračovat s vydejkou na jiném terminálu. Zavisle je to na ITEMTYPE.&lt;br&gt;
+PRi ypracovavani odeslanzch dat, se promažou všechny již odeslane data a nahradi se novyma...</comment>
+  </data>
+  <data name="Vydej.StatusObjectsDirectory" xml:space="preserve">
+    <value>Cesta k StatusObjects</value>
+    <comment>Cesta do ktere se ukladji status objekty. </comment>
+  </data>
+  <data name="ExportZasoby.ExportSkladFilter" xml:space="preserve">
+    <value>Export Sklad Filter</value>
+    <comment>Zapisuje se ID skladu. V případe, že je nutné použít více skladů, oddělují se čárkou. Jedná se o čislo, takže nemusí byt v uvozovkách.</comment>
+  </data>
+  <data name="Inventura1.DavkaTerminalVice" xml:space="preserve">
+    <value>Davka Vice Terminaly</value>
+    <comment>Lze spracovavat davku vice terminaly najednou</comment>
+  </data>
+  <data name="Inventura1.PathStateDataFile" xml:space="preserve">
+    <value>Cesta k StateDataFile</value>
+    <comment>Cesta kde se ukladani StateData soubory</comment>
+  </data>
+  <data name="Vydej.GenerovatFakturu" xml:space="preserve">
+    <value>Generovat Fakturu</value>
+    <comment>Povolit generovani faktury pomoci WEB API</comment>
+  </data>
+  <data name="WEBAPI.AliasDB" xml:space="preserve">
+    <value>AliasDB</value>
+    <comment>AliasDB</comment>
+  </data>
+  <data name="WEBAPI.Autorizace_DoAPI" xml:space="preserve">
+    <value>Autoizace do API</value>
+    <comment>Zde je autorizační řezetec v BASE64 pro autorizaci do WEB API</comment>
+  </data>
+  <data name="WEBAPI.Adresa" xml:space="preserve">
+    <value>IPAdresa</value>
+    <comment>IPAdresa</comment>
+  </data>
+  <data name="WEBAPI.isHTTPS" xml:space="preserve">
+    <value>isHTTPS</value>
+    <comment>isHTTPS</comment>
+  </data>
+  <data name="WEBAPI.LogovatRequestyResponsy" xml:space="preserve">
+    <value>LogovatRequestyResponsy</value>
+    <comment>LogovatRequestyResponsy</comment>
+  </data>
+  <data name="WEBAPI.LogovatRequestyResponsy_Path" xml:space="preserve">
+    <value>LogovatRequestyResponsy_Path</value>
+    <comment>LogovatRequestyResponsy_Path</comment>
+  </data>
+  <data name="ID_Rady.RadaID_Vydej_DodaciList" xml:space="preserve">
+    <value>ID Rady DL</value>
+    <comment>Jedná se o ID řady Dodaciho listu který vznikce v IS ABRA</comment>
+  </data>
+  <data name="ID_Rady.RadaID_Vydej_FakturaVydana" xml:space="preserve">
+    <value>ID Rady FV</value>
+    <comment>Jedná se o ID řady Faktury vydanej která vznikce v IS ABRA</comment>
+  </data>
+  <data name="Procesni_Rizeni.StavID_Prijem_KeKontrole" xml:space="preserve">
+    <value>StavID_Prijem_KeKontrole</value>
+    <comment>StavID_Prijem_KeKontrole</comment>
+  </data>
+  <data name="Procesni_Rizeni.StavID_Prijem_KNaskladneni" xml:space="preserve">
+    <value>StavID_Prijem_KNaskladneni</value>
+    <comment>StavID_Prijem_KNaskladneni</comment>
+  </data>
+  <data name="Procesni_Rizeni.StavID_Prijem_Naskladneno" xml:space="preserve">
+    <value>StavID_Prijem_Naskladneno</value>
+    <comment>StavID_Prijem_Naskladneno</comment>
+  </data>
+  <data name="Procesni_Rizeni.StavID_Prijem_NaskladnujeSe" xml:space="preserve">
+    <value>StavID_Prijem_NaskladnujeSe</value>
+    <comment>StavID_Prijem_NaskladnujeSe</comment>
+  </data>
+  <data name="Procesni_Rizeni.StavID_Vydej_KeKontrole" xml:space="preserve">
+    <value>StavID_Vydej_KeKontrole</value>
+    <comment>StavID_Vydej_KeKontrole</comment>
+  </data>
+  <data name="Procesni_Rizeni.StavID_Vydej_KVydeji" xml:space="preserve">
+    <value>StavID_Vydej_KVydeji</value>
+    <comment>StavID_Vydej_KVydeji</comment>
+  </data>
+  <data name="Procesni_Rizeni.StavID_Vydej_Vyskladneno" xml:space="preserve">
+    <value>StavID_Vydej_Vyskladneno</value>
+    <comment>StavID_Vydej_Vyskladneno</comment>
+  </data>
+  <data name="Procesni_Rizeni.StavID_Vydej_VyskladnujeSe" xml:space="preserve">
+    <value>StavID_Vydej_VyskladnujeSe</value>
+    <comment>StavID_Vydej_VyskladnujeSe</comment>
+  </data>
+  <data name="Vydej.ZpracovatDokladDoISABRA" xml:space="preserve">
+    <value>Zpracovat Doklad Do IS ABRA</value>
+    <comment>Povolit Zpracovani Dokladu Do IS ABRA</comment>
+  </data>
+  <data name="Prijem.ZpracovatDokladDoISABRA" xml:space="preserve">
+    <value>Zpracovat Doklad Do IS ABRA</value>
+    <comment>Zpracovat Doklad Do IS ABRA</comment>
+  </data>
+  <data name="ID_Rady.RadaID_Prijem_Prijemka" xml:space="preserve">
+    <value>RadaID_Prijem_Prijemka</value>
+    <comment>RadaID_Prijem_Prijemka</comment>
+  </data>
+  <data name="Inventura1.IDTerm_Predloha" xml:space="preserve">
+    <value>IDTerm_Predloha</value>
+    <comment>Použivat rozpoznaní u DIP pro který terminal se použivá</comment>
+  </data>
+  <data name="ExportZasoby.SerNumTrack_Vsude" xml:space="preserve">
+    <value>SerNumTrack_Vsude</value>
+    <comment>Povolit/ Zakaz dotahovani přiznaku CZ SerNum Track</comment>
+  </data>
+  <data name="Vydej.FEFO_FIFO_Expirace_Po_PocetDni" xml:space="preserve">
+    <value>FIFO Expirace Po PocetDni</value>
+    <comment>FEFO_FIFO_Expirace_Po_PocetDni Počet dní po ktere je možno legitimne vydavat zboží s korektní expirací</comment>
+  </data>
+  <data name="WEBAPI.API_TimeOut" xml:space="preserve">
+    <value>API_TimeOut</value>
+    <comment>API_TimeOut</comment>
+  </data>
+</root>

@@ -1,0 +1,43 @@
+- saldo palet	
+	=> sepsat funkcnost z projektu Lorenc
+	=> porovnat s puvodnim zadanim, pokud nejake vubec bylo
+	=> upravit MST moduly pro funkce PS
+
+- polohovaný sklad
+	=> sepsat funkcnost z projektu Maser
+	=> porovnat s puvodnim zadanim
+	=> upravit MST moduly pro funkce Polohovaneho skladu
+
+- úkolování
+	=> zamer pouzit ukolovaci system z MST_W_RF
+	=> vypreparovat analyzu a upravit pro MST, pripadne rozsirit
+	=> implementovat do MST
+
+- servisní modul
+	=> ???
+
+- statistiky výkonu skladníkù
+	=> Analyzovat
+	=> Navrhnout rozhrani na serveru
+	=> opravneni pro pristup k tomuto nahledu?
+	=> reporty + exporty ???
+
+- konzola rozpracovanosti - pøehled plnìní zakázek
+	=> nahledove okno pro terminal, kde zobrazi prehled dat a v jakem jsou stavu
+	=> resit zobrazenim www stranky MST_W_Serveru
+
+- konzola vedoucího skladu (urèování kdo má jakou zakázku dìlat)
+	=> v MST neni nijak urcovano kdo ma co delat
+	=> jak resit - navrh.
+	=> nejblize tomu je inventura vice kolova pro maser ... ???
+
+- konzola mistra (výroba)
+
+- docházkový terminál 
+	=> samostatna analyza
+	=> jake jsou dalsi kroky? 
+	   - Navrh komunikacnich rutin
+	   - ?Schuzka a projednani dalsich kroku a podrobnosti
+
+- hlasové øízení (pøeèíst nahlas do které pozice má dál jít)
+	=> ?Analyza + ?Navrh

@@ -1,0 +1,41 @@
+﻿! 0 200 200 21 1
+IN-MILLIMETERS
+JOURNAL
+PW 104
+PREFEED 0
+POSTFEED 0
+SET-TOF 0
+T CN.CPF 0 0 0 Dodávateľ:
+T CN.CPF 0 0 3 Viera Korytková - Richelieu
+T CN.CPF 0 0 6 J.Grešáka 11
+T CN.CPF 0 0 9 085 01 Bardejov
+T CN.CPF 0 0 12 IČO: 30634105
+T CN.CPF 0 0 15 IČ DPH: SK1020703002
+T CN.CPF 0 54 0 Odberateľ:
+T CN.CPF 0 54 3 $odb_desc$
+T CN.CPF 0 54 6 $odb_ulice$
+T CN.CPF 0 54 9 $odb_cisloOr$
+T CN.CPF 0 54 12 $odb_psc$
+T CN.CPF 0 54 15 $odb_misto$
+T CN.CPF 0 0 18 ════════════════════════════════════════════════════════════════
+PRESENT-AT 0 0
+PRINT
+! 0 200 200 6 1
+IN-MILLIMETERS
+JOURNAL
+PW 104
+PREFEED 0
+POSTFEED 0
+SET-TOF 0
+T CN.CPF 0 0 0 Kód
+T CN.CPF 0 15 0 Názov
+T CN.CPF 0 44 0 Veľkosť
+T CN.CPF 0 58 0 Farba
+RIGHT 88
+T CN.CPF 0 0 0 Množstvo
+RIGHT 104
+T CN.CPF 0 0 0 Cena/MJ
+LEFT
+T CN.CPF 0 0 3 ================================================================
+PRESENT-AT 0 0
+PRINT

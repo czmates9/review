@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Modules>
+    <Inventura1>
+      <Allow>true</Allow>
+      <NameModul>Inventura</NameModul>
+    </Inventura1>
+    <Prodej>
+      <Allow>false</Allow>
+      <NameModul>Prodej</NameModul>
+      <PriceIsWithTax>true</PriceIsWithTax>
+      <PriceIsWithTaxEnable>false</PriceIsWithTaxEnable>
+      <OneOdberatelAutoSelect>true</OneOdberatelAutoSelect>
+      <QTYSHPPDMultQTYPACK>true</QTYSHPPDMultQTYPACK>
+      <RangeEnable>false</RangeEnable>
+      <Range Next="1" NextFormat="0000" Prefix="108" PrefixFormat="0000">
+      </Range>
+      <Price0IsWithTax>true</Price0IsWithTax>
+      <Price1IsWithTax>true</Price1IsWithTax>
+      <Price2IsWithTax>true</Price2IsWithTax>
+      <Price3IsWithTax>true</Price3IsWithTax>
+      <Price4IsWithTax>true</Price4IsWithTax>
+      <Price5IsWithTax>true</Price5IsWithTax>
+    </Prodej>
+    <Vydej>
+      <Allow>true</Allow>
+      <NameModul>Výdej</NameModul>
+      <LocationQuestion>true</LocationQuestion>
+      <ItemTypeQuestion>true</ItemTypeQuestion>
+      <TypOznaceniPalety>true</TypOznaceniPalety>
+      <TypyPoctyPalet>false</TypyPoctyPalet>
+    </Vydej>
+    <Prijem>
+      <Allow>false</Allow>
+      <NameModul>Příjem</NameModul>
+      <QTYSHPPDMultQTYPACK>true</QTYSHPPDMultQTYPACK>
+    </Prijem>
+    <Prevod>
+      <Allow>false</Allow>
+      <NameModul>Převod</NameModul>
+      <QTYSHPPDMultQTYPACK>true</QTYSHPPDMultQTYPACK>
+    </Prevod>
+    <VydejVS>
+      <Allow>false</Allow>
+      <NameModul>Výdej</NameModul>
+      <Cycles>
+        <Cycle Name="Spodek">1</Cycle>
+        <Cycle Name="Vršek">2</Cycle>
+      </Cycles>
+      <PrefixSkladVydejVS>false</PrefixSkladVydejVS>
+    </VydejVS>
+    <Zavoz>
+      <Allow>false</Allow>
+      <NameModul>Expedice</NameModul>
+      <PrefixSkladZavoz>false</PrefixSkladZavoz>
+      <!--
+      <TypyZavozu>
+        <Typ Name="PPL"/>
+        <Typ Name="Vlastny"/>
+      </TypyZavozu>
+      -->
+    </Zavoz>
+  </Modules>
+  <Terminal>
+    <ID>1</ID>
+    <Address>http://faskcz-cv002/MST_W_Server/</Address>
+    <ServiceTimeOut>25000</ServiceTimeOut>
+    <!--
+    <ScannerType>Symbol_MC3000</ScannerType>
+    <ScannerType>Unitech_HT660</ScannerType>
+    -->
+    <ScannerType>Symbol_MC3000</ScannerType>
+    <Storage></Storage>
+  </Terminal>
+  <!--Agro-->
+  <Strings>
+    <EAN_L>Modelové číslo</EAN_L>
+    <EAN_S>MN</EAN_S>
+    <SN_L>Šarže</SN_L>
+    <SN_S>SŽ</SN_S>
+    <SW_L>Číslo softwaru</SW_L>
+    <SW_S>SW</SW_S>
+    <DV_L>Datum výroby</DV_L>
+    <DV_S>DV</DV_S>
+    <PON_NAME>PO č.</PON_NAME>
+    <LC_NAME>Lokace</LC_NAME>
+    <REZ1_PRIJ_NAME>Rez1</REZ1_PRIJ_NAME>
+    <REZ2_PRIJ_NAME>Rez2</REZ2_PRIJ_NAME>
+  </Strings>
+  <!--Original
+  <Strings>
+    <EAN_L>EAN kód</EAN_L>
+    <EAN_S>EAN</EAN_S>
+    <SN_L>Sériové číslo</SN_L>
+    <SN_S>SN</SN_S>
+    <SW_L>Softwarová verze</SW_L>
+    <SW_S>SW</SW_S>
+    <DV_L>Datum výroby</DV_L>
+    <DV_S>DV</DV_S>
+    <PON_NAME>PO č.</PON_NAME>
+    <LC_NAME>Lokace</LC_NAME>
+    <REZ1_PRIJ_NAME>Rez1</REZ1_PRIJ_NAME>
+    <REZ2_PRIJ_NAME>Rez2</REZ2_PRIJ_NAME>
+  </Strings>
+  -->
+</Config>

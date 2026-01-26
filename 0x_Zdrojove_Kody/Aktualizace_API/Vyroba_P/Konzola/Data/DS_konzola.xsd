@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_konzola" targetNamespace="http://tempuri.org/DS_konzola.xsd" xmlns:mstns="http://tempuri.org/DS_konzola.xsd" xmlns="http://tempuri.org/DS_konzola.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_konzola" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_konzola" msprop:Generator_UserDSName="DS_konzola">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Konzola_parametry" msprop:Generator_TableClassName="Konzola_parametryDataTable" msprop:Generator_TableVarName="tableKonzola_parametry" msprop:Generator_RowChangedName="Konzola_parametryRowChanged" msprop:Generator_TablePropName="Konzola_parametry" msprop:Generator_RowDeletingName="Konzola_parametryRowDeleting" msprop:Generator_RowChangingName="Konzola_parametryRowChanging" msprop:Generator_RowEvHandlerName="Konzola_parametryRowChangeEventHandler" msprop:Generator_RowDeletedName="Konzola_parametryRowDeleted" msprop:Generator_RowClassName="Konzola_parametryRow" msprop:Generator_UserTableName="Konzola_parametry" msprop:Generator_RowEvArgName="Konzola_parametryRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="path_server_zaloha" msprop:Generator_ColumnVarNameInTable="columnpath_server_zaloha" msprop:Generator_ColumnPropNameInRow="path_server_zaloha" msprop:Generator_ColumnPropNameInTable="path_server_zalohaColumn" msprop:Generator_UserColumnName="path_server_zaloha" type="xs:string" minOccurs="0" />
+              <xs:element name="path_lokal_konzola" msprop:Generator_ColumnVarNameInTable="columnpath_lokal_konzola" msprop:Generator_ColumnPropNameInRow="path_lokal_konzola" msprop:Generator_ColumnPropNameInTable="path_lokal_konzolaColumn" msprop:Generator_UserColumnName="path_lokal_konzola" type="xs:string" minOccurs="0" />
+              <xs:element name="path_server_aktualizace" msprop:Generator_ColumnVarNameInTable="columnpath_server_aktualizace" msprop:Generator_ColumnPropNameInRow="path_server_aktualizace" msprop:Generator_ColumnPropNameInTable="path_server_aktualizaceColumn" msprop:Generator_UserColumnName="path_server_aktualizace" type="xs:string" minOccurs="0" />
+              <xs:element name="path_obnova" msprop:Generator_ColumnVarNameInTable="columnpath_obnova" msprop:Generator_ColumnPropNameInRow="path_obnova" msprop:Generator_ColumnPropNameInTable="path_obnovaColumn" msprop:Generator_UserColumnName="path_obnova" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+  <string name="Prodej_Davky_Label">Seznam dávek</string>
+
+  <string name="ProdejDavka_Zrusit">Zrušit</string>
+
+  <string name="ProdejDavka_LC_Title">Otázka...</string>
+  <string name="ProdejDavka_LC_Message">Co si přejete udělat s dávkou č.{0}?</string>
+  <string name="ProdejDavka_LC_PositiveBTN">Odeslat</string>
+  <string name="ProdejDavka_LC_NegativeBTN">Smazat</string>
+  <string name="ProdejDavka_LC_NeutralBTN">Prd</string>
+
+  <string name="ProdejDavka_LC_Opravdu">Opravdu smazat dávku č.{0}?</string>
+
+  <string name="ProdejDavka_PocetPolozek">Počet nasnímaných položek: {0}</string>
+
+
+</resources>

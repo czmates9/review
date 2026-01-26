@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{850C6EBA-F251-4277-A0B4-94C4DC6A5AA7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FASK.SledovaniVyroby.Module.Vyroba_Agro_SV_Modbus</RootNamespace>
+    <AssemblyName>Vyroba_Agro_SV_Modbus</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>false</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\!Build!\Vyroba\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\!Build!\Vyroba\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Advantech.Adam, Version=8.2.12.0, Culture=neutral, PublicKeyToken=c24039c75946be9c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Advantech\AdamApax.NET Class Library\Class Library\Win32\Advantech.Adam.DLL</HintPath>
+    </Reference>
+    <Reference Include="Advantech.Common, Version=8.2.6.0, Culture=neutral, PublicKeyToken=c24039c75946be9c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Advantech\AdamApax.NET Class Library\Class Library\Win32\Advantech.Common.DLL</HintPath>
+    </Reference>
+    <Reference Include="Advantech.Protocol, Version=8.2.6.0, Culture=neutral, PublicKeyToken=c24039c75946be9c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Advantech\AdamApax.NET Class Library\Class Library\Win32\Advantech.Protocol.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Win_Kom_Server\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ProgressControls">
+      <HintPath>..\..\!Support!\ProgressControls\ProgressControls.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Win_Kom_Server\packages\RestSharp.106.0.0\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Symbol.RFID3.Host, Version=1.2.0.0, Culture=neutral, PublicKeyToken=68ec8db391f150ca, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\_SdileneTridy_\ADAM\ADAM_60XX.cs">
+      <Link>ADAM\ADAM_60XX.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\ADAM\ModulBase.cs">
+      <Link>ADAM\ModulBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\Constants\AGRO.cs">
+      <Link>Constants\AGRO.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Utils.cs">
+      <Link>Utils.cs</Link>
+    </Compile>
+    <Compile Include="UC\ADAM_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ADAM_UC.designer.cs">
+      <DependentUpon>ADAM_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Komunikace.cs" />
+    <Compile Include="Classes\Logika_Voziky.cs" />
+    <Compile Include="Classes\WEBAPI\Comunication.cs" />
+    <Compile Include="Classes\WEBAPI\JSON_Class.cs" />
+    <Compile Include="Configuration\Config.cs" />
+    <Compile Include="Configuration\ConfigTable.cs">
+      <DependentUpon>ConfigTable.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\ConfigTable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConfigTable.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormDeaktivace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormDeaktivace.Designer.cs">
+      <DependentUpon>FormDeaktivace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutBox.designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormIDPracovnikaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormIDPracovnikaLogin.Designer.cs">
+      <DependentUpon>FormIDPracovnikaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmArchivaceZaznamu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmArchivaceZaznamu.Designer.cs">
+      <DependentUpon>frmArchivaceZaznamu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC\UC_MessageBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_MessageBox.Designer.cs">
+      <DependentUpon>UC_MessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_Vaha.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Vaha.Designer.cs">
+      <DependentUpon>UC_Vaha.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\Fask.Logging\Fask.Logging.csproj">
+      <Project>{89e8c070-4694-4f11-ab01-a674bf8b9f80}</Project>
+      <Name>Fask.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\FASK.Palety_SSCC.SQLite\FASK.Palety_SSCC.SQLite.csproj">
+      <Project>{bd9f1b1f-4be5-463f-850f-21a87668dc33}</Project>
+      <Name>FASK.Palety_SSCC.SQLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\Fask.RestSharp\Fask.RestSharp.csproj">
+      <Project>{dcd07eda-015d-49cb-a3f0-855bc143440f}</Project>
+      <Name>Fask.RestSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Database\Database.csproj">
+      <Project>{53601a7b-f9fc-47da-a99f-e8a47dddf947}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ErrorLog\ErrorLog.csproj">
+      <Project>{3151ddc5-73ba-4e7a-ad51-873efbba0fdc}</Project>
+      <Name>ErrorLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fask.Tracing\Fask.Tracing.csproj">
+      <Project>{14569dd3-5250-4cdb-998e-198bfd548113}</Project>
+      <Name>Fask.Tracing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ICommDatabase\ICommDatabase.csproj">
+      <Project>{091b2f54-a19d-426a-9b7a-6b9065685ba2}</Project>
+      <Name>ICommDatabase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MainForm\Vyroba.csproj">
+      <Project>{D7E00B2D-1105-4108-BB2E-E05D39663923}</Project>
+      <Name>Vyroba</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TouchscreenKeyboard\TouchscreenKeyboard\TouchscreenKeyboard.csproj">
+      <Project>{94070b1d-6de4-4d45-b2b9-5da09d0e15c9}</Project>
+      <Name>TouchscreenKeyboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VyrobaIfc\VyrobaIfc.csproj">
+      <Project>{aef304cd-c27c-46a4-aca9-d3ebecaf0f5f}</Project>
+      <Name>VyrobaIfc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UC\ADAM_UC.resx">
+      <DependentUpon>ADAM_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormDeaktivace.resx">
+      <DependentUpon>FormDeaktivace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormIDPracovnikaLogin.resx">
+      <DependentUpon>FormIDPracovnikaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmArchivaceZaznamu.resx">
+      <DependentUpon>frmArchivaceZaznamu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_MessageBox.resx">
+      <DependentUpon>UC_MessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Vaha.resx">
+      <DependentUpon>UC_Vaha.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Configuration\ConfigTable.xsc">
+      <DependentUpon>ConfigTable.xsd</DependentUpon>
+    </None>
+    <None Include="Configuration\ConfigTable.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConfigTable.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Configuration\ConfigTable.xss">
+      <DependentUpon>ConfigTable.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_FASK.png" />
+    <Content Include="Vyroba_Agro_SV_Modbus_Readme.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

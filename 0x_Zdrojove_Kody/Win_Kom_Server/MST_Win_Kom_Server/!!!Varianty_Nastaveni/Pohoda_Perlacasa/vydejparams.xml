@@ -1,0 +1,68 @@
+<?xml version="1.0" standalone="yes"?>
+<Vydej xmlns="http://fask.cz/Vydej.xsd">
+  <Parametry>
+    <!--(MST_W:Ne) ??? -->
+    <ENABLE_LISTSNIM>true</ENABLE_LISTSNIM>
+    <!--(MST_W:Ne) ??? -->
+    <CONFIG_LISTSNIM>true</CONFIG_LISTSNIM>
+    <!--(MST_W:Ano) Kontrola na preplnenost polozky (Pred vkladanim mnozstvi)-->
+    <CONFIG_POKRDOHLED>true</CONFIG_POKRDOHLED>
+    <!--(MST_W:Ano) Kontrola na preplnenost polozky (Po vlozeni mnozstvi)-->
+    <CONFIG_PTATSE_NEANO>true</CONFIG_PTATSE_NEANO>
+    <!--(MST_W:Ano) Kontrola uplnosti mnozstvi polozky-->
+    <CONFIG_KONT_UPL_POL>true</CONFIG_KONT_UPL_POL>
+    <!--(MST_W:Ano) vracet se po zadani mnozstvi zpet na seznam polozek(True=Vracet, False=Zustat v zadavani)-->
+    <CONFIG_ZADAT_MN_POKAZDE>true</CONFIG_ZADAT_MN_POKAZDE>
+    <!--(MST_W:Ano) Pouzivat ciselnik odberatelu -->
+    <ENABLE_DOHLED_ODB>false</ENABLE_DOHLED_ODB>
+    <!--(MST_W:Ne) ??? -->
+    <CONFIG_DOHLED_ODB>false</CONFIG_DOHLED_ODB>
+    <!--(MST_W:Ano) Provadet kontrolu dokoncenosti davky a pripadne ihned odeslat data? -->
+    <CONFIG_KONT_DOKONCENOSTI>true</CONFIG_KONT_DOKONCENOSTI>
+    <!--(MST_W:Ano) Provadet kontrolu delky vyzadovanych kodu -->
+    <CONFIG_KONT_DELKA>true</CONFIG_KONT_DELKA>
+    <!--(MST_W:Ano) Provadet kontrolu, zda sejmuty car.kod SN/Sarze je stejny jako MN(VNDITNUM, CZ_CARKOD)-->
+    <CONFIG_KONT_SN_CARKOD>false</CONFIG_KONT_SN_CARKOD>
+    <!--(MST_W:Ano) Provadet kontrolu duplicity zadaneho SN/Sarze-->    
+    <CONFIG_DUPLIC_SN>false</CONFIG_DUPLIC_SN>
+    <!--(MST_W:Ne) zalozeni nove karty zbozi (v nesql variante je implementovano ...)-->
+    <CONFIG_NOVA_KARTA>false</CONFIG_NOVA_KARTA>
+    <!--(MST_W:Ano) Pokud je skryto pozadovane mnozstvi a je disproporce, zazada o potvrzeni -->
+    <CONFIG_SKRYT_MNOZSTVI>false</CONFIG_SKRYT_MNOZSTVI>
+    <!--(MST_W:Ne) ??? -->
+    <CONFIG_SNIMEJ_PRI_LISTU>false</CONFIG_SNIMEJ_PRI_LISTU>
+    <!--(MST_W:Ne) ??? -->
+    <CONFIG_KONT_NUL_DELKA>false</CONFIG_KONT_NUL_DELKA>
+    <!--(MST_W:Ano) Vyzaduje zadani hodnoty LOCNCODE -->
+    <CONFIG_SNIM_LOCNCODE>true</CONFIG_SNIM_LOCNCODE>
+    <!--(MST_W:Ano) Povoluje predvyplneni hodnoty mnozstvi -->
+    <CONFIG_MNOZSTVI_PREDVYPLNIT>true</CONFIG_MNOZSTVI_PREDVYPLNIT>
+    <!--(MST_W:Ano) Predvyplni mnozstvi "1" -->
+    <CONFIG_MNOZSTVI_PREDVYPLNIT_JEDNA>false</CONFIG_MNOZSTVI_PREDVYPLNIT_JEDNA>
+    <!--(MST_W:Ano) Predvyplni zbyvajici mnozstvi -->
+    <CONFIG_MNOZSTVI_PREDVYPLNIT_ZBYVAJICI>true</CONFIG_MNOZSTVI_PREDVYPLNIT_ZBYVAJICI>
+    <!--(MST_W:Ano) Automaticke ulozeni hodnoty dle prednabizeneho mnozstvi(CONFIG_ZADAT_MN_POKAZDE musi byt nastaveno na True) -->
+    <CONFIG_MNOZSTVI_ZADAVAT>true</CONFIG_MNOZSTVI_ZADAVAT>
+    <!--(MST_W:Ano) Povoluje zadani mnozstvi scannerem -->
+    <CONFIG_MNOZSTVI_SCANNEREM>false</CONFIG_MNOZSTVI_SCANNEREM>
+    <!--(MST_W:Ano) Aktivuje provadeni kontroly zadaneho SN/Sarze vuci predloze - CZMST_SE_SN -->
+    <CONFIG_KONT_PREDLOHA_SN>false</CONFIG_KONT_PREDLOHA_SN>
+    <!--(MST_W:Ano) Omezi potvrzeni hodnoty LOCNCODE pouze na scanner. 
+    Dojde pouze k overeni prednastavene hodnoty LOCNCODE nactenim hodnoty ze scanneru.
+    Soucasne znemozni rucni zmenu(editaci) kodu LOCNCODE.
+    Pokud nesouhlasi, tak se vypise hlaska a nic se nestane...
+    (Neni mozne potvrdit ENTEREM resp. rucne tlacitkem OK) -->
+    <CONFIG_LOCNCODE_OVERIT_SCANEREM>false</CONFIG_LOCNCODE_OVERIT_SCANEREM>
+    <!-- Udava, zda se ma v MST_W pri kontrole sarze opirat o ciselnik zbozi = CZMST095 -->
+    <CONFIG_POUZIT_CISELNIK_ZBOZI>false</CONFIG_POUZIT_CISELNIK_ZBOZI>
+    <!-- V pripade povoleni CONFIG_POUZIT_CISELNIK_ZBOZI udava nazev sloupce, vuci kteremu se hodnot (CK) overuje -->
+    <CONFIG_NAZEV_SLOUPCE_K_OVERENI_V_CISELNIKU>VNDITNUM</CONFIG_NAZEV_SLOUPCE_K_OVERENI_V_CISELNIKU>
+    <!-- V pripade povoleni CONFIG_POUZIT_CISELNIK_ZBOZI udava nazev sloupce, jehoz hodnota se bere jako vysledek pri
+    pozitivnim overeni pomoci sloupce  CONFIG_OVEROVAT_VUCI_SLOUPCI_V_CISELNIKU -->
+    <CONFIG_NAZEV_SLOUPCE_K_NAVRACENI_V_CISELNIKU>CZ_CarKod</CONFIG_NAZEV_SLOUPCE_K_NAVRACENI_V_CISELNIKU>
+    <!-- (MST_W:Ano) V pripade povoleni CONFIG_LOKACE_POVOLIT dojde k zapnuti lokacniho mechanismu pro terminal i server. -->
+    <CONFIG_LOKACE_POVOLIT>true</CONFIG_LOKACE_POVOLIT>
+    <!-- (MST_W:Ano) Timeout pro komunikaci se serverem (lokacni mechanismus). -->
+    <CONFIG_LOKACE_TIMEOUT>20000</CONFIG_LOKACE_TIMEOUT>
+  </Parametry>
+</Vydej>

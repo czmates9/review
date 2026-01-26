@@ -1,0 +1,36 @@
+TERMINAL/MST_W/Vydej_3/ListPolozek3.cs 
+
+radek 203 pridanana podminka  ktera zobrazi alternativny lokaci
+
+TERMINAL/MST_W/Vydej_3/ListPolozek3.Design.cs
+
+pridane zobrazeni alternativny lokace 
+
+
+SERVER/Fask.Server.Modules/Fask.ModulePohodaXML.Perlacasa/Classes/Prijem.cs
+radek 747 
+komentar + item.AcceptChanges(); a item.SetAddes();
+
+
+
+SERVER/Fask.Server.Modules/Fask.ModulePohodaXML.Perlacasa/Classes/Vydej.cs
+radek 361   810  1176  1543 
+komentar + item.AcceptChanges(); a item.SetAddes();
+
+
+
+
+SERVER/Fask.Server.Modules/Fask.ModuleSql/app.config
+
+radek 50 a 53 pridane value 
+
+
+
+
+SERVER/Fask.Server.Modules/Fask.ModuleSql/Properties/.Settings.settings
+
+36 39 pridane value
+
+SERVER/win_kom_server/web.config
+
+57 až 192 pridane

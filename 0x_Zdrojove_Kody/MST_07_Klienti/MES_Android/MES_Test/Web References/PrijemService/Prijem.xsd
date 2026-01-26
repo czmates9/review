@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://fask.cz/Prijem.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://fask.cz/Prijem.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://fask.cz/Prijem.xsd" id="Prijem" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="en-US" name="Prijem">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST_PE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CountEntries" type="xs:int" />
+              <xs:element name="PONUMBER" type="xs:string" />
+              <xs:element minOccurs="0" name="ITEMNMBR" type="xs:string" />
+              <xs:element minOccurs="0" name="ITEMDESC" type="xs:string" />
+              <xs:element name="ORD" type="xs:int" />
+              <xs:element minOccurs="0" name="VNDDOCNM" type="xs:string" />
+              <xs:element minOccurs="0" name="VNDITNUM" type="xs:string" />
+              <xs:element name="CZ_CarKod" type="xs:string" />
+              <xs:element minOccurs="0" name="SKL_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="LOCNCODE" type="xs:string" />
+              <xs:element minOccurs="0" name="MJ" type="xs:string" />
+              <xs:element minOccurs="0" name="QTYSHPPD" type="xs:decimal" />
+              <xs:element name="QTYPACK" type="xs:decimal" />
+              <xs:element name="CZ_DatVyr_Track" type="xs:unsignedByte" />
+              <xs:element name="CZ_DatVyr_Delka" type="xs:short" />
+              <xs:element name="CZ_SerNum_Track" type="xs:unsignedByte" />
+              <xs:element name="CZ_SerNum_Delka" type="xs:short" />
+              <xs:element name="CZ_SW_Track" type="xs:unsignedByte" />
+              <xs:element name="CZ_SW_Delka" type="xs:short" />
+              <xs:element name="CZ_Doslo" type="xs:unsignedByte" />
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" name="DEX_ROW_ID" type="xs:int" />
+              <xs:element minOccurs="0" name="WEIGHT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NMBRPAL" type="xs:string" />
+              <xs:element minOccurs="0" name="TYPEPAL" type="xs:string" />
+              <xs:element minOccurs="0" name="ITEMCODE" type="xs:string" />
+              <xs:element default="" name="SERLTNUM" type="xs:string" />
+              <xs:element minOccurs="0" name="CZ_REZ1_Track" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="CZ_REZ2_Track" type="xs:unsignedByte" />
+              <xs:element name="CZ_Expirace_Track" type="xs:unsignedByte" />
+              <xs:element default="0" name="Nasnimano" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_PI">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CountEntries" type="xs:int" />
+              <xs:element name="PONUMBER" type="xs:string" />
+              <xs:element name="ORD" type="xs:int" />
+              <xs:element minOccurs="0" name="ITEMNMBR" type="xs:string" />
+              <xs:element minOccurs="0" name="VNDDOCNM" type="xs:string" />
+              <xs:element minOccurs="0" name="VNDITNUM" type="xs:string" />
+              <xs:element minOccurs="0" name="SKL_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="LOCNCODE" type="xs:string" />
+              <xs:element minOccurs="0" name="MJ" type="xs:string" />
+              <xs:element name="QTYSHPPD" type="xs:decimal" />
+              <xs:element name="QTYSHPPDMJ" type="xs:decimal" />
+              <xs:element name="QTYPACK" type="xs:decimal" />
+              <xs:element name="SERLTNUM" type="xs:string" />
+              <xs:element minOccurs="0" name="KOD_SW" type="xs:string" />
+              <xs:element minOccurs="0" name="DAT_VYROBY" type="xs:string" />
+              <xs:element minOccurs="0" name="DATEDONE" type="xs:string" />
+              <xs:element minOccurs="0" name="TIMEDONE" type="xs:string" />
+              <xs:element minOccurs="0" name="CZ_CarKod" type="xs:string" />
+              <xs:element minOccurs="0" name="REZ_1" type="xs:string" />
+              <xs:element minOccurs="0" name="REZ_2" type="xs:string" />
+              <xs:element name="USER_ID" type="xs:int" />
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" name="DEX_ROW_ID" type="xs:int" />
+              <xs:element msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" minOccurs="0" name="GUID" type="xs:string" />
+              <xs:element minOccurs="0" name="INPUT_MODE" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="ID_TERMINAL" type="xs:int" />
+              <xs:element minOccurs="0" name="WEIGHT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NMBRPAL" type="xs:string" />
+              <xs:element minOccurs="0" name="TYPEPAL" type="xs:string" />
+              <xs:element minOccurs="0" name="ITEMCODE" type="xs:string" />
+              <xs:element minOccurs="0" name="Expirace" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="AttributeToSN" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Parametry">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CONFIG_DUPLIC_SN" type="xs:boolean" />
+              <xs:element name="CONFIG_KONT_DELKA" type="xs:boolean" />
+              <xs:element name="CONFIG_KONT_DOKONCENOSTI" type="xs:boolean" />
+              <xs:element name="CONFIG_KONT_NUL_DELKA" type="xs:boolean" />
+              <xs:element name="CONFIG_KONT_UPL_POL" type="xs:boolean" />
+              <xs:element name="CONFIG_LISTSNIM" type="xs:boolean" />
+              <xs:element name="CONFIG_NOVA_KARTA" type="xs:boolean" />
+              <xs:element name="CONFIG_POKRDOHLED" type="xs:boolean" />
+              <xs:element name="CONFIG_PRIM_KEY1" type="xs:boolean" />
+              <xs:element name="CONFIG_PTATSE_NEANO" type="xs:boolean" />
+              <xs:element name="CONFIG_SNIM_LOCNCODE" type="xs:boolean" />
+              <xs:element name="CONFIG_SNIM_PONUMBER" type="xs:boolean" />
+              <xs:element name="CONFIG_SNIM_REZ2" type="xs:boolean" />
+              <xs:element name="CONFIG_SNIMAT_POL1" type="xs:boolean" />
+              <xs:element name="CONFIG_SNIMAT_POL2" type="xs:boolean" />
+              <xs:element name="CONFIG_SNIMAT_POL3" type="xs:boolean" />
+              <xs:element name="CONFIG_SNIMATZADAT_SN" type="xs:boolean" />
+              <xs:element name="CONFIG_ZADAT_MN_POKAZDE" type="xs:boolean" />
+              <xs:element name="ENABLE_LISTSNIM" type="xs:boolean" />
+              <xs:element name="ENABLE_SNIMATZADAT_SN" type="xs:boolean" />
+              <xs:element name="CONFIG_MNOZSTVI_PREDVYPLNIT" type="xs:boolean" />
+              <xs:element name="CONFIG_MNOZSTVI_PREDVYPLNIT_JEDNA" type="xs:boolean" />
+              <xs:element name="CONFIG_MNOZSTVI_PREDVYPLNIT_ZBYVAJICI" type="xs:boolean" />
+              <xs:element name="CONFIG_MNOZSTVI_ZADAVAT" type="xs:boolean" />
+              <xs:element name="CONFIG_MNOZSTVI_SCANNEREM" type="xs:boolean" />
+              <xs:element minOccurs="0" name="CONFIG_LOKACE_POVOLIT" type="xs:boolean" />
+              <xs:element minOccurs="0" name="CONFIG_LOKACE_TIMEOUT" type="xs:int" />
+              <xs:element minOccurs="0" name="CONFIG_LOKACE_PRIJMOVA" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_PEH">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CountEntries" type="xs:int" />
+              <xs:element msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" minOccurs="0" name="GUID" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_PE_SN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CountEntries" type="xs:int" />
+              <xs:element name="ITEMNMBR" type="xs:string" />
+              <xs:element name="SERLNMBR" type="xs:string" />
+              <xs:element name="DEX_ROW_ID" type="xs:int" />
+              <xs:element minOccurs="0" name="Expirace" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_PIH">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CountEntries" type="xs:int" />
+              <xs:element minOccurs="0" name="DATUMDOKLADU" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_PI_F">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IMG_NAME" type="xs:string" />
+              <xs:element msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GUID" type="xs:string" />
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="DEX_ROW_ID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost/MST_Win_Kom_Server_7/PrijemTest.asmx?wsdl" filename="PrijemTest.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost/MST_Win_Kom_Server_7/PrijemTest.asmx?schema=Zbozi" filename="Zbozi.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://localhost/MST_Win_Kom_Server_7/PrijemTest.asmx?disco" filename="PrijemTest.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost/MST_Win_Kom_Server_7/PrijemTest.asmx?schema=Obecne" filename="Obecne.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ListPolozkyDS" targetNamespace="http://fask.cz/ListPolozkyDS.xsd" xmlns:mstns="http://fask.cz/ListPolozkyDS.xsd" xmlns="http://fask.cz/ListPolozkyDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=D:\_work_\_Vyvoj_Subversion\Fask\MST\MST_W_Server\MST_W_Server_Source\SqlCEDBs\Inventura2.sdf" IsAppSettingsProperty="false" Modifier="Assembly" Name="Inventura2ConnectionString" ParameterPrefix="@" Provider="Microsoft.SqlServerCe.Client.3.5" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ListPolozkyDS" msdata:IsDataSet="true" msdata:Locale="" msprop:Generator_UserDSName="ListPolozkyDS" msprop:Generator_DataSetName="ListPolozkyDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Polozky" msprop:Generator_UserTableName="Polozky" msprop:Generator_RowDeletedName="PolozkyRowDeleted" msprop:Generator_RowChangedName="PolozkyRowChanged" msprop:Generator_RowClassName="PolozkyRow" msprop:Generator_RowChangingName="PolozkyRowChanging" msprop:Generator_RowEvArgName="PolozkyRowChangeEvent" msprop:Generator_RowEvHandlerName="PolozkyRowChangeEventHandler" msprop:Generator_TableClassName="PolozkyDataTable" msprop:Generator_TableVarName="tablePolozky" msprop:Generator_RowDeletingName="PolozkyRowDeleting" msprop:Generator_TablePropName="Polozky">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
+              <xs:element name="KATEGORIE" msprop:Generator_UserColumnName="KATEGORIE" msprop:Generator_ColumnPropNameInRow="KATEGORIE" msprop:Generator_ColumnVarNameInTable="columnKATEGORIE" msprop:Generator_ColumnPropNameInTable="KATEGORIEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="I_CISLO" msprop:Generator_UserColumnName="I_CISLO" msprop:Generator_ColumnPropNameInRow="I_CISLO" msprop:Generator_ColumnVarNameInTable="columnI_CISLO" msprop:Generator_ColumnPropNameInTable="I_CISLOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NAZEV" msprop:Generator_UserColumnName="NAZEV" msprop:Generator_ColumnPropNameInRow="NAZEV" msprop:Generator_ColumnVarNameInTable="columnNAZEV" msprop:Generator_ColumnPropNameInTable="NAZEVColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="STRED" msprop:Generator_UserColumnName="STRED" msprop:Generator_ColumnPropNameInRow="STRED" msprop:Generator_ColumnVarNameInTable="columnSTRED" msprop:Generator_ColumnPropNameInTable="STREDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="STRED_NAZEV" msprop:Generator_UserColumnName="STRED_NAZEV" msprop:Generator_ColumnPropNameInRow="STRED_NAZEV" msprop:Generator_ColumnVarNameInTable="columnSTRED_NAZEV" msprop:Generator_ColumnPropNameInTable="STRED_NAZEVColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OSOBA" msprop:Generator_UserColumnName="OSOBA" msprop:Generator_ColumnPropNameInRow="OSOBA" msprop:Generator_ColumnVarNameInTable="columnOSOBA" msprop:Generator_ColumnPropNameInTable="OSOBAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="OSOBA_NAZEV" msdata:Caption="STRED_NAZEV" msprop:Generator_UserColumnName="OSOBA_NAZEV" msprop:Generator_ColumnPropNameInRow="OSOBA_NAZEV" msprop:Generator_ColumnVarNameInTable="columnOSOBA_NAZEV" msprop:Generator_ColumnPropNameInTable="OSOBA_NAZEVColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LOKACE1" msprop:Generator_UserColumnName="LOKACE1" msprop:Generator_ColumnPropNameInRow="LOKACE1" msprop:Generator_ColumnVarNameInTable="columnLOKACE1" msprop:Generator_ColumnPropNameInTable="LOKACE1Column" type="xs:string" minOccurs="0" />
+              <xs:element name="LOKACE2" msprop:Generator_UserColumnName="LOKACE2" msprop:Generator_ColumnPropNameInRow="LOKACE2" msprop:Generator_ColumnVarNameInTable="columnLOKACE2" msprop:Generator_ColumnPropNameInTable="LOKACE2Column" type="xs:string" minOccurs="0" />
+              <xs:element name="LOKACE_NAZEV" msdata:Caption="STRED_NAZEV" msprop:Generator_UserColumnName="LOKACE_NAZEV" msprop:Generator_ColumnPropNameInRow="LOKACE_NAZEV" msprop:Generator_ColumnVarNameInTable="columnLOKACE_NAZEV" msprop:Generator_ColumnPropNameInTable="LOKACE_NAZEVColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="KANCELAR" msprop:Generator_UserColumnName="KANCELAR" msprop:Generator_ColumnPropNameInRow="KANCELAR" msprop:Generator_ColumnVarNameInTable="columnKANCELAR" msprop:Generator_ColumnPropNameInTable="KANCELARColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="KANCELAR_NAZEV" msdata:Caption="STRED_NAZEV" msprop:Generator_UserColumnName="KANCELAR_NAZEV" msprop:Generator_ColumnPropNameInRow="KANCELAR_NAZEV" msprop:Generator_ColumnVarNameInTable="columnKANCELAR_NAZEV" msprop:Generator_ColumnPropNameInTable="KANCELAR_NAZEVColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="EAN" msprop:Generator_UserColumnName="EAN" msprop:Generator_ColumnPropNameInRow="EAN" msprop:Generator_ColumnVarNameInTable="columnEAN" msprop:Generator_ColumnPropNameInTable="EANColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="KUSU" msprop:Generator_UserColumnName="KUSU" msprop:Generator_ColumnPropNameInRow="KUSU" msprop:Generator_ColumnVarNameInTable="columnKUSU" msprop:Generator_ColumnPropNameInTable="KUSUColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KLIC_LOK" msprop:Generator_UserColumnName="KLIC_LOK" msprop:Generator_ColumnPropNameInRow="KLIC_LOK" msprop:Generator_ColumnVarNameInTable="columnKLIC_LOK" msprop:Generator_ColumnPropNameInTable="KLIC_LOKColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NACTENO" msprop:Generator_UserColumnName="NACTENO" msprop:Generator_ColumnPropNameInRow="NACTENO" msprop:Generator_ColumnVarNameInTable="columnNACTENO" msprop:Generator_ColumnPropNameInTable="NACTENOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ZBYVA" msdata:ReadOnly="true" msdata:Expression="KUSU-NACTENO" msprop:Generator_UserColumnName="ZBYVA" msprop:Generator_ColumnPropNameInRow="ZBYVA" msprop:Generator_ColumnVarNameInTable="columnZBYVA" msprop:Generator_ColumnPropNameInTable="ZBYVAColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CASNACTENO" msprop:Generator_UserColumnName="CASNACTENO" msprop:Generator_ColumnPropNameInRow="CASNACTENO" msprop:Generator_ColumnVarNameInTable="columnCASNACTENO" msprop:Generator_ColumnPropNameInTable="CASNACTENOColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="KANCELAR_POPIS" msprop:Generator_UserColumnName="KANCELAR_POPIS" msprop:Generator_ColumnVarNameInTable="columnKANCELAR_POPIS" msprop:Generator_ColumnPropNameInRow="KANCELAR_POPIS" msprop:Generator_ColumnPropNameInTable="KANCELAR_POPISColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PolozkyNenalezene" msprop:Generator_UserTableName="PolozkyNenalezene" msprop:Generator_RowDeletedName="PolozkyNenalezeneRowDeleted" msprop:Generator_RowChangedName="PolozkyNenalezeneRowChanged" msprop:Generator_RowClassName="PolozkyNenalezeneRow" msprop:Generator_RowChangingName="PolozkyNenalezeneRowChanging" msprop:Generator_RowEvArgName="PolozkyNenalezeneRowChangeEvent" msprop:Generator_RowEvHandlerName="PolozkyNenalezeneRowChangeEventHandler" msprop:Generator_TableClassName="PolozkyNenalezeneDataTable" msprop:Generator_TableVarName="tablePolozkyNenalezene" msprop:Generator_RowDeletingName="PolozkyNenalezeneRowDeleting" msprop:Generator_TablePropName="PolozkyNenalezene">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EAN" msprop:Generator_UserColumnName="EAN" msprop:Generator_ColumnPropNameInRow="EAN" msprop:Generator_ColumnVarNameInTable="columnEAN" msprop:Generator_ColumnPropNameInTable="EANColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PolozkyNalezeneVicekrat" msprop:Generator_UserTableName="PolozkyNalezeneVicekrat" msprop:Generator_RowDeletedName="PolozkyNalezeneVicekratRowDeleted" msprop:Generator_RowChangedName="PolozkyNalezeneVicekratRowChanged" msprop:Generator_RowClassName="PolozkyNalezeneVicekratRow" msprop:Generator_RowChangingName="PolozkyNalezeneVicekratRowChanging" msprop:Generator_RowEvArgName="PolozkyNalezeneVicekratRowChangeEvent" msprop:Generator_RowEvHandlerName="PolozkyNalezeneVicekratRowChangeEventHandler" msprop:Generator_TableClassName="PolozkyNalezeneVicekratDataTable" msprop:Generator_TableVarName="tablePolozkyNalezeneVicekrat" msprop:Generator_RowDeletingName="PolozkyNalezeneVicekratRowDeleting" msprop:Generator_TablePropName="PolozkyNalezeneVicekrat">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EAN" msprop:Generator_UserColumnName="EAN" msprop:Generator_ColumnPropNameInRow="EAN" msprop:Generator_ColumnVarNameInTable="columnEAN" msprop:Generator_ColumnPropNameInTable="EANColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PolozkyNalezeneNasnimane" msprop:Generator_UserTableName="PolozkyNalezeneNasnimane" msprop:Generator_RowDeletedName="PolozkyNalezeneNasnimaneRowDeleted" msprop:Generator_RowChangedName="PolozkyNalezeneNasnimaneRowChanged" msprop:Generator_RowClassName="PolozkyNalezeneNasnimaneRow" msprop:Generator_RowChangingName="PolozkyNalezeneNasnimaneRowChanging" msprop:Generator_RowEvArgName="PolozkyNalezeneNasnimaneRowChangeEvent" msprop:Generator_RowEvHandlerName="PolozkyNalezeneNasnimaneRowChangeEventHandler" msprop:Generator_TableClassName="PolozkyNalezeneNasnimaneDataTable" msprop:Generator_TableVarName="tablePolozkyNalezeneNasnimane" msprop:Generator_RowDeletingName="PolozkyNalezeneNasnimaneRowDeleting" msprop:Generator_TablePropName="PolozkyNalezeneNasnimane">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EAN" msprop:Generator_UserColumnName="EAN" msprop:Generator_ColumnVarNameInTable="columnEAN" msprop:Generator_ColumnPropNameInRow="EAN" msprop:Generator_ColumnPropNameInTable="EANColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Polozky" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="PolozkyNenalezene_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PolozkyNenalezene" />
+      <xs:field xpath="mstns:EAN" />
+    </xs:unique>
+    <xs:unique name="PolozkyNalezeneVicekrat_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PolozkyNalezeneVicekrat" />
+      <xs:field xpath="mstns:EAN" />
+    </xs:unique>
+    <xs:unique name="PolozkyNalezeneNasnimane_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PolozkyNalezeneNasnimane" />
+      <xs:field xpath="mstns:EAN" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

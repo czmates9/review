@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="OperaceVyber_Label">Operace Výběr</string>
+  <string name="OperaceVyber_OK">OK</string>
+  <string name="OperaceVyber_Storno">Zrušit</string>
+  <string name="OperaceVyber_Label_Text">Operace Výběr</string>
+
+
+  <string name="OperaceVyber_ITEMDESC">Popis: {0}</string>
+  <string name="OperaceVyber_CountEntries">Dávka: {0}</string>
+  <string name="OperaceVyber_SOPNUMBE">Výr. při.: {0}</string>
+  <string name="OperaceVyber_BarcodeP">Čár. kód: {0}</string>
+
+  <string name="OperaceVyber_ITEMNMBR">ID pol.: {0}</string>
+  <string name="OperaceVyber_QTYSHPPD">Množství: {0}</string>
+  <string name="OperaceVyber_QTYODVEDENO">Odvedeno: {0}</string>
+  <string name="OperaceVyber_ITEMMJ">MJ: {0}</string>
+
+</resources>

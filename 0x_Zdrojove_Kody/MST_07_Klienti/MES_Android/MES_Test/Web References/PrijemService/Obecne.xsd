@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/Obecne.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/Obecne.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/Obecne.xsd" id="Obecne" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="Obecne">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Palety">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Index" type="xs:int" />
+              <xs:element minOccurs="0" name="ITEMNMBR" type="xs:string" />
+              <xs:element minOccurs="0" name="SERLTNUM" type="xs:string" />
+              <xs:element name="QTYSHPPD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="LOCNCODE" type="xs:string" />
+              <xs:element minOccurs="0" name="SKL_ID" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Lokace">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Index" type="xs:int" />
+              <xs:element minOccurs="0" name="LOCNCODE" type="xs:string" />
+              <xs:element minOccurs="0" name="SKL_ID" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Prijemky">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PONUMBER" type="xs:string" />
+              <xs:element minOccurs="0" name="Name" type="xs:string" />
+              <xs:element name="CZ_CarKod" type="xs:string" />
+              <xs:element minOccurs="0" name="DateTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Desc" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff">
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:weightSum="101"
+        android:id="@+id/llContainer_Tabulka_ParsingCodes">
+    <!--android:layout_weight="90"-->
+        <TextView
+            android:text="Varianty najdených kódů"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/txt_Dialog_ParsingCodes_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:textColor="#368DEB"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="30sp" />
+        <View
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:background="#000" />
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:background="#E2E2E2">
+            <TextView
+                android:text="Označení"
+                android:id="@+id/Tabulka_ParsingCodes_ID"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:textColor="#000"
+                android:textSize="20sp" />
+        </LinearLayout>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="90"
+            android:id="@+id/listView_Tabulka_ParsingCodes"
+            android:background="#F2F2F2"
+            android:divider="#101010"
+            android:dividerHeight="1dp" />
+    </LinearLayout>
+</FrameLayout>

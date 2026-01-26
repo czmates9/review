@@ -1,0 +1,3362 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA4A33DB-764E-4F7F-A555-414508FD8476}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fask.MST_W</RootNamespace>
+    <AssemblyName>MST_W</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.00</OSVersion>
+    <DeployDirSuffix>\Application\mst_w_7_test</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FormFactorID>
+    </FormFactorID>
+    <ApplicationIcon>Resources\logo_FASK2.ico</ApplicationIcon>
+    <DeployDirPrefix>\</DeployDirPrefix>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SignAssembly>false</SignAssembly>
+    <DelaySign>true</DelaySign>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\!Build!\MST_W\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;WindowsCE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>1</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\!Build!\MST_W\Release\</OutputPath>
+    <DefineConstants>TRACE;WindowsCE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HSM.Embedded.DeviceSystemAssembly, Version=3.812.2107.0, Culture=neutral, PublicKeyToken=f20d6e658fef9348, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\!!!Support!!!\Honeywell\HSM.Embedded.DeviceSystemAssembly.DLL</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.CF, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\!!!Support!!!\Ionic.Zip.CF\Ionic.Zip.CF.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsCE.Forms" />
+    <Reference Include="Microsoft.WindowsMobile.Forms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Windows Mobile 5.0 SDK R2\Managed Libraries\Microsoft.WindowsMobile.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json.Compact, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\_SdileneKnihovny_\WinCE\Newtonsoft\Compact\Newtonsoft.Json.Compact.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenNETCF, Version=2.3.12317.0, Culture=neutral, PublicKeyToken=e60dbea84bb431b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\!!!Support!!!\OpenNetCF\OpenNETCF.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\_SdileneKnihovny_\WinCE\RestSharpCE\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Symbol, Version=2.8.0.0, Culture=neutral, PublicKeyToken=68ec8db391f150ca, processorArchitecture=MSIL" />
+    <Reference Include="Symbol.Imaging2, Version=2.9.0.0, Culture=neutral, PublicKeyToken=68ec8db391f150ca, processorArchitecture=MSIL" />
+    <Reference Include="Symbol.Keyboard, Version=2.8.0.0, Culture=neutral, PublicKeyToken=68ec8db391f150ca, processorArchitecture=MSIL" />
+    <Reference Include="Symbol.ResourceCoordination, Version=2.9.0.0, Culture=neutral, PublicKeyToken=68ec8db391f150ca, processorArchitecture=MSIL" />
+    <Reference Include="Symbol.RFID2.Device, Version=2.2.2.1, Culture=neutral, PublicKeyToken=68ec8db391f150ca, processorArchitecture=MSIL" />
+    <Reference Include="Symbol.RFID3.Device, Version=1.2.0.0, Culture=neutral, PublicKeyToken=68ec8db391f150ca, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SqlClient, Version=3.0.3600.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.112.0, Culture=neutral, PublicKeyToken=1fdb50b1b62b4c84, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\04_Support\_Support_\SQLite\sqlite-netFx35-binary-PocketPC-ARM-2008-1.0.112.0\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\_SdileneTridy_\RestSharp\Communication_3_5.cs">
+      <Link>RestSharp_API\Communication_3_5.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\RestSharp\Communication_Base.cs">
+      <Link>RestSharp_API\Communication_Base.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\RestSharp\TrustAllCertificatePolicy.cs">
+      <Link>RestSharp_API\TrustAllCertificatePolicy.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_EventsTypes.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_EventsTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_EventsUser.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_EventsUser.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Inventura1.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Inventura1.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Inventura2.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Inventura2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Lokace.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Lokace.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Meny.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Meny.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Odberatele.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Odberatele.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Pracovnici.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Pracovnici.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Prijem.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Prijem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Prodej.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Prodej.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Servis_Ciselniky.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Servis_Ciselniky.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Servis_ZdrojePohyb.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Servis_ZdrojePohyb.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Servis_ZdrojeStav.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Servis_ZdrojeStav.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Sklady.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Sklady.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Strediska.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Strediska.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Tiskarny.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Tiskarny.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_TypDokladu.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_TypDokladu.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Ukoly.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Ukoly.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Users.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Users.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Vydej.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Vydej.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Zbozi.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Zbozi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Static.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Static.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\_Routines.cs">
+      <Link>SQLiteDBs\Controllers\_Routines.cs</Link>
+    </Compile>
+    <Compile Include="..\Fask.Obfuscation\ObfuscationAttributesGlobal.cs">
+      <Link>ObfuscationAttributesGlobal.cs</Link>
+    </Compile>
+    <Compile Include="..\Fask.Obfuscation\ObfuscationSettingsGlobal.cs">
+      <Link>ObfuscationSettingsGlobal.cs</Link>
+    </Compile>
+    <Compile Include="Classes\AssemblyInfo.cs" />
+    <Compile Include="Classes\BarCodes.cs" />
+    <Compile Include="Classes\DataGridTextBoxColumnComparer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\InputModeChecker.cs" />
+    <Compile Include="Classes\LokaceItem.cs" />
+    <Compile Include="Classes\LokaceLog.cs" />
+    <Compile Include="Classes\Paleta.cs" />
+    <Compile Include="Classes\SSCC.cs" />
+    <Compile Include="Classes\SystemTimeSynchronization.cs" />
+    <Compile Include="Components\KeyboardManager.cs" />
+    <Compile Include="Config\CiselneRady.cs" />
+    <Compile Include="Config\Classes\formConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\FormAdminAccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\FormAdminAccess.Designer.cs">
+      <DependentUpon>FormAdminAccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\formConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\formConfig.Designer.cs">
+      <DependentUpon>formConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\PriorityColors.cs">
+      <DependentUpon>PriorityColors.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Config\PriorityColors.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PriorityColors.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Events\Event.cs" />
+    <Compile Include="Events\EventsFactory.cs" />
+    <Compile Include="Events\FormUdalosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\FormUdalosti.Designer.cs">
+      <DependentUpon>FormUdalosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\IEvents.cs" />
+    <Compile Include="Exceptions\ExceptionVizualize.cs" />
+    <Compile Include="Exceptions\SQLiteImplementException.cs" />
+    <Compile Include="Expedice\ExpedicePaletyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expedice\ExpedicePaletyList.Designer.cs">
+      <DependentUpon>ExpedicePaletyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expedice\ExpediceTisk.cs" />
+    <Compile Include="Expedice\ExpediceVyberHlavickyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expedice\ExpediceVyberHlavickyList.Designer.cs">
+      <DependentUpon>ExpediceVyberHlavickyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expedice\ExpediceBaleniPolozkyVarianty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expedice\ExpediceBaleniPolozkyVarianty.Designer.cs">
+      <DependentUpon>ExpediceBaleniPolozkyVarianty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expedice\ExpediceBaleniPolozkyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expedice\ExpediceBaleniPolozkyList.Designer.cs">
+      <DependentUpon>ExpediceBaleniPolozkyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expedice\ExpediceMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expedice\ExpediceMain.Designer.cs">
+      <DependentUpon>ExpediceMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expedice\GlobalObject.cs" />
+    <Compile Include="Expedice\Globals.cs" />
+    <Compile Include="Expedice\ExpediceBaleniVyberHlavickyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expedice\ExpediceBaleniVyberHlavickyList.Designer.cs">
+      <DependentUpon>ExpediceBaleniVyberHlavickyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expedice\ExpediceBaleniPridatPolozku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expedice\ExpediceBaleniPridatPolozku.Designer.cs">
+      <DependentUpon>ExpediceBaleniPridatPolozku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ComboBoxExtensions.cs" />
+    <Compile Include="Extensions\DataSetExtensions.cs" />
+    <Compile Include="FileTransfer\FileOperations.cs" />
+    <Compile Include="FileTransfer\Routines.cs" />
+    <Compile Include="Forms\Alter_LokaciList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Alter_LokaciList.Designer.cs">
+      <DependentUpon>Alter_LokaciList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConfigAppForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InputBoxExpirace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InputBoxExpirace.Designer.cs">
+      <DependentUpon>InputBoxExpirace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormReport.Designer.cs">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MultiBarcode_Scan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MultiBarcode_Scan.Designer.cs">
+      <DependentUpon>MultiBarcode_Scan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SejmiSNHromadneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SejmiSNHromadneForm.Designer.cs">
+      <DependentUpon>SejmiSNHromadneForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileTransfer\CompressFile.cs" />
+    <Compile Include="FileTransfer\Downloading.cs" />
+    <Compile Include="FileTransfer\Uploading.cs" />
+    <Compile Include="Forms\FormLokaceTypVyber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLokaceTypVyber.Designer.cs">
+      <DependentUpon>FormLokaceTypVyber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLokaceVyber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLokaceVyber.Designer.cs">
+      <DependentUpon>FormLokaceVyber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormOdberateleVyber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormOdberateleVyber.Designer.cs">
+      <DependentUpon>FormOdberateleVyber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm2.Designer.cs">
+      <DependentUpon>LoginForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PracujiForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PracujiForm2.Designer.cs">
+      <DependentUpon>PracujiForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SejmiImageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SejmiImageForm.Designer.cs">
+      <DependentUpon>SejmiImageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DateTimeInputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DateTimeInputBox.Designer.cs">
+      <DependentUpon>DateTimeInputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DateInputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DateInputBox.Designer.cs">
+      <DependentUpon>DateInputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SejmiKodFormDropdown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SejmiKodFormDropdown.Designer.cs">
+      <DependentUpon>SejmiKodFormDropdown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTiskarnyVyber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTiskarnyVyber.Designer.cs">
+      <DependentUpon>FormTiskarnyVyber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormPodbarveniPriorit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormPodbarveniPriorit.designer.cs">
+      <DependentUpon>FormPodbarveniPriorit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSkladVyber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSkladVyber.Designer.cs">
+      <DependentUpon>FormSkladVyber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FaskFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FaskFormBase.Designer.cs">
+      <DependentUpon>FaskFormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MessageBoxBigTimeout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PodbarveniPriorit\DataGrid2TextBoxColumnColor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\FormPracovnikVyber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormPracovnikVyber.Designer.cs">
+      <DependentUpon>FormPracovnikVyber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SnimatRFID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SnimatRFID.Designer.cs">
+      <DependentUpon>SnimatRFID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informations\OnLineItemumberGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informations\OnLineItemumberGrid.Designer.cs">
+      <DependentUpon>OnLineItemumberGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\Classes\ListPolozky_sqlce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\GlobalObject.cs" />
+    <Compile Include="Inventura1_sqlce\InventuraTisk.cs" />
+    <Compile Include="Inventura1_sqlce\NaplnPolozkuSN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\NaplnPolozkuSN.Designer.cs">
+      <DependentUpon>NaplnPolozkuSN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\Inventura1_sqlce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\Inventura1_sqlce.Designer.cs">
+      <DependentUpon>Inventura1_sqlce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\ListInventury_sqlce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\ListInventury_sqlce.Designer.cs">
+      <DependentUpon>ListInventury_sqlce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\ListPolozky.cs">
+      <DependentUpon>ListPolozky.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\ListPolozky.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListPolozky.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\ListPolozkyI3_sqlce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\ListPolozkyI3_sqlce.Designer.cs">
+      <DependentUpon>ListPolozkyI3_sqlce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\ListPolozkyNasnimane.cs">
+      <DependentUpon>ListPolozkyNasnimane.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\ListPolozkyNasnimane.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListPolozkyNasnimane.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\ListPolozky_sqlce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\ListPolozky_sqlce.Designer.cs">
+      <DependentUpon>ListPolozky_sqlce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\NaplnPolozku_sqlce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\NaplnPolozku_sqlce.Designer.cs">
+      <DependentUpon>NaplnPolozku_sqlce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\Nasnimane2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\Nasnimane2.Designer.cs">
+      <DependentUpon>Nasnimane2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\SejmiKodFormHledejNazev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\SejmiKodFormHledejNazev.Designer.cs">
+      <DependentUpon>SejmiKodFormHledejNazev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura1_sqlce\StaticMethods.cs" />
+    <Compile Include="Inventura2\FiltryInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura2\FiltryInfo.Designer.cs">
+      <DependentUpon>FiltryInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura2\GlobalObject.cs" />
+    <Compile Include="Inventura2\ListPolozkyNasnimaneDS.cs">
+      <DependentUpon>ListPolozkyNasnimaneDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura2\ListPolozkyNasnimaneDS.Designer.cs">
+      <DependentUpon>ListPolozkyNasnimaneDS.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Inventura2\Nasnimane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura2\Nasnimane.Designer.cs">
+      <DependentUpon>Nasnimane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura2\SnimatRFID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura2\SnimatRFID.Designer.cs">
+      <DependentUpon>SnimatRFID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura2\ZmenaStredisko.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura2\ZmenaStredisko.Designer.cs">
+      <DependentUpon>ZmenaStredisko.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura2\ZmenaOsoba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura2\ZmenaOsoba.Designer.cs">
+      <DependentUpon>ZmenaOsoba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura2\ZmenaKancl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura2\ZmenaKancl.Designer.cs">
+      <DependentUpon>ZmenaKancl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura2\Inventura2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura2\Inventura2.Designer.cs">
+      <DependentUpon>Inventura2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura2\ListInventury.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura2\ListInventury.Designer.cs">
+      <DependentUpon>ListInventury.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura2\ListPolozky.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura2\ListPolozky.Designer.cs">
+      <DependentUpon>ListPolozky.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura2\ListPolozkyDS.cs">
+      <DependentUpon>ListPolozkyDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura2\ListPolozkyDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListPolozkyDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura2\NaplnPolozku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura2\NaplnPolozku.Designer.cs">
+      <DependentUpon>NaplnPolozku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura2\ZmenaLokace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura2\ZmenaLokace.Designer.cs">
+      <DependentUpon>ZmenaLokace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licence\Licensing.cs" />
+    <Compile Include="MySystem\AppConfiguration.cs" />
+    <Compile Include="MySystem\FileOperations.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MySystem\Memory.cs" />
+    <Compile Include="MySystem\MyAssambly.cs" />
+    <Compile Include="MySystem\Net.cs" />
+    <Compile Include="MySystem\PlatformDetection.cs" />
+    <Compile Include="MySystem\SystemDateTime.cs" />
+    <Compile Include="ObfuscationSettings.cs" />
+    <Compile Include="Classes\Price.cs" />
+    <Compile Include="Online\BYZNYS\Algorithms.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Online\BYZNYS\Database.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Online\BYZNYS\DatabaseOnline.cs">
+      <DependentUpon>DatabaseOnline.xsd</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Online\BYZNYS\DatabaseOnline.Designer.cs">
+      <DependentUpon>DatabaseOnline.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Online\BYZNYS\FormNovyEAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\BYZNYS\FormNovyEAN.Designer.cs">
+      <DependentUpon>FormNovyEAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\BYZNYS\FormVyberPartnera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\BYZNYS\FormVyberPartnera.Designer.cs">
+      <DependentUpon>FormVyberPartnera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\BYZNYS\FormVyberZbozi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\BYZNYS\FormVyberZbozi.Designer.cs">
+      <DependentUpon>FormVyberZbozi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\Classes\PrijemList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\GlobalObject.cs" />
+    <Compile Include="Prijem_4\PrijemVyberPrijmoveLokaceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemVyberPrijmoveLokaceList.Designer.cs">
+      <DependentUpon>PrijemVyberPrijmoveLokaceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\DetailItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\DetailItem.Designer.cs">
+      <DependentUpon>DetailItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemPridatPolozkuSN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemPridatPolozkuSN.Designer.cs">
+      <DependentUpon>PrijemPridatPolozkuSN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\Detail.Designer.cs">
+      <DependentUpon>Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\Globals.cs" />
+    <Compile Include="Prijem_4\Hlavicky.cs" />
+    <Compile Include="Prijem_4\ListSlouceneDavkyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\ListSlouceneDavkyForm.Designer.cs">
+      <DependentUpon>ListSlouceneDavkyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemDavkyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemDavkyList.Designer.cs">
+      <DependentUpon>PrijemDavkyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemGenerovaniVlastniSN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemGenerovaniVlastniSN.designer.cs">
+      <DependentUpon>PrijemGenerovaniVlastniSN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemGenerovaniZakaznickeSN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemGenerovaniZakaznickeSN.designer.cs">
+      <DependentUpon>PrijemGenerovaniZakaznickeSN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemGenerovatSNVybercs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemGenerovatSNVybercs.designer.cs">
+      <DependentUpon>PrijemGenerovatSNVybercs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemList.Designer.cs">
+      <DependentUpon>PrijemList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemMain.Designer.cs">
+      <DependentUpon>PrijemMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemNasnimane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemNasnimane.Designer.cs">
+      <DependentUpon>PrijemNasnimane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemPridatPolozku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemPridatPolozku.Designer.cs">
+      <DependentUpon>PrijemPridatPolozku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemServiceOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemServiceOperations.Designer.cs">
+      <DependentUpon>PrijemServiceOperations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemTisk.cs" />
+    <Compile Include="Prijem_4\PrijemVyberPolozky.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemVyberPolozky.Designer.cs">
+      <DependentUpon>PrijemVyberPolozky.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemZalokovaniList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemZalokovaniList.Designer.cs">
+      <DependentUpon>PrijemZalokovaniList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemVyberLokaceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemVyberLokaceList.Designer.cs">
+      <DependentUpon>PrijemVyberLokaceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemNezrealizovanePrijemkyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemNezrealizovanePrijemkyList.Designer.cs">
+      <DependentUpon>PrijemNezrealizovanePrijemkyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemZadejLokaci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\PrijemZadejLokaci.Designer.cs">
+      <DependentUpon>PrijemZadejLokaci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem_4\TypOznaceniPaletyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem_4\TypOznaceniPaletyForm.Designer.cs">
+      <DependentUpon>TypOznaceniPaletyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prodej_3\Classes\ProdejPaleta.cs" />
+    <Compile Include="Prodej_3\GlobalObject.cs" />
+    <Compile Include="Prodej_3\ProdejSumar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejSumar.Designer.cs">
+      <DependentUpon>ProdejSumar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejTisk.cs" />
+    <Compile Include="Prodej_3\ProdejVyberMeny.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejVyberMeny.Designer.cs">
+      <DependentUpon>ProdejVyberMeny.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejVyberPracovnika2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejVyberPracovnika2.Designer.cs">
+      <DependentUpon>ProdejVyberPracovnika2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prodej_3\Globals.cs" />
+    <Compile Include="Prodej_3\ProdejDavkyDataSet.cs">
+      <DependentUpon>ProdejDavkyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejVyberStrediska2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejVyberStrediska2.Designer.cs">
+      <DependentUpon>ProdejVyberStrediska2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejVyberTypuDokladu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejVyberTypuDokladu.Designer.cs">
+      <DependentUpon>ProdejVyberTypuDokladu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejDavkyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProdejDavkyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejList.Designer.cs">
+      <DependentUpon>ProdejList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejMain.Designer.cs">
+      <DependentUpon>ProdejMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejPridatPolozku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejPridatPolozku.Designer.cs">
+      <DependentUpon>ProdejPridatPolozku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejServiceOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejServiceOperations.Designer.cs">
+      <DependentUpon>ProdejServiceOperations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejVyberDavky.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejVyberDavky.Designer.cs">
+      <DependentUpon>ProdejVyberDavky.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejVyberOdberatele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejVyberOdberatele.Designer.cs">
+      <DependentUpon>ProdejVyberOdberatele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejVyberPalety.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejVyberPalety.Designer.cs">
+      <DependentUpon>ProdejVyberPalety.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejVyberMaterialuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prodej_3\ProdejVyberMaterialuList.Designer.cs">
+      <DependentUpon>ProdejVyberMaterialuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prodej_3\RFID\SnimatRFID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prodej_3\RFID\SnimatRFID.Designer.cs">
+      <DependentUpon>SnimatRFID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prodej_3\RFID\ZobrazitRFID.cs">
+      <DependentUpon>ZobrazitRFID.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Prodej_3\RFID\ZobrazitRFID1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZobrazitRFID.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Prodej_3\RFID\ZobrazRFID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prodej_3\RFID\ZobrazRFID.Designer.cs">
+      <DependentUpon>ZobrazRFID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RFID\EPC.cs" />
+    <Compile Include="RFID\EPCMemoryFormatException.cs" />
+    <Compile Include="RFID\EPC_SGTIN96.cs" />
+    <Compile Include="RFID\EPSGlobal_sgtin96.cs" />
+    <Compile Include="RFID\MDIDs.cs" />
+    <Compile Include="RFID\Routines_v2.cs" />
+    <Compile Include="RFID\StringExtension.cs" />
+    <Compile Include="RFID\TID.cs" />
+    <Compile Include="RFID\USER.cs" />
+    <Compile Include="RFID\USER_512b.cs" />
+    <Compile Include="Scanner\ScannerRFIDMC319Z.cs" />
+    <Compile Include="Scanner\MC9090\FrmCapabilties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanner\MC9090\FrmCapabilties.designer.cs">
+      <DependentUpon>FrmCapabilties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scanner\MC9090\FrmConfigurationMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanner\MC9090\FrmConfigurationMain.Designer.cs">
+      <DependentUpon>FrmConfigurationMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scanner\MC9090\FrmReadAntennaInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanner\MC9090\FrmReadAntennaInfo.designer.cs">
+      <DependentUpon>FrmReadAntennaInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scanner\MC9090\FrmReaderInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanner\MC9090\FrmReaderInfo.designer.cs">
+      <DependentUpon>FrmReaderInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scanner\MC9090\FrmSetAntenna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanner\MC9090\FrmSetAntenna.designer.cs">
+      <DependentUpon>FrmSetAntenna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scanner\MC9090\FrmReaderSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanner\MC9090\FrmReaderSettings.Designer.cs">
+      <DependentUpon>FrmReaderSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scanner\MC9090\MC9090Configuration.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MC9090Configuration.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Scanner\ScannerRFIDMC319Z_v2.cs" />
+    <Compile Include="Scanner\ScannerRFIDMC9090.cs" />
+    <Compile Include="Scanner\RFID\Routines.cs" />
+    <Compile Include="Scanner\ScannerBaseRFID.cs" />
+    <Compile Include="Schema\TypyPalet.cs">
+      <DependentUpon>TypyPalet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TypyPalet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TypyPalet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ServerAccess\CertificatesPolicy\QueryTrustCertificatePolicy.cs" />
+    <Compile Include="ServerAccess\CertificatesPolicy\TrustAllCertificatePolicy.cs" />
+    <Compile Include="ServerAccess\Credentials.cs" />
+    <Compile Include="ServisModule\Data\ZdrojeStav.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZdrojeStav.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ServisModule\GlobalObject.cs" />
+    <Compile Include="ServisModule\Hlavicky.cs" />
+    <Compile Include="ServisModule\ServisMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServisModule\ServisMain.Designer.cs">
+      <DependentUpon>ServisMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServisModule\ServisOkruhList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServisModule\ServisOkruhList.Designer.cs">
+      <DependentUpon>ServisOkruhList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServisModule\ServisDavkyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServisModule\ServisDavkyList.Designer.cs">
+      <DependentUpon>ServisDavkyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServisModule\ServisServiceOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServisModule\ServisServiceOperations.Designer.cs">
+      <DependentUpon>ServisServiceOperations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServisModule\ServisSejmiKodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServisModule\ServisSejmiKodForm.Designer.cs">
+      <DependentUpon>ServisSejmiKodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServisModule\ServisAnoNe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServisModule\ServisAnoNe.Designer.cs">
+      <DependentUpon>ServisAnoNe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServisModule\ServisCinnostZmena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServisModule\ServisCinnostZmena.Designer.cs">
+      <DependentUpon>ServisCinnostZmena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServisModule\Globals.cs" />
+    <Compile Include="ServisModule\ServisDynamickaTabulka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServisModule\ServisDynamickaTabulka.Designer.cs">
+      <DependentUpon>ServisDynamickaTabulka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServisModule\ServisList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServisModule\ServisList.Designer.cs">
+      <DependentUpon>ServisList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServisModule\ServisStavyZmena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServisModule\ServisStavyZmena.Designer.cs">
+      <DependentUpon>ServisStavyZmena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Informations\OnLinePocetKusuSklad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informations\OnLinePocetKusuSklad.Designer.cs">
+      <DependentUpon>OnLinePocetKusuSklad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\Columns\ColumnType.cs" />
+    <Compile Include="SQLiteDBs\Columns\DictionaryExtension.cs" />
+    <Compile Include="SQLiteDBs\Columns\EventsTypes.cs" />
+    <Compile Include="SQLiteDBs\Columns\EventsUser.cs" />
+    <Compile Include="SQLiteDBs\Columns\Inventura1.cs" />
+    <Compile Include="SQLiteDBs\Columns\Inventura2.cs" />
+    <Compile Include="SQLiteDBs\Columns\Lokace.cs" />
+    <Compile Include="SQLiteDBs\Columns\Meny.cs" />
+    <Compile Include="SQLiteDBs\Columns\Odberatele.cs" />
+    <Compile Include="SQLiteDBs\Columns\Pracovnici.cs" />
+    <Compile Include="SQLiteDBs\Columns\Prijem.cs" />
+    <Compile Include="SQLiteDBs\Columns\Prodej.cs" />
+    <Compile Include="SQLiteDBs\Columns\Servis_Ciselniky.cs" />
+    <Compile Include="SQLiteDBs\Columns\Servis_ZdrojePohyb.cs" />
+    <Compile Include="SQLiteDBs\Columns\Servis_ZdrojeStav.cs" />
+    <Compile Include="SQLiteDBs\Columns\Sklady.cs" />
+    <Compile Include="SQLiteDBs\Columns\Strediska.cs" />
+    <Compile Include="SQLiteDBs\Columns\Tiskarny.cs" />
+    <Compile Include="SQLiteDBs\Columns\TypDokladu.cs" />
+    <Compile Include="SQLiteDBs\Columns\Ukoly.cs" />
+    <Compile Include="SQLiteDBs\Columns\Uzivatele.cs" />
+    <Compile Include="SQLiteDBs\Columns\Vydej.cs" />
+    <Compile Include="SQLiteDBs\Columns\Zbozi.cs" />
+    <Compile Include="SQLiteDBs\DataSets\EventsTypes1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EventsTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\EventsUser1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EventsUser.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Inventura11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventura1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Inventura21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventura2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Lokace1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lokace.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Meny1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Meny.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Obecne1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Obecne.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Odberatele1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Pracovnici1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Prijem1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Prodej1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Servis1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Servis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Sklady1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Strediska1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strediska.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Tiskarny1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tiskarny.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\TypDokladu1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TypDokladu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Ukoly.cs">
+      <DependentUpon>Ukoly.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Ukoly1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ukoly.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Uzivatele1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Uzivatele.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Vydej1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Zbozi1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLite_Classes\SQLite_Common.cs" />
+    <Compile Include="SQLite_Classes\SQLite_Helper.cs" />
+    <Compile Include="Ukolovani_1\GlobalObject.cs" />
+    <Compile Include="Ukolovani_1\UkolovaniMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ukolovani_1\UkolovaniMain.Designer.cs">
+      <DependentUpon>UkolovaniMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ukolovani_1\UkolovaniUkolEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ukolovani_1\UkolovaniUkolEdit.Designer.cs">
+      <DependentUpon>UkolovaniUkolEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ukolovani_1\Ukolovani_Checker.cs" />
+    <Compile Include="Vydej_3\Classes\ListNasnimForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\Classes\ListPolozek3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\Detail.Designer.cs">
+      <DependentUpon>Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\Dialogs\VydejDialogPocetVydavanych.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\Dialogs\VydejDialogPocetVydavanych.Designer.cs">
+      <DependentUpon>VydejDialogPocetVydavanych.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\ListPolozekVydej.cs">
+      <DependentUpon>ListPolozekVydej.xsd</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\ListPolozekVydej1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListPolozekVydej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\Online\Checks.cs" />
+    <Compile Include="Vydej_3\Online\Material.cs" />
+    <Compile Include="Vydej_3\PotvrditMnozstviForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\PotvrditMnozstviForm.Designer.cs">
+      <DependentUpon>PotvrditMnozstviForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\RFID\Complete\DsRFIDComplete.cs">
+      <DependentUpon>DsRFIDComplete.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\RFID\Complete\DsRFIDComplete.Designer.cs">
+      <DependentUpon>DsRFIDComplete.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Vydej_3\RFID\DsRFID.cs">
+      <DependentUpon>DsRFID.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\RFID\TableAdapters\DsRFIDTableAdapters.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\VlozTypyPaletForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\VlozTypyPaletForm.Designer.cs">
+      <DependentUpon>VlozTypyPaletForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\GlobalObject.cs" />
+    <Compile Include="Vydej_3\ListPolozek3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\ListPolozek3.Designer.cs">
+      <DependentUpon>ListPolozek3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\PolozkaNasnimDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\PolozkaNasnimDetail.Designer.cs">
+      <DependentUpon>PolozkaNasnimDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\RFID\DsRFID.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsRFID.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\RFID\SnimatRFID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\RFID\SnimatRFID.Designer.cs">
+      <DependentUpon>SnimatRFID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\RFID\VydejRFIDZboziKPrirazeniList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\RFID\VydejRFIDZboziKPrirazeniList.Designer.cs">
+      <DependentUpon>VydejRFIDZboziKPrirazeniList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\RFID\ZapisRFID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\RFID\ZapisRFID.Designer.cs">
+      <DependentUpon>ZapisRFID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\TypOznaceniPaletyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\TypOznaceniPaletyForm.Designer.cs">
+      <DependentUpon>TypOznaceniPaletyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\VydejVyberMaterialuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\VydejVyberMaterialuList.Designer.cs">
+      <DependentUpon>VydejVyberMaterialuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\VydejZobrazeniLokaciList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\VydejZobrazeniLokaciList.Designer.cs">
+      <DependentUpon>VydejZobrazeniLokaciList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\SejmiKodInfoFormSN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\SejmiKodInfoFormSN.Designer.cs">
+      <DependentUpon>SejmiKodInfoFormSN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\SejmiKodHromadneInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\SejmiKodHromadneInfoForm.Designer.cs">
+      <DependentUpon>SejmiKodHromadneInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\ListSlouceneDavkyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\ListSlouceneDavkyForm.Designer.cs">
+      <DependentUpon>ListSlouceneDavkyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\ListZbozi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\ListZbozi.Designer.cs">
+      <DependentUpon>ListZbozi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\Nastaveni\ListPolozekStatusBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\Nastaveni\ListPolozekStatusBar.Designer.cs">
+      <DependentUpon>ListPolozekStatusBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\PriorityColumns\DataGrid2TextBoxColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\VydejTisk.cs" />
+    <Compile Include="Vydej_3\SejmiKodInfoForm4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\SejmiKodInfoForm4.Designer.cs">
+      <DependentUpon>SejmiKodInfoForm4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\Graphics\DataGrid2NumberBoxColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\Graphics\DataGrid2TextBoxColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\Hlavicky.cs" />
+    <Compile Include="Vydej_3\ListDavkamaForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\ListDavkamaForm3.Designer.cs">
+      <DependentUpon>ListDavkamaForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\ListMNForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\ListMNForm3.Designer.cs">
+      <DependentUpon>ListMNForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\ListNasnimForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\ListNasnimForm3.Designer.cs">
+      <DependentUpon>ListNasnimForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\ListOdberateliForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\ListOdberateliForm3.Designer.cs">
+      <DependentUpon>ListOdberateliForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\ListVydejekForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\ListVydejekForm3.Designer.cs">
+      <DependentUpon>ListVydejekForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\PolozkaDetailForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\PolozkaDetailForm3.Designer.cs">
+      <DependentUpon>PolozkaDetailForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\SejmiKodInfoForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\SejmiKodInfoForm3.Designer.cs">
+      <DependentUpon>SejmiKodInfoForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\StavVydejeForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\StavVydejeForm3.Designer.cs">
+      <DependentUpon>StavVydejeForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\TypOznaceniPaletyFormOld.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\TypOznaceniPaletyFormOld.Designer.cs">
+      <DependentUpon>TypOznaceniPaletyFormOld.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej_3\Vydej.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej_3\Vydej.Designer.cs">
+      <DependentUpon>Vydej.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ConfigurationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EventsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ExpediceService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\FileTransferService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\HmotnostService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Inventura2Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\LoginService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\LokaceService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PrijemService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\RFIDService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServisModuleWService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServisModuleWService\Servis.cs">
+      <DependentUpon>Servis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServisModuleWService\ServisDavky.cs">
+      <DependentUpon>ServisDavky.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SystemTimeService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\UkolovaniService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="CsvTextFileReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLocation.cs" />
+    <Compile Include="Forms\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InputBox.Designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServiceOperationsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServiceOperationsForm.Designer.cs">
+      <DependentUpon>ServiceOperationsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="Main_MST_W.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_MST_W.Designer.cs">
+      <DependentUpon>Main_MST_W.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySystem\Comm.cs" />
+    <Compile Include="MySystem\FormMidLocation.cs" />
+    <Compile Include="Forms\SejmiKodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SejmiKodForm.Designer.cs">
+      <DependentUpon>SejmiKodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySystem\FxDouble.cs" />
+    <Compile Include="MySystem\LogOperator.cs" />
+    <Compile Include="MySystem\MyBackgroundWorker.cs" />
+    <Compile Include="MySystem\PlaySound.cs" />
+    <Compile Include="Schema\Sklad.cs">
+      <DependentUpon>Sklad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\Sklad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sklad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MessageBoxBig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Config\FormAdminAccess.resx">
+      <DependentUpon>FormAdminAccess.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\formConfig.resx">
+      <DependentUpon>formConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\FormUdalosti.resx">
+      <DependentUpon>FormUdalosti.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expedice\ExpedicePaletyList.resx">
+      <DependentUpon>ExpedicePaletyList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expedice\ExpediceVyberHlavickyList.resx">
+      <DependentUpon>ExpediceVyberHlavickyList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expedice\ExpediceBaleniPolozkyVarianty.resx">
+      <DependentUpon>ExpediceBaleniPolozkyVarianty.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expedice\ExpediceBaleniPolozkyList.resx">
+      <DependentUpon>ExpediceBaleniPolozkyList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expedice\ExpediceBaleniVyberHlavickyList.resx">
+      <DependentUpon>ExpediceBaleniVyberHlavickyList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expedice\ExpediceBaleniPridatPolozku.resx">
+      <DependentUpon>ExpediceBaleniPridatPolozku.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expedice\ExpediceMain.resx">
+      <DependentUpon>ExpediceMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Alter_LokaciList.resx">
+      <DependentUpon>Alter_LokaciList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfigAppForm.resx">
+      <DependentUpon>ConfigAppForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InputBoxExpirace.resx">
+      <DependentUpon>InputBoxExpirace.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormReport.resx">
+      <DependentUpon>FormReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MultiBarcode_Scan.resx">
+      <DependentUpon>MultiBarcode_Scan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SejmiSNHromadneForm.resx">
+      <DependentUpon>SejmiSNHromadneForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLokaceTypVyber.resx">
+      <DependentUpon>FormLokaceTypVyber.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLokaceVyber.resx">
+      <DependentUpon>FormLokaceVyber.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm2.resx">
+      <DependentUpon>LoginForm2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageBoxBig.sk.resx">
+      <DependentUpon>MessageBoxBig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormOdberateleVyber.resx">
+      <DependentUpon>FormOdberateleVyber.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PracujiForm2.resx">
+      <DependentUpon>PracujiForm2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SejmiImageForm.resx">
+      <DependentUpon>SejmiImageForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DateTimeInputBox.resx">
+      <DependentUpon>DateTimeInputBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DateInputBox.resx">
+      <DependentUpon>DateInputBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SejmiKodFormDropdown.resx">
+      <DependentUpon>SejmiKodFormDropdown.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTiskarnyVyber.resx">
+      <DependentUpon>FormTiskarnyVyber.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormPodbarveniPriorit.resx">
+      <DependentUpon>FormPodbarveniPriorit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSkladVyber.resx">
+      <DependentUpon>FormSkladVyber.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FaskFormBase.resx">
+      <DependentUpon>FaskFormBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageBoxBigTimeout.resx">
+      <DependentUpon>MessageBoxBigTimeout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormPracovnikVyber.resx">
+      <DependentUpon>FormPracovnikVyber.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SnimatRFID.resx">
+      <DependentUpon>SnimatRFID.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informations\OnLineItemumberGrid.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OnLineItemumberGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura1_sqlce\NaplnPolozkuSN.resx">
+      <DependentUpon>NaplnPolozkuSN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura1_sqlce\Inventura1_sqlce.resx">
+      <DependentUpon>Inventura1_sqlce.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura1_sqlce\ListInventury_sqlce.resx">
+      <DependentUpon>ListInventury_sqlce.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura1_sqlce\ListPolozkyI3_sqlce.resx">
+      <DependentUpon>ListPolozkyI3_sqlce.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura1_sqlce\ListPolozky_sqlce.resx">
+      <DependentUpon>ListPolozky_sqlce.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura1_sqlce\NaplnPolozku_sqlce.resx">
+      <DependentUpon>NaplnPolozku_sqlce.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura1_sqlce\Nasnimane2.resx">
+      <DependentUpon>Nasnimane2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura1_sqlce\SejmiKodFormHledejNazev.resx">
+      <DependentUpon>SejmiKodFormHledejNazev.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura2\FiltryInfo.resx">
+      <DependentUpon>FiltryInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura2\Nasnimane.resx">
+      <DependentUpon>Nasnimane.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura2\SnimatRFID.resx">
+      <DependentUpon>SnimatRFID.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura2\ZmenaStredisko.resx">
+      <DependentUpon>ZmenaStredisko.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura2\ZmenaOsoba.resx">
+      <DependentUpon>ZmenaOsoba.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura2\ZmenaKancl.resx">
+      <DependentUpon>ZmenaKancl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura2\Inventura2.resx">
+      <DependentUpon>Inventura2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura2\ListInventury.resx">
+      <DependentUpon>ListInventury.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura2\ListPolozky.resx">
+      <DependentUpon>ListPolozky.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura2\NaplnPolozku.resx">
+      <DependentUpon>NaplnPolozku.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura2\ZmenaLokace.resx">
+      <DependentUpon>ZmenaLokace.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\BYZNYS\FormNovyEAN.resx">
+      <DependentUpon>FormNovyEAN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\BYZNYS\FormVyberPartnera.resx">
+      <DependentUpon>FormVyberPartnera.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\BYZNYS\FormVyberZbozi.resx">
+      <DependentUpon>FormVyberZbozi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\PrijemVyberPrijmoveLokaceList.resx">
+      <DependentUpon>PrijemVyberPrijmoveLokaceList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\DetailItem.resx">
+      <DependentUpon>DetailItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\PrijemPridatPolozkuSN.resx">
+      <DependentUpon>PrijemPridatPolozkuSN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\Detail.resx">
+      <DependentUpon>Detail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\ListSlouceneDavkyForm.resx">
+      <DependentUpon>ListSlouceneDavkyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\PrijemDavkyList.resx">
+      <DependentUpon>PrijemDavkyList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\PrijemGenerovaniVlastniSN.resx">
+      <DependentUpon>PrijemGenerovaniVlastniSN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\PrijemGenerovaniZakaznickeSN.resx">
+      <DependentUpon>PrijemGenerovaniZakaznickeSN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\PrijemGenerovatSNVybercs.resx">
+      <DependentUpon>PrijemGenerovatSNVybercs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\PrijemList.resx">
+      <DependentUpon>PrijemList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\PrijemMain.resx">
+      <DependentUpon>PrijemMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\PrijemNasnimane.resx">
+      <DependentUpon>PrijemNasnimane.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\PrijemPridatPolozku.resx">
+      <DependentUpon>PrijemPridatPolozku.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\PrijemServiceOperations.resx">
+      <DependentUpon>PrijemServiceOperations.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\PrijemVyberPolozky.resx">
+      <DependentUpon>PrijemVyberPolozky.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\PrijemZalokovaniList.resx">
+      <DependentUpon>PrijemZalokovaniList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\PrijemVyberLokaceList.resx">
+      <DependentUpon>PrijemVyberLokaceList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\PrijemNezrealizovanePrijemkyList.resx">
+      <DependentUpon>PrijemNezrealizovanePrijemkyList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\PrijemZadejLokaci.resx">
+      <DependentUpon>PrijemZadejLokaci.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem_4\TypOznaceniPaletyForm.resx">
+      <DependentUpon>TypOznaceniPaletyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prodej_3\ProdejSumar.resx">
+      <DependentUpon>ProdejSumar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prodej_3\ProdejVyberMeny.resx">
+      <DependentUpon>ProdejVyberMeny.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prodej_3\ProdejVyberPracovnika2.resx">
+      <DependentUpon>ProdejVyberPracovnika2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prodej_3\ProdejVyberStrediska2.resx">
+      <DependentUpon>ProdejVyberStrediska2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prodej_3\ProdejVyberTypuDokladu.resx">
+      <DependentUpon>ProdejVyberTypuDokladu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prodej_3\ProdejList.resx">
+      <DependentUpon>ProdejList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prodej_3\ProdejMain.resx">
+      <DependentUpon>ProdejMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prodej_3\ProdejPridatPolozku.resx">
+      <DependentUpon>ProdejPridatPolozku.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prodej_3\ProdejServiceOperations.resx">
+      <DependentUpon>ProdejServiceOperations.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prodej_3\ProdejVyberDavky.resx">
+      <DependentUpon>ProdejVyberDavky.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prodej_3\ProdejVyberOdberatele.resx">
+      <DependentUpon>ProdejVyberOdberatele.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informations\OnLinePocetKusuSklad.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OnLinePocetKusuSklad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prodej_3\ProdejVyberPalety.resx">
+      <DependentUpon>ProdejVyberPalety.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prodej_3\ProdejVyberMaterialuList.resx">
+      <DependentUpon>ProdejVyberMaterialuList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prodej_3\RFID\SnimatRFID.resx">
+      <DependentUpon>SnimatRFID.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prodej_3\RFID\ZobrazRFID.resx">
+      <DependentUpon>ZobrazRFID.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Resources\Fask.MST_W.Vydej_3.ListPolozek3.cs.resx">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="Scanner\MC9090\FrmCapabilties.resx">
+      <DependentUpon>FrmCapabilties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanner\MC9090\FrmConfigurationMain.resx">
+      <DependentUpon>FrmConfigurationMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanner\MC9090\FrmReadAntennaInfo.resx">
+      <DependentUpon>FrmReadAntennaInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanner\MC9090\FrmReaderInfo.resx">
+      <DependentUpon>FrmReaderInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanner\MC9090\FrmSetAntenna.resx">
+      <DependentUpon>FrmSetAntenna.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanner\MC9090\FrmReaderSettings.resx">
+      <DependentUpon>FrmReaderSettings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServisModule\ServisMain.resx">
+      <DependentUpon>ServisMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServisModule\ServisOkruhList.resx">
+      <DependentUpon>ServisOkruhList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServisModule\ServisDavkyList.resx">
+      <DependentUpon>ServisDavkyList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServisModule\ServisServiceOperations.resx">
+      <DependentUpon>ServisServiceOperations.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServisModule\ServisSejmiKodForm.resx">
+      <DependentUpon>ServisSejmiKodForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServisModule\ServisAnoNe.resx">
+      <DependentUpon>ServisAnoNe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServisModule\ServisCinnostZmena.resx">
+      <DependentUpon>ServisCinnostZmena.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServisModule\ServisDynamickaTabulka.resx">
+      <DependentUpon>ServisDynamickaTabulka.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServisModule\ServisList.resx">
+      <DependentUpon>ServisList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServisModule\ServisStavyZmena.resx">
+      <DependentUpon>ServisStavyZmena.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ukolovani_1\UkolovaniMain.resx">
+      <DependentUpon>UkolovaniMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ukolovani_1\UkolovaniUkolEdit.resx">
+      <DependentUpon>UkolovaniUkolEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\Detail.resx">
+      <DependentUpon>Detail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\Dialogs\VydejDialogPocetVydavanych.resx">
+      <DependentUpon>VydejDialogPocetVydavanych.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\PotvrditMnozstviForm.resx">
+      <DependentUpon>PotvrditMnozstviForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\VlozTypyPaletForm.resx">
+      <DependentUpon>VlozTypyPaletForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\ListPolozek3.resx">
+      <DependentUpon>ListPolozek3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\PolozkaNasnimDetail.resx">
+      <DependentUpon>PolozkaNasnimDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\RFID\SnimatRFID.resx">
+      <DependentUpon>SnimatRFID.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\RFID\VydejRFIDZboziKPrirazeniList.resx">
+      <DependentUpon>VydejRFIDZboziKPrirazeniList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\RFID\ZapisRFID.resx">
+      <DependentUpon>ZapisRFID.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\TypOznaceniPaletyForm.resx">
+      <DependentUpon>TypOznaceniPaletyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\VydejVyberMaterialuList.resx">
+      <DependentUpon>VydejVyberMaterialuList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\VydejZobrazeniLokaciList.resx">
+      <DependentUpon>VydejZobrazeniLokaciList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\SejmiKodInfoFormSN.resx">
+      <DependentUpon>SejmiKodInfoFormSN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\SejmiKodHromadneInfoForm.resx">
+      <DependentUpon>SejmiKodHromadneInfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\ListSlouceneDavkyForm.resx">
+      <DependentUpon>ListSlouceneDavkyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\ListZbozi.resx">
+      <DependentUpon>ListZbozi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\Nastaveni\ListPolozekStatusBar.resx">
+      <DependentUpon>ListPolozekStatusBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\SejmiKodInfoForm4.resx">
+      <DependentUpon>SejmiKodInfoForm4.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\ListDavkamaForm3.resx">
+      <DependentUpon>ListDavkamaForm3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\ListMNForm3.resx">
+      <DependentUpon>ListMNForm3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\ListNasnimForm3.resx">
+      <DependentUpon>ListNasnimForm3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\ListOdberateliForm3.resx">
+      <DependentUpon>ListOdberateliForm3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\ListVydejekForm3.resx">
+      <DependentUpon>ListVydejekForm3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\PolozkaDetailForm3.resx">
+      <DependentUpon>PolozkaDetailForm3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\SejmiKodInfoForm3.resx">
+      <DependentUpon>SejmiKodInfoForm3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\StavVydejeForm3.resx">
+      <DependentUpon>StavVydejeForm3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\TypOznaceniPaletyFormOld.resx">
+      <DependentUpon>TypOznaceniPaletyFormOld.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej_3\Vydej.resx">
+      <DependentUpon>Vydej.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InputBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServiceOperationsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ServiceOperationsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_MST_W.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Main_MST_W.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageBoxBig.resx">
+      <DependentUpon>MessageBoxBig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SejmiKodForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SejmiKodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_WebRefernces_Globals\CiselnikServiceOperationsForm.resx">
+      <DependentUpon>CiselnikServiceOperationsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="MySystem\Process.cs" />
+    <Compile Include="Web References\CiselnikService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\InformationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Inventura1Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ProdejService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\VydejService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="_Translations\Meny.cs" />
+    <Compile Include="_WebRefernces_Globals\CiselnikServiceOperationsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_WebRefernces_Globals\CiselnikServiceOperationsForm.Designer.cs">
+      <DependentUpon>CiselnikServiceOperationsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_WebRefernces_Globals\CiselnikServiceSession.cs" />
+    <Compile Include="_WebRefernces_Globals\ConfigurationServiceSession.cs" />
+    <Compile Include="_WebRefernces_Globals\PrijemServiceSession.cs" />
+    <Compile Include="_WebRefernces_Globals\EventsServiceSession.cs" />
+    <Compile Include="_WebRefernces_Globals\ExpediceSeviceSession.cs" />
+    <Compile Include="_WebRefernces_Globals\FileTransferServiceSession.cs" />
+    <Compile Include="_WebRefernces_Globals\HmotnostServiceSession.cs" />
+    <Compile Include="_WebRefernces_Globals\InformationServiceSession.cs" />
+    <Compile Include="_WebRefernces_Globals\Inventura1ServiceSession.cs" />
+    <Compile Include="_WebRefernces_Globals\Inventura2ServiceSession.cs" />
+    <Compile Include="_WebRefernces_Globals\LoginServiceSession.cs" />
+    <Compile Include="_WebRefernces_Globals\LokaceServiceSession.cs" />
+    <Compile Include="_WebRefernces_Globals\ProdejServiceSession.cs" />
+    <Compile Include="_WebRefernces_Globals\RFIDServiceSession.cs" />
+    <Compile Include="_WebRefernces_Globals\ServisModuleWServiceSession.cs" />
+    <Compile Include="_WebRefernces_Globals\SystemTimeServiceSession.cs" />
+    <Compile Include="_WebRefernces_Globals\TypyPalet.cs" />
+    <Compile Include="_WebRefernces_Globals\UkolovaniServiceSession.cs" />
+    <Compile Include="_WebRefernces_Globals\VydejServiceSession.cs" />
+    <Compile Include="_Web_Reference_Extensions\VydejService_VydejDavky_Extension.cs" />
+    <Compile Include="_Web_Reference_Extensions\PrijemService_PrijemDavky_Extension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sounds\chimes.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\chyba.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\dotaz.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\info.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Cipisek/FileTransfer.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\FileTransferService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Cipisek/FileTransfer.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Cipisek/Prijem.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\PrijemService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Cipisek/Prijem.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Cipisek/RFID.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\RFIDService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Cipisek/RFID.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Cipisek/Expedice.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\ExpediceService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Cipisek/Expedice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Cipisek/Hmotnost.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\HmotnostService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Cipisek/Hmotnost.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Cipisek/Lokace.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\LokaceService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Cipisek/Lokace.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Cipisek/Servis.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\ServisModuleWService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Cipisek/Servis.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Cipisek/Ukolovani.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\UkolovaniService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Cipisek/Ukolovani.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Cipisek/Ciselnik.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\CiselnikService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Cipisek_Cipisek/Ciselnik.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Cipisek/EventsService.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\EventsService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Cipisek/EventsService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Cipisek/Informations.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\InformationService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Cipisek/Informations.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Cipisek/Inventura2.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\Inventura2Service\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Cipisek/Inventura2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Cipisek/Inventura1.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\Inventura1Service\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Cipisek/Inventura1.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Cipisek/LoginService.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\LoginService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Cipisek/LoginService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Cipisek/Prodej.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\ProdejService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Cipisek/Prodej.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Cipisek/SystemTime.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\SystemTimeService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Cipisek/SystemTime.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Cipisek/Configuration.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\ConfigurationService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Cipisek/Configuration.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Dasenka/Vydej.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\VydejService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Dasenka/Vydej.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Config\Config.xsd">
+      <SubType>
+      </SubType>
+    </None>
+    <None Include="Config\Config.xsx">
+      <DependentUpon>Config.xsd</DependentUpon>
+    </None>
+    <None Include="Config\PriorityColors.xsc">
+      <DependentUpon>PriorityColors.xsd</DependentUpon>
+    </None>
+    <None Include="Config\PriorityColors.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PriorityColors.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Config\PriorityColors.xss">
+      <DependentUpon>PriorityColors.xsd</DependentUpon>
+    </None>
+    <None Include="Config\Scanner.xsd">
+      <SubType>
+      </SubType>
+    </None>
+    <None Include="Config\Scanner.xsx">
+      <DependentUpon>Scanner.xsd</DependentUpon>
+    </None>
+    <None Include="Inventura1_sqlce\ListPolozky.xsc">
+      <DependentUpon>ListPolozky.xsd</DependentUpon>
+    </None>
+    <None Include="Inventura1_sqlce\ListPolozky.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListPolozky.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Inventura1_sqlce\ListPolozky.xss">
+      <DependentUpon>ListPolozky.xsd</DependentUpon>
+    </None>
+    <None Include="Inventura1_sqlce\ListPolozkyNasnimane.xsc">
+      <DependentUpon>ListPolozkyNasnimane.xsd</DependentUpon>
+    </None>
+    <None Include="Inventura1_sqlce\ListPolozkyNasnimane.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListPolozkyNasnimane.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Inventura1_sqlce\ListPolozkyNasnimane.xss">
+      <DependentUpon>ListPolozkyNasnimane.xsd</DependentUpon>
+    </None>
+    <None Include="Inventura2\ListPolozkyNasnimaneDS.xsc">
+      <DependentUpon>ListPolozkyNasnimaneDS.xsd</DependentUpon>
+    </None>
+    <None Include="Inventura2\ListPolozkyNasnimaneDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListPolozkyNasnimaneDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventura2\ListPolozkyNasnimaneDS.xss">
+      <DependentUpon>ListPolozkyNasnimaneDS.xsd</DependentUpon>
+    </None>
+    <None Include="Inventura2\ListPolozkyDS.xsc">
+      <DependentUpon>ListPolozkyDS.xsd</DependentUpon>
+    </None>
+    <None Include="Inventura2\ListPolozkyDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListPolozkyDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Inventura2\ListPolozkyDS.xss">
+      <DependentUpon>ListPolozkyDS.xsd</DependentUpon>
+    </None>
+    <Content Include="..\..\..\..\04_Support\_Support_\SQLite\sqlite-netFx35-binary-PocketPC-ARM-2008-1.0.112.0\SQLite.Interop.112.dll">
+      <Link>SQLite.Interop.112.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ConfigApp.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\ConfigModules.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\ConfigTerminal.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\PriorityColors.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Install.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Online\BYZNYS\DatabaseOnline.xsc">
+      <DependentUpon>DatabaseOnline.xsd</DependentUpon>
+    </None>
+    <None Include="Online\BYZNYS\DatabaseOnline.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabaseOnline.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Online\BYZNYS\DatabaseOnline.xss">
+      <DependentUpon>DatabaseOnline.xsd</DependentUpon>
+    </None>
+    <None Include="Prodej_3\ProdejDavkyDataSet.xsc">
+      <DependentUpon>ProdejDavkyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Prodej_3\ProdejDavkyDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProdejDavkyDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Prodej_3\ProdejDavkyDataSet.xss">
+      <DependentUpon>ProdejDavkyDataSet.xsd</DependentUpon>
+    </None>
+    <Content Include="Content.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\TypyPalet.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Readme.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Prodej_3\RFID\ZobrazitRFID.xsc">
+      <DependentUpon>ZobrazitRFID.xsd</DependentUpon>
+    </None>
+    <None Include="Prodej_3\RFID\ZobrazitRFID.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZobrazitRFID1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Prodej_3\RFID\ZobrazitRFID.xss">
+      <DependentUpon>ZobrazitRFID.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\logo_FASK2.ico" />
+    <None Include="Resources\Warning.png" />
+    <None Include="Resources\Critical.png" />
+    <None Include="Resources\Information.png" />
+    <None Include="Resources\question_icon.png" />
+    <None Include="Resources\None.png" />
+    <None Include="Resources\DoubleLeftArrow.png" />
+    <None Include="Resources\DoubleRightArrow.png" />
+    <None Include="Resources\LeftArrow.png" />
+    <None Include="Resources\RightArrow.png" />
+    <None Include="Resources\Help.png" />
+    <None Include="Resources\logo_FASK.png" />
+    <None Include="Resources\LASER.WAV" />
+    <None Include="Resources\RFID_Active.ico" />
+    <None Include="Resources\RFID_NotActive.ico" />
+    <None Include="Resources\Neshodne.ico" />
+    <None Include="Resources\Shodne.ico" />
+    <Content Include="ServisModule\TODO_Servis.txt" />
+    <Content Include="Settings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\brownuv_sum.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\expedice.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\necozbyva.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\notify.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\rozdelit.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\sklad.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\UspesneNacteni.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQLiteDBs\DataSets\_readme.txt" />
+    <None Include="SQLiteDBs\DataSets\EventsTypes.xsc">
+      <DependentUpon>EventsTypes.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\EventsTypes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EventsTypes1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\EventsTypes.xss">
+      <DependentUpon>EventsTypes.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\EventsUser.xsc">
+      <DependentUpon>EventsUser.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\EventsUser.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EventsUser1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\EventsUser.xss">
+      <DependentUpon>EventsUser.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Inventura1.xsc">
+      <DependentUpon>Inventura1.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Inventura1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventura11.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Inventura1.xss">
+      <DependentUpon>Inventura1.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Inventura2.xsc">
+      <DependentUpon>Inventura2.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Inventura2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventura21.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Inventura2.xss">
+      <DependentUpon>Inventura2.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Lokace.xsc">
+      <DependentUpon>Lokace.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Lokace.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Lokace1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Lokace.xss">
+      <DependentUpon>Lokace.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Meny.xsc">
+      <DependentUpon>Meny.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Meny.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Meny1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Meny.xss">
+      <DependentUpon>Meny.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Obecne.xsc">
+      <DependentUpon>Obecne.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Obecne.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Obecne1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Obecne.xss">
+      <DependentUpon>Obecne.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Odberatele.xsc">
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Odberatele.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Odberatele1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Odberatele.xss">
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Pracovnici.xsc">
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Pracovnici.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pracovnici1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Pracovnici.xss">
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Prijem.xsc">
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Prijem.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Prijem1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Prijem.xss">
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Prodej.xsc">
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Prodej.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Prodej1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Prodej.xss">
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Servis.xsc">
+      <DependentUpon>Servis.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Servis.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Servis1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Servis.xss">
+      <DependentUpon>Servis.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Sklady.xsc">
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Sklady.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sklady1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Sklady.xss">
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Strediska.xsc">
+      <DependentUpon>Strediska.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Strediska.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Strediska1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Strediska.xss">
+      <DependentUpon>Strediska.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Tiskarny.xsc">
+      <DependentUpon>Tiskarny.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Tiskarny.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Tiskarny1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Tiskarny.xss">
+      <DependentUpon>Tiskarny.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\TypDokladu.xsc">
+      <DependentUpon>TypDokladu.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\TypDokladu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TypDokladu1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\TypDokladu.xss">
+      <DependentUpon>TypDokladu.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Ukoly.xsc">
+      <DependentUpon>Ukoly.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Ukoly.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ukoly1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Ukoly.xss">
+      <DependentUpon>Ukoly.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Uzivatele.xsc">
+      <DependentUpon>Uzivatele.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Uzivatele.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Uzivatele1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Uzivatele.xss">
+      <DependentUpon>Uzivatele.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Vydej.xsc">
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Vydej.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Vydej1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Vydej.xss">
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Zbozi.xsc">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Zbozi.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Zbozi1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Zbozi.xss">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\EventsTypes.prd" />
+    <None Include="SQLiteDBs\EventsUser.prd" />
+    <None Include="SQLiteDBs\Inventura1.prd" />
+    <None Include="SQLiteDBs\Inventura2.prd" />
+    <None Include="SQLiteDBs\Lokace.prd" />
+    <None Include="SQLiteDBs\Meny.prd" />
+    <None Include="SQLiteDBs\Odberatele.prd" />
+    <None Include="SQLiteDBs\Pracovnici.prd" />
+    <None Include="SQLiteDBs\Prijem.prd" />
+    <None Include="SQLiteDBs\Prodej.prd" />
+    <None Include="SQLiteDBs\Servis_Ciselniky.prd" />
+    <None Include="SQLiteDBs\Servis_ZdrojePohyb.prd" />
+    <None Include="SQLiteDBs\Servis_ZdrojeStav.prd" />
+    <None Include="SQLiteDBs\Sklady.prd" />
+    <None Include="SQLiteDBs\Strediska.prd" />
+    <None Include="SQLiteDBs\Tiskarny.prd" />
+    <None Include="SQLiteDBs\tmp.sqlite" />
+    <None Include="SQLiteDBs\TypDokladu.prd" />
+    <None Include="SQLiteDBs\Ukoly.prd" />
+    <None Include="SQLiteDBs\Users.prd" />
+    <None Include="SQLiteDBs\Vydej.prd" />
+    <None Include="SQLiteDBs\Zbozi.prd" />
+    <None Include="Vydej_3\RFID\Complete\DsRFIDComplete.xsc">
+      <DependentUpon>DsRFIDComplete.xsd</DependentUpon>
+    </None>
+    <None Include="Vydej_3\RFID\Complete\DsRFIDComplete.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsRFIDComplete.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Vydej_3\RFID\Complete\DsRFIDComplete.xss">
+      <DependentUpon>DsRFIDComplete.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\Inventura1Service\Inventury1.xsc">
+      <DependentUpon>Inventury1.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\Inventura1Service\Inventury1.xss">
+      <DependentUpon>Inventury1.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\Inventura2Service\Inventury2.xsc">
+      <DependentUpon>Inventury2.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\Inventura2Service\Inventury2.xss">
+      <DependentUpon>Inventury2.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\PrijemService\Obecne.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PrijemService\Prijem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PrijemService\Prijem.disco" />
+    <None Include="Web References\PrijemService\Obecne.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\PrijemService\Prijem.wsdl" />
+    <None Include="Web References\PrijemService\Prijem.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\PrijemService\PrijemDavky.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PrijemService\PrijemDavky.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\PrijemService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PrijemService\StatusObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PrijemService\StatusOverLokace.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\Odberatele.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\Odberatele.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ProdejService\VystupniObjekt.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UkolovaniService\Pristupy.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UkolovaniService\Pristupy.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\UkolovaniService\Ukoly.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UkolovaniService\Ukoly.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\VydejService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\VydejService\StatusObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\VydejService\StatusOverExpirace.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\VydejService\Vydej.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\VydejService\Vydej.disco" />
+    <None Include="Web References\FileTransferService\FileTransfer.disco" />
+    <None Include="Vydej_3\RFID\DsRFID.xsc">
+      <DependentUpon>DsRFID.xsd</DependentUpon>
+    </None>
+    <None Include="Vydej_3\RFID\DsRFID.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsRFID.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Vydej_3\RFID\DsRFID.xss">
+      <DependentUpon>DsRFID.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\FileTransferService\FileTransfer.wsdl" />
+    <None Include="Web References\FileTransferService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\LokaceService\Location.xsc">
+      <DependentUpon>Location.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\LokaceService\Location.xss">
+      <DependentUpon>Location.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\Location.xsc">
+      <DependentUpon>Location.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\Location.xss">
+      <DependentUpon>Location.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\ProdejData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\ProdejData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ProdejService\StatusResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\RFIDService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\RFIDService\RFID.disco" />
+    <None Include="Web References\ExpediceService\Expedice.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExpediceService\Expedice.disco" />
+    <None Include="Web References\ExpediceService\Expedice.wsdl" />
+    <None Include="Web References\ExpediceService\Expedice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ExpediceService\ExpediceBaleni.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExpediceService\ExpediceBaleni.xsc">
+      <DependentUpon>ExpediceBaleni.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\ExpediceService\ExpediceBaleni.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ExpediceService\ExpediceBaleni.xss">
+      <DependentUpon>ExpediceBaleni.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\ExpediceService\ExpediceBaleniHlavicky.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExpediceService\ExpediceBaleniHlavicky.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ExpediceService\ExpediceHlavicky.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExpediceService\ExpediceHlavicky.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ExpediceService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ExpediceService\SSCC.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExpediceService\StatusObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LokaceService\Location.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LokaceService\Location.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\LokaceService\Lokace.disco" />
+    <None Include="Web References\HmotnostService\Hmotnost.disco" />
+    <None Include="Web References\HmotnostService\Hmotnost.wsdl" />
+    <None Include="Web References\HmotnostService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\LokaceService\Lokace.wsdl" />
+    <None Include="Web References\LokaceService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\LokaceService\StatusLokace.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\Location.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\Location.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ProdejService\STATUS.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\StatusOverLokace.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\StatusOverPohyb.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\RFIDService\RFID.wsdl" />
+    <None Include="Web References\ServisModuleWService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServisModuleWService\Servis.disco" />
+    <None Include="ServisModule\Data\ZdrojeStav.xsc">
+      <DependentUpon>ZdrojeStav.xsd</DependentUpon>
+    </None>
+    <None Include="ServisModule\Data\ZdrojeStav.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZdrojeStav.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ServisModule\Data\ZdrojeStav.xss">
+      <DependentUpon>ZdrojeStav.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\ServisModuleWService\Servis.wsdl" />
+    <None Include="Web References\ServisModuleWService\Servis.xsc">
+      <DependentUpon>Servis.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\ServisModuleWService\Servis.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ServisModuleWService\Servis.xss">
+      <DependentUpon>Servis.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\ServisModuleWService\Servis1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServisModuleWService\ServisDavky.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServisModuleWService\ServisDavky.xsc">
+      <DependentUpon>ServisDavky.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\ServisModuleWService\ServisDavky.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ServisModuleWService\ServisDavky.xss">
+      <DependentUpon>ServisDavky.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\ServisModuleWService\StatusObject1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServisModuleWService\Zdroj1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UkolovaniService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\UkolovaniService\StatusObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UkolovaniService\Ukol.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UkolovaniService\Ukolovani.disco" />
+    <None Include="Web References\Inventura1Service\StatusObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LoginService\LoginService.disco" />
+    <None Include="Scanner\MC9090\MC9090Configuration.xsc">
+      <DependentUpon>MC9090Configuration.xsd</DependentUpon>
+    </None>
+    <None Include="Scanner\MC9090\MC9090Configuration.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MC9090Configuration.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Scanner\MC9090\MC9090Configuration.xss">
+      <DependentUpon>MC9090Configuration.xsd</DependentUpon>
+    </None>
+    <None Include="TODO.txt" />
+    <None Include="Web References\CiselnikService\StatusObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ConfigurationService\License.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EventsService\Events.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EventsService\EventsService.disco" />
+    <None Include="Vydej_3\ListPolozekVydej.xsc">
+      <DependentUpon>ListPolozekVydej.xsd</DependentUpon>
+    </None>
+    <None Include="Vydej_3\ListPolozekVydej.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListPolozekVydej1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Vydej_3\ListPolozekVydej.xss">
+      <DependentUpon>ListPolozekVydej.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\ConfigurationService\dsCZMSTCFG.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ConfigurationService\dsCZMSTCFG.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\EventsService\Events.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\EventsService\EventsService.wsdl" />
+    <None Include="Web References\EventsService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Inventura2Service\StatusObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LoginService\LoginService.wsdl" />
+    <None Include="Web References\LoginService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\LoginService\StatusObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\StatusObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SystemTimeService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SystemTimeService\SystemTime.disco" />
+    <None Include="Web References\Inventura2Service\Inventura2.disco" />
+    <None Include="Web References\Inventura1Service\Inventura1.disco" />
+    <None Include="Web References\Inventura1Service\Inventura1.wsdl" />
+    <None Include="Web References\Inventura1Service\Inventury11.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Inventura2Service\Inventura2.wsdl" />
+    <None Include="Web References\Inventura2Service\Inventury2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Inventura2Service\Inventury2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Inventura2Service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\TypyPalet.xsc">
+      <DependentUpon>TypyPalet.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\TypyPalet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TypyPalet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\TypyPalet.xss">
+      <DependentUpon>TypyPalet.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\ConfigurationService\Configuration.disco" />
+    <None Include="Web References\ConfigurationService\Configuration.wsdl" />
+    <None Include="Web References\ConfigurationService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SystemTimeService\SystemTime.wsdl" />
+    <None Include="Web References\InformationService\Informations.disco" />
+    <None Include="Web References\CiselnikService\Ciselnik.disco" />
+    <None Include="Web References\CiselnikService\Ciselnik.wsdl" />
+    <None Include="Web References\CiselnikService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\InformationService\Informations.wsdl" />
+    <None Include="Web References\InformationService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ProdejService\Prodej.disco" />
+    <None Include="Web References\Inventura1Service\Inventury1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Inventura1Service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\Sklad.xsc">
+      <DependentUpon>Sklad.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\Sklad.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sklad.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\Sklad.xss">
+      <DependentUpon>Sklad.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\Prodej.wsdl" />
+    <None Include="Web References\ProdejService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\UkolovaniService\Ukolovani.wsdl" />
+    <None Include="Web References\VydejService\Vydej.wsdl" />
+    <None Include="Web References\VydejService\Vydej.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\VydejService\Vydejky.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\VydejService\Vydejky.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\VydejService\Vydej_Items_Online.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\VydejService\Vydej_Items_Online.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\WIN_CE\Fask.Logging\Fask.Logging.csproj">
+      <Project>{B106732D-96BF-45A4-BEAA-706592520632}</Project>
+      <Name>Fask.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\WIN_CE\Fask.PrinterFactory\Fask.PrinterFactory.csproj">
+      <Project>{B64467B4-7A09-4B58-9A34-3646823950E0}</Project>
+      <Name>Fask.PrinterFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\WIN_CE\Fask.PrinterProviderBluethootSymbolWPAN\Fask.PrinterProviderBluetoothSymbolWPAN.csproj">
+      <Project>{51305310-1119-46EF-B28E-BC79308390A6}</Project>
+      <Name>Fask.PrinterProviderBluetoothSymbolWPAN</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\WIN_CE\Fask.PrinterProviderWebService\Fask.PrinterProviderWebService.csproj">
+      <Project>{EC5CF361-AC66-44A8-8587-44D153C89D32}</Project>
+      <Name>Fask.PrinterProviderWebService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\WIN_CE\Fask.PrinterProvider\Fask.PrinterProvider.csproj">
+      <Project>{77D1BFD4-752D-4DE0-BB33-238A5E842168}</Project>
+      <Name>Fask.PrinterProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.ColorPicker\ColorPicker.vbproj">
+      <Project>{263834B5-FA23-4757-8F94-C97D35420587}</Project>
+      <Name>ColorPicker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Graphics\Fask.Graphic.csproj">
+      <Project>{0CEB12E9-FDF8-4E05-975A-53B69EDF0BDA}</Project>
+      <Name>Fask.Graphic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Encryption\Fask.Encryption.csproj">
+      <Project>{CF1C2234-76AD-4506-A0C4-C3038D74F6A1}</Project>
+      <Name>Fask.Encryption</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.IModuleProvider\Fask.ModuleProvider.csproj">
+      <Project>{D60963CD-5950-41FB-8EA4-ADBBD36C0193}</Project>
+      <Name>Fask.ModuleProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Localization\Fask.Localization.csproj">
+      <Project>{F82FDA24-E36B-43A9-8215-EDA29122FE63}</Project>
+      <Name>Fask.Localization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Parsing\Fask.Parsing.csproj">
+      <Project>{A5427780-D3D6-45D0-93E1-CB4842CDB1C6}</Project>
+      <Name>Fask.Parsing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.PhotoFactory\Fask.PhotoFactory.csproj">
+      <Project>{CC8E8F55-0A10-4C34-91E5-DD417085B719}</Project>
+      <Name>Fask.PhotoFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.PhotoProvider\Fask.PhotoProvider.csproj">
+      <Project>{58AA261E-04CA-4554-861F-F3859B03D1F6}</Project>
+      <Name>Fask.PhotoProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.ScannerFactory\Fask.ScannerFactory.csproj">
+      <Project>{4579923C-50D1-4A97-BD63-77BAD0128BBF}</Project>
+      <Name>Fask.ScannerFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.ScannerProvider\Fask.ScannerProvider.csproj">
+      <Project>{8D2F2967-918A-4581-B70F-EDA216A12F17}</Project>
+      <Name>Fask.ScannerProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Upgrade\Fask.Upgrade.csproj">
+      <Project>{7D15075F-7D89-4BFA-92B2-5371ED7C1EDF}</Project>
+      <Name>Fask.Upgrade</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\!!!Nastaveni_Varianty\" />
+    <Folder Include="Scanner\MC319Z\" />
+    <Folder Include="Tiskarny\" />
+    <Folder Include="_Web_Reference_Extensions\_TESTLINQ_\" />
+  </ItemGroup>
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v3.5'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

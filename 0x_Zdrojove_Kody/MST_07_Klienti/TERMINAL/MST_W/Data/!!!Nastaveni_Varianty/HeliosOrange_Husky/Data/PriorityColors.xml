@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<PriorityColors xmlns="http://tempuri.org/PriorityColors.xsd">
+  <PriorityColor>
+    <Priority>0</Priority>
+    <Color>-1</Color>
+  </PriorityColor>
+  <PriorityColor>
+    <Priority>1</Priority>
+    <Color>-10040099</Color>
+  </PriorityColor>
+  <PriorityColor>
+    <Priority>2</Priority>
+    <Color>-3381624</Color>
+  </PriorityColor>
+</PriorityColors>

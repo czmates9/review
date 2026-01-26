@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7E00B2D-1105-4108-BB2E-E05D39663923}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FASK.MST_WINDOWS.Main</RootNamespace>
+    <AssemblyName>MST_WINDOWS</AssemblyName>
+    <ApplicationIcon>Resources\TrayIcon.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\!Build!\MST_WINDOWS\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\!Build!\MST_WINDOWS\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\!Build!\MST_WINDOWS\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>..\!Build!\MST_WINDOWS\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>
+    </DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\04_Support\zip-v1.9\Rel\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.112.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\04_Support\_Support_\SQLite\sqlite-netFx46-binary-Win32-2015-1.0.112.0\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Odberatele.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Odberatele.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Pracovnici.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Pracovnici.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Prodej.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Prodej.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Sklady.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Sklady.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Strediska.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Strediska.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_TypDokladu.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_TypDokladu.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Users.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Users.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Zbozi.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Zbozi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Static.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Static.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\_SdileneTridy_\SQLite\Controllers\_Routines.cs">
+      <Link>SQLiteDBs\Controllers\_Routines.cs</Link>
+    </Compile>
+    <Compile Include="Configuration\BarCodeParser.cs" />
+    <Compile Include="Configuration\Config.cs" />
+    <Compile Include="Configuration\frmGlobalConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuration\frmGlobalConfiguration.Designer.cs">
+      <DependentUpon>frmGlobalConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\GlobalConfig.cs">
+      <DependentUpon>GlobalConfig.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\GlobalConfig.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalConfig.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\LogConfig.cs" />
+    <Compile Include="Configuration\Update\TransferManager.cs" />
+    <Compile Include="Configuration\Update\UpdateInfo.cs">
+      <DependentUpon>UpdateInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Update\UpdateInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Update\Updater.cs" />
+    <Compile Include="Exstensions\DataGridViewExt.cs" />
+    <Compile Include="Exstensions\FlexibleMessageBox.cs" />
+    <Compile Include="FileTransfer\CompressFile.cs" />
+    <Compile Include="FileTransfer\Downloading.cs" />
+    <Compile Include="FileTransfer\FileOperations.cs" />
+    <Compile Include="FileTransfer\Uploading.cs" />
+    <Compile Include="Forms\ProdejServiceOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProdejServiceOperations.Designer.cs">
+      <DependentUpon>ProdejServiceOperations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServiceOperationsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServiceOperationsForm.Designer.cs">
+      <DependentUpon>ServiceOperationsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainApp.Designer.cs">
+      <DependentUpon>frmMainApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalObject.cs" />
+    <Compile Include="Logging\frmLogin1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logging\frmLogin1.Designer.cs">
+      <DependentUpon>frmLogin1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySystem\Audio.cs" />
+    <Compile Include="MySystem\Path.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerAccess\CertificatesPolicy\QueryTrustCertificatePolicy.cs" />
+    <Compile Include="ServerAccess\CertificatesPolicy\TrustAllCertificatePolicy.cs" />
+    <Compile Include="ServerAccess\Credentials.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SQLiteDBs\Datasets\Odberatele.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\Datasets\Pracovnici.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\Datasets\Prodej.cs">
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\Datasets\Prodej.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\Datasets\Sklady.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\Datasets\Strediska.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strediska.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\Datasets\TypDokladu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TypDokladu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\Datasets\Uzivatele.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Uzivatele.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\Datasets\Zbozi.cs">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\Datasets\Zbozi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CiselnikService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\FileTransferServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\LoginService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ProdejService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="_WebRefernces_Globals\CiselnikServiceOperationsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_WebRefernces_Globals\CiselnikServiceOperationsForm.Designer.cs">
+      <DependentUpon>CiselnikServiceOperationsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_WebRefernces_Globals\CiselnikServiceSession.cs" />
+    <Compile Include="_WebRefernces_Globals\FileTransferServiceSession.cs" />
+    <Compile Include="_WebRefernces_Globals\ProdejServiceSession.cs" />
+    <EmbeddedResource Include="Configuration\frmGlobalConfiguration.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGlobalConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProdejServiceOperations.resx">
+      <DependentUpon>ProdejServiceOperations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServiceOperationsForm.resx">
+      <DependentUpon>ServiceOperationsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainApp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMainApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logging\frmLogin1.resx">
+      <DependentUpon>frmLogin1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="_WebRefernces_Globals\CiselnikServiceOperationsForm.resx">
+      <DependentUpon>CiselnikServiceOperationsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Configuration\GlobalConfig.xsc">
+      <DependentUpon>GlobalConfig.xsd</DependentUpon>
+    </None>
+    <None Include="Configuration\GlobalConfig.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GlobalConfig.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Configuration\GlobalConfig.xss">
+      <DependentUpon>GlobalConfig.xsd</DependentUpon>
+    </None>
+    <None Include="Configuration\Update\UpdateInfo.xsc">
+      <DependentUpon>UpdateInfo.xsd</DependentUpon>
+    </None>
+    <None Include="Configuration\Update\UpdateInfo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateInfo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Configuration\Update\UpdateInfo.xss">
+      <DependentUpon>UpdateInfo.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SQLiteDBs\Datasets\Odberatele.xsc">
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Odberatele.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Odberatele.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Odberatele.xss">
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Pracovnici.xsc">
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Pracovnici.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pracovnici.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Pracovnici.xss">
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Prodej.xsc">
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Prodej.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Prodej.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Prodej.xss">
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Sklady.xsc">
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Sklady.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sklady.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Sklady.xss">
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Strediska.xsc">
+      <DependentUpon>Strediska.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Strediska.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Strediska.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Strediska.xss">
+      <DependentUpon>Strediska.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\Datasets\TypDokladu.xsc">
+      <DependentUpon>TypDokladu.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\Datasets\TypDokladu.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TypDokladu.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\Datasets\TypDokladu.xss">
+      <DependentUpon>TypDokladu.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Uzivatele.xsc">
+      <DependentUpon>Uzivatele.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Uzivatele.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Uzivatele.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Uzivatele.xss">
+      <DependentUpon>Uzivatele.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Zbozi.xsc">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Zbozi.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Zbozi.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\Datasets\Zbozi.xss">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\CiselnikService\Ciselnik.wsdl" />
+    <None Include="Web References\CiselnikService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CiselnikService\StatusObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\FileTransferServices\FileTransfer.wsdl" />
+    <None Include="Web References\FileTransferServices\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\LoginService\LoginService.wsdl" />
+    <None Include="Web References\LoginService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\LoginService\StatusObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\Location.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\Location.xsd" />
+    <None Include="Web References\ProdejService\Prodej.wsdl" />
+    <None Include="Web References\ProdejService\ProdejData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\ProdejData.xsd" />
+    <None Include="Web References\ProdejService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ProdejService\STATUS.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\StatusObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\StatusOverLokace.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\StatusOverPohyb.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProdejService\StatusResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TrayIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ActionRequired_03.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BuilderDialog_delete.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear_1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear_32.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\class.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\Fask.Logging\Fask.Logging.csproj">
+      <Project>{89e8c070-4694-4f11-ab01-a674bf8b9f80}</Project>
+      <Name>Fask.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\TouchscreenKeyboard\TouchscreenKeyboard\TouchscreenKeyboard.csproj">
+      <Project>{94070b1d-6de4-4d45-b2b9-5da09d0e15c9}</Project>
+      <Name>TouchscreenKeyboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Emailing\Emailing\Emailing.csproj">
+      <Project>{FB082FE8-178B-40D4-8A2B-36CE544A00C7}</Project>
+      <Name>Emailing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ErrorLog\ErrorLog.csproj">
+      <Project>{3151DDC5-73BA-4E7A-AD51-873EFBBA0FDC}</Project>
+      <Name>ErrorLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Graphic\Fask.Graphic.csproj">
+      <Project>{A5221DAE-DD8A-403B-A1B7-82E84A6AE7E3}</Project>
+      <Name>Fask.Graphic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IRFIDProvider\IRFIDProvider.csproj">
+      <Project>{01BD8C0C-F391-420E-AD74-6C1CA3584C17}</Project>
+      <Name>IRFIDProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VyrobaIfc\VyrobaIfc.csproj">
+      <Project>{AEF304CD-C27C-46A4-ACA9-D3EBECAF0F5F}</Project>
+      <Name>VyrobaIfc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\04_Support\_Support_\SQLite\sqlite-netFx46-binary-x64-2015-1.0.112.0\SQLite.Interop.dll">
+      <Link>x64\SQLite.Interop.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\..\..\04_Support\_Support_\SQLite\sqlite-netFx46-binary-Win32-2015-1.0.112.0\SQLite.Interop.dll">
+      <Link>x86\SQLite.Interop.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Configuration\GlobalConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="README.TXT" />
+    <None Include="Web References\LoginService\LoginService.disco" />
+    <None Include="Web References\ProdejService\Prodej.disco" />
+    <None Include="Web References\FileTransferServices\FileTransfer.disco" />
+    <None Include="Web References\CiselnikService\Ciselnik.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_6_alfa/Ciselnik.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CiselnikService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_6_alfa/Ciselnik.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MST_WINDOWS_CiselnikService_CiselnikService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_6_alfa/FileTransfer.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\FileTransferServices\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_6_alfa/FileTransfer.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MST_WINDOWS_FileTransferServices_FileTransfer</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_6_alfa/LoginService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\LoginService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_6_alfa/LoginService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MST_WINDOWS_LoginService_LoginService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_6_alfa/Prodej.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ProdejService\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_6_alfa/Prodej.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MST_WINDOWS_ProdejService_ProdejService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

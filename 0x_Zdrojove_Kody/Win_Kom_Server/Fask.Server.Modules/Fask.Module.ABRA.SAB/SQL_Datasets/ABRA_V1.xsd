@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ABRA_V1" targetNamespace="http://tempuri.org/ABRA_V1.xsd" xmlns:mstns="http://tempuri.org/ABRA_V1.xsd" xmlns="http://tempuri.org/ABRA_V1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ABRA_V1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ABRA_V1" msprop:Generator_UserDSName="ABRA_V1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ConnectionStrings" msprop:Generator_TableClassName="ConnectionStringsDataTable" msprop:Generator_TableVarName="tableConnectionStrings" msprop:Generator_TablePropName="ConnectionStrings" msprop:Generator_RowDeletingName="ConnectionStringsRowDeleting" msprop:Generator_RowChangingName="ConnectionStringsRowChanging" msprop:Generator_RowEvHandlerName="ConnectionStringsRowChangeEventHandler" msprop:Generator_RowDeletedName="ConnectionStringsRowDeleted" msprop:Generator_UserTableName="ConnectionStrings" msprop:Generator_RowChangedName="ConnectionStringsRowChanged" msprop:Generator_RowEvArgName="ConnectionStringsRowChangeEvent" msprop:Generator_RowClassName="ConnectionStringsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ABRADB" msdata:Caption="ConnectionStringPohodaDB" msprop:Generator_ColumnVarNameInTable="columnABRADB" msprop:Generator_ColumnPropNameInRow="ABRADB" msprop:Generator_ColumnPropNameInTable="ABRADBColumn" msprop:Generator_UserColumnName="ABRADB" type="xs:string" minOccurs="0" />
+              <xs:element name="FASKDB" msdata:Caption="ConnectionString" msprop:Generator_ColumnVarNameInTable="columnFASKDB" msprop:Generator_ColumnPropNameInRow="FASKDB" msprop:Generator_ColumnPropNameInTable="FASKDBColumn" msprop:Generator_UserColumnName="FASKDB" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ExportZasoby" msprop:Generator_TableClassName="ExportZasobyDataTable" msprop:Generator_TableVarName="tableExportZasoby" msprop:Generator_RowChangedName="ExportZasobyRowChanged" msprop:Generator_TablePropName="ExportZasoby" msprop:Generator_RowDeletingName="ExportZasobyRowDeleting" msprop:Generator_RowChangingName="ExportZasobyRowChanging" msprop:Generator_RowEvHandlerName="ExportZasobyRowChangeEventHandler" msprop:Generator_RowDeletedName="ExportZasobyRowDeleted" msprop:Generator_RowClassName="ExportZasobyRow" msprop:Generator_UserTableName="ExportZasoby" msprop:Generator_RowEvArgName="ExportZasobyRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ExportSkladFilter" msprop:Generator_ColumnVarNameInTable="columnExportSkladFilter" msprop:Generator_ColumnPropNameInRow="ExportSkladFilter" msprop:Generator_ColumnPropNameInTable="ExportSkladFilterColumn" msprop:Generator_UserColumnName="ExportSkladFilter" type="xs:string" minOccurs="0" />
+              <xs:element name="SerNumTrack_Vsude" msprop:Generator_ColumnVarNameInTable="columnSerNumTrack_Vsude" msprop:Generator_ColumnPropNameInRow="SerNumTrack_Vsude" msprop:Generator_ColumnPropNameInTable="SerNumTrack_VsudeColumn" msprop:Generator_UserColumnName="SerNumTrack_Vsude" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Vydej" msprop:Generator_TableClassName="VydejDataTable" msprop:Generator_TableVarName="tableVydej" msprop:Generator_TablePropName="Vydej" msprop:Generator_RowDeletingName="VydejRowDeleting" msprop:Generator_RowChangingName="VydejRowChanging" msprop:Generator_RowEvHandlerName="VydejRowChangeEventHandler" msprop:Generator_RowDeletedName="VydejRowDeleted" msprop:Generator_UserTableName="Vydej" msprop:Generator_RowChangedName="VydejRowChanged" msprop:Generator_RowEvArgName="VydejRowChangeEvent" msprop:Generator_RowClassName="VydejRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PokracovatNaJinemTerminalu" msprop:Generator_ColumnVarNameInTable="columnPokracovatNaJinemTerminalu" msprop:Generator_ColumnPropNameInRow="PokracovatNaJinemTerminalu" msprop:Generator_ColumnPropNameInTable="PokracovatNaJinemTerminaluColumn" msprop:Generator_UserColumnName="PokracovatNaJinemTerminalu" type="xs:boolean" minOccurs="0" />
+              <xs:element name="HesloStornoVydejka" msprop:Generator_ColumnVarNameInTable="columnHesloStornoVydejka" msprop:Generator_ColumnPropNameInRow="HesloStornoVydejka" msprop:Generator_ColumnPropNameInTable="HesloStornoVydejkaColumn" msprop:Generator_UserColumnName="HesloStornoVydejka" type="xs:string" minOccurs="0" />
+              <xs:element name="StatusObjectsDirectory" msprop:Generator_ColumnVarNameInTable="columnStatusObjectsDirectory" msprop:Generator_ColumnPropNameInRow="StatusObjectsDirectory" msprop:Generator_ColumnPropNameInTable="StatusObjectsDirectoryColumn" msprop:Generator_UserColumnName="StatusObjectsDirectory" type="xs:string" minOccurs="0" />
+              <xs:element name="GenerovatFakturu" msprop:Generator_ColumnVarNameInTable="columnGenerovatFakturu" msprop:Generator_ColumnPropNameInRow="GenerovatFakturu" msprop:Generator_ColumnPropNameInTable="GenerovatFakturuColumn" msprop:Generator_UserColumnName="GenerovatFakturu" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ZpracovatDokladDoISABRA" msprop:Generator_ColumnVarNameInTable="columnZpracovatDokladDoISABRA" msprop:Generator_ColumnPropNameInRow="ZpracovatDokladDoISABRA" msprop:Generator_ColumnPropNameInTable="ZpracovatDokladDoISABRAColumn" msprop:Generator_UserColumnName="ZpracovatDokladDoISABRA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="FEFO_FIFO_Expirace_Po_PocetDni" msprop:Generator_ColumnVarNameInTable="columnFEFO_FIFO_Expirace_Po_PocetDni" msprop:Generator_ColumnPropNameInRow="FEFO_FIFO_Expirace_Po_PocetDni" msprop:Generator_ColumnPropNameInTable="FEFO_FIFO_Expirace_Po_PocetDniColumn" msprop:Generator_UserColumnName="FEFO_FIFO_Expirace_Po_PocetDni" type="xs:int" minOccurs="0" />
+              <xs:element name="GenerovatPrevodkaPrijem" msprop:Generator_ColumnVarNameInTable="columnGenerovatPrevodkaPrijem" msprop:Generator_ColumnPropNameInRow="GenerovatPrevodkaPrijem" msprop:Generator_ColumnPropNameInTable="GenerovatPrevodkaPrijemColumn" msprop:Generator_UserColumnName="GenerovatPrevodkaPrijem" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Prodej" msprop:Generator_TableClassName="ProdejDataTable" msprop:Generator_TableVarName="tableProdej" msprop:Generator_RowChangedName="ProdejRowChanged" msprop:Generator_TablePropName="Prodej" msprop:Generator_RowDeletingName="ProdejRowDeleting" msprop:Generator_RowChangingName="ProdejRowChanging" msprop:Generator_RowEvHandlerName="ProdejRowChangeEventHandler" msprop:Generator_RowDeletedName="ProdejRowDeleted" msprop:Generator_RowClassName="ProdejRow" msprop:Generator_UserTableName="Prodej" msprop:Generator_RowEvArgName="ProdejRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StatusObjectsDirectory" msprop:Generator_ColumnVarNameInTable="columnStatusObjectsDirectory" msprop:Generator_ColumnPropNameInRow="StatusObjectsDirectory" msprop:Generator_ColumnPropNameInTable="StatusObjectsDirectoryColumn" msprop:Generator_UserColumnName="StatusObjectsDirectory" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Inventura1" msprop:Generator_TableClassName="Inventura1DataTable" msprop:Generator_TableVarName="tableInventura1" msprop:Generator_RowChangedName="Inventura1RowChanged" msprop:Generator_TablePropName="Inventura1" msprop:Generator_RowDeletingName="Inventura1RowDeleting" msprop:Generator_RowChangingName="Inventura1RowChanging" msprop:Generator_RowEvHandlerName="Inventura1RowChangeEventHandler" msprop:Generator_RowDeletedName="Inventura1RowDeleted" msprop:Generator_RowClassName="Inventura1Row" msprop:Generator_UserTableName="Inventura1" msprop:Generator_RowEvArgName="Inventura1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PathToXSLT" msprop:Generator_ColumnVarNameInTable="columnPathToXSLT" msprop:Generator_ColumnPropNameInRow="PathToXSLT" msprop:Generator_ColumnPropNameInTable="PathToXSLTColumn" msprop:Generator_UserColumnName="PathToXSLT" type="xs:string" minOccurs="0" />
+              <xs:element name="PathDataOutputFile" msprop:Generator_ColumnVarNameInTable="columnPathDataOutputFile" msprop:Generator_ColumnPropNameInRow="PathDataOutputFile" msprop:Generator_ColumnPropNameInTable="PathDataOutputFileColumn" msprop:Generator_UserColumnName="PathDataOutputFile" type="xs:string" minOccurs="0" />
+              <xs:element name="DavkaTerminalVice" msprop:Generator_ColumnVarNameInTable="columnDavkaTerminalVice" msprop:Generator_ColumnPropNameInRow="DavkaTerminalVice" msprop:Generator_ColumnPropNameInTable="DavkaTerminalViceColumn" msprop:Generator_UserColumnName="DavkaTerminalVice" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PathStateDataFile" msprop:Generator_ColumnVarNameInTable="columnPathStateDataFile" msprop:Generator_ColumnPropNameInRow="PathStateDataFile" msprop:Generator_ColumnPropNameInTable="PathStateDataFileColumn" msprop:Generator_UserColumnName="PathStateDataFile" type="xs:string" minOccurs="0" />
+              <xs:element name="IDTerm_Predloha" msprop:Generator_ColumnVarNameInTable="columnIDTerm_Predloha" msprop:Generator_ColumnPropNameInRow="IDTerm_Predloha" msprop:Generator_ColumnPropNameInTable="IDTerm_PredlohaColumn" msprop:Generator_UserColumnName="IDTerm_Predloha" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Prijem" msprop:Generator_TableClassName="PrijemDataTable" msprop:Generator_TableVarName="tablePrijem" msprop:Generator_RowChangedName="PrijemRowChanged" msprop:Generator_TablePropName="Prijem" msprop:Generator_RowDeletingName="PrijemRowDeleting" msprop:Generator_RowChangingName="PrijemRowChanging" msprop:Generator_RowEvHandlerName="PrijemRowChangeEventHandler" msprop:Generator_RowDeletedName="PrijemRowDeleted" msprop:Generator_RowClassName="PrijemRow" msprop:Generator_UserTableName="Prijem" msprop:Generator_RowEvArgName="PrijemRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HesloStornoPrijemka" msprop:Generator_ColumnVarNameInTable="columnHesloStornoPrijemka" msprop:Generator_ColumnPropNameInRow="HesloStornoPrijemka" msprop:Generator_ColumnPropNameInTable="HesloStornoPrijemkaColumn" msprop:Generator_UserColumnName="HesloStornoPrijemka" type="xs:string" minOccurs="0" />
+              <xs:element name="StatusObjectsDirectory" msprop:Generator_ColumnVarNameInTable="columnStatusObjectsDirectory" msprop:Generator_ColumnPropNameInRow="StatusObjectsDirectory" msprop:Generator_ColumnPropNameInTable="StatusObjectsDirectoryColumn" msprop:Generator_UserColumnName="StatusObjectsDirectory" type="xs:string" minOccurs="0" />
+              <xs:element name="ZpracovatDokladDoISABRA" msprop:Generator_ColumnVarNameInTable="columnZpracovatDokladDoISABRA" msprop:Generator_ColumnPropNameInRow="ZpracovatDokladDoISABRA" msprop:Generator_ColumnPropNameInTable="ZpracovatDokladDoISABRAColumn" msprop:Generator_UserColumnName="ZpracovatDokladDoISABRA" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="WEBAPI" msprop:Generator_TableClassName="WEBAPIDataTable" msprop:Generator_TableVarName="tableWEBAPI" msprop:Generator_RowChangedName="WEBAPIRowChanged" msprop:Generator_TablePropName="WEBAPI" msprop:Generator_RowDeletingName="WEBAPIRowDeleting" msprop:Generator_RowChangingName="WEBAPIRowChanging" msprop:Generator_RowEvHandlerName="WEBAPIRowChangeEventHandler" msprop:Generator_RowDeletedName="WEBAPIRowDeleted" msprop:Generator_RowClassName="WEBAPIRow" msprop:Generator_UserTableName="WEBAPI" msprop:Generator_RowEvArgName="WEBAPIRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Autorizace_DoAPI" msprop:Generator_ColumnVarNameInTable="columnAutorizace_DoAPI" msprop:Generator_ColumnPropNameInRow="Autorizace_DoAPI" msprop:Generator_ColumnPropNameInTable="Autorizace_DoAPIColumn" msprop:Generator_UserColumnName="Autorizace_DoAPI" type="xs:string" minOccurs="0" />
+              <xs:element name="Adresa" msprop:Generator_ColumnVarNameInTable="columnAdresa" msprop:Generator_ColumnPropNameInRow="Adresa" msprop:Generator_ColumnPropNameInTable="AdresaColumn" msprop:Generator_UserColumnName="Adresa" type="xs:string" minOccurs="0" />
+              <xs:element name="AliasDB" msprop:Generator_ColumnVarNameInTable="columnAliasDB" msprop:Generator_ColumnPropNameInRow="AliasDB" msprop:Generator_ColumnPropNameInTable="AliasDBColumn" msprop:Generator_UserColumnName="AliasDB" type="xs:string" minOccurs="0" />
+              <xs:element name="isHTTPS" msprop:Generator_ColumnVarNameInTable="columnisHTTPS" msprop:Generator_ColumnPropNameInRow="isHTTPS" msprop:Generator_ColumnPropNameInTable="isHTTPSColumn" msprop:Generator_UserColumnName="isHTTPS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LogovatRequestyResponsy" msprop:Generator_ColumnVarNameInTable="columnLogovatRequestyResponsy" msprop:Generator_ColumnPropNameInRow="LogovatRequestyResponsy" msprop:Generator_ColumnPropNameInTable="LogovatRequestyResponsyColumn" msprop:Generator_UserColumnName="LogovatRequestyResponsy" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LogovatRequestyResponsy_Path" msprop:Generator_ColumnVarNameInTable="columnLogovatRequestyResponsy_Path" msprop:Generator_ColumnPropNameInRow="LogovatRequestyResponsy_Path" msprop:Generator_ColumnPropNameInTable="LogovatRequestyResponsy_PathColumn" msprop:Generator_UserColumnName="LogovatRequestyResponsy_Path" type="xs:string" minOccurs="0" />
+              <xs:element name="API_TimeOut" msprop:Generator_ColumnVarNameInTable="columnAPI_TimeOut" msprop:Generator_ColumnPropNameInRow="API_TimeOut" msprop:Generator_ColumnPropNameInTable="API_TimeOutColumn" msprop:Generator_UserColumnName="API_TimeOut" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Procesni_Rizeni" msprop:Generator_TableClassName="Procesni_RizeniDataTable" msprop:Generator_TableVarName="tableProcesni_Rizeni" msprop:Generator_TablePropName="Procesni_Rizeni" msprop:Generator_RowDeletingName="Procesni_RizeniRowDeleting" msprop:Generator_RowChangingName="Procesni_RizeniRowChanging" msprop:Generator_RowEvHandlerName="Procesni_RizeniRowChangeEventHandler" msprop:Generator_RowDeletedName="Procesni_RizeniRowDeleted" msprop:Generator_UserTableName="Procesni_Rizeni" msprop:Generator_RowChangedName="Procesni_RizeniRowChanged" msprop:Generator_RowEvArgName="Procesni_RizeniRowChangeEvent" msprop:Generator_RowClassName="Procesni_RizeniRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StavID_Vydej_KVydeji" msprop:Generator_ColumnVarNameInTable="columnStavID_Vydej_KVydeji" msprop:Generator_ColumnPropNameInRow="StavID_Vydej_KVydeji" msprop:Generator_ColumnPropNameInTable="StavID_Vydej_KVydejiColumn" msprop:Generator_UserColumnName="StavID_Vydej_KVydeji" type="xs:string" minOccurs="0" />
+              <xs:element name="StavID_Vydej_VyskladnujeSe" msprop:Generator_ColumnVarNameInTable="columnStavID_Vydej_VyskladnujeSe" msprop:Generator_ColumnPropNameInRow="StavID_Vydej_VyskladnujeSe" msprop:Generator_ColumnPropNameInTable="StavID_Vydej_VyskladnujeSeColumn" msprop:Generator_UserColumnName="StavID_Vydej_VyskladnujeSe" type="xs:string" minOccurs="0" />
+              <xs:element name="StavID_Vydej_Vyskladneno" msprop:Generator_ColumnVarNameInTable="columnStavID_Vydej_Vyskladneno" msprop:Generator_ColumnPropNameInRow="StavID_Vydej_Vyskladneno" msprop:Generator_ColumnPropNameInTable="StavID_Vydej_VyskladnenoColumn" msprop:Generator_UserColumnName="StavID_Vydej_Vyskladneno" type="xs:string" minOccurs="0" />
+              <xs:element name="StavID_Vydej_KeKontrole" msprop:Generator_ColumnVarNameInTable="columnStavID_Vydej_KeKontrole" msprop:Generator_ColumnPropNameInRow="StavID_Vydej_KeKontrole" msprop:Generator_ColumnPropNameInTable="StavID_Vydej_KeKontroleColumn" msprop:Generator_UserColumnName="StavID_Vydej_KeKontrole" type="xs:string" minOccurs="0" />
+              <xs:element name="StavID_Prijem_KNaskladneni" msprop:Generator_ColumnVarNameInTable="columnStavID_Prijem_KNaskladneni" msprop:Generator_ColumnPropNameInRow="StavID_Prijem_KNaskladneni" msprop:Generator_ColumnPropNameInTable="StavID_Prijem_KNaskladneniColumn" msprop:Generator_UserColumnName="StavID_Prijem_KNaskladneni" type="xs:string" minOccurs="0" />
+              <xs:element name="StavID_Prijem_NaskladnujeSe" msprop:Generator_ColumnVarNameInTable="columnStavID_Prijem_NaskladnujeSe" msprop:Generator_ColumnPropNameInRow="StavID_Prijem_NaskladnujeSe" msprop:Generator_ColumnPropNameInTable="StavID_Prijem_NaskladnujeSeColumn" msprop:Generator_UserColumnName="StavID_Prijem_NaskladnujeSe" type="xs:string" minOccurs="0" />
+              <xs:element name="StavID_Prijem_Naskladneno" msprop:Generator_ColumnVarNameInTable="columnStavID_Prijem_Naskladneno" msprop:Generator_ColumnPropNameInRow="StavID_Prijem_Naskladneno" msprop:Generator_ColumnPropNameInTable="StavID_Prijem_NaskladnenoColumn" msprop:Generator_UserColumnName="StavID_Prijem_Naskladneno" type="xs:string" minOccurs="0" />
+              <xs:element name="StavID_Prijem_KeKontrole" msprop:Generator_ColumnVarNameInTable="columnStavID_Prijem_KeKontrole" msprop:Generator_ColumnPropNameInRow="StavID_Prijem_KeKontrole" msprop:Generator_ColumnPropNameInTable="StavID_Prijem_KeKontroleColumn" msprop:Generator_UserColumnName="StavID_Prijem_KeKontrole" type="xs:string" minOccurs="0" />
+              <xs:element name="StavID_PrevodVydej_VPriprave" msprop:Generator_ColumnVarNameInTable="columnStavID_PrevodVydej_VPriprave" msprop:Generator_ColumnPropNameInRow="StavID_PrevodVydej_VPriprave" msprop:Generator_ColumnPropNameInTable="StavID_PrevodVydej_VPripraveColumn" msprop:Generator_UserColumnName="StavID_PrevodVydej_VPriprave" type="xs:string" minOccurs="0" />
+              <xs:element name="StavID_PrevodVydej_VTerminalu" msprop:Generator_ColumnVarNameInTable="columnStavID_PrevodVydej_VTerminalu" msprop:Generator_ColumnPropNameInRow="StavID_PrevodVydej_VTerminalu" msprop:Generator_ColumnPropNameInTable="StavID_PrevodVydej_VTerminaluColumn" msprop:Generator_UserColumnName="StavID_PrevodVydej_VTerminalu" type="xs:string" minOccurs="0" />
+              <xs:element name="StavID_PrevodVydej_Prevedeno" msprop:Generator_ColumnVarNameInTable="columnStavID_PrevodVydej_Prevedeno" msprop:Generator_ColumnPropNameInRow="StavID_PrevodVydej_Prevedeno" msprop:Generator_ColumnPropNameInTable="StavID_PrevodVydej_PrevedenoColumn" msprop:Generator_UserColumnName="StavID_PrevodVydej_Prevedeno" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ID_Rady" msprop:Generator_TableClassName="ID_RadyDataTable" msprop:Generator_TableVarName="tableID_Rady" msprop:Generator_RowChangedName="ID_RadyRowChanged" msprop:Generator_TablePropName="ID_Rady" msprop:Generator_RowDeletingName="ID_RadyRowDeleting" msprop:Generator_RowChangingName="ID_RadyRowChanging" msprop:Generator_RowEvHandlerName="ID_RadyRowChangeEventHandler" msprop:Generator_RowDeletedName="ID_RadyRowDeleted" msprop:Generator_RowClassName="ID_RadyRow" msprop:Generator_UserTableName="ID_Rady" msprop:Generator_RowEvArgName="ID_RadyRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RadaID_Vydej_DodaciList" msprop:Generator_ColumnVarNameInTable="columnRadaID_Vydej_DodaciList" msprop:Generator_ColumnPropNameInRow="RadaID_Vydej_DodaciList" msprop:Generator_ColumnPropNameInTable="RadaID_Vydej_DodaciListColumn" msprop:Generator_UserColumnName="RadaID_Vydej_DodaciList" type="xs:string" minOccurs="0" />
+              <xs:element name="RadaID_Prijem_Prijemka" msprop:Generator_ColumnVarNameInTable="columnRadaID_Prijem_Prijemka" msprop:Generator_ColumnPropNameInRow="RadaID_Prijem_Prijemka" msprop:Generator_ColumnPropNameInTable="RadaID_Prijem_PrijemkaColumn" msprop:Generator_UserColumnName="RadaID_Prijem_Prijemka" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Informations" msprop:Generator_TableClassName="InformationsDataTable" msprop:Generator_TableVarName="tableInformations" msprop:Generator_TablePropName="Informations" msprop:Generator_RowDeletingName="InformationsRowDeleting" msprop:Generator_RowChangingName="InformationsRowChanging" msprop:Generator_RowEvHandlerName="InformationsRowChangeEventHandler" msprop:Generator_RowDeletedName="InformationsRowDeleted" msprop:Generator_UserTableName="Informations" msprop:Generator_RowChangedName="InformationsRowChanged" msprop:Generator_RowEvArgName="InformationsRowChangeEvent" msprop:Generator_RowClassName="InformationsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FEFOFIFO_I_L_CommandType" msprop:Generator_ColumnVarNameInTable="columnFEFOFIFO_I_L_CommandType" msprop:Generator_ColumnPropNameInRow="FEFOFIFO_I_L_CommandType" msprop:Generator_ColumnPropNameInTable="FEFOFIFO_I_L_CommandTypeColumn" msprop:Generator_UserColumnName="FEFOFIFO_I_L_CommandType" type="xs:string" minOccurs="0" />
+              <xs:element name="FEFOFIFO_proc" msprop:Generator_ColumnVarNameInTable="columnFEFOFIFO_proc" msprop:Generator_ColumnPropNameInRow="FEFOFIFO_proc" msprop:Generator_ColumnPropNameInTable="FEFOFIFO_procColumn" msprop:Generator_UserColumnName="FEFOFIFO_proc" type="xs:string" minOccurs="0" />
+              <xs:element name="FEFOFIFO_pouzita_metoda" msprop:Generator_ColumnVarNameInTable="columnFEFOFIFO_pouzita_metoda" msprop:Generator_ColumnPropNameInRow="FEFOFIFO_pouzita_metoda" msprop:Generator_ColumnPropNameInTable="FEFOFIFO_pouzita_metodaColumn" msprop:Generator_UserColumnName="FEFOFIFO_pouzita_metoda" type="xs:int" minOccurs="0" />
+              <xs:element name="FEFOFIFO_M3" msprop:Generator_ColumnVarNameInTable="columnFEFOFIFO_M3" msprop:Generator_ColumnPropNameInRow="FEFOFIFO_M3" msprop:Generator_ColumnPropNameInTable="FEFOFIFO_M3Column" msprop:Generator_UserColumnName="FEFOFIFO_M3" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

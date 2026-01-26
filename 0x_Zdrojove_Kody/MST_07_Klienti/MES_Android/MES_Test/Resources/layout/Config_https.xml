@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff">
+    <!--Tady v temto miste je linearlayout ktery obsahuje potrebne zobrazene componenty-->
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#fff">
+        <TableLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="#FFFFFF">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:padding="8dp"
+                    android:text="@string/Config_ServerAccess"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="#FFFFFF">
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:background="#FFFFFF">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/Config_Credential"
+                        android:id="@+id/Config_Credential" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Config_Anonymous"
+                        android:id="@+id/Config_Anonymous" />
+                </RadioGroup>
+            </TableRow>
+            <View
+                android:layout_height="2dip"
+                android:background="#71777F"
+                android:layout_width="match_parent" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="#FFFFFF">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:padding="8dp"
+                    android:text="@string/Config_UserName"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="#FFFFFF">
+                <EditText
+                    android:id="@+id/Config_UserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20.0dp"
+                    android:layout_marginRight="20.0dp"
+                    android:gravity="left"
+                    android:padding="8dp"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:inputType="text" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="#FFFFFF">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:padding="8dp"
+                    android:text="@string/Config_Password"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="#FFFFFF">
+                <EditText
+                    android:id="@+id/Config_Password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20.0dp"
+                    android:layout_marginRight="20.0dp"
+                    android:gravity="left"
+                    android:padding="8dp"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:inputType="textPassword" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="#FFFFFF">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:padding="8dp"
+                    android:text="@string/Config_Domain"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="#FFFFFF">
+                <EditText
+                    android:id="@+id/Config_Domain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20.0dp"
+                    android:layout_marginRight="20.0dp"
+                    android:gravity="left"
+                    android:padding="8dp"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:inputType="text" />
+            </TableRow>
+            <View
+                android:layout_height="2dip"
+                android:background="#71777F"
+                android:layout_width="match_parent" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="#FFFFFF">
+                <CheckBox
+                    android:text="@string/Config_PreAuthenticate"
+                    android:id="@+id/Config_PreAuthenticate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </TableRow>
+            <View
+                android:layout_height="2dip"
+                android:background="#71777F"
+                android:layout_width="match_parent" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="#FFFFFF">
+                <CheckBox
+                    android:text="@string/Config_AllowRediretion"
+                    android:id="@+id/Config_AllowRediretion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </TableRow>
+            <View
+                android:layout_height="2dip"
+                android:background="#71777F"
+                android:layout_width="match_parent" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="#FFFFFF">
+                <CheckBox
+                    android:text="@string/Config_AllowDeCompresion"
+                    android:id="@+id/Config_AllowDeCompresion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </TableRow>
+            <View
+                android:layout_height="2dip"
+                android:background="#71777F"
+                android:layout_width="match_parent" />
+              <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="#FFFFFF">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:padding="8dp"
+                    android:text="@string/Config_Cert"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="#FFFFFF">
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:background="#FFFFFF">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/Config_OnlyInstalled"
+                        android:id="@+id/Config_OnlyInstalled" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Config_TrustAll"
+                        android:id="@+id/Config_TrustAll" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Config_TrustQuery"
+                        android:id="@+id/Config_TrustQuery" />
+                </RadioGroup>
+            </TableRow>
+            <View
+                android:layout_height="2dip"
+                android:background="#71777F"
+                android:layout_width="match_parent" />
+        </TableLayout>
+    </ScrollView>
+    <!-- Levý navigační panel -->
+</LinearLayout>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="InputWeight_Label">Zadejte kod</string>
+  <string name="InputWeight_OK">OK</string>
+  <string name="InputWeight_Storno">Zrušit</string>
+
+  <string name="InputWeight_Vaha">Váha</string>
+
+  <string name="InputWeight_Label_QTY">Váha odvedených kusů výrobku:</string>
+
+  <string name="InputWeight_PredavanyText">Potvrďte/opravte váhu</string>
+
+  <string name="InputWeight_hint">Zadejte číslo</string>
+
+</resources>

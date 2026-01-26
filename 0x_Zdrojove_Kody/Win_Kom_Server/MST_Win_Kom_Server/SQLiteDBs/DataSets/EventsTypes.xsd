@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EventsTypes" targetNamespace="http://sqlce.fask.cz/EventsTypes.xsd" xmlns:mstns="http://sqlce.fask.cz/EventsTypes.xsd" xmlns="http://sqlce.fask.cz/EventsTypes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EventsTypes" msdata:IsDataSet="true" msdata:Locale="" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="EventsTypes" msprop:Generator_UserDSName="EventsTypes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST_EventsTypes" msprop:Generator_TableClassName="CZMST_EventsTypesDataTable" msprop:Generator_RowEvArgName="CZMST_EventsTypesRowChangeEvent" msprop:Generator_TableVarName="tableCZMST_EventsTypes" msprop:Generator_TablePropName="CZMST_EventsTypes" msprop:Generator_RowDeletingName="CZMST_EventsTypesRowDeleting" msprop:Generator_RowChangingName="CZMST_EventsTypesRowChanging" msprop:Generator_RowEvHandlerName="CZMST_EventsTypesRowChangeEventHandler" msprop:Generator_RowDeletedName="CZMST_EventsTypesRowDeleted" msprop:Generator_RowChangedName="CZMST_EventsTypesRowChanged" msprop:Generator_UserTableName="CZMST_EventsTypes" msprop:Generator_RowClassName="CZMST_EventsTypesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="eid" msprop:Generator_ColumnVarNameInTable="columneid" msprop:Generator_ColumnPropNameInRow="eid" msprop:Generator_ColumnPropNameInTable="eidColumn" msprop:Generator_UserColumnName="eid">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="etype" msprop:Generator_ColumnVarNameInTable="columnetype" msprop:Generator_ColumnPropNameInRow="etype" msprop:Generator_ColumnPropNameInTable="etypeColumn" msprop:Generator_UserColumnName="etype">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="edesc" msprop:Generator_ColumnVarNameInTable="columnedesc" msprop:Generator_ColumnPropNameInRow="edesc" msprop:Generator_ColumnPropNameInTable="edescColumn" msprop:Generator_UserColumnName="edesc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ebarcode" msprop:Generator_ColumnVarNameInTable="columnebarcode" msprop:Generator_ColumnPropNameInRow="ebarcode" msprop:Generator_ColumnPropNameInTable="ebarcodeColumn" msprop:Generator_UserColumnName="ebarcode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

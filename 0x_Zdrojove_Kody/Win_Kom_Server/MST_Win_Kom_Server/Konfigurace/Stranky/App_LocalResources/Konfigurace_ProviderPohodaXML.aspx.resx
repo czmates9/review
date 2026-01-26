@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PohodaInfo.DB_Name_pohoda" xml:space="preserve">
+    <value>Název databáze</value>
+    <comment>Jedná se název Databaze na SQL serveri pro Informačný sýstém POHODA</comment>
+  </data>
+  <data name="PohodaInfo.ICO" xml:space="preserve">
+    <value>Identifikační číslo osoby</value>
+    <comment>Identifikační číslo osoby (zkráceně IČO, zastarale také IČ, zpočátku IČO jako identifikační číslo organizace) je v České republice unikátní osmimístné identifikační číslo právnické osoby, podnikající fyzické osoby nebo organizační složky státu. Zadejte stejné IČO které použivate v IS POHODA</comment>
+  </data>
+  <data name="PohodaInfo.Login_IDS_pohoda" xml:space="preserve">
+    <value>Iniciály v IS POHODA</value>
+    <comment>v Inforném systemu POHODA v  
+Nastavení &gt; Přístupová práva &gt; Stloupec Iniciály</comment>
+  </data>
+  <data name="PohodaInfo.Login_pohoda" xml:space="preserve">
+    <value>Uživatel v IS POHODA</value>
+    <comment>v Inforném systemu POHODA v  
+Nastavení &gt; Přístupová práva &gt; Stloupec uživatel</comment>
+  </data>
+  <data name="PohodaInfo.Password_pohoda" xml:space="preserve">
+    <value>Heslo v IS POHODA</value>
+    <comment>v Inforném systemu POHODA v  
+Nastavení &gt; Přístupová práva &gt; Zde zadané heslo pro uživatele
+
+V Této verzi je ješte otevřene, ale je v plánu jej zašifrovat pro bezpečnost</comment>
+  </data>
+  <data name="PohodaInfo.PathToInputDirectory" xml:space="preserve">
+    <value>Cesta k XML</value>
+    <comment>Tato cesta slouží k ukladani REQUESTU a RESPONSU z Informačnýho systemu POHODA</comment>
+  </data>
+  <data name="PohodaInfo.PathToPOHODAexe" xml:space="preserve">
+    <value>Cesta v exe souboru IS POHODA</value>
+    <comment>Apsolitný nebo relativní cesta k pohoda.exe souboru.</comment>
+  </data>
+  <data name="PohodaInfo.POHODA_E1" xml:space="preserve">
+    <value>POHODA verze E1</value>
+    <comment>Přiznak určujíci zda máte Informačný sýstem POHODA ve verzi E1, která podporuje mimo jiné i volitelné parametry.</comment>
+  </data>
+  <data name="PohodaInfo.Process_UseShellExecute" xml:space="preserve">
+    <value>Process Use Shell Execute</value>
+    <comment>Získá nebo nastaví hodnotu označující, zda použít shell operačního systému ke spuštění procesu.</comment>
+  </data>
+  <data name="PohodaInfo.PathToINIFile" xml:space="preserve">
+    <value>Cesta k .ini souboru</value>
+    <comment>Jedná se o cestu která ukazuje kde je uloženy .ini soubor který se používá ke komunikaci s pohodou.</comment>
+  </data>
+  <data name="Button_Save.Text" xml:space="preserve">
+    <value>Uložit</value>
+  </data>
+  <data name="ConnectionStrings.PohodaDB" xml:space="preserve">
+    <value>Pohoda DB</value>
+    <comment>Jedná se o Connection string na IS POHODA Databázi na SQL serveru.</comment>
+  </data>
+  <data name="ConnectionStrings.FASKDB" xml:space="preserve">
+    <value>FASK DB</value>
+    <comment>Jedná se o Connection string na FASK Databázi na SQL serveru.</comment>
+  </data>
+  <data name="Inventura1.DavkaTerminalVice" xml:space="preserve">
+    <value>Davka Terminal Vice</value>
+    <comment>Tento parametr slouží pro obmedzení stahovani dávek pouze do jednoho terminalu, anebo do neomedzeneho množstvi terminalu.&lt;br&gt; Zavislot je na ID Terminalu</comment>
+  </data>
+  <data name="Inventura1.PrepisovatZkontrolovanePolozky" xml:space="preserve">
+    <value>Přepisovat Zkontrolované Polozky</value>
+    <comment>Pokud je tento parametr Zakazany tak se v podminke pri prepisovani hodnot ešte navic :  (Audit &lt;&gt; 1)</comment>
+  </data>
+  <data name="Inventura1.PathStateDataFile" xml:space="preserve">
+    <value>Cesta k StateDataFile</value>
+    <comment>Cesta pro ukladani Status objekt souboru</comment>
+  </data>
+  <data name="Inventura1.PathDataOutputFile" xml:space="preserve">
+    <value>Cesta k Vystupnym souborom</value>
+    <comment>Cesta do ktere se ukladaji vyexportovane soubory a to : &lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;XML&lt;/li&gt;
+&lt;li&gt;HTML&lt;/li&gt;
+&lt;li&gt;CSV&lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Inventura1.PathToXSLT" xml:space="preserve">
+    <value>Cesta k XSLT</value>
+    <comment>Cesta v ktere su uložene .xslt transformačne soubory, šablony... jak to nazvat? :D </comment>
+  </data>
+  <data name="Inventura1.DotahovatInformaceDodavatele" xml:space="preserve">
+    <value>Dotahovat Informace Dodavatele</value>
+    <comment>Slouží pri LoadInventura , pro povoleni dotahovani informaci o dodavatelovy...&lt;br&gt;
+Dotahne řadek z SKz(Stav skladu), a pokud neni NULL (bez ruličky) tak to z AD (adresář) dotahne stloupec &lt;b&gt;Firma&lt;b&gt;</comment>
+  </data>
+  <data name="Inventura1.I_DotahovatAlternativniDodavatele" xml:space="preserve">
+    <value>Dotahovat Alternativni Dodavatele</value>
+    <comment>Tento parametr aktivuje dotahovani aletrnativych dodavatelu, do CZMST_I3
+</comment>
+  </data>
+  <data name="Sdilene.StatusObjectsDirectory" xml:space="preserve">
+    <value>Cesta k StatusObjects</value>
+    <comment>Cesta do ktere se ukladji status objekty. &lt;br&gt; Tento parametr platí pro agendu : &lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt; Prijem&lt;/li&gt;
+&lt;li&gt; Prodej&lt;/li&gt;
+&lt;li&gt; Vydej&lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Sdilene.LokaceVychoziParametrNazevPohoda" xml:space="preserve">
+    <value>Lokace Vychozi Parametr Nazev Pohoda</value>
+    <comment>Jedná se o IDS z tabulky SkParam.&lt;br&gt; 
+Tento parametr platí pro agendu : &lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt; Prijem&lt;/li&gt;
+&lt;li&gt; Vydej&lt;/li&gt;
+&lt;li&gt;Ciselnik, Export zasob&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+Dalí parametr je tam pak ITEMNMBR (v pohode je to ID)
+
+</comment>
+  </data>
+  <data name="Sdilene.EvidenceVyrobnichCisel" xml:space="preserve">
+    <value>Evidence Výrobnich čísel</value>
+    <comment>Tento parametr povolí prebíraní evidovani na výrobní čísla. 
+
+Tento parametr plat9 pro agendu : &lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt; Prijem&lt;/li&gt;
+&lt;li&gt; Inventura&lt;/li&gt;
+&lt;li&gt; Vydej&lt;/li&gt;
+&lt;li&gt; Ciselnik, export zbozi&lt;/li&gt;
+&lt;/ul&gt;
+</comment>
+  </data>
+  <data name="Sdilene.EvidenceSarzi" xml:space="preserve">
+    <value>Evidence šarzí</value>
+    <comment>Tento parametr povolí prebíraní evidovani na šarže
+
+Tento parametr plat9 pro agendu : &lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt; Prijem&lt;/li&gt;
+&lt;li&gt; Inventura&lt;/li&gt;
+&lt;li&gt; Vydej&lt;/li&gt;
+&lt;li&gt; Ciselnik, export zbozi&lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="ExportZasoby.ExportSkladFilter" xml:space="preserve">
+    <value>Export Sklad Filter</value>
+    <comment>Jedná se o seznam skladú které budou exportovany do FASK_ZASOBY. &lt;br&gt; Je možno vypisovat nazvy skladu z IS POHODA (v DB se jedná o IDS stloupec). Podminka pri exporte je postavena na IDS z tabulky sSklad a vyhledava se pomodi podminky : &lt;br&gt; WHERE IDS IN (filter).</comment>
+  </data>
+  <data name="ExportZasoby.ExportTypFilter" xml:space="preserve">
+    <value>ExportTypFilter</value>
+    <comment>Jedná se o typ polo6ek které budou exportovany do FASK_ZASOBY. &lt;br&gt; Je možno vypisovat typy položek čiselne. (v DB se jedná o RelSkTyp stloupec). Podminka pri exporte je postavena na RelSkTyp z tabulky SKz a vyhledava se pomodi podminky : &lt;br&gt; WHERE RelSkTyp IN (filter).</comment>
+  </data>
+  <data name="ExportZasoby.ExportovatPouzeAktivniPolozky" xml:space="preserve">
+    <value>Exportovat Pouze Aktivni Polozky</value>
+    <comment>Tento parametr povoli nebo zakaže exportovat položky ktere již nejsou aktivnni.</comment>
+  </data>
+  <data name="ExportZasoby.EXZas_DotahovatAlternativniDodavatele" xml:space="preserve">
+    <value>Dotahovat Alternativni Dodavatele</value>
+    <comment>Tento parametr povoli dotahovat alternativni dodavatele do FASK_ZASOBY</comment>
+  </data>
+  <data name="ComunicatorDriveMapping.Letter" xml:space="preserve">
+    <value>Pismeno</value>
+    <comment>Jedná se o zastupné pismeno na které se to bude mapovat. &lt;br&gt;&lt;br&gt;
+Tyto parametry slouží, k namapovaní UNC cesty z sdilene složky do lokalniho prostředí.&lt;br&gt;
+ &lt;font color="red"&gt;Aktivovano je to za podminky že je vyplneno &lt;b&gt;pismeno&lt;/b&gt;&lt;/font&gt; </comment>
+  </data>
+  <data name="ComunicatorDriveMapping.Domain" xml:space="preserve">
+    <value>Domena</value>
+    <comment>Jedná se o domenu na které se to bude mapovat. &lt;br&gt;&lt;br&gt;
+Tyto parametry slouží, k namapovaní UNC cesty z sdilene složky do lokalniho prostředí.&lt;br&gt;
+ &lt;font color="red"&gt;Aktivovano je to za podminky že je vyplneno &lt;b&gt;pismeno&lt;/b&gt;&lt;/font&gt; </comment>
+  </data>
+  <data name="ComunicatorDriveMapping.Password" xml:space="preserve">
+    <value>Heslo</value>
+    <comment>Jedná se o heslo pomoci kterého se to bude mapovat. &lt;br&gt;&lt;br&gt;
+Tyto parametry slouží, k namapovaní UNC cesty z sdilene složky do lokalniho prostředí.&lt;br&gt;
+ &lt;font color="red"&gt;Aktivovano je to za podminky že je vyplneno &lt;b&gt;pismeno&lt;/b&gt;&lt;/font&gt; </comment>
+  </data>
+  <data name="ComunicatorDriveMapping.UNCPath" xml:space="preserve">
+    <value>UNC cesta</value>
+    <comment>Jedná se o UNC cestu na kterou se to bude mapovat. &lt;br&gt;&lt;br&gt;
+Tyto parametry slouží, k namapovaní UNC cesty z sdilene složky do lokalniho prostředí.&lt;br&gt;
+ &lt;font color="red"&gt;Aktivovano je to za podminky že je vyplneno &lt;b&gt;pismeno&lt;/b&gt;&lt;/font&gt; </comment>
+  </data>
+  <data name="ComunicatorDriveMapping.User" xml:space="preserve">
+    <value>Uživatel</value>
+    <comment>Jedná se o uživatele pomoci kterého se to bude mapovat. &lt;br&gt;&lt;br&gt;
+Tyto parametry slouží, k namapovaní UNC cesty z sdilene složky do lokalniho prostředí.&lt;br&gt;
+ &lt;font color="red"&gt;Aktivovano je to za podminky že je vyplneno &lt;b&gt;pismeno&lt;/b&gt;&lt;/font&gt; </comment>
+  </data>
+  <data name="Prodej.GrupujDataImport" xml:space="preserve">
+    <value>Grupuj Data Import</value>
+    <comment>Tento parametr povolí grupovani dat před importem do IS POHODA</comment>
+  </data>
+  <data name="Prodej.ImportDokladPohoda" xml:space="preserve">
+    <value>Import Doklad Pohoda</value>
+    <comment>Tenta parametr povolí importovani dokladu do IS POHODA.&lt;br&gt;
+Taky je v podminke, pro kontrolu disponibility.</comment>
+  </data>
+  <data name="Prodej.AfterDataProcessed_Action_Asynchronous" xml:space="preserve">
+    <value>AfterDataProcessed Action Asynchronous</value>
+    <comment>Jedná se o parametr který určuje zda se bude AfterProcess data vykonavat asynchronne (ve zvlášt vlákne) anebo synchronne.</comment>
+  </data>
+  <data name="Prodej.AfterDataProcessed_Action_P1" xml:space="preserve">
+    <value>AfterDataProcessed Action P1</value>
+    <comment>Jedná se o nazev prvniho parametru do procedury</comment>
+  </data>
+  <data name="Prodej.AfterDataProcessed_Action_P2" xml:space="preserve">
+    <value>AfterDataProcessed Action P2</value>
+    <comment>Jedná se o nazev druheho parametru do procedury</comment>
+  </data>
+  <data name="Prodej.AfterDataProcessed_Action" xml:space="preserve">
+    <value>AfterDataProcessed Action</value>
+    <comment>Jedná se o nazev storeage procedury která se vykoná</comment>
+  </data>
+  <data name="Prodej.KodFormaUhrady" xml:space="preserve">
+    <value>Kód Forma Uhrady</value>
+    <comment>Jedná se o IDS ktere je vloženo do XML requestu, pri tvorbe objednavek z volneho pohybu. </comment>
+  </data>
+  <data name="Prodej.RadaCiziMenaText" xml:space="preserve">
+    <value>Rada Cizi Měna Text</value>
+    <comment>Bude Doplneno...</comment>
+  </data>
+  <data name="Prodej.KodCiziMena" xml:space="preserve">
+    <value>Kód Cizi Měna</value>
+    <comment>Jedna se o Kod z tabulky sCMeny. z ktere se dotahuje ID cizi měny. Pouze v objednavkach.</comment>
+  </data>
+  <data name="Prodej.GetSklad_procName" xml:space="preserve">
+    <value>Jmeno procedury</value>
+    <comment>Jmeno Procedurt &lt;br&gt; &lt;br&gt;
+Metoda  pro ANC. GetSklad pro navrat skladu, se kterymi se pracuje.Vyuziva se v prodejnim modulu a na prijmu.</comment>
+  </data>
+  <data name="Prodej.GetSklad_paramName1" xml:space="preserve">
+    <value>Jmeno parametru 1</value>
+    <comment>Jmeno parametru&lt;br&gt; &lt;br&gt;
+Metoda  pro ANC. GetSklad pro navrat skladu, se kterymi se pracuje.Vyuziva se v prodejnim modulu a na prijmu.</comment>
+  </data>
+  <data name="Prodej.GetSklad_paramName2" xml:space="preserve">
+    <value>Jmeno parametru 2</value>
+    <comment>Jmeno parametru&lt;br&gt; &lt;br&gt;
+Metoda  pro ANC. GetSklad pro navrat skladu, se kterymi se pracuje.Vyuziva se v prodejnim modulu a na prijmu.</comment>
+  </data>
+  <data name="Prodej.GetSklad_paramName3" xml:space="preserve">
+    <value>Jmeno parametru 3</value>
+    <comment>Jmeno parametru&lt;br&gt; &lt;br&gt;
+Metoda  pro ANC. GetSklad pro navrat skladu, se kterymi se pracuje.Vyuziva se v prodejnim modulu a na prijmu.</comment>
+  </data>
+  <data name="Prodej.GetSklad_paramName4" xml:space="preserve">
+    <value>Jmeno parametru 4</value>
+    <comment>Jmeno parametru&lt;br&gt; &lt;br&gt;
+Metoda  pro ANC. GetSklad pro navrat skladu, se kterymi se pracuje.Vyuziva se v prodejnim modulu a na prijmu.</comment>
+  </data>
+  <data name="Prodej.GetSklad_paramName5" xml:space="preserve">
+    <value>Jmeno parametru 5</value>
+    <comment>Jmeno parametru&lt;br&gt; &lt;br&gt;
+Metoda  pro ANC. GetSklad pro navrat skladu, se kterymi se pracuje.Vyuziva se v prodejnim modulu a na prijmu.</comment>
+  </data>
+  <data name="Prijem.GrupujDataPrijemka" xml:space="preserve">
+    <value>Grupuj Data Prijemka</value>
+    <comment>Tento parametr povolí grupovani dat před importem do IS POHODA</comment>
+  </data>
+  <data name="Prijem.Pohoda_Objednavka_Vydana_Vyrizeno_Nastavit" xml:space="preserve">
+    <value>Pohoda Objednavka Vydana Vyrizeno Nastavit</value>
+    <comment>Pokud doklad neni jak Trvaly doklad, a je povoleno nastaveni Vyřizeno na přijemce. tak se provede nastaveni přiznaku vyžizeno.</comment>
+  </data>
+  <data name="Prijem.Pohoda_Objednavka_Vydana_Vyrizeno_Nastavit_Castecne_Plneni" xml:space="preserve">
+    <value>Pohoda Objednavka Vydana Vyrizeno Nastavit Castecne Plneni</value>
+    <comment>Pokuj je parametr povolen a přijemka je pouze častečne vykrita. Tak stejne se označí jak vyřizena.</comment>
+  </data>
+  <data name="Prijem.HlavnySkladID" xml:space="preserve">
+    <value>Hlavny Sklad ID</value>
+    <comment>Při exportovani předlohy je ID skladu povinny udaj. Avšak pokud nebude na terminalu vyplnen z nejakeho duvodu, a nebude přenesen na server tak se použe tenhle hlavny sklad. Pokud zakaznik pracuje z vicero skladama, a nema v terminaloch nastavene sklady, tak ma smulu... :D </comment>
+  </data>
+  <data name="Prijem.ObjednavkaDetail" xml:space="preserve">
+    <value>Detail</value>
+    <comment>Jedna se o SQL select dotaz, pro dotaženi detailu.</comment>
+  </data>
+  <data name="Prijem.ObjednavkaDetailPolozka" xml:space="preserve">
+    <value>Detail položka</value>
+    <comment>Jedna se o SQL select dotaz, pro dotaženi detailu položka.</comment>
+  </data>
+  <data name="Prijem.HesloStornoPrijemka" xml:space="preserve">
+    <value>Heslo storno přijemky</value>
+    <comment>Jedná se o heslo pro možnost stornovat přijemku z terminalu. Neni trimovano, tak pozor na medzery...</comment>
+  </data>
+  <data name="Prijem.StatusObjednavky" xml:space="preserve">
+    <value>Status Objednavky</value>
+    <comment>Jedná se parametr, ktery povoluje kontrolu statusu objednavky. Pri ukladani.</comment>
+  </data>
+  <data name="Prijem.Delivered" xml:space="preserve">
+    <value>Dodano</value>
+    <comment>Kontrola zda objednavka vydana ktera je exportovana byla dodana</comment>
+  </data>
+  <data name="Prijem.Executed" xml:space="preserve">
+    <value>Provedeno</value>
+    <comment>Kontrola zda objednavka vydana ktera je exportovana byla provedena</comment>
+  </data>
+  <data name="Prijem.Zbyva" xml:space="preserve">
+    <value>Zbývá</value>
+    <comment>Parametr ktery povoluje vypočet zbyvajiciho množství ktere se bude ukladat do předlohy.&lt;br&gt; Jedna se o množstvu na předlohe minus dodano.</comment>
+  </data>
+  <data name="Prijem.MerneJednotky_DotahovatDalsiVarianty" xml:space="preserve">
+    <value>MJ Dotahovat Dalši Varianty</value>
+    <comment>Parametr povoli dotahovani další varianty měrnych jednotek (MJ).</comment>
+  </data>
+  <data name="Prijem.GenerateSerltnum_Action" xml:space="preserve">
+    <value>Generovani SN</value>
+    <comment>Nazev procedury pro generováni serioveho čisla (SN).</comment>
+  </data>
+  <data name="Prijem.GetDoporuceneLokace_Action" xml:space="preserve">
+    <value>Doporucene Lokace</value>
+    <comment>Nazev procedury pro generováni doporučenych lokaci</comment>
+  </data>
+  <data name="Prijem.GetNezrealizovanePrijemky_Action" xml:space="preserve">
+    <value>Nezrealizované Přijemky</value>
+    <comment>Nazev procedury pro generováni nerealozovanych přijemek</comment>
+  </data>
+  <data name="Vydej.PokracovatNaJinemTerminalu" xml:space="preserve">
+    <value>Pokracovat Na Jinem Terminalu</value>
+    <comment>Pokud je povolen tak lze pokračovat s vydejkou na jiném terminálu. Zavisle je to na ITEMTYPE.&lt;br&gt;
+PRi ypracovavani odeslanzch dat, se promažou všechny již odeslane data a nahradi se novyma...</comment>
+  </data>
+  <data name="Vydej.GrupujDataVydejka" xml:space="preserve">
+    <value>Grupuj Data Vydejka</value>
+    <comment>Tento parametr povolí grupovani dat před importem do IS POHODA</comment>
+  </data>
+  <data name="Vydej.Validace_Mnozstvi_import" xml:space="preserve">
+    <value>Validace Mnozstvi import</value>
+    <comment>Jedna se o parametr který povolí kontrolu disponibility po odeslani dat z terminalu, ale před zpracovanim do IS POHODA.</comment>
+  </data>
+  <data name="Vydej.GenerovatVydejku" xml:space="preserve">
+    <value>Generovat Vydejku</value>
+    <comment>Parametr povolí importovaní výdejky do IS POHODA</comment>
+  </data>
+  <data name="Vydej.GenerovatPrenesenePolozky" xml:space="preserve">
+    <value>Generovat přenesene položky</value>
+    <comment>Parametr povolí generovat přenesene položky do IS POHODA</comment>
+  </data>
+  <data name="Vydej.GenerovatFakturu" xml:space="preserve">
+    <value>Generovat fakturu</value>
+    <comment>Parametr povolí importovaní fakturu do IS POHODA</comment>
+  </data>
+  <data name="Vydej.Expedice_Baleni" xml:space="preserve">
+    <value>Expedice Baleni</value>
+    <comment>Tymto parametrem se povolí naplneni dat z vydeje do Expedice Buffer, kde je možno expedovat...</comment>
+  </data>
+  <data name="Vydej.Pohoda_Objednavka_Prijata_Vyrizeno_Nastavit_Castecne_Plneni" xml:space="preserve">
+    <value>Pohoda Objednavka Prijata Vyrizeno Nastavit Castecne Plneni</value>
+    <comment>Pokuj je parametr povolen a výdejka je pouze častečne vykrita. Tak stejne se označí jak vyřizena.</comment>
+  </data>
+  <data name="Vydej.Pohoda_Objednavka_Prijata_Vyrizeno_Nastavit" xml:space="preserve">
+    <value>Pohoda Objednavka Prijata Vyrizeno Nastavit</value>
+    <comment>Pokud doklad neni jak Trvaly doklad, a je povoleno nastaveni Vyřizeno na výdejce. tak se provede nastaveni přiznaku vyžizeno.</comment>
+  </data>
+  <data name="Vydej.HlavnySkladID" xml:space="preserve">
+    <value>Hlavny Sklad ID</value>
+    <comment>Při exportovani předlohy je ID skladu povinny udaj. Avšak pokud nebude na terminalu vyplnen z nejakeho duvodu, a nebude přenesen na server tak se použe tenhle hlavny sklad. Pokud zakaznik pracuje z vicero skladama, a nema v terminaloch nastavene sklady, tak ma smulu... :D </comment>
+  </data>
+  <data name="Vydej.HesloStornoVydejka" xml:space="preserve">
+    <value>Heslo storno Výdejky</value>
+    <comment>Jedná se o heslo pro možnost stornovat přijemku z terminalu. Neni trimovano, tak pozor na medzery...</comment>
+  </data>
+  <data name="Vydej.StatusObjednavky" xml:space="preserve">
+    <value>Status Objednavky</value>
+    <comment>Jedná se parametr, ktery povoluje kontrolu statusu objednavky. Pri ukladani.</comment>
+  </data>
+  <data name="Vydej.Delivered" xml:space="preserve">
+    <value>Dodano</value>
+    <comment>Kontrola zda objednavka vydana ktera je exportovana byla dodana</comment>
+  </data>
+  <data name="Vydej.Executed" xml:space="preserve">
+    <value>Provedeno</value>
+    <comment>Kontrola zda objednavka vydana ktera je exportovana byla provedena</comment>
+  </data>
+  <data name="Vydej.Zbyva" xml:space="preserve">
+    <value>Zbývá</value>
+    <comment>Parametr ktery povoluje vypočet zbyvajiciho množství ktere se bude ukladat do předlohy.&lt;br&gt; Jedna se o množstvu na předlohe minus dodano.</comment>
+  </data>
+  <data name="Vydej.MerneJednotky_DotahovatDalsiVarianty" xml:space="preserve">
+    <value>MJ Dotahovat Dalši Varianty</value>
+    <comment>Parametr povoli dotahovani další varianty měrnych jednotek (MJ).</comment>
+  </data>
+  <data name="Vydej.VydejkaDetail_CommandType" xml:space="preserve">
+    <value>Detail CommandType</value>
+    <comment>Jedná se o typ provedené akce. Podporovane jsou :&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;StoredProcedure&lt;/li&gt;
+&lt;li&gt;Text&lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Vydej.VydejkaDetailDavka_CommandType" xml:space="preserve">
+    <value>DetailDavky CommadType</value>
+    <comment>Jedná se o typ provedené akce. Podporovane jsou :&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;StoredProcedure&lt;/li&gt;
+&lt;li&gt;Text&lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Vydej.vydejkadetailpolozka_CommandType" xml:space="preserve">
+    <value>Detail polozka Command Type</value>
+    <comment>Jedná se o typ provedené akce. Podporovane jsou :&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;StoredProcedure&lt;/li&gt;
+&lt;li&gt;Text&lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Vydej.vydejkadetailpolozka" xml:space="preserve">
+    <value>detail polozka Proc.</value>
+    <comment>Jedná se o nazev procedury anebo nazev tabulky z ktere se bude dotahovat.</comment>
+  </data>
+  <data name="Vydej.vydejkadetailpolozka_paramname" xml:space="preserve">
+    <value>detail polozka Param jmeno</value>
+    <comment>Jedná se bud o jmeno parametru pro proceduru, anebo o nazev stloupce pro select.</comment>
+  </data>
+  <data name="Vydej.VydejkaDetail" xml:space="preserve">
+    <value>detail Proc.</value>
+    <comment>Jedná se o nazev procedury anebo nazev tabulky z ktere se bude dotahovat.</comment>
+  </data>
+  <data name="Vydej.VydejkaDetail_paramName" xml:space="preserve">
+    <value>detail Param jmeno</value>
+    <comment>Jedná se bud o jmeno parametru pro proceduru, anebo o nazev stloupce pro select.</comment>
+  </data>
+  <data name="Vydej.VydejkaDetailDavka" xml:space="preserve">
+    <value>detail dávka Proc.</value>
+    <comment>Jedná se o nazev procedury anebo nazev tabulky z ktere se bude dotahovat.</comment>
+  </data>
+  <data name="Vydej.VydejkaDetailDavka_paramName" xml:space="preserve">
+    <value>detail dávka Param jmeno</value>
+    <comment>Jedná se bud o jmeno parametru pro proceduru, anebo o nazev stloupce pro select.</comment>
+  </data>
+  <data name="Ukolovani.ServiceMan_Email_From" xml:space="preserve">
+    <value>TODO : doplit</value>
+    <comment>TODO : doplit</comment>
+  </data>
+  <data name="Ukolovani.ServiceMan_Email_Heslo" xml:space="preserve">
+    <value>TODO : doplit</value>
+    <comment>TODO : doplit</comment>
+  </data>
+  <data name="Ukolovani.ServiceMan_Email_IsBodyHtml" xml:space="preserve">
+    <value>TODO : doplit</value>
+    <comment>TODO : doplit</comment>
+  </data>
+  <data name="Ukolovani.ServiceMan_Email_port" xml:space="preserve">
+    <value>TODO : doplit</value>
+    <comment>TODO : doplit</comment>
+  </data>
+  <data name="Ukolovani.ServiceMan_Email_Skip_Certifikaty" xml:space="preserve">
+    <value>TODO : doplit</value>
+    <comment>TODO : doplit</comment>
+  </data>
+  <data name="Ukolovani.ServiceMan_Email_SMTP" xml:space="preserve">
+    <value>TODO : doplit</value>
+    <comment>TODO : doplit</comment>
+  </data>
+  <data name="Ukolovani.ServiceMan_Email_SSL" xml:space="preserve">
+    <value>TODO : doplit</value>
+    <comment>TODO : doplit</comment>
+  </data>
+  <data name="Ukolovani.ServiceMan_Email_Text" xml:space="preserve">
+    <value>TODO : doplit</value>
+    <comment>TODO : doplit</comment>
+  </data>
+  <data name="Ukolovani.ServiceMan_Email_Timeout" xml:space="preserve">
+    <value>TODO : doplit</value>
+    <comment>TODO : doplit</comment>
+  </data>
+  <data name="Ukolovani.ServiceMan_Email_UserName" xml:space="preserve">
+    <value>TODO : doplit</value>
+    <comment>TODO : doplit</comment>
+  </data>
+  <data name="LokMech.Vydej_PovolZapornyStav" xml:space="preserve">
+    <value>Výdej povol záporné množství</value>
+    <comment>Jedná se o parametr, který povoluje vydat zaporné množství z lokace (lokace obsahuje menší množství, než se vydává). &lt;br&gt;
+Využívá se na:
+&lt;ul&gt;
+&lt;li&gt;Výdej s předlohou&lt;/li&gt;
+&lt;li&gt; Volný pohyb &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Vydej.GenerovatPrevodku_TO_Pozadavek" xml:space="preserve">
+    <value>Generovat Prevodku TO Požadavek</value>
+    <comment>Jedná se o parametr který zapne logiku, která vytvoří z Výdeje v Informačním systemi pohoda převodku, a v ramci lokačního mechazmu provede příjem na nadefinovaný sklad</comment>
+  </data>
+  <data name="Vydej.Faktura_Importovat_SluzbyPodPolozky" xml:space="preserve">
+    <value>Faktura Importovat SluzbyPodPolozky</value>
+    <comment>Faktura_Inportovat_SluzbyPodPolozky</comment>
+  </data>
+</root>

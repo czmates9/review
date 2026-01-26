@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+    <!-- ToolBar je vrchní radek který obsahuje text a ikony -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_Login_V2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+        <!-- Tohle je vlastne cele okno -->
+        <android.support.v4.widget.DrawerLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/drawer_layout_Login_V2" >
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+            <TextView
+                android:text="@string/Main_Login_Login"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/txt_Login_ID_V2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#368DEB"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="25sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edittext_Login_ID_V2"
+                android:layout_marginLeft="20.0dp"
+                android:layout_marginRight="20dp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:singleLine="true"
+                android:inputType="number" />
+            <TextView
+                android:text="@string/Main_Login_Password"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/txt_Login_PWD_V2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#368DEB"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="25sp" />
+            <EditText
+                android:id="@+id/edittext_Login_PWD_V2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dp"
+                android:layout_marginRight="20dp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:password="true"
+                android:singleLine="true"
+                android:inputType="numberPassword" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="60"
+                android:background="#c8e7ff"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                >
+                <Button
+                    android:text="@string/Main_Login_Konec"
+                    android:background="@drawable/ButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:id="@+id/btn_Login_Konec_V2"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical" />
+                <Button
+                    android:text= "@string/Main_Login_Uzivatele"
+                    android:background="@drawable/ButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:id="@+id/btn_Login_Logins_V2"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical" />
+                <Button
+                    android:text="@string/Main_Login_OK"
+                    android:background="@drawable/ButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:id="@+id/btn_Login_OK_V2"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+        </LinearLayout>
+            <!-- Levý navigační panel -->
+        <ListView
+            android:id="@+id/left_drawer_Login_V2"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:choiceMode="singleChoice"
+            android:divider="#818181"
+            android:dividerHeight="1dp"
+            android:background="#E3F2FD" />
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

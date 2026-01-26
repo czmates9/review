@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EventsUser" targetNamespace="http://sqlce.fask.cz/EventsUser.xsd" xmlns:mstns="http://sqlce.fask.cz/EventsUser.xsd" xmlns="http://sqlce.fask.cz/EventsUser.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EventsUser" msdata:IsDataSet="true" msdata:Locale="" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="EventsUser" msprop:Generator_UserDSName="EventsUser">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST_EventsUser" msprop:Generator_TableClassName="CZMST_EventsUserDataTable" msprop:Generator_RowEvArgName="CZMST_EventsUserRowChangeEvent" msprop:Generator_TableVarName="tableCZMST_EventsUser" msprop:Generator_TablePropName="CZMST_EventsUser" msprop:Generator_RowDeletingName="CZMST_EventsUserRowDeleting" msprop:Generator_RowChangingName="CZMST_EventsUserRowChanging" msprop:Generator_RowEvHandlerName="CZMST_EventsUserRowChangeEventHandler" msprop:Generator_RowDeletedName="CZMST_EventsUserRowDeleted" msprop:Generator_RowChangedName="CZMST_EventsUserRowChanged" msprop:Generator_UserTableName="CZMST_EventsUser" msprop:Generator_RowClassName="CZMST_EventsUserRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="eguid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columneguid" msprop:Generator_ColumnPropNameInRow="eguid" msprop:Generator_ColumnPropNameInTable="eguidColumn" msprop:Generator_UserColumnName="eguid" type="xs:string" />
+              <xs:element name="eid" msprop:Generator_ColumnVarNameInTable="columneid" msprop:Generator_ColumnPropNameInRow="eid" msprop:Generator_ColumnPropNameInTable="eidColumn" msprop:Generator_UserColumnName="eid">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="etype" msprop:Generator_ColumnVarNameInTable="columnetype" msprop:Generator_ColumnPropNameInRow="etype" msprop:Generator_ColumnPropNameInTable="etypeColumn" msprop:Generator_UserColumnName="etype">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="etime" msprop:Generator_ColumnVarNameInTable="columnetime" msprop:Generator_ColumnPropNameInRow="etime" msprop:Generator_ColumnPropNameInTable="etimeColumn" msprop:Generator_UserColumnName="etime" type="xs:dateTime" />
+              <xs:element name="termid" msprop:Generator_ColumnVarNameInTable="columntermid" msprop:Generator_ColumnPropNameInRow="termid" msprop:Generator_ColumnPropNameInTable="termidColumn" msprop:Generator_UserColumnName="termid" type="xs:int" />
+              <xs:element name="userid" msprop:Generator_ColumnVarNameInTable="columnuserid" msprop:Generator_ColumnPropNameInRow="userid" msprop:Generator_ColumnPropNameInTable="useridColumn" msprop:Generator_UserColumnName="userid" type="xs:int" />
+              <xs:element name="loginid" msprop:Generator_ColumnVarNameInTable="columnloginid" msprop:Generator_ColumnPropNameInRow="loginid" msprop:Generator_ColumnPropNameInTable="loginidColumn" msprop:Generator_UserColumnName="loginid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="machineid" msprop:Generator_ColumnVarNameInTable="columnmachineid" msprop:Generator_ColumnPropNameInRow="machineid" msprop:Generator_ColumnPropNameInTable="machineidColumn" msprop:Generator_UserColumnName="machineid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="modul" msprop:Generator_ColumnVarNameInTable="columnmodul" msprop:Generator_ColumnPropNameInRow="modul" msprop:Generator_ColumnPropNameInTable="modulColumn" msprop:Generator_UserColumnName="modul" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="countentries" msprop:Generator_ColumnVarNameInTable="columncountentries" msprop:Generator_ColumnPropNameInRow="countentries" msprop:Generator_ColumnPropNameInTable="countentriesColumn" msprop:Generator_UserColumnName="countentries" type="xs:int" minOccurs="0" />
+              <xs:element name="docnmbr" msprop:Generator_ColumnVarNameInTable="columndocnmbr" msprop:Generator_ColumnPropNameInRow="docnmbr" msprop:Generator_ColumnPropNameInTable="docnmbrColumn" msprop:Generator_UserColumnName="docnmbr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="itemnmbr" msprop:Generator_ColumnVarNameInTable="columnitemnmbr" msprop:Generator_ColumnPropNameInRow="itemnmbr" msprop:Generator_ColumnPropNameInTable="itemnmbrColumn" msprop:Generator_UserColumnName="itemnmbr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="REZ1" msprop:Generator_ColumnVarNameInTable="columnREZ1" msprop:Generator_ColumnPropNameInRow="REZ1" msprop:Generator_ColumnPropNameInTable="REZ1Column" msprop:Generator_UserColumnName="REZ1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="REZ2" msprop:Generator_ColumnVarNameInTable="columnREZ2" msprop:Generator_ColumnPropNameInRow="REZ2" msprop:Generator_ColumnPropNameInTable="REZ2Column" msprop:Generator_UserColumnName="REZ2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CZMST_EventsUser" />
+      <xs:field xpath="mstns:eguid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

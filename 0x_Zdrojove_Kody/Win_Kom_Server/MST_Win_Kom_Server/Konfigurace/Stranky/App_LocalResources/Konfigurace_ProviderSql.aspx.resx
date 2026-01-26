@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Button_Save.Text" xml:space="preserve">
+    <value>Uložit</value>
+  </data>
+  <data name="ConnectionString.FASKDB" xml:space="preserve">
+    <value>FASK DB</value>
+    <comment>Jedná se o Connection string na FASK Databázi na SQL serveru.</comment>
+  </data>
+  <data name="Inventura2.DavkaTerminalVice" xml:space="preserve">
+    <value>Davka Terminal Vice</value>
+    <comment>Tento parametr slouží pro obmedzení stahovani dávek pouze do jednoho terminalu, anebo do neomedzeneho množstvi terminalu.&lt;br&gt; Zavislot je na ID Terminalu</comment>
+  </data>
+  <data name="Inventura2.PathDataOutputFile" xml:space="preserve">
+    <value>Cesta k Vystupnym souborom</value>
+    <comment>Cesta do ktere se ukladaji vyexportovane soubory a to : &lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;XML&lt;/li&gt;
+&lt;li&gt;HTML&lt;/li&gt;
+&lt;li&gt;CSV&lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Inventura2.PathStateDataFile" xml:space="preserve">
+    <value>Cesta k StateDataFile</value>
+    <comment>Cesta pro ukladani Status objekt souboru</comment>
+  </data>
+  <data name="Inventura2.PathToXSLT" xml:space="preserve">
+    <value>Cesta k XSLT</value>
+    <comment>Cesta v ktere su uložene .xslt transformačne soubory, šablony... jak to nazvat? :D </comment>
+  </data>
+  <data name="Inventura2.AfterDataProcessed_Action_P1" xml:space="preserve">
+    <value>AfterDataProcessed Action P1</value>
+    <comment>Jedná se o nazev prvniho parametru do procedury</comment>
+  </data>
+  <data name="Inventura2.AfterDataProcessed_Action_P2" xml:space="preserve">
+    <value>AfterDataProcessed Action P2</value>
+    <comment>Jedná se o nazev druheho parametru do procedury</comment>
+  </data>
+  <data name="Inventura2.AfterDataProcessed_Action" xml:space="preserve">
+    <value>AfterDataProcessed Action</value>
+    <comment>Jedná se o nazev storeage procedury která se vykoná</comment>
+  </data>
+  <data name="Inventura2.AfterDataProcessed_Action_Asynchronous" xml:space="preserve">
+    <value>AfterDataProcessed Action Asynchronous</value>
+    <comment>Jedná se o parametr který určuje zda se bude AfterProcess data vykonavat asynchronne (ve zvlášt vlákne) anebo synchronne.</comment>
+  </data>
+  <data name="Inventura.AfterDataProcessed_Action_P1" xml:space="preserve">
+    <value>AfterDataProcessed Action P1</value>
+    <comment>Jedná se o nazev prvniho parametru do procedury</comment>
+  </data>
+  <data name="Inventura.AfterDataProcessed_Action_P2" xml:space="preserve">
+    <value>AfterDataProcessed Action P2</value>
+    <comment>Jedná se o nazev druheho parametru do procedury</comment>
+  </data>
+  <data name="Inventura.AfterDataProcessed_Action" xml:space="preserve">
+    <value>AfterDataProcessed Action</value>
+    <comment>Jedná se o nazev storeage procedury která se vykoná</comment>
+  </data>
+  <data name="Inventura.AfterDataProcessed_Action_Asynchronous" xml:space="preserve">
+    <value>AfterDataProcessed Action Asynchronous</value>
+    <comment>Jedná se o parametr který určuje zda se bude AfterProcess data vykonavat asynchronne (ve zvlášt vlákne) anebo synchronne.</comment>
+  </data>
+  <data name="Inventura.PathStateDataFile" xml:space="preserve">
+    <value>Cesta k StateDataFile</value>
+    <comment>Cesta pro ukladani Status objekt souboru</comment>
+  </data>
+  <data name="Inventura.DavkaTerminalVice" xml:space="preserve">
+    <value>Davka Terminal Vice</value>
+    <comment>Tento parametr slouží pro obmedzení stahovani dávek pouze do jednoho terminalu, anebo do neomedzeneho množstvi terminalu.&lt;br&gt; Zavislot je na ID Terminalu</comment>
+  </data>
+  <data name="Vydej.AfterDataProcessed_Action" xml:space="preserve">
+    <value>AfterDataProcessed Action</value>
+    <comment>Jedná se o nazev storeage procedury která se vykoná</comment>
+  </data>
+  <data name="Vydej.AfterDataProcessed_Action_Asynchronous" xml:space="preserve">
+    <value>AfterDataProcessed Action Asynchronous</value>
+    <comment>Jedná se o parametr který určuje zda se bude AfterProcess data vykonavat asynchronne (ve zvlášt vlákne) anebo synchronne.</comment>
+  </data>
+  <data name="Vydej.AfterDataProcessed_Action_P1" xml:space="preserve">
+    <value>AfterDataProcessed Action P1</value>
+    <comment>Jedná se o nazev prvniho parametru do procedury</comment>
+  </data>
+  <data name="Vydej.AfterDataProcessed_Action_P2" xml:space="preserve">
+    <value>AfterDataProcessed Action P2</value>
+    <comment>Jedná se o nazev druheho parametru do procedury</comment>
+  </data>
+  <data name="Vydej.GenerateData_Action" xml:space="preserve">
+    <value>Generate dávka</value>
+    <comment>Volani procedury pro generovani dávky, Jedná se o nazev procedury. &lt;br&gt;
+Procedura na napevno nazvy parametru a to su : 
+&lt;ul&gt;
+&lt;li&gt;@CisExpPrik - jak nvarchar(20)&lt;/li&gt;
+&lt;li&gt;@CounterEntries - int 4 &lt;/li&gt;
+&lt;li&gt;@StatusToReturn - int 4 &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Vydej.Info1Allow" xml:space="preserve">
+    <value>Info 1 Allow</value>
+    <comment>Rozsireni o dotazeni informace do infa z existujiciho pohledu detailu. vic neni mozne</comment>
+  </data>
+  <data name="Vydej.Info1Field" xml:space="preserve">
+    <value>info 1 Field</value>
+    <comment>Nazev stloupce co se dotahuje</comment>
+  </data>
+  <data name="Vydej.VydejkaDetail" xml:space="preserve">
+    <value>detail Proc.</value>
+    <comment>Jedná se o nazev procedury anebo nazev tabulky z ktere se bude dotahovat.</comment>
+  </data>
+  <data name="Vydej.VydejkaDetail_paramName" xml:space="preserve">
+    <value>detail Param jmeno</value>
+    <comment>Jedná se bud o jmeno parametru pro proceduru, anebo o nazev stloupce pro select.</comment>
+  </data>
+  <data name="Vydej.VydejkaDetailDavka" xml:space="preserve">
+    <value>detail dávka Proc.</value>
+    <comment>Jedná se o nazev procedury anebo nazev tabulky z ktere se bude dotahovat.</comment>
+  </data>
+  <data name="Vydej.VydejkaDetailDavka_paramName" xml:space="preserve">
+    <value>detail dávka Param jmeno</value>
+    <comment>Jedná se bud o jmeno parametru pro proceduru, anebo o nazev stloupce pro select.</comment>
+  </data>
+  <data name="Vydej.PokracovatNaJinemTerminalu" xml:space="preserve">
+    <value>Pokracovat Na Jinem Terminalu</value>
+    <comment>Pokud je povolen tak lze pokračovat s vydejkou na jiném terminálu. Zavisle je to na ITEMTYPE.&lt;br&gt;
+PRi ypracovavani odeslanzch dat, se promažou všechny již odeslane data a nahradi se novyma...</comment>
+  </data>
+  <data name="Vydej.SeznamDavekRazeni" xml:space="preserve">
+    <value>Seznam Davek Razeni</value>
+    <comment>Jedna se o Nazev stloupce pomoci ktereho se řadi seznam dotaženych dávek. &lt;br&gt; Order by &lt;br&gt;
+Pokud je vyplneno tak se použije</comment>
+  </data>
+  <data name="Vydej.VydejkaDetail2Hlavicka" xml:space="preserve">
+    <value>Detail 2 Hlavicka</value>
+    <comment>Pokud neni položeno Info 1 Allow, tak se kontroluje tato podminka na dotaženi informaci</comment>
+  </data>
+  <data name="Vydej.VydejkaDetail_CommandType" xml:space="preserve">
+    <value>Vydejka Detail CommandType</value>
+    <comment>Jedná se o typ provedené akce. Podporovane jsou :&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;StoredProcedure&lt;/li&gt;
+&lt;li&gt;Text&lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Vydej.DexRowIdInsert" xml:space="preserve">
+    <value>DexRowID Insert</value>
+    <comment>Povolit insertovani hodnoty DEX ROW ID jak inkrement</comment>
+  </data>
+  <data name="Vydej.StatusObjectsDirectory" xml:space="preserve">
+    <value>Cesta k StatusObjects</value>
+    <comment>Cesta do ktere se ukladji status objekty. </comment>
+  </data>
+  <data name="Vydej.VydejkaDetailDavka_CommandType" xml:space="preserve">
+    <value>Vydejka Detail Davka CommandType</value>
+    <comment>Jedná se o typ provedené akce. Podporovane jsou :&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;StoredProcedure&lt;/li&gt;
+&lt;li&gt;Text&lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Vydej.vydejkadetailpolozka_CommandType" xml:space="preserve">
+    <value>Vydejka detail polozka CommandType</value>
+    <comment>Jedná se o typ provedené akce. Podporovane jsou :&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;StoredProcedure&lt;/li&gt;
+&lt;li&gt;Text&lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Vydej.vydejkadetailpolozka" xml:space="preserve">
+    <value>detail polozka Proc.</value>
+    <comment>Jedná se o nazev procedury anebo nazev tabulky z ktere se bude dotahovat.</comment>
+  </data>
+  <data name="Vydej.vydejkadetailpolozka_paramname" xml:space="preserve">
+    <value>detail polozka Param jmeno</value>
+    <comment>Jedná se bud o jmeno parametru pro proceduru, anebo o nazev stloupce pro select.</comment>
+  </data>
+  <data name="Prijem.AfterDataProcessed_Action" xml:space="preserve">
+    <value>AfterDataProcessed Action</value>
+    <comment>Jedná se o nazev storeage procedury která se vykoná</comment>
+  </data>
+  <data name="Prijem.AfterDataProcessed_Action_Asynchronous" xml:space="preserve">
+    <value>AfterDataProcessed Action Asynchronous</value>
+    <comment>Jedná se o parametr který určuje zda se bude AfterProcess data vykonavat asynchronne (ve zvlášt vlákne) anebo synchronne.</comment>
+  </data>
+  <data name="Prijem.AfterDataProcessed_Action_P1" xml:space="preserve">
+    <value>AfterDataProcessed Action P1</value>
+    <comment>Jedná se o nazev prvniho parametru do procedury</comment>
+  </data>
+  <data name="Prijem.AfterDataProcessed_Action_P2" xml:space="preserve">
+    <value>AfterDataProcessed Action P2</value>
+    <comment>Jedná se o nazev druheho parametru do procedury</comment>
+  </data>
+  <data name="Prijem.PrijemkaDetail" xml:space="preserve">
+    <value>detail Proc.</value>
+    <comment>Jedná se o nazev procedury anebo nazev tabulky z ktere se bude dotahovat.</comment>
+  </data>
+  <data name="Prijem.Detail_paramName" xml:space="preserve">
+    <value>detail Param jmeno</value>
+    <comment>Jedná se bud o jmeno parametru pro proceduru, anebo o nazev stloupce pro select.</comment>
+  </data>
+  <data name="Prijem.PrijemkaDetail2Hlavicka" xml:space="preserve">
+    <value>Detail 2 Hlavicka</value>
+    <comment>Rozsireni o dotazeni informace do infa z existujiciho pohledu detailu. vic neni mozne</comment>
+  </data>
+  <data name="Prijem.CommandType" xml:space="preserve">
+    <value>Detail CommandType</value>
+    <comment>Jedná se o typ provedené akce. Podporovane jsou :&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;StoredProcedure&lt;/li&gt;
+&lt;li&gt;Text&lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Prijem.DexRowIdInsert" xml:space="preserve">
+    <value>DexRowID Insert</value>
+    <comment>Povolit insertovani hodnoty DEX ROW ID jak inkrement</comment>
+  </data>
+  <data name="Prijem.StatusObjectsDirectory" xml:space="preserve">
+    <value>Cesta k StatusObjects</value>
+    <comment>Cesta do ktere se ukladji status objekty. </comment>
+  </data>
+  <data name="Prijem.GenerateSerltnum_Action" xml:space="preserve">
+    <value>Generovani SN</value>
+    <comment>Nazev procedury pro generováni serioveho čisla (SN).</comment>
+  </data>
+  <data name="Prijem.GetDoporuceneLokace_Action" xml:space="preserve">
+    <value>Doporucene Lokace</value>
+    <comment>Nazev procedury pro generováni doporučenych lokaci</comment>
+  </data>
+  <data name="Prijem.GetNezrealizovanePrijemky_Action" xml:space="preserve">
+    <value>Nezrealizované Přijemky</value>
+    <comment>Nazev procedury pro generováni nerealozovanych přijemek</comment>
+  </data>
+  <data name="Servis.AfterDataProcessed_Action" xml:space="preserve">
+    <value>AfterDataProcessed Action</value>
+    <comment>Jedná se o nazev storeage procedury která se vykoná</comment>
+  </data>
+  <data name="Servis.AfterDataProcessed_Action_Asynchronous" xml:space="preserve">
+    <value>AfterDataProcessed Action Asynchronous</value>
+    <comment>Jedná se o parametr který určuje zda se bude AfterProcess data vykonavat asynchronne (ve zvlášt vlákne) anebo synchronne.</comment>
+  </data>
+  <data name="Servis.AfterDataProcessed_Action_P1" xml:space="preserve">
+    <value>AfterDataProcessed Action P1</value>
+    <comment>Jedná se o nazev prvniho parametru do procedury</comment>
+  </data>
+  <data name="Servis.AfterDataProcessed_Action_P2" xml:space="preserve">
+    <value>AfterDataProcessed Action P2</value>
+    <comment>Jedná se o nazev druheho parametru do procedury</comment>
+  </data>
+  <data name="Servis.GenerateServiska_Action" xml:space="preserve">
+    <value>GenerateServiska proc Jmeno</value>
+    <comment>Jedna se o nazev procedury</comment>
+  </data>
+  <data name="Servis.GenerateServiska_Action_P1" xml:space="preserve">
+    <value>GenerateServiska Jmeno parametru 1</value>
+    <comment>Jmeno parametru</comment>
+  </data>
+  <data name="Servis.GenerateServiska_Action_P2" xml:space="preserve">
+    <value>GenerateServiska Jmeno parametru 2</value>
+    <comment>Jmeno parametru</comment>
+  </data>
+  <data name="Servis.GenerateServiska_Action_P3" xml:space="preserve">
+    <value>GenerateServiska Jmeno parametru 3</value>
+    <comment>Jmeno parametru</comment>
+  </data>
+  <data name="Servis.GenerateServiska_Action_P4" xml:space="preserve">
+    <value>GenerateServiska Jmeno parametru 4</value>
+    <comment>Jmeno parametru</comment>
+  </data>
+  <data name="Servis.GenerateServiska_Action_P5" xml:space="preserve">
+    <value>GenerateServiska Jmeno parametru 5</value>
+    <comment>Jmeno parametru</comment>
+  </data>
+  <data name="Servis.GenerateServiska_Action_P6" xml:space="preserve">
+    <value>GenerateServiska Jmeno parametru 6</value>
+    <comment>Jmeno parametru</comment>
+  </data>
+  <data name="Servis.GenerateServiska_Data_Action" xml:space="preserve">
+    <value>GenerateServiska Data Proc jmeno</value>
+    <comment>Nazev procedury</comment>
+  </data>
+  <data name="Servis.GenerateServiska_Data_Action_P1" xml:space="preserve">
+    <value>GenerateServiska Data Param jmeno</value>
+    <comment>Jmeno parametru do procedury</comment>
+  </data>
+  <data name="Servis.HesloStornoServiska" xml:space="preserve">
+    <value>Heslo storno serviska</value>
+    <comment>Jedná se o heslo pro možnost stornovat servisku z terminalu. Neni trimovano, tak pozor na medzery...</comment>
+  </data>
+  <data name="Servis.PathStateDataFile" xml:space="preserve">
+    <value>Cesta k StateDataFile</value>
+    <comment>Cesta pro ukladani Status objekt souboru</comment>
+  </data>
+  <data name="Informations.command1_proc" xml:space="preserve">
+    <value>command1 proc jmeno</value>
+    <comment>Jedná se o nazev procedury anebo nazev tabulky z ktere se bude dotahovat.</comment>
+  </data>
+  <data name="Informations.command1_paramName1" xml:space="preserve">
+    <value>command1 param Jmeno1</value>
+    <comment>Jedná se bud o jmeno parametru pro proceduru, anebo o nazev stloupce pro select.</comment>
+  </data>
+  <data name="Informations.command1_paramName2" xml:space="preserve">
+    <value>command1 param Jmeno2</value>
+    <comment>Jedná se bud o jmeno parametru pro proceduru, anebo o nazev stloupce pro select.</comment>
+  </data>
+  <data name="Informations.MnozstviNaSklade" xml:space="preserve">
+    <value>MnozstviNaSklade Proc jmeno</value>
+    <comment>Jedná se o nazev procedury anebo nazev tabulky z ktere se bude dotahovat.</comment>
+  </data>
+  <data name="Informations.MnozstviNaSklade_paramName" xml:space="preserve">
+    <value>MnozstviNaSklade param Jmeno</value>
+    <comment>Jedná se bud o jmeno parametru pro proceduru, anebo o nazev stloupce pro select.</comment>
+  </data>
+  <data name="Informations.MnozstviNaSklade2" xml:space="preserve">
+    <value>MnozstviNaSklade2 proc jmeno</value>
+    <comment>Jedná se o nazev procedury anebo nazev tabulky z ktere se bude dotahovat.</comment>
+  </data>
+  <data name="Informations.MnozstviNaSklade2_paramName1" xml:space="preserve">
+    <value>MnozstviNaSklade2 param1 Jmeno</value>
+    <comment>Jedná se bud o jmeno parametru pro proceduru, anebo o nazev stloupce pro select.</comment>
+  </data>
+  <data name="Informations.MnozstviNaSklade2_paramName2" xml:space="preserve">
+    <value>MnozstviNaSklade2 param2 Jmeno</value>
+    <comment>Jedná se bud o jmeno parametru pro proceduru, anebo o nazev stloupce pro select.</comment>
+  </data>
+  <data name="Informations.DetailItemnumber" xml:space="preserve">
+    <value>DetailItemnumber proc jmeno</value>
+    <comment>Jedná se o nazev procedury anebo nazev tabulky z ktere se bude dotahovat.</comment>
+  </data>
+  <data name="Informations.DetailItemnumber_paramName1" xml:space="preserve">
+    <value>DetailItemnumber param1 jmeno</value>
+    <comment>Jedná se bud o jmeno parametru pro proceduru, anebo o nazev stloupce pro select.</comment>
+  </data>
+  <data name="Informations.DetailItemnumber_paramName2" xml:space="preserve">
+    <value>DetailItemnumber param2 jmeno</value>
+    <comment>Jedná se bud o jmeno parametru pro proceduru, anebo o nazev stloupce pro select.</comment>
+  </data>
+  <data name="Informations.MnozstviNaSklade_CommandType" xml:space="preserve">
+    <value>MnozstviNaSklade CommandType</value>
+    <comment>Jedná se o typ provedené akce. Podporovane jsou :&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;StoredProcedure&lt;/li&gt;
+&lt;li&gt;Text&lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Informations.MnozstviNaSklade_I_L_CommandType" xml:space="preserve">
+    <value>MnozstviNaSklade I. L. CommandType</value>
+    <comment>Jedná se o typ provedené akce. Podporovane jsou :&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;StoredProcedure&lt;/li&gt;
+&lt;li&gt;Text&lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Informations.DetailItemnumber_CommandType" xml:space="preserve">
+    <value>DetailItemnumber CommandType</value>
+    <comment>Jedná se o typ provedené akce. Podporovane jsou :&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;StoredProcedure&lt;/li&gt;
+&lt;li&gt;Text&lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Informations.command1_DataSetName" xml:space="preserve">
+    <value>command1 DataSetName </value>
+    <comment>Jedna se o parametr DataSetName vlastnost datasetu...</comment>
+  </data>
+  <data name="Prodej.AfterDataProcessed_Action" xml:space="preserve">
+    <value>AfterDataProcessed Action</value>
+    <comment>Jedná se o nazev storeage procedury která se vykoná</comment>
+  </data>
+  <data name="Prodej.AfterDataProcessed_Action_Asynchronous" xml:space="preserve">
+    <value>AfterDataProcessed Action Asynchronous</value>
+    <comment>Jedná se o parametr který určuje zda se bude AfterProcess data vykonavat asynchronne (ve zvlášt vlákne) anebo synchronne.</comment>
+  </data>
+  <data name="Prodej.AfterDataProcessed_Action_P1" xml:space="preserve">
+    <value>AfterDataProcessed Action P1</value>
+    <comment>Jedná se o nazev prvniho parametru do procedury</comment>
+  </data>
+  <data name="Prodej.AfterDataProcessed_Action_P2" xml:space="preserve">
+    <value>AfterDataProcessed Action P2</value>
+    <comment>Jedná se o nazev druheho parametru do procedury</comment>
+  </data>
+  <data name="Prodej.StatusObjectsDirectory" xml:space="preserve">
+    <value>Cesta pro StatusObjects</value>
+    <comment>Zde je uvedena cesta kam se ukladaji status objekty.</comment>
+  </data>
+  <data name="Prodej.GetSklad_procName" xml:space="preserve">
+    <value>Jmeno procedury</value>
+    <comment>Jmeno Procedurt &lt;br&gt; &lt;br&gt;
+Metoda  pro ANC. GetSklad pro navrat skladu, se kterymi se pracuje.Vyuziva se v prodejnim modulu a na prijmu.</comment>
+  </data>
+  <data name="Prodej.GetSklad_paramName1" xml:space="preserve">
+    <value>Jmeno parametru 1</value>
+    <comment>Jmeno parametru&lt;br&gt; &lt;br&gt;
+Metoda  pro ANC. GetSklad pro navrat skladu, se kterymi se pracuje.Vyuziva se v prodejnim modulu a na prijmu.</comment>
+  </data>
+  <data name="Prodej.GetSklad_paramName2" xml:space="preserve">
+    <value>Jmeno parametru 2</value>
+    <comment>Jmeno parametru&lt;br&gt; &lt;br&gt;
+Metoda  pro ANC. GetSklad pro navrat skladu, se kterymi se pracuje.Vyuziva se v prodejnim modulu a na prijmu.</comment>
+  </data>
+  <data name="Prodej.GetSklad_paramName3" xml:space="preserve">
+    <value>Jmeno parametru 3</value>
+    <comment>Jmeno parametru&lt;br&gt; &lt;br&gt;
+Metoda  pro ANC. GetSklad pro navrat skladu, se kterymi se pracuje.Vyuziva se v prodejnim modulu a na prijmu.</comment>
+  </data>
+  <data name="Prodej.GetSklad_paramName4" xml:space="preserve">
+    <value>Jmeno parametru 4</value>
+    <comment>Jmeno parametru&lt;br&gt; &lt;br&gt;
+Metoda  pro ANC. GetSklad pro navrat skladu, se kterymi se pracuje.Vyuziva se v prodejnim modulu a na prijmu.</comment>
+  </data>
+  <data name="Prodej.GetSklad_paramName5" xml:space="preserve">
+    <value>Jmeno parametru 5</value>
+    <comment>Jmeno parametru&lt;br&gt; &lt;br&gt;
+Metoda  pro ANC. GetSklad pro navrat skladu, se kterymi se pracuje.Vyuziva se v prodejnim modulu a na prijmu.</comment>
+  </data>
+  <data name="LokMech.Vydej_PovolZapornyStav" xml:space="preserve">
+    <value>Výdej povol záporné množství</value>
+    <comment>Jedná se o parametr, který povoluje vydat zaporné množství z lokace (lokace obsahuje menší množství, než se vydává). &lt;br&gt;
+Využívá se na:
+&lt;ul&gt;
+&lt;li&gt;Výdej s předlohou&lt;/li&gt;
+&lt;li&gt; Volný pohyb &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+</root>

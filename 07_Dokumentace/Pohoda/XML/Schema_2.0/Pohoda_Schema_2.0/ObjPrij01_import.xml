@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="Windows-1250"?>
+<dat:dataPack id="ob001" ico="12345678" application="StwTest" version = "2.0" note="Import Objednávky"
+    xmlns:dat="http://www.stormware.cz/schema/version_2/data.xsd"        
+	  xmlns:ord="http://www.stormware.cz/schema/version_2/order.xsd"		         
+	  xmlns:typ="http://www.stormware.cz/schema/version_2/type.xsd" 
+>
+
+<dat:dataPackItem id="OBJ001" version="2.0">
+	
+		<ord:order version="2.0">
+			<!--prijata objednavka s polozkama-->
+			<ord:orderHeader>
+				<ord:orderType>receivedOrder</ord:orderType>
+				<ord:numberOrder>20130505A001</ord:numberOrder>
+				<ord:date>2013-10-14</ord:date>
+				<ord:dateFrom>2013-10-14</ord:dateFrom>
+				<ord:dateTo>2013-10-14</ord:dateTo>
+				<ord:text>Objednáváme u Vás zboží dle ústní dohody</ord:text>
+				<ord:partnerIdentity>
+					<typ:address>
+						<typ:company>Otma a.s.</typ:company>
+						<typ:division>Obchodní oddělení</typ:division>
+						<typ:name>Petr Novák</typ:name>
+						<typ:city>Brno</typ:city>
+						<typ:street>Nová 15</typ:street>
+						<typ:zip>61900</typ:zip>
+						<typ:ico>789456</typ:ico>
+						<typ:dic>CZ789456</typ:dic>
+					</typ:address>
+				</ord:partnerIdentity>
+				<ord:paymentType>
+					<typ:ids>hotově</typ:ids>
+				</ord:paymentType>
+				<ord:priceLevel>
+					<typ:ids>Sleva 1</typ:ids>
+				</ord:priceLevel>
+			</ord:orderHeader>
+			
+			<ord:orderDetail>
+				<!--textova polozka-->
+				<ord:orderItem>
+					<ord:text>Sestava PC</ord:text>
+					<ord:quantity>1</ord:quantity>
+					<ord:delivered>0</ord:delivered>
+					<ord:rateVAT>high</ord:rateVAT>
+					<ord:homeCurrency>
+						<typ:unitPrice>200</typ:unitPrice>
+					</ord:homeCurrency>
+				</ord:orderItem>
+				
+				<!--skladova polozka-->
+				<ord:orderItem>
+					<ord:quantity>1</ord:quantity>
+					<ord:delivered>0</ord:delivered>
+					<ord:rateVAT>high</ord:rateVAT>
+					<ord:homeCurrency>
+						<typ:unitPrice>198</typ:unitPrice>
+					</ord:homeCurrency>
+					<ord:stockItem>
+						<typ:stockItem>
+							<typ:ids>STM</typ:ids>
+						</typ:stockItem>
+					</ord:stockItem>
+				</ord:orderItem>
+			</ord:orderDetail>
+			
+			
+			<ord:orderSummary>
+				<ord:roundingDocument>math2one</ord:roundingDocument>
+			</ord:orderSummary>
+			
+		</ord:order>
+		
+	</dat:dataPackItem>
+	
+</dat:dataPack>

@@ -1,0 +1,42 @@
+[12.6.2025] v1.34 MaR
+=================
+- pøi první sdpuštìní hláška - chybí soubor state.prd (asi ze synchronizace), druhé spuštìní jede
+- výchozí nastaevní upravit na: Heslo pro spuštìní - NE, Celá obrazovka - NE (upravit)
+- zmìna konfigurace "Ukonèení aplikace bez hersla" - zabírá konfigurace ze souboru, nejde zmìnit z aplikace
+- upravit funkcionalitu "naèti konfiguraci" - dá na výbìr souboru, výchozí adresáø je ten, kde leží Aktualizace, Z vybranéhop souboru vezme klíèe viz c:\FASK\FASK_POH_7D\Aktualizace_API\SettingsVyrobaP.xml a vloží do okna (bez uložení do souboru settings.xml)
+- zmìnit poøadí butttonù na: stará, záloha, nová
+- zvyseni verze
+
+
+[2.9.2024] v1.33 MaR
+=================
+- aplikace zavirani bez hesla pomoci parametru konfigurace
+- zvyseni verze
+
+
+[26.8.2024] v1.32 MaR
+=================
+- konzola status bar info na pozadi, asyn metody zaloha a aktualizace
+- zvyseni verze
+
+[23.8.2024] v1.31 MaR
+=================
+- konzola designove upravy
+- zvyseni verze
+
+[23.4.2024] v1.3 MaR
+=================
+- obnoveni cesta, tlacitko pro vyber zip souboru, logika obnoveni, 4tlacitka dynamicky velikost
+- zvyseni verze
+
+[15.3.2024] v1.2 MaR
+=================
+- samostatna aplikace Aktualizace_API + mozne orezani celeho projektu
+- vytvoreni zalohy a aktualizace konzoly
+- vypnuti procesu pri zapnute konzoli
+- nacteni cest z nastaveni
+- zvyseni verze
+
+[13.3.2024] v1.0 MaR
+=================
+- kopie projektu vyroba_P

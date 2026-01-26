@@ -1,0 +1,20 @@
+﻿^XA
+^LH0,0
+^CWX,E:ARI000.FNT
+^CFX,24,24
+^CI31
+
+^FO8,24
+^FD$IDS$($ITEMNMBR$)^FS
+
+^FO320,24
+^BEN,80,Y,N
+^FD$VNDITNUM$^FS
+
+^FO8,72
+^TBN,240,120
+^FD$ITEMDESC$^FS
+
+^FX Pocet:$PocetVytisku$ ^FS
+
+^XZ	

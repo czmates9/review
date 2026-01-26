@@ -1,0 +1,1531 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{41BEAAE8-7C93-4E3D-BA2D-FDF95FFBFCF7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>MST_W_Server</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Fask.MST_W_Server</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <Use64BitIISExpress>false</Use64BitIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>1607</NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\..\..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;_BRILUM</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <DebugType>
+    </DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fask.Server.Modules\Fask.Module.Ingress.SAD\Fask.Module.Ingres.SAD.csproj">
+      <Project>{2ceb8fcb-328a-4938-b98a-2ddb42a9a449}</Project>
+      <Name>Fask.Module.Ingres.SAD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MST_Win_Print_Server\Fask.BarCode.ReportFactory\Fask.BarCode.ReportFactory.csproj">
+      <Project>{85e699c4-e421-4f59-a45a-443c03574105}</Project>
+      <Name>Fask.BarCode.ReportFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MST_Win_Print_Server\MST_Print_Server_Classes\MST_Print_Server_Classes.csproj">
+      <Project>{ead9d249-56a9-422b-b50b-3831083a5755}</Project>
+      <Name>MST_Print_Server_Classes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MST_Win_Print_Server\MST_Print_Server_Soupis\MST_Print_Server_Soupis.csproj">
+      <Project>{0bb681b5-8833-42c2-a4fd-46d063859d01}</Project>
+      <Name>MST_Print_Server_Soupis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MST_Win_Print_Server\MST_Print_Server_ZPL_Printing\MST_Print_Server_ZPL_Printing.csproj">
+      <Project>{88781ec6-c097-44a9-9ea7-8b813aee40d5}</Project>
+      <Name>MST_Print_Server_ZPL_Printing</Name>
+    </ProjectReference>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\04_Support\zip-v1.9\Rel\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpZipLib, Version=0.31.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\!!!Support!!!\CompreseSOAP\SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SQLite, Version=1.0.112.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\04_Support\_Support_\SQLite\sqlite-netFx46-binary-Win32-2015-1.0.112.0\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.9\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Cors, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.9\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Http, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.9\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.9\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.9\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mobile">
+      <Name>System.Web.Mobile</Name>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\Fask.BarCodeGraphics\Fask.BarCodeGraphics.ZPL_Zxing\Fask.BarCodeGraphics.ZPL_Zxing.csproj">
+      <Project>{71bf280f-845e-42c6-baef-71fa5843e56c}</Project>
+      <Name>Fask.BarCodeGraphics.ZPL_Zxing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\Fask.BarCodeGraphics\Fask.BarCodeGraphics\Fask.BarCodeGraphics.csproj">
+      <Project>{5d2adc6b-a30d-43ea-bf0d-418c88995295}</Project>
+      <Name>Fask.BarCodeGraphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\Fask.Columns\Fask.Columns.csproj">
+      <Project>{9FE07D18-7A04-4A20-8EE8-929F9BE5DF16}</Project>
+      <Name>Fask.Columns</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\Fask.Logging\Fask.Logging.csproj">
+      <Project>{89E8C070-4694-4F11-AB01-A674BF8B9F80}</Project>
+      <Name>Fask.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\FASK.Logins\FASK.Logins.csproj">
+      <Project>{BC4B8C29-BB68-4E66-9257-356603FCF7D2}</Project>
+      <Name>FASK.Logins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\Fask.POHODA.Disponibility\Fask.POHODA.Disponibility.csproj">
+      <Project>{35a80609-485a-490f-9ca3-b5d302fe5b48}</Project>
+      <Name>Fask.POHODA.Disponibility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\Fask.Rady\Fask.Rady.csproj">
+      <Project>{789768c6-60f7-43a3-b9a9-9a4b169b9514}</Project>
+      <Name>Fask.Rady</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\Fask.RestSharp\Fask.RestSharp.csproj">
+      <Project>{dcd07eda-015d-49cb-a3f0-855bc143440f}</Project>
+      <Name>Fask.RestSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Compressing\Fask.Compressing.csproj">
+      <Project>{D49DB7DE-E8A0-4783-9A10-90F176A52456}</Project>
+      <Name>Fask.Compressing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.MyPath\Fask.MyPath.csproj">
+      <Project>{49386A7A-1C55-4811-9E73-5AB8206B7802}</Project>
+      <Name>Fask.MyPath</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Server.Interfaces\Fask.Server.Interfaces.csproj">
+      <Project>{40594B84-CB0F-4988-B2C0-E2F701E1E062}</Project>
+      <Name>Fask.Server.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Server.Modules\Fask.Module.ABRA.CarpServise\Fask.Module.ABRA.CarpServise.csproj">
+      <Project>{5df25764-eb63-4551-bcdc-66702dad1945}</Project>
+      <Name>Fask.Module.ABRA.CarpServise</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Server.Modules\Fask.Module.ABRA.SAB\Fask.Module.ABRA.SAB.csproj">
+      <Project>{516d19de-351a-4e3a-9adc-5b8a88353693}</Project>
+      <Name>Fask.Module.ABRA.SAB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Server.Modules\Fask.Module.Pohoda.I_Tec\Fask.Module.Pohoda.I_Tec.csproj">
+      <Project>{17ae37dd-b7b9-4a8a-967f-97c5fc6c87b5}</Project>
+      <Name>Fask.Module.Pohoda.I_Tec</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Server.Modules\Fask.Module.Print.GS1\Fask.Module.Print.GS1.csproj">
+      <Project>{bf55b012-e5af-47a3-9991-cd445adfbb3e}</Project>
+      <Name>Fask.Module.Print.GS1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Server.Modules\Fask.Module.Print.Hanibal\Fask.Module.Print.Hanibal.csproj">
+      <Project>{dd08f430-ffdf-4538-96b0-c97b1e4d13cc}</Project>
+      <Name>Fask.Module.Print.Hanibal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Server.Modules\Fask.ModulePohodaXML\Fask.ModulePohodaXML.csproj">
+      <Project>{c3f1ac38-70e2-464f-b639-36a54d5e72c6}</Project>
+      <Name>Fask.ModulePohodaXML</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Server.Modules\Fask.ModuleSql\Fask.ModuleSql.csproj">
+      <Project>{5be629ba-d8b8-40a7-a80c-a995fa829b8e}</Project>
+      <Name>Fask.ModuleSql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Tracing\Fask.Tracing.csproj">
+      <Project>{14569DD3-5250-4CDB-998E-198BFD548113}</Project>
+      <Name>Fask.Tracing</Name>
+    </ProjectReference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\_SdileneTridy_\Konfigurace_Android\Konfigurace.cs">
+      <Link>API_TerminalKonfigurace\Konfigurace.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Konfigurace_Android\KonfiguraceText.cs">
+      <Link>API_TerminalKonfigurace\KonfiguraceText.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Konfigurace_Android\Konfigurace_Prodej.cs">
+      <Link>API_TerminalKonfigurace\Konfigurace_Prodej.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Konfigurace_Android\Konfigurace_Prodej_Price.cs">
+      <Link>API_TerminalKonfigurace\Konfigurace_Prodej_Price.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Konfigurace_Android\Konfigurace_Prodej_REZ.cs">
+      <Link>API_TerminalKonfigurace\Konfigurace_Prodej_REZ.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Konfigurace_Android\Konfigurace_Vyroba.cs">
+      <Link>API_TerminalKonfigurace\Konfigurace_Vyroba.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Konfigurace_Android\SQLite_ProdejScript.cs">
+      <Link>API_BusinessObjects\SQLite_ProdejScript.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_EventsTypes.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_EventsTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_EventsUser.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_EventsUser.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Inventura1.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Inventura1.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Inventura2.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Inventura2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Lokace.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Lokace.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Meny.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Meny.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Odberatele.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Odberatele.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Pracovnici.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Pracovnici.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Prijem.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Prijem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Prodej.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Prodej.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Servis_Ciselniky.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Servis_Ciselniky.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Servis_ZdrojePohyb.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Servis_ZdrojePohyb.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Servis_ZdrojeStav.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Servis_ZdrojeStav.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Sklady.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Sklady.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Strediska.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Strediska.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Tiskarny.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Tiskarny.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_TypDokladu.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_TypDokladu.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Ukoly.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Ukoly.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Users.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Users.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Vydej.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Vydej.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Vyroba.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Vyroba.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Zbozi.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Zbozi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Static.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Static.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\_Routines.cs">
+      <Link>SQLiteDBs\Controllers\_Routines.cs</Link>
+    </Compile>
+    <Compile Include="API_BusinessObjects\JSON_Class.cs" />
+    <Compile Include="API_BusinessObjects\Konfig_Terminal_List.cs" />
+    <Compile Include="API_TerminalKonfigurace\Konfigurace_Expedice.cs" />
+    <Compile Include="API_TerminalKonfigurace\Konfigurace_Inventura.cs" />
+    <Compile Include="API_TerminalKonfigurace\Konfigurace_Ostatni.cs" />
+    <Compile Include="API_TerminalKonfigurace\Konfigurace_Prijem.cs" />
+    <Compile Include="API_TerminalKonfigurace\Konfigurace_Vydej.cs" />
+    <Compile Include="BL\CiselnikyBL.cs" />
+    <Compile Include="BL\ExpediceBL.cs" />
+    <Compile Include="BL\InformationsBL.cs" />
+    <Compile Include="BL\InventuraBL.cs" />
+    <Compile Include="BL\OstatniBL.cs" />
+    <Compile Include="BL\PrijemBL.cs" />
+    <Compile Include="BL\PrintEtiketaBL.cs" />
+    <Compile Include="BL\ProdejBL.cs" />
+    <Compile Include="BL\UzivatelBL.cs" />
+    <Compile Include="BL\VydejBL.cs" />
+    <Compile Include="BL\VyrobaBL.cs" />
+    <Compile Include="Controllers\CiselnikyController.cs" />
+    <Compile Include="Controllers\ExpediceController.cs" />
+    <Compile Include="Controllers\InformationsController.cs" />
+    <Compile Include="Controllers\InventuraController.cs" />
+    <Compile Include="Controllers\OstatniController.cs" />
+    <Compile Include="Controllers\PrijemController.cs" />
+    <Compile Include="Controllers\UzivatelController.cs" />
+    <Compile Include="Controllers\Konzola\IT_castController.cs" />
+    <Compile Include="Controllers\Konzola\SkladyController.cs" />
+    <Compile Include="Controllers\Konzola\TerminalController.cs" />
+    <Compile Include="Controllers\ProdejController.cs" />
+    <Compile Include="Controllers\KonfigTerminalController.cs" />
+    <Compile Include="Controllers\loginController.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Baleni.asmx.cs">
+      <DependentUpon>Baleni.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BasicAuthHttpModule.cs" />
+    <Compile Include="Ciselnik.asmx.cs">
+      <DependentUpon>Ciselnik.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SledovaniVyrobyController.cs" />
+    <Compile Include="Controllers\Tisk_Controller.cs" />
+    <Compile Include="Controllers\UploadController.cs" />
+    <Compile Include="Controllers\Konzola\VyrobaController.cs" />
+    <Compile Include="Controllers\VydejController.cs" />
+    <Compile Include="Controllers\AGRO_Controller.cs" />
+    <Compile Include="Controllers\Vyroba_00_Controller.cs" />
+    <Compile Include="DataSets\Events.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Events.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPages\oops.aspx.cs">
+      <DependentUpon>oops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPages\oops.aspx.designer.cs">
+      <DependentUpon>oops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\DataRowExtension.cs" />
+    <Compile Include="Konfigurace\Classes\Globals_Konfig_Agendy.cs" />
+    <Compile Include="Konfigurace\Classes\Globals_Konfig_WebConfig.cs" />
+    <Compile Include="Konfigurace\Classes\Konfig_Extensions.cs" />
+    <Compile Include="Konfigurace\Classes\Page_Extensions.cs" />
+    <Compile Include="Konfigurace\Classes\SaveTabulky.cs" />
+    <Compile Include="Konfigurace\Classes\Sifrovani.cs" />
+    <Compile Include="Konfigurace\DataSets\Konfig_Agendy.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Konfig_Agendy.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konfigurace\DataSets\Konfig_WebConfig.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Konfig_WebConfig.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konfigurace\Stranky\Konfigurace_Agendy.aspx.cs">
+      <DependentUpon>Konfigurace_Agendy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Konfigurace\Stranky\Konfigurace_Agendy.aspx.designer.cs">
+      <DependentUpon>Konfigurace_Agendy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Konfigurace\Stranky\Konfigurace_ProviderABRA_SAB.aspx.cs">
+      <DependentUpon>Konfigurace_ProviderABRA_SAB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Konfigurace\Stranky\Konfigurace_ProviderABRA_SAB.aspx.designer.cs">
+      <DependentUpon>Konfigurace_ProviderABRA_SAB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Konfigurace\Stranky\Konfigurace_ProviderABRACarpServis.aspx.cs">
+      <DependentUpon>Konfigurace_ProviderABRACarpServis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Konfigurace\Stranky\Konfigurace_ProviderABRACarpServis.aspx.designer.cs">
+      <DependentUpon>Konfigurace_ProviderABRACarpServis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Konfigurace\Stranky\Konfigurace_ProviderPohodaXML.aspx.cs">
+      <DependentUpon>Konfigurace_ProviderPohodaXML.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Konfigurace\Stranky\Konfigurace_ProviderPohodaXML.aspx.designer.cs">
+      <DependentUpon>Konfigurace_ProviderPohodaXML.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Konfigurace\Stranky\Konfigurace_ProviderSql.aspx.cs">
+      <DependentUpon>Konfigurace_ProviderSql.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Konfigurace\Stranky\Konfigurace_ProviderSql.aspx.designer.cs">
+      <DependentUpon>Konfigurace_ProviderSql.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Konfigurace\Stranky\Konfigurace_WebConfig.aspx.cs">
+      <DependentUpon>Konfigurace_WebConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Konfigurace\Stranky\Konfigurace_WebConfig.aspx.designer.cs">
+      <DependentUpon>Konfigurace_WebConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MP_Main.Master.cs">
+      <DependentUpon>MP_Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MP_Main.Master.designer.cs">
+      <DependentUpon>MP_Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MP_Server.Master.cs">
+      <DependentUpon>MP_Server.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MP_Server.Master.designer.cs">
+      <DependentUpon>MP_Server.Master</DependentUpon>
+    </Compile>
+    <Compile Include="RequireHttpsAttribute.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\EventsTypes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EventsTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\EventsUser.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EventsUser.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Inventura1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventura1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Inventura2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventura2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Lokace.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lokace.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Meny.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Meny.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Odberatele.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Pracovnici.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Prijem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Prodej.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Servis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Servis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Sklady.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Strediska.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strediska.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Tiskarny.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tiskarny.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\TypDokladu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TypDokladu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Ukoly.cs">
+      <DependentUpon>Ukoly.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Ukoly.Designer.cs">
+      <DependentUpon>Ukoly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Ukoly1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ukoly.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Uzivatele.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Uzivatele.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Vydej.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Vyroba.cs">
+      <DependentUpon>Vyroba.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Vyroba.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vyroba.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Zbozi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLite_Classes\SQLite_Helper.cs" />
+    <Compile Include="Classes\Stats.cs" />
+    <Compile Include="Configuration.asmx.cs">
+      <DependentUpon>Configuration.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Constants\Common.cs" />
+    <Compile Include="DataSets\dsCZMSTCFG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCZMSTCFG.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Events.cs">
+      <DependentUpon>Events.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Passwd.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Passwd.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Tiskarna.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tiskarna.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\TypyPalet.cs">
+      <DependentUpon>TypyPalet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\TypyPalet.designer.cs">
+      <DependentUpon>TypyPalet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EventsService.asmx.cs">
+      <DependentUpon>EventsService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Expedice.asmx.cs">
+      <DependentUpon>Expedice.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpediceTest.asmx.cs">
+      <DependentUpon>ExpediceTest.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtensionsSpy\SpyExtensionAttribute.cs" />
+    <Compile Include="ExtensionsSpy\SpySoapExtension.cs" />
+    <Compile Include="Extensions\ZipExtension.cs" />
+    <Compile Include="Extensions\ZipExtensionAttribute.cs" />
+    <Compile Include="Extensions\ZipUtilities.cs" />
+    <Compile Include="FileTransfer.asmx.cs">
+      <DependentUpon>FileTransfer.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura2.asmx.cs">
+      <DependentUpon>Inventura2.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Licensing\License.cs" />
+    <Compile Include="Licensing\Licensing.cs" />
+    <Compile Include="Licensing\RijndaelWrapper.cs" />
+    <Compile Include="LoginService.asmx.cs">
+      <DependentUpon>LoginService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lokace.asmx.cs">
+      <DependentUpon>Lokace.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrijemTest.asmx.cs">
+      <DependentUpon>PrijemTest.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProdejPrintPLConfig.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProdejPrintPLConfig.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProdejTest.asmx.cs">
+      <DependentUpon>ProdejTest.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RFID.asmx.cs">
+      <DependentUpon>RFID.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Routines\Exceptions.cs" />
+    <Compile Include="Routines\ManageDataFiles.cs" />
+    <Compile Include="Servis.asmx.cs">
+      <DependentUpon>Servis.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SQLite_Classes\SQLite_Common.cs" />
+    <Compile Include="SystemTime.asmx.cs">
+      <DependentUpon>SystemTime.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Terminal\Terminal_Komnikace.cs" />
+    <Compile Include="Test.asmx.cs">
+      <DependentUpon>Test.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informations.asmx.cs">
+      <DependentUpon>Informations.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventura1.asmx.cs">
+      <DependentUpon>Inventura1.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Prijem.asmx.cs">
+      <DependentUpon>Prijem.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Prodej.asmx.cs">
+      <DependentUpon>Prodej.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SQLInjection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Testy\NetworkDrives.asmx.cs">
+      <DependentUpon>NetworkDrives.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tisk.asmx.cs">
+      <DependentUpon>Tisk.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TiskTest.asmx.cs">
+      <DependentUpon>TiskTest.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ukolovani.asmx.cs">
+      <DependentUpon>Ukolovani.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Upgrade\Update.asmx.cs">
+      <DependentUpon>Update.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Upgrade\Update.aspx.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Upgrade\Update.aspx.designer.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Upload.aspx.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Upload.aspx.designer.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej.asmx.cs">
+      <DependentUpon>Vydej.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VydejTest.asmx.cs">
+      <DependentUpon>VydejTest.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Vyroba.asmx.cs">
+      <DependentUpon>Vyroba.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VyrobaTest.asmx.cs">
+      <DependentUpon>VyrobaTest.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebControls\Inventura1\WebCustomControl1.cs" />
+    <Compile Include="WebControls\Inventura1\WebUserControl1.ascx.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebControls\Inventura1\WebUserControl1.ascx.designer.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebControls\Inventura1\WebUserControl2.ascx.cs">
+      <DependentUpon>WebUserControl2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebControls\Inventura1\WebUserControl2.ascx.designer.cs">
+      <DependentUpon>WebUserControl2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Server.aspx.cs">
+      <DependentUpon>Server.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Server.aspx.designer.cs">
+      <DependentUpon>Server.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agendy\Inventura_Page.aspx.cs">
+      <DependentUpon>Inventura_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agendy\Inventura_Page.aspx.designer.cs">
+      <DependentUpon>Inventura_Page.aspx</DependentUpon>
+    </Compile>
+    <None Include="..\..\..\04_Support\_Support_\SQLite\sqlite-netFx46-binary-Win32-2015-1.0.112.0\SQLite.Interop.dll">
+      <Link>x86\SQLite.Interop.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\..\04_Support\_Support_\SQLite\sqlite-netFx46-binary-x64-2015-1.0.112.0\SQLite.Interop.dll">
+      <Link>x64\SQLite.Interop.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Baleni.asmx" />
+    <Content Include="Ciselnik.asmx" />
+    <Content Include="ConfigPrinter.xml">
+    </Content>
+    <Content Include="Configuration.asmx" />
+    <Content Include="DS_Information.xml" />
+    <Content Include="ErrorPages\css\style.css" />
+    <Content Include="ErrorPages\img\bg.jpg" />
+    <Content Include="ErrorPages\oops.aspx" />
+    <Content Include="Grafika\CSS\Konfigurace_ProviderABRA_SAB.css" />
+    <Content Include="Grafika\CSS\Konfigurace_ProviderABRACarpServis.css" />
+    <Content Include="Grafika\CSS\MP_Server.css" />
+    <Content Include="Grafika\CSS\Inventura_Page.css" />
+    <Content Include="Grafika\CSS\Server.css" />
+    <Content Include="Grafika\Image\favicon-16x16.png" />
+    <Content Include="Grafika\Image\favicon-32x32.png" />
+    <Content Include="Grafika\JS\Inventura_Page.js" />
+    <Content Include="Grafika\JS\Konfigurace_ProviderABRA_SAB.js" />
+    <Content Include="Grafika\JS\Konfigurace_ProviderABRACarpServis.js" />
+    <Content Include="Grafika\JS\MP_Server.js" />
+    <Content Include="Konfigurace\Stranky\Konfigurace_ProviderABRA_SAB.aspx" />
+    <Content Include="Konfigurace\Stranky\Konfigurace_ProviderABRACarpServis.aspx" />
+    <Content Include="Server.aspx" />
+    <Content Include="Agendy\Inventura_Page.aspx" />
+    <Content Include="API_Dokumentace\swagger.json" />
+    <Content Include="API_Dokumentace\swagger.yaml" />
+    <None Include="Documentation.txt" />
+    <Content Include="Expedice.asmx" />
+    <Content Include="ExpediceTest.asmx" />
+    <Content Include="Extensions\readME.txt" />
+    <Content Include="Grafika\CSS\bootstrap.css" />
+    <Content Include="Grafika\CSS\Default.css" />
+    <Content Include="Grafika\CSS\icheck-bootstrap.css" />
+    <Content Include="Grafika\CSS\Konfigurace_Agendy.css" />
+    <Content Include="Grafika\CSS\Konfigurace_ProviderPohodaXML.css" />
+    <Content Include="Grafika\CSS\Konfigurace_ProviderSql.css" />
+    <Content Include="Grafika\CSS\Konfigurace_WebConfig.css" />
+    <Content Include="Grafika\CSS\Login.css" />
+    <Content Include="Grafika\CSS\MP_Main.css" />
+    <Content Include="Grafika\Image\qr-code_Transparent.png" />
+    <Content Include="Grafika\JS\bootstrap.js" />
+    <Content Include="Grafika\JS\jquery.js" />
+    <Content Include="Grafika\JS\Konfigurace_Agendy.js" />
+    <Content Include="Grafika\JS\Konfigurace_ProviderPohodaXML.js" />
+    <Content Include="Grafika\JS\Konfigurace_ProviderSql.js" />
+    <Content Include="Grafika\JS\Konfigurace_WebConfig.js" />
+    <Content Include="Grafika\JS\Login.js" />
+    <Content Include="Grafika\JS\MP_Main.js" />
+    <Content Include="Grafika\JS\Scrollspy.js" />
+    <Content Include="Grafika\CSS\bootstrap.css.map" />
+    <None Include="Introduction.txt" />
+    <None Include="Konfigurace\DataSets\Konfig_Agendy.xsc">
+      <DependentUpon>Konfig_Agendy.xsd</DependentUpon>
+    </None>
+    <None Include="Konfigurace\DataSets\Konfig_Agendy.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Konfig_Agendy.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.MST_W_Server.Konfigurace.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="Konfigurace\DataSets\Konfig_Agendy.xss">
+      <DependentUpon>Konfig_Agendy.xsd</DependentUpon>
+    </None>
+    <None Include="Konfigurace\DataSets\Konfig_WebConfig.xsc">
+      <DependentUpon>Konfig_WebConfig.xsd</DependentUpon>
+    </None>
+    <None Include="Konfigurace\DataSets\Konfig_WebConfig.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Konfig_WebConfig.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.MST_W_Server.Konfigurace.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="Konfigurace\DataSets\Konfig_WebConfig.xss">
+      <DependentUpon>Konfig_WebConfig.xsd</DependentUpon>
+    </None>
+    <Content Include="libman.json" />
+    <None Include="logo_FASK.png" />
+    <Content Include="Konfigurace\Stranky\Konfigurace_Agendy.aspx" />
+    <Content Include="Konfigurace\Stranky\Konfigurace_ProviderPohodaXML.aspx" />
+    <Content Include="Konfigurace\Stranky\Konfigurace_ProviderSql.aspx" />
+    <Content Include="Konfigurace\Stranky\Konfigurace_WebConfig.aspx" />
+    <Content Include="Lokace.asmx" />
+    <Content Include="PrijemTest.asmx" />
+    <Content Include="ProdejTest.asmx" />
+    <Content Include="RFID.asmx" />
+    <Content Include="Servis.asmx" />
+    <None Include="Doxyfile" />
+    <Content Include="MP_Main.Master" />
+    <Content Include="MP_Server.Master" />
+    <None Include="packages.config" />
+    <None Include="ProdejPrintPLConfig.xsc">
+      <DependentUpon>ProdejPrintPLConfig.xsd</DependentUpon>
+    </None>
+    <None Include="ProdejPrintPLConfig.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProdejPrintPLConfig.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProdejPrintPLConfig.xss">
+      <DependentUpon>ProdejPrintPLConfig.xsd</DependentUpon>
+    </None>
+    <Content Include="SQLiteDBs\InternalState.sql" />
+    <Content Include="SQLiteDBs\Production.sql" />
+    <Content Include="SQLiteDBs\Settings.sql" />
+    <Content Include="SQLiteDBs\Vyroba.sql" />
+    <Content Include="styles.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="EventsService.asmx" />
+    <Content Include="FileTransfer.asmx" />
+    <Content Include="Global.asax" />
+    <Content Include="index.asp" />
+    <Content Include="Inventura2.asmx" />
+    <Content Include="LoginService.asmx" />
+    <Content Include="Login.aspx" />
+    <None Include="DataSets\dsCZMSTCFG.xsc">
+      <DependentUpon>dsCZMSTCFG.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsCZMSTCFG.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCZMSTCFG.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\dsCZMSTCFG.xss">
+      <DependentUpon>dsCZMSTCFG.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Events.xsc">
+      <DependentUpon>Events.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Events.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <CustomToolNamespace>Fask.DataSets</CustomToolNamespace>
+      <LastGenOutput>Events.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\Events.xss">
+      <DependentUpon>Events.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Tiskarna.xsc">
+      <DependentUpon>Tiskarna.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Tiskarna.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Tiskarna.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Tiskarna.xss">
+      <DependentUpon>Tiskarna.xsd</DependentUpon>
+    </None>
+    <None Include="project_hierarchy.gv" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Site.Mobile.Master" />
+    <None Include="SQLiteDBs\DataSets\EventsUser.xsc">
+      <DependentUpon>EventsUser.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\EventsUser.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EventsUser.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SQLiteDBs\DataSets\EventsUser.xss">
+      <DependentUpon>EventsUser.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\EventsTypes.xsc">
+      <DependentUpon>EventsTypes.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\EventsTypes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+      <LastGenOutput>EventsTypes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQLiteDBs\DataSets\EventsTypes.xss">
+      <DependentUpon>EventsTypes.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Inventura1.xsc">
+      <DependentUpon>Inventura1.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Inventura1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Inventura1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Inventura1.xss">
+      <DependentUpon>Inventura1.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Inventura2.xsc">
+      <DependentUpon>Inventura2.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Inventura2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Inventura2.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Inventura2.xss">
+      <DependentUpon>Inventura2.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Meny.xsc">
+      <DependentUpon>Meny.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Meny.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Meny.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Meny.xss">
+      <DependentUpon>Meny.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Pracovnici.xsc">
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Pracovnici.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pracovnici.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Pracovnici.xss">
+      <DependentUpon>Pracovnici.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Servis.xsc">
+      <DependentUpon>Servis.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Servis.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+      <LastGenOutput>Servis.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Servis.xss">
+      <DependentUpon>Servis.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Tiskarny.xsc">
+      <DependentUpon>Tiskarny.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Tiskarny.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Tiskarny.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Tiskarny.xss">
+      <DependentUpon>Tiskarny.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Ukoly.xsc">
+      <DependentUpon>Ukoly.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Ukoly.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ukoly1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Ukoly.xss">
+      <DependentUpon>Ukoly.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Uzivatele.xsc">
+      <DependentUpon>Uzivatele.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Uzivatele.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+      <LastGenOutput>Uzivatele.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Uzivatele.xss">
+      <DependentUpon>Uzivatele.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Vyroba.xsc">
+      <DependentUpon>Vyroba.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Vyroba.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Vyroba.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Vyroba.xss">
+      <DependentUpon>Vyroba.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Zbozi.xsc">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Zbozi.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+      <LastGenOutput>Zbozi.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Zbozi.xss">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+    <None Include="ReadMe.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="SystemTime.asmx" />
+    <Content Include="Test.asmx" />
+    <Content Include="Testy\NetworkDrives.asmx" />
+    <Content Include="Testy\runninguser.aspx" />
+    <Content Include="SQLiteDBs\EventsTypes.sql">
+    </Content>
+    <Content Include="SQLiteDBs\EventsUser.sql">
+    </Content>
+    <Content Include="SQLiteDBs\Inventura1.sql">
+    </Content>
+    <Content Include="SQLiteDBs\Inventura2.sql">
+    </Content>
+    <Content Include="SQLiteDBs\Lokace.sql">
+    </Content>
+    <Content Include="SQLiteDBs\Meny.sql">
+    </Content>
+    <Content Include="SQLiteDBs\Odberatele.sql">
+    </Content>
+    <Content Include="SQLiteDBs\Pracovnici.sql">
+    </Content>
+    <Content Include="SQLiteDBs\Prijem.sql">
+    </Content>
+    <Content Include="SQLiteDBs\Prodej.sql">
+    </Content>
+    <Content Include="SQLiteDBs\Servis_Ciselniky.sql">
+    </Content>
+    <Content Include="SQLiteDBs\Servis_ZdrojePohyb.sql">
+    </Content>
+    <Content Include="SQLiteDBs\Servis_ZdrojeStav.sql">
+    </Content>
+    <Content Include="SQLiteDBs\Sklady.sql">
+    </Content>
+    <Content Include="SQLiteDBs\Strediska.sql">
+    </Content>
+    <Content Include="SQLiteDBs\Tiskarny.sql">
+    </Content>
+    <Content Include="SQLiteDBs\TypDokladu.sql">
+    </Content>
+    <Content Include="SQLiteDBs\Ukoly.sql">
+    </Content>
+    <Content Include="SQLiteDBs\Uzivatele.sql">
+    </Content>
+    <Content Include="SQLiteDBs\Vydej.sql">
+    </Content>
+    <Content Include="SQLiteDBs\Zbozi.sql">
+    </Content>
+    <None Include="TODO.txt" />
+    <Content Include="Informations.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Inventura1.asmx" />
+    <Content Include="Prijem.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Prodej.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Tisk.asmx" />
+    <Content Include="TiskTest.asmx" />
+    <Content Include="Ukolovani.asmx" />
+    <Content Include="Upgrade\Update.asmx" />
+    <Content Include="Upgrade\Update.aspx" />
+    <Content Include="Upgrade\update.xml" />
+    <Content Include="Upload.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Vydej.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="VydejTest.asmx" />
+    <Content Include="Vyroba.asmx" />
+    <Content Include="VyrobaTest.asmx" />
+    <Content Include="Web.config" />
+    <Content Include="App_LocalResources\Default.aspx.resx" />
+    <Content Include="App_LocalResources\MP_Main.Master.resx" />
+    <Content Include="App_LocalResources\Login.aspx.resx" />
+    <Content Include="App_LocalResources\MP_Server.Master.resx" />
+    <Content Include="App_LocalResources\Server.aspx.resx" />
+    <Content Include="Agendy\App_LocalResources\Inventura_Page.aspx.resx" />
+    <EmbeddedResource Include="Informations.asmx.resx">
+      <DependentUpon>Informations.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura1.asmx.resx">
+      <DependentUpon>Inventura1.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="Konfigurace\Stranky\App_LocalResources\Konfigurace_Agendy.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Konfigurace\Stranky\App_LocalResources\Konfigurace_ProviderPohodaXML.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Konfigurace\Stranky\App_LocalResources\Konfigurace_ProviderSql.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Konfigurace\Stranky\App_LocalResources\Konfigurace_WebConfig.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Konfigurace\Stranky\App_LocalResources\Konfigurace_ProviderABRACarpServis.aspx.resx" />
+    <Content Include="Konfigurace\Stranky\App_LocalResources\Konfigurace_ProviderABRA_SAB.aspx.resx" />
+    <EmbeddedResource Include="Prijem.asmx.resx">
+      <DependentUpon>Prijem.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prodej.asmx.resx">
+      <DependentUpon>Prodej.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej.asmx.resx">
+      <DependentUpon>Vydej.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="DataSets\Passwd.xsc">
+      <DependentUpon>Passwd.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Passwd.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Passwd.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="DataSets\Passwd.xss">
+      <DependentUpon>Passwd.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\TypyPalet.xsc">
+      <DependentUpon>TypyPalet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\TypyPalet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TypyPalet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\TypyPalet.xss">
+      <DependentUpon>TypyPalet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Lokace.xsc">
+      <DependentUpon>Lokace.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Lokace.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Lokace.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Lokace.xss">
+      <DependentUpon>Lokace.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Odberatele.xsc">
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Odberatele.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+      <LastGenOutput>Odberatele.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Odberatele.xss">
+      <DependentUpon>Odberatele.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Prijem.xsc">
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Prijem.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Prijem.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Prijem.xss">
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Prodej.xsc">
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Prodej.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+      <LastGenOutput>Prodej.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Prodej.xss">
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Sklady.xsc">
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Sklady.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+      <LastGenOutput>Sklady.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Sklady.xss">
+      <DependentUpon>Sklady.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Strediska.xsc">
+      <DependentUpon>Strediska.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Strediska.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+      <LastGenOutput>Strediska.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Strediska.xss">
+      <DependentUpon>Strediska.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\TypDokladu.xsc">
+      <DependentUpon>TypDokladu.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\TypDokladu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TypDokladu.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\TypDokladu.xss">
+      <DependentUpon>TypDokladu.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Vydej.xsc">
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Vydej.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Vydej.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Vydej.xss">
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </None>
+    <Content Include="WebControls\Inventura1\WebUserControl1.ascx" />
+    <Content Include="WebControls\Inventura1\WebUserControl2.ascx" />
+    <Content Include="Web – debug.config" />
+    <Content Include="Web – release.config" />
+    <None Include="XML\passwd.xsd">
+      <SubType>
+      </SubType>
+    </None>
+    <None Include="XML\passwd.xsx">
+      <DependentUpon>passwd.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Konfigurace\Konfigurace_Soubory\" />
+    <Folder Include="PrintTemplates\A4\" />
+    <Folder Include="PrintTemplates\A5\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <NoWarn>1607</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53996</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/MST_Win_Kom_Server_7_Dasenka</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+  </Target>
+</Project>

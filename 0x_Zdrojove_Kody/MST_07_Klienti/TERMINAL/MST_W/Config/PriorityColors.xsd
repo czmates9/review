@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PriorityColors" targetNamespace="http://tempuri.org/PriorityColors.xsd" xmlns:mstns="http://tempuri.org/PriorityColors.xsd" xmlns="http://tempuri.org/PriorityColors.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PriorityColors" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="PriorityColors" msprop:Generator_UserDSName="PriorityColors" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PriorityColor" msprop:Generator_UserTableName="PriorityColor" msprop:Generator_RowDeletedName="PriorityColorRowDeleted" msprop:Generator_TableClassName="PriorityColorDataTable" msprop:Generator_RowChangedName="PriorityColorRowChanged" msprop:Generator_RowClassName="PriorityColorRow" msprop:Generator_RowChangingName="PriorityColorRowChanging" msprop:Generator_RowEvArgName="PriorityColorRowChangeEvent" msprop:Generator_RowEvHandlerName="PriorityColorRowChangeEventHandler" msprop:Generator_TablePropName="PriorityColor" msprop:Generator_TableVarName="tablePriorityColor" msprop:Generator_RowDeletingName="PriorityColorRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Priority" msprop:Generator_UserColumnName="Priority" msprop:Generator_ColumnPropNameInRow="Priority" msprop:Generator_ColumnVarNameInTable="columnPriority" msprop:Generator_ColumnPropNameInTable="PriorityColumn" type="xs:int" />
+              <xs:element name="Color" msprop:Generator_UserColumnName="Color" msprop:Generator_ColumnPropNameInRow="Color" msprop:Generator_ColumnVarNameInTable="columnColor" msprop:Generator_ColumnPropNameInTable="ColorColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PriorityColor" />
+      <xs:field xpath="mstns:Priority" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

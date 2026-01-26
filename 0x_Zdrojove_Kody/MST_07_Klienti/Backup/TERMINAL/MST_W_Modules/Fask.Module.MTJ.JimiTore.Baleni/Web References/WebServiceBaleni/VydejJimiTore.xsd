@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/VydejJimiTore.xsd" xmlns="http://tempuri.org/VydejJimiTore.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/VydejJimiTore.xsd" id="VydejJimiTore" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="VydejJimiTore">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Zbozi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="matid" type="xs:string" />
+              <xs:element minOccurs="0" name="mnozstvi" type="xs:double" />
+              <xs:element minOccurs="0" name="nazev" type="xs:string" />
+              <xs:element minOccurs="0" name="CZ_CarKod" type="xs:string" />
+              <xs:element minOccurs="0" name="mj" type="xs:string" />
+              <xs:element minOccurs="0" name="delka" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="X425_VYDEJ">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ORDR_x0020_ID" type="xs:string" />
+              <xs:element name="MAT_x0020_ID" type="xs:string" />
+              <xs:element name="MNOZSTVI" type="xs:double" />
+              <xs:element name="DELKA" type="xs:int" />
+              <xs:element name="DAT_x0020_ZMENA" type="xs:dateTime" />
+              <xs:element name="FLAG_x0020_ZPRAC" type="xs:int" />
+              <xs:element minOccurs="0" name="TT_x0020_NAME" type="xs:string" />
+              <xs:element minOccurs="0" name="USER_x0020_NAME" type="xs:string" />
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="ID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="X425_PRIJEM">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PRIJEM_x0020_ID" type="xs:string" />
+              <xs:element name="BARCODE_x0020_ID" type="xs:string" />
+              <xs:element name="MAT_x0020_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="NAZEV_x0020_MAT" type="xs:string" />
+              <xs:element name="MNOZSTVI" type="xs:double" />
+              <xs:element minOccurs="0" name="DELKA" type="xs:int" />
+              <xs:element name="DAT_x0020_ZMENA" type="xs:dateTime" />
+              <xs:element name="FLAG_x0020_ZPRAC" type="xs:int" />
+              <xs:element minOccurs="0" name="TT_x0020_NAME" type="xs:string" />
+              <xs:element minOccurs="0" name="USER_x0020_NAME" type="xs:string" />
+              <xs:element minOccurs="0" name="MSG1" type="xs:string" />
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="ID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="X425_CTRL">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CTRL_x0020_ID" type="xs:string" />
+              <xs:element name="POZ" type="xs:int" />
+              <xs:element name="MAT_x0020_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="NAZEV_x0020_MAT" type="xs:string" />
+              <xs:element name="MN_x0020_PLAN" type="xs:double" />
+              <xs:element name="MN_x0020_VYDEJ" type="xs:double" />
+              <xs:element minOccurs="0" name="TT_x0020_ID" type="xs:string" />
+              <xs:element name="DAT_x0020_CTRL" type="xs:dateTime" />
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="ID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:X425_VYDEJ" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="X425_PRIJEM_Constraint1">
+      <xs:selector xpath=".//mstns:X425_PRIJEM" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" name="X425_CTRL_Constraint1">
+      <xs:selector xpath=".//mstns:X425_CTRL" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

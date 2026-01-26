@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="ProdejMeny_ID">ID: {0}</string>
+  <string name="ProdejMeny_Vychozi">Výchozí: {0}</string>
+  <string name="ProdejMeny_Kurz">Kurz: {0}</string>
+  <string name="ProdejMeny_DatumKurzu">Datum: {0}</string>
+  <string name="Prodej_Meny_Label">Měny</string>
+</resources>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Inventury2" targetNamespace="http://fask.cz/Inventury2.xsd" xmlns:mstns="http://fask.cz/Inventury2.xsd" xmlns="http://fask.cz/Inventury2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Inventury2" msdata:IsDataSet="true" msdata:Locale="" msprop:Generator_UserDSName="Inventury2" msprop:Generator_DataSetName="Inventury2" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Hlavicky" msprop:Generator_UserTableName="Hlavicky" msprop:Generator_RowDeletedName="HlavickyRowDeleted" msprop:Generator_RowChangedName="HlavickyRowChanged" msprop:Generator_RowClassName="HlavickyRow" msprop:Generator_RowChangingName="HlavickyRowChanging" msprop:Generator_RowEvArgName="HlavickyRowChangeEvent" msprop:Generator_RowEvHandlerName="HlavickyRowChangeEventHandler" msprop:Generator_TableClassName="HlavickyDataTable" msprop:Generator_TableVarName="tableHlavicky" msprop:Generator_RowDeletingName="HlavickyRowDeleting" msprop:Generator_TablePropName="Hlavicky">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_INV" msprop:Generator_UserColumnName="ID_INV" msprop:Generator_ColumnPropNameInRow="ID_INV" msprop:Generator_ColumnVarNameInTable="columnID_INV" msprop:Generator_ColumnPropNameInTable="ID_INVColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

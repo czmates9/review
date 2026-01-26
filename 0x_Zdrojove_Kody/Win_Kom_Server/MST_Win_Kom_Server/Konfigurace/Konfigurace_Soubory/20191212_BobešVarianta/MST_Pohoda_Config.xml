@@ -1,0 +1,90 @@
+<?xml version="1.0" standalone="yes"?>
+<POHODA_V1 xmlns="http://tempuri.org/POHODA_V1.xsd">
+  <ComunicatorDriveMapping>
+    <Letter />
+    <Domain />
+    <Password />
+    <UNCPath />
+    <User />
+  </ComunicatorDriveMapping>
+  <ConnectionStrings>
+    <PohodaDB>Provider=SQLNCLI10;Data Source=192.168.1.121\SQLEXPRESS;Initial Catalog=StwPh_04535666_2019;User ID=sa;Password=sasa</PohodaDB>
+    <FASKDB>Data Source=192.168.1.121\SQLEXPRESS;Initial Catalog=FASKPOH_BOBES_TEST;User ID=sa;Password=sasa</FASKDB>
+  </ConnectionStrings>
+  <PohodaInfo>
+    <Login_pohoda>AdminAA</Login_pohoda>
+    <Login_IDS_pohoda>@</Login_IDS_pohoda>
+    <Password_pohoda>admin</Password_pohoda>
+    <ICO>04535666</ICO>
+    <DB_Name_pohoda>StwPh_04535666</DB_Name_pohoda>
+    <PathToPOHODAexe>\\192.168.1.121\pohoda_e1\Pohoda.exe</PathToPOHODAexe>
+    <POHODA_E1>true</POHODA_E1>
+    <PathToInputDirectory>D:\Pohoda\export\</PathToInputDirectory>
+    <Process_UseShellExecute>false</Process_UseShellExecute>
+    <PathToINIFile>D:\Pohoda\</PathToINIFile>
+  </PohodaInfo>
+  <Vydej>
+    <PokracovatNaJinemTerminalu>false</PokracovatNaJinemTerminalu>
+    <GrupujDataVydejka>true</GrupujDataVydejka>
+    <Validace_Mnozstvi_import>true</Validace_Mnozstvi_import>
+    <GenerovatVydejku>true</GenerovatVydejku>
+    <GenerovatPrenesenePolozky>false</GenerovatPrenesenePolozky>
+    <GenerovatFakturu>false</GenerovatFakturu>
+    <Expedice_Baleni>true</Expedice_Baleni>
+    <Pohoda_Objednavka_Prijata_Vyrizeno_Nastavit_Castecne_Plneni>false</Pohoda_Objednavka_Prijata_Vyrizeno_Nastavit_Castecne_Plneni>
+    <Pohoda_Objednavka_Prijata_Vyrizeno_Nastavit>true</Pohoda_Objednavka_Prijata_Vyrizeno_Nastavit>
+    <HlavnySkladID>1</HlavnySkladID>
+    <HesloStornoVydejka>1234</HesloStornoVydejka>
+    <StatusObjednavky>false</StatusObjednavky>
+    <Delivered>false</Delivered>
+    <Executed>false</Executed>
+    <Zbyva>true</Zbyva>
+    <MerneJednotky_DotahovatDalsiVarianty>true</MerneJednotky_DotahovatDalsiVarianty>
+  </Vydej>
+  <Prijem>
+    <GrupujDataPrijemka>true</GrupujDataPrijemka>
+    <Pohoda_Objednavka_Vydana_Vyrizeno_Nastavit>true</Pohoda_Objednavka_Vydana_Vyrizeno_Nastavit>
+    <Pohoda_Objednavka_Vydana_Vyrizeno_Nastavit_Castecne_Plneni>false</Pohoda_Objednavka_Vydana_Vyrizeno_Nastavit_Castecne_Plneni>
+    <HlavnySkladID>1</HlavnySkladID>
+    <ObjednavkaDetail>SELECT o.Cislo 'ocislo'  , isnull(z.Cislo, '') 'zcislo'  , z.SText 'zstext'  , c.ID 'cid'  , isnull(c.IDS, '') 'cids'  , c.SText 'cstext'  from OBJ o  left join sZAK z on z.Cislo = o.CisloZAK  left join sCIN c on c.ID = o.RefCin  where o.Cislo =? </ObjednavkaDetail>
+    <ObjednavkaDetailPolozka> SELECT  o.Cislo 'ocislo'  , isnull(z.Cislo, '') 'zcislo'  , z.SText 'zstext'  , c.ID 'cid'  , isnull(c.IDS, '') 'cids'  , c.SText 'cstext'  , isnull(op.Pozn, '') 'oppozn'  from OBJ o  left join sZAK z on z.Cislo = o.CisloZAK  left join sCIN c on c.ID = o.RefCin  join OBJPol op on op.RefAg = o.ID  where o.Cislo =? and op.refskz =? and op.ID =? </ObjednavkaDetailPolozka>
+    <HesloStornoPrijemka>4321</HesloStornoPrijemka>
+    <StatusObjednavky>false</StatusObjednavky>
+    <Delivered>false</Delivered>
+    <Executed>false</Executed>
+    <Zbyva>true</Zbyva>
+    <MerneJednotky_DotahovatDalsiVarianty>true</MerneJednotky_DotahovatDalsiVarianty>
+  </Prijem>
+  <Prodej>
+    <GrupujDataImport>true</GrupujDataImport>
+    <ImportDokladPohoda>true</ImportDokladPohoda>
+    <AfterDataProcessed_Action_Asynchronous>false</AfterDataProcessed_Action_Asynchronous>
+    <AfterDataProcessed_Action_P1 />
+    <AfterDataProcessed_Action_P2 />
+    <AfterDataProcessed_Action />
+    <KodFormaUhrady>příkazem</KodFormaUhrady>
+    <RadaCiziMenaText>cizí měna</RadaCiziMenaText>
+    <KodCiziMena>EUR</KodCiziMena>
+  </Prodej>
+  <Inventura1>
+    <DavkaTerminalVice>true</DavkaTerminalVice>
+    <PrepisovatZkontrolovanePolozky>false</PrepisovatZkontrolovanePolozky>
+    <PathStateDataFile>..\Data</PathStateDataFile>
+    <PathDataOutputFile>D:\Pohoda\export\</PathDataOutputFile>
+    <PathToXSLT>D:\Pohoda\export\</PathToXSLT>
+    <DotahovatInformaceDodavatele>false</DotahovatInformaceDodavatele>
+    <I_DotahovatAlternativniDodavatele>false</I_DotahovatAlternativniDodavatele>
+  </Inventura1>
+  <Sdilene>
+    <StatusObjectsDirectory>Logs\SoDir\</StatusObjectsDirectory>
+    <LokaceVychoziParametrNazevPohoda>fask_vychozi_lokace</LokaceVychoziParametrNazevPohoda>
+    <EvidenceVyrobnichCisel>false</EvidenceVyrobnichCisel>
+    <EvidenceSarzi>true</EvidenceSarzi>
+  </Sdilene>
+  <ExportZasoby>
+    <ExportSkladFilter>01</ExportSkladFilter>
+    <ExportTypFilter>1,5</ExportTypFilter>
+    <ExportovatPouzeAktivniPolozky>true</ExportovatPouzeAktivniPolozky>
+    <EXZas_DotahovatAlternativniDodavatele>false</EXZas_DotahovatAlternativniDodavatele>
+  </ExportZasoby>
+</POHODA_V1>

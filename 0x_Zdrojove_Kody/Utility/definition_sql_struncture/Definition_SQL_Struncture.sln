@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Definition_SQL_Struncture", "Definition_SQL_Struncture\Definition_SQL_Struncture.csproj", "{47A881E6-17A6-4C17-B5FE-627B406D9301}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp_DGView_Color", "WinFormsApp_DGView_Color\WinFormsApp_DGView_Color.csproj", "{12954EBD-CDE1-4B7E-92F0-B806FEE47637}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47A881E6-17A6-4C17-B5FE-627B406D9301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47A881E6-17A6-4C17-B5FE-627B406D9301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47A881E6-17A6-4C17-B5FE-627B406D9301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47A881E6-17A6-4C17-B5FE-627B406D9301}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12954EBD-CDE1-4B7E-92F0-B806FEE47637}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12954EBD-CDE1-4B7E-92F0-B806FEE47637}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12954EBD-CDE1-4B7E-92F0-B806FEE47637}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12954EBD-CDE1-4B7E-92F0-B806FEE47637}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EEC98184-7562-4921-B921-D4BCC741C3EF}
+	EndGlobalSection
+EndGlobal

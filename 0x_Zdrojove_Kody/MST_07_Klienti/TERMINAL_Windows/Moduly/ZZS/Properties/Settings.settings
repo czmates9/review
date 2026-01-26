@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FASK.MST_WINDOWS.Module.ZZS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TimeOut_DataProcess" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5000</Value>
+    </Setting>
+    <Setting Name="Predani_dodavateli_sluzeb_prani" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">S01toS02</Value>
+    </Setting>
+    <Setting Name="Prevzeti_od_dodavatele" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">S02toS01</Value>
+    </Setting>
+    <Setting Name="PrinterName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">HP LaserJet Pro M12w</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

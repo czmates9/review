@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+  <string name="ProdejVyberMaterial_Lokace">Lokace: {0}</string>
+  <string name="ProdejVyberMaterial_QTY">Množství: {0}</string>
+  <string name="ProdejVyberMaterial_PolozkaC">Položka č.: {0}</string>
+  <string name="ProdejVyberMaterial_SN">Šarže/SN: {0}</string>
+  <string name="Prodej_VyberMaterial">Výběr Mat.</string>
+
+</resources>

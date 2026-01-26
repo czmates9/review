@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Prijem" targetNamespace="http://fask.cz/Prijem.xsd" xmlns:mstns="http://fask.cz/Prijem.xsd" xmlns="http://fask.cz/Prijem.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="PrijemConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="PrijemConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.PrijemConnectionString.ConnectionString" Provider="Microsoft.SqlServerCe.Client.3.5" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Prijem" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_UserDSName="Prijem" msprop:Generator_DataSetName="Prijem">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST_PE" msprop:Generator_UserTableName="CZMST_PE" msprop:Generator_RowDeletedName="CZMST_PERowDeleted" msprop:Generator_RowChangedName="CZMST_PERowChanged" msprop:Generator_RowClassName="CZMST_PERow" msprop:Generator_RowChangingName="CZMST_PERowChanging" msprop:Generator_RowEvArgName="CZMST_PERowChangeEvent" msprop:Generator_RowEvHandlerName="CZMST_PERowChangeEventHandler" msprop:Generator_TableClassName="CZMST_PEDataTable" msprop:Generator_TableVarName="tableCZMST_PE" msprop:Generator_RowDeletingName="CZMST_PERowDeleting" msprop:Generator_TablePropName="CZMST_PE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CountEntries" msprop:Generator_UserColumnName="CountEntries" msprop:Generator_ColumnVarNameInTable="columnCountEntries" msprop:Generator_ColumnPropNameInRow="CountEntries" msprop:Generator_ColumnPropNameInTable="CountEntriesColumn" type="xs:int" />
+              <xs:element name="PONUMBER" msprop:Generator_UserColumnName="PONUMBER" msprop:Generator_ColumnVarNameInTable="columnPONUMBER" msprop:Generator_ColumnPropNameInRow="PONUMBER" msprop:Generator_ColumnPropNameInTable="PONUMBERColumn" type="xs:string" />
+              <xs:element name="ITEMNMBR" msprop:Generator_UserColumnName="ITEMNMBR" msprop:Generator_ColumnVarNameInTable="columnITEMNMBR" msprop:Generator_ColumnPropNameInRow="ITEMNMBR" msprop:Generator_ColumnPropNameInTable="ITEMNMBRColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ITEMDESC" msprop:Generator_UserColumnName="ITEMDESC" msprop:Generator_ColumnVarNameInTable="columnITEMDESC" msprop:Generator_ColumnPropNameInRow="ITEMDESC" msprop:Generator_ColumnPropNameInTable="ITEMDESCColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ORD" msprop:Generator_UserColumnName="ORD" msprop:Generator_ColumnVarNameInTable="columnORD" msprop:Generator_ColumnPropNameInRow="ORD" msprop:Generator_ColumnPropNameInTable="ORDColumn" type="xs:int" />
+              <xs:element name="VNDDOCNM" msprop:Generator_UserColumnName="VNDDOCNM" msprop:Generator_ColumnVarNameInTable="columnVNDDOCNM" msprop:Generator_ColumnPropNameInRow="VNDDOCNM" msprop:Generator_ColumnPropNameInTable="VNDDOCNMColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VNDITNUM" msprop:Generator_UserColumnName="VNDITNUM" msprop:Generator_ColumnVarNameInTable="columnVNDITNUM" msprop:Generator_ColumnPropNameInRow="VNDITNUM" msprop:Generator_ColumnPropNameInTable="VNDITNUMColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CZ_CarKod" msprop:Generator_UserColumnName="CZ_CarKod" msprop:Generator_ColumnVarNameInTable="columnCZ_CarKod" msprop:Generator_ColumnPropNameInRow="CZ_CarKod" msprop:Generator_ColumnPropNameInTable="CZ_CarKodColumn" type="xs:string" />
+              <xs:element name="SKL_ID" msprop:Generator_UserColumnName="SKL_ID" msprop:Generator_ColumnVarNameInTable="columnSKL_ID" msprop:Generator_ColumnPropNameInRow="SKL_ID" msprop:Generator_ColumnPropNameInTable="SKL_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LOCNCODE" msprop:Generator_UserColumnName="LOCNCODE" msprop:Generator_ColumnVarNameInTable="columnLOCNCODE" msprop:Generator_ColumnPropNameInRow="LOCNCODE" msprop:Generator_ColumnPropNameInTable="LOCNCODEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MJ" msprop:Generator_UserColumnName="MJ" msprop:Generator_ColumnVarNameInTable="columnMJ" msprop:Generator_ColumnPropNameInRow="MJ" msprop:Generator_ColumnPropNameInTable="MJColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="QTYSHPPD" msprop:Generator_UserColumnName="QTYSHPPD" msprop:Generator_ColumnVarNameInTable="columnQTYSHPPD" msprop:Generator_ColumnPropNameInRow="QTYSHPPD" msprop:Generator_ColumnPropNameInTable="QTYSHPPDColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="QTYPACK" msprop:Generator_UserColumnName="QTYPACK" msprop:Generator_ColumnVarNameInTable="columnQTYPACK" msprop:Generator_ColumnPropNameInRow="QTYPACK" msprop:Generator_ColumnPropNameInTable="QTYPACKColumn" type="xs:decimal" />
+              <xs:element name="CZ_DatVyr_Track" msprop:Generator_UserColumnName="CZ_DatVyr_Track" msprop:Generator_ColumnVarNameInTable="columnCZ_DatVyr_Track" msprop:Generator_ColumnPropNameInRow="CZ_DatVyr_Track" msprop:Generator_ColumnPropNameInTable="CZ_DatVyr_TrackColumn" type="xs:unsignedByte" />
+              <xs:element name="CZ_DatVyr_Delka" msprop:Generator_UserColumnName="CZ_DatVyr_Delka" msprop:Generator_ColumnVarNameInTable="columnCZ_DatVyr_Delka" msprop:Generator_ColumnPropNameInRow="CZ_DatVyr_Delka" msprop:Generator_ColumnPropNameInTable="CZ_DatVyr_DelkaColumn" type="xs:short" />
+              <xs:element name="CZ_SerNum_Track" msprop:Generator_UserColumnName="CZ_SerNum_Track" msprop:Generator_ColumnVarNameInTable="columnCZ_SerNum_Track" msprop:Generator_ColumnPropNameInRow="CZ_SerNum_Track" msprop:Generator_ColumnPropNameInTable="CZ_SerNum_TrackColumn" type="xs:unsignedByte" />
+              <xs:element name="CZ_SerNum_Delka" msprop:Generator_UserColumnName="CZ_SerNum_Delka" msprop:Generator_ColumnVarNameInTable="columnCZ_SerNum_Delka" msprop:Generator_ColumnPropNameInRow="CZ_SerNum_Delka" msprop:Generator_ColumnPropNameInTable="CZ_SerNum_DelkaColumn" type="xs:short" />
+              <xs:element name="CZ_SW_Track" msprop:Generator_UserColumnName="CZ_SW_Track" msprop:Generator_ColumnVarNameInTable="columnCZ_SW_Track" msprop:Generator_ColumnPropNameInRow="CZ_SW_Track" msprop:Generator_ColumnPropNameInTable="CZ_SW_TrackColumn" type="xs:unsignedByte" />
+              <xs:element name="CZ_SW_Delka" msprop:Generator_UserColumnName="CZ_SW_Delka" msprop:Generator_ColumnVarNameInTable="columnCZ_SW_Delka" msprop:Generator_ColumnPropNameInRow="CZ_SW_Delka" msprop:Generator_ColumnPropNameInTable="CZ_SW_DelkaColumn" type="xs:short" />
+              <xs:element name="CZ_Doslo" msprop:Generator_UserColumnName="CZ_Doslo" msprop:Generator_ColumnVarNameInTable="columnCZ_Doslo" msprop:Generator_ColumnPropNameInRow="CZ_Doslo" msprop:Generator_ColumnPropNameInTable="CZ_DosloColumn" type="xs:unsignedByte" />
+              <xs:element name="DEX_ROW_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="DEX_ROW_ID" msprop:Generator_ColumnVarNameInTable="columnDEX_ROW_ID" msprop:Generator_ColumnPropNameInRow="DEX_ROW_ID" msprop:Generator_ColumnPropNameInTable="DEX_ROW_IDColumn" type="xs:int" />
+              <xs:element name="WEIGHT" msprop:Generator_UserColumnName="WEIGHT" msprop:Generator_ColumnVarNameInTable="columnWEIGHT" msprop:Generator_ColumnPropNameInRow="WEIGHT" msprop:Generator_ColumnPropNameInTable="WEIGHTColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NMBRPAL" msprop:Generator_UserColumnName="NMBRPAL" msprop:Generator_ColumnVarNameInTable="columnNMBRPAL" msprop:Generator_ColumnPropNameInRow="NMBRPAL" msprop:Generator_ColumnPropNameInTable="NMBRPALColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TYPEPAL" msprop:Generator_UserColumnName="TYPEPAL" msprop:Generator_ColumnVarNameInTable="columnTYPEPAL" msprop:Generator_ColumnPropNameInRow="TYPEPAL" msprop:Generator_ColumnPropNameInTable="TYPEPALColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ITEMCODE" msprop:Generator_UserColumnName="ITEMCODE" msprop:Generator_ColumnPropNameInRow="ITEMCODE" msprop:Generator_ColumnVarNameInTable="columnITEMCODE" msprop:Generator_ColumnPropNameInTable="ITEMCODEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SERLTNUM" msprop:Generator_UserColumnName="SERLTNUM" msprop:Generator_ColumnVarNameInTable="columnSERLTNUM" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="SERLTNUM" msprop:Generator_ColumnPropNameInTable="SERLTNUMColumn" default="">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="21" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CZ_REZ1_Track" msprop:Generator_UserColumnName="CZ_REZ1_Track" msprop:Generator_ColumnPropNameInRow="CZ_REZ1_Track" msprop:Generator_ColumnVarNameInTable="columnCZ_REZ1_Track" msprop:Generator_ColumnPropNameInTable="CZ_REZ1_TrackColumn" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="CZ_REZ2_Track" msprop:Generator_UserColumnName="CZ_REZ2_Track" msprop:Generator_ColumnPropNameInRow="CZ_REZ2_Track" msprop:Generator_ColumnVarNameInTable="columnCZ_REZ2_Track" msprop:Generator_ColumnPropNameInTable="CZ_REZ2_TrackColumn" type="xs:unsignedByte" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_PI" msprop:Generator_UserTableName="CZMST_PI" msprop:Generator_RowDeletedName="CZMST_PIRowDeleted" msprop:Generator_RowChangedName="CZMST_PIRowChanged" msprop:Generator_RowClassName="CZMST_PIRow" msprop:Generator_RowChangingName="CZMST_PIRowChanging" msprop:Generator_RowEvArgName="CZMST_PIRowChangeEvent" msprop:Generator_RowEvHandlerName="CZMST_PIRowChangeEventHandler" msprop:Generator_TableClassName="CZMST_PIDataTable" msprop:Generator_TableVarName="tableCZMST_PI" msprop:Generator_RowDeletingName="CZMST_PIRowDeleting" msprop:Generator_TablePropName="CZMST_PI">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CountEntries" msprop:Generator_UserColumnName="CountEntries" msprop:Generator_ColumnVarNameInTable="columnCountEntries" msprop:Generator_ColumnPropNameInRow="CountEntries" msprop:Generator_ColumnPropNameInTable="CountEntriesColumn" type="xs:int" />
+              <xs:element name="PONUMBER" msprop:Generator_UserColumnName="PONUMBER" msprop:Generator_ColumnVarNameInTable="columnPONUMBER" msprop:Generator_ColumnPropNameInRow="PONUMBER" msprop:Generator_ColumnPropNameInTable="PONUMBERColumn" type="xs:string" />
+              <xs:element name="ORD" msprop:Generator_UserColumnName="ORD" msprop:Generator_ColumnVarNameInTable="columnORD" msprop:Generator_ColumnPropNameInRow="ORD" msprop:Generator_ColumnPropNameInTable="ORDColumn" type="xs:int" />
+              <xs:element name="ITEMNMBR" msprop:Generator_UserColumnName="ITEMNMBR" msprop:Generator_ColumnVarNameInTable="columnITEMNMBR" msprop:Generator_ColumnPropNameInRow="ITEMNMBR" msprop:Generator_ColumnPropNameInTable="ITEMNMBRColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VNDDOCNM" msprop:Generator_UserColumnName="VNDDOCNM" msprop:Generator_ColumnVarNameInTable="columnVNDDOCNM" msprop:Generator_ColumnPropNameInRow="VNDDOCNM" msprop:Generator_ColumnPropNameInTable="VNDDOCNMColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VNDITNUM" msprop:Generator_UserColumnName="VNDITNUM" msprop:Generator_ColumnVarNameInTable="columnVNDITNUM" msprop:Generator_ColumnPropNameInRow="VNDITNUM" msprop:Generator_ColumnPropNameInTable="VNDITNUMColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SKL_ID" msprop:Generator_UserColumnName="SKL_ID" msprop:Generator_ColumnVarNameInTable="columnSKL_ID" msprop:Generator_ColumnPropNameInRow="SKL_ID" msprop:Generator_ColumnPropNameInTable="SKL_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LOCNCODE" msprop:Generator_UserColumnName="LOCNCODE" msprop:Generator_ColumnVarNameInTable="columnLOCNCODE" msprop:Generator_ColumnPropNameInRow="LOCNCODE" msprop:Generator_ColumnPropNameInTable="LOCNCODEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MJ" msprop:Generator_UserColumnName="MJ" msprop:Generator_ColumnVarNameInTable="columnMJ" msprop:Generator_ColumnPropNameInRow="MJ" msprop:Generator_ColumnPropNameInTable="MJColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="QTYSHPPD" msprop:Generator_UserColumnName="QTYSHPPD" msprop:Generator_ColumnVarNameInTable="columnQTYSHPPD" msprop:Generator_ColumnPropNameInRow="QTYSHPPD" msprop:Generator_ColumnPropNameInTable="QTYSHPPDColumn" type="xs:decimal" />
+              <xs:element name="QTYSHPPDMJ" msprop:Generator_UserColumnName="QTYSHPPDMJ" msprop:Generator_ColumnVarNameInTable="columnQTYSHPPDMJ" msprop:Generator_ColumnPropNameInRow="QTYSHPPDMJ" msprop:Generator_ColumnPropNameInTable="QTYSHPPDMJColumn" type="xs:decimal" />
+              <xs:element name="QTYPACK" msprop:Generator_UserColumnName="QTYPACK" msprop:Generator_ColumnVarNameInTable="columnQTYPACK" msprop:Generator_ColumnPropNameInRow="QTYPACK" msprop:Generator_ColumnPropNameInTable="QTYPACKColumn" type="xs:decimal" />
+              <xs:element name="SERLTNUM" msprop:Generator_UserColumnName="SERLTNUM" msprop:Generator_ColumnVarNameInTable="columnSERLTNUM" msprop:Generator_ColumnPropNameInRow="SERLTNUM" msprop:Generator_ColumnPropNameInTable="SERLTNUMColumn" type="xs:string" />
+              <xs:element name="KOD_SW" msprop:Generator_UserColumnName="KOD_SW" msprop:Generator_ColumnVarNameInTable="columnKOD_SW" msprop:Generator_ColumnPropNameInRow="KOD_SW" msprop:Generator_ColumnPropNameInTable="KOD_SWColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DAT_VYROBY" msprop:Generator_UserColumnName="DAT_VYROBY" msprop:Generator_ColumnVarNameInTable="columnDAT_VYROBY" msprop:Generator_ColumnPropNameInRow="DAT_VYROBY" msprop:Generator_ColumnPropNameInTable="DAT_VYROBYColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DATEDONE" msprop:Generator_UserColumnName="DATEDONE" msprop:Generator_ColumnVarNameInTable="columnDATEDONE" msprop:Generator_ColumnPropNameInRow="DATEDONE" msprop:Generator_ColumnPropNameInTable="DATEDONEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TIMEDONE" msprop:Generator_UserColumnName="TIMEDONE" msprop:Generator_ColumnVarNameInTable="columnTIMEDONE" msprop:Generator_ColumnPropNameInRow="TIMEDONE" msprop:Generator_ColumnPropNameInTable="TIMEDONEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CZ_CarKod" msprop:Generator_UserColumnName="CZ_CarKod" msprop:Generator_ColumnVarNameInTable="columnCZ_CarKod" msprop:Generator_ColumnPropNameInRow="CZ_CarKod" msprop:Generator_ColumnPropNameInTable="CZ_CarKodColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="REZ_1" msprop:Generator_UserColumnName="REZ_1" msprop:Generator_ColumnVarNameInTable="columnREZ_1" msprop:Generator_ColumnPropNameInRow="REZ_1" msprop:Generator_ColumnPropNameInTable="REZ_1Column" type="xs:string" minOccurs="0" />
+              <xs:element name="REZ_2" msprop:Generator_UserColumnName="REZ_2" msprop:Generator_ColumnVarNameInTable="columnREZ_2" msprop:Generator_ColumnPropNameInRow="REZ_2" msprop:Generator_ColumnPropNameInTable="REZ_2Column" type="xs:string" minOccurs="0" />
+              <xs:element name="USER_ID" msprop:Generator_UserColumnName="USER_ID" msprop:Generator_ColumnVarNameInTable="columnUSER_ID" msprop:Generator_ColumnPropNameInRow="USER_ID" msprop:Generator_ColumnPropNameInTable="USER_IDColumn" type="xs:int" />
+              <xs:element name="DEX_ROW_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="DEX_ROW_ID" msprop:Generator_ColumnVarNameInTable="columnDEX_ROW_ID" msprop:Generator_ColumnPropNameInRow="DEX_ROW_ID" msprop:Generator_ColumnPropNameInTable="DEX_ROW_IDColumn" type="xs:int" />
+              <xs:element name="GUID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="GUID" msprop:Generator_ColumnVarNameInTable="columnGUID" msprop:Generator_ColumnPropNameInRow="GUID" msprop:Generator_ColumnPropNameInTable="GUIDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="INPUT_MODE" msprop:Generator_UserColumnName="INPUT_MODE" msprop:Generator_ColumnPropNameInRow="INPUT_MODE" msprop:Generator_ColumnVarNameInTable="columnINPUT_MODE" msprop:Generator_ColumnPropNameInTable="INPUT_MODEColumn" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="ID_TERMINAL" msprop:Generator_UserColumnName="ID_TERMINAL" msprop:Generator_ColumnPropNameInRow="ID_TERMINAL" msprop:Generator_ColumnVarNameInTable="columnID_TERMINAL" msprop:Generator_ColumnPropNameInTable="ID_TERMINALColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="WEIGHT" msprop:Generator_UserColumnName="WEIGHT" msprop:Generator_ColumnVarNameInTable="columnWEIGHT" msprop:Generator_ColumnPropNameInRow="WEIGHT" msprop:Generator_ColumnPropNameInTable="WEIGHTColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NMBRPAL" msprop:Generator_UserColumnName="NMBRPAL" msprop:Generator_ColumnVarNameInTable="columnNMBRPAL" msprop:Generator_ColumnPropNameInRow="NMBRPAL" msprop:Generator_ColumnPropNameInTable="NMBRPALColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TYPEPAL" msprop:Generator_UserColumnName="TYPEPAL" msprop:Generator_ColumnVarNameInTable="columnTYPEPAL" msprop:Generator_ColumnPropNameInRow="TYPEPAL" msprop:Generator_ColumnPropNameInTable="TYPEPALColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ITEMCODE" msprop:Generator_UserColumnName="ITEMCODE" msprop:Generator_ColumnPropNameInRow="ITEMCODE" msprop:Generator_ColumnVarNameInTable="columnITEMCODE" msprop:Generator_ColumnPropNameInTable="ITEMCODEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Parametry" msprop:Generator_UserTableName="Parametry" msprop:Generator_RowDeletedName="ParametryRowDeleted" msprop:Generator_RowChangedName="ParametryRowChanged" msprop:Generator_RowClassName="ParametryRow" msprop:Generator_RowChangingName="ParametryRowChanging" msprop:Generator_RowEvArgName="ParametryRowChangeEvent" msprop:Generator_RowEvHandlerName="ParametryRowChangeEventHandler" msprop:Generator_TableClassName="ParametryDataTable" msprop:Generator_TableVarName="tableParametry" msprop:Generator_RowDeletingName="ParametryRowDeleting" msprop:Generator_TablePropName="Parametry">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CONFIG_DUPLIC_SN" msprop:Generator_UserColumnName="CONFIG_DUPLIC_SN" msprop:Generator_ColumnPropNameInRow="CONFIG_DUPLIC_SN" msprop:Generator_ColumnVarNameInTable="columnCONFIG_DUPLIC_SN" msprop:Generator_ColumnPropNameInTable="CONFIG_DUPLIC_SNColumn" type="xs:boolean" />
+              <xs:element name="CONFIG_KONT_DELKA" msprop:Generator_UserColumnName="CONFIG_KONT_DELKA" msprop:Generator_ColumnPropNameInRow="CONFIG_KONT_DELKA" msprop:Generator_ColumnVarNameInTable="columnCONFIG_KONT_DELKA" msprop:Generator_ColumnPropNameInTable="CONFIG_KONT_DELKAColumn" type="xs:boolean" />
+              <xs:element name="CONFIG_KONT_DOKONCENOSTI" msprop:Generator_UserColumnName="CONFIG_KONT_DOKONCENOSTI" msprop:Generator_ColumnPropNameInRow="CONFIG_KONT_DOKONCENOSTI" msprop:Generator_ColumnVarNameInTable="columnCONFIG_KONT_DOKONCENOSTI" msprop:Generator_ColumnPropNameInTable="CONFIG_KONT_DOKONCENOSTIColumn" type="xs:boolean" />
+              <xs:element name="CONFIG_KONT_NUL_DELKA" msprop:Generator_UserColumnName="CONFIG_KONT_NUL_DELKA" msprop:Generator_ColumnPropNameInRow="CONFIG_KONT_NUL_DELKA" msprop:Generator_ColumnVarNameInTable="columnCONFIG_KONT_NUL_DELKA" msprop:Generator_ColumnPropNameInTable="CONFIG_KONT_NUL_DELKAColumn" type="xs:boolean" />
+              <xs:element name="CONFIG_KONT_UPL_POL" msprop:Generator_UserColumnName="CONFIG_KONT_UPL_POL" msprop:Generator_ColumnPropNameInRow="CONFIG_KONT_UPL_POL" msprop:Generator_ColumnVarNameInTable="columnCONFIG_KONT_UPL_POL" msprop:Generator_ColumnPropNameInTable="CONFIG_KONT_UPL_POLColumn" type="xs:boolean" />
+              <xs:element name="CONFIG_LISTSNIM" msprop:Generator_UserColumnName="CONFIG_LISTSNIM" msprop:Generator_ColumnPropNameInRow="CONFIG_LISTSNIM" msprop:Generator_ColumnVarNameInTable="columnCONFIG_LISTSNIM" msprop:Generator_ColumnPropNameInTable="CONFIG_LISTSNIMColumn" type="xs:boolean" />
+              <xs:element name="CONFIG_NOVA_KARTA" msprop:Generator_UserColumnName="CONFIG_NOVA_KARTA" msprop:Generator_ColumnPropNameInRow="CONFIG_NOVA_KARTA" msprop:Generator_ColumnVarNameInTable="columnCONFIG_NOVA_KARTA" msprop:Generator_ColumnPropNameInTable="CONFIG_NOVA_KARTAColumn" type="xs:boolean" />
+              <xs:element name="CONFIG_POKRDOHLED" msprop:Generator_UserColumnName="CONFIG_POKRDOHLED" msprop:Generator_ColumnPropNameInRow="CONFIG_POKRDOHLED" msprop:Generator_ColumnVarNameInTable="columnCONFIG_POKRDOHLED" msprop:Generator_ColumnPropNameInTable="CONFIG_POKRDOHLEDColumn" type="xs:boolean" />
+              <xs:element name="CONFIG_PRIM_KEY1" msprop:Generator_UserColumnName="CONFIG_PRIM_KEY1" msprop:Generator_ColumnPropNameInRow="CONFIG_PRIM_KEY1" msprop:Generator_ColumnVarNameInTable="columnCONFIG_PRIM_KEY1" msprop:Generator_ColumnPropNameInTable="CONFIG_PRIM_KEY1Column" type="xs:boolean" />
+              <xs:element name="CONFIG_PTATSE_NEANO" msprop:Generator_UserColumnName="CONFIG_PTATSE_NEANO" msprop:Generator_ColumnPropNameInRow="CONFIG_PTATSE_NEANO" msprop:Generator_ColumnVarNameInTable="columnCONFIG_PTATSE_NEANO" msprop:Generator_ColumnPropNameInTable="CONFIG_PTATSE_NEANOColumn" type="xs:boolean" />
+              <xs:element name="CONFIG_SNIM_LOCNCODE" msprop:Generator_UserColumnName="CONFIG_SNIM_LOCNCODE" msprop:Generator_ColumnPropNameInRow="CONFIG_SNIM_LOCNCODE" msprop:Generator_ColumnVarNameInTable="columnCONFIG_SNIM_LOCNCODE" msprop:Generator_ColumnPropNameInTable="CONFIG_SNIM_LOCNCODEColumn" type="xs:boolean" />
+              <xs:element name="CONFIG_SNIM_PONUMBER" msprop:Generator_UserColumnName="CONFIG_SNIM_PONUMBER" msprop:Generator_ColumnPropNameInRow="CONFIG_SNIM_PONUMBER" msprop:Generator_ColumnVarNameInTable="columnCONFIG_SNIM_PONUMBER" msprop:Generator_ColumnPropNameInTable="CONFIG_SNIM_PONUMBERColumn" type="xs:boolean" />
+              <xs:element name="CONFIG_SNIM_REZ2" msprop:Generator_UserColumnName="CONFIG_SNIM_REZ2" msprop:Generator_ColumnPropNameInRow="CONFIG_SNIM_REZ2" msprop:Generator_ColumnVarNameInTable="columnCONFIG_SNIM_REZ2" msprop:Generator_ColumnPropNameInTable="CONFIG_SNIM_REZ2Column" type="xs:boolean" />
+              <xs:element name="CONFIG_SNIMAT_POL1" msprop:Generator_UserColumnName="CONFIG_SNIMAT_POL1" msprop:Generator_ColumnPropNameInRow="CONFIG_SNIMAT_POL1" msprop:Generator_ColumnVarNameInTable="columnCONFIG_SNIMAT_POL1" msprop:Generator_ColumnPropNameInTable="CONFIG_SNIMAT_POL1Column" type="xs:boolean" />
+              <xs:element name="CONFIG_SNIMAT_POL2" msprop:Generator_UserColumnName="CONFIG_SNIMAT_POL2" msprop:Generator_ColumnPropNameInRow="CONFIG_SNIMAT_POL2" msprop:Generator_ColumnVarNameInTable="columnCONFIG_SNIMAT_POL2" msprop:Generator_ColumnPropNameInTable="CONFIG_SNIMAT_POL2Column" type="xs:boolean" />
+              <xs:element name="CONFIG_SNIMAT_POL3" msprop:Generator_UserColumnName="CONFIG_SNIMAT_POL3" msprop:Generator_ColumnPropNameInRow="CONFIG_SNIMAT_POL3" msprop:Generator_ColumnVarNameInTable="columnCONFIG_SNIMAT_POL3" msprop:Generator_ColumnPropNameInTable="CONFIG_SNIMAT_POL3Column" type="xs:boolean" />
+              <xs:element name="CONFIG_SNIMATZADAT_SN" msprop:Generator_UserColumnName="CONFIG_SNIMATZADAT_SN" msprop:Generator_ColumnPropNameInRow="CONFIG_SNIMATZADAT_SN" msprop:Generator_ColumnVarNameInTable="columnCONFIG_SNIMATZADAT_SN" msprop:Generator_ColumnPropNameInTable="CONFIG_SNIMATZADAT_SNColumn" type="xs:boolean" />
+              <xs:element name="CONFIG_ZADAT_MN_POKAZDE" msprop:Generator_UserColumnName="CONFIG_ZADAT_MN_POKAZDE" msprop:Generator_ColumnPropNameInRow="CONFIG_ZADAT_MN_POKAZDE" msprop:Generator_ColumnVarNameInTable="columnCONFIG_ZADAT_MN_POKAZDE" msprop:Generator_ColumnPropNameInTable="CONFIG_ZADAT_MN_POKAZDEColumn" type="xs:boolean" />
+              <xs:element name="ENABLE_LISTSNIM" msprop:Generator_UserColumnName="ENABLE_LISTSNIM" msprop:Generator_ColumnPropNameInRow="ENABLE_LISTSNIM" msprop:Generator_ColumnVarNameInTable="columnENABLE_LISTSNIM" msprop:Generator_ColumnPropNameInTable="ENABLE_LISTSNIMColumn" type="xs:boolean" />
+              <xs:element name="ENABLE_SNIMATZADAT_SN" msprop:Generator_UserColumnName="ENABLE_SNIMATZADAT_SN" msprop:Generator_ColumnPropNameInRow="ENABLE_SNIMATZADAT_SN" msprop:Generator_ColumnVarNameInTable="columnENABLE_SNIMATZADAT_SN" msprop:Generator_ColumnPropNameInTable="ENABLE_SNIMATZADAT_SNColumn" type="xs:boolean" />
+              <xs:element name="CONFIG_MNOZSTVI_PREDVYPLNIT" msprop:Generator_UserColumnName="CONFIG_MNOZSTVI_PREDVYPLNIT" msprop:Generator_ColumnVarNameInTable="columnCONFIG_MNOZSTVI_PREDVYPLNIT" msprop:Generator_ColumnPropNameInRow="CONFIG_MNOZSTVI_PREDVYPLNIT" msprop:Generator_ColumnPropNameInTable="CONFIG_MNOZSTVI_PREDVYPLNITColumn" type="xs:boolean" />
+              <xs:element name="CONFIG_MNOZSTVI_PREDVYPLNIT_JEDNA" msprop:Generator_UserColumnName="CONFIG_MNOZSTVI_PREDVYPLNIT_JEDNA" msprop:Generator_ColumnVarNameInTable="columnCONFIG_MNOZSTVI_PREDVYPLNIT_JEDNA" msprop:Generator_ColumnPropNameInRow="CONFIG_MNOZSTVI_PREDVYPLNIT_JEDNA" msprop:Generator_ColumnPropNameInTable="CONFIG_MNOZSTVI_PREDVYPLNIT_JEDNAColumn" type="xs:boolean" />
+              <xs:element name="CONFIG_MNOZSTVI_PREDVYPLNIT_ZBYVAJICI" msprop:Generator_UserColumnName="CONFIG_MNOZSTVI_PREDVYPLNIT_ZBYVAJICI" msprop:Generator_ColumnVarNameInTable="columnCONFIG_MNOZSTVI_PREDVYPLNIT_ZBYVAJICI" msprop:Generator_ColumnPropNameInRow="CONFIG_MNOZSTVI_PREDVYPLNIT_ZBYVAJICI" msprop:Generator_ColumnPropNameInTable="CONFIG_MNOZSTVI_PREDVYPLNIT_ZBYVAJICIColumn" type="xs:boolean" />
+              <xs:element name="CONFIG_MNOZSTVI_ZADAVAT" msprop:Generator_UserColumnName="CONFIG_MNOZSTVI_ZADAVAT" msprop:Generator_ColumnVarNameInTable="columnCONFIG_MNOZSTVI_ZADAVAT" msprop:Generator_ColumnPropNameInRow="CONFIG_MNOZSTVI_ZADAVAT" msprop:Generator_ColumnPropNameInTable="CONFIG_MNOZSTVI_ZADAVATColumn" type="xs:boolean" />
+              <xs:element name="CONFIG_MNOZSTVI_SCANNEREM" msprop:Generator_UserColumnName="CONFIG_MNOZSTVI_SCANNEREM" msprop:Generator_ColumnVarNameInTable="columnCONFIG_MNOZSTVI_SCANNEREM" msprop:Generator_ColumnPropNameInRow="CONFIG_MNOZSTVI_SCANNEREM" msprop:Generator_ColumnPropNameInTable="CONFIG_MNOZSTVI_SCANNEREMColumn" type="xs:boolean" />
+              <xs:element name="CONFIG_LOKACE_POVOLIT" msprop:Generator_UserColumnName="CONFIG_LOKACE_POVOLIT" msprop:Generator_ColumnVarNameInTable="columnCONFIG_LOKACE_POVOLIT" msprop:Generator_ColumnPropNameInRow="CONFIG_LOKACE_POVOLIT" msprop:Generator_ColumnPropNameInTable="CONFIG_LOKACE_POVOLITColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CONFIG_LOKACE_TIMEOUT" msprop:Generator_UserColumnName="CONFIG_LOKACE_TIMEOUT" msprop:Generator_ColumnVarNameInTable="columnCONFIG_LOKACE_TIMEOUT" msprop:Generator_ColumnPropNameInRow="CONFIG_LOKACE_TIMEOUT" msprop:Generator_ColumnPropNameInTable="CONFIG_LOKACE_TIMEOUTColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="CONFIG_LOKACE_PRIJMOVA" msprop:Generator_UserColumnName="CONFIG_LOKACE_PRIJMOVA" msprop:Generator_ColumnPropNameInRow="CONFIG_LOKACE_PRIJMOVA" msprop:Generator_ColumnVarNameInTable="columnCONFIG_LOKACE_PRIJMOVA" msprop:Generator_ColumnPropNameInTable="CONFIG_LOKACE_PRIJMOVAColumn" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_PEH" msprop:Generator_UserTableName="CZMST_PEH" msprop:Generator_RowDeletedName="CZMST_PEHRowDeleted" msprop:Generator_RowChangedName="CZMST_PEHRowChanged" msprop:Generator_RowClassName="CZMST_PEHRow" msprop:Generator_RowChangingName="CZMST_PEHRowChanging" msprop:Generator_RowEvArgName="CZMST_PEHRowChangeEvent" msprop:Generator_RowEvHandlerName="CZMST_PEHRowChangeEventHandler" msprop:Generator_TableClassName="CZMST_PEHDataTable" msprop:Generator_TableVarName="tableCZMST_PEH" msprop:Generator_RowDeletingName="CZMST_PEHRowDeleting" msprop:Generator_TablePropName="CZMST_PEH">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CountEntries" msprop:Generator_UserColumnName="CountEntries" msprop:Generator_ColumnVarNameInTable="columnCountEntries" msprop:Generator_ColumnPropNameInRow="CountEntries" msprop:Generator_ColumnPropNameInTable="CountEntriesColumn" type="xs:int" />
+              <xs:element name="GUID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="GUID" msprop:Generator_ColumnVarNameInTable="columnGUID" msprop:Generator_ColumnPropNameInRow="GUID" msprop:Generator_ColumnPropNameInTable="GUIDColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_PE_SN" msprop:Generator_UserTableName="CZMST_PE_SN" msprop:Generator_RowDeletedName="CZMST_PE_SNRowDeleted" msprop:Generator_RowChangedName="CZMST_PE_SNRowChanged" msprop:Generator_RowClassName="CZMST_PE_SNRow" msprop:Generator_RowChangingName="CZMST_PE_SNRowChanging" msprop:Generator_RowEvArgName="CZMST_PE_SNRowChangeEvent" msprop:Generator_RowEvHandlerName="CZMST_PE_SNRowChangeEventHandler" msprop:Generator_TableClassName="CZMST_PE_SNDataTable" msprop:Generator_TableVarName="tableCZMST_PE_SN" msprop:Generator_RowDeletingName="CZMST_PE_SNRowDeleting" msprop:Generator_TablePropName="CZMST_PE_SN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CountEntries" msprop:Generator_UserColumnName="CountEntries" msprop:Generator_ColumnVarNameInTable="columnCountEntries" msprop:Generator_ColumnPropNameInRow="CountEntries" msprop:Generator_ColumnPropNameInTable="CountEntriesColumn" type="xs:int" />
+              <xs:element name="ITEMNMBR" msprop:Generator_UserColumnName="ITEMNMBR" msprop:Generator_ColumnVarNameInTable="columnITEMNMBR" msprop:Generator_ColumnPropNameInRow="ITEMNMBR" msprop:Generator_ColumnPropNameInTable="ITEMNMBRColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="31" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SERLNMBR" msprop:Generator_UserColumnName="SERLNMBR" msprop:Generator_ColumnVarNameInTable="columnSERLNMBR" msprop:Generator_ColumnPropNameInRow="SERLNMBR" msprop:Generator_ColumnPropNameInTable="SERLNMBRColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="21" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DEX_ROW_ID" msprop:Generator_UserColumnName="DEX_ROW_ID" msprop:Generator_ColumnVarNameInTable="columnDEX_ROW_ID" msprop:Generator_ColumnPropNameInRow="DEX_ROW_ID" msprop:Generator_ColumnPropNameInTable="DEX_ROW_IDColumn" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_PIH" msprop:Generator_UserTableName="CZMST_PIH" msprop:Generator_RowDeletedName="CZMST_PIHRowDeleted" msprop:Generator_RowChangedName="CZMST_PIHRowChanged" msprop:Generator_RowClassName="CZMST_PIHRow" msprop:Generator_RowChangingName="CZMST_PIHRowChanging" msprop:Generator_RowEvArgName="CZMST_PIHRowChangeEvent" msprop:Generator_RowEvHandlerName="CZMST_PIHRowChangeEventHandler" msprop:Generator_TableClassName="CZMST_PIHDataTable" msprop:Generator_TableVarName="tableCZMST_PIH" msprop:Generator_RowDeletingName="CZMST_PIHRowDeleting" msprop:Generator_TablePropName="CZMST_PIH">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CountEntries" msprop:Generator_UserColumnName="CountEntries" msprop:Generator_ColumnPropNameInRow="CountEntries" msprop:Generator_ColumnVarNameInTable="columnCountEntries" msprop:Generator_ColumnPropNameInTable="CountEntriesColumn" type="xs:int" />
+              <xs:element name="DATUMDOKLADU" msprop:Generator_UserColumnName="DATUMDOKLADU" msprop:Generator_ColumnPropNameInRow="DATUMDOKLADU" msprop:Generator_ColumnVarNameInTable="columnDATUMDOKLADU" msprop:Generator_ColumnPropNameInTable="DATUMDOKLADUColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_PI_F" msprop:Generator_UserTableName="CZMST_PI_F" msprop:Generator_RowDeletedName="CZMST_PI_FRowDeleted" msprop:Generator_RowChangedName="CZMST_PI_FRowChanged" msprop:Generator_RowClassName="CZMST_PI_FRow" msprop:Generator_RowChangingName="CZMST_PI_FRowChanging" msprop:Generator_RowEvArgName="CZMST_PI_FRowChangeEvent" msprop:Generator_RowEvHandlerName="CZMST_PI_FRowChangeEventHandler" msprop:Generator_TableClassName="CZMST_PI_FDataTable" msprop:Generator_TableVarName="tableCZMST_PI_F" msprop:Generator_RowDeletingName="CZMST_PI_FRowDeleting" msprop:Generator_TablePropName="CZMST_PI_F">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IMG_NAME" msprop:Generator_UserColumnName="IMG_NAME" msprop:Generator_ColumnPropNameInRow="IMG_NAME" msprop:Generator_ColumnVarNameInTable="columnIMG_NAME" msprop:Generator_ColumnPropNameInTable="IMG_NAMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GUID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="GUID" msprop:Generator_ColumnPropNameInRow="GUID" msprop:Generator_ColumnVarNameInTable="columnGUID" msprop:Generator_ColumnPropNameInTable="GUIDColumn" type="xs:string" />
+              <xs:element name="DEX_ROW_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="DEX_ROW_ID" msprop:Generator_ColumnPropNameInRow="DEX_ROW_ID" msprop:Generator_ColumnVarNameInTable="columnDEX_ROW_ID" msprop:Generator_ColumnPropNameInTable="DEX_ROW_IDColumn" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

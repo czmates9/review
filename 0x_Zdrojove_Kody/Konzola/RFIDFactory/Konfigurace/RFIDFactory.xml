@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+    <!--    <Scanner Type="SerialPort" Path="RFID_SR_5102_Provider.dll" />   
+      <Scanner Type="SerialPort" Path="RFID_DLR_DK001_Provider.dll" />-->
+
+  <Scanner Type="SerialPort" Path="RFID_DLR_DK001_Provider.dll" />
+</Settings>
+

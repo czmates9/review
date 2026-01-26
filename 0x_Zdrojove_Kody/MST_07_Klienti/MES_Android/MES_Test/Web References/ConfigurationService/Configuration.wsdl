@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://Configuration.fask.cz/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://Configuration.fask.cz/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba přenosu dat Configuration</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Configuration.fask.cz/">
+      <s:import namespace="http://fask.cz/dsCZMSTCFG.xsd" />
+      <s:import schemaLocation="http://localhost/MST_Win_Kom_Server_7_Dasenka/Configuration.asmx?schema=dsCZMSTCFG" namespace="http://fask.cz/dsCZMSTCFG.xsd" />
+      <s:element name="GetPasswords">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPasswordsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPasswordsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTypyPalet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTypyPaletResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTypyPaletResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetScannerConfig">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetScannerConfigResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetScannerConfigResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetScannerConfig">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="scannerconfig" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetScannerConfigResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetScannerConfigResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetModulesConfig">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetModulesConfigResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetModulesConfigResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenceInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLicenceInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenceInfoResult" type="tns:License" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="License">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="numberTerminal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="company" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contact" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="expiration" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="encryprition" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="created" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="isValid" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="isExpirated" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="showInfoExpirationInTerminal" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCZMSTCFG">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCZMSTCFGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCZMSTCFGResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/dsCZMSTCFG.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPasswordsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPasswords" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPasswordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTypyPaletSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTypyPalet" />
+  </wsdl:message>
+  <wsdl:message name="GetTypyPaletSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTypyPaletResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetScannerConfigSoapIn">
+    <wsdl:part name="parameters" element="tns:GetScannerConfig" />
+  </wsdl:message>
+  <wsdl:message name="GetScannerConfigSoapOut">
+    <wsdl:part name="parameters" element="tns:GetScannerConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetScannerConfigSoapIn">
+    <wsdl:part name="parameters" element="tns:SetScannerConfig" />
+  </wsdl:message>
+  <wsdl:message name="SetScannerConfigSoapOut">
+    <wsdl:part name="parameters" element="tns:SetScannerConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetModulesConfigSoapIn">
+    <wsdl:part name="parameters" element="tns:GetModulesConfig" />
+  </wsdl:message>
+  <wsdl:message name="GetModulesConfigSoapOut">
+    <wsdl:part name="parameters" element="tns:GetModulesConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenceInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicenceInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenceInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCZMSTCFGSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCZMSTCFG" />
+  </wsdl:message>
+  <wsdl:message name="GetCZMSTCFGSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCZMSTCFGResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ConfigurationSoap">
+    <wsdl:operation name="GetPasswords">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro dotaženi uživatelu a XML vystupem</wsdl:documentation>
+      <wsdl:input message="tns:GetPasswordsSoapIn" />
+      <wsdl:output message="tns:GetPasswordsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypyPalet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro dotažení palet z souboru, podle ID Terminalu</wsdl:documentation>
+      <wsdl:input message="tns:GetTypyPaletSoapIn" />
+      <wsdl:output message="tns:GetTypyPaletSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScannerConfig">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro dotažení konfigurací pro scanner</wsdl:documentation>
+      <wsdl:input message="tns:GetScannerConfigSoapIn" />
+      <wsdl:output message="tns:GetScannerConfigSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetScannerConfig">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro uloženi scanner konfigurace na server</wsdl:documentation>
+      <wsdl:input message="tns:SetScannerConfigSoapIn" />
+      <wsdl:output message="tns:SetScannerConfigSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModulesConfig">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro načtení konfigurací modulu na Terminalu</wsdl:documentation>
+      <wsdl:input message="tns:GetModulesConfigSoapIn" />
+      <wsdl:output message="tns:GetModulesConfigSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenceInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro vraceni licence z serveru</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenceInfoSoapIn" />
+      <wsdl:output message="tns:GetLicenceInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCZMSTCFG">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Medota na dotaženi informaci z CZMSTCFG</wsdl:documentation>
+      <wsdl:input message="tns:GetCZMSTCFGSoapIn" />
+      <wsdl:output message="tns:GetCZMSTCFGSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ConfigurationSoap" type="tns:ConfigurationSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPasswords">
+      <soap:operation soapAction="http://Configuration.fask.cz/GetPasswords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypyPalet">
+      <soap:operation soapAction="http://Configuration.fask.cz/GetTypyPalet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScannerConfig">
+      <soap:operation soapAction="http://Configuration.fask.cz/GetScannerConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetScannerConfig">
+      <soap:operation soapAction="http://Configuration.fask.cz/SetScannerConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModulesConfig">
+      <soap:operation soapAction="http://Configuration.fask.cz/GetModulesConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenceInfo">
+      <soap:operation soapAction="http://Configuration.fask.cz/GetLicenceInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCZMSTCFG">
+      <soap:operation soapAction="http://Configuration.fask.cz/GetCZMSTCFG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ConfigurationSoap12" type="tns:ConfigurationSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPasswords">
+      <soap12:operation soapAction="http://Configuration.fask.cz/GetPasswords" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypyPalet">
+      <soap12:operation soapAction="http://Configuration.fask.cz/GetTypyPalet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScannerConfig">
+      <soap12:operation soapAction="http://Configuration.fask.cz/GetScannerConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetScannerConfig">
+      <soap12:operation soapAction="http://Configuration.fask.cz/SetScannerConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModulesConfig">
+      <soap12:operation soapAction="http://Configuration.fask.cz/GetModulesConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenceInfo">
+      <soap12:operation soapAction="http://Configuration.fask.cz/GetLicenceInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCZMSTCFG">
+      <soap12:operation soapAction="http://Configuration.fask.cz/GetCZMSTCFG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Configuration">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba přenosu dat Configuration</wsdl:documentation>
+    <wsdl:port name="ConfigurationSoap" binding="tns:ConfigurationSoap">
+      <soap:address location="http://localhost/MST_Win_Kom_Server_7_Dasenka/Configuration.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ConfigurationSoap12" binding="tns:ConfigurationSoap12">
+      <soap12:address location="http://localhost/MST_Win_Kom_Server_7_Dasenka/Configuration.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

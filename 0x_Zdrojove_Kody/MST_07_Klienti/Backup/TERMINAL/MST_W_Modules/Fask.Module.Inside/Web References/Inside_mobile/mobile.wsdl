@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="http://endpoint.core.nicety.cz/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="mobile" targetNamespace="http://endpoint.core.nicety.cz/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://dc.insidesn.cz:8443/nicety-core/mobile?xsd=1" namespace="http://endpoint.core.nicety.cz/" />
+    </xsd:schema>
+  </types>
+  <message name="getCurrentDate">
+    <part name="parameters" element="tns:getCurrentDate" />
+  </message>
+  <message name="getCurrentDateResponse">
+    <part name="parameters" element="tns:getCurrentDateResponse" />
+  </message>
+  <message name="getATDocuments">
+    <part name="parameters" element="tns:getATDocuments" />
+  </message>
+  <message name="getATDocumentsResponse">
+    <part name="parameters" element="tns:getATDocumentsResponse" />
+  </message>
+  <message name="beginSession">
+    <part name="parameters" element="tns:beginSession" />
+  </message>
+  <message name="beginSessionResponse">
+    <part name="parameters" element="tns:beginSessionResponse" />
+  </message>
+  <message name="getHash">
+    <part name="parameters" element="tns:getHash" />
+  </message>
+  <message name="getHashResponse">
+    <part name="parameters" element="tns:getHashResponse" />
+  </message>
+  <message name="getSessionUser">
+    <part name="parameters" element="tns:getSessionUser" />
+  </message>
+  <message name="getSessionUserResponse">
+    <part name="parameters" element="tns:getSessionUserResponse" />
+  </message>
+  <message name="endSession">
+    <part name="parameters" element="tns:endSession" />
+  </message>
+  <message name="endSessionResponse">
+    <part name="parameters" element="tns:endSessionResponse" />
+  </message>
+  <message name="getCodeBookItems">
+    <part name="parameters" element="tns:getCodeBookItems" />
+  </message>
+  <message name="getCodeBookItemsResponse">
+    <part name="parameters" element="tns:getCodeBookItemsResponse" />
+  </message>
+  <message name="getDatabaseUrl">
+    <part name="parameters" element="tns:getDatabaseUrl" />
+  </message>
+  <message name="getDatabaseUrlResponse">
+    <part name="parameters" element="tns:getDatabaseUrlResponse" />
+  </message>
+  <message name="saveActivity">
+    <part name="parameters" element="tns:saveActivity" />
+  </message>
+  <message name="saveActivityResponse">
+    <part name="parameters" element="tns:saveActivityResponse" />
+  </message>
+  <message name="BusinessException">
+    <part name="fault" element="tns:BusinessException" />
+  </message>
+  <message name="getPartnersMobileByDate">
+    <part name="parameters" element="tns:getPartnersMobileByDate" />
+  </message>
+  <message name="getPartnersMobileByDateResponse">
+    <part name="parameters" element="tns:getPartnersMobileByDateResponse" />
+  </message>
+  <message name="savePartnerMobile">
+    <part name="parameters" element="tns:savePartnerMobile" />
+  </message>
+  <message name="savePartnerMobileResponse">
+    <part name="parameters" element="tns:savePartnerMobileResponse" />
+  </message>
+  <message name="getProjectProducts">
+    <part name="parameters" element="tns:getProjectProducts" />
+  </message>
+  <message name="getProjectProductsResponse">
+    <part name="parameters" element="tns:getProjectProductsResponse" />
+  </message>
+  <message name="updateProjectProducts">
+    <part name="parameters" element="tns:updateProjectProducts" />
+  </message>
+  <message name="updateProjectProductsResponse">
+    <part name="parameters" element="tns:updateProjectProductsResponse" />
+  </message>
+  <message name="getATDocumentById">
+    <part name="parameters" element="tns:getATDocumentById" />
+  </message>
+  <message name="getATDocumentByIdResponse">
+    <part name="parameters" element="tns:getATDocumentByIdResponse" />
+  </message>
+  <message name="getATItems">
+    <part name="parameters" element="tns:getATItems" />
+  </message>
+  <message name="getATItemsResponse">
+    <part name="parameters" element="tns:getATItemsResponse" />
+  </message>
+  <message name="saveATDocuments">
+    <part name="parameters" element="tns:saveATDocuments" />
+  </message>
+  <message name="saveATDocumentsResponse">
+    <part name="parameters" element="tns:saveATDocumentsResponse" />
+  </message>
+  <message name="saveATItems">
+    <part name="parameters" element="tns:saveATItems" />
+  </message>
+  <message name="saveATItemsResponse">
+    <part name="parameters" element="tns:saveATItemsResponse" />
+  </message>
+  <message name="getActivitiesCount">
+    <part name="parameters" element="tns:getActivitiesCount" />
+  </message>
+  <message name="getActivitiesCountResponse">
+    <part name="parameters" element="tns:getActivitiesCountResponse" />
+  </message>
+  <message name="getActivityByDate">
+    <part name="parameters" element="tns:getActivityByDate" />
+  </message>
+  <message name="getActivityByDateResponse">
+    <part name="parameters" element="tns:getActivityByDateResponse" />
+  </message>
+  <message name="getCodeBookItemsCount">
+    <part name="parameters" element="tns:getCodeBookItemsCount" />
+  </message>
+  <message name="getCodeBookItemsCountResponse">
+    <part name="parameters" element="tns:getCodeBookItemsCountResponse" />
+  </message>
+  <message name="getPartnersMobileByDateCount">
+    <part name="parameters" element="tns:getPartnersMobileByDateCount" />
+  </message>
+  <message name="getPartnersMobileByDateCountResponse">
+    <part name="parameters" element="tns:getPartnersMobileByDateCountResponse" />
+  </message>
+  <portType name="MobileEndpoint">
+    <operation name="getCurrentDate">
+      <input message="tns:getCurrentDate" />
+      <output message="tns:getCurrentDateResponse" />
+    </operation>
+    <operation name="getATDocuments">
+      <input message="tns:getATDocuments" />
+      <output message="tns:getATDocumentsResponse" />
+    </operation>
+    <operation name="beginSession">
+      <input message="tns:beginSession" />
+      <output message="tns:beginSessionResponse" />
+    </operation>
+    <operation name="getHash">
+      <input message="tns:getHash" />
+      <output message="tns:getHashResponse" />
+    </operation>
+    <operation name="getSessionUser">
+      <input message="tns:getSessionUser" />
+      <output message="tns:getSessionUserResponse" />
+    </operation>
+    <operation name="endSession">
+      <input message="tns:endSession" />
+      <output message="tns:endSessionResponse" />
+    </operation>
+    <operation name="getCodeBookItems">
+      <input message="tns:getCodeBookItems" />
+      <output message="tns:getCodeBookItemsResponse" />
+    </operation>
+    <operation name="getDatabaseUrl">
+      <input message="tns:getDatabaseUrl" />
+      <output message="tns:getDatabaseUrlResponse" />
+    </operation>
+    <operation name="saveActivity">
+      <input message="tns:saveActivity" />
+      <output message="tns:saveActivityResponse" />
+      <fault name="BusinessException" message="tns:BusinessException" />
+    </operation>
+    <operation name="getPartnersMobileByDate">
+      <input message="tns:getPartnersMobileByDate" />
+      <output message="tns:getPartnersMobileByDateResponse" />
+    </operation>
+    <operation name="savePartnerMobile">
+      <input message="tns:savePartnerMobile" />
+      <output message="tns:savePartnerMobileResponse" />
+      <fault name="BusinessException" message="tns:BusinessException" />
+    </operation>
+    <operation name="getProjectProducts">
+      <input message="tns:getProjectProducts" />
+      <output message="tns:getProjectProductsResponse" />
+    </operation>
+    <operation name="updateProjectProducts">
+      <input message="tns:updateProjectProducts" />
+      <output message="tns:updateProjectProductsResponse" />
+      <fault name="BusinessException" message="tns:BusinessException" />
+    </operation>
+    <operation name="getATDocumentById">
+      <input message="tns:getATDocumentById" />
+      <output message="tns:getATDocumentByIdResponse" />
+    </operation>
+    <operation name="getATItems">
+      <input message="tns:getATItems" />
+      <output message="tns:getATItemsResponse" />
+    </operation>
+    <operation name="saveATDocuments">
+      <input message="tns:saveATDocuments" />
+      <output message="tns:saveATDocumentsResponse" />
+      <fault name="BusinessException" message="tns:BusinessException" />
+    </operation>
+    <operation name="saveATItems">
+      <input message="tns:saveATItems" />
+      <output message="tns:saveATItemsResponse" />
+      <fault name="BusinessException" message="tns:BusinessException" />
+    </operation>
+    <operation name="getActivitiesCount">
+      <input message="tns:getActivitiesCount" />
+      <output message="tns:getActivitiesCountResponse" />
+    </operation>
+    <operation name="getActivityByDate">
+      <input message="tns:getActivityByDate" />
+      <output message="tns:getActivityByDateResponse" />
+    </operation>
+    <operation name="getCodeBookItemsCount">
+      <input message="tns:getCodeBookItemsCount" />
+      <output message="tns:getCodeBookItemsCountResponse" />
+    </operation>
+    <operation name="getPartnersMobileByDateCount">
+      <input message="tns:getPartnersMobileByDateCount" />
+      <output message="tns:getPartnersMobileByDateCountResponse" />
+    </operation>
+  </portType>
+  <binding name="MobileEndpointPortBinding" type="tns:MobileEndpoint">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getCurrentDate">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getATDocuments">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="beginSession">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getHash">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSessionUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="endSession">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCodeBookItems">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDatabaseUrl">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="saveActivity">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="BusinessException">
+        <soap:fault use="literal" name="BusinessException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getPartnersMobileByDate">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="savePartnerMobile">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="BusinessException">
+        <soap:fault use="literal" name="BusinessException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getProjectProducts">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateProjectProducts">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="BusinessException">
+        <soap:fault use="literal" name="BusinessException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getATDocumentById">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getATItems">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="saveATDocuments">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="BusinessException">
+        <soap:fault use="literal" name="BusinessException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="saveATItems">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="BusinessException">
+        <soap:fault use="literal" name="BusinessException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getActivitiesCount">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getActivityByDate">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCodeBookItemsCount">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPartnersMobileByDateCount">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="mobile">
+    <port name="MobileEndpointPort" binding="tns:MobileEndpointPortBinding">
+      <soap:address location="https://dc.insidesn.cz:8443/nicety-core/mobile" />
+    </port>
+  </service>
+</definitions>

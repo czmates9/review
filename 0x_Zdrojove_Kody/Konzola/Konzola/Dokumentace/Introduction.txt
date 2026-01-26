@@ -1,0 +1,66 @@
+﻿/** 
+\mainpage Úvod a zadání
+
+\n
+
+| Projekt							| 2019 															|
+| ---								| ---															|
+| Název projektu:					| __Aplikačný server__					|
+| Autor 1:							| \c  __Divácký__ Tadeáš,\c tdivacky@fask.cz	|
+| Autor 2:							| \c  __Skřivánek__ Jiří, \c jiri.skrivanek@fask.cz  |
+| Datum zadání:						| 1.1.2019 													|
+| Datum finálního odevzdání:		| nikdy (včetně)											|
+
+\n\n
+
+##Úvodní poznámky
+Cílem tohoto projektu je pomoci Vám navrhnout a odzkoušet zadané varianty třídy \c CNode. Projekt již obsahuje plně funkční varianty CNode_bool::CNode a CNode_TWeekDay::CNode.
+Vaším úkolem je naprogramovat další dvě varianty třídy CNode dle zvoleného zadání a ověřit jejich fungování a kompatibilitu pomocí dodané funkce main() v souboru main.cpp.
+
+Vývoj projektu je možný v libovolném prostředí a kompilátoru C++ ([g++](http://gcc.gnu.org/), [clang++](http://clang.llvm.org/)), ale referenčním překladačem bude [Microsoft Visual Studio Professional 2013](http://www.visualstudio.com/).
+
+\attention Tento projekt (tj. adresář CSLNode) je určen pouze pro testování a slouží pro kontrolu funkčnosti nových typů \c CNode. Hodnocení funkčnosti nových tříd \c CNode proto proběhne v tomto projektu. Hodnocení zadání, komentářů a zdrojů datového kontejneru, ale proběhne na základě dat v adresáři \b Projekt (tj. "modrá" varianta dokumentace vygenerovaná pomocí Doxygen).
+
+\n
+##Doporučený postup
+1.	Pročtěte si tuto dokumentaci (\ref doc) a dodané zdrojové texty. Význam symbolů a barevného značení u zobrazovaných grafů popisuje tato [legenda](graph_legend.html).
+2.	Proveďte trasování dodané funkce pro obě varianty tříd \c CNode.
+3.	Promyslete strukturu celého programu a význam třídy CNodeBase, CVector, CLanes a CSLNode.
+4.	Navrhněte a implementujte obě nové varianty tříd \c CNode do vlastních jmenných prostorů.
+5.	Ověřte jejich správnou funkci na \b nemodifikovaném těle funkce \c main.
+6.	Doplňte dokumentaci Doxygen pro nové vytvořené soubory tříd \c CNode (preferovaným jazykem C++ zdrojových textů je angličtina, případně čeština bez diakritiky).
+7.	Jakmile Vámi navržené varianty tříd \c CNode budou fungovat správně a ohodnotí Vám je vyučující (společně s průběžným hodnocením hlavičkových souborů projektu), zkopírujte a začleňte si jejich zdrojové texty do Vašeho projektu: \b Projekt (CKontejner).
+
+\n
+
+Celá hierarchie souboru projektu je patrná na následujícím obrázku. 
+\dotfile project_hierarchy.gv "Obr.1 - Nákres hierarchie souboru v projektu"
+\n
+
+##Poznámky k řešení:
+\todo Do tohoto textu nezapomeňte doplnit hlavičku (tj. jména řešitelů, varianty tříd \c CNode, datum zadání).
+
+\todo Další ted TODO, co se ma delat
+
+\todo Funguje to vubec?
+
+
+\bugfix TaD [Zad] Upravit hlavní název dokumentu.
+
+\bugfix TaD Toto je asi 6e je to upravena chyba??
+
+\bugfix TaD A toto funguje??
+
+
+\bug TaD  a tadz je označení chyby??
+
+\bug TaD a toto funguje? 
+
+
+\note
+Pro lepší orientaci uvádíme krátkou motivaci k pojmu třída na odkazu: [Motivace třída]
+(http://www.uamt.feec.vutbr.cz/~richter/vyuka/1314_ppc/bppc/cviceni/motivace_trida.html).
+\n
+
+$Id: Introduction.txt 76 2019-07-25 8:00:00Z tdivacky $
+*/

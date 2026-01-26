@@ -1,0 +1,33 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:id="@+id/Prodej_Davky_LL"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    >
+    <TextView
+        android:id="@+id/Prodej_Davka_Cis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#333333"
+        android:textSize="45px"
+        android:text="@string/Def_Text"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="4dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#333333"
+        android:textSize="20px"
+        android:text="@string/Def_Text"
+        android:id="@+id/Prodej_Davka_Item_PocetPol"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="4dp"/>
+</LinearLayout>

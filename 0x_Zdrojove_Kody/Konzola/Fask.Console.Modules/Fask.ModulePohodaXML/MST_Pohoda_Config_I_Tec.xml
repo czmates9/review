@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+  <!-- cesta k ini souboru s konfiguraci pro IS Pohoda -->
+  
+<PathToINIFile>D:\Pohoda\xml_imp_I-TEC.ini</PathToINIFile>
+  <!-- login uzivatele -->
+  <Login>Admin</Login>
+
+  <!-- inicialy uzivatele -->
+  <Login_IDS>@</Login_IDS>
+
+  <!-- heslo uzivatele -->
+  <Password>admin</Password>
+
+  <!-- cesta k exe souboru s pohodou C:\Program Files\STORMWARE\POHODA\Pohoda.exe D:\ISPohoda\Pohoda.exe -->
+<PathToPohodaEXE>z:\Pohoda.exe</PathToPohodaEXE>
+
+  <!-- cesta kam se budou ukladat xml dotazy, musi byt stejna jako v ini souboru! -->
+  <PathToInputDirectory>D:\Pohoda\export\</PathToInputDirectory>
+
+  <!-- connection string k FASK databazi-->
+
+  <ConnectionString>Data Source=faskcz-cv004\sql_2014;Initial Catalog=FASKPOH_I_Tec;User ID=sa;Password=sasa</ConnectionString>
+
+  <!-- Pripojeni k databazi Pohody pres rozhrani OLEDB -->
+
+  <ConnectionStringPohodaDB>Provider=SQLNCLI10;Data Source=faskcz-cv004\sql_2014;Initial Catalog=StwPh_64086551_201801;User ID=sa;Password=sasa</ConnectionStringPohodaDB>
+
+  <!-- Umisteni error logu -->
+  <ErrorLogFile>..\Logs\log.txt</ErrorLogFile>
+
+  <!-- true - bude se rozlisovat stav objednavky (delivered, executed), false - nebude se rozlisovat stav objednavky -->
+  <StatusObjednavky>false</StatusObjednavky>
+
+  <!-- true - budou se stahovat i dorucene objednavky, false - dorucene objednavky se nebudou stahovat -->
+  <Delivered>false</Delivered>
+
+  <!-- true - budou se stahovat i vyrizene objednavky, false - vyrizene objednavky se nebudou stahovat -->
+  <Executed>false</Executed>
+
+  <!-- true - mnozstvi u polozky bude zbyva (quantity - delivered), false - mnozstvi u polozky bude celkove (delivered) -->
+  <Zbyva>true</Zbyva>
+
+  <!-- Dotahovani informaci o partnerovi -->
+  <DotahovatInformaceDodavatele>false</DotahovatInformaceDodavatele>
+
+  <!-- Ico ucetni jednotky, se kterou se pracuje => musi byt shodne v xml_imp.ini -->
+  <!--
+  <Ico>26217686</Ico> EUROM
+  <Ico>63489040</Ico> FASK
+  <Ico>04535510</Ico> HANIBAL
+  <Ico>64086551</Ico> I-Tec
+  -->
+  <Ico>64086551</Ico>
+
+  <!-- Zkontrolovane polozky budou(True)/nebudou(False) prepsany spocitanou hodnotou z inventury terminalu -->
+  <InventuraPrepisovatZkontrolovanePolozky>false</InventuraPrepisovatZkontrolovanePolozky>
+
+  <!-- Budou exportovany pouze aktivni polozky (Ciselniky) -->
+  <ExportovatPouzeAktivniPolozky>true</ExportovatPouzeAktivniPolozky>
+
+  <!-- filtry pro export ciselniku zbozi -->
+  <!--
+	<ExportSkladFilter>'a1_Hutní'</ExportSkladFilter>
+	<ExportTypFilter>1</ExportTypFilter>
+        <ExportSkladFilter>'a1_Hutní','a2_Kusový','a3_Režijní','c1_VýrMalé','c2_VýrVelk'</ExportSkladFilter>
+	<ExportSkladFilter>'a1_Hutní','a2_Kusový','a3_Režijní','c1_VýrMalé','c2_VýrVelk','a4_drobný'</ExportSkladFilter>
+        <ExportTypFilter>1,5</ExportTypFilter>
+	<ExportSkladFilter>'a1_Hutní','a2_Kusový','a3_Režijní','c1_VýrMalé','c2_VýrVelk','a4_drobný'</ExportSkladFilter>
+  -->
+  <!-- filtr na sklad polozek -->
+  <!--
+  <ExportSkladFilter>'01', '02'</ExportSkladFilter>
+  -->
+  <ExportSkladFilter>'01-karty'</ExportSkladFilter>
+  <!-- filtr na typ polozek -->
+  <ExportTypFilter>1,5</ExportTypFilter>
+
+  <!-- kod cizi meny -->
+  <KodCiziMena>EUR</KodCiziMena>
+  <!-- rada dokladu pro vytvoreni v cizi mene => jedna se o fultextovy filtr nazvu rady -->
+  <RadaCiziMenaText>cizí měna</RadaCiziMenaText>
+  <!-- vychozi forma uhrady na vytvarenych dokladech -->
+  <KodFormaUhrady>příkazem</KodFormaUhrady>
+  <!-- vychozi id dodavatele, neni-li urcen ze zdrojoveho dokladu -->
+  <IDDefaultniDodavatel>2357</IDDefaultniDodavatel>
+
+  <!-- cesta k transformaci zobrazeni -->
+  <PathToXSLT>D:\Pohoda</PathToXSLT>
+  <!-- cesta k ulozeni vystupu (prehledu) z weboveho serveru -->
+  <PathDataOutputFile>D:\Pohoda</PathDataOutputFile>
+
+  <!-- Globalni heslo pro zneplatneni davky prijemky -->
+  <HesloStornoPrijemka>4321</HesloStornoPrijemka>
+
+  <!-- Globalni heslo pro zneplatneni davky vydejky -->
+  <HesloStornoVydejka>4321</HesloStornoVydejka>
+
+  <!-- Nastaveni dokladu pro doklady z volneho pohybu(Prodejni modul)
+		 funkce muze byt: 
+			"pri" - prijemka, 
+			"vyd" - vydejka, 
+			"pro" - prodejka 
+			"objv" - vydana objednavka
+			"objvcm" - vydana objednavka v cizi mene (cizi mena definovana jako tag KodCiziMena)
+			"objvm" - vydana objednavka ve zvolene cizi mene z ciselniku na terminalu
+			"objbezodb" - vydana objednavka, kdy se dodavatel zvoli podle odb_id na polozce
+			"objp" - prijata objednavka
+			"objpcm" - prijata objednavka v cizi mene (cizi mena definovana jako tag KodCiziMena)
+			"objpm" - prijata objednavka ve zvolene cizi mene z ciselniku na terminalu
+			"expedice" - dodaci list ... (vydejka) ... ???
+	-->
+  <doklad docid="0" funkce="pri"/>
+  <doklad docid="1" funkce="vyd"/>
+  <doklad docid="2" funkce="pro"/>
+  <doklad docid="3" funkce="objv"/>
+  <doklad docid="4" funkce="objvcm"/>
+  <doklad docid="5" funkce="objvm"/>
+  <doklad docid="6" funkce="objbezodb"/>
+  <doklad docid="7" funkce="objp" idsradatext="Objednávky EUROM"/>
+  <doklad docid="8" funkce="objpcm"/>
+  <doklad docid="9" funkce="objpm"/>
+  <doklad docid="10" funkce="expedice"/>
+  <!-- dotaz, ktery bude pouzit pro dohledani detailu dokladu objednavky -->
+  <ObjednavkaDetail>
+    SELECT
+    o.Cislo 'ocislo'
+    ,isnull(z.Cislo,'') 'zcislo'
+    ,z.SText 'zstext'
+    ,c.ID 'cid'
+    ,isnull(c.IDS,'') 'cids'
+    ,c.SText 'cstext'
+    from OBJ o
+    left join sZAK z on z.Cislo = o.CisloZAK
+    left join sCIN c on c.ID = o.RefCin
+    where o.Cislo=?
+  </ObjednavkaDetail>
+  <!-- dotaz, ktery bude pouzit pro dohledani detailu polozky dokladu objednavky -->
+  <ObjednavkaDetailPolozka>
+    SELECT
+    o.Cislo 'ocislo'
+    ,isnull(z.Cislo,'') 'zcislo'
+    ,z.SText 'zstext'
+    ,c.ID 'cid'
+    ,isnull(c.IDS,'') 'cids'
+    ,c.SText 'cstext'
+    ,isnull(op.Pozn,'') 'oppozn'
+
+    from OBJ o
+    left join sZAK z on z.Cislo = o.CisloZAK
+    left join sCIN c on c.ID = o.RefCin
+    join OBJPol op on op.RefAg=o.ID
+    where o.Cislo=? and op.refskz=? and op.ID=?
+  </ObjednavkaDetailPolozka>
+</Settings>

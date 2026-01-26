@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Odberatele" targetNamespace="http://sqlce.fask.cz/Odberatele.xsd" xmlns:mstns="http://sqlce.fask.cz/Odberatele.xsd" xmlns="http://sqlce.fask.cz/Odberatele.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Odberatele" msdata:IsDataSet="true" msdata:Locale="" msprop:Generator_DataSetName="Odberatele" msprop:Generator_UserDSName="Odberatele">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST090" msprop:Generator_UserTableName="CZMST090" msprop:Generator_RowEvArgName="CZMST090RowChangeEvent" msprop:Generator_TableVarName="tableCZMST090" msprop:Generator_TablePropName="CZMST090" msprop:Generator_RowDeletingName="CZMST090RowDeleting" msprop:Generator_RowChangingName="CZMST090RowChanging" msprop:Generator_RowDeletedName="CZMST090RowDeleted" msprop:Generator_RowEvHandlerName="CZMST090RowChangeEventHandler" msprop:Generator_TableClassName="CZMST090DataTable" msprop:Generator_RowChangedName="CZMST090RowChanged" msprop:Generator_RowClassName="CZMST090Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="odb_id" msprop:Generator_ColumnVarNameInTable="columnodb_id" msprop:Generator_ColumnPropNameInRow="odb_id" msprop:Generator_ColumnPropNameInTable="odb_idColumn" msprop:Generator_UserColumnName="odb_id">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="odb_desc" msprop:Generator_ColumnVarNameInTable="columnodb_desc" msprop:Generator_ColumnPropNameInRow="odb_desc" msprop:Generator_ColumnPropNameInTable="odb_descColumn" msprop:Generator_UserColumnName="odb_desc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="odb_typ" msprop:Generator_ColumnVarNameInTable="columnodb_typ" msprop:Generator_ColumnPropNameInRow="odb_typ" msprop:Generator_ColumnPropNameInTable="odb_typColumn" msprop:Generator_UserColumnName="odb_typ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="odb_carcode" msprop:Generator_ColumnVarNameInTable="columnodb_carcode" msprop:Generator_ColumnPropNameInRow="odb_carcode" msprop:Generator_ColumnPropNameInTable="odb_carcodeColumn" msprop:Generator_UserColumnName="odb_carcode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DEX_ROW_ID" msprop:Generator_ColumnVarNameInTable="columnDEX_ROW_ID" msprop:Generator_ColumnPropNameInRow="DEX_ROW_ID" msprop:Generator_ColumnPropNameInTable="DEX_ROW_IDColumn" msprop:Generator_UserColumnName="DEX_ROW_ID" type="xs:int" />
+              <xs:element name="odb_ico" msprop:Generator_ColumnVarNameInTable="columnodb_ico" msprop:Generator_ColumnPropNameInRow="odb_ico" msprop:Generator_ColumnPropNameInTable="odb_icoColumn" msprop:Generator_UserColumnName="odb_ico" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mena_ID" msprop:Generator_ColumnVarNameInTable="columnmena_ID" msprop:Generator_ColumnPropNameInRow="mena_ID" msprop:Generator_ColumnPropNameInTable="mena_IDColumn" msprop:Generator_UserColumnName="mena_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="odb_misto" msprop:Generator_ColumnVarNameInTable="columnodb_misto" msprop:Generator_ColumnPropNameInRow="odb_misto" msprop:Generator_ColumnPropNameInTable="odb_mistoColumn" msprop:Generator_UserColumnName="odb_misto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="odb_ulice" msprop:Generator_ColumnVarNameInTable="columnodb_ulice" msprop:Generator_ColumnPropNameInRow="odb_ulice" msprop:Generator_ColumnPropNameInTable="odb_uliceColumn" msprop:Generator_UserColumnName="odb_ulice" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="odb_cisloOr" msprop:Generator_ColumnVarNameInTable="columnodb_cisloOr" msprop:Generator_ColumnPropNameInRow="odb_cisloOr" msprop:Generator_ColumnPropNameInTable="odb_cisloOrColumn" msprop:Generator_UserColumnName="odb_cisloOr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="odb_psc" msprop:Generator_ColumnVarNameInTable="columnodb_psc" msprop:Generator_ColumnPropNameInRow="odb_psc" msprop:Generator_ColumnPropNameInTable="odb_pscColumn" msprop:Generator_UserColumnName="odb_psc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="odb_dic" msprop:Generator_ColumnVarNameInTable="columnodb_dic" msprop:Generator_ColumnPropNameInRow="odb_dic" msprop:Generator_ColumnPropNameInTable="odb_dicColumn" msprop:Generator_UserColumnName="odb_dic" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="odb_Odberatel" msprop:Generator_ColumnVarNameInTable="columnodb_Odberatel" msprop:Generator_ColumnPropNameInRow="odb_Odberatel" msprop:Generator_ColumnPropNameInTable="odb_OdberatelColumn" msprop:Generator_UserColumnName="odb_Odberatel" type="xs:boolean" minOccurs="0" />
+              <xs:element name="odb_Dodavatel" msprop:Generator_ColumnVarNameInTable="columnodb_Dodavatel" msprop:Generator_ColumnPropNameInRow="odb_Dodavatel" msprop:Generator_ColumnPropNameInTable="odb_DodavatelColumn" msprop:Generator_UserColumnName="odb_Dodavatel" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

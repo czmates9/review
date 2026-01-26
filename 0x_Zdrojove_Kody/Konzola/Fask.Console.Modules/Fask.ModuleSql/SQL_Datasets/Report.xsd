@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Report" targetNamespace="http://tempuri.org/Report.xsd" xmlns:mstns="http://tempuri.org/Report.xsd" xmlns="http://tempuri.org/Report.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FASK_CS_ProDesignery" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FASK_CS_ProDesignery (Settings)" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReportSestavaTableAdapter" GeneratorDataComponentClassName="ReportSestavaTableAdapter" Name="ReportSestava" UserDataComponentName="ReportSestavaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FASK_CS_ProDesignery (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT     CZMST_Servis_Zdroj.ID AS ZdrojID, CZMST_Servis_Zdroj.Oznaceni AS ZdrojOznaceni, CZMST_Servis_Zdroj.Misto AS ZdrojMisto, 
+                      CZMST_Servis_Okruh.ID AS OkruhID, CZMST_Servis_Okruh.Oznaceni AS OkruhOznaceni, CZMST_Servis_ZdrojSeznam.Poradi AS ZdrojSeznamPoradi, 
+                      CZMST_Servis_ZdrojSeznam.ID AS ZdrojSeznamID, CZMST_Servis_Okruh.ODB_ID
+FROM         CZMST_Servis_ZdrojSeznam INNER JOIN
+                      CZMST_Servis_Zdroj ON CZMST_Servis_ZdrojSeznam.ZdrojID = CZMST_Servis_Zdroj.ID INNER JOIN
+                      CZMST_Servis_Okruh ON CZMST_Servis_ZdrojSeznam.ID = CZMST_Servis_Okruh.ZdrojSeznamID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ZdrojID" DataSetColumn="ZdrojID" />
+              <Mapping SourceColumn="ZdrojOznaceni" DataSetColumn="ZdrojOznaceni" />
+              <Mapping SourceColumn="ZdrojMisto" DataSetColumn="ZdrojMisto" />
+              <Mapping SourceColumn="OkruhID" DataSetColumn="OkruhID" />
+              <Mapping SourceColumn="OkruhOznaceni" DataSetColumn="OkruhOznaceni" />
+              <Mapping SourceColumn="ZdrojSeznamPoradi" DataSetColumn="ZdrojSeznamPoradi" />
+              <Mapping SourceColumn="ZdrojSeznamID" DataSetColumn="ZdrojSeznamID" />
+              <Mapping SourceColumn="ODB_ID" DataSetColumn="ODB_ID" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="FASK_CS_ProDesignery (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByObdid" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByObdid" GeneratorSourceName="FillByObdid" GetMethodModifier="Public" GetMethodName="GetDataByObdid" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByObdid" UserSourceName="FillByObdid">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     CZMST_Servis_Zdroj.ID AS ZdrojID, CZMST_Servis_Zdroj.Oznaceni AS ZdrojOznaceni, CZMST_Servis_Zdroj.Misto AS ZdrojMisto, 
+                      CZMST_Servis_Okruh.ID AS OkruhID, CZMST_Servis_Okruh.Oznaceni AS OkruhOznaceni, CZMST_Servis_ZdrojSeznam.Poradi AS ZdrojSeznamPoradi, 
+                      CZMST_Servis_ZdrojSeznam.ID AS ZdrojSeznamID, CZMST_Servis_Okruh.ODB_ID
+FROM         CZMST_Servis_ZdrojSeznam INNER JOIN
+                      CZMST_Servis_Zdroj ON CZMST_Servis_ZdrojSeznam.ZdrojID = CZMST_Servis_Zdroj.ID INNER JOIN
+                      CZMST_Servis_Okruh ON CZMST_Servis_ZdrojSeznam.ID = CZMST_Servis_Okruh.ZdrojSeznamID
+WHERE     (CZMST_Servis_Okruh.ODB_ID = @odbid)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="odbid" ColumnName="ODB_ID" DataSourceName="dbo.CZMST_Servis_Okruh" DataTypeServer="varchar(12)" DbType="AnsiString" Direction="Input" ParameterName="@odbid" Precision="0" ProviderType="VarChar" Scale="0" Size="12" SourceColumn="ODB_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FASK_CS_ProDesignery (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByOdbid_okruhid" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByOdbid_okruhid" GeneratorSourceName="FillByOdbid_okruhid" GetMethodModifier="Public" GetMethodName="GetDataByOdbid_okruhid" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByOdbid_okruhid" UserSourceName="FillByOdbid_okruhid">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     CZMST_Servis_Zdroj.ID AS ZdrojID, CZMST_Servis_Zdroj.Oznaceni AS ZdrojOznaceni, CZMST_Servis_Zdroj.Misto AS ZdrojMisto, 
+                      CZMST_Servis_Okruh.ID AS OkruhID, CZMST_Servis_Okruh.Oznaceni AS OkruhOznaceni, CZMST_Servis_ZdrojSeznam.Poradi AS ZdrojSeznamPoradi, 
+                      CZMST_Servis_ZdrojSeznam.ID AS ZdrojSeznamID, CZMST_Servis_Okruh.ODB_ID
+FROM         CZMST_Servis_ZdrojSeznam INNER JOIN
+                      CZMST_Servis_Zdroj ON CZMST_Servis_ZdrojSeznam.ZdrojID = CZMST_Servis_Zdroj.ID INNER JOIN
+                      CZMST_Servis_Okruh ON CZMST_Servis_ZdrojSeznam.ID = CZMST_Servis_Okruh.ZdrojSeznamID
+WHERE     (CZMST_Servis_Okruh.ODB_ID = @odbid) AND (CZMST_Servis_Okruh.ID = @okruhid)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="odbid" ColumnName="ODB_ID" DataSourceName="dbo.CZMST_Servis_Okruh" DataTypeServer="varchar(12)" DbType="AnsiString" Direction="Input" ParameterName="@odbid" Precision="0" ProviderType="VarChar" Scale="0" Size="12" SourceColumn="ODB_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="okruhid" ColumnName="ID" DataSourceName="dbo.CZMST_Servis_Okruh" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@okruhid" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="OkruhID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FASK_CS_ProDesignery (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByOkruhid" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByOkruhid" GeneratorSourceName="FillByOkruhid" GetMethodModifier="Public" GetMethodName="GetDataByOkruhid" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByOkruhid" UserSourceName="FillByOkruhid">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     CZMST_Servis_Zdroj.ID AS ZdrojID, CZMST_Servis_Zdroj.Oznaceni AS ZdrojOznaceni, CZMST_Servis_Zdroj.Misto AS ZdrojMisto, 
+                      CZMST_Servis_Okruh.ID AS OkruhID, CZMST_Servis_Okruh.Oznaceni AS OkruhOznaceni, CZMST_Servis_ZdrojSeznam.Poradi AS ZdrojSeznamPoradi, 
+                      CZMST_Servis_ZdrojSeznam.ID AS ZdrojSeznamID, CZMST_Servis_Okruh.ODB_ID
+FROM         CZMST_Servis_ZdrojSeznam INNER JOIN
+                      CZMST_Servis_Zdroj ON CZMST_Servis_ZdrojSeznam.ZdrojID = CZMST_Servis_Zdroj.ID INNER JOIN
+                      CZMST_Servis_Okruh ON CZMST_Servis_ZdrojSeznam.ID = CZMST_Servis_Okruh.ZdrojSeznamID
+WHERE   (CZMST_Servis_Okruh.ID = @okruhid)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="okruhid" ColumnName="ID" DataSourceName="dbo.CZMST_Servis_Okruh" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@okruhid" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="OkruhID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Report" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Report" msprop:Generator_UserDSName="Report">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReportSestava" msprop:Generator_TableClassName="ReportSestavaDataTable" msprop:Generator_TableVarName="tableReportSestava" msprop:Generator_TablePropName="ReportSestava" msprop:Generator_RowDeletingName="ReportSestavaRowDeleting" msprop:Generator_RowChangingName="ReportSestavaRowChanging" msprop:Generator_RowEvHandlerName="ReportSestavaRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportSestavaRowDeleted" msprop:Generator_UserTableName="ReportSestava" msprop:Generator_RowChangedName="ReportSestavaRowChanged" msprop:Generator_RowEvArgName="ReportSestavaRowChangeEvent" msprop:Generator_RowClassName="ReportSestavaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ZdrojID" msprop:Generator_ColumnVarNameInTable="columnZdrojID" msprop:Generator_ColumnPropNameInRow="ZdrojID" msprop:Generator_ColumnPropNameInTable="ZdrojIDColumn" msprop:Generator_UserColumnName="ZdrojID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ZdrojOznaceni" msprop:Generator_ColumnVarNameInTable="columnZdrojOznaceni" msprop:Generator_ColumnPropNameInRow="ZdrojOznaceni" msprop:Generator_ColumnPropNameInTable="ZdrojOznaceniColumn" msprop:Generator_UserColumnName="ZdrojOznaceni">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ZdrojMisto" msprop:Generator_ColumnVarNameInTable="columnZdrojMisto" msprop:Generator_ColumnPropNameInRow="ZdrojMisto" msprop:Generator_ColumnPropNameInTable="ZdrojMistoColumn" msprop:Generator_UserColumnName="ZdrojMisto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OkruhID" msprop:Generator_ColumnVarNameInTable="columnOkruhID" msprop:Generator_ColumnPropNameInRow="OkruhID" msprop:Generator_ColumnPropNameInTable="OkruhIDColumn" msprop:Generator_UserColumnName="OkruhID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OkruhOznaceni" msprop:Generator_ColumnVarNameInTable="columnOkruhOznaceni" msprop:Generator_ColumnPropNameInRow="OkruhOznaceni" msprop:Generator_ColumnPropNameInTable="OkruhOznaceniColumn" msprop:Generator_UserColumnName="OkruhOznaceni">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ZdrojSeznamPoradi" msprop:Generator_ColumnVarNameInTable="columnZdrojSeznamPoradi" msprop:Generator_ColumnPropNameInRow="ZdrojSeznamPoradi" msprop:Generator_ColumnPropNameInTable="ZdrojSeznamPoradiColumn" msprop:Generator_UserColumnName="ZdrojSeznamPoradi" type="xs:int" minOccurs="0" />
+              <xs:element name="ZdrojSeznamID" msprop:Generator_ColumnVarNameInTable="columnZdrojSeznamID" msprop:Generator_ColumnPropNameInRow="ZdrojSeznamID" msprop:Generator_ColumnPropNameInTable="ZdrojSeznamIDColumn" msprop:Generator_UserColumnName="ZdrojSeznamID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ODB_ID" msprop:Generator_ColumnVarNameInTable="columnODB_ID" msprop:Generator_ColumnPropNameInRow="ODB_ID" msprop:Generator_ColumnPropNameInTable="ODB_IDColumn" msprop:Generator_UserColumnName="ODB_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

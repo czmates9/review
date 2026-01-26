@@ -1,0 +1,69 @@
+﻿v3.11 20.06.2023 MaR
+--------------------
+- zvednutí verze
+- dva typy algoritmu, 1.pocita country, 2. pocita stavy na DI
+- konfiguracne rozlisit typ ADAMa podle ID_group, definice v tabulce [MachinesDefinition]
+
+v3.1 27.03.2023 TaD + MaR
+--------------------
+- rozšířeni struktur o Countery
+- Pridane do složby ID Algoritmu
+- Pridane do služby ID grupy ADAMů
+
+v2.1 19.03.2019 TaD
+--------------------
+-Projekt preneseny do VS2019
+-SQL scripty zahrnuty do standardu MES7
+
+-upraveny serringsModified
+-upraveny ProjectInstaller
+
+-Službu je potreba registrovat pomoci :
+registrace služby
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe [NameFile].exe
+
+Smazani služby
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe /u [NameFile].exe
+
+
+
+
+
+v2.0 19.03.2019 TaD
+--------------------
+-Vytvořena verze Vyroba 2.0
+
+
+
+v1.6 8.9.2015 PeV
+--------------------
+- oprava insertu do tabulky MachineStateSet
+
+v1.5 25.6.2015 PeV
+--------------------
+- pokud je adam pingnutelny a citac nedosahl maximalniho poctu uspesnych pingu, tak se posila do vyjimky
+
+v1.4 24.6.2015 PeV
+--------------------
+- uprava logovani
+- po neuspesnem pripojeni k adamovi probehne vyzkouseni pingu. Pokud nekolikrat po sobe projde, dojde k samotnemu pripojeni
+- do konfigurace pridana moznost zadani poctu uspesnych pingu (po dosazeni tohoto poctu dojde k pokusu o pripojeni na Adam) - parametr "NumberOfPingAttemptBeforeOpenConnection"
+
+v1.3 22.6.2015 PeV
+--------------------
+- rozsireni datasetu o sloupec "LastError", ktery obsahuje posledni chybu, ktera nastala (pokud zadna nenastala, je zobrazeno "No_Error")
+- rozsireni logovani aplikace + pridani logovani posledni chyby
+- pridana knihovna emailing + castecne prepsani oproti puvodni verzi
+- pridan do konfigurace aplikace moznost zmenit connection timeout, sending timeout, receiving timeout a moznost zapnuti odesilani emailem
+- do konfigurace pridana moznost automaticky zavirat TCP spojeni po ziskani dat z Adama (parametr "AlwaysCloseConnection")
+
+v1.2 24.10.2014 PeV
+--------------------
+- přidáno logování spuštění služby, stopnutí služby a ukončení 
+
+v1.1 16.10.2014 PeV
+--------------------
+- přidání počídla počtu nepřipojení (v Settings se dá nastavit počet)
+- nový log, který se nepřemazává (log2.txt)
+- odchytány vyjímky
+- inicializace seznamu strojů přesunuta do pracovního vlákna služby

@@ -1,0 +1,3 @@
+INSERT INTO CZMSTPWD (LOGIN, PASSWD, ID, ADM, FIRSTNAME, SECONDNAME, HASH, EAN, CODE) VALUES ('fask                ', '1234                ', '1', '1', 'fask           ', 'fask                                    ', NULL, NULL, 'fask');
+INSERT INTO CZMSTPWD (LOGIN, PASSWD, ID, ADM, FIRSTNAME, SECONDNAME, HASH, EAN, CODE) VALUES ('jukka1              ', '1234                ', '11', '0', '               ', '                                        ', NULL, NULL, 'jk1');
+INSERT INTO CZMSTPWD (LOGIN, PASSWD, ID, ADM, FIRSTNAME, SECONDNAME, HASH, EAN, CODE) VALUES ('jukka2              ', '1234                ', '12', '0', '               ', '                                        ', NULL, NULL, 'jk2');

@@ -1,0 +1,2 @@
+ALTER TABLE FASK_Logins
+ADD [RFID] [nvarchar](20) NULL

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MessageForm">
+</Property><Property Name="Solution File" Value="C:\prace\PavEx\MessageForm\MessageForm.sln">
+</Property><Property Name="Date" Value="pátek, 22. října 2010">
+</Property><Property Name="Time" Value="3:39">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="MessageForm.sln" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\MessageForm.sln">
+</Event><Event ErrorLevel="0" Project="MessageForm" Source="MessageForm.csproj" Description="Project file successfully backed up as C:\prace\PavEx\MessageForm\Backup\MessageForm.csproj">
+</Event><Event ErrorLevel="0" Project="MessageForm" Source="IconRoutines\GroupIconResources.cs" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\IconRoutines\GroupIconResources.cs">
+</Event><Event ErrorLevel="0" Project="MessageForm" Source="IconRoutines\IconEx.cs" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\IconRoutines\IconEx.cs">
+</Event><Event ErrorLevel="0" Project="MessageForm" Source="IconRoutines\IconRoutines.cs" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\IconRoutines\IconRoutines.cs">
+</Event><Event ErrorLevel="0" Project="MessageForm" Source="MessageForm.cs" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\MessageForm.cs">
+</Event><Event ErrorLevel="0" Project="MessageForm" Source="MessageForm.Designer.cs" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\MessageForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="MessageForm" Source="Message.cs" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\Message.cs">
+</Event><Event ErrorLevel="0" Project="MessageForm" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="MessageForm" Source="Properties\Resources.Designer.cs" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="MessageForm" Source="Properties\Settings.Designer.cs" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="MessageForm" Source="Properties\Settings.settings" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="MessageForm" Source="MessageForm.resx" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\MessageForm.resx">
+</Event><Event ErrorLevel="0" Project="MessageForm" Source="Properties\Resources.resx" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="MessageForm" Source="MessageForm.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="MessageForm" Source="MessageForm.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Test" Source="Test\Test.csproj" Description="Project file successfully backed up as C:\prace\PavEx\MessageForm\Backup\Test\Test.csproj">
+</Event><Event ErrorLevel="0" Project="Test" Source="Test\Form1.cs" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\Test\Form1.cs">
+</Event><Event ErrorLevel="0" Project="Test" Source="Test\Form1.Designer.cs" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\Test\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Test" Source="Test\Program.cs" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\Test\Program.cs">
+</Event><Event ErrorLevel="0" Project="Test" Source="Test\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\Test\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Test" Source="Test\Properties\Resources.Designer.cs" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\Test\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Test" Source="Test\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\Test\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Test" Source="Test\Properties\Settings.settings" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\Test\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="Test" Source="Test\computers308.ico" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\Test\computers308.ico">
+</Event><Event ErrorLevel="0" Project="Test" Source="Test\Globe.ico" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\Test\Globe.ico">
+</Event><Event ErrorLevel="0" Project="Test" Source="Test\Form1.resx" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\Test\Form1.resx">
+</Event><Event ErrorLevel="0" Project="Test" Source="Test\Properties\Resources.resx" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\Test\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="Test" Source="Test\_test.ico" Description="File successfully backed up as C:\prace\PavEx\MessageForm\Backup\Test\_test.ico">
+</Event><Event ErrorLevel="0" Project="Test" Source="Test\Test.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Test" Source="Test\Test.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="MessageForm.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="MessageForm.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="MessageForm" Source="MessageForm.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Test" Source="Test\Test.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

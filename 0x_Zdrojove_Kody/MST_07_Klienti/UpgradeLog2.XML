@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MST_Win">
+</Property><Property Name="Solution File" Value="D:\_w\MES-Projekt\0x_Zdrojove_Kody\MST_07_Klienti\MST_Win.sln">
+</Property><Property Name="Date" Value="pondělí 24. července 2023">
+</Property><Property Name="Time" Value="14:27">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="MST_W" Source="TERMINAL\MST_W\MST_W.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="MST_W" Source="TERMINAL\MST_W\MST_W.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.Graphic" Source="TERMINAL\Fask.Graphics\Fask.Graphic.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.Graphic" Source="TERMINAL\Fask.Graphics\Fask.Graphic.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.Encryption" Source="TERMINAL\Fask.Encryption\Fask.Encryption.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.Encryption" Source="TERMINAL\Fask.Encryption\Fask.Encryption.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.Configuration" Source="TERMINAL\Fask.IConfiguration\Fask.Configuration.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.Configuration" Source="TERMINAL\Fask.IConfiguration\Fask.Configuration.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.ModuleProvider" Source="TERMINAL\Fask.IModuleProvider\Fask.ModuleProvider.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.ModuleProvider" Source="TERMINAL\Fask.IModuleProvider\Fask.ModuleProvider.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.ScannerFactory" Source="TERMINAL\Fask.ScannerFactory\Fask.ScannerFactory.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.ScannerFactory" Source="TERMINAL\Fask.ScannerFactory\Fask.ScannerFactory.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.ScannerProvider" Source="TERMINAL\Fask.ScannerProvider\Fask.ScannerProvider.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.ScannerProvider" Source="TERMINAL\Fask.ScannerProvider\Fask.ScannerProvider.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.ScannerProviderMC3090" Source="TERMINAL\Fask.ScannerProviderMC3090\Fask.ScannerProviderMC3090.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.ScannerProviderMC3090" Source="TERMINAL\Fask.ScannerProviderMC3090\Fask.ScannerProviderMC3090.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.ScannerProviderHT660" Source="TERMINAL\Fask.ScannerProviderHT660\Fask.ScannerProviderHT660.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.ScannerProviderHT660" Source="TERMINAL\Fask.ScannerProviderHT660\Fask.ScannerProviderHT660.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.ScannerProviderSerialPort" Source="TERMINAL\Fask.ScannerProviderSerialPort\Fask.ScannerProviderSerialPort.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.ScannerProviderSerialPort" Source="TERMINAL\Fask.ScannerProviderSerialPort\Fask.ScannerProviderSerialPort.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.ScannerProviderPT8800" Source="TERMINAL\Fask.ScannerProviderPT8800\Fask.ScannerProviderPT8800.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.ScannerProviderPT8800" Source="TERMINAL\Fask.ScannerProviderPT8800\Fask.ScannerProviderPT8800.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.ScannerProviderTT8000" Source="TERMINAL\Fask.ScannerProviderTT8000\Fask.ScannerProviderTT8000.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.ScannerProviderTT8000" Source="TERMINAL\Fask.ScannerProviderTT8000\Fask.ScannerProviderTT8000.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ColorPicker" Source="TERMINAL\Fask.ColorPicker\ColorPicker.vbproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ColorPicker" Source="TERMINAL\Fask.ColorPicker\ColorPicker.vbproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.Module.Inside" Source="TERMINAL\MST_W_Modules\Fask.Module.Inside\Fask.Module.Inside.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.Module.Inside" Source="TERMINAL\MST_W_Modules\Fask.Module.Inside\Fask.Module.Inside.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.Module.Zbozi" Source="TERMINAL\MST_W_Modules\Fask.Module.Zbozi\Fask.Module.Zbozi.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.Module.Zbozi" Source="TERMINAL\MST_W_Modules\Fask.Module.Zbozi\Fask.Module.Zbozi.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.ScannerProviderPSION" Source="TERMINAL\Fask.ScannerProviderPSION\Fask.ScannerProviderPSION.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.ScannerProviderPSION" Source="TERMINAL\Fask.ScannerProviderPSION\Fask.ScannerProviderPSION.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.Module.MTJ.JimiTore.Baleni" Source="TERMINAL\MST_W_Modules\Fask.Module.MTJ.JimiTore.Baleni\Fask.Module.MTJ.JimiTore.Baleni.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.Module.MTJ.JimiTore.Baleni" Source="TERMINAL\MST_W_Modules\Fask.Module.MTJ.JimiTore.Baleni\Fask.Module.MTJ.JimiTore.Baleni.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.Localization" Source="TERMINAL\Fask.Localization\Fask.Localization.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.Localization" Source="TERMINAL\Fask.Localization\Fask.Localization.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.PhotoFactory" Source="TERMINAL\Fask.PhotoFactory\Fask.PhotoFactory.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.PhotoFactory" Source="TERMINAL\Fask.PhotoFactory\Fask.PhotoFactory.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.PhotoProvider" Source="TERMINAL\Fask.PhotoProvider\Fask.PhotoProvider.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.PhotoProvider" Source="TERMINAL\Fask.PhotoProvider\Fask.PhotoProvider.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.PhotoProviderMC21802D" Source="TERMINAL\Fask.PhotoProviderMC21802D\Fask.PhotoProviderMC21802D.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.PhotoProviderMC21802D" Source="TERMINAL\Fask.PhotoProviderMC21802D\Fask.PhotoProviderMC21802D.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.PhotoProviderES400" Source="TERMINAL\Fask.PhotoProviderES400\Fask.PhotoProviderES400.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.PhotoProviderES400" Source="TERMINAL\Fask.PhotoProviderES400\Fask.PhotoProviderES400.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.PhotoProviderBase" Source="TERMINAL\Fask.PhotoProviderBase\Fask.PhotoProviderBase.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.PhotoProviderBase" Source="TERMINAL\Fask.PhotoProviderBase\Fask.PhotoProviderBase.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.ScannerProviderDolphin60S" Source="TERMINAL\Fask.ScannerProviderDolphin60S\Fask.ScannerProviderDolphin60S.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.ScannerProviderDolphin60S" Source="TERMINAL\Fask.ScannerProviderDolphin60S\Fask.ScannerProviderDolphin60S.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.PhotoProviderDolphin60S2D" Source="TERMINAL\Fask.PhotoProviderDolphin60S2D\Fask.PhotoProviderDolphin60S2D.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.PhotoProviderDolphin60S2D" Source="TERMINAL\Fask.PhotoProviderDolphin60S2D\Fask.PhotoProviderDolphin60S2D.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.PhotoProviderDolphin60S" Source="TERMINAL\Fask.PhotoProviderDolphin60S\Fask.PhotoProviderDolphin60S.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.PhotoProviderDolphin60S" Source="TERMINAL\Fask.PhotoProviderDolphin60S\Fask.PhotoProviderDolphin60S.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.Parsing" Source="TERMINAL\Fask.Parsing\Fask.Parsing.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.Parsing" Source="TERMINAL\Fask.Parsing\Fask.Parsing.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.Upgrade" Source="TERMINAL\Fask.Upgrade\Fask.Upgrade.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.Upgrade" Source="TERMINAL\Fask.Upgrade\Fask.Upgrade.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.Module.MTJ.MCL.VydejKontrola" Source="TERMINAL\MST_W_Modules\Fask.Module.MTJ.MCL.VydejKontrola\Fask.Module.MTJ.MCL.VydejKontrola.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Fask.Module.MTJ.MCL.VydejKontrola" Source="TERMINAL\MST_W_Modules\Fask.Module.MTJ.MCL.VydejKontrola\Fask.Module.MTJ.MCL.VydejKontrola.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.PrinterFactory" Source="..\_SdileneProjekty_\WIN_CE\Fask.PrinterFactory\Fask.PrinterFactory.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Fask.PrinterFactory" Source="..\_SdileneProjekty_\WIN_CE\Fask.PrinterFactory\Fask.PrinterFactory.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Fask.PrinterProvider" Source="..\_SdileneProjekty_\WIN_CE\Fask.PrinterProvider\Fask.PrinterProvider.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Fask.PrinterProvider" Source="..\_SdileneProjekty_\WIN_CE\Fask.PrinterProvider\Fask.PrinterProvider.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Fask.PrinterProviderBluetoothSymbolWPAN" Source="..\_SdileneProjekty_\WIN_CE\Fask.PrinterProviderBluethootSymbolWPAN\Fask.PrinterProviderBluetoothSymbolWPAN.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Fask.PrinterProviderBluetoothSymbolWPAN" Source="..\_SdileneProjekty_\WIN_CE\Fask.PrinterProviderBluethootSymbolWPAN\Fask.PrinterProviderBluetoothSymbolWPAN.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Fask.PrinterProviderWebService" Source="..\_SdileneProjekty_\WIN_CE\Fask.PrinterProviderWebService\Fask.PrinterProviderWebService.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Fask.PrinterProviderWebService" Source="..\_SdileneProjekty_\WIN_CE\Fask.PrinterProviderWebService\Fask.PrinterProviderWebService.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Fask.Logging" Source="..\_SdileneProjekty_\WIN_CE\Fask.Logging\Fask.Logging.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Fask.Logging" Source="..\_SdileneProjekty_\WIN_CE\Fask.Logging\Fask.Logging.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="MST_Win.sln" Description="The solution file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="" Source="MST_Win.sln" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Fask.PrinterFactory" Source="..\_SdileneProjekty_\WIN_CE\Fask.PrinterFactory\Fask.PrinterFactory.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Fask.PrinterProvider" Source="..\_SdileneProjekty_\WIN_CE\Fask.PrinterProvider\Fask.PrinterProvider.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Fask.PrinterProviderBluetoothSymbolWPAN" Source="..\_SdileneProjekty_\WIN_CE\Fask.PrinterProviderBluethootSymbolWPAN\ConfigControl.resx" Description="File converted successfully">
+</Event><Event ErrorLevel="3" Project="Fask.PrinterProviderBluetoothSymbolWPAN" Source="..\_SdileneProjekty_\WIN_CE\Fask.PrinterProviderBluethootSymbolWPAN\ConfigControl.resx" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Fask.PrinterProviderBluetoothSymbolWPAN" Source="..\_SdileneProjekty_\WIN_CE\Fask.PrinterProviderBluethootSymbolWPAN\Fask.PrinterProviderBluetoothSymbolWPAN.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Fask.PrinterProviderWebService" Source="..\_SdileneProjekty_\WIN_CE\Fask.PrinterProviderWebService\ConfigControl.resx" Description="File converted successfully">
+</Event><Event ErrorLevel="3" Project="Fask.PrinterProviderWebService" Source="..\_SdileneProjekty_\WIN_CE\Fask.PrinterProviderWebService\ConfigControl.resx" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Fask.PrinterProviderWebService" Source="..\_SdileneProjekty_\WIN_CE\Fask.PrinterProviderWebService\Fask.PrinterProviderWebService.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Fask.Logging" Source="..\_SdileneProjekty_\WIN_CE\Fask.Logging\Fask.Logging.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

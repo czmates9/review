@@ -1,0 +1,32 @@
+﻿Servis TODO list:
+::oddeleni controlleru pro ciselniky, zdrojestav(davkovani), zdrojepohyb
+
+::ServisList
+- odesilani dat je po staru
+                // TODO : predelani odesialni dat !!!
+                // odeslani a zpracovani dat              
+				bool processed = Globals.globalObject.webServiceModule.ProcessZdrojPohybData(
+                                    MST_Global.TerminalID,
+                                    MySystem.FileOperations.DBLoad(Main.ServisZdrojePohybTmpDB)
+                                    );
+> predelat na nove rychle odesilani ...
+
+
+::ServerList
+- pokud je otevreny jiny controller, tak problem pri presunu/prepisu databazoveho souboru
+> potreba otestovat a osetrit zavreni a znovu otevreni controlleru_servis_zdroje 
+            string filetmp = Main.ServisZdrojeStavDBTmp;
+            if (File.Exists(filetmp))
+            {
+                // TODO : pokud je otevreny jiny controller, tak problem ... 
+				File.Delete(Main.ServisZdrojeStavDB); //odmazani stareho
+				File.Move(filetmp, Main.ServisZdrojeStavDB); //nahrani noveho ...
+            }
+
+::Servis - nekde, kdekoli ... 
+- dynamicke tabulky => pripona ".sdf"
+> nahradit za ".prd" ...
+> proverit pripravu dynamickych tabulek na serveru
+	ServisMain: line 1676 ...
+            string path = Path.Combine(Main.DataDir, "Servis_Ciselniky" + r_DynTab.FullName + ".sdf");
+

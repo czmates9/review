@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="ProdejLokace_BarCode">Č.kód: {0}</string>
+  <string name="ProdejLokace_Desc">Název: {0}</string>
+  <string name="ProdejLokace_SKL_ID">ID Skladu: {0}</string>
+  <string name="ProdejLokace_Type">Typ: {0}</string>
+  <string name="Prodej_Lokace_Label">Lokace</string>
+</resources>

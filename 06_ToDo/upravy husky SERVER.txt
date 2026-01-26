@@ -1,0 +1,95 @@
+SERVER\Fask.Server.Interfaces\Fask.Server.Interfaces.csproj
+radek 284  pridane <Compile Include="RFID\RFID.cs">
+
+SERVER\Fask.Server.Interfaces\DataSets\ProdejData.Designer.cs
+SERVER\Fask.Server.Interfaces\DataSets\ProdejData.xsd
+SERVER\Fask.Server.Interfaces\DataSets\Vydej.Designer.cs
+SERVER\Fask.Server.Interfaces\DataSets\Vydej.xsd
+prekopirovany cely 
+
+
+
+SERVER\Fask.Server.Interfaces\DataSets\ProdejData.xss
+12 radedk cely
+
+SERVER\Fask.Server.Interfaces\DataSets\Vydej.xss
+12 radedk cely
+
+
+SERVER\Fask.Server.Modules\Fask.ModuleHeliosOrangeSql\Fask.ModuleHeliosOrangeSql.csproj
+49  <Compile Include="ProviderRFID.cs" />
+
+109 sql databaze RFID
+219 dataset
+
+SERVER\Fask.Server.Modules\Fask.ModuleHeliosOrangeSql\ProviderProdej.cs
+80 až 93 TableAdapter
+
+
+
+SERVER\Fask.Server.Modules\Fask.ModuleHeliosOrangeSql\ProviderVydej.cs
+18 TABLE_CZMST_SI_RFID
+96  "       SKL_ID = '" + SQLInjection.Filter(sklad.ID) + "' "
+114 "   SKL_ID = '" + SQLInjection.Filter(sklad.ID) + "' " +
+137 " A.SKL_ID = '" + SQLInjection.Filter(sklad.ID) + "' " +
+561 a 562 commandtext
+572 foreach CZMST_SI_RFID
+595 Dataset Tableadapter
+
+
+SERVER\Fask.Server.Modules\Fask.ModuleHeliosOrangeSql\SQL_Datasets\Prodej.Designer.cs
+SERVER\Fask.Server.Modules\Fask.ModuleHeliosOrangeSql\SQL_Datasets\Prodej.xsd
+cele skopirovane
+
+SERVER\Fask.Server.Modules\Fask.ModuleHeliosOrangeSql\SQL_Datasets\Prodej.xss
+11 design table
+
+SERVER\Fask.Server.Modules\Fask.ModuleHeliosOrangeSql\SQL_Datasets\Vydej.Designer.cs
+SERVER\Fask.Server.Modules\Fask.ModuleHeliosOrangeSql\SQL_Datasets\Vydej.xsd
+cele skopirovane
+
+SERVER\Fask.Server.Modules\Fask.ModuleHeliosOrangeSql\SQL_Datasets\Vydej.xss
+11 design table
+
+
+SERVER\MST_Win_Print_Server\MST_Print_Server\MST_Print_Server_RF.Publish.xml
+420 a dole pridane URL
+
+SERVER\MST_Win_Print_Server\MST_Print_Server_Soupis\SoupisCreator.cs
+5  using microsoft.reporting.WinForm
+
+
+SERVER\MST_Win_Kom_Server\MST_W_Server.csproj
+291 include TFID.asmx.cs
+453 content include TFID.asmx.cs
+
+SERVER\MST_Win_Kom_Server\Prodej.asmx.cs
+cely
+
+SERVER\MST_Win_Kom_Server\Constants\Common.cs
+28 public const string ProviderRFID = "Provider.RFID";
+
+nakopirovane z SERVER/interfaces/datasetd/RFID.xcs
+SERVER/interfaces/RFID
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

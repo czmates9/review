@@ -1,0 +1,197 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace Fask.Vyroba_W.Forms
+{
+    public partial class FormInputKod2 : Form
+    {
+
+        public string Nazev
+        {
+            set
+            {
+                this.label_Nazev.Text = value;
+            }
+        }
+        public string Sklad
+        {
+            set
+            {
+                if (value == null)
+                {
+                    this.label_Sklad.Visible = false;
+                    this.labelSkladName.Visible = false;
+                }
+                else
+                    this.label_Sklad.Text = value;
+                
+            }
+        }
+        public string Lokace
+        {
+            set
+            {
+                if (value == null)
+                {
+                    this.label_Lokace.Visible = false;
+                    this.labelLokaceName.Visible = false;
+                }
+                else
+                    this.label_Lokace.Text = value;
+
+            }
+        }
+        public string Material
+        {
+            set
+            {
+                this.label_Material.Text = value;
+            }
+        }
+        public string Mnozstvi
+        {
+            set
+            {
+                this.label_Mnoztvi.Text = value;
+            }
+        }
+
+        public FormInputKod2()
+        {
+            InitializeComponent();
+        }
+
+        public string Kod
+        {
+            get { return this.textBoxKod.Text; }
+            set
+            {
+                this.textBoxKod.Text = value;
+                this.textBoxKod.Focus();
+                this.textBoxKod.SelectAll();
+            }
+        }
+
+        private void FormInputKod2_Load(object sender, EventArgs e)
+        {
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            panelButtons_Resize(null, null);
+            ScannerStart();
+        }
+
+        private void ScannerStart()
+        {
+            try
+            {
+                FormMain.Scanner.DataReady -= new Fask.MST_W.Scanner.ScannerEventHandler(Scanner_DataReady);
+                FormMain.Scanner.DataReady += new Fask.MST_W.Scanner.ScannerEventHandler(Scanner_DataReady);
+                FormMain.Scanner.Enable();
+            }
+            catch
+            {
+            }
+        }
+
+        private void ScannerStop()
+        {
+            try
+            {
+                FormMain.Scanner.DataReady -= new Fask.MST_W.Scanner.ScannerEventHandler(Scanner_DataReady);
+                FormMain.Scanner.Disable();
+            }
+            catch
+            {
+            }
+        }
+
+        private void ScannerEventHandlerMethod(object sender, Fask.MST_W.Scanner.ScannerEventArgs e)
+        {
+            if (e.BarcodeData.Trim().Length == 0)
+                return;
+
+            this.Kod = e.BarcodeData.Trim();
+            this.PerformOK();
+        }
+
+        void Scanner_DataReady(object sender, Fask.MST_W.Scanner.ScannerEventArgs e)
+        {
+            this.BeginInvoke(new Fask.MST_W.Scanner.ScannerEventHandler(ScannerEventHandlerMethod), new object[] { sender, e });
+        }
+
+        public void PerformCancel()
+        {
+            ScannerStop();
+            DialogResult = DialogResult.Cancel;
+        }
+
+        public void PerformAbort()
+        {
+            ScannerStop();
+            DialogResult = DialogResult.Abort;
+        }
+
+        public void PerformOK()
+        {
+
+            if (this.textBoxKod.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Musíte zadat hodnotu!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1);
+                return;
+            }
+
+            ScannerStop();
+            DialogResult = DialogResult.OK;
+        }
+
+        private void buttonOK_Click(object sender, EventArgs e)
+        {
+            this.PerformOK();
+        }
+
+        private void buttonStorno_Click(object sender, EventArgs e)
+        {
+            this.PerformCancel();
+        }
+
+        private void panelButtons_Resize(object sender, EventArgs e)
+        {
+            Size nsize = new Size(panelButtons.Width / 2, panelButtons.Height);
+            buttonStorno.Size = nsize;
+         
+        }
+
+        private void FormInputKod2_KeyDown(object sender, KeyEventArgs e)
+        {
+            Handle_KeyDown(sender, e);
+        }
+
+        public void Handle_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (!e.Shift && !e.Control && !e.Alt)
+            {
+                if (e.KeyCode == Keys.Escape)
+                {
+                    PerformCancel();
+                }
+                else if (e.KeyCode == Keys.Enter)
+                {
+                    PerformOK();
+                }
+                else
+                    return;
+            }
+            else
+                return;
+
+            e.Handled = true;
+        }
+
+
+    }
+}
+

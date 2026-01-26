@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://fask.cz/dsCZMSTCFG.xsd" xmlns="http://fask.cz/dsCZMSTCFG.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://fask.cz/dsCZMSTCFG.xsd" id="dsCZMSTCFG" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="" name="dsCZMSTCFG">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMSTCFG">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PNAME" type="xs:string" />
+              <xs:element minOccurs="0" name="PVALUEBL" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="PVALUEIN" type="xs:int" />
+              <xs:element minOccurs="0" name="PVALUECH" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

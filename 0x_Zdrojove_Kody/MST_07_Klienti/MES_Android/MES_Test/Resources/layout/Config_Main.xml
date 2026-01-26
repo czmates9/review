@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff">
+<!--Toolbar to je ten vrchny radek v kterem su ikonky a texty-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_Config_Main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+<!--To je vlatne cele okno ktere obsahuje ten bocny vysuvny panel + fragmenty -->
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout__Config_Main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <!--Tady v temto miste je linearlayout ktery obsahuje potrebne zobrazene componenty-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager_Config_Main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v4.view.PagerTabStrip
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" />
+        </android.support.v4.view.ViewPager>
+    <!-- Levý navigační panel -->
+        <ListView
+            android:id="@+id/left_drawer_Config_Main"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:choiceMode="singleChoice"
+            android:divider="#818181"
+            android:dividerHeight="1dp"
+            android:background="#E3F2FD" />
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

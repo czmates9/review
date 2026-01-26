@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Terminal" targetNamespace="http://tempuri.org/Terminal.xsd" xmlns:mstns="http://tempuri.org/Terminal.xsd" xmlns="http://tempuri.org/Terminal.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Terminal" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Terminal" msprop:Generator_UserDSName="Terminal">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST_TERMINAL_DEFINITION" msprop:Generator_TableClassName="CZMST_TERMINAL_DEFINITIONDataTable" msprop:Generator_TableVarName="tableCZMST_TERMINAL_DEFINITION" msprop:Generator_TablePropName="CZMST_TERMINAL_DEFINITION" msprop:Generator_RowDeletingName="CZMST_TERMINAL_DEFINITIONRowDeleting" msprop:Generator_RowChangingName="CZMST_TERMINAL_DEFINITIONRowChanging" msprop:Generator_RowEvHandlerName="CZMST_TERMINAL_DEFINITIONRowChangeEventHandler" msprop:Generator_RowDeletedName="CZMST_TERMINAL_DEFINITIONRowDeleted" msprop:Generator_UserTableName="CZMST_TERMINAL_DEFINITION" msprop:Generator_RowChangedName="CZMST_TERMINAL_DEFINITIONRowChanged" msprop:Generator_RowEvArgName="CZMST_TERMINAL_DEFINITIONRowChangeEvent" msprop:Generator_RowClassName="CZMST_TERMINAL_DEFINITIONRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_TERMINAL" msprop:Generator_ColumnVarNameInTable="columnID_TERMINAL" msprop:Generator_ColumnPropNameInRow="ID_TERMINAL" msprop:Generator_ColumnPropNameInTable="ID_TERMINALColumn" msprop:Generator_UserColumnName="ID_TERMINAL" type="xs:int" />
+              <xs:element name="DB_TYPE" msprop:Generator_ColumnVarNameInTable="columnDB_TYPE" msprop:Generator_ColumnPropNameInRow="DB_TYPE" msprop:Generator_ColumnPropNameInTable="DB_TYPEColumn" msprop:Generator_UserColumnName="DB_TYPE" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_TERMINAL_AKT" msprop:Generator_TableClassName="CZMST_TERMINAL_AKTDataTable" msprop:Generator_TableVarName="tableCZMST_TERMINAL_AKT" msprop:Generator_TablePropName="CZMST_TERMINAL_AKT" msprop:Generator_RowDeletingName="CZMST_TERMINAL_AKTRowDeleting" msprop:Generator_RowChangingName="CZMST_TERMINAL_AKTRowChanging" msprop:Generator_RowEvHandlerName="CZMST_TERMINAL_AKTRowChangeEventHandler" msprop:Generator_RowDeletedName="CZMST_TERMINAL_AKTRowDeleted" msprop:Generator_UserTableName="CZMST_TERMINAL_AKT" msprop:Generator_RowChangedName="CZMST_TERMINAL_AKTRowChanged" msprop:Generator_RowEvArgName="CZMST_TERMINAL_AKTRowChangeEvent" msprop:Generator_RowClassName="CZMST_TERMINAL_AKTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_TERMINAL" msprop:Generator_ColumnVarNameInTable="columnID_TERMINAL" msprop:Generator_ColumnPropNameInRow="ID_TERMINAL" msprop:Generator_ColumnPropNameInTable="ID_TERMINALColumn" msprop:Generator_UserColumnName="ID_TERMINAL" type="xs:int" />
+              <xs:element name="IP" msprop:Generator_ColumnVarNameInTable="columnIP" msprop:Generator_ColumnPropNameInRow="IP" msprop:Generator_ColumnPropNameInTable="IPColumn" msprop:Generator_UserColumnName="IP" type="xs:string" />
+              <xs:element name="DATEREQ" msprop:Generator_ColumnVarNameInTable="columnDATEREQ" msprop:Generator_ColumnPropNameInRow="DATEREQ" msprop:Generator_ColumnPropNameInTable="DATEREQColumn" msprop:Generator_UserColumnName="DATEREQ" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_TERMINAL_ALL" msprop:Generator_TableClassName="CZMST_TERMINAL_ALLDataTable" msprop:Generator_TableVarName="tableCZMST_TERMINAL_ALL" msprop:Generator_TablePropName="CZMST_TERMINAL_ALL" msprop:Generator_RowDeletingName="CZMST_TERMINAL_ALLRowDeleting" msprop:Generator_RowChangingName="CZMST_TERMINAL_ALLRowChanging" msprop:Generator_RowEvHandlerName="CZMST_TERMINAL_ALLRowChangeEventHandler" msprop:Generator_RowDeletedName="CZMST_TERMINAL_ALLRowDeleted" msprop:Generator_UserTableName="CZMST_TERMINAL_ALL" msprop:Generator_RowChangedName="CZMST_TERMINAL_ALLRowChanged" msprop:Generator_RowEvArgName="CZMST_TERMINAL_ALLRowChangeEvent" msprop:Generator_RowClassName="CZMST_TERMINAL_ALLRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_TERMINAL" msprop:Generator_ColumnVarNameInTable="columnID_TERMINAL" msprop:Generator_ColumnPropNameInRow="ID_TERMINAL" msprop:Generator_ColumnPropNameInTable="ID_TERMINALColumn" msprop:Generator_UserColumnName="ID_TERMINAL" type="xs:int" />
+              <xs:element name="IP" msprop:Generator_ColumnVarNameInTable="columnIP" msprop:Generator_ColumnPropNameInRow="IP" msprop:Generator_ColumnPropNameInTable="IPColumn" msprop:Generator_UserColumnName="IP" type="xs:string" />
+              <xs:element name="DATEREQ" msprop:Generator_ColumnVarNameInTable="columnDATEREQ" msprop:Generator_ColumnPropNameInRow="DATEREQ" msprop:Generator_ColumnPropNameInTable="DATEREQColumn" msprop:Generator_UserColumnName="DATEREQ" type="xs:dateTime" />
+              <xs:element name="DB_TYPE" msprop:Generator_ColumnVarNameInTable="columnDB_TYPE" msprop:Generator_ColumnPropNameInRow="DB_TYPE" msprop:Generator_ColumnPropNameInTable="DB_TYPEColumn" msprop:Generator_UserColumnName="DB_TYPE" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:CZMST_TERMINAL_DEFINITION" />
+      <xs:field xpath="mstns:ID_TERMINAL" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,41 @@
+﻿Lokalizace pomoci stringu
+-------------------------
+STAV:
+- konfiguracne globalni povoleni/zakazani lokalizace - OK
+- konfiguracne vyber jazyka (cs, sk) - OK
+- konfiguracne globalni povoleni/zakazani lokalizace zakaznika - OK
+
+Nacitani dat hlasek, upozorneni, ....
+-----------------
+- moznost nacteni z Localization.resx - OK
+- moznost nacteni z Localization.cs/sk.resx - OK
+- moznost nacteni z Localization.cs/sk.Zakaznik.resx - OK
+Postup zpusobu nacitani lokalizace:
+1) Localization.sk.FASK.resx
+2) Localization.sk.resx
+3) Localization.resx
+4) Lokalizace nastavena primo v Localization.resx, ktery je v projektu
+
+Nacitani textu do formularu:
+-----------------
+- moznost menit text textboxu, labelu, checkboxu, menu, ...
+- format: Assembly.NazevFormulare.resx
+- moznost nacteni z *.resx (napr. Fask.MST_W.Forms.LoginForm.resx) - OK
+- moznost nacteni z *.cs/sk.resx (napr. Fask.MST_W.Forms.LoginForm.cs/sk.resx) - OK
+- moznost nacteni z *.cs/sk.Zakaznik.resx (napr. Fask.MST_W.Forms.LoginForm.cs/sk.FASK.resx) - OK
+Postup zpusobu nacitani lokalizace formulare:
+1) Fask.MST_W.Forms.LoginForm.sk.FASK.resx
+2) Fask.MST_W.Forms.LoginForm.sk.resx
+3) Fask.MST_W.Forms.LoginForm.resx
+4) Lokalizace nastavena primo v formulari
+!! Pokud se chce zmenit nazev formulare, tak je potreba zmenit pridat klic napr: 'LoginForm.Text' pro formular, ktery se jmenuje 'LoginForm' (v resx souboru se vyuziva this.Text, podle ktereho nejde hledat) !!
+
+------------------------
+Popis nastaveni aplikace
+------------------------
+- nastaveni je umisteno v konfiguraci aplikace pod zalozkou 'Terminal'
+	- 'Povolit lokalizaci' - povoli globalne vyuziti lokalizace aplikace (vyuzije se lokalizace vybrana v comboboxu) !! Vyuzije se lokalizace formularu a ze souboru Localization.resx, Localization.sk.resx, ... Neprobiha nacitani dat z adresare 'Lokalizace' !!
+	- 'Povolit vlastni lokalizaci' - pokud je tento parametr zaskrtnuty a soucasne je povolena lokalizace, aplikace zacne kontrolovat, zdali jsou lokalizacni soubory umisteny v adresari 'Lokalizace' na terminalu. Pokud jsou, probiha nacitani z techto souboru a nasledne az z klasicke lokalizace.
+	
+TODO:
+- v metode LocalizationSupport.LoadFormLocalizationDataFromFile() poresit 'node.ChildNodes[1].InnerText'

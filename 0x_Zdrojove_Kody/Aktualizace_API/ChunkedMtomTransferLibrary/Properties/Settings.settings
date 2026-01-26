@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MTOM_Library.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MTOM_Library_WebServiceVyrobaFileTransfer_FileTransfer" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/Vyroba4/FileTransfer.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,76 @@
+body {font-family:Verdana,MS Sans Serif;font-size:10pt;background-image:url('../pic/Gen_TopBand.jpg');background-repeat:no-repeat}
+
+H1 {font-size:22pt; color:#1b5fa6; padding-left:0px; margin-top:95pt;}
+H2 {font-size:18pt; color:#1b5fa6; padding-left:0px; margin-top:95pt; font-weight:bold;}
+H3 {font-size:16pt; color:#1b5fa6; padding-left:0px; margin-top:10pt; font-weight:bold}
+H4 {font-size:13pt; color:#000000; border-top-style:solid; border-top-width:1; border-top-color:#A0A080;padding-top:15px}
+H5 {font-size:12pt; color:#505050; text-align:Left; font-family:Arial; font-weight: bold;text-decoration:underline;}
+H6 {font-size:12pt; color:#505050; text-align:Left; font-family:Arial; text-decoration:underline; }
+
+.G4  	{background-color: #e60004; display:none }
+.M4  	{background-color: #e60004; display:none}
+.NoG4	{}  
+     
+.Podnadpis4            {font-size:10pt; color:#000000; text-align:Left; font-weight:bold; padding-top:10;padding:bottom:0;text-decoration:underline;}
+
+ /*.poznamka - puvodne urcena k tagu <p> vnorenym v tagu <li>. Postupne prechod jen na tagy <li>. Aby bylo mozne bez potizi s odsazovanim do prikladu vkladat tabulky a jine <p>, byl zrusen text-indent:-33 (vynulovan). Font-size u prikladu nastaven je 12px~9pt (tj. odpovida to velikosti nastavene pro <td> seda, ktera se vetsinou pouziva prave v prikladech*/
+
+ .poznamka     { list-style-image: url('../pic/G3_poznamka.gif');
+		list-style-position:inside;
+		border-style:none;
+		border-left-style:solid;
+		border-bottom-style:solid;
+		border-left-width:1px;
+		border-bottom-width:1px;
+		text-indent:0;
+		margin-left:5;
+		padding-left:5;
+		padding-right:5; 
+		padding-bottom:5; 
+		text-align:justify;
+		margin-top:10px;
+		font-size:11px
+		}
+
+P {text-align:left;}
+
+table                 {font-size:10pt; border-style:solid; border-width:1; border-color:#9f9f9f}
+ 
+th                    {text-align:left; background-color:#BBDDFF; font-weight:normal; }
+th.font_bold		  {text-align:left; background-color:#BBDDFF; font-weight:bold; }
+td                    {text-align:left; background-color:#DFEFFF;}
+
+UL       {list-style-image: url('../pic/G3_ul1.gif')}
+UL UL    {list-style-image: url('../pic/G3_ul2.gif')}
+UL UL UL {list-style-image: url('../pic/G3_ul3.gif')}
+
+dd 	  {margin-left:0; font-weight:bold}
+dt 	  {margin-left:40}
+
+pre
+	{
+	margin-top: .0em;
+	margin-bottom: .0em; 
+	}
+
+pre.syntax
+	{
+	background: #dddddd;
+	padding: 2pt,4pt;
+	cursor: text;
+	color: #000000;
+	}
+
+A.key
+	{
+	font-weight:bold;
+	}
+
+A.number
+	{
+	font-weight:bold;
+	color: #FF0000; 
+	}
+
+A:link     {color:#2570bf; text-decoration:underline}
+A:visited  {color:#003F7F; text-decoration:underline}

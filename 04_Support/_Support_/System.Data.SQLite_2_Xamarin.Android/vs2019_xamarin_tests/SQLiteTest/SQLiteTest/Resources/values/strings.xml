@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="app_name">SQLiteTest</string>
+  <string name="action_settings">Settings</string>
+
+  <string name="Welcome">Welcome\nClick for SQLite tests</string>
+
+  <string name="openDrawer">Menu</string>
+  <string name="closeDrawer">MES</string>
+
+  <string name="DownloadUsers">Stáhni Uzivatele</string>
+  <string name="CameraUsers">Camera</string>
+  
+  <string name="DownloadLogin">Download</string>
+
+
+  <string name="Main_Login_Konec">Konec</string>
+  <string name="Main_Login_Uzivatele">Uživatelé</string>
+  <string name="Main_Login_OK">OK</string>
+  <string name="Main_Login_Login">Login</string>
+  <string name="Main_Login_Password">Heslo</string>
+
+  <string name="Dialog_Login_row_ID">ID</string>
+
+  <string name="permission_WriteExternalStorage_rationale">WriteExternalStorage permission is needed to save file.</string>
+  <string name="permission_ReadExternalStorage_rationale">WriteExternalStorage permission is needed to read file.</string>
+  <string name="Text_OK">OK</string>
+
+  <string name="Title">Potrebujeme tyto práva</string>
+  <string name="Message">protože proto</string>
+
+  <string name="PristupZamitnut">Přístup zamítnut</string>
+  <string name="PristupUdelen">Přístup udělen</string>
+
+  <string name="User_Message">Uživatel nenalezen</string>
+  <string name="User_Message2">Uživatel nenalezen anebo špatne heslo</string>
+  <string name="User_Title">Info</string>
+</resources>

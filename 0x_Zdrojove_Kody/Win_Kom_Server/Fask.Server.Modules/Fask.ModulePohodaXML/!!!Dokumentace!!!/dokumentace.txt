@@ -1,0 +1,20 @@
+﻿Prodej:
+--------------------------------------------------------------------------------------
+Typy dokladu:
+
+<doklad docid="3" funkce="objv"/>
+- vytvori se vydana objednavka s nasnimanym zbozim, se zadanym dodavatelem a defaultni menaou
+
+<doklad docid="4" funkce="objvcm"/>
+- vytvori se vydana objednavka s nasnimanym zbozim, se zadanym dodavatelem a cizi menou, 
+ktera je nastave jako tag KodCiziMena
+
+<doklad docid="5" funkce="objvm"/>
+- vytvori se vydana objednavka s nasnimanym zbozim, se zadanym dodavatelem a se zvolenou 
+cizi menou dle ciselniku cizich men na terminalu
+
+<doklad docid="6" funkce="objbezodb"/>
+- vytvori se vydana objednavka s nasnimanym zbozim (nezadava se na terminalu dodavatel ani cizi mena)
+na serveru se pote polozky rozpadnou dle dodavatelu a ke kazdemu dodavateli se zjistiho jestli je na cizi menu (P3) nebo ne
+a podle toho se vytvori vydana objednavka s cizi menou nebo bez
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ProdejDavkyDataSet" targetNamespace="http://fask.cz/ProdejDavkyDataSet.xsd" xmlns:mstns="http://fask.cz/ProdejDavkyDataSet.xsd" xmlns="http://fask.cz/ProdejDavkyDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ProdejDavkyDataSet" msdata:IsDataSet="true" msdata:Locale="" msprop:Generator_UserDSName="ProdejDavkyDataSet" msprop:Generator_DataSetName="ProdejDavkyDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Davky" msprop:Generator_UserTableName="Davky" msprop:Generator_RowDeletedName="DavkyRowDeleted" msprop:Generator_RowChangedName="DavkyRowChanged" msprop:Generator_RowClassName="DavkyRow" msprop:Generator_RowChangingName="DavkyRowChanging" msprop:Generator_RowEvArgName="DavkyRowChangeEvent" msprop:Generator_RowEvHandlerName="DavkyRowChangeEventHandler" msprop:Generator_TableClassName="DavkyDataTable" msprop:Generator_TableVarName="tableDavky" msprop:Generator_RowDeletingName="DavkyRowDeleting" msprop:Generator_TablePropName="Davky">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CisloDavky" msprop:Generator_UserColumnName="CisloDavky" msprop:Generator_ColumnVarNameInTable="columnCisloDavky" msprop:Generator_ColumnPropNameInRow="CisloDavky" msprop:Generator_ColumnPropNameInTable="CisloDavkyColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Polozek" msprop:Generator_UserColumnName="Polozek" msprop:Generator_ColumnVarNameInTable="columnPolozek" msprop:Generator_ColumnPropNameInRow="Polozek" msprop:Generator_ColumnPropNameInTable="PolozekColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Odberatel" msprop:Generator_UserColumnName="Odberatel" msprop:Generator_ColumnVarNameInTable="columnOdberatel" msprop:Generator_ColumnPropNameInRow="Odberatel" msprop:Generator_ColumnPropNameInTable="OdberatelColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Doklad" msprop:Generator_UserColumnName="Doklad" msprop:Generator_ColumnPropNameInRow="Doklad" msprop:Generator_ColumnVarNameInTable="columnDoklad" msprop:Generator_ColumnPropNameInTable="DokladColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Stredisko" msprop:Generator_UserColumnName="Stredisko" msprop:Generator_ColumnPropNameInRow="Stredisko" msprop:Generator_ColumnVarNameInTable="columnStredisko" msprop:Generator_ColumnPropNameInTable="StrediskoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SkladZdroj" msprop:Generator_UserColumnName="SkladZdroj" msprop:Generator_ColumnPropNameInRow="SkladZdroj" msprop:Generator_ColumnVarNameInTable="columnSkladZdroj" msprop:Generator_ColumnPropNameInTable="SkladZdrojColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="cfg_lok_mech" msprop:Generator_UserColumnName="cfg_lok_mech" msprop:Generator_ColumnVarNameInTable="columncfg_lok_mech" msprop:Generator_ColumnPropNameInRow="cfg_lok_mech" msprop:Generator_ColumnPropNameInTable="cfg_lok_mechColumn" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="SkladCil" msprop:Generator_UserColumnName="SkladCil" msprop:Generator_ColumnPropNameInRow="SkladCil" msprop:Generator_ColumnVarNameInTable="columnSkladCil" msprop:Generator_ColumnPropNameInTable="SkladCilColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

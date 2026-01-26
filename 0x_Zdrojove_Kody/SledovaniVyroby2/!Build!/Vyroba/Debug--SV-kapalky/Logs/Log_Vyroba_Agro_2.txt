@@ -1,0 +1,49 @@
+15.01.2024 15:50:14 : Spusteni modulu
+15.01.2024 15:53:23 : Spusteni modulu
+15.01.2024 16:26:58 : Spusteni modulu
+25.01.2024 16:05:52 : Spusteni modulu
+26.01.2024 9:14:58 : Spusteni modulu
+26.01.2024 9:41:56 : Spusteni modulu
+26.01.2024 10:12:45 : Spusteni modulu
+26.01.2024 10:15:03 : Spusteni modulu
+26.01.2024 10:32:13 : Spusteni modulu
+26.01.2024 10:39:11 : Spusteni modulu
+26.01.2024 10:43:49 : Spusteni modulu
+26.01.2024 10:54:27 : Spusteni modulu
+26.01.2024 11:02:33 : Spusteni modulu
+26.01.2024 11:04:20 : Spusteni modulu
+26.01.2024 11:11:36 : Spusteni modulu
+26.01.2024 11:15:42 : Spusteni modulu
+26.01.2024 11:18:19 : Spusteni modulu
+26.01.2024 11:26:53 : Spusteni modulu
+26.01.2024 12:15:18 : Spusteni modulu
+26.01.2024 12:31:34 : Spusteni modulu
+29.01.2024 8:59:15 : Spusteni modulu
+29.01.2024 10:04:39 : Spusteni modulu
+29.01.2024 10:20:39 : Spusteni modulu
+16.02.2024 13:14:35 : Spusteni modulu
+16.02.2024 13:21:11 : Spusteni modulu
+16.02.2024 13:23:00 : Spatny Kod: Houkacka
+16.02.2024 13:25:57 : Posledni paleta, DialogResult:Yes
+16.02.2024 13:25:58 : operace_Zmena() - Houkacka OFF
+16.02.2024 13:26:02 : Odhlášení směny (InformationUC.ButtonClick()|Odhlaseni|btnEnter)
+   Linka: 3
+   Směna: 6
+ Výrobků: 1
+   Pytlů: 8
+   Palet: 0
+ Rozpis výroby:
+ - čk: 8594005003507; Pytlů: 8; Palet: 0; M:"3320240216"
+16.02.2024 13:31:03 : Spusteni modulu
+16.02.2024 13:38:09 : Posledni paleta, DialogResult:No
+16.02.2024 13:47:06 : Spusteni modulu
+16.02.2024 14:02:34 : Spusteni modulu
+16.02.2024 14:20:50 : Spusteni modulu
+16.02.2024 14:22:46 : Posledni paleta, DialogResult:No
+16.02.2024 14:24:58 : Posledni paleta, DialogResult:No
+16.02.2024 14:26:04 : Spatny Kod: Houkacka
+16.02.2024 14:38:51 : Spusteni modulu
+16.02.2024 15:04:24 : Spusteni modulu
+16.02.2024 15:07:02 : Posledni paleta, DialogResult:No
+16.02.2024 15:08:15 : Spatny Kod: Houkacka
+04.03.2024 11:28:38 : Spusteni modulu

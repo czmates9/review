@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonDavka.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonDavka.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="buttonDavka.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="buttonDavka.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 40</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonDavka.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="buttonDavka.Text" xml:space="preserve">
+    <value>Výběr dávky</value>
+  </data>
+  <data name="&gt;&gt;buttonDavka.Name" xml:space="preserve">
+    <value>buttonDavka</value>
+  </data>
+  <data name="&gt;&gt;buttonDavka.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5903.30165, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonDavka.Parent" xml:space="preserve">
+    <value>tabPageDavky</value>
+  </data>
+  <data name="&gt;&gt;buttonDavka.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonStahnoutOdberatele.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="buttonStahnoutOdberatele.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="buttonStahnoutOdberatele.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 44</value>
+  </data>
+  <data name="buttonStahnoutOdberatele.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 40</value>
+  </data>
+  <data name="buttonStahnoutOdberatele.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="buttonStahnoutOdberatele.Text" xml:space="preserve">
+    <value>Odběratelé</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutOdberatele.Name" xml:space="preserve">
+    <value>buttonStahnoutOdberatele</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutOdberatele.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5903.30165, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutOdberatele.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutOdberatele.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonStahnoutZbozi.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="buttonStahnoutZbozi.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="buttonStahnoutZbozi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="buttonStahnoutZbozi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 40</value>
+  </data>
+  <data name="buttonStahnoutZbozi.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="buttonStahnoutZbozi.Text" xml:space="preserve">
+    <value>Zboží</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutZbozi.Name" xml:space="preserve">
+    <value>buttonStahnoutZbozi</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutZbozi.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5903.30165, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutZbozi.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutZbozi.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonStahnoutStrediska.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="buttonStahnoutStrediska.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="buttonStahnoutStrediska.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="buttonStahnoutStrediska.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 40</value>
+  </data>
+  <data name="buttonStahnoutStrediska.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="buttonStahnoutStrediska.Text" xml:space="preserve">
+    <value>Střediska</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutStrediska.Name" xml:space="preserve">
+    <value>buttonStahnoutStrediska</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutStrediska.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5903.30165, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutStrediska.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutStrediska.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonOdeslatDavku.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="buttonOdeslatDavku.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="buttonOdeslatDavku.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 49</value>
+  </data>
+  <data name="buttonOdeslatDavku.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 40</value>
+  </data>
+  <data name="buttonOdeslatDavku.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="buttonOdeslatDavku.Text" xml:space="preserve">
+    <value>Odeslat dávku</value>
+  </data>
+  <data name="&gt;&gt;buttonOdeslatDavku.Name" xml:space="preserve">
+    <value>buttonOdeslatDavku</value>
+  </data>
+  <data name="&gt;&gt;buttonOdeslatDavku.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5903.30165, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonOdeslatDavku.Parent" xml:space="preserve">
+    <value>tabPageDavky</value>
+  </data>
+  <data name="&gt;&gt;buttonOdeslatDavku.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="timerLoad.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="buttonStahnoutTypDokladu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="buttonStahnoutTypDokladu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="buttonStahnoutTypDokladu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 44</value>
+  </data>
+  <data name="buttonStahnoutTypDokladu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 40</value>
+  </data>
+  <data name="buttonStahnoutTypDokladu.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="buttonStahnoutTypDokladu.Text" xml:space="preserve">
+    <value>Typy dokladů</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutTypDokladu.Name" xml:space="preserve">
+    <value>buttonStahnoutTypDokladu</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutTypDokladu.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5903.30165, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutTypDokladu.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutTypDokladu.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tabPageDavky.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabPageDavky.Size" type="System.Drawing.Size, System.Drawing">
+    <value>273, 260</value>
+  </data>
+  <data name="tabPageDavky.Text" xml:space="preserve">
+    <value>Dávky</value>
+  </data>
+  <data name="&gt;&gt;tabPageDavky.Name" xml:space="preserve">
+    <value>tabPageDavky</value>
+  </data>
+  <data name="&gt;&gt;tabPageDavky.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageDavky.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPageDavky.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageCiselniky.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="buttonStahnoutLokace.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="buttonStahnoutLokace.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="buttonStahnoutLokace.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 85</value>
+  </data>
+  <data name="buttonStahnoutLokace.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 40</value>
+  </data>
+  <data name="buttonStahnoutLokace.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="buttonStahnoutLokace.Text" xml:space="preserve">
+    <value>Lokace</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutLokace.Name" xml:space="preserve">
+    <value>buttonStahnoutLokace</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutLokace.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5903.30165, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutLokace.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutLokace.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonStahnoutPracovniky.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="buttonStahnoutPracovniky.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="buttonStahnoutPracovniky.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 126</value>
+  </data>
+  <data name="buttonStahnoutPracovniky.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 40</value>
+  </data>
+  <data name="buttonStahnoutPracovniky.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="buttonStahnoutPracovniky.Text" xml:space="preserve">
+    <value>Pracovníci</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutPracovniky.Name" xml:space="preserve">
+    <value>buttonStahnoutPracovniky</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutPracovniky.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5903.30165, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutPracovniky.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;buttonStahnoutPracovniky.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 0</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 260</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>tabPageCiselniky</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitter1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 0</value>
+  </data>
+  <data name="splitter1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>3, 260</value>
+  </data>
+  <data name="&gt;&gt;splitter1.Name" xml:space="preserve">
+    <value>splitter1</value>
+  </data>
+  <data name="&gt;&gt;splitter1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitter1.Parent" xml:space="preserve">
+    <value>tabPageCiselniky</value>
+  </data>
+  <data name="&gt;&gt;splitter1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;buttonCiselnikMen.Name" xml:space="preserve">
+    <value>buttonCiselnikMen</value>
+  </data>
+  <data name="&gt;&gt;buttonCiselnikMen.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5903.30165, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonCiselnikMen.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;buttonCiselnikMen.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;buttonCiselikSkladu.Name" xml:space="preserve">
+    <value>buttonCiselikSkladu</value>
+  </data>
+  <data name="&gt;&gt;buttonCiselikSkladu.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5903.30165, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonCiselikSkladu.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;buttonCiselikSkladu.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 260</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>tabPageCiselniky</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabPageCiselniky.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabPageCiselniky.Size" type="System.Drawing.Size, System.Drawing">
+    <value>273, 260</value>
+  </data>
+  <data name="tabPageCiselniky.Text" xml:space="preserve">
+    <value>Číselníky</value>
+  </data>
+  <data name="&gt;&gt;tabPageCiselniky.Name" xml:space="preserve">
+    <value>tabPageCiselniky</value>
+  </data>
+  <data name="&gt;&gt;tabPageCiselniky.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageCiselniky.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPageCiselniky.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;buttonKonfigurace.Name" xml:space="preserve">
+    <value>buttonKonfigurace</value>
+  </data>
+  <data name="&gt;&gt;buttonKonfigurace.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5903.30165, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonKonfigurace.Parent" xml:space="preserve">
+    <value>tabPageKonfigurace</value>
+  </data>
+  <data name="&gt;&gt;buttonKonfigurace.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageKonfigurace.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabPageKonfigurace.Size" type="System.Drawing.Size, System.Drawing">
+    <value>273, 260</value>
+  </data>
+  <data name="tabPageKonfigurace.Text" xml:space="preserve">
+    <value>Konfigurace</value>
+  </data>
+  <data name="&gt;&gt;tabPageKonfigurace.Name" xml:space="preserve">
+    <value>tabPageKonfigurace</value>
+  </data>
+  <data name="&gt;&gt;tabPageKonfigurace.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageKonfigurace.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPageKonfigurace.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tabControl1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt</value>
+  </data>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 289</value>
+  </data>
+  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonCiselnikMen.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="buttonCiselnikMen.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="buttonCiselnikMen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 126</value>
+  </data>
+  <data name="buttonCiselnikMen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 40</value>
+  </data>
+  <data name="buttonCiselnikMen.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="buttonCiselnikMen.Text" xml:space="preserve">
+    <value>Měny</value>
+  </data>
+  <data name="&gt;&gt;buttonCiselnikMen.Name" xml:space="preserve">
+    <value>buttonCiselnikMen</value>
+  </data>
+  <data name="&gt;&gt;buttonCiselnikMen.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5903.30165, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonCiselnikMen.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;buttonCiselnikMen.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonCiselikSkladu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="buttonCiselikSkladu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="buttonCiselikSkladu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 85</value>
+  </data>
+  <data name="buttonCiselikSkladu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 40</value>
+  </data>
+  <data name="buttonCiselikSkladu.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="buttonCiselikSkladu.Text" xml:space="preserve">
+    <value>Sklady</value>
+  </data>
+  <data name="&gt;&gt;buttonCiselikSkladu.Name" xml:space="preserve">
+    <value>buttonCiselikSkladu</value>
+  </data>
+  <data name="&gt;&gt;buttonCiselikSkladu.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5903.30165, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonCiselikSkladu.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;buttonCiselikSkladu.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonKonfigurace.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="buttonKonfigurace.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="buttonKonfigurace.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="buttonKonfigurace.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 40</value>
+  </data>
+  <data name="buttonKonfigurace.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="buttonKonfigurace.Text" xml:space="preserve">
+    <value>Aktualizovat nastavení</value>
+  </data>
+  <data name="&gt;&gt;buttonKonfigurace.Name" xml:space="preserve">
+    <value>buttonKonfigurace</value>
+  </data>
+  <data name="&gt;&gt;buttonKonfigurace.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5903.30165, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonKonfigurace.Parent" xml:space="preserve">
+    <value>tabPageKonfigurace</value>
+  </data>
+  <data name="&gt;&gt;buttonKonfigurace.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonKonec.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="buttonKonec.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="buttonKonec.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 289</value>
+  </data>
+  <data name="buttonKonec.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 40</value>
+  </data>
+  <data name="buttonKonec.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="buttonKonec.Text" xml:space="preserve">
+    <value>Konec</value>
+  </data>
+  <data name="&gt;&gt;buttonKonec.Name" xml:space="preserve">
+    <value>buttonKonec</value>
+  </data>
+  <data name="&gt;&gt;buttonKonec.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5903.30165, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonKonec.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonKonec.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.FormFactorShadowProperty" xml:space="preserve">
+    <value>WEBPAD</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Skin" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>281, 329</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Prodej</value>
+  </data>
+  <data name="&gt;&gt;timerLoad.Name" xml:space="preserve">
+    <value>timerLoad</value>
+  </data>
+  <data name="&gt;&gt;timerLoad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ProdejMain</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

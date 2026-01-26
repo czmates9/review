@@ -1,0 +1,39 @@
+﻿
+08.01.2020 v0.6 TaD
+=============
+-Uprava podminek:
+Všude
+Když je rezervovana : if (item.STAV_SKLAD >= 0)
+Když neni rezervovana :  if ((item.STAV_SKLAD >= 0) && (item.ZBUDE >= 0) && (item.STAV_SKLAD >= item.ZBUDE))
+
+
+13.12.2019 v0.5 TaD
+=============
+-Ošetřeni SKz_Rezer a SKz_Stav na NULL hodnoty...
+-Pridana kontrola na to když položka z předlohy už neexistuje na předlohe...
+
+26.11.2019 v0.4 TaD + JiS + ZdD
+=============
+-Uprava vypočtu disponibility
+-pridana podminka pro čast vypočtu že pouze když je rezervovana
+
+-Plus vracena podminka  if ((item.STAV_SKLAD >= 0) && (item.ZBUDE >= 0) && (item.STAV_SKLAD >= item.ZBUDE))
+Všude
+
+
+05.11.2019 v0.3 TaD + JiS + JaS
+=============
+-Na vstup přidane stloupce :
+	*OBJPol_QTY_ZbyvaDodatPolozka (misto OBJPol_QTY_Rez)  je množstvi za jednu položku za jeden řádek na předlohe
+	*OBJPol_QTY_ZbyvaDodatCelkem je za jednu položku ale za N řadku pokud tam jsou
+
+-na vystupe :
+	*STAV_SKLAD_PRED - je hodnota Stavu skladu před pohybem
+	*ORD - ID řádku na OBJpol pokud je s předlohou
+
+-ChechDisp trida, hodne předelana, dotahovani, vypočet... vše
+
+
+04.11.2019 v0.2 TaD + JiS
+=============
+-už asi N-té předělávaní disponibility... :D

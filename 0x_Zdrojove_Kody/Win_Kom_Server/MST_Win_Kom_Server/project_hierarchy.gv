@@ -1,0 +1,111 @@
+// GraphViz picture: Project's files hierarchy by: TaD 2019
+// $Id: project_hierarchy.gv 138 2019-07-25 12:00:00Z tdivacky $
+
+digraph ProjectHierarchy
+	{
+
+    label="Server Projekt";
+    labelloc="t";
+
+	graph[size="11,11"];
+	rankdir="RL";
+	node[color="gray25", fontname="Helvetica", shape="Mrecord", style="solid"];
+		top[label="MSTW_Server project 2019", URL="\ref index"];
+
+	node[color="green", fontname="Helvetica", shape="Mrecord", style="dotted"];
+		Doxygen[label="Doxygen\ndocumentation", tooltip="Doxygen documentation", URL="\ref doc"];
+
+
+	node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="dotted"];
+		Default[label="Default.aspx.cs", URL="\ref Default.aspx.cs"];
+		WebService[label="WebService"];
+		Page[label="Page"];
+
+	node[color="goldenrod2", fontname="Helvetica", shape="Mrecord", style="solid"];
+		Vydej[label="Vydej.asmx.cs", tooltip="Vydej class", URL="\ref Vydej.asmx.cs"];
+		VydejTest[label="VydejTest.asmx.cs", tooltip="VydejTest class", URL="\ref VydejTest.asmx.cs"];
+		Upload[label="Upload.aspx.cs", tooltip="Upload class", URL="\ref Upload.aspx.cs"];
+		Ukolovani[label="Ukolovani.asmx.cs", tooltip="Ukolovani class", URL="\ref Ukolovani.asmx.cs"];
+		TiskTest[label="TiskTest.asmx.cs", tooltip="TiskTest class", URL="\ref TiskTest.asmx.cs"];
+		Tisk[label="Tisk.asmx.cs", tooltip="Tisk class", URL="\ref Tisk.asmx.cs"];
+		Test[label="Test.asmx.cs", tooltip="Test class", URL="\ref Test.asmx.cs"];
+		SystemTime[label="SystemTime.asmx.cs", tooltip="SystemTime class", URL="\ref SystemTime.asmx.cs"];
+		Servis[label="Servis.asmx.cs", tooltip="Servis class", URL="\ref Servis.asmx.cs"];
+		RFID[label="RFID.asmx.cs", tooltip="RFID class", URL="\ref RFID.asmx.cs"];
+		Prodej[label="Prodej.asmx.cs", tooltip="Prodej class", URL="\ref Prodej.asmx.cs"];
+		ProdejTest[label="ProdejTest.asmx.cs", tooltip="ProdejTest class", URL="\ref ProdejTest.asmx.cs"];
+		Prijem[label="Prijem.asmx.cs", tooltip="Prijem class", URL="\ref Prijem.asmx.cs"];
+		PrijemTest[label="PrijemTest.asmx.cs", tooltip="PrijemTest class", URL="\ref PrijemTest.asmx.cs"];
+		Lokace[label="Lokace.asmx.cs", tooltip="Lokace class", URL="\ref Lokace.asmx.cs"];
+		LoginService[label="LoginService.asmx.cs", tooltip="LoginService class", URL="\ref LoginService.asmx.cs"];
+		Login[label="Login.aspx.cs", tooltip="Login class", URL="\ref Login.aspx.cs"];
+		Inventura1[label="Inventura1.asmx.cs", tooltip="Inventura1 class", URL="\ref Inventura1.asmx.cs"];
+		Inventura2[label="Inventura2.asmx.cs", tooltip="Inventura2 class", URL="\ref Inventura2.asmx.cs"];
+		Expedice[label="Expedice.asmx.cs", tooltip="Expedice class", URL="\ref Expedice.asmx.cs"];
+		ExpediceTest[label="ExpediceTest.asmx.cs", tooltip="ExpediceTest class", URL="\ref ExpediceTest.asmx.cs"];
+		EventsService[label="EventsService.asmx.cs", tooltip="EventsService class", URL="\ref EventsService.asmx.cs"];
+		Configuration[label="Configuration.asmx.cs", tooltip="Configuration class", URL="\ref Configuration.asmx.cs"];
+		Ciselnik[label="Ciselnik.asmx.cs", tooltip="Ciselnik class", URL="\ref Ciselnik.asmx.cs"];
+
+
+	Doxygen -> top [color="green"];
+
+	edge[color="goldenrod2"];
+		Default -> top;
+		
+		Upload-> Default;
+		Login-> Default;
+		Vydej-> Default;
+        VydejTest-> Default;
+        Ukolovani-> Default;
+        TiskTest-> Default;
+        Tisk-> Default;
+        Test-> Default;
+        Servis-> Default;
+        SystemTime-> Default;
+        RFID-> Default;
+        Prodej-> Default;
+        ProdejTest-> Default;
+        Prijem-> Default;
+        PrijemTest-> Default;
+        Lokace-> Default;
+        LoginService-> Default;
+        Inventura1-> Default;
+        Inventura2-> Default;
+        Expedice-> Default;
+        ExpediceTest-> Default;
+        EventsService-> Default;
+        Configuration-> Default;
+        Ciselnik-> Default;
+
+		
+
+	edge[color="lightblue2" style="dashed"];
+        Page -> Default;
+        Page -> Upload;
+        Page -> Login;
+        
+        WebService -> Vydej;
+        WebService -> VydejTest;
+        WebService -> Ukolovani;
+        WebService -> TiskTest;
+        WebService -> Tisk;
+        WebService -> Test;
+        WebService -> Servis ;
+        WebService -> SystemTime;
+        WebService -> RFID;
+        WebService -> Prodej;
+        WebService -> ProdejTest;
+        WebService -> Prijem;
+        WebService -> PrijemTest;
+        WebService -> Lokace;
+        WebService -> LoginService;
+        WebService -> Inventura1;
+        WebService -> Inventura2;
+        WebService -> Expedice;
+        WebService -> ExpediceTest;
+        WebService -> EventsService;
+        WebService -> Configuration;
+        WebService -> Ciselnik;
+
+	}

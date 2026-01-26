@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="InputKod2_Label">InputKod2</string>
+  <string name="InputKod2_OK">OK</string>
+  <string name="InputKod2_Storno">Zrušit</string>
+  <string name="InputKod2_Label_Text">Zadejte XXX</string>
+  <string name="InputKod2_Text_Material">Material:</string>
+
+  <string name="InputKod2_TW_lbl_Mnozstvi">Množství:</string>
+  <string name="InputKod2_TW_lbl_Sklad">Sklad:</string>
+  <string name="InputKod2_TW_lbl_Lokace">Lokace:</string>
+  
+</resources>

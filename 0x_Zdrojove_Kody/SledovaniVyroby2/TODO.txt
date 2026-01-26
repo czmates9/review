@@ -1,0 +1,32 @@
+29.6.2012 - Synchronizacni interval zmenit na [sekundy] ->> 10.7.2012 - JK Naimplementovano, vyzkouseno.
+1.8.2012 - Historie operaci (jedna historie pro vse do panelu) ->> Ok
+1.8.2012 - Vystredit dialogy pro zadavani scanovani ->> Ok
+1.8.2012 - Upravit hlasku na nesouhlasny material (Information, jen zprava a material) ->> Ok
+1.8.2012 - Vlozit dynamicky vkladane datasety dovnitr operace! ->> ok
+
+
+Pripominky
+==========
+
+1) qty
+- neobsahuje vynasobenou hodnotu kusy * nasobitel
+
+2) logovani
+- umoznit login id nacist scannerem
+- nastavit comport, ze ktereho bude login nacitan
+
+3) Kde se nastavuje reportType
+- pokud se nenastavuje, tak umoznit jeho nastaveni
+- do odvodniho okna doplnit moznost vyberu typu odvodu
+- defaultne nastaveno 'D'-dokoncovaci
+
+4) upload dat na server
+- pokud se nepovede upload jednoho zaznamu, tak pokracovat nasledujicim zaznamem
+- transakcne tedy odvest vzdy jeden radek
+
+5) omezit hodnotu mnozstvi, kterou lze zadat v aplikaci pri potvrzeni odvodu na max smallint (-32565:32655)
+
+6) v aplikaci v dialogu potvrzeni odvodu
+- zobrazit informaci zakazce, dilci a poradovem cisle
+- alternativne i ostatni hodnoty z car.kodu...
+

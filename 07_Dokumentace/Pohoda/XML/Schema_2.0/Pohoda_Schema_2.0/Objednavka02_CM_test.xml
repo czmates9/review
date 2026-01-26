@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="Windows-1250"?>
+<dat:dataPack id="objv130001" ico="12345678" application="MST" version = "2.0" note="Import objednavky"
+xmlns:dat="http://www.stormware.cz/schema/version_2/data.xsd"
+xmlns:ord="http://www.stormware.cz/schema/version_2/order.xsd"
+xmlns:typ="http://www.stormware.cz/schema/version_2/type.xsd">
+<dat:dataPackItem id="OBJV130001" version="2.0">
+  <ord:order version="2.0">
+      <ord:orderHeader>
+        <ord:orderType>issuedOrder</ord:orderType>
+        <ord:number>
+          <typ:ids>100</typ:ids>
+        </ord:number>
+          <ord:paymentType>
+              <typ:ids>EUR</typ:ids>
+          </ord:paymentType>
+          <ord:date>2013-11-21</ord:date>
+          <ord:text></ord:text>
+          <ord:partnerIdentity>
+              <typ:id>7</typ:id>
+          </ord:partnerIdentity>
+          <ord:note>nacteno z xml - terminal</ord:note>
+          <ord:intNote>doplnit</ord:intNote>
+      </ord:orderHeader>
+      <ord:orderDetail>
+      <ord:orderItem>
+          <ord:quantity>6</ord:quantity>
+          <ord:unit>ks</ord:unit>
+          <ord:coefficient>1</ord:coefficient>
+          <ord:discountPercentage>0</ord:discountPercentage>
+          <ord:stockItem>
+              <typ:stockItem>
+                  <typ:id>3</typ:id>
+              </typ:stockItem>
+          </ord:stockItem>
+      </ord:orderItem>        
+      <ord:orderItem>
+          <ord:quantity>1</ord:quantity>
+          <ord:unit>ks</ord:unit>
+          <ord:coefficient>1</ord:coefficient>
+          <ord:discountPercentage>0</ord:discountPercentage>
+          <ord:stockItem>
+              <typ:stockItem>
+                  <typ:id>4</typ:id>
+              </typ:stockItem>
+          </ord:stockItem>
+      </ord:orderItem>        
+    </ord:orderDetail>
+    <ord:orderSummary>
+      <ord:foreignCurrency>
+        <typ:currency>
+          <typ:id>9</typ:id>
+        </typ:currency>
+      </ord:foreignCurrency>
+    </ord:orderSummary>
+  </ord:order>      
+</dat:dataPackItem>
+</dat:dataPack>

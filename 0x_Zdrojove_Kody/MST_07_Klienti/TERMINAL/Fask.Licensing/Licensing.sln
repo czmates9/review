@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Licensing", "Licensing.csproj", "{6FEA4EE0-B71B-43B6-8842-12FBF21B56D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fask.Encryption", "..\Encryption\Fask.Encryption.csproj", "{CF1C2234-76AD-4506-A0C4-C3038D74F6A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FEA4EE0-B71B-43B6-8842-12FBF21B56D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FEA4EE0-B71B-43B6-8842-12FBF21B56D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FEA4EE0-B71B-43B6-8842-12FBF21B56D9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6FEA4EE0-B71B-43B6-8842-12FBF21B56D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FEA4EE0-B71B-43B6-8842-12FBF21B56D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FEA4EE0-B71B-43B6-8842-12FBF21B56D9}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CF1C2234-76AD-4506-A0C4-C3038D74F6A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF1C2234-76AD-4506-A0C4-C3038D74F6A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF1C2234-76AD-4506-A0C4-C3038D74F6A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF1C2234-76AD-4506-A0C4-C3038D74F6A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

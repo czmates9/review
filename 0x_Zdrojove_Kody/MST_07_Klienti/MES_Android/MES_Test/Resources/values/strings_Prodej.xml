@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+
+    <string name="Prodej3ProdejVyberDavkyChybaVCisleDavky">Chyba v čísle dávky</string>
+    <string name="Prodej3ProdejVyberDavkyDavkaJizExistuje">Dávka s č.{0} již existuje</string>
+
+    <string name="Prodej3ProdejVyberDavkyZrusitDavkuDotaz">Opravdu zrušit dávku č.{0}?</string>
+    <string name="ProdejDavkaLokMechKontrola">Je zapnutý lokační mechanismus, dávku není možné smazat, pokud obsahuje data.</string>
+
+    <string name="Prodej3ProdejMainChybaPriOdeslaniDavky">Chyba při odesílání dávky</string>
+    <string name="Prodej3ProdejMainDavkaSeNepodarilaOdeslat">Dávku č.{0} se nepodařilo odeslat</string>
+    <string name="Prodej3ProdejMainDavkaOdeslana">Dávka č.{0} odeslána</string>
+    <string name="Prodej3ProdejMainDavkaNeobsahujePolozky">Dávku č.{0} nelze odeslat, protože neobsahuje žádné položky</string>
+
+    <string name="Prodej3ProdejListPolozkuJdeZadatPouzeScannerem">Položku lze zadat pouze nasnímáním čár. kódu.</string>
+    <string name="Prodej3ProdejListNeniVybranoZbozi">Není vybráno zboží</string>
+    <string name="Prodej3ProdejListPridatPolozku">Přidat položku</string>
+
+
+    <string name="Prodej3ProdejListDoporucenePaletyNenalezenyPokracovatDotaz">Nebyly nalezeny doporučené palety. Přesto pokračovat? </string>
+    <string name="Prodej3ProdejListKomunikaceServeruProblemPokracovatDotaz">Nepodařilo se načíst seznam doporučených palet. Přesto pokračovat?</string>
+
+
+    <string name="Prodej3ProdejListMnozstvi">Množství</string>
+    <string name="Prodej3ProdejListVlozteMnozstviBaleni">Vložte množství balení</string>
+    <string name="Prodej3ProdejListMnozstviBaleni">Množství balení</string>
+    <string name="Prodej3ProdejListVlozteMnozstvi">Vložte množství</string>
+
+    <string name="Prodej3ProdejListInfo">Info</string>
+    <string name="Prodej3ProdejListPolozkaPreplnenaPokracovatDotaz"> Položka přeplněna! Chcete pokračovat v uložení množství?</string>
+
+
+    <string name="Prodej3ProdejListSerioveCislo">Sériové číslo</string>
+    <string name="Prodej3ProdejListVlozteSerioveCislo">Vložte Sériové číslo</string>
+    <string name="Prodej3ProdejListSarze">Šarže</string>
+    <string name="Prodej3ProdejListVlozteSarze">Šarže</string>
+
+    <string name="Prodej3ProdejListSerioveCisloJizByloNasnimano">Sériové číslo pro tuto položku již bylo nasnímáno!</string>
+
+
+    <string name="Prodej3ProdejListKomunikaceServeruProblemOverLokaciPokracovatDotaz">Nepodařilo se ověřit zdrojovou lokaci.Přesto pokračovat?</string>
+    <string name="Prodej3ProdejListNeniMozneBratZLokace">Není možné brát z této lokace.</string>
+    <string name="Prodej3ProdejListPorusenoDoporucenePoradiPokracovatDotaz">Bylo porušeno doporučené pořadí lokací.Přesto pokračovat?</string>
+
+    <string name="Prodej3ProdejListZadaniDoplnujiciHodnoty">Zadání doplňující hodnoty</string>
+
+    <string name="Prodej3ProdejListCilovySkladNenalezenDotaz">Odpovídající cílový sklad s ID {0} nenalezen!\n\nVyberte jiný ze seznamu</string>
+    <string name="Prodej3ProdejMainVyberCilovehoSkladu">Výběr cílového skladu</string>
+
+    <string name="Prodej3ProdejMainAktualizaceCiselnikuZboziDotaz">Chcete aktualizovat číselník zboží?</string>
+
+    <string name="Prodej3ProdejMainSkladNenalezenVyberteJiny">Odpovídající sklad s ID {0} nenalezen!</string>
+    <string name="Prodej3ProdejMainSkladCilNenalezenVyberteJiny">Odpovídající cílový sklad s ID {0} nenalezen!</string>
+
+    <string name="Prodej3ProdejMainZadejteCisloZakazky">Zadejte číslo zakázky</string>
+
+    <string name="Prodej3ProdejMainZadejteCisloPalety">Zadejte číslo palety</string>
+
+
+
+  <string name="Prodej3ProdejListVyberCiloveLokace">Výběr cílové lokace</string>
+  <string name="Prodej3ProdejListTiskEtiketyDotaz">Vytisknout Etiketu?</string>
+  <string name="Prodej3ProdejListTiskEtiketaSCenou">Tisknout etiketu s cenou?</string>
+
+  <string name="Prodej3ProdejListPolozkaSCarKodNeboSarziNenalezenaOnline">Položka s č. k. nebo šarží {0} nenalezena online.</string>
+  <string name="Prodej3ProdejListPolozkaSCarKodNeboSarziNenalezena">Položka s č. k. nebo šarží {0} nelezena ve skladu online</string>
+  <string name="Prodej3ProdejListPolozkaSCarKodNenalezena">Položka s č. k. {0} nenalezena.</string>
+  <string name="Prodej3ProdejListPolozkaSCarKodNeboSarziNenalezenaVeSkladuOnline">Položka s č. k. nebo šarží {0} nelezena ve skladu online</string>
+
+  <string name="Prodej3ProdejListNalezenoViceZaznamuVyberRucne">Nalezeno více záznamů. Vyberte odpovídající ze seznamu.</string>
+  <string name="Prodej3ProdejListNalezenoViceZaznamuUpresneteVyhledani">Nalezeno více jak {0} záznamů. Upřesněte vyhledávání...</string>
+
+  <string name="Prodej3ProdejListVlozteSklad">Vložte sklad</string>
+
+  <string name="Prodej3ProdejListLokace">Lokace</string>
+  <string name="Prodej3ProdejListCilovaLokace">Cílová lokace</string>
+
+  <string name="Prodej3ProdejListVlozteLokaci">Vložte lokaci</string>
+  <string name="Prodej3ProdejListVlozteCilovouLokaci">Vložte cílovou lokaci</string>
+
+  <string name="Prodej3ProdejListPorusenoDoporucenePoradiCilLokacePokracovatDotaz">Bylo porušeno doporučené pořadí cílových lokací. Přesto pokračovat?</string>
+  <string name="Prodej3ProdejListNeniMozneUlozitNaLokaci">Není možné uložit na tuto lokaci.</string>
+  <string name="Prodej3ProdejListKomunikaceServeruProblemOverCilLokaciPokracovatDotaz">Nepodařilo se ověřit cílovou lokaci.Přesto pokračovat?</string>
+
+  <string name="Prodej3ProdejVyberDavkyZadejteCisloDavky">Zadejte číslo dávky.</string>
+
+  <string name="Prodej3ProdejNepodariloSeNajitIDSkladuOnlineProMaterial">Nepodařilo se načíst ID skladu online pro materiál {0}</string>
+
+  
+</resources>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+  <item android:title="@string/CiselnikySeznam">
+            <menu>
+              <item
+                android:id="@+id/nav_Ciselnik_Zasoby"
+                android:icon="@drawable/refreshing"
+                android:title="@string/Zasoby" />
+              <item
+                android:id="@+id/nav_Ciselnik_Odberatele"
+                android:icon="@drawable/refreshing"
+                android:title="@string/Odberatele" />
+              <item
+                android:id="@+id/nav_Ciselnik_Sklady"
+                android:icon="@drawable/refreshing"
+                android:title="@string/Sklady" />
+              <item
+                android:id="@+id/nav_Ciselnik_Meny"
+                android:icon="@drawable/refreshing"
+                android:title="@string/Meny" />
+              <item
+                android:id="@+id/nav_Ciselnik_Strediska"
+                android:icon="@drawable/refreshing"
+                android:title="@string/Strediska" />
+              <item
+                android:id="@+id/nav_Ciselnik_TypyDokladu"
+                android:icon="@drawable/refreshing"
+                android:title="@string/TypyDokladu" />
+              <item
+                android:id="@+id/nav_Ciselnik_Lokace"
+                android:icon="@drawable/refreshing"
+                android:title="@string/Lokace" />
+              <item
+                android:id="@+id/nav_Ciselnik_Pracovnici"
+                android:icon="@drawable/refreshing"
+                android:title="@string/Pracovnici" />
+            </menu>
+  </item>
+
+  <item android:title="@string/agendy">
+    <menu>
+      <item
+          android:id="@+id/nav_Prijem"
+          android:icon="@drawable/prijem"
+          android:title="@string/Prijem" />
+      <item
+          android:id="@+id/nav_Vydej"
+          android:icon="@drawable/vydej"
+          android:title="@string/Vydej" />
+      <item
+          android:id="@+id/nav_Prodej"
+          android:icon="@drawable/prodej"
+          android:title="@string/Prodej" />
+      <item
+          android:id="@+id/nav_Inventura"
+          android:icon="@drawable/inventura"
+          android:title="@string/Inventura" />
+      <item
+          android:id="@+id/nav_Expedice"
+          android:icon="@drawable/expedice"
+          android:title="@string/Expedice" />
+      <item
+          android:id="@+id/nav_Vyroba"
+          android:icon="@drawable/vyroba"
+          android:title="@string/Vyroba" />
+    </menu>
+  </item>
+
+  <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/nav_Ciselniky"
+        android:icon="@drawable/refreshing"
+        android:title="@string/Ciselnik" />
+    <item
+        android:id="@+id/nav_Konfigurace"
+        android:icon="@drawable/settings"
+        android:title="@string/Menu_Konfigurace" />
+    <item
+        android:id="@+id/nav_Odhlasit"
+        android:icon="@drawable/logout"
+        android:title="@string/Menu_Odhlasit" />
+  </group>
+
+
+
+</menu>

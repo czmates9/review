@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Pytel" targetNamespace="http://tempuri.org/Pytel.xsd" xmlns:mstns="http://tempuri.org/Pytel.xsd" xmlns="http://tempuri.org/Pytel.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Pytel" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="Pytel" msprop:Generator_UserDSName="Pytel" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Pytel" msprop:Generator_UserTableName="Pytel" msprop:Generator_RowDeletedName="PytelRowDeleted" msprop:Generator_TableClassName="PytelDataTable" msprop:Generator_RowChangedName="PytelRowChanged" msprop:Generator_RowClassName="PytelRow" msprop:Generator_RowChangingName="PytelRowChanging" msprop:Generator_RowEvArgName="PytelRowChangeEvent" msprop:Generator_RowEvHandlerName="PytelRowChangeEventHandler" msprop:Generator_TablePropName="_Pytel" msprop:Generator_TableVarName="tablePytel" msprop:Generator_RowDeletingName="PytelRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nazev" msprop:Generator_UserColumnName="Nazev" msprop:Generator_ColumnPropNameInRow="Nazev" msprop:Generator_ColumnVarNameInTable="columnNazev" msprop:Generator_ColumnPropNameInTable="NazevColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MinDelay" msprop:Generator_UserColumnName="MinDelay" msprop:Generator_ColumnPropNameInRow="MinDelay" msprop:Generator_ColumnVarNameInTable="columnMinDelay" msprop:Generator_ColumnPropNameInTable="MinDelayColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="MaxDelay" msprop:Generator_UserColumnName="MaxDelay" msprop:Generator_ColumnPropNameInRow="MaxDelay" msprop:Generator_ColumnVarNameInTable="columnMaxDelay" msprop:Generator_ColumnPropNameInTable="MaxDelayColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

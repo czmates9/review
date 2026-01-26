@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<DSConfigPrinterProviderWebService xmlns="http://fask.cz/DSConfigPrinterProviderWebService.xsd">
+  <Params>
+    <Address>http://10.254.129.3:8089/</Address>
+    <Name />
+    <Timeout>20000</Timeout>
+    <PrinterName>ZDesigner GT800 (EPL)</PrinterName>
+    <OneWayPrint>false</OneWayPrint>
+  </Params>
+</DSConfigPrinterProviderWebService>

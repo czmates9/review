@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Fask.Module.Print.GS1.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="GS1_REF" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">REF :</Value>
+    </Setting>
+    <Setting Name="GS1_LOT" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">LOT :</Value>
+    </Setting>
+    <Setting Name="GS1_UseByDate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Use by date :</Value>
+    </Setting>
+    <Setting Name="GS1_GTIN" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">GTIN :</Value>
+    </Setting>
+    <Setting Name="GS1_SN" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SN :</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

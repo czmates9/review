@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://Tisk.fask.cz/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://Tisk.fask.cz/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba pro tisk.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Tisk.fask.cz/">
+      <s:import namespace="http://tempuri.org/DSValues.xsd" />
+      <s:import schemaLocation="http://localhost/MST_Win_Kom_Server_7_Dasenka/Tisk.asmx?schema=DSValues" namespace="http://tempuri.org/DSValues.xsd" />
+      <s:element name="EtiketaBezNavratu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="printerParams" type="tns:TiskParams" />
+            <s:element minOccurs="0" maxOccurs="1" name="data">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DSValues.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="pocetVytisku" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TiskParams">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CONFIG_IP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CONFIG_IP_PORT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CONFIG_NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CONFIG_COM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CONFIG_TYPE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HEIGHT_PAPER_SIZE" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="WIDTH_PAPER_SIZE" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PAPER_KIND" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Etiketa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="printerParams" type="tns:TiskParams" />
+            <s:element minOccurs="0" maxOccurs="1" name="data">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DSValues.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="pocetVytisku" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EtiketaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EtiketaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SoupisBezNavratu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="printerParams" type="tns:TiskParams" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataHeader">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DSValues.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="dataRowList" type="tns:ArrayOfDSValues" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataFooter">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DSValues.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="templateHeader" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateRow" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateFooter" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pocet" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDSValues">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DSValues" nillable="true">
+            <s:complexType>
+              <s:sequence>
+                <s:any namespace="http://tempuri.org/DSValues.xsd" />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Soupis">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="printerParams" type="tns:TiskParams" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataHeader">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DSValues.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="dataRowList" type="tns:ArrayOfDSValues" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataFooter">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DSValues.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="templateHeader" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateRow" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateFooter" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pocet" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SoupisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SoupisResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="EtiketaBezNavratuSoapIn">
+    <wsdl:part name="parameters" element="tns:EtiketaBezNavratu" />
+  </wsdl:message>
+  <wsdl:message name="EtiketaSoapIn">
+    <wsdl:part name="parameters" element="tns:Etiketa" />
+  </wsdl:message>
+  <wsdl:message name="EtiketaSoapOut">
+    <wsdl:part name="parameters" element="tns:EtiketaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SoupisBezNavratuSoapIn">
+    <wsdl:part name="parameters" element="tns:SoupisBezNavratu" />
+  </wsdl:message>
+  <wsdl:message name="SoupisSoapIn">
+    <wsdl:part name="parameters" element="tns:Soupis" />
+  </wsdl:message>
+  <wsdl:message name="SoupisSoapOut">
+    <wsdl:part name="parameters" element="tns:SoupisResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TiskSoap">
+    <wsdl:operation name="EtiketaBezNavratu">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Proběhne tisk etikety bez čekání na výsledek tisku</wsdl:documentation>
+      <wsdl:input message="tns:EtiketaBezNavratuSoapIn" />
+    </wsdl:operation>
+    <wsdl:operation name="Etiketa">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Univerzalni metoda pro tisk Etikety</wsdl:documentation>
+      <wsdl:input message="tns:EtiketaSoapIn" />
+      <wsdl:output message="tns:EtiketaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SoupisBezNavratu">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Proběhne tisk etikety bez čekání na výsledek tisku.</wsdl:documentation>
+      <wsdl:input message="tns:SoupisBezNavratuSoapIn" />
+    </wsdl:operation>
+    <wsdl:operation name="Soupis">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda ktera provede normalizaci a zjednoceni dat, a zavola metodu pro tisk soupisu</wsdl:documentation>
+      <wsdl:input message="tns:SoupisSoapIn" />
+      <wsdl:output message="tns:SoupisSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TiskSoap" type="tns:TiskSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EtiketaBezNavratu">
+      <soap:operation soapAction="http://Tisk.fask.cz/EtiketaBezNavratu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="Etiketa">
+      <soap:operation soapAction="http://Tisk.fask.cz/Etiketa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SoupisBezNavratu">
+      <soap:operation soapAction="http://Tisk.fask.cz/SoupisBezNavratu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="Soupis">
+      <soap:operation soapAction="http://Tisk.fask.cz/Soupis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TiskSoap12" type="tns:TiskSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EtiketaBezNavratu">
+      <soap12:operation soapAction="http://Tisk.fask.cz/EtiketaBezNavratu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="Etiketa">
+      <soap12:operation soapAction="http://Tisk.fask.cz/Etiketa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SoupisBezNavratu">
+      <soap12:operation soapAction="http://Tisk.fask.cz/SoupisBezNavratu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="Soupis">
+      <soap12:operation soapAction="http://Tisk.fask.cz/Soupis" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Tisk">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba pro tisk.</wsdl:documentation>
+    <wsdl:port name="TiskSoap" binding="tns:TiskSoap">
+      <soap:address location="http://localhost/MST_Win_Kom_Server_7_Dasenka/Tisk.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TiskSoap12" binding="tns:TiskSoap12">
+      <soap12:address location="http://localhost/MST_Win_Kom_Server_7_Dasenka/Tisk.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

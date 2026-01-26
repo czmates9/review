@@ -1,0 +1,24 @@
+Sledování expirací:
+předlohy rozsireny o priznak "CZ_Expiration_Track" tinyint (0=nesledovano, 1=sledovano)
+Pokud je parametr aktivni, dochazi k vyzadani hodnoty expirace ve formatu RRMMDD (rok, mesic, den) a tato hodnota je ulozena od vystupnich dat do pole "Expiration" DateTime. 
+Pokud polozka neni sledovana na expiraci, tak je tato hodnota pole Expiration = NULL 
+
+Pokud polozka neni sledovana na expiraci, Expriation=NULL
+Pokud polozka je sledovana na expiraci:
+- Pokud je expirace soucasti caroveho kodu(format GS1, respektive code is ICodeExpiration), tak je hodnota expirace predvyplnena touto hodnotou a dialog pro zadani expirace se nezobrazi
+- Pokud neni expirace soucasti caroveho kodu, tak se zobrazi dialog pro zadani expirace ve formatu RRMMDD (InputBoxExpirace). 
+- Pokud je polozka vybrana rucne ze seznamu, dojde k zobrazeni dialogu zadani expirace (InputBoxExpirace).
+
+InputBoxExpirace: V tomto dialogu je mozne naskenovat jakykoli carovy kod, ktery se pouzije jako hodnota expirace. Tato hodnota musi byt ve formatu RRMMDD. Pokud neni v tomto formatu, tak nasledna verifikace formatu bude neuspesna a dialog se zobrazi znovu s predvyplnenou posledni hodnotou.
+
+Specifika pro moduly:
+Prijem
+- Mozne doplnit funkcnost "Overeni doby expirace" < online funkce: kontrola minimalni doby expirace pro prijem na sklad
+
+Vydej
+- FEFO/FIFO : pokud je aktivni parametr pro dotahovani polozek online, pak se po vobe sarze provadi kontrola na vydej dle FEFO/FIFO.
+
+Inventura
+- nic zasadniho
+
+

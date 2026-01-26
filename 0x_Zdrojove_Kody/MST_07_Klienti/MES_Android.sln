@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MES_Android", "MES_Android\MES_Test\MES_Android.csproj", "{415099E8-8799-464B-BA9E-D93A3A970288}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fask.Scanner.Zebra_EMDK", "MES_Android\Fask.Scanner.Zebra_EMDK\Fask.Scanner.Zebra_EMDK.csproj", "{2525F913-9F1A-43C0-BC60-498941B3DC11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fask.Interfaces", "MES_Android\Fask.Interfaces\Fask.Interfaces.csproj", "{D79B23AC-6942-42B9-B704-A1E9B7C0F97B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fask.Logging", "MES_Android\Fask.Logging\Fask.Logging.csproj", "{6D9A9E99-A0C3-4EEB-BC0E-103F8F574D22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fask.Scanner.Camera_ZXing", "MES_Android\Fask.Scanner.Camera_ZXing\Fask.Scanner.Camera_ZXing.csproj", "{F743B1DC-988D-4F81-88EE-DB10872A05AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fask.Parsing", "MES_Android\Fask.Parsing\Fask.Parsing.csproj", "{AF70800E-85EA-4605-8CC2-8AE5D7ECAE8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FASK.Vaha.RAVAS", "MES_Android\FASK.Vaha.RAVAS\FASK.Vaha.RAVAS.csproj", "{50D56989-3C59-4725-9E5D-E28D09E14BF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{415099E8-8799-464B-BA9E-D93A3A970288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{415099E8-8799-464B-BA9E-D93A3A970288}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{415099E8-8799-464B-BA9E-D93A3A970288}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{415099E8-8799-464B-BA9E-D93A3A970288}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{415099E8-8799-464B-BA9E-D93A3A970288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{415099E8-8799-464B-BA9E-D93A3A970288}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2525F913-9F1A-43C0-BC60-498941B3DC11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2525F913-9F1A-43C0-BC60-498941B3DC11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2525F913-9F1A-43C0-BC60-498941B3DC11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2525F913-9F1A-43C0-BC60-498941B3DC11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D79B23AC-6942-42B9-B704-A1E9B7C0F97B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D79B23AC-6942-42B9-B704-A1E9B7C0F97B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D79B23AC-6942-42B9-B704-A1E9B7C0F97B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D79B23AC-6942-42B9-B704-A1E9B7C0F97B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D9A9E99-A0C3-4EEB-BC0E-103F8F574D22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D9A9E99-A0C3-4EEB-BC0E-103F8F574D22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D9A9E99-A0C3-4EEB-BC0E-103F8F574D22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D9A9E99-A0C3-4EEB-BC0E-103F8F574D22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F743B1DC-988D-4F81-88EE-DB10872A05AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F743B1DC-988D-4F81-88EE-DB10872A05AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F743B1DC-988D-4F81-88EE-DB10872A05AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F743B1DC-988D-4F81-88EE-DB10872A05AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF70800E-85EA-4605-8CC2-8AE5D7ECAE8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF70800E-85EA-4605-8CC2-8AE5D7ECAE8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF70800E-85EA-4605-8CC2-8AE5D7ECAE8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF70800E-85EA-4605-8CC2-8AE5D7ECAE8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50D56989-3C59-4725-9E5D-E28D09E14BF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50D56989-3C59-4725-9E5D-E28D09E14BF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50D56989-3C59-4725-9E5D-E28D09E14BF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50D56989-3C59-4725-9E5D-E28D09E14BF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {633F51B4-3A97-40EE-9385-8D587442E28B}
+	EndGlobalSection
+EndGlobal

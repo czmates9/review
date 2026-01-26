@@ -1,0 +1,36 @@
+﻿
+/******* BODY**********/
+body {
+    font-family:Verdana,MS Sans Serif;
+    font-size:10pt;
+    background-image:url('../Image/Gen_TopBand.jpg');
+    background-repeat:no-repeat
+}
+
+/******KOMENTARE*****/
+
+
+.Comment {
+    padding: 20px;
+}
+
+.ClickCommentCursor {
+    cursor: help;
+}
+
+
+/******* Hx nadpise ******/
+
+
+H1 {font-size:22pt; color:#1b5fa6; padding-left:0px; margin-top:95pt;}
+H2 {font-size:18pt; color:#1b5fa6; padding-left:0px; margin-top:95pt; font-weight:bold;}
+H3 {font-size:16pt; color:#1b5fa6; padding-left:0px; margin-top:10pt; font-weight:bold}
+H4 {font-size:13pt; color:#000000; border-top-style:solid; border-top-width:1; border-top-color:#A0A080;padding-top:15px}
+H5 {font-size:12pt; color:#505050; text-align:Left; font-family:Arial; font-weight: bold;text-decoration:underline;}
+H6 {font-size:12pt; color:#505050; text-align:Left; font-family:Arial; text-decoration:underline; }
+
+
+
+
+
+

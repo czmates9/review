@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://fask.cz/PrijemDavky.xsd" xmlns="http://fask.cz/PrijemDavky.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://fask.cz/PrijemDavky.xsd" id="PrijemDavky" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="en-US" name="PrijemDavky">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Hlavicky">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CountEntries" type="xs:string" />
+              <xs:element minOccurs="0" name="PONUMBER" type="xs:string" />
+              <xs:element minOccurs="0" name="SKL_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="CntItems" type="xs:int" />
+              <xs:element minOccurs="0" name="SumItems" type="xs:decimal" />
+              <xs:element minOccurs="0" name="Sloucena" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

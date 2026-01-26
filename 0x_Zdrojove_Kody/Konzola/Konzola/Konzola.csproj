@@ -1,0 +1,2235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23BBA133-1473-4961-8397-47F93B0BF789}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Konzola</RootNamespace>
+    <AssemblyName>Konzola</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\logo_FASKV2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+    <Optimize>false</Optimize>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DefineConstants>
+    </DefineConstants>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\!Build!\Konzola\Debug\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\!Build!\Konzola\Release\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="BarcodeStandard, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BarcodeLib.2.4.0\lib\netstandard2.0\BarcodeStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper, Version=32.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.32.0.3\lib\net47\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.1.35\lib\net461\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DataGridViewAutoFilter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\DataGridViewAutoFilter.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\!!!Support!!!\EPPlus\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=2.1.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\!!!Support!!!\Firebird\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="LeitzIconCommon">
+      <HintPath>..\!!!Support!!!\LeitzIcon\001_bin\LeitzIconCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="LeitzIconDataProvider">
+      <HintPath>..\!!!Support!!!\LeitzIcon\001_bin\LeitzIconDataProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="LeitzIconLabelStudioCore">
+      <HintPath>..\!!!Support!!!\LeitzIcon\001_bin\LeitzIconLabelStudioCore.dll</HintPath>
+    </Reference>
+    <Reference Include="LeitzIconPrinterStatusService">
+      <HintPath>..\!!!Support!!!\LeitzIcon\001_bin\LeitzIconPrinterStatusService.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\!!!Support!!!\LeitzIcon\001_bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.Barcode, Version=1.8.3.0, Culture=neutral, PublicKeyToken=4d44dd7196d3c1ac, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagingToolkit.1.8.3\lib\net462\MessagingToolkit.Barcode.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.Core, Version=1.8.3.0, Culture=neutral, PublicKeyToken=4d44dd7196d3c1ac, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagingToolkit.1.8.3\lib\net462\MessagingToolkit.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.MMS, Version=1.8.3.0, Culture=neutral, PublicKeyToken=4d44dd7196d3c1ac, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagingToolkit.1.8.3\lib\net462\MessagingToolkit.MMS.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.Pdu, Version=1.8.3.0, Culture=neutral, PublicKeyToken=4d44dd7196d3c1ac, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagingToolkit.1.8.3\lib\net462\MessagingToolkit.Pdu.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Win_Kom_Server\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ProgressControls">
+      <HintPath>..\!!!Support!!!\ProgressControls\ProgressControls.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder, Version=1.4.3.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.4.3\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.0.0\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.5.0.2\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Dynamic.Core, Version=1.3.14.0, Culture=neutral, PublicKeyToken=0f07ec44de6ac832, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.Core.1.3.14\lib\net46\System.Linq.Dynamic.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.3\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Serialization.Primitives.4.3.0\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.8.0.4\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <!-- MaR 6.2.2025 -->
+    <Reference Include="mscorlib" />
+    <Reference Include="zxing, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\_sdilenetridy_\konfigurace_android\Konfigurace.cs">
+      <Link>API_TerminalKonfigurace\Konfigurace.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Konfigurace_Android\Konfigurace_Prodej.cs">
+      <Link>API_TerminalKonfigurace\Konfigurace_Prodej.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Konfigurace_Android\Konfigurace_Prodej_Price.cs">
+      <Link>API_TerminalKonfigurace\Konfigurace_Prodej_Price.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Konfigurace_Android\Konfigurace_Prodej_REZ.cs">
+      <Link>API_TerminalKonfigurace\Konfigurace_Prodej_REZ.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Konfigurace_Android\Konfigurace_Vyroba.cs">
+      <Link>API_TerminalKonfigurace\Konfigurace_Vyroba.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\Konfigurace_Android\SQLite_ProdejScript.cs">
+      <Link>API_TerminalKonfigurace\SQLite_ProdejScript.cs</Link>
+    </Compile>
+    <Compile Include="Android\Form_AndroidKonfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Android\Form_AndroidKonfig.Designer.cs">
+      <DependentUpon>Form_AndroidKonfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="API_TerminalKonfigurace\Konfigurace_Expedice.cs" />
+    <Compile Include="API_TerminalKonfigurace\Konfigurace_Inventura.cs" />
+    <Compile Include="API_TerminalKonfigurace\Konfigurace_Ostatni.cs" />
+    <Compile Include="API_TerminalKonfigurace\Konfigurace_Prijem.cs" />
+    <Compile Include="API_TerminalKonfigurace\Konfigurace_Vydej.cs" />
+    <Compile Include="BaseFormTest\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseFormTest\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormLokace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormLokace.Designer.cs">
+      <DependentUpon>FormLokace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormLokaceCZMST094Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormLokaceCZMST094Edit.Designer.cs">
+      <DependentUpon>FormLokaceCZMST094Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\DataGridView_ImportCSV.cs" />
+    <Compile Include="Extensions\ProviderExt.cs" />
+    <Compile Include="Ciselniky\FormLokaceMapaGenerovani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormLokaceMapaGenerovani.Designer.cs">
+      <DependentUpon>FormLokaceMapaGenerovani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormLokaceMapaList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormLokaceMapaList.Designer.cs">
+      <DependentUpon>FormLokaceMapaList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormPracovniciEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormPracovniciEdit.Designer.cs">
+      <DependentUpon>FormPracovniciEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormPracovniciList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormPracovniciList.Designer.cs">
+      <DependentUpon>FormPracovniciList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormRADYEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormRADYEdit.Designer.cs">
+      <DependentUpon>FormRADYEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormRADYList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormRADYList.Designer.cs">
+      <DependentUpon>FormRADYList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormSkladyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormSkladyList.Designer.cs">
+      <DependentUpon>FormSkladyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormStrediskaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormStrediskaEdit.Designer.cs">
+      <DependentUpon>FormStrediskaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormTypyDokladuEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormTypyDokladuEdit.Designer.cs">
+      <DependentUpon>FormTypyDokladuEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormTypyDokladuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormTypyDokladuList.Designer.cs">
+      <DependentUpon>FormTypyDokladuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormZboziEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormZboziEdit.Designer.cs">
+      <DependentUpon>FormZboziEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormZboziList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormZboziList.Designer.cs">
+      <DependentUpon>FormZboziList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormLokaceVariantySortimentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormLokaceVariantySortimentList.Designer.cs">
+      <DependentUpon>FormLokaceVariantySortimentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormLokaceVariantySortimentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormLokaceVariantySortimentEdit.Designer.cs">
+      <DependentUpon>FormLokaceVariantySortimentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormLokaceTypyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormLokaceTypyEdit.Designer.cs">
+      <DependentUpon>FormLokaceTypyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormLokaceTypyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormLokaceTypyList.Designer.cs">
+      <DependentUpon>FormLokaceTypyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormLokaceTypySelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormLokaceTypySelect.Designer.cs">
+      <DependentUpon>FormLokaceTypySelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormSkladyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormSkladyEdit.Designer.cs">
+      <DependentUpon>FormSkladyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormImport.Designer.cs">
+      <DependentUpon>FormImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormKod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormKod.Designer.cs">
+      <DependentUpon>FormKod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_DateTime_From_To.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_DateTime_From_To.Designer.cs">
+      <DependentUpon>Form_DateTime_From_To.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Spolecne\FormVyrabenePolozky.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Spolecne\FormVyrabenePolozky.Designer.cs">
+      <DependentUpon>FormVyrabenePolozky.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportniMustky\Extensions\DataSet_Import.cs" />
+    <Compile Include="ImportniMustky\FormImport_SKzNC_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportniMustky\FormImport_SKzNC_Edit.Designer.cs">
+      <DependentUpon>FormImport_SKzNC_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportniMustky\FormImport_SKzNC_ErrList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportniMustky\FormImport_SKzNC_ErrList.Designer.cs">
+      <DependentUpon>FormImport_SKzNC_ErrList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportniMustky\FormImport_SKzNC_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportniMustky\FormImport_SKzNC_List.Designer.cs">
+      <DependentUpon>FormImport_SKzNC_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura\dataset\dsFaskInventura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFaskInventura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura\FormInventura_Porovnani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura\FormInventura_Porovnani.Designer.cs">
+      <DependentUpon>FormInventura_Porovnani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura\FormInv_PredlohaList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura\FormInv_PredlohaList.Designer.cs">
+      <DependentUpon>FormInv_PredlohaList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT_cast\FormIT_cast_EventsArchivace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT_cast\FormIT_cast_EventsArchivace.Designer.cs">
+      <DependentUpon>FormIT_cast_EventsArchivace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT_cast\FormIT_cast_ProductionArchivace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT_cast\FormIT_cast_ProductionArchivace.Designer.cs">
+      <DependentUpon>FormIT_cast_ProductionArchivace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT_cast\Form_DateTime_From_To_archivace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT_cast\Form_DateTime_From_To_archivace.Designer.cs">
+      <DependentUpon>Form_DateTime_From_To_archivace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Konfigurace\Globals_Konfig_Konzola.cs" />
+    <Compile Include="Konfigurace\Konf.cs">
+      <DependentUpon>Konf.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konfigurace\Konf.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Konf.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konfigurace_Tisky\Globals_Konfig_Tisk.cs" />
+    <Compile Include="Konfigurace_Tisky\Konf_T.cs">
+      <DependentUpon>Konf_T.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konfigurace_Tisky\Konf_T.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Konf_T.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Licence\KonzolaLicence.cs" />
+    <Compile Include="Licence\Licensing.cs" />
+    <Compile Include="Napoveda\Napoveda.cs" />
+    <Compile Include="Expedice\FormBufferBaleniList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expedice\FormBufferBaleniList.Designer.cs">
+      <DependentUpon>FormBufferBaleniList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expedice\FormDodaciListyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expedice\FormDodaciListyList.Designer.cs">
+      <DependentUpon>FormDodaciListyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\BindingSourceExt.cs" />
+    <Compile Include="Extensions\ButtonsPanelExt.cs" />
+    <Compile Include="Extensions\ComboBoxExt.cs" />
+    <Compile Include="Extensions\DataGridView_Exporty.cs" />
+    <Compile Include="Extensions\ToolStripMenuItemExt.cs" />
+    <Compile Include="Extensions\ListExt.cs" />
+    <Compile Include="Extensions\DataGridViewExt.cs" />
+    <Compile Include="Extensions\FlexibleMessageBox.cs" />
+    <Compile Include="Forms\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutBox.designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InputBox_Text_And_Checkbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InputBox_Text_And_Checkbox.Designer.cs">
+      <DependentUpon>InputBox_Text_And_Checkbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormImage.Designer.cs">
+      <DependentUpon>FormImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormConfig.Designer.cs">
+      <DependentUpon>FormConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormIDPracovnikaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormIDPracovnikaLogin.Designer.cs">
+      <DependentUpon>FormIDPracovnikaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InputBox.Designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitForm.Designer.cs">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="Inventura\dataset\dsSBKompletInventura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSBKompletInventura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura\FormInventuraHlavickaList2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura\FormInventuraHlavickaList2.Designer.cs">
+      <DependentUpon>FormInventuraHlavickaList2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura\FormInventuraNasnimaneList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura\FormInventuraNasnimaneList.Designer.cs">
+      <DependentUpon>FormInventuraNasnimaneList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventura\FormInventuraPredlohaList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventura\FormInventuraPredlohaList.Designer.cs">
+      <DependentUpon>FormInventuraPredlohaList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySystem\Encryption.cs" />
+    <Compile Include="MySystem\LoginTest.cs" />
+    <Compile Include="MySystem\Path.cs" />
+    <Compile Include="Planovani\FormPlanovaniVyrobyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planovani\FormPlanovaniVyrobyEdit.Designer.cs">
+      <DependentUpon>FormPlanovaniVyrobyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planovani\FormPlanovaniVyrobyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planovani\FormPlanovaniVyrobyList.Designer.cs">
+      <DependentUpon>FormPlanovaniVyrobyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planovani\FormPlanovaniVyroby_Zaplanovani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planovani\FormPlanovaniVyroby_Zaplanovani.Designer.cs">
+      <DependentUpon>FormPlanovaniVyroby_Zaplanovani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planovani\Kapacitni_Planovani\FormMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planovani\Kapacitni_Planovani\FormMaterial.Designer.cs">
+      <DependentUpon>FormMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planovani\Planovani_Detail\Form_Planovani_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planovani\Planovani_Detail\Form_Planovani_Detail.Designer.cs">
+      <DependentUpon>Form_Planovani_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planovani\Planovani_Navrhar\Form_PlanovaniVarianty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planovani\Planovani_Navrhar\Form_PlanovaniVarianty.Designer.cs">
+      <DependentUpon>Form_PlanovaniVarianty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planovani\Planovani_Navrhar\Form_PlanovaniVarianty_Params.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planovani\Planovani_Navrhar\Form_PlanovaniVarianty_Params.Designer.cs">
+      <DependentUpon>Form_PlanovaniVarianty_Params.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem\IFormDavkyPrijemPIEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem\IFormDavkyPrijemPIEdit.Designer.cs">
+      <DependentUpon>IFormDavkyPrijemPIEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem\FormDavkyPrijmuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem\FormDavkyPrijmuList.Designer.cs">
+      <DependentUpon>FormDavkyPrijmuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem\FormDavkyPrijemPEEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem\FormDavkyPrijemPEEdit.Designer.cs">
+      <DependentUpon>FormDavkyPrijemPEEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijem\FormPrijemNasnimaneList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijem\FormPrijemNasnimaneList.Designer.cs">
+      <DependentUpon>FormPrijemNasnimaneList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scanner\FormScannerCOMSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanner\FormScannerCOMSettings.Designer.cs">
+      <DependentUpon>FormScannerCOMSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scanner\ScannerBase.cs" />
+    <Compile Include="Scanner\ScannerCOM.cs" />
+    <Compile Include="Scanner\ScannerNone.cs" />
+    <Compile Include="Servis\FormOkruhySelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormOkruhySelect.Designer.cs">
+      <DependentUpon>FormOkruhySelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormReportSestava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormReportSestava.Designer.cs">
+      <DependentUpon>FormReportSestava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormRFIDData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormRFIDData.Designer.cs">
+      <DependentUpon>FormRFIDData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormZdrojeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormZdrojeList.Designer.cs">
+      <DependentUpon>FormZdrojeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormZdrojePohybReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormZdrojePohybReportViewer.Designer.cs">
+      <DependentUpon>FormZdrojePohybReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormZdrojStavOkruhEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormZdrojStavOkruhEdit.Designer.cs">
+      <DependentUpon>FormZdrojStavOkruhEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormDynTabEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormDynTabEdit.Designer.cs">
+      <DependentUpon>FormDynTabEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormDynTabDefEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormDynTabDefEdit.Designer.cs">
+      <DependentUpon>FormDynTabDefEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormVazbyDynTabDefDynTabList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormVazbyDynTabDefDynTabList.Designer.cs">
+      <DependentUpon>FormVazbyDynTabDefDynTabList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormOdberateleSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormOdberateleSelect.Designer.cs">
+      <DependentUpon>FormOdberateleSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormOkruhyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormOkruhyEdit.Designer.cs">
+      <DependentUpon>FormOkruhyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormOkruhyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormOkruhyList.Designer.cs">
+      <DependentUpon>FormOkruhyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormVazbyOkruhZdrojSeznamList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormVazbyOkruhZdrojSeznamList.Designer.cs">
+      <DependentUpon>FormVazbyOkruhZdrojSeznamList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormZdrojePohybList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormZdrojePohybList.Designer.cs">
+      <DependentUpon>FormZdrojePohybList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormZdrojeStavyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormZdrojeStavyEdit.Designer.cs">
+      <DependentUpon>FormZdrojeStavyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormZdrojeStavyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormZdrojeStavyList.Designer.cs">
+      <DependentUpon>FormZdrojeStavyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormZdrojeSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormZdrojeSelect.Designer.cs">
+      <DependentUpon>FormZdrojeSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormVazbyCinnostCinnostNextList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormVazbyCinnostCinnostNextList.Designer.cs">
+      <DependentUpon>FormVazbyCinnostCinnostNextList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormStavySelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormStavySelect.Designer.cs">
+      <DependentUpon>FormStavySelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormOdberateleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormOdberateleEdit.Designer.cs">
+      <DependentUpon>FormOdberateleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormOdberateleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormOdberateleList.Designer.cs">
+      <DependentUpon>FormOdberateleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormStavyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormStavyEdit.Designer.cs">
+      <DependentUpon>FormStavyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormStavyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormStavyList.Designer.cs">
+      <DependentUpon>FormStavyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormCinnostiEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormCinnostiEdit.Designer.cs">
+      <DependentUpon>FormCinnostiEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormCinnostiList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormCinnostiList.Designer.cs">
+      <DependentUpon>FormCinnostiList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormCinnostiSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormCinnostiSelect.Designer.cs">
+      <DependentUpon>FormCinnostiSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormVazbyStavStavNextList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormVazbyStavStavNextList.Designer.cs">
+      <DependentUpon>FormVazbyStavStavNextList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\FormZdrojeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\FormZdrojeEdit.Designer.cs">
+      <DependentUpon>FormZdrojeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\Print\FormPrintZdrojStav_Etiketa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\Print\FormPrintZdrojStav_Etiketa.Designer.cs">
+      <DependentUpon>FormPrintZdrojStav_Etiketa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\Print\FormPrintZdrojStav_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\Print\FormPrintZdrojStav_Report.Designer.cs">
+      <DependentUpon>FormPrintZdrojStav_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\Print\FormPrintZdroj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servis\Print\FormPrintZdroj.Designer.cs">
+      <DependentUpon>FormPrintZdroj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\Print\Servis.cs">
+      <DependentUpon>Servis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Servis\Print\Servis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Servis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormLokaceMapaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormLokaceMapaEdit.Designer.cs">
+      <DependentUpon>FormLokaceMapaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciselniky\FormStrediskaList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciselniky\FormStrediskaList.Designer.cs">
+      <DependentUpon>FormStrediskaList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkladLokace\FormPohybyIS_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkladLokace\FormPohybyIS_List.Designer.cs">
+      <DependentUpon>FormPohybyIS_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkladLokace\FormSkladLokaceStavEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkladLokace\FormSkladLokaceStavEdit.Designer.cs">
+      <DependentUpon>FormSkladLokaceStavEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkladLokace\FormSkladLokaceStavList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkladLokace\FormSkladLokaceStavList.Designer.cs">
+      <DependentUpon>FormSkladLokaceStavList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkladLokace\FormSkladLokaceStavList_SelectCountEntries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkladLokace\FormSkladLokaceStavList_SelectCountEntries.Designer.cs">
+      <DependentUpon>FormSkladLokaceStavList_SelectCountEntries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkladLokace\FormSKladLokace_PorovnaniVuciIS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkladLokace\FormSKladLokace_PorovnaniVuciIS.Designer.cs">
+      <DependentUpon>FormSKladLokace_PorovnaniVuciIS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sklady\FormSkladPohybList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sklady\FormSkladPohybList.Designer.cs">
+      <DependentUpon>FormSkladPohybList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sklady\FormSkladStavLokaceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sklady\FormSkladStavLokaceList.Designer.cs">
+      <DependentUpon>FormSkladStavLokaceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sklady\FormTransakceSPredlohou.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sklady\FormTransakceSPredlohou.Designer.cs">
+      <DependentUpon>FormTransakceSPredlohou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StavSkladu\FormStavSkladuHistorieList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StavSkladu\FormStavSkladuHistorieList.Designer.cs">
+      <DependentUpon>FormStavSkladuHistorieList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StavSkladu\FormStavSkladuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StavSkladu\FormStavSkladuList.Designer.cs">
+      <DependentUpon>FormStavSkladuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Terminal\FormTerminalSeznam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Terminal\FormTerminalSeznam.Designer.cs">
+      <DependentUpon>FormTerminalSeznam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Terminal\FormVNC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Terminal\FormVNC.Designer.cs">
+      <DependentUpon>FormVNC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Terminal\Ping.cs" />
+    <Compile Include="Terminal\Test_Disp\DataSet_Disp1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Disp.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Terminal\Test_Disp\TestDisp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Terminal\Test_Disp\TestDisp.Designer.cs">
+      <DependentUpon>TestDisp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Terminal\Test_Disp\TestDisp_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Terminal\Test_Disp\TestDisp_2.Designer.cs">
+      <DependentUpon>TestDisp_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Terminal\Test_Login\Form_Test_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Terminal\Test_Login\Form_Test_Login.Designer.cs">
+      <DependentUpon>Form_Test_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tisk\FormTiskovaSablonaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tisk\FormTiskovaSablonaEdit.Designer.cs">
+      <DependentUpon>FormTiskovaSablonaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ukolovani\FormUkolyAktualniList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ukolovani\FormUkolyAktualniList.Designer.cs">
+      <DependentUpon>FormUkolyAktualniList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ukolovani\FormUkolyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ukolovani\FormUkolyEdit.Designer.cs">
+      <DependentUpon>FormUkolyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ukolovani\FormUkolyHistoryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ukolovani\FormUkolyHistoryList.Designer.cs">
+      <DependentUpon>FormUkolyHistoryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ukolovani\FormUkolyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ukolovani\FormUkolyList.Designer.cs">
+      <DependentUpon>FormUkolyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VolnyPohyb\FormDavkyProdejDIEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VolnyPohyb\FormDavkyProdejDIEdit.Designer.cs">
+      <DependentUpon>FormDavkyProdejDIEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VolnyPohyb\FormVolnyPohybNasnimaneList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VolnyPohyb\FormVolnyPohybNasnimaneList.Designer.cs">
+      <DependentUpon>FormVolnyPohybNasnimaneList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej\FormDavkyVydejeKontrola.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej\FormDavkyVydejeKontrola.Designer.cs">
+      <DependentUpon>FormDavkyVydejeKontrola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej\FormDavkyVydejeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej\FormDavkyVydejeList.Designer.cs">
+      <DependentUpon>FormDavkyVydejeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej\FormDavkyVydejeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej\FormDavkyVydejeEdit.Designer.cs">
+      <DependentUpon>FormDavkyVydejeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej\FormDavkyVydejeList_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej\FormDavkyVydejeList_Test.Designer.cs">
+      <DependentUpon>FormDavkyVydejeList_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej\FormVydejDavkyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej\FormVydejDavkyList.Designer.cs">
+      <DependentUpon>FormVydejDavkyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej\FormVydejNasnimaneList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej\FormVydejNasnimaneList.Designer.cs">
+      <DependentUpon>FormVydejNasnimaneList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej\Form_Predloha_Rekapitulace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej\Form_Predloha_Rekapitulace.Designer.cs">
+      <DependentUpon>Form_Predloha_Rekapitulace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vydej\IFormDavkyVydejSIEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vydej\IFormDavkyVydejSIEdit.Designer.cs">
+      <DependentUpon>IFormDavkyVydejSIEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\FormModifikace_TP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\FormModifikace_TP.Designer.cs">
+      <DependentUpon>FormModifikace_TP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\FormStrojeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\FormStrojeEdit.Designer.cs">
+      <DependentUpon>FormStrojeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\Form_Moduly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\Form_Moduly.Designer.cs">
+      <DependentUpon>Form_Moduly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\Form_Stroje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\Form_Stroje.Designer.cs">
+      <DependentUpon>Form_Stroje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\Form_MachineStateSetList_RozborOdvoduSSS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\Form_MachineStateSetList_RozborOdvoduSSS.Designer.cs">
+      <DependentUpon>Form_MachineStateSetList_RozborOdvoduSSS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormOdvod_TiskoveSablony.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormOdvod_TiskoveSablony.Designer.cs">
+      <DependentUpon>FormOdvod_TiskoveSablony.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormOdvod_MachineStateSetList .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormOdvod_MachineStateSetList .Designer.cs">
+      <DependentUpon>FormOdvod_MachineStateSetList .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormOdvod_EventsErrList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormOdvod_EventsErrList.Designer.cs">
+      <DependentUpon>FormOdvod_EventsErrList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormOdvod_EventsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormOdvod_EventsList.Designer.cs">
+      <DependentUpon>FormOdvod_EventsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormOdvod_EventsErrList_Storno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormOdvod_EventsErrList_Storno.Designer.cs">
+      <DependentUpon>FormOdvod_EventsErrList_Storno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormOdvod_EventsList_Storno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormOdvod_EventsList_Storno.Designer.cs">
+      <DependentUpon>FormOdvod_EventsList_Storno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormPlanovaniVyroby_Rozbor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormPlanovaniVyroby_Rozbor.Designer.cs">
+      <DependentUpon>FormPlanovaniVyroby_Rozbor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProductionEdit3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProductionEdit3.Designer.cs">
+      <DependentUpon>FormProductionEdit3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProductionSourcesList_SelectCountEntries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProductionSourcesList_SelectCountEntries.Designer.cs">
+      <DependentUpon>FormProductionSourcesList_SelectCountEntries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProductionEdit2_CarKod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProductionEdit2_CarKod.Designer.cs">
+      <DependentUpon>FormProductionEdit2_CarKod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProductionList_SelectCountEntries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProductionList_SelectCountEntries.Designer.cs">
+      <DependentUpon>FormProductionList_SelectCountEntries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProductionSourcesEdit2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProductionSourcesEdit2.Designer.cs">
+      <DependentUpon>FormProductionSourcesEdit2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProductionSourecesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProductionSourecesList.Designer.cs">
+      <DependentUpon>FormProductionSourecesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProductionEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProductionEdit.Designer.cs">
+      <DependentUpon>FormProductionEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProductionEdit2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProductionEdit2.Designer.cs">
+      <DependentUpon>FormProductionEdit2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProductionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProductionList.Designer.cs">
+      <DependentUpon>FormProductionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\FormSkupinyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\FormSkupinyEdit.Designer.cs">
+      <DependentUpon>FormSkupinyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\FormSkupinyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\FormSkupinyList.Designer.cs">
+      <DependentUpon>FormSkupinyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProduction_SN_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormProduction_SN_List.Designer.cs">
+      <DependentUpon>FormProduction_SN_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormUkoncitZakazkuOdvadeni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Rozbory\FormUkoncitZakazkuOdvadeni.Designer.cs">
+      <DependentUpon>FormUkoncitZakazkuOdvadeni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\FormVazbyAddMaterialy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\FormVazbyAddMaterialy.Designer.cs">
+      <DependentUpon>FormVazbyAddMaterialy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\FormVazbyAddMaterialyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\FormVazbyAddMaterialyEdit.Designer.cs">
+      <DependentUpon>FormVazbyAddMaterialyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\FormVazbyAddPolotovar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\FormVazbyAddPolotovar.Designer.cs">
+      <DependentUpon>FormVazbyAddPolotovar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\FormVazbyAddVyrobek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\FormVazbyAddVyrobek.Designer.cs">
+      <DependentUpon>FormVazbyAddVyrobek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\FormVazbyMaterialy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Ciselnik\FormVazbyMaterialy.Designer.cs">
+      <DependentUpon>FormVazbyMaterialy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\Constants.cs" />
+    <Compile Include="Vyroba\Transakce\FormPotrebaMaterialu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\FormPotrebaMaterialu.Designer.cs">
+      <DependentUpon>FormPotrebaMaterialu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\FormVazby_P_PS_List _Zpracovat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\FormVazby_P_PS_List _Zpracovat.Designer.cs">
+      <DependentUpon>FormVazby_P_PS_List _Zpracovat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\FormVazby_P_PS_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\FormVazby_P_PS_List.Designer.cs">
+      <DependentUpon>FormVazby_P_PS_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\FormVazby_Zpracovat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\FormVazby_Zpracovat.Designer.cs">
+      <DependentUpon>FormVazby_Zpracovat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\FormVPHEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\FormVPHEdit.Designer.cs">
+      <DependentUpon>FormVPHEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\FormVPPEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\FormVPPEdit.Designer.cs">
+      <DependentUpon>FormVPPEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\FormVyrobniPrikazList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\FormVyrobniPrikazList.Designer.cs">
+      <DependentUpon>FormVyrobniPrikazList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\FormVyrobniPrikazList_Tisk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\FormVyrobniPrikazList_Tisk.Designer.cs">
+      <DependentUpon>FormVyrobniPrikazList_Tisk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\FormVyrobniPrikaz_VPH_Seznam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\FormVyrobniPrikaz_VPH_Seznam.Designer.cs">
+      <DependentUpon>FormVyrobniPrikaz_VPH_Seznam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\FormVyrobniPrikaz_VPP_GenerovaniSN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\FormVyrobniPrikaz_VPP_GenerovaniSN.Designer.cs">
+      <DependentUpon>FormVyrobniPrikaz_VPP_GenerovaniSN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\Form_DisponibilityPrehled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Transakce\Form_DisponibilityPrehled.Designer.cs">
+      <DependentUpon>Form_DisponibilityPrehled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Wizard\VyrobniPrikazList_VPP\dsVyrobkyProPridani.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsVyrobkyProPridani.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Vyroba\Wizard\VyrobniPrikazList_VPP\Form_01_Vyber_Vyrobku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vyroba\Wizard\VyrobniPrikazList_VPP\Form_01_Vyber_Vyrobku.Designer.cs">
+      <DependentUpon>Form_01_Vyber_Vyrobku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Printers_\PrinterEtiketaGeneral.cs" />
+    <Compile Include="_Printers_\PrinterLeitz.cs" />
+    <Compile Include="_Support_\Barcodes.cs" />
+    <Compile Include="_Support_\LinkProcess.cs" />
+    <Compile Include="_Support_\PrinterHelper.cs" />
+    <Compile Include="_Support_\RawPrinterHelper.cs" />
+    <EmbeddedResource Include="Android\Form_AndroidKonfig.resx">
+      <DependentUpon>Form_AndroidKonfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseFormTest\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormLokaceMapaGenerovani.resx">
+      <DependentUpon>FormLokaceMapaGenerovani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormLokace.resx">
+      <DependentUpon>FormLokace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormLokaceMapaList.resx">
+      <DependentUpon>FormLokaceMapaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormLokaceCZMST094Edit.resx">
+      <DependentUpon>FormLokaceCZMST094Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormPracovniciEdit.resx">
+      <DependentUpon>FormPracovniciEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormPracovniciList.resx">
+      <DependentUpon>FormPracovniciList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormRADYEdit.resx">
+      <DependentUpon>FormRADYEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormRADYList.resx">
+      <DependentUpon>FormRADYList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormSkladyList.resx">
+      <DependentUpon>FormSkladyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormStrediskaEdit.resx">
+      <DependentUpon>FormStrediskaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormTypyDokladuEdit.resx">
+      <DependentUpon>FormTypyDokladuEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormTypyDokladuList.resx">
+      <DependentUpon>FormTypyDokladuList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormZboziEdit.resx">
+      <DependentUpon>FormZboziEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormZboziList.resx">
+      <DependentUpon>FormZboziList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormLokaceVariantySortimentList.resx">
+      <DependentUpon>FormLokaceVariantySortimentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormLokaceVariantySortimentEdit.resx">
+      <DependentUpon>FormLokaceVariantySortimentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormLokaceTypyEdit.resx">
+      <DependentUpon>FormLokaceTypyEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormLokaceTypyList.resx">
+      <DependentUpon>FormLokaceTypyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormLokaceTypySelect.resx">
+      <DependentUpon>FormLokaceTypySelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormSkladyEdit.resx">
+      <DependentUpon>FormSkladyEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\ReportLokace_CZMST094.rdlc" />
+    <EmbeddedResource Include="Ciselniky\Report_FormOdberateleList.rdlc" />
+    <EmbeddedResource Include="Ciselniky\Sklady_Ciselniky_Sklady.rdlc" />
+    <EmbeddedResource Include="Expedice\FormBufferBaleniList.resx">
+      <DependentUpon>FormBufferBaleniList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expedice\FormDodaciListyList.resx">
+      <DependentUpon>FormDodaciListyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormImport.resx">
+      <DependentUpon>FormImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormKod.resx">
+      <DependentUpon>FormKod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_DateTime_From_To.resx">
+      <DependentUpon>Form_DateTime_From_To.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InputBox_Text_And_Checkbox.resx">
+      <DependentUpon>InputBox_Text_And_Checkbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormImage.resx">
+      <DependentUpon>FormImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormConfig.resx">
+      <DependentUpon>FormConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormIDPracovnikaLogin.resx">
+      <DependentUpon>FormIDPracovnikaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Spolecne\FormVyrabenePolozky.resx">
+      <DependentUpon>FormVyrabenePolozky.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Spolecne\Meine.rdlc" />
+    <EmbeddedResource Include="Forms\Spolecne\Vyrabene_Polozky.rdlc" />
+    <EmbeddedResource Include="Forms\WaitForm.resx">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportniMustky\FormImport_SKzNC_Edit.resx">
+      <DependentUpon>FormImport_SKzNC_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportniMustky\FormImport_SKzNC_ErrList.resx">
+      <DependentUpon>FormImport_SKzNC_ErrList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportniMustky\FormImport_SKzNC_List.resx">
+      <DependentUpon>FormImport_SKzNC_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura\01_INTERTACT_report_SKLAD_Inventura_Predloha_polozky_I_detailne_HOTOVO_MaR.rdlc" />
+    <EmbeddedResource Include="Inventura\FormInventuraHlavickaList2.resx">
+      <DependentUpon>FormInventuraHlavickaList2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura\FormInventuraNasnimaneList.resx">
+      <DependentUpon>FormInventuraNasnimaneList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura\FormInventuraPredlohaList.resx">
+      <DependentUpon>FormInventuraPredlohaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura\FormInventura_Porovnani.resx">
+      <DependentUpon>FormInventura_Porovnani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura\FormInv_PredlohaList.resx">
+      <DependentUpon>FormInv_PredlohaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventura\Report_FormInv_PredlohaList.rdlc" />
+    <EmbeddedResource Include="Inventura\Sklady_Transakce_Inventura_Predloha.rdlc" />
+    <EmbeddedResource Include="Inventura\stav_inventura.rdlc" />
+    <EmbeddedResource Include="IT_cast\FormIT_cast_EventsArchivace.resx">
+      <DependentUpon>FormIT_cast_EventsArchivace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT_cast\FormIT_cast_ProductionArchivace.resx">
+      <DependentUpon>FormIT_cast_ProductionArchivace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT_cast\Form_DateTime_From_To_archivace.resx">
+      <DependentUpon>Form_DateTime_From_To_archivace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planovani\FormPlanovaniVyrobyEdit.resx">
+      <DependentUpon>FormPlanovaniVyrobyEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planovani\FormPlanovaniVyrobyList.resx">
+      <DependentUpon>FormPlanovaniVyrobyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planovani\FormPlanovaniVyroby_Zaplanovani.resx">
+      <DependentUpon>FormPlanovaniVyroby_Zaplanovani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planovani\Kapacitni_Planovani\FormMaterial.resx">
+      <DependentUpon>FormMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planovani\Planovani_Detail\Form_Planovani_Detail.resx">
+      <DependentUpon>Form_Planovani_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planovani\Planovani_Navrhar\Form_PlanovaniVarianty.resx">
+      <DependentUpon>Form_PlanovaniVarianty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planovani\Planovani_Navrhar\Form_PlanovaniVarianty_Params.resx">
+      <DependentUpon>Form_PlanovaniVarianty_Params.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planovani\Report_FormPlanovaniVyrobyList.rdlc" />
+    <EmbeddedResource Include="Planovani\Planovani_PlanovaniVyrobyVydeje_00.rdlc" />
+    <EmbeddedResource Include="Prijem\IFormDavkyPrijemPIEdit.resx">
+      <DependentUpon>IFormDavkyPrijemPIEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem\FormDavkyPrijmuList.resx">
+      <DependentUpon>FormDavkyPrijmuList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem\FormDavkyPrijemPEEdit.resx">
+      <DependentUpon>FormDavkyPrijemPEEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijem\FormPrijemNasnimaneList.resx">
+      <DependentUpon>FormPrijemNasnimaneList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Scanner\FormScannerCOMSettings.resx">
+      <DependentUpon>FormScannerCOMSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormOkruhySelect.resx">
+      <DependentUpon>FormOkruhySelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormReportSestava.resx">
+      <DependentUpon>FormReportSestava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormRFIDData.resx">
+      <DependentUpon>FormRFIDData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormZdrojeList.resx">
+      <DependentUpon>FormZdrojeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormZdrojePohybReportViewer.resx">
+      <DependentUpon>FormZdrojePohybReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormZdrojStavOkruhEdit.resx">
+      <DependentUpon>FormZdrojStavOkruhEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormDynTabEdit.resx">
+      <DependentUpon>FormDynTabEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormDynTabDefEdit.resx">
+      <DependentUpon>FormDynTabDefEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormVazbyDynTabDefDynTabList.resx">
+      <DependentUpon>FormVazbyDynTabDefDynTabList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormOdberateleSelect.resx">
+      <DependentUpon>FormOdberateleSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormOkruhyEdit.resx">
+      <DependentUpon>FormOkruhyEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormOkruhyList.resx">
+      <DependentUpon>FormOkruhyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormVazbyOkruhZdrojSeznamList.resx">
+      <DependentUpon>FormVazbyOkruhZdrojSeznamList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormZdrojePohybList.resx">
+      <DependentUpon>FormZdrojePohybList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormZdrojeStavyEdit.resx">
+      <DependentUpon>FormZdrojeStavyEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormZdrojeStavyList.resx">
+      <DependentUpon>FormZdrojeStavyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormZdrojeSelect.resx">
+      <DependentUpon>FormZdrojeSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormVazbyCinnostCinnostNextList.resx">
+      <DependentUpon>FormVazbyCinnostCinnostNextList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormStavySelect.resx">
+      <DependentUpon>FormStavySelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormOdberateleEdit.resx">
+      <DependentUpon>FormOdberateleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormOdberateleList.resx">
+      <DependentUpon>FormOdberateleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormStavyEdit.resx">
+      <DependentUpon>FormStavyEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormStavyList.resx">
+      <DependentUpon>FormStavyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormCinnostiEdit.resx">
+      <DependentUpon>FormCinnostiEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormCinnostiList.resx">
+      <DependentUpon>FormCinnostiList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormCinnostiSelect.resx">
+      <DependentUpon>FormCinnostiSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormVazbyStavStavNextList.resx">
+      <DependentUpon>FormVazbyStavStavNextList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\FormZdrojeEdit.resx">
+      <DependentUpon>FormZdrojeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormLokaceMapaEdit.resx">
+      <DependentUpon>FormLokaceMapaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciselniky\FormStrediskaList.resx">
+      <DependentUpon>FormStrediskaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\Print\FormPrintZdrojStav_Etiketa.resx">
+      <DependentUpon>FormPrintZdrojStav_Etiketa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\Print\FormPrintZdrojStav_Report.resx">
+      <DependentUpon>FormPrintZdrojStav_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servis\Print\FormPrintZdroj.resx">
+      <DependentUpon>FormPrintZdroj.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="..\!!!Support!!!\LeitzIcon\001_bin\LeitzIconPrinterStatusHost.exe">
+      <Link>LeitzIconPrinterStatusHost.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\!!!Support!!!\LeitzIcon\001_bin\PrintHelper.dll">
+      <Link>PrintHelper.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dokumentace\Documentation.txt" />
+    <Content Include="Dokumentace\Introduction.txt" />
+    <Content Include="Dokumentace\logo_FASK.png" />
+    <Content Include="DS_Information.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Napoveda\FormRADYEdit.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Napoveda\FormTypyDokladuEdit.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Add.ico" />
+    <Content Include="Resources\Clear.ico" />
+    <Content Include="Resources\delete.ico" />
+    <Content Include="Resources\Edit.ico" />
+    <Content Include="Resources\logo_FASK.ico" />
+    <Content Include="Resources\logo_FASK.png" />
+    <Content Include="Resources\logo_FASK1.ico" />
+    <Content Include="Resources\logo_FASK2.ico" />
+    <None Include="Konfigurace\Konf.xsc">
+      <DependentUpon>Konf.xsd</DependentUpon>
+    </None>
+    <None Include="Konfigurace\Konf.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Konf.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Konfigurace\Konf.xss">
+      <DependentUpon>Konf.xsd</DependentUpon>
+    </None>
+    <None Include="Konfigurace_Tisky\Konf_T.xsc">
+      <DependentUpon>Konf_T.xsd</DependentUpon>
+    </None>
+    <None Include="Konfigurace_Tisky\Konf_T.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Konf_T.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Konfigurace_Tisky\Konf_T.xss">
+      <DependentUpon>Konf_T.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Hlavni+VyrabenePolozkyDataTable.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Hlavni+VyrabenePolozkyRow.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Hlavni+VyrabenePolozkyRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Hlavni+VyrabenePolozkyRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Hlavni.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Inventura+CZMST_I1HRow.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Inventura+CZMST_I1Row.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Inventura+CZMST_I1_COMPARERow.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Inventura+CZMST_I1_PredlohaDataTable.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Inventura+CZMST_I1_PredlohaRow.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Inventura+CZMST_I4Row.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Inventura+CZMST_I4_COMPARERow.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Inventura.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Odberatele+CZMST090DataTable.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Pracovnici+CZMST096DataTable.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Prodej+CZMST_DIRow.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Prodej+CZMST_DIRow1.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.SkladLokace+CZMST094DataTable.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.SkladPohyb+CZMST_Sklad_PohybDataTable.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Sklady+CZMST093DataTable.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Sklady+CZMST093Row.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Vydej+CZMST_SERow.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Vydej+CZMST_SIRow.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Vyroba+FASK_EventsDataTable.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Vyroba+FASK_Vyroba_TP_MaterialDataTable.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Vyroba+FASK_Vyroba_TP_MaterialRow.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Vyroba+FASK_Vyroba_TP_VyrobekDataTable.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Vyroba+FASK_Vyroba_TP_VyrobekRow.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Vyroba+MachineStateSetHistory_Analyza_OdvoduDataTable.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Vyroba+Production_KonzolaDataTable.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Vyroba.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Vyroba_Planovani+FASK_Vyroba_PVPDataTable.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Vyroba_Planovani+FASK_Vyroba_PVPRow.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Zbozi+FASK_ZASOBY_ALL_KONZOLADataTable.datasource" />
+    <None Include="Properties\DataSources\Fask.Interfaces.DataSets.Zbozi+FASK_ZASOBY_KONZOLADataTable.datasource" />
+    <None Include="Resources\logo_FASKV2.ico" />
+    <None Include="Resources\Questionmark.ico" />
+    <Content Include="Resources\Save.ico" />
+    <Content Include="Servis\Print\Templates\Etiketa_Lokace.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Servis\Print\Templates\Etiketa_Zdroj.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Servis\Print\Templates\Etiketa_Uzivatel.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Servis\Print\Templates\Etiketa_Okruh.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Servis\Print\Templates\Etiketa_Odberatel.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Servis\Print\Templates\Etiketa_ZdrojStav.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Servis\Print\Templates\LOGO.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Servis\Print\Templates\Report_ZdrojStav.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Servis\Print\Templates\Report_Zdroj.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Servis\Print\Templates\Report_TEST.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Servis\Print\Templates\Report_TEST_FASK.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Servis\Print\Templates\Report_VyrobnyPrikaz.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Servis\Print\Templates\Vydej_PrikazVychystani_I_Tec.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Servis\Print\Templates\Report_PlanovaniVyroby.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Servis\Print\Templates\Report_VyrobnyPrikaz_BIOMAG.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="SkladLokace\FormPohybyIS_List.resx">
+      <DependentUpon>FormPohybyIS_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkladLokace\FormSkladLokaceStavEdit.resx">
+      <DependentUpon>FormSkladLokaceStavEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkladLokace\FormSkladLokaceStavList.resx">
+      <DependentUpon>FormSkladLokaceStavList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkladLokace\FormSkladLokaceStavList_SelectCountEntries.resx">
+      <DependentUpon>FormSkladLokaceStavList_SelectCountEntries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkladLokace\FormSKladLokace_PorovnaniVuciIS.resx">
+      <DependentUpon>FormSKladLokace_PorovnaniVuciIS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sklady\FormSkladPohybList.resx">
+      <DependentUpon>FormSkladPohybList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sklady\FormSkladStavLokaceList.resx">
+      <DependentUpon>FormSkladStavLokaceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sklady\FormTransakceSPredlohou.resx">
+      <DependentUpon>FormTransakceSPredlohou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StavSkladu\FormStavSkladuHistorieList.resx">
+      <DependentUpon>FormStavSkladuHistorieList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StavSkladu\FormStavSkladuList.resx">
+      <DependentUpon>FormStavSkladuList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terminal\FormTerminalSeznam.resx">
+      <DependentUpon>FormTerminalSeznam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terminal\FormVNC.resx">
+      <DependentUpon>FormVNC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terminal\Test_Disp\TestDisp.resx">
+      <DependentUpon>TestDisp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terminal\Test_Disp\TestDisp_2.resx">
+      <DependentUpon>TestDisp_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terminal\Test_Login\Form_Test_Login.resx">
+      <DependentUpon>Form_Test_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tisk\FormTiskovaSablonaEdit.resx">
+      <DependentUpon>FormTiskovaSablonaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TISK_sablony\Empty_Test.rdlc" />
+    <EmbeddedResource Include="TISK_sablony\VyrabenePolozky.rdlc" />
+    <EmbeddedResource Include="TISK_sablony\VyrabenePolozky_00.rdlc" />
+    <EmbeddedResource Include="Ukolovani\FormUkolyAktualniList.resx">
+      <DependentUpon>FormUkolyAktualniList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ukolovani\FormUkolyEdit.resx">
+      <DependentUpon>FormUkolyEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ukolovani\FormUkolyHistoryList.resx">
+      <DependentUpon>FormUkolyHistoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ukolovani\FormUkolyList.resx">
+      <DependentUpon>FormUkolyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VolnyPohyb\FormDavkyProdejDIEdit.resx">
+      <DependentUpon>FormDavkyProdejDIEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VolnyPohyb\FormVolnyPohybNasnimaneList.resx">
+      <DependentUpon>FormVolnyPohybNasnimaneList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VolnyPohyb\Sklady_Transakce_VolnyPohyb_Nasnimane.rdlc" />
+    <EmbeddedResource Include="Vydej\FormDavkyVydejeKontrola.resx">
+      <DependentUpon>FormDavkyVydejeKontrola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej\FormDavkyVydejeList.resx">
+      <DependentUpon>FormDavkyVydejeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej\FormDavkyVydejeEdit.resx">
+      <DependentUpon>FormDavkyVydejeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej\FormDavkyVydejeList_Test.resx">
+      <DependentUpon>FormDavkyVydejeList_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej\FormVydejDavkyList.resx">
+      <DependentUpon>FormVydejDavkyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej\FormVydejNasnimaneList.resx">
+      <DependentUpon>FormVydejNasnimaneList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej\Form_Predloha_Rekapitulace.resx">
+      <DependentUpon>Form_Predloha_Rekapitulace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej\IFormDavkyVydejSIEdit.resx">
+      <DependentUpon>IFormDavkyVydejSIEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vydej\Sklady_Rozbory_Transakce_s_predlohou.rdlc" />
+    <EmbeddedResource Include="Vydej\Sklady_Transakce_Volny_Pohyb_Nasnimane.rdlc" />
+    <EmbeddedResource Include="Vydej\SKLADY_TRANSAKCE_VYDEJ S PREDLOHOU_PREDLOHA.rdlc" />
+    <EmbeddedResource Include="Vydej\SKLADY_TRANSAKCE_VYDEJ S PREDLOHOU_PREDLOHA1.rdlc" />
+    <EmbeddedResource Include="Vydej\SKLADY_TRANSAKCE_VYDEJ S PREDLOHOU_PREDLOHA2.rdlc" />
+    <EmbeddedResource Include="Vydej\Sklady_Transakce_Vydej_s_predlohou_Nasnimane.rdlc" />
+    <EmbeddedResource Include="Vydej\Sklady_Transakce_Vydej_s_predlohou_Predloha.rdlc" />
+    <EmbeddedResource Include="Vyroba\Ciselnik\FormModifikace_TP.resx">
+      <DependentUpon>FormModifikace_TP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Ciselnik\FormStrojeEdit.resx">
+      <DependentUpon>FormStrojeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Ciselnik\Form_Moduly.resx">
+      <DependentUpon>Form_Moduly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Ciselnik\Form_Stroje.resx">
+      <DependentUpon>Form_Stroje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Ciselnik\Report_FormVazbyMaterialy.rdlc" />
+    <EmbeddedResource Include="Vyroba\Ciselnik\Vyroba_Ciselníky_Vazba_materialy.rdlc" />
+    <EmbeddedResource Include="Vyroba\Rozbory\Form_MachineStateSetList_RozborOdvoduSSS.resx">
+      <DependentUpon>Form_MachineStateSetList_RozborOdvoduSSS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Rozbory\FormOdvod_TiskoveSablony.resx">
+      <DependentUpon>FormOdvod_TiskoveSablony.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Rozbory\FormOdvod_MachineStateSetList .resx">
+      <DependentUpon>FormOdvod_MachineStateSetList .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Rozbory\FormOdvod_EventsErrList.resx">
+      <DependentUpon>FormOdvod_EventsErrList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Rozbory\FormOdvod_EventsList.resx">
+      <DependentUpon>FormOdvod_EventsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Rozbory\FormOdvod_EventsErrList_Storno.resx">
+      <DependentUpon>FormOdvod_EventsErrList_Storno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Rozbory\FormOdvod_EventsList_Storno.resx">
+      <DependentUpon>FormOdvod_EventsList_Storno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Rozbory\FormPlanovaniVyroby_Rozbor.resx">
+      <DependentUpon>FormPlanovaniVyroby_Rozbor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Rozbory\FormProductionEdit3.resx">
+      <DependentUpon>FormProductionEdit3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Rozbory\FormProductionSourcesList_SelectCountEntries.resx">
+      <DependentUpon>FormProductionSourcesList_SelectCountEntries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Rozbory\FormProductionEdit2_CarKod.resx">
+      <DependentUpon>FormProductionEdit2_CarKod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Rozbory\FormProductionList_SelectCountEntries.resx">
+      <DependentUpon>FormProductionList_SelectCountEntries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Rozbory\FormProductionSourcesEdit2.resx">
+      <DependentUpon>FormProductionSourcesEdit2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Rozbory\FormProductionSourecesList.resx">
+      <DependentUpon>FormProductionSourecesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Rozbory\FormProductionEdit.resx">
+      <DependentUpon>FormProductionEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Rozbory\FormProductionEdit2.resx">
+      <DependentUpon>FormProductionEdit2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Rozbory\FormProductionList.resx">
+      <DependentUpon>FormProductionList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Ciselnik\FormSkupinyEdit.resx">
+      <DependentUpon>FormSkupinyEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Ciselnik\FormSkupinyList.resx">
+      <DependentUpon>FormSkupinyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Rozbory\FormProduction_SN_List.resx">
+      <DependentUpon>FormProduction_SN_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Rozbory\FormUkoncitZakazkuOdvadeni.resx">
+      <DependentUpon>FormUkoncitZakazkuOdvadeni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Ciselnik\FormVazbyAddMaterialy.resx">
+      <DependentUpon>FormVazbyAddMaterialy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Ciselnik\FormVazbyAddMaterialyEdit.resx">
+      <DependentUpon>FormVazbyAddMaterialyEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Ciselnik\FormVazbyAddPolotovar.resx">
+      <DependentUpon>FormVazbyAddPolotovar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Ciselnik\FormVazbyAddVyrobek.resx">
+      <DependentUpon>FormVazbyAddVyrobek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Ciselnik\FormVazbyMaterialy.resx">
+      <DependentUpon>FormVazbyMaterialy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Rozbory\Report_Analyza_SSS_10.rdlc" />
+    <EmbeddedResource Include="Vyroba\Rozbory\Report_FormOdvod_EventsList_Prehled_Odvadeni_Stroju.rdlc" />
+    <EmbeddedResource Include="Vyroba\Rozbory\Report_FormProductionList.rdlc" />
+    <EmbeddedResource Include="Vyroba\Transakce\FormPotrebaMaterialu.resx">
+      <DependentUpon>FormPotrebaMaterialu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Transakce\FormVazby_P_PS_List _Zpracovat.resx">
+      <DependentUpon>FormVazby_P_PS_List _Zpracovat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Transakce\FormVazby_P_PS_List.resx">
+      <DependentUpon>FormVazby_P_PS_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Transakce\FormVazby_Zpracovat.resx">
+      <DependentUpon>FormVazby_Zpracovat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Transakce\FormVPHEdit.resx">
+      <DependentUpon>FormVPHEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Transakce\FormVPPEdit.resx">
+      <DependentUpon>FormVPPEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Transakce\FormVyrobniPrikazList.resx">
+      <DependentUpon>FormVyrobniPrikazList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Transakce\FormVyrobniPrikazList_Tisk.resx">
+      <DependentUpon>FormVyrobniPrikazList_Tisk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Transakce\FormVyrobniPrikaz_VPH_Seznam.resx">
+      <DependentUpon>FormVyrobniPrikaz_VPH_Seznam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Transakce\FormVyrobniPrikaz_VPP_GenerovaniSN.resx">
+      <DependentUpon>FormVyrobniPrikaz_VPP_GenerovaniSN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Transakce\Form_DisponibilityPrehled.resx">
+      <DependentUpon>Form_DisponibilityPrehled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vyroba\Wizard\VyrobniPrikazList_VPP\Form_01_Vyber_Vyrobku.resx">
+      <DependentUpon>Form_01_Vyber_Vyrobku.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Dokumentace\Doxyfile" />
+    <None Include="Dokumentace\project_hierarchy.gv" />
+    <None Include="Inventura\dataset\dsFaskInventura.xsc">
+      <DependentUpon>dsFaskInventura.xsd</DependentUpon>
+    </None>
+    <None Include="Inventura\dataset\dsFaskInventura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFaskInventura.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Inventura\dataset\dsFaskInventura.xss">
+      <DependentUpon>dsFaskInventura.xsd</DependentUpon>
+    </None>
+    <None Include="Inventura\dataset\dsSBKompletInventura.xsc">
+      <DependentUpon>dsSBKompletInventura.xsd</DependentUpon>
+    </None>
+    <None Include="Inventura\dataset\dsSBKompletInventura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSBKompletInventura.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Inventura\dataset\dsSBKompletInventura.xss">
+      <DependentUpon>dsSBKompletInventura.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Fask.Console.Interfaces.DataSets.Servis.datasource" />
+    <None Include="Properties\DataSources\Fask.Console.Interfaces.Servis.IServis.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Servis\Print\Servis.xsc">
+      <DependentUpon>Servis.xsd</DependentUpon>
+    </None>
+    <None Include="Servis\Print\Servis.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Servis.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Servis\Print\Servis.xss">
+      <DependentUpon>Servis.xsd</DependentUpon>
+    </None>
+    <None Include="Servis\Print\Templates\Etiketa_LokMech_Stav.zpl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Servis\Print\Templates\Etiketa_Prodej.zpl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Servis\Print\Templates\Etiketa_Zdroj.LeitzLbl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Servis\Print\Templates\Etiketa_Uzivatel.LeitzLbl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Servis\Print\Templates\Etiketa_Okruh.LeitzLbl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Servis\Print\Templates\Etiketa_Odberatel.LeitzLbl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Servis\Print\Templates\Etiketa_ZdrojStav.LeitzLbl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Servis\Print\Templates\Report_InventuraCompare.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Servis\Print\Templates\Report_VyrobnyPrikaz_AGRO.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Terminal\Test_Disp\DataSet_Disp.xsc">
+      <DependentUpon>DataSet_Disp.xsd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Terminal\Test_Disp\DataSet_Disp.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Disp1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Terminal\Test_Disp\DataSet_Disp.xss">
+      <DependentUpon>DataSet_Disp.xsd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Vyroba\Wizard\VyrobniPrikazList_VPP\dsVyrobkyProPridani.xsc">
+      <DependentUpon>dsVyrobkyProPridani.xsd</DependentUpon>
+    </None>
+    <None Include="Vyroba\Wizard\VyrobniPrikazList_VPP\dsVyrobkyProPridani.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsVyrobkyProPridani.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Vyroba\Wizard\VyrobniPrikazList_VPP\dsVyrobkyProPridani.xss">
+      <DependentUpon>dsVyrobkyProPridani.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="read-me.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Konfigurace\Scanner.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TODO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\_SdileneProjekty_\AdvanceDataGridView\AdvancedDataGridView\AdvancedDataGridView.csproj">
+      <Project>{6EBA0A55-B390-4479-A564-58D46094998D}</Project>
+      <Name>AdvancedDataGridView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\AdvancedButtonsPanel\AdvancedButtonsPanel.csproj">
+      <Project>{abe0ed85-2ef8-4dbc-bdbb-0164c1226be7}</Project>
+      <Name>AdvancedButtonsPanel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\Fask.BarCodeGraphics\Fask.BarCodeGraphics.ZPL_Zxing\Fask.BarCodeGraphics.ZPL_Zxing.csproj">
+      <Project>{71bf280f-845e-42c6-baef-71fa5843e56c}</Project>
+      <Name>Fask.BarCodeGraphics.ZPL_Zxing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\Fask.BarCodeGraphics\Fask.BarCodeGraphics\Fask.BarCodeGraphics.csproj">
+      <Project>{5d2adc6b-a30d-43ea-bf0d-418c88995295}</Project>
+      <Name>Fask.BarCodeGraphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\Fask.Columns\Fask.Columns.csproj">
+      <Project>{9fe07d18-7a04-4a20-8ee8-929f9be5df16}</Project>
+      <Name>Fask.Columns</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\Fask.Logging\Fask.Logging.csproj">
+      <Project>{89e8c070-4694-4f11-ab01-a674bf8b9f80}</Project>
+      <Name>Fask.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\FASK.Logins\FASK.Logins.csproj">
+      <Project>{bc4b8c29-bb68-4e66-9257-356603fcf7d2}</Project>
+      <Name>FASK.Logins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\Fask.POHODA.Disponibility\Fask.POHODA.Disponibility.csproj">
+      <Project>{35a80609-485a-490f-9ca3-b5d302fe5b48}</Project>
+      <Name>Fask.POHODA.Disponibility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\Fask.Rady\Fask.Rady.csproj">
+      <Project>{789768c6-60f7-43a3-b9a9-9a4b169b9514}</Project>
+      <Name>Fask.Rady</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\Fask.RestSharp\Fask.RestSharp.csproj">
+      <Project>{dcd07eda-015d-49cb-a3f0-855bc143440f}</Project>
+      <Name>Fask.RestSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\ProjektTiskClassLibrary\TestovaciProjekt\PrintReportLibrary\PrintReportLibrary.csproj">
+      <Project>{CE557F9B-F7D2-49FA-A0D0-33979083FED5}</Project>
+      <Name>PrintReportLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\RemoteViewing\RemoteViewing\RemoteViewing.Windows.Forms\RemoteViewing.Windows.Forms.csproj">
+      <Project>{BD54A7CE-6714-48B7-9897-C5D80C8F9BB2}</Project>
+      <Name>RemoteViewing.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\RemoteViewing\RemoteViewing\RemoteViewing\RemoteViewing.csproj">
+      <Project>{BA26815B-688C-43C9-B88C-A6A6AB172AE7}</Project>
+      <Name>RemoteViewing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\TouchscreenKeyboard\TouchscreenKeyboard\TouchscreenKeyboard.csproj">
+      <Project>{94070b1d-6de4-4d45-b2b9-5da09d0e15c9}</Project>
+      <Name>TouchscreenKeyboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Console.Interfaces\Fask.Console.Interfaces.csproj">
+      <Project>{b0431bd8-2948-453b-ad4a-c6bfeaadcbd7}</Project>
+      <Name>Fask.Console.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Console.Modules\Fask.Module.Print.GS1\Fask.Module.Print.GS1.csproj">
+      <Project>{BF55B012-E5AF-47A3-9991-CD445ADFBB3E}</Project>
+      <Name>Fask.Module.Print.GS1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Console.Modules\Fask.ModuleFirebird\Fask.ModuleFirebird.csproj">
+      <Project>{c37b15c0-bd31-4a1a-8bf7-c5143cc2537f}</Project>
+      <Name>Fask.ModuleFirebird</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Console.Modules\Fask.ModulePohodaXML\Fask.ModulePohodaXML.csproj">
+      <Project>{e4dcc2aa-a9d4-4c14-ad3f-a2ce4a35ec9e}</Project>
+      <Name>Fask.ModulePohodaXML</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Console.Modules\Fask.ModuleSql\Fask.ModuleSql.csproj">
+      <Project>{85c3f63a-3b71-4d38-9440-ab7bbd19ba9b}</Project>
+      <Name>Fask.ModuleSql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Console.Modules\Fask.ModuleSql_API\Fask.ModuleSql_API.csproj">
+      <Project>{8357c7a0-570a-4ca4-8a0a-9c9790f1b39a}</Project>
+      <Name>Fask.ModuleSql_API</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Encryption\Fask.Encryption.csproj">
+      <Project>{464262AA-2734-44FD-8846-F55AFB6A16FE}</Project>
+      <Name>Fask.Encryption</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IRFIDProvider\IRFIDProvider.csproj">
+      <Project>{01BD8C0C-F391-420E-AD74-6C1CA3584C17}</Project>
+      <Name>IRFIDProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MessageForm\MessageForm.csproj">
+      <Project>{6e7d9609-b82f-48a9-8e79-7e3340855ad6}</Project>
+      <Name>MessageForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFIDFactory\RFIDFactory.csproj">
+      <Project>{F77C6154-11B1-474F-97FB-F1FB43E5264C}</Project>
+      <Name>RFIDFactory</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="!!!Struktury!!!\" />
+    <Folder Include="!!!Varianty_Nastaveni\" />
+    <Folder Include="Konzola\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

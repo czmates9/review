@@ -1,0 +1,49 @@
+^XA
+^MMC
+^PW799
+^LL0799
+^LS0
+^CI31
+
+^FX jedna se o ID polozky
+^FT20,45
+^A0N,20,20
+^FDKód položky :
+^FS
+
+^FX jedna se o ID polozky
+^FT150,50
+^A0N,50,50
+^FD$ITEMNMBR$
+^FS
+
+^FX jedna se o ID polozky
+^FT475,45
+^A0N,20,20
+^FDšarže/expirace :
+^FS
+
+^FX jedna o sarzi anebo expiraci
+^FT630,50
+^A0N,50,50
+^FD$SERLTNUM$
+^FS
+
+^FX jedna se o popis polozky, je to v FieldBoxu na 2 radky
+^FT10,150
+^FB790,2,0,C,0
+^A0N,40, 50
+^FD$ITEMDESC$
+^FS
+
+^FX jedna se o lokaci
+^FT310,189
+^A0N,28,45
+^FD$LOCNCODE$
+^FS
+
+^FX jedna se o graficky 2D KOD
+#QR,100,200,600,600,0,$VNDITNUM$/$SERLTNUM$#
+
+^PQ$PocetVytisku$,0,1,Y
+^XZ

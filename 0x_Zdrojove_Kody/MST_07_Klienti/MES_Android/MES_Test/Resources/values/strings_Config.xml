@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="Config_TerminalID">Terminál ID:</string>
+  <string name="Config_ServerAdresa">Adresa Serveru:</string>
+  <string name="Config_TimeOut">TimeOut</string>
+  <string name="Config_isHTTPS">Povolit https</string>
+  <string name="Config_API_Konstanta">API konstanta</string>
+  <string name="Config_API_Autorizace">API autorizace</string>
+  <string name="Config_FormatCisel">Formát čísel</string>
+  
+  <string name="Config_Zebra">Povolit Zebra</string>
+  <string name="Config_ZXing">Povolit ZXing</string>
+
+  <string name="Config_ServerAccess">Server Access</string>
+  <string name="Config_Credential">Credential</string>
+  <string name="Config_Anonymous">Anonymous</string>
+  <string name="Config_UserName">Uživatelské jmeno</string>
+  <string name="Config_Password">Heslo</string>
+  <string name="Config_Domain">Domena</string>
+  <string name="Config_PreAuthenticate">PreAuthenticate</string>
+  <string name="Config_AllowRediretion">AllowRediretion</string>
+  <string name="Config_AllowDeCompresion">AllowDeCompresion</string>
+
+  <string name="Config_Cert">Certifikáty</string>
+  <string name="Config_OnlyInstalled">Only Installed</string>
+  <string name="Config_TrustAll">TrustAll</string>
+  <string name="Config_TrustQuery">TrustQuery</string>
+  
+</resources>

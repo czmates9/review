@@ -1,0 +1,1510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://Vyroba.fask.cz/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://Vyroba.fask.cz/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Vyroba.fask.cz/">
+      <s:import namespace="http://fask.cz/VyrobaDataSet.xsd" />
+      <s:import namespace="http://tempuri.org/VyrobaDataSet_StatistikaOdvadeni.xsd" />
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:import schemaLocation="http://localhost/MST_Win_Kom_Server_7_Dasenka/Vyroba.asmx?schema=VyrobaDataSet" namespace="http://fask.cz/VyrobaDataSet.xsd" />
+      <s:import schemaLocation="http://localhost/MST_Win_Kom_Server_7_Dasenka/Vyroba.asmx?schema=VyrobaDataSet_StatistikaOdvadeni" namespace="http://tempuri.org/VyrobaDataSet_StatistikaOdvadeni.xsd" />
+      <s:element name="Generate_SarzeOnline">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="smenaID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="linkaID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="qty" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ITEMNMBR" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Generate_SarzeOnlineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Generate_SarzeOnlineResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Production_OpenedCorrection_Json">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MachineID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Production_OpenedCorrection_JsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Production_OpenedCorrection_JsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Production_OpenedProduction_Json">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MachineID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Production_OpenedProduction_JsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Production_OpenedProduction_JsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApplicationEndPass">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApplicationEndPassResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ApplicationEndPassResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServerDateTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="ServerDateTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ServerDateTimeResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobniPrikazBlokace">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalID" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="vyrobniprikaz" type="tns:VyrobniPrikazHlavicka" />
+            <s:element minOccurs="1" maxOccurs="1" name="pozadavekBlokace" type="tns:BlokaceTyp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VyrobniPrikazHlavicka">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="COUNTENTRIES" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SOPNUMBE" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="BlokaceTyp">
+        <s:restriction base="s:string">
+          <s:enumeration value="Blokovat" />
+          <s:enumeration value="OdBlokovat" />
+          <s:enumeration value="Uzavrit" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="VyrobniPrikazBlokaceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VyrobniPrikazBlokaceResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Production_AllOpenedProductions">
+        <s:complexType />
+      </s:element>
+      <s:element name="Production_AllOpenedProductionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Production_AllOpenedProductionsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/VyrobaDataSet.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Production_HistoryFilter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filters" type="tns:FiltersHistory" />
+            <s:element minOccurs="1" maxOccurs="1" name="nLastActions" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="FiltersHistory">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="filtrNedokonceneZakazky" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="filtrOsoba" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="filtrStroj" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="filtrDatumOd" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="filtrDatumDo" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="filtrZakazka" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Production_HistoryFilterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Production_HistoryFilterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/VyrobaDataSet.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Report_UserDay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="datetimeLogin" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="datetimeLastOperation" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Report_UserDayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Report_UserDayResult" type="tns:Report_UserDay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Report_UserDay">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Machines" type="tns:ArrayOfString" />
+          <s:element minOccurs="1" maxOccurs="1" name="TimeNorm" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TimeReal" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TimeCorrects" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserLogin" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserLastOperation" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ProductionLastAction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MachineID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Corrections" nillable="true" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="nLastActions" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProductionLastActionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProductionLastActionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/VyrobaDataSet.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserLastAction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserLastActionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserLastActionResult" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Production_OpenedProduction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MachineID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Production_OpenedProductionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Production_OpenedProductionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/VyrobaDataSet.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Production_Filter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filters" type="tns:FiltersHistory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Production_FilterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Production_FilterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/VyrobaDataSet_StatistikaOdvadeni.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Production_OpenedCorrection">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MachineID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Production_OpenedCorrectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Production_OpenedCorrectionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/VyrobaDataSet.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessProductionData2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalID" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="guid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessProductionData2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProcessProductionData2Result" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaDBDateTimePrepareZip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalID" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaDBDateTimePrepareZipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VyrobaDBDateTimePrepareZipResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaDBInternalStatePrepareZip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalID" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaDBInternalStatePrepareZipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VyrobaDBInternalStatePrepareZipResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaDBProductionPrepareZip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalID" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaDBProductionPrepareZipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VyrobaDBProductionPrepareZipResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaCEDataSetSchema">
+        <s:complexType />
+      </s:element>
+      <s:element name="VyrobaCEDataSetSchemaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VyrobaCEDataSetSchemaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/VyrobaDataSet.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaDBInternalState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalID" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaDBInternalStateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VyrobaDBInternalStateResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaDBProduction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalID" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaDBProductionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VyrobaDBProductionResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaDBInternalStatePrepare">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalID" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaDBInternalStatePrepareResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VyrobaDBInternalStatePrepareResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaDBProductionPrepare">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalID" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaDBProductionPrepareResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VyrobaDBProductionPrepareResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaTables">
+        <s:complexType />
+      </s:element>
+      <s:element name="VyrobaTablesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VyrobaTablesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/VyrobaDataSet.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaHlavicky">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalID" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaHlavickyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VyrobaHlavickyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/VyrobaDataSet.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaPolozky">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hlavicka" type="tns:VyrobniPrikazHlavicka" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VyrobaPolozkyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VyrobaPolozkyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/VyrobaDataSet.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessProductionData_AllFromDirectory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalID" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="foldername" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessProductionData_AllFromDirectoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProcessProductionData_AllFromDirectoryResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Production_History">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MachineID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sopnumbe" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dateFrom" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dateTo" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="nLastActions" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Production_HistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Production_HistoryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/VyrobaDataSet.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Production_Soubeh">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="soubehGUID" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Production_SoubehResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Production_SoubehResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/VyrobaDataSet.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Vyroba_Online_CheckOperation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="operaceID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="terminalID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Vyroba_Online_CheckOperationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Vyroba_Online_CheckOperationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://fask.cz/VyrobaDataSet.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="productionStateEnabled" type="tns:ProductionState" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="ProductionState">
+        <s:restriction base="s:string">
+          <s:enumeration value="Unknown" />
+          <s:enumeration value="Priprava_Start" />
+          <s:enumeration value="Priprava_Stop" />
+          <s:enumeration value="Odvod_Start" />
+          <s:enumeration value="Odvod_Stop" />
+          <s:enumeration value="Korekce_Start" />
+          <s:enumeration value="Korekce_Stop" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="Vyroba_Online_WriteOperation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="productionObject" type="tns:ProductionObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ProductionObject">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="operaceID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="terminalID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="stavOperace" type="tns:ProductionState" />
+          <s:element minOccurs="1" maxOccurs="1" name="casOperace" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="mnozstviVyrobeno" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="mnozstviZmetek" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="popisZmetek" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Vyroba_Online_WriteOperationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Vyroba_Online_WriteOperationResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Generate_SarzeOnlineSoapIn">
+    <wsdl:part name="parameters" element="tns:Generate_SarzeOnline" />
+  </wsdl:message>
+  <wsdl:message name="Generate_SarzeOnlineSoapOut">
+    <wsdl:part name="parameters" element="tns:Generate_SarzeOnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="Production_OpenedCorrection_JsonSoapIn">
+    <wsdl:part name="parameters" element="tns:Production_OpenedCorrection_Json" />
+  </wsdl:message>
+  <wsdl:message name="Production_OpenedCorrection_JsonSoapOut">
+    <wsdl:part name="parameters" element="tns:Production_OpenedCorrection_JsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="Production_OpenedProduction_JsonSoapIn">
+    <wsdl:part name="parameters" element="tns:Production_OpenedProduction_Json" />
+  </wsdl:message>
+  <wsdl:message name="Production_OpenedProduction_JsonSoapOut">
+    <wsdl:part name="parameters" element="tns:Production_OpenedProduction_JsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApplicationEndPassSoapIn">
+    <wsdl:part name="parameters" element="tns:ApplicationEndPass" />
+  </wsdl:message>
+  <wsdl:message name="ApplicationEndPassSoapOut">
+    <wsdl:part name="parameters" element="tns:ApplicationEndPassResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServerDateTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:ServerDateTime" />
+  </wsdl:message>
+  <wsdl:message name="ServerDateTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:ServerDateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="VyrobniPrikazBlokaceSoapIn">
+    <wsdl:part name="parameters" element="tns:VyrobniPrikazBlokace" />
+  </wsdl:message>
+  <wsdl:message name="VyrobniPrikazBlokaceSoapOut">
+    <wsdl:part name="parameters" element="tns:VyrobniPrikazBlokaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="Production_AllOpenedProductionsSoapIn">
+    <wsdl:part name="parameters" element="tns:Production_AllOpenedProductions" />
+  </wsdl:message>
+  <wsdl:message name="Production_AllOpenedProductionsSoapOut">
+    <wsdl:part name="parameters" element="tns:Production_AllOpenedProductionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Production_HistoryFilterSoapIn">
+    <wsdl:part name="parameters" element="tns:Production_HistoryFilter" />
+  </wsdl:message>
+  <wsdl:message name="Production_HistoryFilterSoapOut">
+    <wsdl:part name="parameters" element="tns:Production_HistoryFilterResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Report_UserDaySoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Report_UserDay" />
+  </wsdl:message>
+  <wsdl:message name="Get_Report_UserDaySoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Report_UserDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProductionLastActionSoapIn">
+    <wsdl:part name="parameters" element="tns:ProductionLastAction" />
+  </wsdl:message>
+  <wsdl:message name="ProductionLastActionSoapOut">
+    <wsdl:part name="parameters" element="tns:ProductionLastActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserLastActionSoapIn">
+    <wsdl:part name="parameters" element="tns:UserLastAction" />
+  </wsdl:message>
+  <wsdl:message name="UserLastActionSoapOut">
+    <wsdl:part name="parameters" element="tns:UserLastActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Production_OpenedProductionSoapIn">
+    <wsdl:part name="parameters" element="tns:Production_OpenedProduction" />
+  </wsdl:message>
+  <wsdl:message name="Production_OpenedProductionSoapOut">
+    <wsdl:part name="parameters" element="tns:Production_OpenedProductionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Production_FilterSoapIn">
+    <wsdl:part name="parameters" element="tns:Production_Filter" />
+  </wsdl:message>
+  <wsdl:message name="Production_FilterSoapOut">
+    <wsdl:part name="parameters" element="tns:Production_FilterResponse" />
+  </wsdl:message>
+  <wsdl:message name="Production_OpenedCorrectionSoapIn">
+    <wsdl:part name="parameters" element="tns:Production_OpenedCorrection" />
+  </wsdl:message>
+  <wsdl:message name="Production_OpenedCorrectionSoapOut">
+    <wsdl:part name="parameters" element="tns:Production_OpenedCorrectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessProductionData2SoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessProductionData2" />
+  </wsdl:message>
+  <wsdl:message name="ProcessProductionData2SoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessProductionData2Response" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaDBDateTimePrepareZipSoapIn">
+    <wsdl:part name="parameters" element="tns:VyrobaDBDateTimePrepareZip" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaDBDateTimePrepareZipSoapOut">
+    <wsdl:part name="parameters" element="tns:VyrobaDBDateTimePrepareZipResponse" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaDBInternalStatePrepareZipSoapIn">
+    <wsdl:part name="parameters" element="tns:VyrobaDBInternalStatePrepareZip" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaDBInternalStatePrepareZipSoapOut">
+    <wsdl:part name="parameters" element="tns:VyrobaDBInternalStatePrepareZipResponse" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaDBProductionPrepareZipSoapIn">
+    <wsdl:part name="parameters" element="tns:VyrobaDBProductionPrepareZip" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaDBProductionPrepareZipSoapOut">
+    <wsdl:part name="parameters" element="tns:VyrobaDBProductionPrepareZipResponse" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaCEDataSetSchemaSoapIn">
+    <wsdl:part name="parameters" element="tns:VyrobaCEDataSetSchema" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaCEDataSetSchemaSoapOut">
+    <wsdl:part name="parameters" element="tns:VyrobaCEDataSetSchemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaDBInternalStateSoapIn">
+    <wsdl:part name="parameters" element="tns:VyrobaDBInternalState" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaDBInternalStateSoapOut">
+    <wsdl:part name="parameters" element="tns:VyrobaDBInternalStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaDBProductionSoapIn">
+    <wsdl:part name="parameters" element="tns:VyrobaDBProduction" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaDBProductionSoapOut">
+    <wsdl:part name="parameters" element="tns:VyrobaDBProductionResponse" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaDBInternalStatePrepareSoapIn">
+    <wsdl:part name="parameters" element="tns:VyrobaDBInternalStatePrepare" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaDBInternalStatePrepareSoapOut">
+    <wsdl:part name="parameters" element="tns:VyrobaDBInternalStatePrepareResponse" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaDBProductionPrepareSoapIn">
+    <wsdl:part name="parameters" element="tns:VyrobaDBProductionPrepare" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaDBProductionPrepareSoapOut">
+    <wsdl:part name="parameters" element="tns:VyrobaDBProductionPrepareResponse" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaTablesSoapIn">
+    <wsdl:part name="parameters" element="tns:VyrobaTables" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaTablesSoapOut">
+    <wsdl:part name="parameters" element="tns:VyrobaTablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaHlavickySoapIn">
+    <wsdl:part name="parameters" element="tns:VyrobaHlavicky" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaHlavickySoapOut">
+    <wsdl:part name="parameters" element="tns:VyrobaHlavickyResponse" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaPolozkySoapIn">
+    <wsdl:part name="parameters" element="tns:VyrobaPolozky" />
+  </wsdl:message>
+  <wsdl:message name="VyrobaPolozkySoapOut">
+    <wsdl:part name="parameters" element="tns:VyrobaPolozkyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessProductionData_AllFromDirectorySoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessProductionData_AllFromDirectory" />
+  </wsdl:message>
+  <wsdl:message name="ProcessProductionData_AllFromDirectorySoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessProductionData_AllFromDirectoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="Production_HistorySoapIn">
+    <wsdl:part name="parameters" element="tns:Production_History" />
+  </wsdl:message>
+  <wsdl:message name="Production_HistorySoapOut">
+    <wsdl:part name="parameters" element="tns:Production_HistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="Production_SoubehSoapIn">
+    <wsdl:part name="parameters" element="tns:Production_Soubeh" />
+  </wsdl:message>
+  <wsdl:message name="Production_SoubehSoapOut">
+    <wsdl:part name="parameters" element="tns:Production_SoubehResponse" />
+  </wsdl:message>
+  <wsdl:message name="Vyroba_Online_CheckOperationSoapIn">
+    <wsdl:part name="parameters" element="tns:Vyroba_Online_CheckOperation" />
+  </wsdl:message>
+  <wsdl:message name="Vyroba_Online_CheckOperationSoapOut">
+    <wsdl:part name="parameters" element="tns:Vyroba_Online_CheckOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Vyroba_Online_WriteOperationSoapIn">
+    <wsdl:part name="parameters" element="tns:Vyroba_Online_WriteOperation" />
+  </wsdl:message>
+  <wsdl:message name="Vyroba_Online_WriteOperationSoapOut">
+    <wsdl:part name="parameters" element="tns:Vyroba_Online_WriteOperationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="VyrobaSoap">
+    <wsdl:operation name="Generate_SarzeOnline">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda sloužící pro online generovaní šarže</wsdl:documentation>
+      <wsdl:input message="tns:Generate_SarzeOnlineSoapIn" />
+      <wsdl:output message="tns:Generate_SarzeOnlineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Production_OpenedCorrection_Json">
+      <wsdl:input message="tns:Production_OpenedCorrection_JsonSoapIn" />
+      <wsdl:output message="tns:Production_OpenedCorrection_JsonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Production_OpenedProduction_Json">
+      <wsdl:input message="tns:Production_OpenedProduction_JsonSoapIn" />
+      <wsdl:output message="tns:Production_OpenedProduction_JsonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplicationEndPass">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro ověření hesla na ukončení aplikace.</wsdl:documentation>
+      <wsdl:input message="tns:ApplicationEndPassSoapIn" />
+      <wsdl:output message="tns:ApplicationEndPassSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServerDateTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro synchronizaci času. Vraci jaky je čas na serveru</wsdl:documentation>
+      <wsdl:input message="tns:ServerDateTimeSoapIn" />
+      <wsdl:output message="tns:ServerDateTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VyrobniPrikazBlokace">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda sloužici pro Uzavřeni, Blokovani anebo ODblokovani příkazu</wsdl:documentation>
+      <wsdl:input message="tns:VyrobniPrikazBlokaceSoapIn" />
+      <wsdl:output message="tns:VyrobniPrikazBlokaceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Production_AllOpenedProductions">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vratí všechny otevřene Productions</wsdl:documentation>
+      <wsdl:input message="tns:Production_AllOpenedProductionsSoapIn" />
+      <wsdl:output message="tns:Production_AllOpenedProductionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Production_HistoryFilter">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vrací historii dat z DB za pomoci filteru</wsdl:documentation>
+      <wsdl:input message="tns:Production_HistoryFilterSoapIn" />
+      <wsdl:output message="tns:Production_HistoryFilterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Report_UserDay">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vraci informaci o case pro uzivatele ...</wsdl:documentation>
+      <wsdl:input message="tns:Get_Report_UserDaySoapIn" />
+      <wsdl:output message="tns:Get_Report_UserDaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductionLastAction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vrací poslední producion actions</wsdl:documentation>
+      <wsdl:input message="tns:ProductionLastActionSoapIn" />
+      <wsdl:output message="tns:ProductionLastActionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserLastAction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vrací poslední user action datetime(dateeve)</wsdl:documentation>
+      <wsdl:input message="tns:UserLastActionSoapIn" />
+      <wsdl:output message="tns:UserLastActionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Production_OpenedProduction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vrací poslední otevřený Production pro uživatele a stroj</wsdl:documentation>
+      <wsdl:input message="tns:Production_OpenedProductionSoapIn" />
+      <wsdl:output message="tns:Production_OpenedProductionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Production_Filter">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda ktera vrací Production podle filtru</wsdl:documentation>
+      <wsdl:input message="tns:Production_FilterSoapIn" />
+      <wsdl:output message="tns:Production_FilterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Production_OpenedCorrection">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vrací poslední otevřený Corrections pro uživatele a stroj</wsdl:documentation>
+      <wsdl:input message="tns:Production_OpenedCorrectionSoapIn" />
+      <wsdl:output message="tns:Production_OpenedCorrectionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessProductionData2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro zpracovani odeslanych dat... s zip...</wsdl:documentation>
+      <wsdl:input message="tns:ProcessProductionData2SoapIn" />
+      <wsdl:output message="tns:ProcessProductionData2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBDateTimePrepareZip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vytvoří SQLite databazi naplnenou datama z DB a zazipuje</wsdl:documentation>
+      <wsdl:input message="tns:VyrobaDBDateTimePrepareZipSoapIn" />
+      <wsdl:output message="tns:VyrobaDBDateTimePrepareZipSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBInternalStatePrepareZip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Vytvori InternalState datovou predlohu pro terminal</wsdl:documentation>
+      <wsdl:input message="tns:VyrobaDBInternalStatePrepareZipSoapIn" />
+      <wsdl:output message="tns:VyrobaDBInternalStatePrepareZipSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBProductionPrepareZip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Vytvori production datovou predlohu pro terminal</wsdl:documentation>
+      <wsdl:input message="tns:VyrobaDBProductionPrepareZipSoapIn" />
+      <wsdl:output message="tns:VyrobaDBProductionPrepareZipSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaCEDataSetSchema">
+      <wsdl:input message="tns:VyrobaCEDataSetSchemaSoapIn" />
+      <wsdl:output message="tns:VyrobaCEDataSetSchemaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBInternalState">
+      <wsdl:input message="tns:VyrobaDBInternalStateSoapIn" />
+      <wsdl:output message="tns:VyrobaDBInternalStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBProduction">
+      <wsdl:input message="tns:VyrobaDBProductionSoapIn" />
+      <wsdl:output message="tns:VyrobaDBProductionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBInternalStatePrepare">
+      <wsdl:input message="tns:VyrobaDBInternalStatePrepareSoapIn" />
+      <wsdl:output message="tns:VyrobaDBInternalStatePrepareSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBProductionPrepare">
+      <wsdl:input message="tns:VyrobaDBProductionPrepareSoapIn" />
+      <wsdl:output message="tns:VyrobaDBProductionPrepareSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaTables">
+      <wsdl:input message="tns:VyrobaTablesSoapIn" />
+      <wsdl:output message="tns:VyrobaTablesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaHlavicky">
+      <wsdl:input message="tns:VyrobaHlavickySoapIn" />
+      <wsdl:output message="tns:VyrobaHlavickySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaPolozky">
+      <wsdl:input message="tns:VyrobaPolozkySoapIn" />
+      <wsdl:output message="tns:VyrobaPolozkySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessProductionData_AllFromDirectory">
+      <wsdl:input message="tns:ProcessProductionData_AllFromDirectorySoapIn" />
+      <wsdl:output message="tns:ProcessProductionData_AllFromDirectorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Production_History">
+      <wsdl:input message="tns:Production_HistorySoapIn" />
+      <wsdl:output message="tns:Production_HistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Production_Soubeh">
+      <wsdl:input message="tns:Production_SoubehSoapIn" />
+      <wsdl:output message="tns:Production_SoubehSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Vyroba_Online_CheckOperation">
+      <wsdl:input message="tns:Vyroba_Online_CheckOperationSoapIn" />
+      <wsdl:output message="tns:Vyroba_Online_CheckOperationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Vyroba_Online_WriteOperation">
+      <wsdl:input message="tns:Vyroba_Online_WriteOperationSoapIn" />
+      <wsdl:output message="tns:Vyroba_Online_WriteOperationSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VyrobaSoap" type="tns:VyrobaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Generate_SarzeOnline">
+      <soap:operation soapAction="http://Vyroba.fask.cz/Generate_SarzeOnline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_OpenedCorrection_Json">
+      <soap:operation soapAction="http://Vyroba.fask.cz/Production_OpenedCorrection_Json" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_OpenedProduction_Json">
+      <soap:operation soapAction="http://Vyroba.fask.cz/Production_OpenedProduction_Json" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplicationEndPass">
+      <soap:operation soapAction="http://Vyroba.fask.cz/ApplicationEndPass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServerDateTime">
+      <soap:operation soapAction="http://Vyroba.fask.cz/ServerDateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobniPrikazBlokace">
+      <soap:operation soapAction="http://Vyroba.fask.cz/VyrobniPrikazBlokace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_AllOpenedProductions">
+      <soap:operation soapAction="http://Vyroba.fask.cz/Production_AllOpenedProductions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_HistoryFilter">
+      <soap:operation soapAction="http://Vyroba.fask.cz/Production_HistoryFilter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Report_UserDay">
+      <soap:operation soapAction="http://Vyroba.fask.cz/Get_Report_UserDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductionLastAction">
+      <soap:operation soapAction="http://Vyroba.fask.cz/ProductionLastAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserLastAction">
+      <soap:operation soapAction="http://Vyroba.fask.cz/UserLastAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_OpenedProduction">
+      <soap:operation soapAction="http://Vyroba.fask.cz/Production_OpenedProduction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_Filter">
+      <soap:operation soapAction="http://Vyroba.fask.cz/Production_Filter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_OpenedCorrection">
+      <soap:operation soapAction="http://Vyroba.fask.cz/Production_OpenedCorrection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessProductionData2">
+      <soap:operation soapAction="http://Vyroba.fask.cz/ProcessProductionData2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBDateTimePrepareZip">
+      <soap:operation soapAction="http://Vyroba.fask.cz/VyrobaDBDateTimePrepareZip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBInternalStatePrepareZip">
+      <soap:operation soapAction="http://Vyroba.fask.cz/VyrobaDBInternalStatePrepareZip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBProductionPrepareZip">
+      <soap:operation soapAction="http://Vyroba.fask.cz/VyrobaDBProductionPrepareZip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaCEDataSetSchema">
+      <soap:operation soapAction="http://Vyroba.fask.cz/VyrobaCEDataSetSchema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBInternalState">
+      <soap:operation soapAction="http://Vyroba.fask.cz/VyrobaDBInternalState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBProduction">
+      <soap:operation soapAction="http://Vyroba.fask.cz/VyrobaDBProduction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBInternalStatePrepare">
+      <soap:operation soapAction="http://Vyroba.fask.cz/VyrobaDBInternalStatePrepare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBProductionPrepare">
+      <soap:operation soapAction="http://Vyroba.fask.cz/VyrobaDBProductionPrepare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaTables">
+      <soap:operation soapAction="http://Vyroba.fask.cz/VyrobaTables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaHlavicky">
+      <soap:operation soapAction="http://Vyroba.fask.cz/VyrobaHlavicky" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaPolozky">
+      <soap:operation soapAction="http://Vyroba.fask.cz/VyrobaPolozky" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessProductionData_AllFromDirectory">
+      <soap:operation soapAction="http://Vyroba.fask.cz/ProcessProductionData_AllFromDirectory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_History">
+      <soap:operation soapAction="http://Vyroba.fask.cz/Production_History" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_Soubeh">
+      <soap:operation soapAction="http://Vyroba.fask.cz/Production_Soubeh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Vyroba_Online_CheckOperation">
+      <soap:operation soapAction="http://Vyroba.fask.cz/Vyroba_Online_CheckOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Vyroba_Online_WriteOperation">
+      <soap:operation soapAction="http://Vyroba.fask.cz/Vyroba_Online_WriteOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VyrobaSoap12" type="tns:VyrobaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Generate_SarzeOnline">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/Generate_SarzeOnline" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_OpenedCorrection_Json">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/Production_OpenedCorrection_Json" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_OpenedProduction_Json">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/Production_OpenedProduction_Json" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplicationEndPass">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/ApplicationEndPass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServerDateTime">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/ServerDateTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobniPrikazBlokace">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/VyrobniPrikazBlokace" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_AllOpenedProductions">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/Production_AllOpenedProductions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_HistoryFilter">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/Production_HistoryFilter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Report_UserDay">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/Get_Report_UserDay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductionLastAction">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/ProductionLastAction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserLastAction">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/UserLastAction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_OpenedProduction">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/Production_OpenedProduction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_Filter">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/Production_Filter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_OpenedCorrection">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/Production_OpenedCorrection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessProductionData2">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/ProcessProductionData2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBDateTimePrepareZip">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/VyrobaDBDateTimePrepareZip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBInternalStatePrepareZip">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/VyrobaDBInternalStatePrepareZip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBProductionPrepareZip">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/VyrobaDBProductionPrepareZip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaCEDataSetSchema">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/VyrobaCEDataSetSchema" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBInternalState">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/VyrobaDBInternalState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBProduction">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/VyrobaDBProduction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBInternalStatePrepare">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/VyrobaDBInternalStatePrepare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaDBProductionPrepare">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/VyrobaDBProductionPrepare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaTables">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/VyrobaTables" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaHlavicky">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/VyrobaHlavicky" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VyrobaPolozky">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/VyrobaPolozky" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessProductionData_AllFromDirectory">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/ProcessProductionData_AllFromDirectory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_History">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/Production_History" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_Soubeh">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/Production_Soubeh" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Vyroba_Online_CheckOperation">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/Vyroba_Online_CheckOperation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Vyroba_Online_WriteOperation">
+      <soap12:operation soapAction="http://Vyroba.fask.cz/Vyroba_Online_WriteOperation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Vyroba">
+    <wsdl:port name="VyrobaSoap" binding="tns:VyrobaSoap">
+      <soap:address location="http://localhost/MST_Win_Kom_Server_7_Dasenka/Vyroba.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VyrobaSoap12" binding="tns:VyrobaSoap12">
+      <soap12:address location="http://localhost/MST_Win_Kom_Server_7_Dasenka/Vyroba.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

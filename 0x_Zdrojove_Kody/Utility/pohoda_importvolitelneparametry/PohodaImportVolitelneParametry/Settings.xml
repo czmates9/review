@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <appSettings>
+    
+    <add key="NameINIFile" value="xml_imp.ini" />
+    <!--<add key="ICO" value="04535510" />-->
+    <add key="ICO" value="12345678" />
+
+    <add key="Pohoda_Login" value="Admin" />
+    <add key="Pohoda_Heslo" value="" />
+
+    <add key="PathToPohodaEXE" value="z:\Pohoda.exe" />
+
+    <add key="Process_UseShellExecute" value="false" />
+    
+    <!-- Skladani connection stringu-->
+
+    <!--<add key="Catalog" value="StwPh_04535510_2017" />-->
+    <add key="Catalog" value="StwPh_12345678_2019" />
+    <add key="Provider" value="SQLNCLI10" />
+    <add key="Data_Source" value="192.168.1.114\sql_2014" />
+    <add key="SQL_Login" value="sa" />
+   <add key="SQL_Heslo" value="" />
+
+    <!--<add key="Communicator_Drive_Mapping_Letter" value="z" />
+    <add key="Comunicator_Drive_Mapping_UNCPath" value="\\faskcz-cv004\POHODA" />
+    <add key="Comunicator_Drive_Mapping_Domain" value="faskcz-cv004" />
+    <add key="Comunicator_Drive_Mapping_User" value="prezentace" />
+   <add key="Comunicator_Drive_Mapping_Password" value="prezentace" />-->
+
+    <add key="Communicator_Drive_Mapping_Letter" value="" />
+    <add key="Comunicator_Drive_Mapping_UNCPath" value="" />
+    <add key="Comunicator_Drive_Mapping_Domain" value="" />
+    <add key="Comunicator_Drive_Mapping_User" value="" />
+    <add key="Comunicator_Drive_Mapping_Password" value="" />
+    
+  </appSettings>
+</configuration>

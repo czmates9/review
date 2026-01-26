@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MENODataSetMENO" targetNamespace="http://tempuri.org/MENODataSetMENO.xsd" xmlns:mstns="http://tempuri.org/MENODataSetMENO.xsd" xmlns="http://tempuri.org/MENODataSetMENO.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MENODataSetMENO" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MENODataSetMENO" msprop:Generator_UserDSName="MENODataSetMENO">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MENODataTableMENO" msprop:Generator_TableClassName="MENODataTableMENODataTable" msprop:Generator_TableVarName="tableMENODataTableMENO" msprop:Generator_TablePropName="MENODataTableMENO" msprop:Generator_RowDeletingName="MENODataTableMENORowDeleting" msprop:Generator_RowChangingName="MENODataTableMENORowChanging" msprop:Generator_RowEvHandlerName="MENODataTableMENORowChangeEventHandler" msprop:Generator_RowDeletedName="MENODataTableMENORowDeleted" msprop:Generator_UserTableName="MENODataTableMENO" msprop:Generator_RowChangedName="MENODataTableMENORowChanged" msprop:Generator_RowEvArgName="MENODataTableMENORowChangeEvent" msprop:Generator_RowClassName="MENODataTableMENORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MENODataColumn1MENO" msprop:Generator_ColumnVarNameInTable="columnMENODataColumn1MENO" msprop:Generator_ColumnPropNameInRow="MENODataColumn1MENO" msprop:Generator_ColumnPropNameInTable="MENODataColumn1MENOColumn" msprop:Generator_UserColumnName="MENODataColumn1MENO" type="xs:string" minOccurs="0" />
+              <xs:element name="MENODataColumn2_stringMENO" msprop:Generator_ColumnVarNameInTable="columnMENODataColumn2_stringMENO" msprop:Generator_ColumnPropNameInRow="MENODataColumn2_stringMENO" msprop:Generator_ColumnPropNameInTable="MENODataColumn2_stringMENOColumn" msprop:Generator_UserColumnName="MENODataColumn2_stringMENO" type="xs:string" minOccurs="0" />
+              <xs:element name="MENODataColumn3_dateMENO" msprop:Generator_ColumnVarNameInTable="columnMENODataColumn3_dateMENO" msprop:Generator_ColumnPropNameInRow="MENODataColumn3_dateMENO" msprop:Generator_ColumnPropNameInTable="MENODataColumn3_dateMENOColumn" msprop:Generator_UserColumnName="MENODataColumn3_dateMENO" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MENODataColumn4_intMENO" msprop:Generator_ColumnVarNameInTable="columnMENODataColumn4_intMENO" msprop:Generator_ColumnPropNameInRow="MENODataColumn4_intMENO" msprop:Generator_ColumnPropNameInTable="MENODataColumn4_intMENOColumn" msprop:Generator_UserColumnName="MENODataColumn4_intMENO" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

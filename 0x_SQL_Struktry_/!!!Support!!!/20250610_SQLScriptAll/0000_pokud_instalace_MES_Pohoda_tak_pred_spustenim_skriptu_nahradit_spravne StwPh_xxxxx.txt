@@ -1,0 +1,1 @@
+pomoci CTRL + H najít řetezec "StwPh_04535667_2020" a nahradit ho správným nazvem DB POHODY zakaznika. Jedná se o defaultní nazev DB s strukturach !!!

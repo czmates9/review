@@ -1,0 +1,167 @@
+swagger: "2.0"
+info :
+  description: "Jedná se o prvni, testovací dokumentaci k API MES"
+  version: "0.1"
+  title: "MES API Dokumnetace"
+  contact:
+    email: "vyvoj@fask.cz"
+host: "192.168.1.101"    
+basePath: "/api"
+tags:
+- name: "KonfigTerminalController"
+  description: "Jedná se o metody pro praci s konfigurací"
+- name: "loginController"
+  description: "Jedná se o praci s uživatelama"
+schemes:
+- "https"
+- "http"
+paths: 
+  /KonfigTerminal:
+    get:
+      tags:
+      - "KonfigTerminalController"
+      summary: "Metoda vrátí seznam všech konfigurací na serveru"
+      description: "Tady nejake neco o tom co to ma delat a co ne"
+      operationId: "KonfigTerminal"
+      produces:
+      - "application/json"
+      - "application/xml"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Konfig_Terminal_List"
+      security:
+      - api_key: []
+  /KonfigTerminal/TerminalID/{TerminalID}:
+    get:
+      tags:
+      - "KonfigTerminalController"
+      summary: "Metoda vrátí konfigurací pro konkretne ID"
+      description: "Tady nejake neco o tom co to ma delat a co ne"
+      operationId: "KonfigTerminalByID"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - name: "TerminalID"
+        in: "path"
+        description: "ID terminalu"
+        required: true
+        type: "integer"
+        format: "int64"      
+      responses:
+        "200":
+          description: "Uspešně nalezeno"
+          schema:
+              $ref: "#/definitions/Konfigurace"
+        "201":
+          description: "Soubor konfigurace vytvořen defaultně"
+          schema:
+              $ref: "#/definitions/Konfigurace"
+        "404":
+          description: "Not found, pokud nastane exception anebo soubor konfigurace nenalezen"
+      security:
+      - api_key: []
+  /KonfigTerminal/UserID/{UserID}:
+    get:
+      tags:
+      - "KonfigTerminalController"
+      summary: "Metoda vrátí konfigurací pro konkretneho Uzivatele"
+      description: "Tady nejake neco o tom co to ma delat a co ne"
+      operationId: "KonfigTerminalByUserID"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - name: "UserID"
+        in: "path"
+        description: "ID uživatele"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "Uspešně nalezeno"
+          schema:
+              $ref: "#/definitions/Konfigurace"
+        "201":
+          description: "Soubor konfigurace vytvořen defaultně"
+          schema:
+              $ref: "#/definitions/Konfigurace"
+        "404":
+          description: "Not found, pokud nastane exception anebo soubor konfigurace nenalezen"
+      security:
+      - api_key: []         
+securityDefinitions:
+  api_key:
+    type: "apiKey"
+    name: "api_key"
+    in: "header"
+definitions:
+  Konfig_Terminal_List:
+    type: "object"
+    properties:
+      PathToFile_Relative:
+        type: "string"
+        default: ""
+      ID_Terminal:
+        type: "string"
+        default: ""
+      ID_User:
+        type: "string"
+        default: ""
+      DateLastChange:
+        type: "string"
+        format: "date-time"
+  Konfigurace_Prodej:
+    type: "object"
+    properties:
+      PolozkyVyberJenScannerem:
+        type: "boolean"
+        default : false  
+  Konfigurace_Vyroba:
+    type: "object"
+    properties:
+      UEventPracovnikLoginEnabled:
+        type: "boolean"
+        default : false
+      LoginUserTimeOut:
+        type: "string"
+        format: "date-time"
+      LastProductionUserID:
+        type: "string"
+        default: ""
+      UEventPracovnikPrihlaseni:
+        type: "string"
+        default: "3"
+      Production_MachineID_Preset:
+        type: "string"
+        default: ""
+  Konfigurace:
+    type: "object"
+    properties:
+      ExportZbozi:
+        type: "boolean"
+        default : false
+      ExportOdberatele:
+        type: "boolean"
+        default : false
+      ExportSklady:
+        type: "boolean"
+        default : false
+      ExportMeny:
+        type: "boolean"
+        default : false
+      ExportStrediska:
+        type: "boolean"
+        default : false
+      ExportPracovnici:
+        type: "boolean"
+        default : false
+      Prodej:
+        $ref: "#/definitions/Konfigurace_Prodej"
+      Vyroba:
+        $ref: "#/definitions/Konfigurace_Vyroba"
+        

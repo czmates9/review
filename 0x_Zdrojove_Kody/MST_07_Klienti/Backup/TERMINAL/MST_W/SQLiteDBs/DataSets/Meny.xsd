@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Meny" targetNamespace="http://tempuri.org/Meny.xsd" xmlns:mstns="http://tempuri.org/Meny.xsd" xmlns="http://tempuri.org/Meny.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="data source=D:\_work_\_Vyvoj_Subversion_04_cipisek\MST_07\TERMINAL\MST_W\SqlCEDBs\tmp.sqlite" IsAppSettingsProperty="false" Modifier="Public" Name="SQLite [tmp]" ParameterPrefix="@" Provider="System.Data.SQLite" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Meny" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Meny" msprop:Generator_DataSetName="Meny" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST097" msprop:Generator_UserTableName="CZMST097" msprop:Generator_RowDeletedName="CZMST097RowDeleted" msprop:Generator_RowChangedName="CZMST097RowChanged" msprop:Generator_RowClassName="CZMST097Row" msprop:Generator_RowChangingName="CZMST097RowChanging" msprop:Generator_RowEvArgName="CZMST097RowChangeEvent" msprop:Generator_RowEvHandlerName="CZMST097RowChangeEventHandler" msprop:Generator_TableClassName="CZMST097DataTable" msprop:Generator_TableVarName="tableCZMST097" msprop:Generator_RowDeletingName="CZMST097RowDeleting" msprop:Generator_TablePropName="CZMST097">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="mena_ID" msprop:Generator_UserColumnName="mena_ID" msprop:Generator_ColumnPropNameInRow="mena_ID" msprop:Generator_ColumnVarNameInTable="columnmena_ID" msprop:Generator_ColumnPropNameInTable="mena_IDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mena_text" msprop:Generator_UserColumnName="mena_text" msprop:Generator_ColumnPropNameInRow="mena_text" msprop:Generator_ColumnVarNameInTable="columnmena_text" msprop:Generator_ColumnPropNameInTable="mena_textColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mena_hlavni" msprop:Generator_UserColumnName="mena_hlavni" msprop:Generator_ColumnVarNameInTable="columnmena_hlavni" msprop:Generator_ColumnPropNameInRow="mena_hlavni" msprop:Generator_ColumnPropNameInTable="mena_hlavniColumn" type="xs:boolean" />
+              <xs:element name="mena_kurz" msprop:Generator_UserColumnName="mena_kurz" msprop:Generator_ColumnVarNameInTable="columnmena_kurz" msprop:Generator_ColumnPropNameInRow="mena_kurz" msprop:Generator_ColumnPropNameInTable="mena_kurzColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="mena_kurzDatum" msprop:Generator_UserColumnName="mena_kurzDatum" msprop:Generator_ColumnVarNameInTable="columnmena_kurzDatum" msprop:Generator_ColumnPropNameInRow="mena_kurzDatum" msprop:Generator_ColumnPropNameInTable="mena_kurzDatumColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CZMST097" />
+      <xs:field xpath="mstns:mena_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

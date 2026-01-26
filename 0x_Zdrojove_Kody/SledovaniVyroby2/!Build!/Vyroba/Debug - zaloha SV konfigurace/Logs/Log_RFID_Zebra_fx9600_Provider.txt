@@ -1,0 +1,12 @@
+23.01.2024 15:09:52 : Symbol.RFID3.OperationFailureException: Connect
+   v Symbol.RFID3.ProcessErrorCode.ThrowException(IntPtr readerHandle, String sMessage, RFIDResults results, Boolean getLastError)
+   v RFID_Zebra_fx9600_Provider.RFID_Zebra_fx9600_Provider.Start() v d:\_w\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\RFID_Zebra_fx9600_Provider\RFID_Zebra_fx9600_Provider.cs:řádek 84
+Status: Unable to open connection to reader
+Vendor Message: None
+Time stamp: 23.01.2024 15:09:52
+23.01.2024 15:10:13 : Symbol.RFID3.OperationFailureException: Connect
+   v Symbol.RFID3.ProcessErrorCode.ThrowException(IntPtr readerHandle, String sMessage, RFIDResults results, Boolean getLastError)
+   v RFID_Zebra_fx9600_Provider.RFID_Zebra_fx9600_Provider.Start() v d:\_w\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\RFID_Zebra_fx9600_Provider\RFID_Zebra_fx9600_Provider.cs:řádek 84
+Status: Unable to open connection to reader
+Vendor Message: None
+Time stamp: 23.01.2024 15:10:13

@@ -1,0 +1,731 @@
+﻿using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data;
+
+namespace Fask.SQLiteDBs.DataSets
+{
+    /// <summary>
+    ///Represents a strongly typed in-memory cache of data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Meny")]
+    public partial class Meny : global::System.Data.DataSet
+    {
+
+        private CZMST097DataTable tableCZMST097;
+
+        private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Meny()
+        {
+            this.BeginInit();
+            this.InitClass();
+            global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
+            base.Tables.CollectionChanged += schemaChangedHandler;
+            base.Relations.CollectionChanged += schemaChangedHandler;
+            this.EndInit();
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public CZMST097DataTable CZMST097
+        {
+            get
+            {
+                return this.tableCZMST097;
+            }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public override global::System.Data.SchemaSerializationMode SchemaSerializationMode
+        {
+            get
+            {
+                return this._schemaSerializationMode;
+            }
+            set
+            {
+                this._schemaSerializationMode = value;
+            }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public new global::System.Data.DataTableCollection Tables
+        {
+            get
+            {
+                return base.Tables;
+            }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public new global::System.Data.DataRelationCollection Relations
+        {
+            get
+            {
+                return base.Relations;
+            }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected override void InitializeDerivedDataSet()
+        {
+            this.BeginInit();
+            this.InitClass();
+            this.EndInit();
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public override global::System.Data.DataSet Clone()
+        {
+            Meny cln = ((Meny)(base.Clone()));
+            cln.InitVars();
+            cln.SchemaSerializationMode = this.SchemaSerializationMode;
+            return cln;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected override bool ShouldSerializeTables()
+        {
+            return false;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected override bool ShouldSerializeRelations()
+        {
+            return false;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected override void ReadXmlSerializable(global::System.Xml.XmlReader reader)
+        {
+            if ((this.DetermineSchemaSerializationMode(reader) == global::System.Data.SchemaSerializationMode.IncludeSchema))
+            {
+                this.Reset();
+                global::System.Data.DataSet ds = new global::System.Data.DataSet();
+                ds.ReadXml(reader);
+                if ((ds.Tables["CZMST097"] != null))
+                {
+                    base.Tables.Add(new CZMST097DataTable(ds.Tables["CZMST097"]));
+                }
+                this.DataSetName = ds.DataSetName;
+                this.Prefix = ds.Prefix;
+                this.Namespace = ds.Namespace;
+                this.Locale = ds.Locale;
+                this.CaseSensitive = ds.CaseSensitive;
+                this.EnforceConstraints = ds.EnforceConstraints;
+                this.Merge(ds, false, global::System.Data.MissingSchemaAction.Add);
+                this.InitVars();
+            }
+            else
+            {
+                this.ReadXml(reader);
+                this.InitVars();
+            }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected override global::System.Xml.Schema.XmlSchema GetSchemaSerializable()
+        {
+            global::System.IO.MemoryStream stream = new global::System.IO.MemoryStream();
+            this.WriteXmlSchema(new global::System.Xml.XmlTextWriter(stream, null));
+            stream.Position = 0;
+            return global::System.Xml.Schema.XmlSchema.Read(new global::System.Xml.XmlTextReader(stream), null);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        internal void InitVars()
+        {
+            this.InitVars(true);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        internal void InitVars(bool initTable)
+        {
+            this.tableCZMST097 = ((CZMST097DataTable)(base.Tables["CZMST097"]));
+            if ((initTable == true))
+            {
+                if ((this.tableCZMST097 != null))
+                {
+                    this.tableCZMST097.InitVars();
+                }
+            }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void InitClass()
+        {
+            this.DataSetName = "Meny";
+            this.Prefix = "";
+            this.Namespace = "http://tempuri.org/Meny.xsd";
+            this.EnforceConstraints = true;
+            this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tableCZMST097 = new CZMST097DataTable();
+            base.Tables.Add(this.tableCZMST097);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeCZMST097()
+        {
+            return false;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e)
+        {
+            if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove))
+            {
+                this.InitVars();
+            }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs)
+        {
+            Meny ds = new Meny();
+            global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+            global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+            global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
+            any.Namespace = ds.Namespace;
+            sequence.Items.Add(any);
+            type.Particle = sequence;
+            global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+            if (xs.Contains(dsSchema.TargetNamespace))
+            {
+                global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                try
+                {
+                    global::System.Xml.Schema.XmlSchema schema = null;
+                    dsSchema.Write(s1);
+                    for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext();)
+                    {
+                        schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                        s2.SetLength(0);
+                        schema.Write(s2);
+                        if ((s1.Length == s2.Length))
+                        {
+                            s1.Position = 0;
+                            s2.Position = 0;
+                            for (; ((s1.Position != s1.Length)
+                                        && (s1.ReadByte() == s2.ReadByte()));)
+                            {
+                                ;
+                            }
+                            if ((s1.Position == s1.Length))
+                            {
+                                return type;
+                            }
+                        }
+                    }
+                }
+                finally
+                {
+                    if ((s1 != null))
+                    {
+                        s1.Close();
+                    }
+                    if ((s2 != null))
+                    {
+                        s2.Close();
+                    }
+                }
+            }
+            xs.Add(dsSchema);
+            return type;
+        }
+
+        public delegate void CZMST097RowChangeEventHandler(object sender, CZMST097RowChangeEvent e);
+
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CZMST097DataTable : DataTable //global::System.Data.TypedTableBase<CZMST097Row>
+        {
+
+            private global::System.Data.DataColumn columnmena_ID;
+
+            private global::System.Data.DataColumn columnmena_text;
+
+            private global::System.Data.DataColumn columnmena_hlavni;
+
+            private global::System.Data.DataColumn columnmena_kurz;
+
+            private global::System.Data.DataColumn columnmena_kurzDatum;
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZMST097DataTable()
+            {
+                this.TableName = "CZMST097";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal CZMST097DataTable(global::System.Data.DataTable table)
+            {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive))
+                {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString()))
+                {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace))
+                {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn mena_IDColumn
+            {
+                get
+                {
+                    return this.columnmena_ID;
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn mena_textColumn
+            {
+                get
+                {
+                    return this.columnmena_text;
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn mena_hlavniColumn
+            {
+                get
+                {
+                    return this.columnmena_hlavni;
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn mena_kurzColumn
+            {
+                get
+                {
+                    return this.columnmena_kurz;
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn mena_kurzDatumColumn
+            {
+                get
+                {
+                    return this.columnmena_kurzDatum;
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Count
+            {
+                get
+                {
+                    return this.Rows.Count;
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZMST097Row this[int index]
+            {
+                get
+                {
+                    return ((CZMST097Row)(this.Rows[index]));
+                }
+            }
+
+            public event CZMST097RowChangeEventHandler CZMST097RowChanging;
+
+            public event CZMST097RowChangeEventHandler CZMST097RowChanged;
+
+            public event CZMST097RowChangeEventHandler CZMST097RowDeleting;
+
+            public event CZMST097RowChangeEventHandler CZMST097RowDeleted;
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddCZMST097Row(CZMST097Row row)
+            {
+                this.Rows.Add(row);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZMST097Row AddCZMST097Row(string mena_ID, string mena_text, bool mena_hlavni, decimal mena_kurz, System.DateTime mena_kurzDatum)
+            {
+                CZMST097Row rowCZMST097Row = ((CZMST097Row)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        mena_ID,
+                        mena_text,
+                        mena_hlavni,
+                        mena_kurz,
+                        mena_kurzDatum};
+                rowCZMST097Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCZMST097Row);
+                return rowCZMST097Row;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZMST097Row FindBymena_ID(string mena_ID)
+            {
+                return ((CZMST097Row)(this.Rows.Find(new object[] {
+                            mena_ID})));
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone()
+            {
+                CZMST097DataTable cln = ((CZMST097DataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance()
+            {
+                return new CZMST097DataTable();
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars()
+            {
+                this.columnmena_ID = base.Columns["mena_ID"];
+                this.columnmena_text = base.Columns["mena_text"];
+                this.columnmena_hlavni = base.Columns["mena_hlavni"];
+                this.columnmena_kurz = base.Columns["mena_kurz"];
+                this.columnmena_kurzDatum = base.Columns["mena_kurzDatum"];
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass()
+            {
+                this.columnmena_ID = new global::System.Data.DataColumn("mena_ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmena_ID);
+                this.columnmena_text = new global::System.Data.DataColumn("mena_text", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmena_text);
+                this.columnmena_hlavni = new global::System.Data.DataColumn("mena_hlavni", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmena_hlavni);
+                this.columnmena_kurz = new global::System.Data.DataColumn("mena_kurz", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmena_kurz);
+                this.columnmena_kurzDatum = new global::System.Data.DataColumn("mena_kurzDatum", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmena_kurzDatum);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnmena_ID}, true));
+                this.columnmena_ID.AllowDBNull = false;
+                this.columnmena_ID.Unique = true;
+                this.columnmena_text.AllowDBNull = false;
+                this.columnmena_hlavni.AllowDBNull = false;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZMST097Row NewCZMST097Row()
+            {
+                return ((CZMST097Row)(this.NewRow()));
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder)
+            {
+                return new CZMST097Row(builder);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType()
+            {
+                return typeof(CZMST097Row);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e)
+            {
+                base.OnRowChanged(e);
+                if ((this.CZMST097RowChanged != null))
+                {
+                    this.CZMST097RowChanged(this, new CZMST097RowChangeEvent(((CZMST097Row)(e.Row)), e.Action));
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e)
+            {
+                base.OnRowChanging(e);
+                if ((this.CZMST097RowChanging != null))
+                {
+                    this.CZMST097RowChanging(this, new CZMST097RowChangeEvent(((CZMST097Row)(e.Row)), e.Action));
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e)
+            {
+                base.OnRowDeleted(e);
+                if ((this.CZMST097RowDeleted != null))
+                {
+                    this.CZMST097RowDeleted(this, new CZMST097RowChangeEvent(((CZMST097Row)(e.Row)), e.Action));
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e)
+            {
+                base.OnRowDeleting(e);
+                if ((this.CZMST097RowDeleting != null))
+                {
+                    this.CZMST097RowDeleting(this, new CZMST097RowChangeEvent(((CZMST097Row)(e.Row)), e.Action));
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveCZMST097Row(CZMST097Row row)
+            {
+                this.Rows.Remove(row);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs)
+            {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Meny ds = new Meny();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CZMST097DataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace))
+                {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try
+                    {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext();)
+                        {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length))
+                            {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length)
+                                            && (s1.ReadByte() == s2.ReadByte()));)
+                                {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length))
+                                {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally
+                    {
+                        if ((s1 != null))
+                        {
+                            s1.Close();
+                        }
+                        if ((s2 != null))
+                        {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CZMST097Row : global::System.Data.DataRow
+        {
+
+            private CZMST097DataTable tableCZMST097;
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal CZMST097Row(global::System.Data.DataRowBuilder rb) :
+                    base(rb)
+            {
+                this.tableCZMST097 = ((CZMST097DataTable)(this.Table));
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string mena_ID
+            {
+                get
+                {
+                    return ((string)(this[this.tableCZMST097.mena_IDColumn]));
+                }
+                set
+                {
+                    this[this.tableCZMST097.mena_IDColumn] = value;
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string mena_text
+            {
+                get
+                {
+                    return ((string)(this[this.tableCZMST097.mena_textColumn]));
+                }
+                set
+                {
+                    this[this.tableCZMST097.mena_textColumn] = value;
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool mena_hlavni
+            {
+                get
+                {
+                    return ((bool)(this[this.tableCZMST097.mena_hlavniColumn]));
+                }
+                set
+                {
+                    this[this.tableCZMST097.mena_hlavniColumn] = value;
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal mena_kurz
+            {
+                get
+                {
+                    try
+                    {
+                        return ((decimal)(this[this.tableCZMST097.mena_kurzColumn]));
+                    }
+                    catch (global::System.InvalidCastException e)
+                    {
+                        throw new global::System.Data.StrongTypingException("The value for column \'mena_kurz\' in table \'CZMST097\' is DBNull.", e);
+                    }
+                }
+                set
+                {
+                    this[this.tableCZMST097.mena_kurzColumn] = value;
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime mena_kurzDatum
+            {
+                get
+                {
+                    try
+                    {
+                        return ((global::System.DateTime)(this[this.tableCZMST097.mena_kurzDatumColumn]));
+                    }
+                    catch (global::System.InvalidCastException e)
+                    {
+                        throw new global::System.Data.StrongTypingException("The value for column \'mena_kurzDatum\' in table \'CZMST097\' is DBNull.", e);
+                    }
+                }
+                set
+                {
+                    this[this.tableCZMST097.mena_kurzDatumColumn] = value;
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Ismena_kurzNull()
+            {
+                return this.IsNull(this.tableCZMST097.mena_kurzColumn);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Setmena_kurzNull()
+            {
+                this[this.tableCZMST097.mena_kurzColumn] = global::System.Convert.DBNull;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Ismena_kurzDatumNull()
+            {
+                return this.IsNull(this.tableCZMST097.mena_kurzDatumColumn);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Setmena_kurzDatumNull()
+            {
+                this[this.tableCZMST097.mena_kurzDatumColumn] = global::System.Convert.DBNull;
+            }
+        }
+
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        public class CZMST097RowChangeEvent : global::System.EventArgs
+        {
+
+            private CZMST097Row eventRow;
+
+            private global::System.Data.DataRowAction eventAction;
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZMST097RowChangeEvent(CZMST097Row row, global::System.Data.DataRowAction action)
+            {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CZMST097Row Row
+            {
+                get
+                {
+                    return this.eventRow;
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action
+            {
+                get
+                {
+                    return this.eventAction;
+                }
+            }
+        }
+    }
+}

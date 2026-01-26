@@ -1,0 +1,1994 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FormsLoginFormAktualizacePristupu" xml:space="preserve">
+    <value>Aktualizace přístupů</value>
+  </data>
+  <data name="FormsLoginFormAktualizacePristupuDokoncena" xml:space="preserve">
+    <value>Aktualizace přístupů dokončena</value>
+  </data>
+  <data name="FormsLoginFormCarKodNalezenoViceUzivatelu" xml:space="preserve">
+    <value>Nalezene více uživatelů se stejným čár. kódem!</value>
+  </data>
+  <data name="FormsLoginFormCarKodNenalezen" xml:space="preserve">
+    <value>Čárový kód nebyl nalezen!</value>
+  </data>
+  <data name="FormsLoginFormChyba" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="FormsLoginFormZadejteHeslo" xml:space="preserve">
+    <value>Zadejte heslo!</value>
+  </data>
+  <data name="FormsLoginFormZadejteLogin" xml:space="preserve">
+    <value>Zadejte login!</value>
+  </data>
+  <data name="Prijem4ListSlouceneDavkyFormButtonOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Prijem4ListSlouceneDavkyFormButtonStorno" xml:space="preserve">
+    <value>Storno</value>
+  </data>
+  <data name="Prijem4ListSlouceneDavkyFormDavkaJizSloucena" xml:space="preserve">
+    <value>Tato dávka už je sloučená!</value>
+  </data>
+  <data name="Prijem4ListSlouceneDavkyFormDavkaSKodemNenalezena" xml:space="preserve">
+    <value>Dávka s kódem č. '{0}' nenalezena!</value>
+  </data>
+  <data name="Prijem4ListSlouceneDavkyFormDavkaUspesneOdstranena" xml:space="preserve">
+    <value>Dávka byla úspěšně odstraněna.</value>
+  </data>
+  <data name="Prijem4ListSlouceneDavkyFormNeniVybranaDavka" xml:space="preserve">
+    <value>Není vybrána dávka!</value>
+  </data>
+  <data name="Prijem4ListSlouceneDavkyFormNeniVybranaDavkaKeSlouceni" xml:space="preserve">
+    <value>Není vybraná žádná dávka ke sloučení!</value>
+  </data>
+  <data name="Prijem4ListSlouceneDavkyFormNeniVybranaDavkaKOdstraneni" xml:space="preserve">
+    <value>Není vybraná žádná dávka k odstranění!</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListDavkaNenalezenaVygenerovat" xml:space="preserve">
+    <value>Dávka s kódem č. '{0}' nenalezena.
+Chcete ji vygenerovat?</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListDavkaNenalezena" xml:space="preserve">
+    <value>Dávka s kódem č. '{0}' nenalezena!</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListChybaStornovaniPrijemky" xml:space="preserve">
+    <value>Nastala chyba: {0}</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListChybaUzavreniPrijemky" xml:space="preserve">
+    <value>Nastala chyba: {0}</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListCisloSkladu" xml:space="preserve">
+    <value>Číslo skladu</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListDavkaCisloNenalezena" xml:space="preserve">
+    <value>Dávka č. '{0}' nenalezena!</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListGenerujiDataDavky" xml:space="preserve">
+    <value>Generuji data dávky</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListNeniVybranaDavka" xml:space="preserve">
+    <value>Není vybrána žádná dávka!</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListNezrealPrijemkaNenalezena" xml:space="preserve">
+    <value>Nebyla nalezena žádná nezrealizovaná příjemka.</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListPrijemka" xml:space="preserve">
+    <value>Příjemka</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListPrijemkaUspesneStornovana" xml:space="preserve">
+    <value>Příjemka byla úspěšně stornována.</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListPrijemkaUspesneUzavrena" xml:space="preserve">
+    <value>Příjemka byla úspěšně uzavřena.</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListStornovatDavkuDotaz" xml:space="preserve">
+    <value>Opravdu chcete stornovat dávku č. '{0}' ?</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListUzavritDavkuDotaz" xml:space="preserve">
+    <value>Opravdu chcete uzavřít dávku č. '{0}' ?</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListZadejteCisloPrikazu" xml:space="preserve">
+    <value>Zadejte číslo příkazu</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListZadejteHeslo" xml:space="preserve">
+    <value>Zadejte heslo</value>
+  </data>
+  <data name="Prijem4GenerovaniZakaznickeSNGenSNDotaz" xml:space="preserve">
+    <value>Chcete zahájit generování SN?</value>
+  </data>
+  <data name="Prijem4GenerovaniZakaznickeSNNevyhovujeSN" xml:space="preserve">
+    <value>Zadané SN nevyhovuje zadání.</value>
+  </data>
+  <data name="Prijem4GenerovaniZakaznickeSNSpatneSN" xml:space="preserve">
+    <value>Zadáno špatné SN.</value>
+  </data>
+  <data name="Prijem4PrijemGenerovaniVlastniSNGenerovatSNDotaz" xml:space="preserve">
+    <value>Chcete zahájit generování SN?</value>
+  </data>
+  <data name="Prijem4PrijemGenerovaniVlastniSNSpatnyPocet" xml:space="preserve">
+    <value>Zadán špatný počet.</value>
+  </data>
+  <data name="Prijem4PrijemGenerovaniZakaznickeSNSpatnyPocet" xml:space="preserve">
+    <value>Zadán špatný počet.</value>
+  </data>
+  <data name="Prijem4PrijemListTiskAktualniStav" xml:space="preserve">
+    <value>Tisknu {0}. položku z {1}</value>
+  </data>
+  <data name="Prijem4PrijemListTiskEtiket" xml:space="preserve">
+    <value>Tisk etiket</value>
+  </data>
+  <data name="Prijem4PrijemListTiskEtiketPocet" xml:space="preserve">
+    <value>Tisk etiket - počet</value>
+  </data>
+  <data name="Prijem4PrijemListTiskEtiketPrijemkyDotaz" xml:space="preserve">
+    <value>Provést vytištění etiket všech položek předlohy příjemky?</value>
+  </data>
+  <data name="Prijem4PrijemListTiskEtiketZPredlohyDotaz" xml:space="preserve">
+    <value>Počet etiket z předlohového množství?
+ Ne  = 1
+ Ano = dle předlohy</value>
+  </data>
+  <data name="Prijem4PrijemListAktualizaceNasnimanehoMnozstviProblem" xml:space="preserve">
+    <value>Nepovedlo se aktualizovat nasnímané množství v databázi předlohy!</value>
+  </data>
+  <data name="Prijem4PrijemListAktualizaceOnline" xml:space="preserve">
+    <value>Aktualizace online</value>
+  </data>
+  <data name="Prijem4PrijemListAktualizaceSeNezdarilaOpakovatDotaz" xml:space="preserve">
+    <value>Aktualizace se nezdařila. Opakovat?
+{0}</value>
+  </data>
+  <data name="Prijem4PrijemListChyba" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="Prijem4PrijemListGenerovaniCislaPaletyOpakovatDotaz" xml:space="preserve">
+    <value>Nepodařilo se vygenerovat číslo palety, opakovat?</value>
+  </data>
+  <data name="Prijem4PrijemListHmotnost" xml:space="preserve">
+    <value>Hmotnost</value>
+  </data>
+  <data name="Prijem4PrijemListHmotnostChyba" xml:space="preserve">
+    <value>Hmotnost chyba</value>
+  </data>
+  <data name="Prijem4PrijemListHmotnostChybaOpakovatDotaz" xml:space="preserve">
+    <value>Opakovat?
+{0}</value>
+  </data>
+  <data name="Prijem4PrijemListHmotnostUlozeniSeNezdarilo" xml:space="preserve">
+    <value>Uložení hmotnosti se nezdařilo.</value>
+  </data>
+  <data name="Prijem4PrijemListKontrolaNasnimMnozstvi" xml:space="preserve">
+    <value>Probíhá kontrola nasnímaného množství</value>
+  </data>
+  <data name="Prijem4PrijemListKontrolaNasnimMnozstviProgres" xml:space="preserve">
+    <value>Probíhá kontrola nasnímaného množství
+{0} z {1} ({2})</value>
+  </data>
+  <data name="Prijem4PrijemListKontrolaUplnosti" xml:space="preserve">
+    <value>Kontrola úplnosti</value>
+  </data>
+  <data name="Prijem4PrijemListMnozstvi" xml:space="preserve">
+    <value>Množství</value>
+  </data>
+  <data name="Prijem4PrijemListMnozstviBaleni" xml:space="preserve">
+    <value>Množství balení</value>
+  </data>
+  <data name="Prijem4PrijemListNajdiPolozkuCarKod" xml:space="preserve">
+    <value>Čárový kód</value>
+  </data>
+  <data name="Prijem4PrijemListNajdiPolozkuNazev" xml:space="preserve">
+    <value>Název</value>
+  </data>
+  <data name="Prijem4PrijemListNalezenoViceZaznamuVyber" xml:space="preserve">
+    <value>Nalezeno více záznamů.
+Vyberte ze seznamu požadovaný</value>
+  </data>
+  <data name="Prijem4PrijemListOnlineMazaniDat" xml:space="preserve">
+    <value>Online mazání dat</value>
+  </data>
+  <data name="Prijem4PrijemListPolozkaKompletniPokracovaniDotaz" xml:space="preserve">
+    <value>Položka je kompletní
+
+Chcete pokračovat?</value>
+  </data>
+  <data name="Prijem4PrijemListPolozkaNenalezena" xml:space="preserve">
+    <value>Položka nenalezena!</value>
+  </data>
+  <data name="Prijem4PrijemListPolozkaNeniKompletniKonecSnimaniDotaz" xml:space="preserve">
+    <value>Položka není kompletní
+
+Chcete opravdu ukončit snímání?</value>
+  </data>
+  <data name="Prijem4PrijemListPolozkaNeniVybrana" xml:space="preserve">
+    <value>Není vybrána položka!</value>
+  </data>
+  <data name="Prijem4PrijemListPolozkaPreplnenaPokracovaniDotaz" xml:space="preserve">
+    <value>Položka přeplněna
+
+Chcete pokračovat?</value>
+  </data>
+  <data name="Prijem4PrijemListPolozkaUspesneZapsana" xml:space="preserve">
+    <value>Položka '{0}' úspěšně zapsána</value>
+  </data>
+  <data name="Prijem4PrijemListPolozkuJdeZadatPouzeSejmutimCK" xml:space="preserve">
+    <value>Položku lze zadat pouze nasnímáním čárkódu.</value>
+  </data>
+  <data name="Prijem4PrijemListPoziceMimoRozsah" xml:space="preserve">
+    <value>Pozice je mimo rozsah (1-{0})</value>
+  </data>
+  <data name="Prijem4PrijemListPoziceZaznamu" xml:space="preserve">
+    <value>Pozice záznamu</value>
+  </data>
+  <data name="Prijem4PrijemListPreplneniZakazano" xml:space="preserve">
+    <value>Je zakázáno přeplnění položky!</value>
+  </data>
+  <data name="Prijem4PrijemListPreplneniZakazanoOpakovatZadaniDotaz" xml:space="preserve">
+    <value>Je zakázáno přeplnění položky!
+
+Opakovat zadání hodnot?</value>
+  </data>
+  <data name="Prijem4PrijemListPrijemka" xml:space="preserve">
+    <value>Příjemka</value>
+  </data>
+  <data name="Prijem4PrijemListRazeniNazevAZ" xml:space="preserve">
+    <value>Název([A-Z])</value>
+  </data>
+  <data name="Prijem4PrijemListRazeniNazevZA" xml:space="preserve">
+    <value>Název([Z-A])</value>
+  </data>
+  <data name="Prijem4PrijemListRazeniPoradi09" xml:space="preserve">
+    <value>(Pořadí [0-9])</value>
+  </data>
+  <data name="Prijem4PrijemListRazeniPoradi90" xml:space="preserve">
+    <value>(Pořadí [9-0])</value>
+  </data>
+  <data name="Prijem4PrijemListSarze" xml:space="preserve">
+    <value>Šarže</value>
+  </data>
+  <data name="Prijem4PrijemListSerioveCislo" xml:space="preserve">
+    <value>Seriové číslo</value>
+  </data>
+  <data name="Prijem4PrijemListSerioveCisloJizByloNasnimano" xml:space="preserve">
+    <value>Ser.číslo pro tuto položku již bylo nasnímáno!</value>
+  </data>
+  <data name="Prijem4PrijemListSmazatNasnimaneMnozstviDotaz" xml:space="preserve">
+    <value>Opravdu smazat nasnímané množství?
+Položka: '{0}'
+Množství: {1}</value>
+  </data>
+  <data name="Prijem4PrijemListSnimaniSN" xml:space="preserve">
+    <value>Snímání SN</value>
+  </data>
+  <data name="Prijem4PrijemListTiskEtiketyDotaz" xml:space="preserve">
+    <value>Vytisknout Etiketu?</value>
+  </data>
+  <data name="Prijem4PrijemListUkonceniPraceSPrijemkouDotaz" xml:space="preserve">
+    <value>Opravdu chcete ukončit práci s příjemkou?</value>
+  </data>
+  <data name="Prijem4PrijemListUlozeniOnline" xml:space="preserve">
+    <value>Uložení online</value>
+  </data>
+  <data name="Prijem4PrijemListUlozeniOnlineProblemOpakovatDotaz" xml:space="preserve">
+    <value>Uložení se nezdařilo. Opakovat?
+{0}</value>
+  </data>
+  <data name="Prijem4PrijemListVlozeni" xml:space="preserve">
+    <value>Vložení</value>
+  </data>
+  <data name="Prijem4PrijemListWSHmotnost" xml:space="preserve">
+    <value>WS Hmotnost</value>
+  </data>
+  <data name="Prijem4PrijemListZaznamKliceNenalezen" xml:space="preserve">
+    <value>Nenalezen odpovídající záznam klíče v předloze</value>
+  </data>
+  <data name="Prijem4PrijemListZaznamNebylVybran" xml:space="preserve">
+    <value>Nebyl vybrán záznam</value>
+  </data>
+  <data name="Prijem4PrijemListZaznamNenalezen" xml:space="preserve">
+    <value>Nebyl nalezen žádný záznam</value>
+  </data>
+  <data name="Prijem4PrijemListZaznamNeniVybran" xml:space="preserve">
+    <value>Není vybrán záznam</value>
+  </data>
+  <data name="Prijem4PrijemListZaznamSCarKodNenalezen" xml:space="preserve">
+    <value>Nenalezen žádný záznam s čárovým kódem '{0}'</value>
+  </data>
+  <data name="Prijem4PrijemListZboziNeniVybrano" xml:space="preserve">
+    <value>Není vybráno zboží</value>
+  </data>
+  <data name="Prijem4PrijemListZboziOnlineKontrolaHmotnosti" xml:space="preserve">
+    <value>Online kontrola hmotnosti zboží</value>
+  </data>
+  <data name="Prijem4PrijemMainChyba" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="Prijem4PrijemMainChybaCteniDavky" xml:space="preserve">
+    <value>Chyba při čtení dávky!</value>
+  </data>
+  <data name="Prijem4PrijemMainChybaStazeniDatDavky" xml:space="preserve">
+    <value>Nepodařilo se stáhnout data dávky</value>
+  </data>
+  <data name="Prijem4PrijemMainChybaStazeniSeznamuDavek" xml:space="preserve">
+    <value>Nepodařilo se stáhnout seznam dávek prijemek ze serveru</value>
+  </data>
+  <data name="Prijem4PrijemMainDataDavkyOdeslana" xml:space="preserve">
+    <value>Data dávky '{0}' odeslána</value>
+  </data>
+  <data name="Prijem4PrijemMainDotaz" xml:space="preserve">
+    <value>Dotaz</value>
+  </data>
+  <data name="Prijem4PrijemMainLokaceNevyplnenyPokracovatDotaz" xml:space="preserve">
+    <value>Nebyly vyplněny všechny lokace.
+Přesto odeslat data?</value>
+  </data>
+  <data name="Prijem4PrijemMainMenuNavratDotaz" xml:space="preserve">
+    <value>Chcete se vrátit do hlavního menu?</value>
+  </data>
+  <data name="Prijem4PrijemMainNaDiskuNejsouDavkyStahnoutDotaz" xml:space="preserve">
+    <value>Na disku nejsou žádné dávky. Chcete je stáhnout?</value>
+  </data>
+  <data name="Prijem4PrijemMainNastalaChyba" xml:space="preserve">
+    <value>Nastala chyba: {0}</value>
+  </data>
+  <data name="Prijem4PrijemMainOdesilaniDat" xml:space="preserve">
+    <value>Odeslání dat</value>
+  </data>
+  <data name="Prijem4PrijemMainOdesilaniDatPrijemky" xml:space="preserve">
+    <value>Odesílají se data příjemky</value>
+  </data>
+  <data name="Prijem4PrijemMainOdesilaniFotografii" xml:space="preserve">
+    <value>Odesílají se fotografie</value>
+  </data>
+  <data name="Prijem4PrijemMainPrijemka" xml:space="preserve">
+    <value>Příjemka</value>
+  </data>
+  <data name="Prijem4PrijemMainPrijemkaDataNacitani" xml:space="preserve">
+    <value>Načítají se data příjemky</value>
+  </data>
+  <data name="Prijem4PrijemMainPrijemkaUspesneUzavrena" xml:space="preserve">
+    <value>Příjemka byla úspěšně uzavřena.</value>
+  </data>
+  <data name="Prijem4PrijemMainSkladNenalezenVyberZeSeznamu" xml:space="preserve">
+    <value>Odpovídající sklad s ID '{0}' nenalezen!
+
+Vyberte jiný se seznamu</value>
+  </data>
+  <data name="Prijem4PrijemMainSloucitDavkuDotaz" xml:space="preserve">
+    <value>Chcete staženou dávku sloučit?</value>
+  </data>
+  <data name="Prijem4PrijemMainStazeniDat" xml:space="preserve">
+    <value>Stažení dat</value>
+  </data>
+  <data name="Prijem4PrijemMainTiskEtiketPrijemky" xml:space="preserve">
+    <value>Tisknou se etikety příjemky</value>
+  </data>
+  <data name="Prijem4PrijemMainTiskEtiketPrubeh" xml:space="preserve">
+    <value>{0}
+Celkem: {1}
+Vytisknuto: {2}
+Netisknuto: {3}</value>
+  </data>
+  <data name="Prijem4PrijemMainTiskEtiketVysledek" xml:space="preserve">
+    <value>Konec Tisku etiket
+Celkem: {0}
+Vytisknuto: {1}
+Netisknuto: {2}
+
+Pokračovat odesláním dávky?</value>
+  </data>
+  <data name="Prijem4PrijemMainTiskNasnimanychPolozek" xml:space="preserve">
+    <value>Tisk etiket nasnímaných položek</value>
+  </data>
+  <data name="Prijem4PrijemMainTiskPocetEtiketDotaz" xml:space="preserve">
+    <value>Tisknout {0} etiket?</value>
+  </data>
+  <data name="Prijem4PrijemMainUzavreniPrijemky" xml:space="preserve">
+    <value>Uzavření příjemky</value>
+  </data>
+  <data name="Prijem4PrijemMainUzavritDavkuDotaz" xml:space="preserve">
+    <value>Opravdu chcete uzavřít dávku č. {0} ?</value>
+  </data>
+  <data name="Prijem4PrijemMainVratitDavkuDotaz" xml:space="preserve">
+    <value>Opravdu chcete vrátit dávku?</value>
+  </data>
+  <data name="Prijem4PrijemMainVratitDavkuPolozkyAnulovatDotaz" xml:space="preserve">
+    <value>Tato dávka obsahuje vydané položky. Chcete ji opravdu vrátit a vydané položky anulovat?</value>
+  </data>
+  <data name="Prijem4PrijemMainZadaniDatumuDokladu" xml:space="preserve">
+    <value>Zadejte datum dokladu</value>
+  </data>
+  <data name="Prijem4PrijemMainZadejteHeslo" xml:space="preserve">
+    <value>Zadejte heslo</value>
+  </data>
+  <data name="Prijem4PrijemNasnimaneDotaz" xml:space="preserve">
+    <value>Dotaz</value>
+  </data>
+  <data name="Prijem4PrijemNasnimaneOdstraneniPolozkyDotaz" xml:space="preserve">
+    <value>Chcete smazat tuto položku?</value>
+  </data>
+  <data name="Prijem4PrijemNasnimaneSeznamJePrazdny" xml:space="preserve">
+    <value>Seznam je prázdný</value>
+  </data>
+  <data name="Prijem4PrijemNasnimaneSmazaniPolozky" xml:space="preserve">
+    <value>Smazání položky</value>
+  </data>
+  <data name="Prijem4PrijemNezrealizovanePrijemkyListNalezenoViceCK" xml:space="preserve">
+    <value>Nalezeno více záznamů čár. kódem '{0}'</value>
+  </data>
+  <data name="Prijem4PrijemNezrealizovanePrijemkyListNalezenoViceObj" xml:space="preserve">
+    <value>Nalezeno více objednávek č. '{0}'</value>
+  </data>
+  <data name="Prijem4PrijemNezrealizovanePrijemkyListNeniVybranaPaleta" xml:space="preserve">
+    <value>Není vybrána paleta</value>
+  </data>
+  <data name="Prijem4PrijemNezrealizovanePrijemkyListObjNenalezenaPokracovatDotaz" xml:space="preserve">
+    <value>Objednávka č. '{0}' nebyla nalezena v seznamu nezrealizovaných příjemek. 
+Přesto pokračovat?</value>
+  </data>
+  <data name="Prijem4PrijemNezrealizovanePrijemkyListZadejteCisloObjednavky" xml:space="preserve">
+    <value>Zadejte číslo objednávky</value>
+  </data>
+  <data name="Prijem4PrijemNezrealizovanePrijemkyListZaznamNenalezenPokracovatDotaz" xml:space="preserve">
+    <value>Záznam s čár. kódem '{0}' nebyl nalezen v seznamu nezrealizovaných příjemek. 
+Přesto pokračovat?</value>
+  </data>
+  <data name="Prijem4PrijemPrijemPridatPolozkuSNDotaz" xml:space="preserve">
+    <value>Dotaz</value>
+  </data>
+  <data name="Prijem4PrijemPrijemPridatPolozkuSNKodNeniVPredlozeUlozitDotaz" xml:space="preserve">
+    <value>Kód '{0}' není uveden v předloze.
+Checte ho uložit?</value>
+  </data>
+  <data name="Prijem4PrijemPrijemTiskPocetMusiBytMensiNez100" xml:space="preserve">
+    <value>Počet výtisků nesmí být vyšší než 100</value>
+  </data>
+  <data name="Prijem4PrijemPrijemTiskPocetMusiBytVetsiNez0" xml:space="preserve">
+    <value>Počet výtisků musí být vyšší než 0</value>
+  </data>
+  <data name="Prijem4PrijemPrijemTiskPocetVytisku" xml:space="preserve">
+    <value>Počet výtisků</value>
+  </data>
+  <data name="Prijem4PrijemVyberLokaceListChybaKomunikacePokracovatDotaz" xml:space="preserve">
+    <value>Nepodařilo se ověřit lokaci. 
+Přesto pokračovat?</value>
+  </data>
+  <data name="Prijem4PrijemVyberLokaceListNalezenoViceLokaci" xml:space="preserve">
+    <value>Nalezeno více lokací '{0}'</value>
+  </data>
+  <data name="Prijem4PrijemVyberLokaceListNejdeUlozitNaLokaci" xml:space="preserve">
+    <value>Není možné uložit na tuto lokaci.</value>
+  </data>
+  <data name="Prijem4PrijemVyberLokaceListNeniVybranaLokace" xml:space="preserve">
+    <value>Není vybrána lokace</value>
+  </data>
+  <data name="Prijem4PrijemVyberLokaceListPorusenoDoporucPoradiPokracovatDotaz" xml:space="preserve">
+    <value>Bylo porušeno doporučené pořadí lokací. 
+Přesto pokračovat?</value>
+  </data>
+  <data name="Prijem4PrijemZalokovaniListDoporucLokaceVyberRucne" xml:space="preserve">
+    <value>Nepodařilo se načíst seznam doporučených lokací. 
+Vybrat ručně?</value>
+  </data>
+  <data name="Prijem4PrijemZalokovaniListDoporucPoradiPorusenoPokracovatDotaz" xml:space="preserve">
+    <value>Bylo porušeno doporučené pořadí lokací. 
+Přesto pokračovat?</value>
+  </data>
+  <data name="Prijem4PrijemZalokovaniListNeniMozneUlozitNaLokaci" xml:space="preserve">
+    <value>Není možné uložit na tuto lokaci.</value>
+  </data>
+  <data name="Prijem4PrijemZalokovaniListNeniVybranaPolozka" xml:space="preserve">
+    <value>Není vybrána položka</value>
+  </data>
+  <data name="Prodej3ProdejListCilovaLokace" xml:space="preserve">
+    <value>Cílová lokace</value>
+  </data>
+  <data name="Prodej3ProdejListDoporucenePaletyNenalezenyPokracovatDotaz" xml:space="preserve">
+    <value>Nebyly nalezeny doporučené palety. 
+Přesto pokračovat?</value>
+  </data>
+  <data name="Prodej3ProdejListInfo" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="Prodej3ProdejListKomunikaceServeruProblemOverCilLokaciPokracovatDotaz" xml:space="preserve">
+    <value>Nepodařilo se ověřit cílovou lokaci. 
+Přesto pokračovat?</value>
+  </data>
+  <data name="Prodej3ProdejListKomunikaceServeruProblemOverLokaciPokracovatDotaz" xml:space="preserve">
+    <value>Nepodařilo se ověřit zdrojovou lokaci. 
+Přesto pokračovat?</value>
+  </data>
+  <data name="Prodej3ProdejListKomunikaceServeruProblemPokracovatDotaz" xml:space="preserve">
+    <value>Nepodařilo se načíst seznam doporučených palet. 
+Přesto pokračovat?</value>
+  </data>
+  <data name="Prodej3ProdejListLokace" xml:space="preserve">
+    <value>Lokace</value>
+  </data>
+  <data name="Prodej3ProdejListMnozstvi" xml:space="preserve">
+    <value>Množství</value>
+  </data>
+  <data name="Prodej3ProdejListMnozstviBaleni" xml:space="preserve">
+    <value>Množství balení</value>
+  </data>
+  <data name="Prodej3ProdejListMnozstviVetsiNezStavSkladuPokracovatDotaz" xml:space="preserve">
+    <value>Zadané a načtené množství je větší než stav skladu.
+Nově zadané množství: {0}
+Načtené množství: {1}
+Stav skladu: {2}
+Pokračovat?</value>
+  </data>
+  <data name="Prodej3ProdejListNalezenoViceZaznamuUpresneteVyhledani" xml:space="preserve">
+    <value>Nalezeno více jak {0} záznamů.
+Upřesněte vyhledávání...</value>
+  </data>
+  <data name="Prodej3ProdejListNalezenoViceZaznamuVyberRucne" xml:space="preserve">
+    <value>Nalezeno více záznamů.
+Vyberte odpovídající ze seznamu</value>
+  </data>
+  <data name="Prodej3ProdejListNeniMozneBratZLokace" xml:space="preserve">
+    <value>Není možné brát z této lokace.</value>
+  </data>
+  <data name="Prodej3ProdejListNeniMozneUlozitNaLokaci" xml:space="preserve">
+    <value>Není možné uložit na tuto lokaci.</value>
+  </data>
+  <data name="Prodej3ProdejListNeniVybranoZbozi" xml:space="preserve">
+    <value>Není vybráno zboží</value>
+  </data>
+  <data name="Prodej3ProdejListPolozkaNenalezenaPridatNovouDotaz" xml:space="preserve">
+    <value>Položka s č.k.'{0}' nenalezena.
+
+Chcete přidat novou položku?</value>
+  </data>
+  <data name="Prodej3ProdejListPolozkaNeniVybrana" xml:space="preserve">
+    <value>Není vybrána položka</value>
+  </data>
+  <data name="Prodej3ProdejListPolozkaObsahujiciKodNenalezena" xml:space="preserve">
+    <value>Položka obsahující kód '{0}' nenalezena.</value>
+  </data>
+  <data name="Prodej3ProdejListPolozkaObsahujiciTextNenalezena" xml:space="preserve">
+    <value>Položka obsahující text '{0}' nenalezena.</value>
+  </data>
+  <data name="Prodej3ProdejListPolozkaPreplnenaPokracovatDotaz" xml:space="preserve">
+    <value>Položka přeplněna! Chcete pokračovat v uložení množství?</value>
+  </data>
+  <data name="Prodej3ProdejListPolozkaSCarKodNeboSarziNenalezena" xml:space="preserve">
+    <value>Položka s č.k. nebo šarží '{0}' nenalezena.</value>
+  </data>
+  <data name="Prodej3ProdejListPolozkaSCarKodNeboSarziNenalezenaOnline" xml:space="preserve">
+    <value>Položka s č.k. nebo šarží '{0}' nenalezena online.</value>
+  </data>
+  <data name="Prodej3ProdejListPolozkaSCarKodNenalezena" xml:space="preserve">
+    <value>Položka s č.k. '{0}' nenalezena.</value>
+  </data>
+  <data name="Prodej3ProdejListPolozkuJdeZadatPouzeScannerem" xml:space="preserve">
+    <value>Položku lze zadat pouze nasnímáním čárkódu.</value>
+  </data>
+  <data name="Prodej3ProdejListPorusenoDoporucenePoradiCilLokacePokracovatDotaz" xml:space="preserve">
+    <value>Bylo porušeno doporučené pořadí cílových lokací. 
+Přesto pokračovat?</value>
+  </data>
+  <data name="Prodej3ProdejListPorusenoDoporucenePoradiPokracovatDotaz" xml:space="preserve">
+    <value>Bylo porušeno doporučené pořadí lokací. 
+Přesto pokračovat?</value>
+  </data>
+  <data name="Prodej3ProdejListPracovnik" xml:space="preserve">
+    <value>Pracovník</value>
+  </data>
+  <data name="Prodej3ProdejListPridatPolozku" xml:space="preserve">
+    <value>Přidat položku</value>
+  </data>
+  <data name="Prodej3ProdejListSerioveCislo" xml:space="preserve">
+    <value>Sériové číslo</value>
+  </data>
+  <data name="Prodej3ProdejListSerioveCisloJizByloNasnimano" xml:space="preserve">
+    <value>Seriové číslo pro tuto položku již bylo nasnímáno!</value>
+  </data>
+  <data name="Prodej3ProdejListSmazaniPolozky" xml:space="preserve">
+    <value>Smazání položky</value>
+  </data>
+  <data name="Prodej3ProdejListSmazatNasnimanouPolozkuDotaz" xml:space="preserve">
+    <value>Smazat položku
+'{0}'
+Množství: {1}</value>
+  </data>
+  <data name="Prodej3ProdejListStavProdeje" xml:space="preserve">
+    <value>Stav prodeje</value>
+  </data>
+  <data name="Prodej3ProdejListStavProdejeInfo" xml:space="preserve">
+    <value>Základ: {0}
+S DPH: {1}</value>
+  </data>
+  <data name="Prodej3ProdejListStredisko" xml:space="preserve">
+    <value>Středisko</value>
+  </data>
+  <data name="Prodej3ProdejListStrediskoNenalezenoVyberDotaz" xml:space="preserve">
+    <value>Odpovídající středisko s ID '{0}' nenalezeno!
+
+Vyberte jiné ze seznamu</value>
+  </data>
+  <data name="Prodej3ProdejListTiskEtiketyDotaz" xml:space="preserve">
+    <value>Vytisknout Etiketu?</value>
+  </data>
+  <data name="Prodej3ProdejListTiskSoupisDotaz" xml:space="preserve">
+    <value>Vytisknout soupis všech načtených položek?</value>
+  </data>
+  <data name="Prodej3ProdejListUkoncitZpracovaniDavkyDotaz" xml:space="preserve">
+    <value>Ukončit zpracování dávky '{0}'?</value>
+  </data>
+  <data name="Prodej3ProdejListVlozteCilovouLokaci" xml:space="preserve">
+    <value>Vložte cílovou lokaci</value>
+  </data>
+  <data name="Prodej3ProdejListVlozteLokaci" xml:space="preserve">
+    <value>Vložte lokaci</value>
+  </data>
+  <data name="Prodej3ProdejListVlozteMnozstvi" xml:space="preserve">
+    <value>Vložte množství</value>
+  </data>
+  <data name="Prodej3ProdejListVlozteMnozstviBaleni" xml:space="preserve">
+    <value>Vložte množství balení</value>
+  </data>
+  <data name="Prodej3ProdejListVlozteSerioveCislo" xml:space="preserve">
+    <value>Vložte Sériové číslo</value>
+  </data>
+  <data name="Prodej3ProdejListVlozteSklad" xml:space="preserve">
+    <value>Vložte sklad</value>
+  </data>
+  <data name="Prodej3ProdejListVTomtoZobrazeniNelzeZadatMnozstvi" xml:space="preserve">
+    <value>V tomto zobrazeni nelze zadávat množství!</value>
+  </data>
+  <data name="Prodej3ProdejListVyberCiloveLokace" xml:space="preserve">
+    <value>Výběr cílové lokace</value>
+  </data>
+  <data name="Prodej3ProdejListZadaniDoplnujiciHodnoty" xml:space="preserve">
+    <value>Zadání doplňující hodnoty</value>
+  </data>
+  <data name="Prodej3ProdejListZadejteCarovyKod" xml:space="preserve">
+    <value>Zadejte čárový kód</value>
+  </data>
+  <data name="Prodej3ProdejListZadejteCastCislaPolozky" xml:space="preserve">
+    <value>Zadejte část čísla položky</value>
+  </data>
+  <data name="Prodej3ProdejListZadejteCastNazvuPolozky" xml:space="preserve">
+    <value>Zadejte část názvu položky</value>
+  </data>
+  <data name="Prodej3ProdejListZadejteCisloPalety" xml:space="preserve">
+    <value>Zadejte číslo palety</value>
+  </data>
+  <data name="Prodej3ProdejListZadejteCisloZakazky" xml:space="preserve">
+    <value>Zadejte číslo zakázky</value>
+  </data>
+  <data name="Prodej3ProdejListZadejteKodPolozky" xml:space="preserve">
+    <value>Zadejte kód položky</value>
+  </data>
+  <data name="Prodej3ProdejListZaznamNeniVybran" xml:space="preserve">
+    <value>Není vybrán záznam</value>
+  </data>
+  <data name="Prodej3ProdejListZboziNeniMozneVydat" xml:space="preserve">
+    <value>Zboží 
+'{0}'
+ není možné vydat</value>
+  </data>
+  <data name="Prodej3ProdejMainAktualizaceCiselnikuZboziDotaz" xml:space="preserve">
+    <value>Chcete aktualizovat číselník zboží?</value>
+  </data>
+  <data name="Prodej3ProdejMainCilovySkladDriveZvolenPouzitStejnyDotaz" xml:space="preserve">
+    <value>Cílový sklad byl již dříve zvolen, chcete ho použít?</value>
+  </data>
+  <data name="Prodej3ProdejMainOdeslatDavkuDotaz" xml:space="preserve">
+    <value>Odeslat dávku?</value>
+  </data>
+  <data name="Prodej3ProdejMainPraceSTypyDokladuNeniPovolena" xml:space="preserve">
+    <value>Práce s typy dokladů není povolena</value>
+  </data>
+  <data name="Prodej3ProdejMainProvestExportOdberateluDotaz" xml:space="preserve">
+    <value>Chcete provést i export odběratelů?</value>
+  </data>
+  <data name="Prodej3ProdejMainProvestExportZboziDotaz" xml:space="preserve">
+    <value>Chcete provést i export zboží?</value>
+  </data>
+  <data name="Prodej3ProdejMainSkladNenalezenVyberteJiny" xml:space="preserve">
+    <value>Odpovídající sklad s ID '{0}' nenalezen!
+
+Vyberte jiný ze seznamu</value>
+  </data>
+  <data name="Prodej3ProdejMainUkonceniPraceSModulemDotaz" xml:space="preserve">
+    <value>Opravdu chcete ukončit práci s modulem?</value>
+  </data>
+  <data name="Prodej3ProdejMainVyberteCilovySklad" xml:space="preserve">
+    <value>Vyberte cílový sklad</value>
+  </data>
+  <data name="Prodej3ProdejMainZadejteCisloPalety" xml:space="preserve">
+    <value>Zadejte číslo palety</value>
+  </data>
+  <data name="Prodej3ProdejMainZadejteCisloZakazky" xml:space="preserve">
+    <value>Zadejte číslo zakázky</value>
+  </data>
+  <data name="Prodej3ProdejMainAktualizaceDokoncena" xml:space="preserve">
+    <value>Aktualizace úspěšně dokončena</value>
+  </data>
+  <data name="Prodej3ProdejMainAktualizaceSeNezdarila" xml:space="preserve">
+    <value>Aktualizace se nezdařila</value>
+  </data>
+  <data name="Prodej3ProdejMainChyba" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="Prodej3ProdejMainChybaPriOdeslaniDavky" xml:space="preserve">
+    <value>Chyba při odesílání dávky</value>
+  </data>
+  <data name="Prodej3ProdejMainDavkaNeobsahujePolozky" xml:space="preserve">
+    <value>Dávku č.'{0}' nelze odeslat, protože neobsahuje žádné položky</value>
+  </data>
+  <data name="Prodej3ProdejMainDavkaOdeslana" xml:space="preserve">
+    <value>Dávka č.'{0}' odeslána</value>
+  </data>
+  <data name="Prodej3ProdejMainDavkaSeNepodarilaOdeslat" xml:space="preserve">
+    <value>Dávku č.'{0}' se nepodařilo odeslat</value>
+  </data>
+  <data name="Prodej3ProdejMainFiltryMenyNeniPovolen" xml:space="preserve">
+    <value>Filtry na měny nejsou povoleny</value>
+  </data>
+  <data name="Prodej3ProdejMainOdesilamDavku" xml:space="preserve">
+    <value>Odesílám dávku č.'{0}'</value>
+  </data>
+  <data name="Prodej3ProdejMainProvestExportMenDotaz" xml:space="preserve">
+    <value>Chcete provést i export měn?</value>
+  </data>
+  <data name="Prodej3ProdejMainProvestExportPracovnikuDotaz" xml:space="preserve">
+    <value>Chcete provést i export pracovníků?</value>
+  </data>
+  <data name="Prodej3ProdejMainProvestExportSkladuDotaz" xml:space="preserve">
+    <value>Chcete provést i export skladů?</value>
+  </data>
+  <data name="Prodej3ProdejMainProvestExportStredisekDotaz" xml:space="preserve">
+    <value>Chcete provést i export středisek?</value>
+  </data>
+  <data name="Prodej3ProdejPridatPolozkuNeniVybranaPolozka" xml:space="preserve">
+    <value>Není vybrána položka</value>
+  </data>
+  <data name="Prodej3ProdejVyberDavkyChybaVCisleDavky" xml:space="preserve">
+    <value>Chyba v čísle dávky</value>
+  </data>
+  <data name="Prodej3ProdejVyberDavkyDavkaJizExistuje" xml:space="preserve">
+    <value>Dávka s č.'{0}' již existuje</value>
+  </data>
+  <data name="Prodej3ProdejVyberDavkyHesloProOdemceni" xml:space="preserve">
+    <value>Heslo pro odemčení dávky</value>
+  </data>
+  <data name="Prodej3ProdejVyberDavkyNeniVybranaDavka" xml:space="preserve">
+    <value>Není vybrána dávka</value>
+  </data>
+  <data name="Prodej3ProdejVyberDavkyZadejteCisloDavky" xml:space="preserve">
+    <value>Zadejte číslo dávky</value>
+  </data>
+  <data name="Prodej3ProdejVyberDavkyZadejteHesloProOdemceni" xml:space="preserve">
+    <value>Dávka je již naplněna. 
+Zadejte heslo pro odemčení dávky.</value>
+  </data>
+  <data name="Prodej3ProdejVyberDavkyZrusit" xml:space="preserve">
+    <value>Zrušit</value>
+  </data>
+  <data name="Prodej3ProdejVyberDavkyZrusitDavkuDotaz" xml:space="preserve">
+    <value>Opravdu zrušit dávku č.'{0}'?</value>
+  </data>
+  <data name="FormsFormLokaceVyberLokaceNalezenoViceZaznamu" xml:space="preserve">
+    <value>Nalezeno více záznamů</value>
+  </data>
+  <data name="FormsFormLokaceVyberLokaceSCarKodNenalezena" xml:space="preserve">
+    <value>Lokace s čár. kódem '{0}' nenalezena</value>
+  </data>
+  <data name="FormsFormLokaceVyberLokaceVyberteLokaci" xml:space="preserve">
+    <value>Vyberte lokaci</value>
+  </data>
+  <data name="FormsFormLokaceVyberVyber" xml:space="preserve">
+    <value>Výběr</value>
+  </data>
+  <data name="FormsFormPodbarveniPrioritKontrolaVstupu" xml:space="preserve">
+    <value>Kontrola vstupu</value>
+  </data>
+  <data name="FormsFormPodbarveniPrioritNeniVybratRadek" xml:space="preserve">
+    <value>Není vybrán řádek</value>
+  </data>
+  <data name="FormsFormPodbarveniPrioritNeniZmenaBarvyPriority" xml:space="preserve">
+    <value>Změna barvy priority</value>
+  </data>
+  <data name="FormsFormPodbarveniPrioritVlozeniZaznamu" xml:space="preserve">
+    <value>Vložení záznamu</value>
+  </data>
+  <data name="FormsFormPodbarveniPrioritVyberBarvy" xml:space="preserve">
+    <value>Výběr barvy</value>
+  </data>
+  <data name="FormsFormPodbarveniPrioritZadejteCisloPriority" xml:space="preserve">
+    <value>Zadejte číslo priority</value>
+  </data>
+  <data name="FormsFormPracovnikVyberAktualizacePracovnikuSeNezdarila" xml:space="preserve">
+    <value>Aktualizace pracovníků se nezdařila</value>
+  </data>
+  <data name="FormsFormPracovnikVyberNeniVybranaPolozka" xml:space="preserve">
+    <value>Není vybrána položka</value>
+  </data>
+  <data name="FormsFormPracovnikVyberPolozkaCarKodNenalezena" xml:space="preserve">
+    <value>Položka s č.k.'{0}' nenalezena.</value>
+  </data>
+  <data name="FormsFormPracovnikVyberVlozteCarovyKod" xml:space="preserve">
+    <value>Vložte čárový kód</value>
+  </data>
+  <data name="FormsFormSkladVyberNeniVybranSklad" xml:space="preserve">
+    <value>Není vybrán sklad</value>
+  </data>
+  <data name="FormsFormSkladVyberPrerusitVyberDotaz" xml:space="preserve">
+    <value>Opravdu přerušit výběr?</value>
+  </data>
+  <data name="FormsFormSkladVyberSkladNenalezen" xml:space="preserve">
+    <value>Sklad '{0}' nenalezen</value>
+  </data>
+  <data name="Prodej3ProdejVyberDavkyDavkaOdstranena" xml:space="preserve">
+    <value>Dávka č.'{0}' byla odstraněna</value>
+  </data>
+  <data name="Prodej3ProdejVyberMenyNeniVybranaPolozka" xml:space="preserve">
+    <value>Není vybrána položka</value>
+  </data>
+  <data name="Prodej3ProdejVyberMenyVlozteCarovyKod" xml:space="preserve">
+    <value>Vložte čárový kód</value>
+  </data>
+  <data name="Prodej3ProdejVyberOdberateleNeniVybratOdberatel" xml:space="preserve">
+    <value>Není vybrán odběratel</value>
+  </data>
+  <data name="Prodej3ProdejVyberOdberatelePolozkaCarKodNenalezena" xml:space="preserve">
+    <value>Položka s č.k.'{0}' nenalezena</value>
+  </data>
+  <data name="Prodej3ProdejVyberOdberateleVlozteCarovyKod" xml:space="preserve">
+    <value>Vložte čárový kód</value>
+  </data>
+  <data name="Prodej3ProdejVyberOdberateleVyberPouzeCarovymKodem" xml:space="preserve">
+    <value>Tomuto odběrateli lze vydat pouze po identifikaci čárovým kódem.</value>
+  </data>
+  <data name="Prodej3ProdejVyberPaletyListNalezenoViceZaznamu" xml:space="preserve">
+    <value>Nalezeno více záznamů s šarží '{0}'</value>
+  </data>
+  <data name="Prodej3ProdejVyberPaletyListNeniVybranaPaleta" xml:space="preserve">
+    <value>Není vybrána paleta</value>
+  </data>
+  <data name="Prodej3ProdejVyberPaletyListZaznamNenalezenPokracovatDotaz" xml:space="preserve">
+    <value>Nenalezen záznam s šarží '{0}' v seznamu doporuč. palet. 
+Zvolit načtenou šarži a pokračovat?</value>
+  </data>
+  <data name="Prodej3ProdejVyberPaletyVkladejtePouzeCisla" xml:space="preserve">
+    <value>Vkládejte pouze čísla!</value>
+  </data>
+  <data name="Prodej3ProdejVyberPaletyVyplnteCislo" xml:space="preserve">
+    <value>Vyplňte číslo</value>
+  </data>
+  <data name="Prodej3ProdejVyberPracovnika2NeniVybranaPolozka" xml:space="preserve">
+    <value>Není vybrána položka</value>
+  </data>
+  <data name="Prodej3ProdejVyberPracovnika2PolozkaCarKodNenalezena" xml:space="preserve">
+    <value>Položka s č.k.'{0}' nenalezena.</value>
+  </data>
+  <data name="Prodej3ProdejVyberPracovnika2VlozteCarovyKod" xml:space="preserve">
+    <value>Vložte čárový kód</value>
+  </data>
+  <data name="Prodej3ProdejVyberPracovnika2VyberPouzeScannerem" xml:space="preserve">
+    <value>Nelze vybírat ručně, ale jen načtením scanerem</value>
+  </data>
+  <data name="Prodej3ProdejVyberStrediska2NeniVybranaPolozka" xml:space="preserve">
+    <value>Není vybrána položka</value>
+  </data>
+  <data name="Prodej3ProdejVyberStrediska2PolozkaCarKodNenalezena" xml:space="preserve">
+    <value>Položka s č.k.'{0}' nenalezena.</value>
+  </data>
+  <data name="Prodej3ProdejVyberStrediska2VlozteCarovyKod" xml:space="preserve">
+    <value>Vložte čárový kód</value>
+  </data>
+  <data name="Prodej3ProdejVyberTypuDokladuPolozkaCarKodNenalezena" xml:space="preserve">
+    <value>Položka s č.k.'{0}' nenalezena.</value>
+  </data>
+  <data name="Prodej3ProdejVyberTypuDokladuVlozteCarovyKod" xml:space="preserve">
+    <value>Vložte čárový kód</value>
+  </data>
+  <data name="Prodej3ProdejVyberTypuDokladuVyberteTypDokladu" xml:space="preserve">
+    <value>Vyberte typ dokladu</value>
+  </data>
+  <data name="FormsFormTiskarnyVyberNeniVybranaTiskarna" xml:space="preserve">
+    <value>Není vybrána tiskárna</value>
+  </data>
+  <data name="FormsFormTiskarnyVyberPrerusitVyberDotaz" xml:space="preserve">
+    <value>Opravdu přerušit výběr?</value>
+  </data>
+  <data name="FormsFormTiskarnyVyberPripravaCiselnikuSeNezdarila" xml:space="preserve">
+    <value>Příprava číselníku tiskáren se nezdařila</value>
+  </data>
+  <data name="FormsFormTiskarnyVyberTiskarnaNenalezena" xml:space="preserve">
+    <value>Tiskárna s čár.kódem '{0}' nenalezena</value>
+  </data>
+  <data name="FormsFormTiskarnyVyberZadejteCarKodTiskarny" xml:space="preserve">
+    <value>Zadejte čár.kód tiskárny</value>
+  </data>
+  <data name="FormsSejmiImageFormFotkaPorizena" xml:space="preserve">
+    <value>Fotka pořízena. Triggerem znovu aktivovat focení ...</value>
+  </data>
+  <data name="FormsSejmiImageFormNepodariloSeVyfotit" xml:space="preserve">
+    <value>Nepodařilo se vyfotit!</value>
+  </data>
+  <data name="FormsSejmiImageFormPorizujiFotku" xml:space="preserve">
+    <value>Pořizuji fotku ...</value>
+  </data>
+  <data name="FormsSejmiImageFormTriggeremPoriditFotku" xml:space="preserve">
+    <value>Triggerem pořídit fotku ...</value>
+  </data>
+  <data name="FormsSejmiKodFormCisloJeMimoRozsah" xml:space="preserve">
+    <value>Číslo je mimo povolený rozsah (-999999999,999999999)</value>
+  </data>
+  <data name="FormsSejmiKodFormDotaz" xml:space="preserve">
+    <value>Dotaz</value>
+  </data>
+  <data name="FormsSejmiKodFormDropdownCisloJeMimoRozsah" xml:space="preserve">
+    <value>Číslo je mimo povolený rozsah (-999999999,999999999)</value>
+  </data>
+  <data name="FormsSejmiKodFormDropdownDotaz" xml:space="preserve">
+    <value>Dotaz</value>
+  </data>
+  <data name="FormsSejmiKodFormDropdownKodJeDelsiNezXUlozitDotaz" xml:space="preserve">
+    <value>Sejmutý kód je delší než {0} znaků. Chcete ho uložit?</value>
+  </data>
+  <data name="FormsSejmiKodFormDropdownKodJeKratsiNezXUlozitDotaz" xml:space="preserve">
+    <value>Sejmutý kód je kratší než {0} znaků. Chcete ho uložit?</value>
+  </data>
+  <data name="FormsSejmiKodFormDropdownKodJeMensiNezX" xml:space="preserve">
+    <value>Kód je delší než {0} znaků</value>
+  </data>
+  <data name="FormsSejmiKodFormDropdownKodSeLisi" xml:space="preserve">
+    <value>Přednastavený kód '{0}' neodpovídá načtenému kódu '{1}' !!!</value>
+  </data>
+  <data name="FormsSejmiKodFormDropdownSmiteZadavatPouzeCisla" xml:space="preserve">
+    <value>Smíte vkládat pouze čísla!</value>
+  </data>
+  <data name="FormsSejmiKodFormDropdownVlozteKod" xml:space="preserve">
+    <value>Vložte kód!</value>
+  </data>
+  <data name="FormsSejmiKodFormKodJeDelsiNezXUlozitDotaz" xml:space="preserve">
+    <value>Sejmutý kód je delší než {0} znaků. Chcete ho uložit?</value>
+  </data>
+  <data name="FormsSejmiKodFormKodJeKratsiNezXUlozitDotaz" xml:space="preserve">
+    <value>Sejmutý kód je kratší než {0} znaků. Chcete ho uložit?</value>
+  </data>
+  <data name="FormsSejmiKodFormKodJeMensiNezX" xml:space="preserve">
+    <value>Kód je delší než {0} znaků</value>
+  </data>
+  <data name="FormsSejmiKodFormSmiteZadavatPouzeCisla" xml:space="preserve">
+    <value>Smíte vkládat pouze čísla!</value>
+  </data>
+  <data name="FormsSejmiKodFormVlozteKod" xml:space="preserve">
+    <value>Vložte kód!</value>
+  </data>
+  <data name="Inventura1Inventura1SqlceChyba" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="Inventura1Inventura1SqlceDataSeOdesilaji" xml:space="preserve">
+    <value>Odesílají se data inventury</value>
+  </data>
+  <data name="Inventura1Inventura1SqlceDotaz" xml:space="preserve">
+    <value>Dotaz</value>
+  </data>
+  <data name="Inventura1Inventura1SqlceNaDiskuNejsouZadneDavky" xml:space="preserve">
+    <value>Na disku nejsou žádné dávky. Chcete je stáhnout?</value>
+  </data>
+  <data name="Inventura1Inventura1SqlceOdeslaniDatProblem" xml:space="preserve">
+    <value>Při odesílání nastaly potíže:</value>
+  </data>
+  <data name="Inventura1Inventura1SqlceOdeslanidatProblemopakovatDotaz" xml:space="preserve">
+    <value>Odeslání dat se nezdařilo({0})! 
+Opakovat?</value>
+  </data>
+  <data name="Inventura1Inventura1SqlceOdeslatDataDotaz" xml:space="preserve">
+    <value>Odeslat data inventury č. {0}?</value>
+  </data>
+  <data name="Inventura1Inventura1SqlceOpakujeSeZpracovaniDat" xml:space="preserve">
+    <value>Opakuje se zpracování dat</value>
+  </data>
+  <data name="Inventura1Inventura1SqlcePripravaDatDavkyInventury" xml:space="preserve">
+    <value>Příprava dat dávky inventury</value>
+  </data>
+  <data name="Inventura1Inventura1SqlceProblemStazeniInventury" xml:space="preserve">
+    <value>Nepodařilo se stáhnout data dávky inventury.
+Inventura byla pravděpodobně stažena dříve jiným terminálem</value>
+  </data>
+  <data name="Inventura1Inventura1SqlceProblemUlozeniInventury" xml:space="preserve">
+    <value>Nepodařilo se uložit inventuru.</value>
+  </data>
+  <data name="Inventura1Inventura1SqlceProvestExportSkladuDotaz" xml:space="preserve">
+    <value>Chcete provést i export skladů?</value>
+  </data>
+  <data name="Inventura1Inventura1SqlceStahujeSeCiselnikSkladu" xml:space="preserve">
+    <value>Stahuje se číselník skladů</value>
+  </data>
+  <data name="Inventura1Inventura1SqlceStahujeSeSeznamInventur" xml:space="preserve">
+    <value>Stahuje se seznam dostupných inventur</value>
+  </data>
+  <data name="Inventura1Inventura1SqlceStavkaJeJizStazena" xml:space="preserve">
+    <value>Dávka '{0}' je již stažena!</value>
+  </data>
+  <data name="Inventura1Inventura1SqlceUkonceniPraceSModulemDotaz" xml:space="preserve">
+    <value>Opravdu chcete ukončit práci s modulem?</value>
+  </data>
+  <data name="Inventura1Inventura1SqlceVraceniDavkaObsahujePolozkyDotaz" xml:space="preserve">
+    <value>Tato dávka obsahuje nasnímané položky.
+Opravdu chcete dávku vrátit?</value>
+  </data>
+  <data name="Inventura1Inventura1SqlceZpracovaniDatProblemopakovatDotaz" xml:space="preserve">
+    <value>Zpracování dat se nezdařilo! {0} 
+Opakovat?</value>
+  </data>
+  <data name="Inventura1InventuraTiskPocetMusiBytMensiNez100" xml:space="preserve">
+    <value>Počet výtisků nesmí být vyšší než 100</value>
+  </data>
+  <data name="Inventura1InventuraTiskPocetMusiBytVetsiNez0" xml:space="preserve">
+    <value>Počet výtisků musí být vyšší než 0</value>
+  </data>
+  <data name="Inventura1InventuraTiskPocetVytisku" xml:space="preserve">
+    <value>Počet výtisků</value>
+  </data>
+  <data name="Inventura1ListPolozkyI3SqlceNeniVybranZaznam" xml:space="preserve">
+    <value>Není vybrán záznam!</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceCarovyKod" xml:space="preserve">
+    <value>Čárový kód</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceChyba" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceDavkaKompletniPokracovatDotaz" xml:space="preserve">
+    <value>Dávka je kompletní, chcete pokračovat?</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceDotaz" xml:space="preserve">
+    <value>Dotaz</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceHledat" xml:space="preserve">
+    <value>Hledat</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceInfo" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceKodPolozky" xml:space="preserve">
+    <value>Kód položky</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceLokace" xml:space="preserve">
+    <value>Lokace</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceMnozstvi" xml:space="preserve">
+    <value>Množství</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceMnozstviBaleni" xml:space="preserve">
+    <value>Množství balení</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceMnozstviMusiBytRuzneOd0" xml:space="preserve">
+    <value>Zadané množství musí být různé od 0!</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceMnozstviMusiBytVetsiNez0" xml:space="preserve">
+    <value>Zadané množství musí být kladné a větší jak 0!</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceMnozstviVetsiNezNaSklade" xml:space="preserve">
+    <value>Je nasnímáno větší množství než je na skladě!</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceMnozstviVetsiNezZadanePokracovatDotaz" xml:space="preserve">
+    <value>Zadané množství je vetší než má být načteno, chcete pokračovat?</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceNalezenoVicePolozekVyberDotaz" xml:space="preserve">
+    <value>Nalezeno více položek v předloze.
+Vyberte jednu z nich.</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceNalezenoViceZaznamuVyber" xml:space="preserve">
+    <value>Nalezeno více záznamů s kódem '{0}'</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceNazev" xml:space="preserve">
+    <value>Název</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceNenalezenZaznamVI3" xml:space="preserve">
+    <value>Nenalezen záznam v tabulce I3!</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceNeniKompletniUkoncitDotaz" xml:space="preserve">
+    <value>Není kompletní.
+Chcete skončit zadávání této položky?</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceNeniVybranaPolozka" xml:space="preserve">
+    <value>Není vybrána položka!</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceNeniVybranZaznam" xml:space="preserve">
+    <value>Není vybrán záznam</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlcePolozkaCarKodNenalezena" xml:space="preserve">
+    <value>Položka s čár. kódem '{0}' nenalezena</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlcePolozkaDlePredlohyKompletniPreplnitDotaz" xml:space="preserve">
+    <value>Položka je dle předlohy kompletní.
+Chcete překročit hodnotu předlohy?</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlcePolozkaJizBylaZadana" xml:space="preserve">
+    <value>Položka již byla zadána!</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlcePolozkaNenalezena" xml:space="preserve">
+    <value>Nenalezena položka s číslem '{0}'</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlcePolozkaSKodemNenalezena" xml:space="preserve">
+    <value>Položka s kódem '{0}' nenalezena</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlcePolozkaSNazvemNenalezena" xml:space="preserve">
+    <value>Položka s návem '{0}' nenalezena</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlcePolozkuJdeZadatPouzeSejmutimCK" xml:space="preserve">
+    <value>Položku lze zadat pouze nasnímáním čárkódu.</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlcePoziceMimoRozsah" xml:space="preserve">
+    <value>Pozice je mimo rozsah (1-{0})</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlcePoziceZaznamu" xml:space="preserve">
+    <value>Pozice záznamu</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceSerioveCisloJizByloNasnimano" xml:space="preserve">
+    <value>Sériové číslo pro tuto položku již bylo nasnímáno!</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceSerNumTrackNeniPodporovan" xml:space="preserve">
+    <value>CZ_SerNum_Track={0} není podporován!</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceSmazatNasnimanaDataDotaz" xml:space="preserve">
+    <value>Opravdu smazat nasnímaná data položky '{0}'?</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceSNNenalezenoOpokovat" xml:space="preserve">
+    <value>{0} '{1}' nenalezeno!
+
+Opakujte zadání</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceUkoncitDotaz" xml:space="preserve">
+    <value>Opravdu chcete ukončit práci s daty inventury?</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceVlozeniPolozky" xml:space="preserve">
+    <value>Vložení položky</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceVlozteMnozstvi" xml:space="preserve">
+    <value>Vložte množství</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceVlozteMnozstviBaleni" xml:space="preserve">
+    <value>Vložte množství balení</value>
+  </data>
+  <data name="Inventura1ListPolozkySqlceVlozteSN" xml:space="preserve">
+    <value>Vložte {0}</value>
+  </data>
+  <data name="Inventura1NaplnPolozkuSNDotaz" xml:space="preserve">
+    <value>Dotaz</value>
+  </data>
+  <data name="Inventura1NaplnPolozkuSNKodNeniVPredlozeUlozitDotaz" xml:space="preserve">
+    <value>Kód '{0}' není uveden v předloze.
+Checte ho uložit?</value>
+  </data>
+  <data name="Inventura1NaplnPolozkuSNNeniVybranaPolozka" xml:space="preserve">
+    <value>Není vybrána položka</value>
+  </data>
+  <data name="Inventura1NaplnPolozkuSqlceNeniVybranaPolozka" xml:space="preserve">
+    <value>Není vybrána položka</value>
+  </data>
+  <data name="Inventura1Nasnimane2Dotaz" xml:space="preserve">
+    <value>Dotaz</value>
+  </data>
+  <data name="Inventura1Nasnimane2NeniVybranaPolozka" xml:space="preserve">
+    <value>Není vybrána položka</value>
+  </data>
+  <data name="Inventura1Nasnimane2Smazat" xml:space="preserve">
+    <value>Smazat</value>
+  </data>
+  <data name="Inventura1Nasnimane2SmazatPolozkuDotaz" xml:space="preserve">
+    <value>Opravdu smazat položku '{0}' [{1}]?</value>
+  </data>
+  <data name="Inventura1Nasnimane2ZpetDoSeznamuPolozekDotaz" xml:space="preserve">
+    <value>Zpět do seznamu položek?</value>
+  </data>
+  <data name="Inventura1SejmiKodFormHledejNazevCisloMimoRozsah" xml:space="preserve">
+    <value>Číslo je mimo povolený rozsah (-999999999,999999999)</value>
+  </data>
+  <data name="Inventura1SejmiKodFormHledejNazevDotaz" xml:space="preserve">
+    <value>Dotaz</value>
+  </data>
+  <data name="Inventura1SejmiKodFormHledejNazevKodDelsiNez" xml:space="preserve">
+    <value>Kód je delší než {0} znaků</value>
+  </data>
+  <data name="Inventura1SejmiKodFormHledejNazevKodDelsiNezUlozitDotaz" xml:space="preserve">
+    <value>Sejmutý kód je delší než {0} znaků. Chcete ho uložit?</value>
+  </data>
+  <data name="Inventura1SejmiKodFormHledejNazevKodkratsiNezUlozitDotaz" xml:space="preserve">
+    <value>Sejmutý kód je kratší než {0} znaků. Chcete ho uložit</value>
+  </data>
+  <data name="Inventura1SejmiKodFormHledejNazevKodSeLisi" xml:space="preserve">
+    <value>Přednastavený kód '{0}' neodpovídá načtenému kódu '{1}' !!!</value>
+  </data>
+  <data name="Inventura1SejmiKodFormHledejNazevKodVlozteKod" xml:space="preserve">
+    <value>Vložte kód!</value>
+  </data>
+  <data name="Inventura1SejmiKodFormHledejNazevPouzeCisla" xml:space="preserve">
+    <value>Smíte vkládat pouze čísla!</value>
+  </data>
+  <data name="Vydej3ListDavkamaForm3DavkaSKodemNenalezena" xml:space="preserve">
+    <value>Dávka s kódem č. '{0}' nenalezena!</value>
+  </data>
+  <data name="Vydej3ListDavkamaForm3NeniVybranaDavka" xml:space="preserve">
+    <value>Není vybrána dávka</value>
+  </data>
+  <data name="Vydej3ListDavkamaForm3VyberPouzeScannerem" xml:space="preserve">
+    <value>Není povolen ruční výběr!
+Pouze scannerem...</value>
+  </data>
+  <data name="Vydej3ListMNForm3Dotaz" xml:space="preserve">
+    <value>Dotaz</value>
+  </data>
+  <data name="Vydej3ListMNForm3KodSeNeshoduje" xml:space="preserve">
+    <value>Kód se neshoduje!</value>
+  </data>
+  <data name="Vydej3ListMNForm3NalezenoViceZaznamuNelzePokracovat" xml:space="preserve">
+    <value>Nalezeno {0} záznamů!
+Nelze pokračovat...</value>
+  </data>
+  <data name="Vydej3ListMNForm3NavratDoMenuDotaz" xml:space="preserve">
+    <value>Chcete se vrátit do hlavního menu?</value>
+  </data>
+  <data name="Vydej3ListMNForm3PolozkuJdeZadatPouzeSejmutimCK" xml:space="preserve">
+    <value>Položku lze zadat pouze nasnímáním čárkódu.</value>
+  </data>
+  <data name="Vydej3ListMNForm3PotvrdPolozkuSejmutimKodu" xml:space="preserve">
+    <value>Potvrď položku sejmutím {0}:</value>
+  </data>
+  <data name="Vydej3ListMNForm3SejmiCK" xml:space="preserve">
+    <value>Sejmi {0}</value>
+  </data>
+  <data name="Vydej3ListMNForm3SejmutyKodNenalezen" xml:space="preserve">
+    <value>Sejmutý kód nenalezen!</value>
+  </data>
+  <data name="Vydej3ListNasnimForm3Dotaz" xml:space="preserve">
+    <value>Dotaz</value>
+  </data>
+  <data name="Vydej3ListNasnimForm3Nezadano" xml:space="preserve">
+    <value>Nezadáno</value>
+  </data>
+  <data name="Vydej3ListNasnimForm3OdberatelNenalezen" xml:space="preserve">
+    <value>Odběratel nenalezen</value>
+  </data>
+  <data name="Vydej3ListNasnimForm3SeznamJePrazdny" xml:space="preserve">
+    <value>Seznam je prázdný</value>
+  </data>
+  <data name="Vydej3ListNasnimForm3SmazatPolozkuDotaz" xml:space="preserve">
+    <value>Chcete smazat tuto položku?</value>
+  </data>
+  <data name="Vydej3ListOdberateliForm3CiselnikOdberateluJePrazdny" xml:space="preserve">
+    <value>Číselník odběratelů je prázdný!</value>
+  </data>
+  <data name="Vydej3ListOdberateliForm3Info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="Vydej3ListOdberateliForm3Informace" xml:space="preserve">
+    <value>Informace</value>
+  </data>
+  <data name="Vydej3ListOdberateliForm3OdberatelNenalezen" xml:space="preserve">
+    <value>Odběratel nenalezen!</value>
+  </data>
+  <data name="Vydej3ListPolozek3ChybaRozdeleniMnozstviDoPolozek" xml:space="preserve">
+    <value>Nepodařilo se rozdělit zadané množství do jednotlivých položek!</value>
+  </data>
+  <data name="Vydej3ListPolozek3Dotaz" xml:space="preserve">
+    <value>Dotaz</value>
+  </data>
+  <data name="Vydej3ListPolozek3HromadnePlneni" xml:space="preserve">
+    <value>Hromadné plnění</value>
+  </data>
+  <data name="Vydej3ListPolozek3Info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="Vydej3ListPolozek3KodJeDelsiNezXUlozitDotaz" xml:space="preserve">
+    <value>Sejmutý kód je delší než {0} znaků. Chcete ho uložit?</value>
+  </data>
+  <data name="Vydej3ListPolozek3KodJeKratsiNezXUlozitDotaz" xml:space="preserve">
+    <value>Sejmutý kód je kratší než {0} znaků. Chcete ho uložit?</value>
+  </data>
+  <data name="Vydej3ListPolozek3Lokace" xml:space="preserve">
+    <value>Lokace</value>
+  </data>
+  <data name="Vydej3ListPolozek3NalezenoVicePolozekHromadneVydaniDotaz" xml:space="preserve">
+    <value>Bylo nalezeno více stejných položek. Chcete provést hromadné vydání?</value>
+  </data>
+  <data name="Vydej3ListPolozek3NavratDoMenuDotaz" xml:space="preserve">
+    <value>Chcete se vrátit do hlavního menu?</value>
+  </data>
+  <data name="Vydej3ListPolozek3NenalezenoVPredlozePokracovatDotaz" xml:space="preserve">
+    <value>{0} '{1}' nenalezeno v předloze
+
+Pokračovat?</value>
+  </data>
+  <data name="Vydej3ListPolozek3NenalezenoZboziKCarKod" xml:space="preserve">
+    <value>Nenalezeno žádné zboží k čárovému kódu {0} a {1}!</value>
+  </data>
+  <data name="Vydej3ListPolozek3NenalezenoZboziKCarKodOpakovatDotaz" xml:space="preserve">
+    <value>Nenalezeno žádné zboží k čárovému kódu {0}, nebo {1} a hodnotě {2} sloupce {3}.
+Přejete si volbu opakovat?</value>
+  </data>
+  <data name="Vydej3ListPolozek3NeniVybranaPolozka" xml:space="preserve">
+    <value>Není vybrána položka</value>
+  </data>
+  <data name="Vydej3ListPolozek3NeniVybranaZadnaPolozka" xml:space="preserve">
+    <value>Není vybrána žádná položka</value>
+  </data>
+  <data name="Vydej3ListPolozek3NevybranaMoznaVariantaOpakovatDotaz" xml:space="preserve">
+    <value>Nebyla vybrána žádná z možných variant zboží.
+Přejete si volbu opakovat?</value>
+  </data>
+  <data name="Vydej3ListPolozek3OdeslaniDavky" xml:space="preserve">
+    <value>Odeslání dávky</value>
+  </data>
+  <data name="Vydej3ListPolozek3OpakovatTiskDokladu" xml:space="preserve">
+    <value>Opakovat tisk dokladu</value>
+  </data>
+  <data name="Vydej3ListPolozek3PolozkaKompletniSnimatJineDotaz" xml:space="preserve">
+    <value>Položka je kompletní. Chcete snímat jiné zboží?</value>
+  </data>
+  <data name="Vydej3ListPolozek3PolozkaNaJineLokaciPresunoutDotaz" xml:space="preserve">
+    <value>Položka '{0}' je vedena na jiné lokaci '{1}'.
+
+Chcete ji přesunout do aktuální lokace '{2}'?</value>
+  </data>
+  <data name="Vydej3ListPolozek3PolozkaNenalezena" xml:space="preserve">
+    <value>Položka nenalezena</value>
+  </data>
+  <data name="Vydej3ListPolozek3PolozkaNeniKompletniUkoncitDotaz" xml:space="preserve">
+    <value>Tato položka ještě není kompletní. Opravdu skončit?</value>
+  </data>
+  <data name="Vydej3ListPolozek3PolozkaPreplneniSnimatJineDotaz" xml:space="preserve">
+    <value>Položka je přeplněna. Chcete snímat jiné zboží?</value>
+  </data>
+  <data name="Vydej3ListPolozek3PolozkaUspesnePridana" xml:space="preserve">
+    <value>Položka '{0}' úspěšně zapsána</value>
+  </data>
+  <data name="Vydej3ListPolozek3PolozkaVyplnenoMnozstviSnimatJineDotaz" xml:space="preserve">
+    <value>Položka má vyplněno množství. Chcete snímat jiné zboží?</value>
+  </data>
+  <data name="Vydej3ListPolozek3PolozkuJdeZadatPouzeSejmutimCK" xml:space="preserve">
+    <value>Položku lze zadat pouze nasnímáním čárkódu.</value>
+  </data>
+  <data name="Vydej3ListPolozek3PreplneniPolozkyNazevZakazano" xml:space="preserve">
+    <value>Položku '{0}' nelze přeplnit, protože je zakázáno přeplnění položky.</value>
+  </data>
+  <data name="Vydej3ListPolozek3PreplneniPolozkyZakazano" xml:space="preserve">
+    <value>Položku nelze přeplnit, protože je zakázáno přeplnění položky.</value>
+  </data>
+  <data name="Vydej3ListPolozek3SejmiSarze" xml:space="preserve">
+    <value>Sejmi Šarže</value>
+  </data>
+  <data name="Vydej3ListPolozek3SejmiSN" xml:space="preserve">
+    <value>Sejmi {0}</value>
+  </data>
+  <data name="Vydej3ListPolozek3SejmutyKodJeStejnyJako" xml:space="preserve">
+    <value>Sejmutý kód je stejný jako {0}!</value>
+  </data>
+  <data name="Vydej3ListPolozek3SmazatNasnimanaDataDotaz" xml:space="preserve">
+    <value>Opravdu smazat nasnímaná data položky '{0}' [{1}] ?</value>
+  </data>
+  <data name="Vydej3ListPolozek3SNJizNasnimanoUlozitDotaz" xml:space="preserve">
+    <value>{0} již bylo pro položku nasnímáno!
+Pokračovat uložením?</value>
+  </data>
+  <data name="Vydej3ListPolozek3TiskPaletovehoListkuDokoncen" xml:space="preserve">
+    <value>Tisk pal. lístku dokladu '{0}' dokončen</value>
+  </data>
+  <data name="Vydej3ListPolozek3TiskPalListku" xml:space="preserve">
+    <value>Tisk pal. lístku</value>
+  </data>
+  <data name="Vydej3ListPolozek3Upozorneni" xml:space="preserve">
+    <value>Upozornění</value>
+  </data>
+  <data name="Vydej3ListPolozek3Vlozeni" xml:space="preserve">
+    <value>Vložení</value>
+  </data>
+  <data name="Vydej3ListPolozek3VParametrechChybiNazevSloupce" xml:space="preserve">
+    <value>V parametrech dávky je nutné vyplnit název sloupce jehož hodnota se má zaznamenat.</value>
+  </data>
+  <data name="Vydej3ListPolozek3VydejKompletniInfoOdeslatDataDotaz" xml:space="preserve">
+    <value>Výdej je kompletní.
+Předloha: {0} / {1}
+Zadáno: {2} / {3}
+Zbývá: {4} / {5}
+Chcete odeslat data?</value>
+  </data>
+  <data name="Vydej3ListPolozek3VydejKompletniInfoPokracovatJinymTermDotaz" xml:space="preserve">
+    <value>Výdej je kompletní.
+Předloha: {0} / {1}
+Zadáno: {2} / {3}
+Zbývá: {4} / {5} 
+Pokračovat v dalším zpracování později jiným terminálem?</value>
+  </data>
+  <data name="Vydej3ListPolozek3VytisknoutEtiketuDotaz" xml:space="preserve">
+    <value>Vytisknout Etiketu?</value>
+  </data>
+  <data name="Vydej3ListPolozek3VytisknoutPalListekDotaz" xml:space="preserve">
+    <value>Vytisknout Soupis?</value>
+  </data>
+  <data name="Vydej3ListPolozek3ZadejMnozstvi" xml:space="preserve">
+    <value>Zadej množství</value>
+  </data>
+  <data name="Vydej3ListPolozek3ZadejMnozstviBaleni" xml:space="preserve">
+    <value>Zadej množství balení</value>
+  </data>
+  <data name="Vydej3ListPolozek3ZadejPotvrdLokaci" xml:space="preserve">
+    <value>Zadej/Potvrď {0}</value>
+  </data>
+  <data name="Vydej3ListPolozek3ZadejteMnozstvi" xml:space="preserve">
+    <value>Zadejte množství</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormDavkaSKodemNenalezena" xml:space="preserve">
+    <value>Dávka s kódem č. '{0}' nenalezena!</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormDavkaUspesneOdstranena" xml:space="preserve">
+    <value>Dávka byla úspěšně odstraněna.</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormDavkaUzJeSloucena" xml:space="preserve">
+    <value>Tato dávka už je sloučená!</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormNeniVybranaDavka" xml:space="preserve">
+    <value>Není vybrána dávka</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormNeniVybranaDavkaKeSlouceni" xml:space="preserve">
+    <value>Není vybraná žádná dávka ke sloučení!</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormNeniVybranaDavkaKOdstraneni" xml:space="preserve">
+    <value>Není vybraná žádná dávka k odstranění!</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormOKButton" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormPridatButton" xml:space="preserve">
+    <value>Přidat</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormRazeniCelkem09" xml:space="preserve">
+    <value>(Celkem [0-9])</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormRazeniCelkem90" xml:space="preserve">
+    <value>(Celkem [9-0])</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormRazeniDavkaAZ" xml:space="preserve">
+    <value>(Dávka [A-Z])</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormRazeniDavkaZA" xml:space="preserve">
+    <value>(Dávka [Z-A])</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormRazeniObjednavkaAZ" xml:space="preserve">
+    <value>(Obj.č. [A-Z])</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormRazeniObjednavkaZA" xml:space="preserve">
+    <value>(Obj.č. [Z-A])</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormRazeniPocetAZ" xml:space="preserve">
+    <value>(Počet [A-Z])</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormRazeniPocetZA" xml:space="preserve">
+    <value>(Počet [Z-A])</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormRazeniPriorita09" xml:space="preserve">
+    <value>(Priorita [0-9])</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormRazeniPriorita90" xml:space="preserve">
+    <value>(Priorita [9-0])</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormStornoButton" xml:space="preserve">
+    <value>Storno</value>
+  </data>
+  <data name="Vydej3ListSlouceneDavkyFormZpetButton" xml:space="preserve">
+    <value>Zpět</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3DavkuNelzeStahnoutExistujeVyssiPriorita" xml:space="preserve">
+    <value>Tuto dávku nelze stáhnout, existuje dávka s větší prioritou!</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3Dotaz" xml:space="preserve">
+    <value>Dotaz</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3GenerujiDataDavky" xml:space="preserve">
+    <value>Generuji data dávky</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3KodNenalezen" xml:space="preserve">
+    <value>Kód '{0}' nenalezen</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3NeniVybranaDavka" xml:space="preserve">
+    <value>Není vybrána dávka</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3PolozkaJizBylaStahnuta" xml:space="preserve">
+    <value>Daná položka už byla stáhnuta!</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3ProblemStazeniVydejky" xml:space="preserve">
+    <value>Nepodařilo se stáhnout výdejku!</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3ProblemUlozeniVydejky" xml:space="preserve">
+    <value>Nepodařilo se uložit výdejku!</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3RazeniCelkem09" xml:space="preserve">
+    <value>(Celkem [0-9])</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3RazeniCelkem90" xml:space="preserve">
+    <value>(Celkem [9-0])</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3RazeniDavkaAZ" xml:space="preserve">
+    <value>(Dávka [A-Z])</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3RazeniDavkaZA" xml:space="preserve">
+    <value>(Dávka [Z-A])</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3RazeniObjednavkaAZ" xml:space="preserve">
+    <value>(Obj.č. [A-Z])</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3RazeniObjednavkaZA" xml:space="preserve">
+    <value>(Obj.č. [Z-A])</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3RazeniPocetAZ" xml:space="preserve">
+    <value>(Počet [A-Z])</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3RazeniPocetZA" xml:space="preserve">
+    <value>(Počet [Z-A])</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3RazeniPriorita09" xml:space="preserve">
+    <value>(Priorita [0-9])</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3RazeniPriorita90" xml:space="preserve">
+    <value>(Priorita [9-0])</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3SloucitStazenouDavkuDotaz" xml:space="preserve">
+    <value>Chcete staženou dávku sloučit?</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3StahujiSeDataVydejky" xml:space="preserve">
+    <value>Stahují se data výdejky</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3VyberPouzeScannerem" xml:space="preserve">
+    <value>Není povolen ruční výběr!
+Pouze scannerem...</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3ZadejteCisloPrikazu" xml:space="preserve">
+    <value>Zadejte číslo příkazu</value>
+  </data>
+  <data name="Vydej3ListZboziChybneZadanySloupecProVyhledavani" xml:space="preserve">
+    <value>Chybně zadaný sloupec/sloupce pro vyhledávání v seznamu zboží!</value>
+  </data>
+  <data name="Vydej3ListZboziHledaniCarovyKod" xml:space="preserve">
+    <value>Hledání čárový kód</value>
+  </data>
+  <data name="Vydej3ListZboziJeTrebaVybratPolozku" xml:space="preserve">
+    <value>Nejprve je nutné vybrat nějakou z položek.</value>
+  </data>
+  <data name="Vydej3ListZboziNenalezenoZbozi" xml:space="preserve">
+    <value>Nenalezeno žádné zboží</value>
+  </data>
+  <data name="Vydej3ListZboziNenalezenoZboziPodleCK" xml:space="preserve">
+    <value>Nenalezeno žádné zboží k čárovému kódu {0}, nebo {1}.</value>
+  </data>
+  <data name="Vydej3ListZboziPolozkuJdeZadatPouzeSejmutimCK" xml:space="preserve">
+    <value>Položku lze zadat pouze nasnímáním čárkódu.</value>
+  </data>
+  <data name="Vydej3ListZboziZadejteCarovyKod" xml:space="preserve">
+    <value>Zadejte čárový kód</value>
+  </data>
+  <data name="Vydej3SejmiKodInfoForm3Baleni" xml:space="preserve">
+    <value>Balení:</value>
+  </data>
+  <data name="Vydej3SejmiKodInfoForm3Nacist" xml:space="preserve">
+    <value>Načíst:</value>
+  </data>
+  <data name="Vydej3SejmiKodInfoForm3Nacteno" xml:space="preserve">
+    <value>Načteno:</value>
+  </data>
+  <data name="Vydej3SejmiKodInfoForm3Sarze" xml:space="preserve">
+    <value>Šarže:</value>
+  </data>
+  <data name="Vydej3SejmiKodInfoForm4Baleni" xml:space="preserve">
+    <value>Balení:</value>
+  </data>
+  <data name="Vydej3SejmiKodInfoForm4Nacist" xml:space="preserve">
+    <value>Načíst:</value>
+  </data>
+  <data name="Vydej3SejmiKodInfoForm4Nacteno" xml:space="preserve">
+    <value>Načteno:</value>
+  </data>
+  <data name="Vydej3SejmiKodInfoForm4Sarze" xml:space="preserve">
+    <value>Šarže:</value>
+  </data>
+  <data name="Vydej3SejmiKodInfoFormSNBaleni" xml:space="preserve">
+    <value>Balení:</value>
+  </data>
+  <data name="Vydej3SejmiKodInfoFormSNDotaz" xml:space="preserve">
+    <value>Dotaz</value>
+  </data>
+  <data name="Vydej3SejmiKodInfoFormSNKodNeniVPredlozeUlozitDotaz" xml:space="preserve">
+    <value>Kód '{0}' není uveden v předloze.
+Checte ho uložit?</value>
+  </data>
+  <data name="Vydej3SejmiKodInfoFormSNNacist" xml:space="preserve">
+    <value>Načíst:</value>
+  </data>
+  <data name="Vydej3SejmiKodInfoFormSNNacteno" xml:space="preserve">
+    <value>Načteno:</value>
+  </data>
+  <data name="Vydej3SejmiKodInfoFormSNSarze" xml:space="preserve">
+    <value>Šarže:</value>
+  </data>
+  <data name="Vydej3TypOznaceniPaletyFormOldCisloVetsiNezMaximum" xml:space="preserve">
+    <value>Zadané číslo je větší než maximální délka kódu palety!</value>
+  </data>
+  <data name="Vydej3TypOznaceniPaletyFormOldNeniVybranTypPalety" xml:space="preserve">
+    <value>Není vybrán typ palety</value>
+  </data>
+  <data name="Vydej3TypOznaceniPaletyFormOldVkladejtePouzeCisla" xml:space="preserve">
+    <value>Vkládejte pouze čísla!</value>
+  </data>
+  <data name="Vydej3TypOznaceniPaletyFormOldVyplnteCislo" xml:space="preserve">
+    <value>Vyplňte číslo</value>
+  </data>
+  <data name="Vydej3VydejChyba" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="Vydej3VydejChybaPriCteniCiselnikuOdberatelu" xml:space="preserve">
+    <value>Chyba při čtení číselníku odběratelů!</value>
+  </data>
+  <data name="Vydej3VydejChybaPriCteniDavky" xml:space="preserve">
+    <value>Chyba při čtení dávky!</value>
+  </data>
+  <data name="Vydej3VydejChybaPriPripraveCiselniku" xml:space="preserve">
+    <value>Chyba při přípravě číselníku</value>
+  </data>
+  <data name="Vydej3VydejDataDavkyUspesneOdeslana" xml:space="preserve">
+    <value>Data dávky '{0}' byla úspěšně odeslána</value>
+  </data>
+  <data name="Vydej3VydejDavkaNeniDokoncenaOdeslatDotaz" xml:space="preserve">
+    <value>Tato dávka ješte není dokončena. Opravdu ji chcete odeslat?</value>
+  </data>
+  <data name="Vydej3VydejDavkaNevykrytaPokracovatJinymTerminalemDotaz" xml:space="preserve">
+    <value>Není 100% vykrytí předlohy.
+Pokračovat v dalším vychystávání později jiným terminálem?</value>
+  </data>
+  <data name="Vydej3VydejDavkaObsahujePolozkyVratitDotaz" xml:space="preserve">
+    <value>Tato dávka obsahuje vydané položky. Chcete ji opravdu vrátit a vydané položky anulovat?</value>
+  </data>
+  <data name="Vydej3VydejDotaz" xml:space="preserve">
+    <value>Dotaz</value>
+  </data>
+  <data name="Vydej3VydejInfo" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="Vydej3VydejMenuNavratDotaz" xml:space="preserve">
+    <value>Chcete se vrátit do hlavního menu?</value>
+  </data>
+  <data name="Vydej3VydejNacitajiSeDataDavky" xml:space="preserve">
+    <value>Načítají se data dávky</value>
+  </data>
+  <data name="Vydej3VydejNacitaniDatOdberatelu" xml:space="preserve">
+    <value>Načítají se data odběratelů</value>
+  </data>
+  <data name="Vydej3VydejNacitaniDatVydejky" xml:space="preserve">
+    <value>Načítají se data výdejky</value>
+  </data>
+  <data name="Vydej3VydejNaDiskuNejsouDavkyStahnoutDotaz" xml:space="preserve">
+    <value>Na disku nejsou žádné dávky. Chcete je stáhnout?</value>
+  </data>
+  <data name="Vydej3VydejOdesilajiSeDataVydejky" xml:space="preserve">
+    <value>Odesílají se data výdejky</value>
+  </data>
+  <data name="Vydej3VydejOdeslaniDatDavky" xml:space="preserve">
+    <value>Odeslání dat dávky</value>
+  </data>
+  <data name="Vydej3VydejOdeslaniDatProblemOpakovatDotaz" xml:space="preserve">
+    <value>Odeslání dat se nezdařilo({0})! Opakovat?</value>
+  </data>
+  <data name="Vydej3VydejOdeslaniDatSeNezdariloOpakovatDotaz" xml:space="preserve">
+    <value>Odeslání dat se nezdařilo! {0}
+Opakovat?</value>
+  </data>
+  <data name="Vydej3VydejOdeslaniDavky" xml:space="preserve">
+    <value>Odeslání dávky</value>
+  </data>
+  <data name="Vydej3VydejOdeslaniDavkyProblem" xml:space="preserve">
+    <value>Nepodařilo se odeslat dávku!</value>
+  </data>
+  <data name="Vydej3VydejPokracovatZpracovaniJinymTerminalemDotaz" xml:space="preserve">
+    <value>Pokračovat v dalším zpracování později jiným terminálem?</value>
+  </data>
+  <data name="Vydej3VydejStahujeSeCiselnikLokaci" xml:space="preserve">
+    <value>Stahuje se číselník lokací</value>
+  </data>
+  <data name="Vydej3VydejStahujeSeCiselnikOdberatelu" xml:space="preserve">
+    <value>Stahuje se číselník odběratelů</value>
+  </data>
+  <data name="Vydej3VydejStahujeSeCiselnikZbozi" xml:space="preserve">
+    <value>Stahuje se číselník zboží</value>
+  </data>
+  <data name="Vydej3VydejStahujeSeSeznamVydejek" xml:space="preserve">
+    <value>Stahuje se seznam dostupných výdejek</value>
+  </data>
+  <data name="Vydej3VydejStazeniSeznamuVydejekProblem" xml:space="preserve">
+    <value>Nepodařilo se stáhnout seznam výdejek.</value>
+  </data>
+  <data name="Vydej3VydejVydejKompletniOdeslatDataDotaz" xml:space="preserve">
+    <value>Výdej je kompletní.
+Chcete odeslat data?</value>
+  </data>
+  <data name="Vydej3VydejZadejPotvrdLokaci" xml:space="preserve">
+    <value>Zadej/Potvrď {0}</value>
+  </data>
+  <data name="Vydej3VydejSpracovaniDatSeNezdarilo" xml:space="preserve">
+    <value>Zpracování dat se nezdařilo.</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListSkladNenastaven" xml:space="preserve">
+    <value>Není nastaven sklad, přestože má být nastaven</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListStornoPrijemky" xml:space="preserve">
+    <value>Storno příjemky</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListUzavreniPrijemky" xml:space="preserve">
+    <value>Uzavření příjemky</value>
+  </data>
+  <data name="Prijem4PrijemListDavkaKompletniOdeslatDotaz" xml:space="preserve">
+    <value>Dávka je kompletní.
+Chcete odeslat data?</value>
+  </data>
+  <data name="Prijem4PrijemListDotaz" xml:space="preserve">
+    <value>Dotaz</value>
+  </data>
+  <data name="Prijem4PrijemMainSklad" xml:space="preserve">
+    <value>Sklad</value>
+  </data>
+  <data name="Prijem4PrijemMainSkladNenastavenOpakovatDotaz" xml:space="preserve">
+    <value>Sklad musí být nastaven.
+
+Opakovat výběr?</value>
+  </data>
+  <data name="Vydej3ListPolozek3ZboziSCarKodNenalezeno" xml:space="preserve">
+    <value>Nenašlo se zboží s čárovým kódem '{0}'!</value>
+  </data>
+  <data name="Vydej3ListPolozek3HledaniCarovyKod" xml:space="preserve">
+    <value>Hledání čárový kód</value>
+  </data>
+  <data name="Vydej3ListPolozek3HledaniNazev" xml:space="preserve">
+    <value>Hledání název</value>
+  </data>
+  <data name="Vydej3ListPolozek3ZadejteCarovyKod" xml:space="preserve">
+    <value>Zadejte čárový kód</value>
+  </data>
+  <data name="Vydej3ListPolozek3ZadejteCastNazvuPolozky" xml:space="preserve">
+    <value>Zadejte část názvu položky</value>
+  </data>
+  <data name="Vydej3ListPolozek3ZboziSNazvemNenalezeno" xml:space="preserve">
+    <value>Nenašlo se zboží s názvem '{0}'!</value>
+  </data>
+  <data name="FormsFormSkladVyberAktualizovatSkladyDotaz" xml:space="preserve">
+    <value>Aktualizovat číselník skladů?</value>
+  </data>
+  <data name="FormsFormSkladVyberCiselnikSkladuNeexistujeStahnoutDotaz" xml:space="preserve">
+    <value>Číselník skladů neexistuje, chcete ho stáhnout?</value>
+  </data>
+  <data name="Prijem4PrijemZalokovaniListNalezenoViceZaznamuSCarKod" xml:space="preserve">
+    <value>Nalezeno více záznamů s čárovým kódem '{0}'</value>
+  </data>
+  <data name="Prijem4PrijemZalokovaniListNalezenoViceZaznamuSSarzi" xml:space="preserve">
+    <value>Nalezeno více záznamů s šarží '{0}'</value>
+  </data>
+  <data name="Prijem4PrijemZalokovaniListNenalezenZaznamSCarKod" xml:space="preserve">
+    <value>Nenalezen záznam s čárovým kódem '{0}'</value>
+  </data>
+  <data name="Prijem4PrijemZalokovaniListNenalezenZaznamSSarzi" xml:space="preserve">
+    <value>Nenalezen záznam s šarží '{0}'</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3ChybaUzavreniVydejky" xml:space="preserve">
+    <value>Nastala chyba: {0}</value>
+  </data>
+  <data name="Vydej3listvydejekform3StornoVydejky" xml:space="preserve">
+    <value>Storno výdejky</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3UzavreniVydejky" xml:space="preserve">
+    <value>Uzavření výdejky</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3UzavritDavkuDotaz" xml:space="preserve">
+    <value>Opravdu chcete uzavřít dávku č. '{0}' ?</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3VydejkaUspesneUzavrena" xml:space="preserve">
+    <value>Výdejka byla úspěšně uzavřena.</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3ZadejteHeslo" xml:space="preserve">
+    <value>Zadejte heslo</value>
+  </data>
+  <data name="Prijem4PrijemZalokovaniListKonecDotaz" xml:space="preserve">
+    <value>Opravdu chcete ukončit zalokování?</value>
+  </data>
+  <data name="Prijem4PrijemZalokovaniListPolozkuNejdePreplnit" xml:space="preserve">
+    <value>Položku není možné přeplnit!</value>
+  </data>
+  <data name="Prijem4PrijemZalokovaniListZalokovani" xml:space="preserve">
+    <value>Zalokování</value>
+  </data>
+  <data name="Prijem4PrijemZalokovaniListZalokovaniLokace" xml:space="preserve">
+    <value>Zalokování - Lokace</value>
+  </data>
+  <data name="Prijem4PrijemZalokovaniListZalokovaniMnozstvi" xml:space="preserve">
+    <value>Zalokování - Množství</value>
+  </data>
+  <data name="Prijem4PrijemDavkyListDavkaJizBylaStazena" xml:space="preserve">
+    <value>Dávka s kódem č. '{0}' již byla stažena (číslo dávky: {1}).</value>
+  </data>
+  <data name="Prodej3ProdejMainVyberCilovehoSkladu" xml:space="preserve">
+    <value>Výběr cílového skladu</value>
+  </data>
+  <data name="Prodej3ProdejListCilovySkladNenalezenDotaz" xml:space="preserve">
+    <value>Odpovídající cílový sklad s ID '{0}' nenalezen!\n\nVyberte jiný ze seznamu</value>
+  </data>
+  <data name="ServisServisCinnostZmenaDalsiStav" xml:space="preserve">
+    <value>Další stav</value>
+  </data>
+  <data name="Prodej3ProdejMainSkladCilNenalezenVyberteJiny" xml:space="preserve">
+    <value>Odpovídající cílový sklad s ID '{0}' nenalezen!
+
+Vyberte jiný ze seznamu</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3VydejkaUspesneStornovana" xml:space="preserve">
+    <value>Výdejka byla úspěšně stornována.</value>
+  </data>
+  <data name="Prodej3ProdejListPolozkaSCarKodNeboSarziNenalezenaVeSkladuOnline" xml:space="preserve">
+    <value>Položka s čk nebo šarží '{0}' nelezena ve skladu online</value>
+  </data>
+  <data name="Prodej3ProdejListNeniVybranaPaleta" xml:space="preserve">
+    <value>Není vybrána paleta</value>
+  </data>
+  <data name="Prodej3ProdejListSarze" xml:space="preserve">
+    <value>Šarže</value>
+  </data>
+  <data name="Prodej3ProdejListZadaniSarze" xml:space="preserve">
+    <value>Zadaní šarže</value>
+  </data>
+  <data name="Vydej3ListVydejekForm3ProblemPripravyVydejky" xml:space="preserve">
+    <value>Nepodařilo se připravit výdejku!</value>
+  </data>
+  <data name="Prodej3ProdejListVlozteSarze" xml:space="preserve">
+    <value>Vložte šarži</value>
+  </data>
+  <data name="Vydej3TypOynaceniPaletyFormERR_DelkaSSCC" xml:space="preserve">
+    <value>Délka SSCC kódu nesouhlasí</value>
+  </data>
+  <data name="Vydej3TypOynaceniPaletyFormERR_neplatnyAI" xml:space="preserve">
+    <value>AI kód neni platný</value>
+  </data>
+  <data name="Vydej3TypOynaceniPaletyFormERR_neplatnyCRC" xml:space="preserve">
+    <value>Kontrolní soucet se neshoduje</value>
+  </data>
+  <data name="Vydej3TypOynaceniPaletyFormNenalezenaPaleta" xml:space="preserve">
+    <value>Nenalezena odpovídajíci paleta</value>
+  </data>
+  <data name="Prijem4PrijemListTiskEtiketyDotazSCenou" xml:space="preserve">
+    <value>Tisk etikety s cenou?</value>
+  </data>
+  <data name="Prodej3ProdejListTiskEtiketaSCenou" xml:space="preserve">
+    <value>Tisk etikety s cenou?</value>
+  </data>
+  <data name="Vydej3ListNasnimForm3UpravitMnozstviPolozkuDotaz" xml:space="preserve">
+    <value>Chcete upravit množství pro tuto položku?</value>
+  </data>
+  <data name="Vydej3ListPolozek3Mnozstvidocilovelokace" xml:space="preserve">
+    <value>Množství do cilove lokace</value>
+  </data>
+  <data name="Vydej3ListPolozek3Mnozstviodebranezlokace" xml:space="preserve">
+    <value>Množství odebrané z lokace</value>
+  </data>
+  <data name="Vydej3ListPolozek3Zadejcilovoulokaci" xml:space="preserve">
+    <value>Zadej cílovou lokaci</value>
+  </data>
+</root>

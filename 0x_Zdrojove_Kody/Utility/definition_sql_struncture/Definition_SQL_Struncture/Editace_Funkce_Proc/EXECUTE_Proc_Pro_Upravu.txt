@@ -1,0 +1,14 @@
+DECLARE @RC int
+DECLARE @TEXT_OLD nvarchar(100)
+DECLARE @TEXT_NEW nvarchar(100)
+
+-- TODO: Set parameter values here.
+
+SET @TEXT_OLD = 'StwPh_04535510_2018';
+SET @TEXT_NEW = 'StwPh_04535510_2018';
+
+
+EXECUTE @RC = [dbo].[fask_proc_EditFuncProc] 
+   @TEXT_OLD
+  ,@TEXT_NEW
+GO

@@ -1,0 +1,7 @@
+9.4.2018
+JaS:
+- konzola sklady pridat/editovat/smazst zbozi
+
+? - rfid cteni v konzole pri pozadavku serioveho cisla na pohyb
+
+

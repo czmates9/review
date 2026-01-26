@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <Printers>
+    <Printer type="None" />
+    <Printer type="WebService" library="Fask.PrinterProviderWebService.dll" config="Fask.PrinterProviderWebService.xml" />
+  </Printers>
+  <Modules>
+    <Prijem>
+      <Predloha printer="WebService" template="ANC_template.txt" />
+      <Nasnimane printer="WebService" template="ANC_template.txt" />
+    </Prijem>
+    <Vydej>
+      <Predloha printer="WebService" template="vydejpredloha.txt" />
+      <Nasnimane printer="WebService" template="vydejnasnimane.txt" />
+      <Paletovylistek printer="WebService" template="T-TEC.txt" />
+      <PaletaHlavicka printer="WebService" template="testHead1.zpl" />
+      <PaletaRadek printer="WebService" template="testRow1.zpl" />
+      <PaletaPaticka printer="WebService" template="testFoot1.zpl" />
+      <SoupiskaHlavicka printer="WebService" template="CARP_RozdilSestava" />
+      <SoupiskaRadek printer="WebService" template="r" />
+      <SoupiskaPaticka printer="WebService" template="f" />
+    </Vydej>
+    <Prodej>
+      <Predloha printer="WebService" template="prodejsoupis.txt" />
+      <Nasnimane printer="WebService" template="prodejsoupis.txt" />
+      <SoupisHlavicka printer="WebService" template="CARP_Prodej_soupis" />
+      <SoupisRadek printer="WebService" template="r" />
+      <SoupisPaticka printer="WebService" template="f" />
+      <PaletaHlavicka printer="WebService" template="steinex_PL.txt" />
+      <PaletaRadek printer="WebService" template="empty.txt" />
+      <PaletaPaticka printer="WebService" template="empty.txt" />
+    </Prodej>
+    <Inventura>
+      <Predloha printer="WebService" template="vydejpredloha.txt" />
+      <Nasnimane printer="WebService" template="vydejnasnimane.txt" />
+    </Inventura>
+    <Text>
+      <Volny printer="WebService" template="volnytext.txt" />
+    </Text>
+    <Baleni>
+      <Volny printer="WebService" template="jimitore_baleni.txt" />
+      <PrijemZbytku printer="WebService" template="jimitore_prijem.txt" />
+      <Prijem printer="WebService" template="jimitore_prijem.txt" />
+    </Baleni>
+    <Expedice>
+      <SoupisHlavicka printer="WebService" template="steinexsoupis.rdlc" />
+      <SoupisRadek printer="WebService" template="empty.txt" />
+      <SoupisPaticka printer="WebService" template="empty.txt" />
+      <PaletaHlavicka printer="WebService" template="testHead1_PAL.zpl" />
+      <PaletaRadek printer="WebService" template="testRow1_PAL.zpl" />
+      <PaletaPaticka printer="WebService" template="testFoot1_PAL.zpl" />
+    </Expedice>
+    <Vyroba>
+      <Odvedene printer="WebService" template="VyrobaOdvedene.zpl" />
+      <Baleni printer="WebService" template="VyrobaBaleni.zpl" />
+      <Paletovylistek printer="WebService" template="VyrobaPaletovylistek.zpl" />
+    </Vyroba>
+  </Modules>
+</Settings>

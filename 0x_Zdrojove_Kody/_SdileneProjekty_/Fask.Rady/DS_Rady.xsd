@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Rady" targetNamespace="http://tempuri.org/DS_Rady.xsd" xmlns:mstns="http://tempuri.org/DS_Rady.xsd" xmlns="http://tempuri.org/DS_Rady.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=FASKCZ-CV006\SQL2008_01;Initial Catalog=FASKPOH_I_Tec;Persist Security Info=True;User ID=sa;Password=sasa" IsAppSettingsProperty="false" Modifier="Assembly" Name="faskcz-cv006\sql2008_01.FASKPOH_I_Tec.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Rady" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_Rady" msprop:Generator_UserDSName="DS_Rady">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FASK_RADY" msprop:Generator_UserTableName="FASK_RADY" msprop:Generator_RowEvArgName="FASK_RADYRowChangeEvent" msprop:Generator_TableVarName="tableFASK_RADY" msprop:Generator_TablePropName="FASK_RADY" msprop:Generator_RowDeletingName="FASK_RADYRowDeleting" msprop:Generator_RowChangingName="FASK_RADYRowChanging" msprop:Generator_RowDeletedName="FASK_RADYRowDeleted" msprop:Generator_RowEvHandlerName="FASK_RADYRowChangeEventHandler" msprop:Generator_TableClassName="FASK_RADYDataTable" msprop:Generator_RowChangedName="FASK_RADYRowChanged" msprop:Generator_RowClassName="FASK_RADYRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Default" msprop:Generator_ColumnVarNameInTable="columnDefault" msprop:Generator_ColumnPropNameInRow="Default" msprop:Generator_ColumnPropNameInTable="DefaultColumn" msprop:Generator_UserColumnName="Default" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PlatnostOd" msprop:Generator_ColumnVarNameInTable="columnPlatnostOd" msprop:Generator_ColumnPropNameInRow="PlatnostOd" msprop:Generator_ColumnPropNameInTable="PlatnostOdColumn" msprop:Generator_UserColumnName="PlatnostOd" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PlatnostDo" msprop:Generator_ColumnVarNameInTable="columnPlatnostDo" msprop:Generator_ColumnPropNameInRow="PlatnostDo" msprop:Generator_ColumnPropNameInTable="PlatnostDoColumn" msprop:Generator_UserColumnName="PlatnostDo" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Modul" msprop:Generator_ColumnVarNameInTable="columnModul" msprop:Generator_ColumnPropNameInRow="Modul" msprop:Generator_ColumnPropNameInTable="ModulColumn" msprop:Generator_UserColumnName="Modul">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Modul_ID" msprop:Generator_ColumnVarNameInTable="columnModul_ID" msprop:Generator_ColumnPropNameInRow="Modul_ID" msprop:Generator_ColumnPropNameInTable="Modul_IDColumn" msprop:Generator_UserColumnName="Modul_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Modul_ID2" msprop:Generator_ColumnVarNameInTable="columnModul_ID2" msprop:Generator_ColumnPropNameInRow="Modul_ID2" msprop:Generator_ColumnPropNameInTable="Modul_ID2Column" msprop:Generator_UserColumnName="Modul_ID2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Modul_Funkce" msprop:Generator_ColumnVarNameInTable="columnModul_Funkce" msprop:Generator_ColumnPropNameInRow="Modul_Funkce" msprop:Generator_ColumnPropNameInTable="Modul_FunkceColumn" msprop:Generator_UserColumnName="Modul_Funkce" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rada_ID" msprop:Generator_ColumnVarNameInTable="columnRada_ID" msprop:Generator_ColumnPropNameInRow="Rada_ID" msprop:Generator_ColumnPropNameInTable="Rada_IDColumn" msprop:Generator_UserColumnName="Rada_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Rada_Nazev" msprop:Generator_ColumnVarNameInTable="columnRada_Nazev" msprop:Generator_ColumnPropNameInRow="Rada_Nazev" msprop:Generator_ColumnPropNameInTable="Rada_NazevColumn" msprop:Generator_UserColumnName="Rada_Nazev" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rada_Prefix" msprop:Generator_ColumnVarNameInTable="columnRada_Prefix" msprop:Generator_ColumnPropNameInRow="Rada_Prefix" msprop:Generator_ColumnPropNameInTable="Rada_PrefixColumn" msprop:Generator_UserColumnName="Rada_Prefix" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rada_Count" msprop:Generator_ColumnVarNameInTable="columnRada_Count" msprop:Generator_ColumnPropNameInRow="Rada_Count" msprop:Generator_ColumnPropNameInTable="Rada_CountColumn" msprop:Generator_UserColumnName="Rada_Count" type="xs:int" minOccurs="0" />
+              <xs:element name="Filtr_SkladID" msprop:Generator_ColumnVarNameInTable="columnFiltr_SkladID" msprop:Generator_ColumnPropNameInRow="Filtr_SkladID" msprop:Generator_ColumnPropNameInTable="Filtr_SkladIDColumn" msprop:Generator_UserColumnName="Filtr_SkladID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Filtr_UserID" msprop:Generator_ColumnVarNameInTable="columnFiltr_UserID" msprop:Generator_ColumnPropNameInRow="Filtr_UserID" msprop:Generator_ColumnPropNameInTable="Filtr_UserIDColumn" msprop:Generator_UserColumnName="Filtr_UserID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Vloz_Stredisko0" msprop:Generator_ColumnVarNameInTable="columnVloz_Stredisko0" msprop:Generator_ColumnPropNameInRow="Vloz_Stredisko0" msprop:Generator_ColumnPropNameInTable="Vloz_Stredisko0Column" msprop:Generator_UserColumnName="Vloz_Stredisko0" type="xs:string" minOccurs="0" />
+              <xs:element name="Vloz_Stredisko1" msprop:Generator_ColumnVarNameInTable="columnVloz_Stredisko1" msprop:Generator_ColumnPropNameInRow="Vloz_Stredisko1" msprop:Generator_ColumnPropNameInTable="Vloz_Stredisko1Column" msprop:Generator_UserColumnName="Vloz_Stredisko1" type="xs:string" minOccurs="0" />
+              <xs:element name="Vloz_Cinnost" msprop:Generator_ColumnVarNameInTable="columnVloz_Cinnost" msprop:Generator_ColumnPropNameInRow="Vloz_Cinnost" msprop:Generator_ColumnPropNameInTable="Vloz_CinnostColumn" msprop:Generator_UserColumnName="Vloz_Cinnost" type="xs:string" minOccurs="0" />
+              <xs:element name="Vloz_Zakazka" msprop:Generator_ColumnVarNameInTable="columnVloz_Zakazka" msprop:Generator_ColumnPropNameInRow="Vloz_Zakazka" msprop:Generator_ColumnPropNameInTable="Vloz_ZakazkaColumn" msprop:Generator_UserColumnName="Vloz_Zakazka" type="xs:string" minOccurs="0" />
+              <xs:element name="Kontrola_Disponability" msprop:Generator_ColumnVarNameInTable="columnKontrola_Disponability" msprop:Generator_ColumnPropNameInRow="Kontrola_Disponability" msprop:Generator_ColumnPropNameInTable="Kontrola_DisponabilityColumn" msprop:Generator_UserColumnName="Kontrola_Disponability" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Vyber_Typ_Prevodka" msprop:Generator_ColumnVarNameInTable="columnVyber_Typ_Prevodka" msprop:Generator_ColumnPropNameInRow="Vyber_Typ_Prevodka" msprop:Generator_ColumnPropNameInTable="Vyber_Typ_PrevodkaColumn" msprop:Generator_UserColumnName="Vyber_Typ_Prevodka" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Prodej_Prijemka_Tisk_ID_sablona" msprop:Generator_ColumnVarNameInTable="columnProdej_Prijemka_Tisk_ID_sablona" msprop:Generator_ColumnPropNameInRow="Prodej_Prijemka_Tisk_ID_sablona" msprop:Generator_ColumnPropNameInTable="Prodej_Prijemka_Tisk_ID_sablonaColumn" msprop:Generator_UserColumnName="Prodej_Prijemka_Tisk_ID_sablona" type="xs:int" minOccurs="0" />
+              <xs:element name="Prodej_Vydejka_Tisk_ID_sablona" msprop:Generator_ColumnVarNameInTable="columnProdej_Vydejka_Tisk_ID_sablona" msprop:Generator_ColumnPropNameInRow="Prodej_Vydejka_Tisk_ID_sablona" msprop:Generator_ColumnPropNameInTable="Prodej_Vydejka_Tisk_ID_sablonaColumn" msprop:Generator_UserColumnName="Prodej_Vydejka_Tisk_ID_sablona" type="xs:int" minOccurs="0" />
+              <xs:element name="Prodej_Prevodka_Tisk_ID_sablona" msprop:Generator_ColumnVarNameInTable="columnProdej_Prevodka_Tisk_ID_sablona" msprop:Generator_ColumnPropNameInRow="Prodej_Prevodka_Tisk_ID_sablona" msprop:Generator_ColumnPropNameInTable="Prodej_Prevodka_Tisk_ID_sablonaColumn" msprop:Generator_UserColumnName="Prodej_Prevodka_Tisk_ID_sablona" type="xs:int" minOccurs="0" />
+              <xs:element name="Prodej_Prijemka_Tisk_Tiskarna" msprop:Generator_ColumnVarNameInTable="columnProdej_Prijemka_Tisk_Tiskarna" msprop:Generator_ColumnPropNameInRow="Prodej_Prijemka_Tisk_Tiskarna" msprop:Generator_ColumnPropNameInTable="Prodej_Prijemka_Tisk_TiskarnaColumn" msprop:Generator_UserColumnName="Prodej_Prijemka_Tisk_Tiskarna" type="xs:string" minOccurs="0" />
+              <xs:element name="Prodej_Vydejka_Tisk_Tiskarna" msprop:Generator_ColumnVarNameInTable="columnProdej_Vydejka_Tisk_Tiskarna" msprop:Generator_ColumnPropNameInRow="Prodej_Vydejka_Tisk_Tiskarna" msprop:Generator_ColumnPropNameInTable="Prodej_Vydejka_Tisk_TiskarnaColumn" msprop:Generator_UserColumnName="Prodej_Vydejka_Tisk_Tiskarna" type="xs:string" minOccurs="0" />
+              <xs:element name="Prodej_Prevodka_Tisk_Tiskarna" msprop:Generator_ColumnVarNameInTable="columnProdej_Prevodka_Tisk_Tiskarna" msprop:Generator_ColumnPropNameInRow="Prodej_Prevodka_Tisk_Tiskarna" msprop:Generator_ColumnPropNameInTable="Prodej_Prevodka_Tisk_TiskarnaColumn" msprop:Generator_UserColumnName="Prodej_Prevodka_Tisk_Tiskarna" type="xs:string" minOccurs="0" />
+              <xs:element name="Import_Doklad_IS" msprop:Generator_ColumnVarNameInTable="columnImport_Doklad_IS" msprop:Generator_ColumnPropNameInRow="Import_Doklad_IS" msprop:Generator_ColumnPropNameInTable="Import_Doklad_ISColumn" msprop:Generator_UserColumnName="Import_Doklad_IS" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

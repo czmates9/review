@@ -1,0 +1,88 @@
+09.08.2023 10:20:56 : smtp_SendComplete=>Error
+09.08.2023 10:20:56 : System.Net.Mail.SmtpException: Odeslání e-mailu se nezdařilo. ---> System.Net.WebException: Ke vzdálenému serveru se nelze připojit. ---> System.Net.Sockets.SocketException: Nemohlo být vytvořeno žádné připojení, protože cílový počítač je aktivně odmítl 37.9.169.172:25
+   v System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   v System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   v System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Konec trasování zásobníku pro vnitřní výjimku ---
+   v System.Net.Mail.SmtpConnection.ConnectAndHandshakeAsyncResult.End(IAsyncResult result)
+   v System.Net.Mail.SmtpTransport.EndGetConnection(IAsyncResult result)
+   v System.Net.Mail.SmtpClient.ConnectCallback(IAsyncResult result)
+   --- Konec trasování zásobníku pro vnitřní výjimku ---
+09.08.2023 10:20:56 : Message sended: d:\_w\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\!Build!\Vyroba\Debug\MailMessageToEMLTemp\53a7ac42-463b-4386-a340-da4a81bcb5fa
+09.08.2023 10:22:22 : smtp_SendComplete=>Error
+09.08.2023 10:22:22 : System.Net.Mail.SmtpException: Odeslání e-mailu se nezdařilo. ---> System.Net.WebException: Ke vzdálenému serveru se nelze připojit. ---> System.Net.Sockets.SocketException: Nemohlo být vytvořeno žádné připojení, protože cílový počítač je aktivně odmítl 37.9.169.172:25
+   v System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   v System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   v System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Konec trasování zásobníku pro vnitřní výjimku ---
+   v System.Net.Mail.SmtpConnection.ConnectAndHandshakeAsyncResult.End(IAsyncResult result)
+   v System.Net.Mail.SmtpTransport.EndGetConnection(IAsyncResult result)
+   v System.Net.Mail.SmtpClient.ConnectCallback(IAsyncResult result)
+   --- Konec trasování zásobníku pro vnitřní výjimku ---
+09.08.2023 10:22:22 : Message sended: d:\_w\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\!Build!\Vyroba\Debug\MailMessageToEMLTemp\4eea20ae-3069-41a7-bf6d-0ff1286d7109
+09.08.2023 10:30:41 : smtp_SendComplete=>Error
+09.08.2023 10:30:41 : System.Net.Mail.SmtpException: Odeslání e-mailu se nezdařilo. ---> System.Net.WebException: Ke vzdálenému serveru se nelze připojit. ---> System.Net.Sockets.SocketException: Nemohlo být vytvořeno žádné připojení, protože cílový počítač je aktivně odmítl 37.9.169.173:25
+   v System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   v System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   v System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Konec trasování zásobníku pro vnitřní výjimku ---
+   v System.Net.Mail.SmtpConnection.ConnectAndHandshakeAsyncResult.End(IAsyncResult result)
+   v System.Net.Mail.SmtpTransport.EndGetConnection(IAsyncResult result)
+   v System.Net.Mail.SmtpClient.ConnectCallback(IAsyncResult result)
+   --- Konec trasování zásobníku pro vnitřní výjimku ---
+09.08.2023 10:30:41 : Message sended: d:\_w\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\!Build!\Vyroba\Debug\MailMessageToEMLTemp\9a471f31-ba73-415c-8cc9-2b250ca826c2
+09.08.2023 10:39:40 : smtp_SendComplete=>Error
+09.08.2023 10:39:40 : System.Net.Mail.SmtpException: Odeslání e-mailu se nezdařilo. ---> System.Net.WebException: Ke vzdálenému serveru se nelze připojit. ---> System.Net.Sockets.SocketException: Nemohlo být vytvořeno žádné připojení, protože cílový počítač je aktivně odmítl 37.9.169.171:25
+   v System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   v System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   v System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Konec trasování zásobníku pro vnitřní výjimku ---
+   v System.Net.Mail.SmtpConnection.ConnectAndHandshakeAsyncResult.End(IAsyncResult result)
+   v System.Net.Mail.SmtpTransport.EndGetConnection(IAsyncResult result)
+   v System.Net.Mail.SmtpClient.ConnectCallback(IAsyncResult result)
+   --- Konec trasování zásobníku pro vnitřní výjimku ---
+09.08.2023 10:39:40 : Message sended: d:\_w\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\!Build!\Vyroba\Debug\MailMessageToEMLTemp\e376bfb7-cc5e-4756-a1ee-54e1d1f65664
+09.08.2023 10:42:59 : smtp_SendComplete=>Error
+09.08.2023 10:42:59 : System.Net.Mail.SmtpException: Odeslání e-mailu se nezdařilo. ---> System.Net.WebException: Ke vzdálenému serveru se nelze připojit. ---> System.Net.Sockets.SocketException: Nemohlo být vytvořeno žádné připojení, protože cílový počítač je aktivně odmítl 37.9.169.172:25
+   v System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   v System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   v System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Konec trasování zásobníku pro vnitřní výjimku ---
+   v System.Net.Mail.SmtpConnection.ConnectAndHandshakeAsyncResult.End(IAsyncResult result)
+   v System.Net.Mail.SmtpTransport.EndGetConnection(IAsyncResult result)
+   v System.Net.Mail.SmtpClient.ConnectCallback(IAsyncResult result)
+   --- Konec trasování zásobníku pro vnitřní výjimku ---
+09.08.2023 10:42:59 : Message sended: d:\_w\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\!Build!\Vyroba\Debug\MailMessageToEMLTemp\8bfe27f8-af9b-429f-bf3a-315f47876670
+19.10.2023 13:31:37 : smtp_SendComplete=>Error
+19.10.2023 13:31:37 : System.Net.Mail.SmtpException: Odeslání e-mailu se nezdařilo. ---> System.Net.WebException: Ke vzdálenému serveru se nelze připojit. ---> System.Net.Sockets.SocketException: Nemohlo být vytvořeno žádné připojení, protože cílový počítač je aktivně odmítl 37.9.169.172:25
+   v System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   v System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   v System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Konec trasování zásobníku pro vnitřní výjimku ---
+   v System.Net.Mail.SmtpConnection.ConnectAndHandshakeAsyncResult.End(IAsyncResult result)
+   v System.Net.Mail.SmtpTransport.EndGetConnection(IAsyncResult result)
+   v System.Net.Mail.SmtpClient.ConnectCallback(IAsyncResult result)
+   --- Konec trasování zásobníku pro vnitřní výjimku ---
+19.10.2023 13:31:37 : Message sended: d:\_w\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\!Build!\Vyroba\Debug\MailMessageToEMLTemp\afe017fd-5323-4da4-8191-ca89f20828af
+19.10.2023 13:33:16 : smtp_SendComplete=>Error
+19.10.2023 13:33:16 : System.Net.Mail.SmtpException: Odeslání e-mailu se nezdařilo. ---> System.Net.WebException: Ke vzdálenému serveru se nelze připojit. ---> System.Net.Sockets.SocketException: Nemohlo být vytvořeno žádné připojení, protože cílový počítač je aktivně odmítl 37.9.169.172:25
+   v System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   v System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   v System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Konec trasování zásobníku pro vnitřní výjimku ---
+   v System.Net.Mail.SmtpConnection.ConnectAndHandshakeAsyncResult.End(IAsyncResult result)
+   v System.Net.Mail.SmtpTransport.EndGetConnection(IAsyncResult result)
+   v System.Net.Mail.SmtpClient.ConnectCallback(IAsyncResult result)
+   --- Konec trasování zásobníku pro vnitřní výjimku ---
+19.10.2023 13:33:16 : Message sended: d:\_w\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\!Build!\Vyroba\Debug\MailMessageToEMLTemp\618f6e5a-23d4-4cba-9b30-ccc8a421bd61
+12.01.2024 9:46:52 : smtp_SendComplete=>Error
+12.01.2024 9:46:52 : System.Net.Mail.SmtpException: Odeslání e-mailu se nezdařilo. ---> System.Net.WebException: Ke vzdálenému serveru se nelze připojit. ---> System.Net.Sockets.SocketException: Nemohlo být vytvořeno žádné připojení, protože cílový počítač je aktivně odmítl 37.9.169.173:25
+   v System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   v System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   v System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Konec trasování zásobníku pro vnitřní výjimku ---
+   v System.Net.Mail.SmtpConnection.ConnectAndHandshakeAsyncResult.End(IAsyncResult result)
+   v System.Net.Mail.SmtpTransport.EndGetConnection(IAsyncResult result)
+   v System.Net.Mail.SmtpClient.ConnectCallback(IAsyncResult result)
+   --- Konec trasování zásobníku pro vnitřní výjimku ---
+12.01.2024 9:46:52 : Message sended: d:\_w\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\!Build!\Vyroba\Debug\MailMessageToEMLTemp\2e948ea3-0695-4ff7-b11d-6f738aa98dfa

@@ -1,0 +1,68 @@
+<resources>
+
+    <!-- Base application theme. --><!--
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        --><!-- Customize your theme here. --><!--
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>-->
+
+  <style name="dialog_animation">
+    <item name="android:windowEnterAnimation">@anim/slide_up</item>
+    <item name="android:windowExitAnimation">@anim/slide_right</item>
+  </style>
+
+  <!-- graficke nastaveni pro main -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">#0093DD</item>
+    <!--<item name="colorPrimary">#23A4BF</item>-->
+    <item name="drawerArrowStyle">@style/MyDrawerArrowStyle</item>
+  </style>
+
+  <style name="MyDrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+    <item name="color">#F5F5F5</item>
+    <item name="spinBars">true</item>
+  </style>
+
+  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+  <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+  <style name="AppTheme_ProgessInifinity">
+    <item name="colorPrimary">#000</item>
+  </style>
+
+  <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowActionBar">true</item>
+  </style>
+
+  
+  <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+    <item name="windowNoTitle">true</item>
+    <item name="android:windowCloseOnTouchOutside">false</item>
+    <item name="android:layout_margin">2dp</item>
+    <item name="android:buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+    <item name="android:buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    <item name="android:buttonBarNeutralButtonStyle">@style/NeutralButtonStyle</item>
+</style>
+
+  <style  name="NegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+    <item name="android:textColor">#000</item>
+    <item name="android:textSize">45px</item>
+  </style>
+
+  <style  name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+    <item name="android:textColor">#000</item>
+    <item name="android:textSize">45px</item>
+  </style>
+
+  <style  name="NeutralButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+    <item name="android:textColor">#000</item>
+    <item name="android:textSize">45px</item>
+  </style>
+
+  </resources>

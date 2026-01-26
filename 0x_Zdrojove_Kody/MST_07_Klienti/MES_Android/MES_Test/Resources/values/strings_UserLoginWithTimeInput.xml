@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="UserLoginWithTimeInput_Label">Přihlášení uživatele</string>
+  <string name="UserLoginWithTimeInput_OK">OK</string>
+  <string name="UserLoginWithTimeInput_Storno">Zrušit</string>
+
+  <string name="UserLoginWithTimeInput_Date">Datum</string>
+  <string name="UserLoginWithTimeInput_Time">Čas</string>
+
+  <string name="UserLoginWithTimeInput_DefText">-</string>
+
+  <string name="UserLoginWithTimeInput_TextOkna">Datum a čas zahájení práce:</string>
+  
+</resources>

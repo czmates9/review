@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<Konfig xmlns="http://tempuri.org/Konfig.xsd">
+  <ConnectionStrings>
+    <PohodaDB>Provider=SQLNCLI11;Data Source=192.168.1.121\SQLEXPRESS;Initial Catalog=StwPh_04535910;Password=sasa;User ID=sa;Persist Security Info=True</PohodaDB>
+  </ConnectionStrings>
+  <PrintParams>
+    <CenovkaCena1>doporučená cena</CenovkaCena1>
+    <CenovkaCena2>cena po slevě</CenovkaCena2>
+    <CenovkaCena3>cena Hanibal</CenovkaCena3>
+    <Template1>H2_01.prn</Template1>
+    <Template2>H2_02.prn</Template2>
+    <Template3>H2_03.prn</Template3>
+    <ZPL_SKRT>^FT50,210^GB190,0,2^FS</ZPL_SKRT>
+    <PocetZnakuMensiNez>21</PocetZnakuMensiNez>
+    <PocetZnakuVetsiNez>44</PocetZnakuVetsiNez>
+  </PrintParams>
+</Konfig>

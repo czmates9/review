@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Konzola" targetNamespace="http://tempuri.org/Konzola.xsd" xmlns:mstns="http://tempuri.org/Konzola.xsd" xmlns="http://tempuri.org/Konzola.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Konzola" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Konzola" msprop:Generator_UserDSName="Konzola">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FASK_Logins" msprop:Generator_TableClassName="FASK_LoginsDataTable" msprop:Generator_TableVarName="tableFASK_Logins" msprop:Generator_RowChangedName="FASK_LoginsRowChanged" msprop:Generator_TablePropName="FASK_Logins" msprop:Generator_RowDeletingName="FASK_LoginsRowDeleting" msprop:Generator_RowChangingName="FASK_LoginsRowChanging" msprop:Generator_RowEvHandlerName="FASK_LoginsRowChangeEventHandler" msprop:Generator_RowDeletedName="FASK_LoginsRowDeleted" msprop:Generator_RowClassName="FASK_LoginsRow" msprop:Generator_UserTableName="FASK_Logins" msprop:Generator_RowEvArgName="FASK_LoginsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="firstname" msprop:Generator_ColumnVarNameInTable="columnfirstname" msprop:Generator_ColumnPropNameInRow="firstname" msprop:Generator_ColumnPropNameInTable="firstnameColumn" msprop:Generator_UserColumnName="firstname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="surname" msprop:Generator_ColumnVarNameInTable="columnsurname" msprop:Generator_ColumnPropNameInRow="surname" msprop:Generator_ColumnPropNameInTable="surnameColumn" msprop:Generator_UserColumnName="surname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="psswd" msprop:Generator_ColumnVarNameInTable="columnpsswd" msprop:Generator_ColumnPropNameInRow="psswd" msprop:Generator_ColumnPropNameInTable="psswdColumn" msprop:Generator_UserColumnName="psswd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FASK_Logins_Auth" msprop:Generator_TableClassName="FASK_Logins_AuthDataTable" msprop:Generator_TableVarName="tableFASK_Logins_Auth" msprop:Generator_RowChangedName="FASK_Logins_AuthRowChanged" msprop:Generator_TablePropName="FASK_Logins_Auth" msprop:Generator_RowDeletingName="FASK_Logins_AuthRowDeleting" msprop:Generator_RowChangingName="FASK_Logins_AuthRowChanging" msprop:Generator_RowEvHandlerName="FASK_Logins_AuthRowChangeEventHandler" msprop:Generator_RowDeletedName="FASK_Logins_AuthRowDeleted" msprop:Generator_RowClassName="FASK_Logins_AuthRow" msprop:Generator_UserTableName="FASK_Logins_Auth" msprop:Generator_RowEvArgName="FASK_Logins_AuthRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ADM" msprop:Generator_ColumnVarNameInTable="columnADM" msprop:Generator_ColumnPropNameInRow="ADM" msprop:Generator_ColumnPropNameInTable="ADMColumn" msprop:Generator_UserColumnName="ADM" type="xs:unsignedByte" />
+              <xs:element name="opr_select" msprop:Generator_ColumnVarNameInTable="columnopr_select" msprop:Generator_ColumnPropNameInRow="opr_select" msprop:Generator_ColumnPropNameInTable="opr_selectColumn" msprop:Generator_UserColumnName="opr_select" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="opr_insert" msprop:Generator_ColumnVarNameInTable="columnopr_insert" msprop:Generator_ColumnPropNameInRow="opr_insert" msprop:Generator_ColumnPropNameInTable="opr_insertColumn" msprop:Generator_UserColumnName="opr_insert" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="opr_edit" msprop:Generator_ColumnVarNameInTable="columnopr_edit" msprop:Generator_ColumnPropNameInRow="opr_edit" msprop:Generator_ColumnPropNameInTable="opr_editColumn" msprop:Generator_UserColumnName="opr_edit" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="opr_delete" msprop:Generator_ColumnVarNameInTable="columnopr_delete" msprop:Generator_ColumnPropNameInRow="opr_delete" msprop:Generator_ColumnPropNameInTable="opr_deleteColumn" msprop:Generator_UserColumnName="opr_delete" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="DEX_ROW_ID" msprop:Generator_ColumnVarNameInTable="columnDEX_ROW_ID" msprop:Generator_ColumnPropNameInRow="DEX_ROW_ID" msprop:Generator_ColumnPropNameInTable="DEX_ROW_IDColumn" msprop:Generator_UserColumnName="DEX_ROW_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="AGEN" msprop:Generator_ColumnVarNameInTable="columnAGEN" msprop:Generator_ColumnPropNameInRow="AGEN" msprop:Generator_ColumnPropNameInTable="AGENColumn" msprop:Generator_UserColumnName="AGEN" type="xs:string" minOccurs="0" />
+              <xs:element name="TASK" msprop:Generator_ColumnVarNameInTable="columnTASK" msprop:Generator_ColumnPropNameInRow="TASK" msprop:Generator_ColumnPropNameInTable="TASKColumn" msprop:Generator_UserColumnName="TASK" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_AUTH" msprop:Generator_ColumnVarNameInTable="columnID_AUTH" msprop:Generator_ColumnPropNameInRow="ID_AUTH" msprop:Generator_ColumnPropNameInTable="ID_AUTHColumn" msprop:Generator_UserColumnName="ID_AUTH" type="xs:int" minOccurs="0" />
+              <xs:element name="AUTH" msprop:Generator_ColumnVarNameInTable="columnAUTH" msprop:Generator_ColumnPropNameInRow="AUTH" msprop:Generator_ColumnPropNameInTable="AUTHColumn" msprop:Generator_UserColumnName="AUTH" type="xs:unsignedByte" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:FASK_Logins" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

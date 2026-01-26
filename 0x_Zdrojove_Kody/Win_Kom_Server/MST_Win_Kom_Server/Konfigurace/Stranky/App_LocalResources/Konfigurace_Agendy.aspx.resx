@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Button_Save.Text" xml:space="preserve">
+    <value>Uložit</value>
+  </data>
+  <data name="ServisParametry.CONFIG_KONT_DOKONCENOSTI" xml:space="preserve">
+    <value>KONT_DOKONCENOSTI</value>
+    <comment>Bude doplneno...</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_DUPLIC_SN" xml:space="preserve">
+    <value>DUPLIC_SN</value>
+    <comment>(MST_W:Ano) Povolena duplicita SN/Sarze (True=duplicita povolena)</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_KONT_DELKA" xml:space="preserve">
+    <value>KONT_DELKA</value>
+    <comment>(MST_W:Ne) Provadet kontroly na delku cisla (MST_W automaticky provadi kontorlu, dle nastaveni u polozky v tabulce _PE(CZ_SerNum_Delka,CZ_SW_Delka,CZ_DatVyr_Delka), je-li hodnota &gt;0</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_KONT_DOKONCENOSTI" xml:space="preserve">
+    <value>KONT_DOKONCENOSTI</value>
+    <comment>(MST_W:Ano) Kontrola uplnosti davky</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_KONT_NUL_DELKA" xml:space="preserve">
+    <value>KONT_NUL_DELKA</value>
+    <comment>(MST_W:Ne) ???</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_KONT_UPL_POL" xml:space="preserve">
+    <value>KONT_UPL_POL</value>
+    <comment>(MST_W:Ano) Po zadani SN/Sarze kontroluje, zda je polozka uplne zadana nebo ne, pokud ne, pak zobrazi dotaz, zda ukoncit</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_LISTSNIM" xml:space="preserve">
+    <value>LISTSNIM</value>
+    <comment>(MST_W:Ano) Aktivuje rezim zobrazeni (True=Detail, False=Seznam(List))</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_NOVA_KARTA" xml:space="preserve">
+    <value>NOVA_KARTA</value>
+    <comment>(MST_W:Ne) Zalozeni nove karty zbozi</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_POKRDOHLED" xml:space="preserve">
+    <value>POKRDOHLED</value>
+    <comment>(MST_W:Ano) Kontrola uplnosti polozky(provadi se pred nacitanim mnozstvi a po zadani mnozstvi)</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_PRIM_KEY1" xml:space="preserve">
+    <value>PRIM_KEY1</value>
+    <comment>(MST_W:Ano) Neni-li povolena duplicita SN/Sarze, urcuje typ klice pro overeni duplicity (testu) na existenci SN/Sarze na vystupu v tabulce CZMST_PI (True=ITEMNMBR,SERLTNUM, False=PONUMBER,ORD,SERLTNUM)</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_PTATSE_NEANO" xml:space="preserve">
+    <value>PTATSE_NEANO</value>
+    <comment>(MST_W:Ne) ???</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_SNIM_LOCNCODE" xml:space="preserve">
+    <value>SNIM_LOCNCODE</value>
+    <comment>(MST_W:Ano) Pozadavek na zadavani hodnoty LOCNCODE(True=zadavat, False=nezadavat)</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_SNIM_PONUMBER" xml:space="preserve">
+    <value>SNIM_PONUMBER</value>
+    <comment>(MST_W:Ano) Vyzadovat zadani nove hodnoty s nazvem PON_NAME, ktera se ulozi na vystup do VNDITNUM</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_SNIM_REZ2" xml:space="preserve">
+    <value>SNIM_REZ2</value>
+    <comment>(MST_W:Ano) Vyzadovat zadani doplnkove hodnoty REZ2 (pred zadanim mnozstvi)</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_SNIMAT_POL1" xml:space="preserve">
+    <value>SNIMAT_POL1</value>
+    <comment>(MST_W:Ne) ???</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_SNIMAT_POL2" xml:space="preserve">
+    <value>SNIMAT_POL2</value>
+    <comment>(MST_W:Ne) ???</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_SNIMAT_POL3" xml:space="preserve">
+    <value>SNIMAT_POL3</value>
+    <comment>(MST_W:Ano) Vyzadovat zadani doplnujici hodnoty do REZ1(Po zadani mnozstvi)</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_SNIMATZADAT_SN" xml:space="preserve">
+    <value>SNIMATZADAT_SN</value>
+    <comment>(MST_W:Ne) ???</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_ZADAT_MN_POKAZDE" xml:space="preserve">
+    <value>ZADAT_MN_POKAZDE</value>
+    <comment>(MST_W:Ano) vracet se po zadani mnozstvi zpet na seznam polozek(True=Vracet, False=Zustat v zadavani)</comment>
+  </data>
+  <data name="PrijemParametry.ENABLE_LISTSNIM" xml:space="preserve">
+    <value>ENABLE_LISTSNIM</value>
+    <comment>(MST_W:Ano) Povoluje/zakazuje aktivaci rezimu zobrazeni(True=[dle CONFIG_LISTSNIM], False=Detail)</comment>
+  </data>
+  <data name="PrijemParametry.ENABLE_SNIMATZADAT_SN" xml:space="preserve">
+    <value>ENABLE_SNIMATZADAT_SN</value>
+    <comment>(MST_W:Ne) ???</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_MNOZSTVI_PREDVYPLNIT" xml:space="preserve">
+    <value>MNOZSTVI_PREDVYPLNIT</value>
+    <comment>(MST_W:Ano) Povoluje predvyplneni hodnoty mnozstvi</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_MNOZSTVI_PREDVYPLNIT_JEDNA" xml:space="preserve">
+    <value>MNOZSTVI_PREDVYPLNIT_JEDNA</value>
+    <comment>(MST_W:Ano) Predvyplni mnozstvi "1"</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_MNOZSTVI_PREDVYPLNIT_ZBYVAJICI" xml:space="preserve">
+    <value>MNOZSTVI_PREDVYPLNIT_ZBYVAJICI</value>
+    <comment>(MST_W:Ano) Predvyplni zbyvajici mnozstvi</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_MNOZSTVI_ZADAVAT" xml:space="preserve">
+    <value>MNOZSTVI_ZADAVAT</value>
+    <comment>(MST_W:Ano) Automaticke ulozeni hodnoty dle prednabizeneho mnozstvi(CONFIG_ZADAT_MN_POKAZDE musi byt nastaveno na True)</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_MNOZSTVI_SCANNEREM" xml:space="preserve">
+    <value>MNOZSTVI_SCANNEREM</value>
+    <comment>(MST_W:Ano) Povoluje zadani mnozstvi scannerem</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_LOKACE_POVOLIT" xml:space="preserve">
+    <value>LOKACE_POVOLIT</value>
+    <comment>(MST_W:Ano) V pripade povoleni CONFIG_LOKACE_POVOLIT dojde k zapnuti lokacniho mechanismu pro terminal i server.</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_LOKACE_TIMEOUT" xml:space="preserve">
+    <value>LOKACE_TIMEOUT</value>
+    <comment>(MST_W:Ano) Timeout pro komunikaci se serverem (lokacni mechanismus).</comment>
+  </data>
+  <data name="PrijemParametry.CONFIG_LOKACE_PRIJMOVA" xml:space="preserve">
+    <value>LOKACE_PRIJMOVA</value>
+    <comment>(MST_W:Ano) V pripade povoleni CONFIG_LOKACE_PRIJMOVA dojde pri snimani polozek k automatickemu vyplneni lokace na prijmovou (vyber prijmove lokace probiha pri otevreni davky)</comment>
+  </data>
+  <data name="Inventura1Parametry.CFG_UpozornitNaPrebytek" xml:space="preserve">
+    <value>UpozornitNaPrebytek</value>
+    <comment>(MST_W:Ano) Upozornit na prebytek, pokud je zadano vetsi mnozstvi nez dle predlohy</comment>
+  </data>
+  <data name="Inventura1Parametry.CFG_DalsiPolozkuBezDotazu" xml:space="preserve">
+    <value>DalsiPolozkuBezDotazu</value>
+    <comment>(MST_W:Ne) ???</comment>
+  </data>
+  <data name="Inventura1Parametry.CFG_KontrolaUplnostiPolozky" xml:space="preserve">
+    <value>KontrolaUplnostiPolozky</value>
+    <comment>(MST_W:Ano) kontrola uplnosti polozky</comment>
+  </data>
+  <data name="Inventura1Parametry.CFG_PoZadaniSNZpetNaMN" xml:space="preserve">
+    <value>PoZadaniSNZpetNaMN</value>
+    <comment>(MST_W:Ano) Po zadani mnozstvi/SN/Sarze zpet do seznamu polozek</comment>
+  </data>
+  <data name="Inventura1Parametry.CFG_PredvyplnitMnozstvi" xml:space="preserve">
+    <value>PredvyplnitMnozstvi</value>
+    <comment>(MST_W:Ano) povoluje predvypleni mnozstvi</comment>
+  </data>
+  <data name="Inventura1Parametry.CFG_PredvyplnitMnozstviZbyvajici" xml:space="preserve">
+    <value>PredvyplnitMnozstviZbyvajici</value>
+    <comment>(MST_W:Ano) predvyplni zbyvajici mnozstvi</comment>
+  </data>
+  <data name="Inventura1Parametry.CFG_PredvyplnitMnozstviOJedna" xml:space="preserve">
+    <value>PredvyplnitMnozstviOJedna</value>
+    <comment>(MST_W:Ano) predvyplni mnozstvi "1"</comment>
+  </data>
+  <data name="Inventura1Parametry.CFG_PovolitDuplicituSN" xml:space="preserve">
+    <value>PovolitDuplicituSN</value>
+    <comment>(MST_W:Ano) Povolit duplicitni SN/Sarzi (true=kontrola se neprovadi, false=provadi se kontrola)</comment>
+  </data>
+  <data name="Inventura1Parametry.CFG_MnozstviScannerem" xml:space="preserve">
+    <value>MnozstviScannerem</value>
+    <comment>(MST_W:Ano) Povoluje zadavani mnozstvi scannerem</comment>
+  </data>
+  <data name="Inventura1Parametry.CFG_PosunNaDalsiPolozku" xml:space="preserve">
+    <value>PosunNaDalsiPolozku</value>
+    <comment>(MST_W:Ne) ???</comment>
+  </data>
+  <data name="Inventura1Parametry.CFG_PovolitZaporneMnozstvi" xml:space="preserve">
+    <value>PovolitZaporneMnozstvi</value>
+    <comment>(MST_W:Ano) Povoluje zadani mnozstvi mensi nebo rovno nule (&lt;=0)</comment>
+  </data>
+  <data name="Inventura1Parametry.CFG_KontrolaUplnosti" xml:space="preserve">
+    <value>KontrolaUplnosti</value>
+    <comment>(MST_W:Ano, ale momentalne neni funkcni) Povoluje kontrolu uplnosti davky invnetury</comment>
+  </data>
+  <data name="Inventura1Parametry.CFG_PovolitZmenuLokace" xml:space="preserve">
+    <value>PovolitZmenuLokace</value>
+    <comment>(MST_W:Ano) Vyzaduje(povoluje) zadani/zmenu/potvrzeni lokace(LOCNCODE)</comment>
+  </data>
+  <data name="Inventura1Parametry.CFG_PovolitZobrazeniMnozstviNaSklade" xml:space="preserve">
+    <value>PovolitZobrazeniMnozstviNaSklade</value>
+    <comment>(MST_W:Ano) Zobrazeni mnozstvi na sklade (hodnota Nacist z predlohy)</comment>
+  </data>
+  <data name="Inventura1Parametry.CONFIG_LOKACE_POVOLIT" xml:space="preserve">
+    <value>LOKACE_POVOLIT</value>
+    <comment>(MST_W:Ano) V pripade povoleni CONFIG_LOKACE_POVOLIT dojde k zapnuti lokacniho mechanismu pro terminal i server.</comment>
+  </data>
+  <data name="Inventura1Parametry.CONFIG_LOKACE_TIMEOUT" xml:space="preserve">
+    <value>LOKACE_TIMEOUT</value>
+    <comment>(MST_W:Ano) Timeout pro komunikaci se serverem (lokacni mechanismus).</comment>
+  </data>
+  <data name="Inventura2Parametry.CFG_UpozornitNaPrebytek" xml:space="preserve">
+    <value>UpozornitNaPrebytek</value>
+    <comment>ANO : True=pri snimani car.kodem na zacatku proveri, zda je kompletni; False=neprovadi</comment>
+  </data>
+  <data name="Inventura2Parametry.CFG_DalsiPolozkuBezDotazu" xml:space="preserve">
+    <value>DalsiPolozkuBezDotazu</value>
+    <comment>NE</comment>
+  </data>
+  <data name="Inventura2Parametry.CFG_KontrolaUplnostiPolozky" xml:space="preserve">
+    <value>KontrolaUplnostiPolozky</value>
+    <comment>ANO : True=Provadi kontroly uplnosti polozky; False=neprovadi</comment>
+  </data>
+  <data name="Inventura2Parametry.CFG_PoZadaniSNZpetNaMN" xml:space="preserve">
+    <value>PoZadaniSNZpetNaMN</value>
+    <comment>NE</comment>
+  </data>
+  <data name="Inventura2Parametry.CFG_PredvyplnitMnozstvi" xml:space="preserve">
+    <value>PredvyplnitMnozstvi</value>
+    <comment>ANO : True=pri snimani car.kodem predvyplnuje mnozstvi; False=neprovadi, mnozstvi se nepredvyplnuje</comment>
+  </data>
+  <data name="Inventura2Parametry.CFG_PredvyplnitMnozstviZbyvajici" xml:space="preserve">
+    <value>PredvyplnitMnozstviZbyvajici</value>
+    <comment>ANO : True=pri snimani car.kodem predvyplnuje mnozstvi zbyvajici; False=neprovadi</comment>
+  </data>
+  <data name="Inventura2Parametry.CFG_PredvyplnitMnozstviOJedna" xml:space="preserve">
+    <value>PredvyplnitMnozstviOJedna</value>
+    <comment>ANO : True=pri snimani car.kodem predvyplnuje mnozstvi o jedna; False=neprovadi</comment>
+  </data>
+  <data name="Inventura2Parametry.CFG_PovolitDuplicituSN" xml:space="preserve">
+    <value>PovolitDuplicituSN</value>
+    <comment>NE : prozatim se SN neeviduji ...</comment>
+  </data>
+  <data name="Inventura2Parametry.CFG_MnozstviScannerem" xml:space="preserve">
+    <value>MnozstviScannerem</value>
+    <comment>ANO : True=Povoluje zadani mnozstvi scannerem car.kodu; False=nepovoluje zadani scannerem car.kodu</comment>
+  </data>
+  <data name="Inventura2Parametry.CFG_PosunNaDalsiPolozku" xml:space="preserve">
+    <value>PosunNaDalsiPolozku</value>
+    <comment>NE</comment>
+  </data>
+  <data name="Inventura2Parametry.CFG_PovolitZaporneMnozstvi" xml:space="preserve">
+    <value>PovolitZaporneMnozstvi</value>
+    <comment>ANO : True=Povoluje zadani zaporneho mnozstvi; False=Nepovoli zadani zaporneho mnozstvi; Poznamka: nulove mnozstvi nelze zadat v zadnem pripade</comment>
+  </data>
+  <data name="Inventura2Parametry.CFG_KontrolaUplnosti" xml:space="preserve">
+    <value>KontrolaUplnosti</value>
+    <comment>ANO : True=Provadi pred odeslanim kontrolu uplnosti invnetury; False: neprovadi kontrolu uplnosti pred odeslanim</comment>
+  </data>
+  <data name="Inventura2Parametry.CFG_PovolitZmenuLokace" xml:space="preserve">
+    <value>PovolitZmenuLokace</value>
+    <comment>NE</comment>
+  </data>
+  <data name="VydejParametry.ENABLE_LISTSNIM" xml:space="preserve">
+    <value>ENABLE_LISTSNIM</value>
+    <comment>(MST_W:Ne) ???</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_LISTSNIM" xml:space="preserve">
+    <value>LISTSNIM</value>
+    <comment>(MST_W:Ne) ???</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_POKRDOHLED" xml:space="preserve">
+    <value>POKRDOHLED</value>
+    <comment>(MST_W:Ano) Kontrola na preplnenost polozky (Pred vkladanim mnozstvi)</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_PTATSE_NEANO" xml:space="preserve">
+    <value>PTATSE_NEANO</value>
+    <comment>(MST_W:Ano) Kontrola na preplnenost polozky (Po vlozeni mnozstvi)</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_KONT_UPL_POL" xml:space="preserve">
+    <value>KONT_UPL_POL</value>
+    <comment>(MST_W:Ano) Kontrola uplnosti mnozstvi polozky</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_ZADAT_MN_POKAZDE" xml:space="preserve">
+    <value>ZADAT_MN_POKAZDE</value>
+    <comment>(MST_W:Ano) vracet se po zadani mnozstvi zpet na seznam polozek(True=Vracet, False=Zustat v zadavani)</comment>
+  </data>
+  <data name="VydejParametry.ENABLE_DOHLED_ODB" xml:space="preserve">
+    <value>ENABLE_DOHLED_ODB</value>
+    <comment>(MST_W:Ano) Pouzivat ciselnik odberatelu</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_DOHLED_ODB" xml:space="preserve">
+    <value>DOHLED_ODB</value>
+    <comment>(MST_W:Ne) ???</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_KONT_DOKONCENOSTI" xml:space="preserve">
+    <value>KONT_DOKONCENOSTI</value>
+    <comment>(MST_W:Ano) Provadet kontrolu dokoncenosti davky a pripadne ihned odeslat data?</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_KONT_DELKA" xml:space="preserve">
+    <value>KONT_DELKA</value>
+    <comment>(MST_W:Ano) Provadet kontrolu delky vyzadovanych kodu</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_KONT_SN_CARKOD" xml:space="preserve">
+    <value>KONT_SN_CARKOD</value>
+    <comment>(MST_W:Ano) Provadet kontrolu, zda sejmuty car.kod SN/Sarze je stejny jako MN(VNDITNUM, CZ_CARKOD)</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_DUPLIC_SN" xml:space="preserve">
+    <value>DUPLIC_SN</value>
+    <comment>(MST_W:Ano) Provadet kontrolu duplicity zadaneho SN/Sarze</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_NOVA_KARTA" xml:space="preserve">
+    <value>NOVA_KARTA</value>
+    <comment>(MST_W:Ne) zalozeni nove karty zbozi (v nesql variante je implementovano ...)</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_SKRYT_MNOZSTVI" xml:space="preserve">
+    <value>SKRYT_MNOZSTVI</value>
+    <comment>(MST_W:Ano) Pokud je skryto pozadovane mnozstvi a je disproporce, zazada o potvrzeni</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_SNIMEJ_PRI_LISTU" xml:space="preserve">
+    <value>SNIMEJ_PRI_LISTU</value>
+    <comment>(MST_W:Ne) ???</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_KONT_NUL_DELKA" xml:space="preserve">
+    <value>KONT_NUL_DELKA</value>
+    <comment>(MST_W:Ne) ???</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_SNIM_LOCNCODE" xml:space="preserve">
+    <value>SNIM_LOCNCODE</value>
+    <comment>(MST_W:Ano) Vyzaduje zadani hodnoty LOCNCODE</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_MNOZSTVI_PREDVYPLNIT" xml:space="preserve">
+    <value>KONT_DOKONCENOSTI</value>
+    <comment>(MST_W:Ano) Povoluje predvyplneni hodnoty mnozstvi</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_MNOZSTVI_PREDVYPLNIT_JEDNA" xml:space="preserve">
+    <value>MNOZSTVI_PREDVYPLNIT_JEDNA</value>
+    <comment>(MST_W:Ano) Predvyplni mnozstvi "1"</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_MNOZSTVI_PREDVYPLNIT_ZBYVAJICI" xml:space="preserve">
+    <value>MNOZSTVI_PREDVYPLNIT_ZBYVAJICI</value>
+    <comment>(MST_W:Ano) Predvyplni zbyvajici mnozstvi</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_MNOZSTVI_ZADAVAT" xml:space="preserve">
+    <value>MNOZSTVI_ZADAVAT</value>
+    <comment>(MST_W:Ano) Automaticke ulozeni hodnoty dle prednabizeneho mnozstvi(CONFIG_ZADAT_MN_POKAZDE musi byt nastaveno na True)</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_MNOZSTVI_SCANNEREM" xml:space="preserve">
+    <value>MNOZSTVI_SCANNEREM</value>
+    <comment>(MST_W:Ano) Povoluje zadani mnozstvi scannerem</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_KONT_PREDLOHA_SN" xml:space="preserve">
+    <value>KONT_PREDLOHA_SN</value>
+    <comment>(MST_W:Ano) Aktivuje provadeni kontroly zadaneho SN/Sarze vuci predloze - CZMST_SE_SN</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_LOCNCODE_OVERIT_SCANEREM" xml:space="preserve">
+    <value>LOCNCODE_OVERIT_SCANEREM</value>
+    <comment>(MST_W:Ano) Omezi potvrzeni hodnoty LOCNCODE pouze na scanner. 
+    Dojde pouze k overeni prednastavene hodnoty LOCNCODE nactenim hodnoty ze scanneru.
+    Soucasne znemozni rucni zmenu(editaci) kodu LOCNCODE.
+    Pokud nesouhlasi, tak se vypise hlaska a nic se nestane...
+    (Neni mozne potvrdit ENTEREM resp. rucne tlacitkem OK)</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_POUZIT_CISELNIK_ZBOZI" xml:space="preserve">
+    <value>POUZIT_CISELNIK_ZBOZI</value>
+    <comment>Udava, zda se ma v MST_W pri kontrole sarze opirat o ciselnik zbozi = CZMST095</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_NAZEV_SLOUPCE_K_OVERENI_V_CISELNIKU" xml:space="preserve">
+    <value>NAZEV_SLOUPCE_K_OVERENI_V_CISELNIKU</value>
+    <comment>V pripade povoleni CONFIG_POUZIT_CISELNIK_ZBOZI udava nazev sloupce, vuci kteremu se hodnot (CK) overuje</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_NAZEV_SLOUPCE_K_NAVRACENI_V_CISELNIKU" xml:space="preserve">
+    <value>NAZEV_SLOUPCE_K_NAVRACENI_V_CISELNIKU</value>
+    <comment>V pripade povoleni CONFIG_POUZIT_CISELNIK_ZBOZI udava nazev sloupce, jehoz hodnota se bere jako vysledek pri
+    pozitivnim overeni pomoci sloupce  CONFIG_OVEROVAT_VUCI_SLOUPCI_V_CISELNIKU</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_LOKACE_POVOLIT" xml:space="preserve">
+    <value>LOKACE_POVOLIT</value>
+    <comment>(MST_W:Ano) V pripade povoleni CONFIG_LOKACE_POVOLIT dojde k zapnuti lokacniho mechanismu pro terminal i server.</comment>
+  </data>
+  <data name="VydejParametry.CONFIG_LOKACE_TIMEOUT" xml:space="preserve">
+    <value>LOKACE_TIMEOUT</value>
+    <comment>(MST_W:Ano) Timeout pro komunikaci se serverem (lokacni mechanismus).</comment>
+  </data>
+</root>

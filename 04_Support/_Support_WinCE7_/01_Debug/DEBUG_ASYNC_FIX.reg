@@ -1,0 +1,9 @@
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETCompactFramework]
+  
+"JITCodeBufferSizeLimitEnabled"=dword:1
+
+
+
+The above is the key needed for resolving the debugger issue over ActiveSync
+https://developer.zebra.com/thread/3000 

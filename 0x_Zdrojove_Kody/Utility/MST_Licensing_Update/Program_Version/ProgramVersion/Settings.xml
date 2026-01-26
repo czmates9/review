@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <appSettings>
+        <add key="LicenseCteckaPassword" value="fask!pro159" />
+        <add key="LicenseCteckaNameFile" value="mst_w.ini" />
+        <add key="LicenseCteckaPriponaFile" value="ini files (*.ini)|*.ini" />
+        <add key="LicenseCteckaExpiredDate" value="01.01.2100" />
+      <add key="LicenseKonzolaPassword" value="fask!pro159" />
+      <add key="LicenseKonzolaNameFile" value="konzola.ini" />
+      <add key="LicenseKonzolaPriponaFile" value="ini files (*.ini)|*.ini" />
+      <add key="LicenseKonzolaExpiredDate" value="01.01.2100" />
+    </appSettings>
+</configuration>

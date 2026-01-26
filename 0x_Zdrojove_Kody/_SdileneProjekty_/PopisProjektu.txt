@@ -1,0 +1,5 @@
+Fask.Columns - Jedná se o projekt spoleèný pro Konzoly a Server, Dotahuje infomace z soubor DS_Information.xml kde by mnela byt definovana SQL struktura. Momentalne se použiva ma MAXLenght
+
+ Fask.POHODA.Disponibility - je to projekt pro kontrolu Disponibility vuèi IS POHODA, použiva se na serveru a konzole, 
+
+RemoteViewing- VNC projekt, pro vzdalene ovladani Terminalu, použiva se v Konzole

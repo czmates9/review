@@ -1,0 +1,92 @@
+﻿Seznam jiz prelozenych formularu
+--------------------------------
+1) Do form_load() pridat:
+// nacteni lokalizace ze souboru
+Fask.Localization.LocalizationExtensionForm.Localize(this);
+
+2) Zapnout Localizable na formulari                
+Forms - OK
+	ConfigAppForm - OK (nacitani vlastni lokalizace ze souboru neimplementovano ... v tu dobu se jeste nevi, odkud ji nacitat)
+	DateInputBox - OK
+	DateTimeInputBox - OK
+	FaskFormBase - OK
+	FormLokaceVyber - OK
+	FormPodbarveniPriorit - OK
+	FormPracovnikVyber - OK
+	FormSkladVyber - OK
+	FormTiskarnyVyber - OK
+	InputBox - OK
+	LoginForm - OK
+	MessageBoxBig - OK
+	MessageBoxBigTimeout - OK
+	PracujiForm - OK
+	SejmiImageForm - OK
+	SejmiKodForm - OK
+	SejmiKodFormDropdown - OK
+	ServiceOperationsForm - prozatim vynechano
+	SnimatRFID - dodělat
+Inventura1_sqlce - OK
+	Inventura1_sqlce - OK
+	InventuraTisk - OK
+	ListInventury_sqlce - OK
+	ListPolozky_sqlce - OK
+	ListPolozkyI3_sqlce - OK
+	NaplnPolozku_sqlce - OK
+	NaplnPolozkuSN - OK
+	Nasnimane2 - OK
+	SejmiKodFormHledejNazev - OK
+Prijem_4 - OK
+	Detail - OK
+	DetailItem - OK
+	ListSlouceneDavkyForm - OK
+	PrijemDavkyList - OK
+	PrijemGenerovaniVlastniSN - OK
+	PrijemGenerovaniZakaznickeSN - OK
+	PrijemGenerovatSNVybercs - OK
+	PrijemList - OK
+	PrijemMain - OK
+	PrijemNasnimane - OK
+	PrijemNezrealizovanePrijemkyList - OK
+	PrijemPridatPolozku - OK
+	PrijemPridatPolozkuSN - OK
+	PrijemServiceOperations - prozatim vynechano
+	PrijemTisk - OK
+	PrijemVyberLokaceList - OK
+	PrijemVyberPolozky - OK
+	PrijemVyberPrijmoveLokaceList - 
+	PrijemZalokovaniList - chybi hlasky po nacteni scanneru
+Prodej_3 - OK
+	ProdejList - OK
+	ProdejMain - OK
+	ProdejPridatPolozku - OK
+	ProdejServiceOperations - prozatim vynechano
+	ProdejVyberDavky - OK
+	ProdejVyberMenu - OK
+	ProdejVyberOdberatele - OK
+	ProdejVyberPalety - OK
+	ProdejVyberPaletyList - OK
+	ProdejVyberPracovnika2 - OK
+	ProdejVyberStrediska2 - OK
+	ProdejVyberTypuDokladu - OK
+Vydej_3
+	ListDavkamaForm3 - OK
+	ListMNForm3 - OK (poresit metodu updateForm() ...)
+	ListNasnimForm3 - OK (formular pravdepodobne nejde lokalizovat ... pouziva se Fask.Graphic.DataField)
+	ListOdberateliForm3 - OK
+	ListPolozek3 - OK
+	ListSlouceneDavkyForm - OK
+	ListVydejekForm3 - OK
+	ListZbozi - OK
+	PolozkaDetailForm3 - OK
+	SejmiKodHromadneInfoForm - VYNECHANO (neustale se zobrazuje chyba pri pokusu o upravu formulare)
+	SejmiKodInfoForm3 - OK
+	SejmiKodInfoForm4 - OK
+	SejmiKodInfoFormSN - OK
+	StavVydejeForm3 - OK
+	TypOznaceniPaletyFormOld - OK
+	Vydej - OK
+	PolozkaNasnimDetail - dodělat
+	VydejOcipovaniList - dodělat
+HuskyVratka
+	HuskyVratkaMain
+	HuskyVratkaPotvrzeni

@@ -1,0 +1,8 @@
+JiS - 10.11.2009
+================
+OBECNE
+------
+- Logovat chyby do log souboru
+- Odeslat mail, v pripade chyby (vzor v SVN: \Fask\Vyroba\Informations.asmx.cs)
+
+

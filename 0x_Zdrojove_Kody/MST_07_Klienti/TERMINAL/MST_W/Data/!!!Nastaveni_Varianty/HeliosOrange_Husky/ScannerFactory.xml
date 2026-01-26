@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+	<!--
+	<Scanner Type="MC3090" Path="Fask.ScannerProviderMC3090.dll" />
+	<Scanner Type="TT8000" Path="Fask.ScannerProviderTT8000.dll" />
+	<Scanner Type="PSION" Path="Fask.ScannerProviderPSION.dll" />
+	-->
+	<Scanner Type="MC3090" Path="Fask.ScannerProviderMC3090.dll" />
+</Settings>

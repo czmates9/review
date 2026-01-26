@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     android:background="#c9c9c9"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/InputKod2_app_bar_main">
+    <TextView
+    android:text="@string/InputKod2_Label_Text"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/InputKod2_txt_Text"
+    android:textSize="30px"
+    android:textAlignment="center"
+    />
+    <TextView
+    android:text="@string/InputKod2_Text_Material"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    />
+    <TextView
+    android:text="@string/Def_Text"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/InputKod2_txt_lbl_Material"
+    android:textAlignment="center"
+    />
+    <android.support.v7.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:orientation="vertical"
+            app:columnCount="2"
+    app:rowCount="3"
+        >
+        <!-- lbl_Mnozstvi -->
+    <TextView
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:text="@string/InputKod2_TW_lbl_Mnozstvi"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"       
+/>
+            <TextView
+        app:layout_columnWeight="3"
+        app:layout_rowWeight="1"
+        android:text="@string/Def_Text"
+        android:id="@+id/InputKod2_textview_lbl_Mnozstvi"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+/>
+                <!-- lbl_Sklad -->
+    <TextView
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:text="@string/InputKod2_TW_lbl_Sklad"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"       
+/>
+            <TextView
+        app:layout_columnWeight="3"
+        app:layout_rowWeight="1"
+        android:text="@string/Def_Text"
+        android:id="@+id/InputKod2_textview_lbl_Sklad"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+/>
+                <!-- lbl_Lokace -->
+    <TextView
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:text="@string/InputKod2_TW_lbl_Lokace"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"       
+/>
+            <TextView
+        app:layout_columnWeight="3"
+        app:layout_rowWeight="1"
+        android:text="@string/Def_Text"
+        android:id="@+id/InputKod2_textview_lbl_Lokace"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+/>
+
+
+        </android.support.v7.widget.GridLayout>
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/InputKod2_edittxt_Text"
+    android:nextFocusDown="@id/InputKod2_btn_OK"
+    android:nextFocusLeft="@id/InputKod2_edittxt_Text"
+    android:nextFocusUp="@id/InputKod2_edittxt_Text"
+    android:nextFocusRight="@id/InputKod2_edittxt_Text"
+    android:textColor="#000000"
+    android:gravity="center"
+    android:textStyle="bold"
+    android:textSize="70px"
+    android:singleLine="true"
+    android:inputType="text" 
+
+    />
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="100"
+    android:background="#c8e7ff"
+    >
+    <Button
+    android:text="@string/InputKod2_Storno"    
+    android:nextFocusDown="@id/InputKod2_btn_Storno"
+    android:nextFocusLeft="@id/InputKod2_btn_Storno"
+    android:nextFocusUp="@id/InputKod2_edittxt_Text"
+    android:nextFocusRight="@id/InputKod2_btn_OK"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="50"
+    android:id="@+id/InputKod2_btn_Storno"
+    android:paddingBottom="2dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="2dp"
+    android:layout_marginBottom="2dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:gravity="center"
+    android:layout_gravity="center_vertical" />
+    <Button
+    android:text="@string/InputKod2_OK"    
+    android:nextFocusDown="@id/InputKod2_btn_OK"
+    android:nextFocusLeft="@id/InputKod2_btn_Storno"
+    android:nextFocusUp="@id/InputKod2_edittxt_Text"
+    android:nextFocusRight="@id/InputKod2_btn_OK"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="50"
+    android:id="@+id/InputKod2_btn_OK"
+    android:paddingBottom="2dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="2dp"
+    android:layout_marginBottom="2dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:gravity="center"
+    android:layout_gravity="center_vertical" />
+    </LinearLayout>
+</LinearLayout>

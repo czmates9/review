@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://fask.cz/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://fask.cz/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba přenosu dat lokačního mechanismu</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://fask.cz/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:import namespace="http://tempuri.org/Location.xsd" />
+      <s:import schemaLocation="http://localhost/MST_Win_Kom_Server_7_Dasenka/Lokace.asmx?schema=Location" namespace="http://tempuri.org/Location.xsd" />
+      <s:element name="AddRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TableRow" type="tns:LokacePohyb" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LokacePohyb">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ITEMNMBR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DOCUMENT_NUMBER" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="POHYB_TYPE" type="tns:TypeOfRecord" />
+          <s:element minOccurs="0" maxOccurs="1" name="POHYB_SRC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SOURCE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="QTYSHPPD_DEF" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="QTYSHPPD" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="SERLTNUM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SKL_ID_SRC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SKL_ID_DST" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LOCNCODE_SRC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LOCNCODE_DST" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TermID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="guid" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="dateeveS" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="dateeveT" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Expiration" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ITEMDESC" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CountEntries" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="TypeOfRecord">
+        <s:restriction base="s:string">
+          <s:enumeration value="E" />
+          <s:enumeration value="P" />
+          <s:enumeration value="V" />
+          <s:enumeration value="I" />
+          <s:enumeration value="D" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="AddRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddRecordResult" type="tns:StatusLokace" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StatusLokace">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="tns:States" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="States">
+        <s:restriction base="s:string">
+          <s:enumeration value="OK" />
+          <s:enumeration value="ERROR" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="MoveItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Data" type="tns:LokacePohyb" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MoveItemResult" type="tns:StatusLokace" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRecordByGuid_x0028_ModulName_x0029_">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Guid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="ModulName" type="tns:ModulName" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="ModulName">
+        <s:restriction base="s:string">
+          <s:enumeration value="PRIJEM" />
+          <s:enumeration value="DEFREGMENTACE" />
+          <s:enumeration value="VYDEJ" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="DeleteRecordByGuid_x0028_ModulName_x0029_Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteRecordByGuid_x0028_ModulName_x0029_Result" type="tns:StatusLokace" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRecordByGuid_x0028_TypeOfRecord_x0029_">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Guid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="recordType" type="tns:TypeOfRecord" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRecordByGuid_x0028_TypeOfRecord_x0029_Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteRecordByGuid_x0028_TypeOfRecord_x0029_Result" type="tns:StatusLokace" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowReceiveLocations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowReceiveLocationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShowReceiveLocationsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Location.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowMaterial_TEST">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemnmbr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serltnum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowMaterial_TESTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShowMaterial_TESTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Location.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowMaterial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemnmbr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serltnum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumberOfRecords" nillable="true" type="s:unsignedInt" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShowEmpty" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowMaterialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShowMaterialResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Location.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VariantySortimentExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="userid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemnmbr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="locncode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VariantySortimentExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VariantySortimentExistsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VariantySortimentExistsDefault">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="userid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemnmbr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="locncode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VariantySortimentExistsDefaultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VariantySortimentExistsDefaultResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VariantySortimentNastav">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="userid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemnmbr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="locncode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VariantySortimentNastavResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VariantySortimentNastavResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:AddRecord" />
+  </wsdl:message>
+  <wsdl:message name="AddRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:AddRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoveItemSoapIn">
+    <wsdl:part name="parameters" element="tns:MoveItem" />
+  </wsdl:message>
+  <wsdl:message name="MoveItemSoapOut">
+    <wsdl:part name="parameters" element="tns:MoveItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRecordByGuid_x0028_ModulName_x0029_SoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteRecordByGuid_x0028_ModulName_x0029_" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRecordByGuid_x0028_ModulName_x0029_SoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteRecordByGuid_x0028_ModulName_x0029_Response" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRecordByGuid_x0028_TypeOfRecord_x0029_SoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteRecordByGuid_x0028_TypeOfRecord_x0029_" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRecordByGuid_x0028_TypeOfRecord_x0029_SoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteRecordByGuid_x0028_TypeOfRecord_x0029_Response" />
+  </wsdl:message>
+  <wsdl:message name="ShowReceiveLocationsSoapIn">
+    <wsdl:part name="parameters" element="tns:ShowReceiveLocations" />
+  </wsdl:message>
+  <wsdl:message name="ShowReceiveLocationsSoapOut">
+    <wsdl:part name="parameters" element="tns:ShowReceiveLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ShowMaterial_TESTSoapIn">
+    <wsdl:part name="parameters" element="tns:ShowMaterial_TEST" />
+  </wsdl:message>
+  <wsdl:message name="ShowMaterial_TESTSoapOut">
+    <wsdl:part name="parameters" element="tns:ShowMaterial_TESTResponse" />
+  </wsdl:message>
+  <wsdl:message name="ShowMaterialSoapIn">
+    <wsdl:part name="parameters" element="tns:ShowMaterial" />
+  </wsdl:message>
+  <wsdl:message name="ShowMaterialSoapOut">
+    <wsdl:part name="parameters" element="tns:ShowMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="VariantySortimentExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:VariantySortimentExists" />
+  </wsdl:message>
+  <wsdl:message name="VariantySortimentExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:VariantySortimentExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="VariantySortimentExistsDefaultSoapIn">
+    <wsdl:part name="parameters" element="tns:VariantySortimentExistsDefault" />
+  </wsdl:message>
+  <wsdl:message name="VariantySortimentExistsDefaultSoapOut">
+    <wsdl:part name="parameters" element="tns:VariantySortimentExistsDefaultResponse" />
+  </wsdl:message>
+  <wsdl:message name="VariantySortimentNastavSoapIn">
+    <wsdl:part name="parameters" element="tns:VariantySortimentNastav" />
+  </wsdl:message>
+  <wsdl:message name="VariantySortimentNastavSoapOut">
+    <wsdl:part name="parameters" element="tns:VariantySortimentNastavResponse" />
+  </wsdl:message>
+  <wsdl:portType name="LokaceServiceSoap">
+    <wsdl:operation name="AddRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda sloúžící pro pridani noveho zaznamu do lokacniho mechanismu.</wsdl:documentation>
+      <wsdl:input message="tns:AddRecordSoapIn" />
+      <wsdl:output message="tns:AddRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveItem">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda sloužící k pohybu v Lokacnim mechanizmu</wsdl:documentation>
+      <wsdl:input message="tns:MoveItemSoapIn" />
+      <wsdl:output message="tns:MoveItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecordByGuid">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda sloužící pro odstraneni (resp. odecteni opacnym pohybem) zaznamu podle Guid (pokud odecteni jiz neprobehlo)</wsdl:documentation>
+      <wsdl:input name="DeleteRecordByGuid_x0028_ModulName_x0029_" message="tns:DeleteRecordByGuid_x0028_ModulName_x0029_SoapIn" />
+      <wsdl:output name="DeleteRecordByGuid_x0028_ModulName_x0029_" message="tns:DeleteRecordByGuid_x0028_ModulName_x0029_SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecordByGuid">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda sloužící pro odstraneni (resp. odecteni opacnym pohybem) zaznamu podle Guid (pokud odecteni jiz neprobehlo)</wsdl:documentation>
+      <wsdl:input name="DeleteRecordByGuid_x0028_TypeOfRecord_x0029_" message="tns:DeleteRecordByGuid_x0028_TypeOfRecord_x0029_SoapIn" />
+      <wsdl:output name="DeleteRecordByGuid_x0028_TypeOfRecord_x0029_" message="tns:DeleteRecordByGuid_x0028_TypeOfRecord_x0029_SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowReceiveLocations">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda slouzi k zobrazeni prijmovych lokaci.</wsdl:documentation>
+      <wsdl:input message="tns:ShowReceiveLocationsSoapIn" />
+      <wsdl:output message="tns:ShowReceiveLocationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowMaterial_TEST">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vraci seznam materialu ve skladu.</wsdl:documentation>
+      <wsdl:input message="tns:ShowMaterial_TESTSoapIn" />
+      <wsdl:output message="tns:ShowMaterial_TESTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowMaterial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vraci seznam materialu ve skladu.</wsdl:documentation>
+      <wsdl:input message="tns:ShowMaterialSoapIn" />
+      <wsdl:output message="tns:ShowMaterialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VariantySortimentExists">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro zjisteni, zdali varianta lokace existuje.</wsdl:documentation>
+      <wsdl:input message="tns:VariantySortimentExistsSoapIn" />
+      <wsdl:output message="tns:VariantySortimentExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VariantySortimentExistsDefault">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro zjisteni, jestli existuje varianta lokace pro vychozi pozici (IS_DEFAULT=1)</wsdl:documentation>
+      <wsdl:input message="tns:VariantySortimentExistsDefaultSoapIn" />
+      <wsdl:output message="tns:VariantySortimentExistsDefaultSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VariantySortimentNastav">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro nastaveni varianty lokace.</wsdl:documentation>
+      <wsdl:input message="tns:VariantySortimentNastavSoapIn" />
+      <wsdl:output message="tns:VariantySortimentNastavSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LokaceServiceSoap" type="tns:LokaceServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddRecord">
+      <soap:operation soapAction="http://fask.cz/AddRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveItem">
+      <soap:operation soapAction="http://fask.cz/MoveItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecordByGuid">
+      <soap:operation soapAction="http://fask.cz/DeleteRecordByGuid(ModulName)" style="document" />
+      <wsdl:input name="DeleteRecordByGuid_x0028_ModulName_x0029_">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteRecordByGuid_x0028_ModulName_x0029_">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecordByGuid">
+      <soap:operation soapAction="http://fask.cz/DeleteRecordByGuid(TypeOfRecord)" style="document" />
+      <wsdl:input name="DeleteRecordByGuid_x0028_TypeOfRecord_x0029_">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteRecordByGuid_x0028_TypeOfRecord_x0029_">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowReceiveLocations">
+      <soap:operation soapAction="http://fask.cz/ShowReceiveLocations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowMaterial_TEST">
+      <soap:operation soapAction="http://fask.cz/ShowMaterial_TEST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowMaterial">
+      <soap:operation soapAction="http://fask.cz/ShowMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VariantySortimentExists">
+      <soap:operation soapAction="http://fask.cz/VariantySortimentExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VariantySortimentExistsDefault">
+      <soap:operation soapAction="http://fask.cz/VariantySortimentExistsDefault" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VariantySortimentNastav">
+      <soap:operation soapAction="http://fask.cz/VariantySortimentNastav" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LokaceServiceSoap12" type="tns:LokaceServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddRecord">
+      <soap12:operation soapAction="http://fask.cz/AddRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveItem">
+      <soap12:operation soapAction="http://fask.cz/MoveItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecordByGuid">
+      <soap12:operation soapAction="http://fask.cz/DeleteRecordByGuid(ModulName)" style="document" />
+      <wsdl:input name="DeleteRecordByGuid_x0028_ModulName_x0029_">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteRecordByGuid_x0028_ModulName_x0029_">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecordByGuid">
+      <soap12:operation soapAction="http://fask.cz/DeleteRecordByGuid(TypeOfRecord)" style="document" />
+      <wsdl:input name="DeleteRecordByGuid_x0028_TypeOfRecord_x0029_">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteRecordByGuid_x0028_TypeOfRecord_x0029_">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowReceiveLocations">
+      <soap12:operation soapAction="http://fask.cz/ShowReceiveLocations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowMaterial_TEST">
+      <soap12:operation soapAction="http://fask.cz/ShowMaterial_TEST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowMaterial">
+      <soap12:operation soapAction="http://fask.cz/ShowMaterial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VariantySortimentExists">
+      <soap12:operation soapAction="http://fask.cz/VariantySortimentExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VariantySortimentExistsDefault">
+      <soap12:operation soapAction="http://fask.cz/VariantySortimentExistsDefault" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VariantySortimentNastav">
+      <soap12:operation soapAction="http://fask.cz/VariantySortimentNastav" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LokaceService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba přenosu dat lokačního mechanismu</wsdl:documentation>
+    <wsdl:port name="LokaceServiceSoap" binding="tns:LokaceServiceSoap">
+      <soap:address location="http://localhost/MST_Win_Kom_Server_7_Dasenka/Lokace.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LokaceServiceSoap12" binding="tns:LokaceServiceSoap12">
+      <soap12:address location="http://localhost/MST_Win_Kom_Server_7_Dasenka/Lokace.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

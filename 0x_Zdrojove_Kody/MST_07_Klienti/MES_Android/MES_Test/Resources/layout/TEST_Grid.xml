@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:columnCount="3"
+    app:rowCount="3"
+    >
+
+    <TextView
+app:layout_columnWeight="1"
+app:layout_rowWeight="1"
+android:text="A:"
+android:background="#FFFF00"
+android:paddingBottom="5px"
+android:paddingTop="5px"
+android:paddingLeft="10px"
+android:paddingRight="10px"
+/>
+        <TextView
+app:layout_columnWeight="1"
+app:layout_rowWeight="1"
+        app:layout_columnSpan="2"
+android:text="AA:"
+android:background="#FFFFFF"
+android:paddingBottom="5px"
+android:paddingTop="5px"
+android:paddingLeft="10px"
+android:paddingRight="10px"
+/>
+
+        <TextView
+app:layout_columnWeight="1"
+app:layout_rowWeight="1"
+android:text="B:"
+android:background="#FF0000"
+android:paddingBottom="5px"
+android:paddingTop="5px"
+android:paddingLeft="10px"
+android:paddingRight="10px"
+/>
+
+            <TextView
+app:layout_columnWeight="1"
+app:layout_rowWeight="1"
+app:layout_rowSpan="2"
+android:text="C:"
+android:background="#FF00FF"
+android:paddingBottom="5px"
+android:paddingTop="5px"
+android:paddingLeft="10px"
+android:paddingRight="10px"
+/>
+
+            <TextView
+app:layout_columnWeight="1"
+app:layout_rowWeight="1"
+android:text="D:"
+android:background="#00FF00"
+android:paddingBottom="5px"
+android:paddingTop="5px"
+android:paddingLeft="10px"
+android:paddingRight="10px"
+/>
+
+                <TextView
+app:layout_columnWeight="1"
+app:layout_rowWeight="1"
+android:text="G:"
+android:background="#00AA00"
+android:paddingBottom="5px"
+android:paddingTop="5px"
+android:paddingLeft="10px"
+android:paddingRight="10px"
+/>
+
+    
+                <TextView
+app:layout_columnWeight="1"
+app:layout_rowWeight="1"
+android:text="H:"
+android:background="#FFAA00"
+android:paddingBottom="5px"
+android:paddingTop="5px"
+android:paddingLeft="10px"
+android:paddingRight="10px"
+/>
+
+</android.support.v7.widget.GridLayout>

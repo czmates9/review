@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PrintReportLibrary.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="NameReport_DoPradelny" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">S02toS01.rdlc</Value>
+    </Setting>
+    <Setting Name="Zmetek" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Zmetky.rdlc</Value>
+    </Setting>
+    <Setting Name="NameReport_ZPradelny" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">S01toS02.rdlc</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

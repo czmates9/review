@@ -1,0 +1,107 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vyroba_W", "Vyroba_W\Vyroba_W.csproj", "{58BA7827-FC6C-4138-8D14-1859BF4E4ACE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySystem", "MySystem\MySystem.csproj", "{748385ED-109B-40E7-806C-E307DF4E7D4D}"
+EndProject
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "Vyroba_W_Install", "Vyroba_W_Install\Vyroba_W_Install.vddproj", "{32C412DC-9125-4F08-9055-A6BD6B308A80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fask.Graphic", "Fask.Graphics\Fask.Graphic.csproj", "{0CEB12E9-FDF8-4E05-975A-53B69EDF0BDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fask.Parsing", "Fask.Parsing\Fask.Parsing.csproj", "{A5427780-D3D6-45D0-93E1-CB4842CDB1C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fask.PrinterFactory", "..\_SdileneProjekty_\WIN_CE\Fask.PrinterFactory\Fask.PrinterFactory.csproj", "{B64467B4-7A09-4B58-9A34-3646823950E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fask.PrinterProvider", "..\_SdileneProjekty_\WIN_CE\Fask.PrinterProvider\Fask.PrinterProvider.csproj", "{77D1BFD4-752D-4DE0-BB33-238A5E842168}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fask.PrinterProviderWebService", "..\_SdileneProjekty_\WIN_CE\Fask.PrinterProviderWebService\Fask.PrinterProviderWebService.csproj", "{EC5CF361-AC66-44A8-8587-44D153C89D32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fask.Logging", "..\_SdileneProjekty_\WIN_CE\Fask.Logging\Fask.Logging.csproj", "{B106732D-96BF-45A4-BEAA-706592520632}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug online with SQLCE|Any CPU = Debug online with SQLCE|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release online with SQLCE|Any CPU = Release online with SQLCE|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58BA7827-FC6C-4138-8D14-1859BF4E4ACE}.Debug online with SQLCE|Any CPU.ActiveCfg = Debug|Any CPU
+		{58BA7827-FC6C-4138-8D14-1859BF4E4ACE}.Debug online with SQLCE|Any CPU.Build.0 = Debug|Any CPU
+		{58BA7827-FC6C-4138-8D14-1859BF4E4ACE}.Debug online with SQLCE|Any CPU.Deploy.0 = Debug|Any CPU
+		{58BA7827-FC6C-4138-8D14-1859BF4E4ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58BA7827-FC6C-4138-8D14-1859BF4E4ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58BA7827-FC6C-4138-8D14-1859BF4E4ACE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{58BA7827-FC6C-4138-8D14-1859BF4E4ACE}.Release online with SQLCE|Any CPU.ActiveCfg = Release|Any CPU
+		{58BA7827-FC6C-4138-8D14-1859BF4E4ACE}.Release online with SQLCE|Any CPU.Build.0 = Release|Any CPU
+		{58BA7827-FC6C-4138-8D14-1859BF4E4ACE}.Release online with SQLCE|Any CPU.Deploy.0 = Release|Any CPU
+		{58BA7827-FC6C-4138-8D14-1859BF4E4ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58BA7827-FC6C-4138-8D14-1859BF4E4ACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58BA7827-FC6C-4138-8D14-1859BF4E4ACE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{748385ED-109B-40E7-806C-E307DF4E7D4D}.Debug online with SQLCE|Any CPU.ActiveCfg = Debug|Any CPU
+		{748385ED-109B-40E7-806C-E307DF4E7D4D}.Debug online with SQLCE|Any CPU.Build.0 = Debug|Any CPU
+		{748385ED-109B-40E7-806C-E307DF4E7D4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{748385ED-109B-40E7-806C-E307DF4E7D4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{748385ED-109B-40E7-806C-E307DF4E7D4D}.Release online with SQLCE|Any CPU.ActiveCfg = Release|Any CPU
+		{748385ED-109B-40E7-806C-E307DF4E7D4D}.Release online with SQLCE|Any CPU.Build.0 = Release|Any CPU
+		{748385ED-109B-40E7-806C-E307DF4E7D4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{748385ED-109B-40E7-806C-E307DF4E7D4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32C412DC-9125-4F08-9055-A6BD6B308A80}.Debug online with SQLCE|Any CPU.ActiveCfg = Debug
+		{32C412DC-9125-4F08-9055-A6BD6B308A80}.Debug|Any CPU.ActiveCfg = Debug
+		{32C412DC-9125-4F08-9055-A6BD6B308A80}.Release online with SQLCE|Any CPU.ActiveCfg = Release
+		{32C412DC-9125-4F08-9055-A6BD6B308A80}.Release online with SQLCE|Any CPU.Build.0 = Release
+		{32C412DC-9125-4F08-9055-A6BD6B308A80}.Release|Any CPU.ActiveCfg = Release
+		{0CEB12E9-FDF8-4E05-975A-53B69EDF0BDA}.Debug online with SQLCE|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CEB12E9-FDF8-4E05-975A-53B69EDF0BDA}.Debug online with SQLCE|Any CPU.Build.0 = Debug|Any CPU
+		{0CEB12E9-FDF8-4E05-975A-53B69EDF0BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CEB12E9-FDF8-4E05-975A-53B69EDF0BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CEB12E9-FDF8-4E05-975A-53B69EDF0BDA}.Release online with SQLCE|Any CPU.ActiveCfg = Release|Any CPU
+		{0CEB12E9-FDF8-4E05-975A-53B69EDF0BDA}.Release online with SQLCE|Any CPU.Build.0 = Release|Any CPU
+		{0CEB12E9-FDF8-4E05-975A-53B69EDF0BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CEB12E9-FDF8-4E05-975A-53B69EDF0BDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5427780-D3D6-45D0-93E1-CB4842CDB1C6}.Debug online with SQLCE|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5427780-D3D6-45D0-93E1-CB4842CDB1C6}.Debug online with SQLCE|Any CPU.Build.0 = Debug|Any CPU
+		{A5427780-D3D6-45D0-93E1-CB4842CDB1C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5427780-D3D6-45D0-93E1-CB4842CDB1C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5427780-D3D6-45D0-93E1-CB4842CDB1C6}.Release online with SQLCE|Any CPU.ActiveCfg = Release|Any CPU
+		{A5427780-D3D6-45D0-93E1-CB4842CDB1C6}.Release online with SQLCE|Any CPU.Build.0 = Release|Any CPU
+		{A5427780-D3D6-45D0-93E1-CB4842CDB1C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5427780-D3D6-45D0-93E1-CB4842CDB1C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B64467B4-7A09-4B58-9A34-3646823950E0}.Debug online with SQLCE|Any CPU.ActiveCfg = Debug|Any CPU
+		{B64467B4-7A09-4B58-9A34-3646823950E0}.Debug online with SQLCE|Any CPU.Build.0 = Debug|Any CPU
+		{B64467B4-7A09-4B58-9A34-3646823950E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B64467B4-7A09-4B58-9A34-3646823950E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B64467B4-7A09-4B58-9A34-3646823950E0}.Release online with SQLCE|Any CPU.ActiveCfg = Release|Any CPU
+		{B64467B4-7A09-4B58-9A34-3646823950E0}.Release online with SQLCE|Any CPU.Build.0 = Release|Any CPU
+		{B64467B4-7A09-4B58-9A34-3646823950E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B64467B4-7A09-4B58-9A34-3646823950E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77D1BFD4-752D-4DE0-BB33-238A5E842168}.Debug online with SQLCE|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D1BFD4-752D-4DE0-BB33-238A5E842168}.Debug online with SQLCE|Any CPU.Build.0 = Debug|Any CPU
+		{77D1BFD4-752D-4DE0-BB33-238A5E842168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D1BFD4-752D-4DE0-BB33-238A5E842168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D1BFD4-752D-4DE0-BB33-238A5E842168}.Release online with SQLCE|Any CPU.ActiveCfg = Release|Any CPU
+		{77D1BFD4-752D-4DE0-BB33-238A5E842168}.Release online with SQLCE|Any CPU.Build.0 = Release|Any CPU
+		{77D1BFD4-752D-4DE0-BB33-238A5E842168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D1BFD4-752D-4DE0-BB33-238A5E842168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC5CF361-AC66-44A8-8587-44D153C89D32}.Debug online with SQLCE|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC5CF361-AC66-44A8-8587-44D153C89D32}.Debug online with SQLCE|Any CPU.Build.0 = Debug|Any CPU
+		{EC5CF361-AC66-44A8-8587-44D153C89D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC5CF361-AC66-44A8-8587-44D153C89D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC5CF361-AC66-44A8-8587-44D153C89D32}.Release online with SQLCE|Any CPU.ActiveCfg = Release|Any CPU
+		{EC5CF361-AC66-44A8-8587-44D153C89D32}.Release online with SQLCE|Any CPU.Build.0 = Release|Any CPU
+		{EC5CF361-AC66-44A8-8587-44D153C89D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC5CF361-AC66-44A8-8587-44D153C89D32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B106732D-96BF-45A4-BEAA-706592520632}.Debug online with SQLCE|Any CPU.ActiveCfg = Debug online with SQLCE|Any CPU
+		{B106732D-96BF-45A4-BEAA-706592520632}.Debug online with SQLCE|Any CPU.Build.0 = Debug online with SQLCE|Any CPU
+		{B106732D-96BF-45A4-BEAA-706592520632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B106732D-96BF-45A4-BEAA-706592520632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B106732D-96BF-45A4-BEAA-706592520632}.Release online with SQLCE|Any CPU.ActiveCfg = Release online with SQLCE|Any CPU
+		{B106732D-96BF-45A4-BEAA-706592520632}.Release online with SQLCE|Any CPU.Build.0 = Release online with SQLCE|Any CPU
+		{B106732D-96BF-45A4-BEAA-706592520632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B106732D-96BF-45A4-BEAA-706592520632}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

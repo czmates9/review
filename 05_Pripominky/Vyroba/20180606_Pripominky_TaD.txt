@@ -1,0 +1,4 @@
+-Vyroba konzole, predelat Interface na novy spusob pouzivani
+-Vyroba_W - predelat stahovani podle vzoru alfy, zipovani plus lepsi stahovani rychlejsi
+
+-Predelat v kolnzole skladani XML requestu na objektove spracovani

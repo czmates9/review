@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Pracovnici" targetNamespace="http://sqlce.fask.cz/Pracovnici.xsd" xmlns:mstns="http://sqlce.fask.cz/Pracovnici.xsd" xmlns="http://sqlce.fask.cz/Pracovnici.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Pracovnici" msdata:IsDataSet="true" msdata:Locale="" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Pracovnici" msprop:Generator_UserDSName="Pracovnici">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST096" msprop:Generator_TableClassName="CZMST096DataTable" msprop:Generator_RowEvArgName="CZMST096RowChangeEvent" msprop:Generator_TablePropName="CZMST096" msprop:Generator_TableVarName="tableCZMST096" msprop:Generator_RowEvHandlerName="CZMST096RowChangeEventHandler" msprop:Generator_RowDeletingName="CZMST096RowDeleting" msprop:Generator_RowChangingName="CZMST096RowChanging" msprop:Generator_RowDeletedName="CZMST096RowDeleted" msprop:Generator_UserTableName="CZMST096" msprop:Generator_RowChangedName="CZMST096RowChanged" msprop:Generator_RowClassName="CZMST096Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="prac_id" msprop:Generator_ColumnVarNameInTable="columnprac_id" msprop:Generator_ColumnPropNameInRow="prac_id" msprop:Generator_ColumnPropNameInTable="prac_idColumn" msprop:Generator_UserColumnName="prac_id">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prac_desc" msprop:Generator_ColumnVarNameInTable="columnprac_desc" msprop:Generator_ColumnPropNameInRow="prac_desc" msprop:Generator_ColumnPropNameInTable="prac_descColumn" msprop:Generator_UserColumnName="prac_desc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prac_typ" msprop:Generator_ColumnVarNameInTable="columnprac_typ" msprop:Generator_ColumnPropNameInRow="prac_typ" msprop:Generator_ColumnPropNameInTable="prac_typColumn" msprop:Generator_UserColumnName="prac_typ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prac_carcode" msprop:Generator_ColumnVarNameInTable="columnprac_carcode" msprop:Generator_ColumnPropNameInRow="prac_carcode" msprop:Generator_ColumnPropNameInTable="prac_carcodeColumn" msprop:Generator_UserColumnName="prac_carcode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DEX_ROW_ID" msprop:Generator_ColumnVarNameInTable="columnDEX_ROW_ID" msprop:Generator_ColumnPropNameInRow="DEX_ROW_ID" msprop:Generator_ColumnPropNameInTable="DEX_ROW_IDColumn" msprop:Generator_UserColumnName="DEX_ROW_ID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

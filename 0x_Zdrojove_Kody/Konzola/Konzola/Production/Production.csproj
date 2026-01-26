@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0882921C-76C8-48CC-9AD5-5D8CEEE711D0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Production</RootNamespace>
+    <AssemblyName>Production</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataGridViewAutoFilter">
+      <HintPath>..\DataGridViewAutoFilter.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\DataGridViewExt.cs" />
+    <Compile Include="Forms\FormSkupinyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSkupinyEdit.Designer.cs">
+      <DependentUpon>FormSkupinyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSkupinyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSkupinyList.Designer.cs">
+      <DependentUpon>FormSkupinyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormUkoncitZakazkuOdvadeni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormUkoncitZakazkuOdvadeni.Designer.cs">
+      <DependentUpon>FormUkoncitZakazkuOdvadeni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormProductionEdit2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormProductionEdit2.Designer.cs">
+      <DependentUpon>FormProductionEdit2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormProductionEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormProductionEdit.Designer.cs">
+      <DependentUpon>FormProductionEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormProductionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormProductionList.Designer.cs">
+      <DependentUpon>FormProductionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormVPHEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormVPHEdit.Designer.cs">
+      <DependentUpon>FormVPHEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormVPPEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormVPPEdit.Designer.cs">
+      <DependentUpon>FormVPPEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormVyrobPrikazList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormVyrobPrikazList.Designer.cs">
+      <DependentUpon>FormVyrobPrikazList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormUzivateleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormUzivateleEdit.Designer.cs">
+      <DependentUpon>FormUzivateleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormUzivateleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormUzivateleList.Designer.cs">
+      <DependentUpon>FormUzivateleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormZboziEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormZboziEdit.Designer.cs">
+      <DependentUpon>FormZboziEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormZboziList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormZboziList.Designer.cs">
+      <DependentUpon>FormZboziList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="MySystem\Path.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Logging\Logging.csproj">
+      <Project>{77602D14-A9E4-49D6-A4B2-A231FEB24B5B}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Console.Interfaces\Fask.Console.Interfaces\Fask.Console.Interfaces.csproj">
+      <Project>{B0431BD8-2948-453B-AD4A-C6BFEAADCBD7}</Project>
+      <Name>Fask.Console.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Production.DataServices\Production.DataServices.csproj">
+      <Project>{989DA959-216A-4F77-8F94-4C282776ECF8}</Project>
+      <Name>Production.DataServices</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\FormSkupinyEdit.resx">
+      <DependentUpon>FormSkupinyEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSkupinyList.resx">
+      <DependentUpon>FormSkupinyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormUkoncitZakazkuOdvadeni.resx">
+      <DependentUpon>FormUkoncitZakazkuOdvadeni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormProductionEdit2.resx">
+      <DependentUpon>FormProductionEdit2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormProductionEdit.resx">
+      <DependentUpon>FormProductionEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormProductionList.resx">
+      <DependentUpon>FormProductionList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormVPHEdit.resx">
+      <DependentUpon>FormVPHEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormVPPEdit.resx">
+      <DependentUpon>FormVPPEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormVyrobPrikazList.resx">
+      <DependentUpon>FormVyrobPrikazList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormUzivateleEdit.resx">
+      <DependentUpon>FormUzivateleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormUzivateleList.resx">
+      <DependentUpon>FormUzivateleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormZboziEdit.resx">
+      <DependentUpon>FormZboziEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormZboziList.resx">
+      <DependentUpon>FormZboziList.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

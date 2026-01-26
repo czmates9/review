@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="yes"?>
+<Settings>
+  <Printers>
+    <!--
+    <Printer name="Label 300" type="A5" height="827" width="583"/>
+    <Printer name="Label 300" type="A4" height="1169" width="827"/>
+    -->
+    <Printer name="HP LaserJet 2430" type="A4" height="1169" width="827"/>
+    <Printer name="HPLaserJet" type="A4" height="1169" width="827" kind="A4"/>
+  </Printers>
+</Settings>

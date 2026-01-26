@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Konfig" targetNamespace="http://tempuri.org/Konfig.xsd" xmlns:mstns="http://tempuri.org/Konfig.xsd" xmlns="http://tempuri.org/Konfig.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Konfig" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Konfig" msprop:Generator_UserDSName="Konfig">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ConnectionStrings" msprop:Generator_TableClassName="ConnectionStringsDataTable" msprop:Generator_TableVarName="tableConnectionStrings" msprop:Generator_TablePropName="ConnectionStrings" msprop:Generator_RowDeletingName="ConnectionStringsRowDeleting" msprop:Generator_RowChangingName="ConnectionStringsRowChanging" msprop:Generator_RowEvHandlerName="ConnectionStringsRowChangeEventHandler" msprop:Generator_RowDeletedName="ConnectionStringsRowDeleted" msprop:Generator_UserTableName="ConnectionStrings" msprop:Generator_RowChangedName="ConnectionStringsRowChanged" msprop:Generator_RowEvArgName="ConnectionStringsRowChangeEvent" msprop:Generator_RowClassName="ConnectionStringsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PohodaDB" msdata:Caption="ConnectionStringPohodaDB" msprop:Generator_ColumnVarNameInTable="columnPohodaDB" msprop:Generator_ColumnPropNameInRow="PohodaDB" msprop:Generator_ColumnPropNameInTable="PohodaDBColumn" msprop:Generator_UserColumnName="PohodaDB" type="xs:string" minOccurs="0" />
+              <xs:element name="FASKDB" msdata:Caption="ConnectionString" msprop:Generator_ColumnVarNameInTable="columnFASKDB" msprop:Generator_ColumnPropNameInRow="FASKDB" msprop:Generator_ColumnPropNameInTable="FASKDBColumn" msprop:Generator_UserColumnName="FASKDB" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tisk" msprop:Generator_TableClassName="TiskDataTable" msprop:Generator_TableVarName="tableTisk" msprop:Generator_TablePropName="Tisk" msprop:Generator_RowDeletingName="TiskRowDeleting" msprop:Generator_RowChangingName="TiskRowChanging" msprop:Generator_RowEvHandlerName="TiskRowChangeEventHandler" msprop:Generator_RowDeletedName="TiskRowDeleted" msprop:Generator_UserTableName="Tisk" msprop:Generator_RowChangedName="TiskRowChanged" msprop:Generator_RowEvArgName="TiskRowChangeEvent" msprop:Generator_RowClassName="TiskRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tisk_Font_Size_ZnakuNaRadek" msprop:Generator_ColumnVarNameInTable="columnTisk_Font_Size_ZnakuNaRadek" msprop:Generator_ColumnPropNameInRow="Tisk_Font_Size_ZnakuNaRadek" msprop:Generator_ColumnPropNameInTable="Tisk_Font_Size_ZnakuNaRadekColumn" msprop:Generator_UserColumnName="Tisk_Font_Size_ZnakuNaRadek" type="xs:int" minOccurs="0" />
+              <xs:element name="Tisk_Font_Size_Width" msprop:Generator_ColumnVarNameInTable="columnTisk_Font_Size_Width" msprop:Generator_ColumnPropNameInRow="Tisk_Font_Size_Width" msprop:Generator_ColumnPropNameInTable="Tisk_Font_Size_WidthColumn" msprop:Generator_UserColumnName="Tisk_Font_Size_Width" type="xs:int" minOccurs="0" />
+              <xs:element name="Tisk_Font_Size_SirkaStitku" msprop:Generator_ColumnVarNameInTable="columnTisk_Font_Size_SirkaStitku" msprop:Generator_ColumnPropNameInRow="Tisk_Font_Size_SirkaStitku" msprop:Generator_ColumnPropNameInTable="Tisk_Font_Size_SirkaStitkuColumn" msprop:Generator_UserColumnName="Tisk_Font_Size_SirkaStitku" type="xs:int" minOccurs="0" />
+              <xs:element name="Tisk_Font_Size_Medzera" msprop:Generator_ColumnVarNameInTable="columnTisk_Font_Size_Medzera" msprop:Generator_ColumnPropNameInRow="Tisk_Font_Size_Medzera" msprop:Generator_ColumnPropNameInTable="Tisk_Font_Size_MedzeraColumn" msprop:Generator_UserColumnName="Tisk_Font_Size_Medzera" type="xs:int" minOccurs="0" />
+              <xs:element name="Tisk_Font_Size_Height" msprop:Generator_ColumnVarNameInTable="columnTisk_Font_Size_Height" msprop:Generator_ColumnPropNameInRow="Tisk_Font_Size_Height" msprop:Generator_ColumnPropNameInTable="Tisk_Font_Size_HeightColumn" msprop:Generator_UserColumnName="Tisk_Font_Size_Height" type="xs:int" minOccurs="0" />
+              <xs:element name="Tisk_Adresa_Jednotlivo" msprop:Generator_ColumnVarNameInTable="columnTisk_Adresa_Jednotlivo" msprop:Generator_ColumnPropNameInRow="Tisk_Adresa_Jednotlivo" msprop:Generator_ColumnPropNameInTable="Tisk_Adresa_JednotlivoColumn" msprop:Generator_UserColumnName="Tisk_Adresa_Jednotlivo" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Expedice" msprop:Generator_TableClassName="ExpediceDataTable" msprop:Generator_TableVarName="tableExpedice" msprop:Generator_TablePropName="Expedice" msprop:Generator_RowDeletingName="ExpediceRowDeleting" msprop:Generator_RowChangingName="ExpediceRowChanging" msprop:Generator_RowEvHandlerName="ExpediceRowChangeEventHandler" msprop:Generator_RowDeletedName="ExpediceRowDeleted" msprop:Generator_UserTableName="Expedice" msprop:Generator_RowChangedName="ExpediceRowChanged" msprop:Generator_RowEvArgName="ExpediceRowChangeEvent" msprop:Generator_RowClassName="ExpediceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StatusObjectsDirectory" msprop:Generator_ColumnVarNameInTable="columnStatusObjectsDirectory" msprop:Generator_ColumnPropNameInRow="StatusObjectsDirectory" msprop:Generator_ColumnPropNameInTable="StatusObjectsDirectoryColumn" msprop:Generator_UserColumnName="StatusObjectsDirectory" type="xs:string" minOccurs="0" />
+              <xs:element name="HesloStornoExpedice" msprop:Generator_ColumnVarNameInTable="columnHesloStornoExpedice" msprop:Generator_ColumnPropNameInRow="HesloStornoExpedice" msprop:Generator_ColumnPropNameInTable="HesloStornoExpediceColumn" msprop:Generator_UserColumnName="HesloStornoExpedice" type="xs:string" minOccurs="0" />
+              <xs:element name="Expedice_Baleni_AfterDataProcessed_Action_P1" msprop:Generator_ColumnVarNameInTable="columnExpedice_Baleni_AfterDataProcessed_Action_P1" msprop:Generator_ColumnPropNameInRow="Expedice_Baleni_AfterDataProcessed_Action_P1" msprop:Generator_ColumnPropNameInTable="Expedice_Baleni_AfterDataProcessed_Action_P1Column" msprop:Generator_UserColumnName="Expedice_Baleni_AfterDataProcessed_Action_P1" type="xs:string" minOccurs="0" />
+              <xs:element name="Expedice_Baleni_AfterDataProcessed_Action_P2" msprop:Generator_ColumnVarNameInTable="columnExpedice_Baleni_AfterDataProcessed_Action_P2" msprop:Generator_ColumnPropNameInRow="Expedice_Baleni_AfterDataProcessed_Action_P2" msprop:Generator_ColumnPropNameInTable="Expedice_Baleni_AfterDataProcessed_Action_P2Column" msprop:Generator_UserColumnName="Expedice_Baleni_AfterDataProcessed_Action_P2" type="xs:string" minOccurs="0" />
+              <xs:element name="Expedice_Baleni_AfterDataProcessed_Action" msprop:Generator_ColumnVarNameInTable="columnExpedice_Baleni_AfterDataProcessed_Action" msprop:Generator_ColumnPropNameInRow="Expedice_Baleni_AfterDataProcessed_Action" msprop:Generator_ColumnPropNameInTable="Expedice_Baleni_AfterDataProcessed_ActionColumn" msprop:Generator_UserColumnName="Expedice_Baleni_AfterDataProcessed_Action" type="xs:string" minOccurs="0" />
+              <xs:element name="Expedice_AfterDataProcessed_Action" msprop:Generator_ColumnVarNameInTable="columnExpedice_AfterDataProcessed_Action" msprop:Generator_ColumnPropNameInRow="Expedice_AfterDataProcessed_Action" msprop:Generator_ColumnPropNameInTable="Expedice_AfterDataProcessed_ActionColumn" msprop:Generator_UserColumnName="Expedice_AfterDataProcessed_Action" type="xs:string" minOccurs="0" />
+              <xs:element name="Expedice_AfterDataProcessed_Action_P2" msprop:Generator_ColumnVarNameInTable="columnExpedice_AfterDataProcessed_Action_P2" msprop:Generator_ColumnPropNameInRow="Expedice_AfterDataProcessed_Action_P2" msprop:Generator_ColumnPropNameInTable="Expedice_AfterDataProcessed_Action_P2Column" msprop:Generator_UserColumnName="Expedice_AfterDataProcessed_Action_P2" type="xs:string" minOccurs="0" />
+              <xs:element name="Expedice_AfterDataProcessed_Action_P1" msprop:Generator_ColumnVarNameInTable="columnExpedice_AfterDataProcessed_Action_P1" msprop:Generator_ColumnPropNameInRow="Expedice_AfterDataProcessed_Action_P1" msprop:Generator_ColumnPropNameInTable="Expedice_AfterDataProcessed_Action_P1Column" msprop:Generator_UserColumnName="Expedice_AfterDataProcessed_Action_P1" type="xs:string" minOccurs="0" />
+              <xs:element name="Expedice_SSCC_Generovat_SEQUENCE" msprop:Generator_ColumnVarNameInTable="columnExpedice_SSCC_Generovat_SEQUENCE" msprop:Generator_ColumnPropNameInRow="Expedice_SSCC_Generovat_SEQUENCE" msprop:Generator_ColumnPropNameInTable="Expedice_SSCC_Generovat_SEQUENCEColumn" msprop:Generator_UserColumnName="Expedice_SSCC_Generovat_SEQUENCE" type="xs:int" minOccurs="0" />
+              <xs:element name="Expedice_AfterDataProcessed_Action_Asynchronous" msprop:Generator_ColumnVarNameInTable="columnExpedice_AfterDataProcessed_Action_Asynchronous" msprop:Generator_ColumnPropNameInRow="Expedice_AfterDataProcessed_Action_Asynchronous" msprop:Generator_ColumnPropNameInTable="Expedice_AfterDataProcessed_Action_AsynchronousColumn" msprop:Generator_UserColumnName="Expedice_AfterDataProcessed_Action_Asynchronous" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Expedice_Baleni_AfterDataProcessed_Action_Asynchronous" msprop:Generator_ColumnVarNameInTable="columnExpedice_Baleni_AfterDataProcessed_Action_Asynchronous" msprop:Generator_ColumnPropNameInRow="Expedice_Baleni_AfterDataProcessed_Action_Asynchronous" msprop:Generator_ColumnPropNameInTable="Expedice_Baleni_AfterDataProcessed_Action_AsynchronousColumn" msprop:Generator_UserColumnName="Expedice_Baleni_AfterDataProcessed_Action_Asynchronous" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Expedice_AfterData_Generate_Prijemka" msprop:Generator_ColumnVarNameInTable="columnExpedice_AfterData_Generate_Prijemka" msprop:Generator_ColumnPropNameInRow="Expedice_AfterData_Generate_Prijemka" msprop:Generator_ColumnPropNameInTable="Expedice_AfterData_Generate_PrijemkaColumn" msprop:Generator_UserColumnName="Expedice_AfterData_Generate_Prijemka" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

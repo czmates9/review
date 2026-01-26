@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://RFID.fask.cz/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://RFID.fask.cz/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba přenosu dat RFID</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://RFID.fask.cz/">
+      <s:element name="GetNextSerial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemnmbr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="skl_id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="countSerials" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNextSerialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNextSerialResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetNextSerialSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNextSerial" />
+  </wsdl:message>
+  <wsdl:message name="GetNextSerialSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNextSerialResponse" />
+  </wsdl:message>
+  <wsdl:portType name="RFIDSoap">
+    <wsdl:operation name="GetNextSerial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vraci dalsi seriove(poradove cislo) pro polozku</wsdl:documentation>
+      <wsdl:input message="tns:GetNextSerialSoapIn" />
+      <wsdl:output message="tns:GetNextSerialSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RFIDSoap" type="tns:RFIDSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetNextSerial">
+      <soap:operation soapAction="http://RFID.fask.cz/GetNextSerial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RFIDSoap12" type="tns:RFIDSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetNextSerial">
+      <soap12:operation soapAction="http://RFID.fask.cz/GetNextSerial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RFID">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba přenosu dat RFID</wsdl:documentation>
+    <wsdl:port name="RFIDSoap" binding="tns:RFIDSoap">
+      <soap:address location="http://localhost/MST_Win_Kom_Server_7_Cipisek/RFID.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RFIDSoap12" binding="tns:RFIDSoap12">
+      <soap12:address location="http://localhost/MST_Win_Kom_Server_7_Cipisek/RFID.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

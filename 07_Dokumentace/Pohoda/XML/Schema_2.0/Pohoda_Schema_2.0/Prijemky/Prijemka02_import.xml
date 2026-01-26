@@ -1,0 +1,35 @@
+<dat:dataPack id="pri001" ico="12345678" application="msttest" version = "2.0" note="Import Příjemky mst"
+xmlns:dat="http://www.stormware.cz/schema/version_2/data.xsd"
+xmlns:pri="http://www.stormware.cz/schema/version_2/prijemka.xsd"
+xmlns:typ="http://www.stormware.cz/schema/version_2/type.xsd">	
+  <dat:dataPackItem id="PRI001" version="2.0">    	  
+		<!-- import příjemky se skladovými položkami -->    	  
+		<pri:prijemka version="2.0">
+			<pri:prijemkaHeader>
+				<pri:date>2013-11-19</pri:date>
+				<pri:intNote>MST_vazba_objednavka-test</pri:intNote>
+			</pri:prijemkaHeader>
+			<pri:prijemkaDetail>
+				<!--skladova polozka-->
+				<pri:prijemkaItem>
+					<pri:stockItem>
+						<typ:stockItem>
+							<typ:id>24</typ:id>
+						</typ:stockItem>
+					</pri:stockItem>
+					<pri:quantity>4</pri:quantity>
+					<pri:parameters>
+						<typ:parameter>
+							<typ:name>RelAgID</typ:name>
+							<typ:integerValue>12</typ:integerValue>
+						</typ:parameter>
+						<typ:parameter>
+							<typ:name>RefPol</typ:name>
+							<typ:integerValue>37</typ:integerValue>
+						</typ:parameter>
+					</pri:parameters>
+				</pri:prijemkaItem>
+			</pri:prijemkaDetail>
+		</pri:prijemka>
+	</dat:dataPackItem>
+</dat:dataPack>

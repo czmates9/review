@@ -1,0 +1,115 @@
+MST_06\TERMINAL\MST_W\Main_MST_W.cs
+radek 283 zakomentovaní èasti kodu z duvodu upravy v husky. 
+
+radek 558 upravene telo metody private void LoadRFCodesRemoved()
+radek 975 do swirch pridany case novy typ scaneru
+
+1433 26.7.2016 v Husky: byla vytvorena funkcnost nad sklady, kodSkladu se zamenuje za sklad !!!
+ upravena : private void buttonVydej_Click(object sender, EventArgs e)
+upravena podminka
+
+MST_06\TERMINAL\MST_W\Main_MST_W.Designer.cs
+
+radek :
+39 pridany this.menuItemRFIDSnimat
+73 pridany this.menuItem1.MenuItems.Add(this.menuItemRFIDSnimat);
+95 pridane info o menuItemRFIDSnimat
+350 pridana private System.Windows.Forms.MenuItem menuItemRFIDSnimat;
+radek 2397 pridany private void menuItemRFIDSnimat_Click(object sender, EventArgs e); 
+
+
+MST_06\TERMINAL\MST_W\Classes\BarCodes.cs
+pridane: radek 50 dole
+Vypocet kontrolni cislice pro GTIN-8, GTIN-12, GTIN-13, GTIN-14, GSIN(17znaku), SSCC(18znaku)
+public static string CalculateCheckDigit(string codewithoutcheckdigit)
+
+
+MST_06\TERMINAL\MST_W\Config\formConfig.cs
+radek 355  pridany novy modul RFID
+radek 370,1032,1939,2141,2146,2152,2160,2061,2174,2176,2186,2187,
+jak je podminka tak zmenene z Settings odebrane Invenrura2 je èisto RemovedRFIDCodes
+
+
+MST_06\TERMINAL\MST_W\Data\ConfigTerminal.xml
+radky 43 44povolene RFID na typ MC319Z_v2 
+51 povolene ShowPanelButtons
+
+MST_06\TERMINAL\MST_W\Expedice\ExpediceBaleniPolozkyList.Designer.cs
+radek bspolozky 218  na this.bsPolozky.DataSource = typeof(Fask.MST_W.ExpediceService.ExpediceBaleni);
+
+MST_06\TERMINAL\MST_W\Forms\SnimatRFID.cs
+prekopirovany cely. popridavanych hodne uprav
+
+MST_06\TERMINAL\MST_W\Inventura2\SnimatRFID.cs
+1110 odstranene Inventura2
+
+MST_06\TERMINAL\MST_W\Prodej_3\ProdejList.Designer.cs
+MST_06\TERMINAL\MST_W\Prodej_3\ProdejList.resx
+MST_06\TERMINAL\MST_W\Prodej_3\ProdejList.cs
+prekopirovany cely z husky
+
+
+
+MST_06\TERMINAL\MST_W\Scanner\ScannerRFIDMC319Z.cs
+MST_06\TERMINAL\MST_W\Scanner\ScannerRFIDMC9090.cs
+MST_06\TERMINAL\MST_W\Scanner\ScannerRFIDTT8000.cs
+cele prekopèene, pridane eventy na RFID
+
+MST_06\TERMINAL\MST_W\SqlCEDBs\DataSets\Obecne.cs
+partial class RFIDDataTable
+
+
+MST_06\TERMINAL\MST_W\SqlCEDBs\DataSets\Obecne.Designer.cs
+MST_06\TERMINAL\MST_W\SqlCEDBs\DataSets\Prodej.xsd
+MST_06\TERMINAL\MST_W\SqlCEDBs\DataSets\Obecne.xsd
+MST_06\TERMINAL\MST_W\SqlCEDBs\DataSets\Prodej.Designer.cs
+MST_06\TERMINAL\MST_W\SqlCEDBs\DataSets\Prodej.xss
+MST_06\TERMINAL\MST_W\SqlCEDBs\DataSets\Vydej.cs
+MST_06\TERMINAL\MST_W\SqlCEDBs\DataSets\Vydej.Designer.cs
+MST_06\TERMINAL\MST_W\SqlCEDBs\DataSets\Vydej.xsd
+MST_06\TERMINAL\MST_W\SqlCEDBs\DataSets\Vydej.xss
+MST_06\TERMINAL\MST_W\SqlCEDBs\DataSets\Zbozi.Designer.cs
+MST_06\TERMINAL\MST_W\SqlCEDBs\DataSets\Zbozi.xsd
+prekopirovane cele pridane RFID
+
+
+
+MST_06\TERMINAL\MST_W\Vydej_3\ListPolozek3.cs
+radek 200 manuItemRFID
+private void RFID_Priradit_Cipy() pridane
+
+MST_06\TERMINAL\MST_W\Vydej_3\ListPolozek3.Designer.cs
+46 47 RFID
+97 RFID
+172 RFID dve
+533 RFID
+
+MST_06\TERMINAL\MST_W\Vydej_3\ListPolozek3.resx
+132 RFID priradcipy
+711 RFID
+MST_06\TERMINAL\MST_W\Vydej_3\Vydej.cs
+420 podminka pri predavani prarametru
+1270 podminka pri predavani parametru
+
+
+MST_06\TERMINAL\MST_W_Modules\Fask.Module.MTJ.JimiTore.Baleni\Forms\VydejPridatPolozku.Designer.cs
+32 label
+40 label
+91 label1
+119 label add
+122 label add
+139 private label
+148 privgatre label
+
+
+MST_06\TERMINAL\MST_W_Modules\Fask.Module.MTJ.JimiTore.Baleni\Forms\VydejPridatPolozku.resx
+cele
+
+nakopirovane v !!!suppoer!!! OPENNET
+ScannerRFIDMC319Z_v2.cs do MST_W scanner nakopirovane
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+﻿22.11.2018 TaD 
+-Prodej2
+-Implementovat na modulu Prodej Objektove skladani XML
+-implementovat Lepsi reakce na Request
+-Imlementovat konkretni requesty na konkretni doklady
+
+-Udelat revizi Prijem, Vydej... atd
+-Všechno skladani XML udelat cez objektovo
+
+-Prace s pristupem do DB pohody, udelat typove datasety, jen s prvkama ktere potrebujeme
+-Udelat dotaky pouze na prvky ktere potrebujeme
+-Detailne logovani chyb
+-Predelat Všechny providery na verze 2...
+
+--?? V Provider pro lepší prehlednost by mnely byt pouze metody ktere sou v interface??
+
+
+
+=============================================================
+-invetura - dodelat transakci...
+
+Obecne
+- co znamenaji dalsi parametry...(id, application,...)
+- podle jakych parametru vyhledavat? jake se budou pozivat?
+- jake hodnoty prirazovat do CZMST_PE (CZMST_SE) ??
+- messageboxi...

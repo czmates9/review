@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="yes"?>
+<Inventura2 xmlns="http://fask.cz/Inventura2.xsd">
+  <Parametry>
+    <!-- ANO : True=pri snimani car.kodem na zacatku proveri, zda je kompletni; False=neprovadi -->
+    <CFG_UpozornitNaPrebytek>true</CFG_UpozornitNaPrebytek>
+    <!-- NE -->
+    <CFG_DalsiPolozkuBezDotazu>false</CFG_DalsiPolozkuBezDotazu>
+    <!-- ANO : True=Provadi kontroly uplnosti polozky; False=neprovadi -->
+    <CFG_KontrolaUplnostiPolozky>false</CFG_KontrolaUplnostiPolozky>
+    <!-- NE -->
+    <CFG_PoZadaniSNZpetNaMN>false</CFG_PoZadaniSNZpetNaMN>
+    <!-- ANO : True=pri snimani car.kodem predvyplnuje mnozstvi; False=neprovadi, mnozstvi se nepredvyplnuje -->
+    <CFG_PredvyplnitMnozstvi>true</CFG_PredvyplnitMnozstvi>
+    <!-- ANO : True=pri snimani car.kodem predvyplnuje mnozstvi zbyvajici; False=neprovadi -->
+    <CFG_PredvyplnitMnozstviZbyvajici>true</CFG_PredvyplnitMnozstviZbyvajici>
+    <!-- ANO : True=pri snimani car.kodem predvyplnuje mnozstvi o jedna; False=neprovadi -->
+    <CFG_PredvyplnitMnozstviOJedna>true</CFG_PredvyplnitMnozstviOJedna>
+    <!-- NE : prozatim se SN neeviduji ... -->
+    <CFG_PovolitDuplicituSN>false</CFG_PovolitDuplicituSN>
+    <!-- ANO : True=Povoluje zadani mnozstvi scannerem car.kodu; False=nepovoluje zadani scannerem car.kodu -->
+    <CFG_MnozstviScannerem>false</CFG_MnozstviScannerem>
+    <!-- NE -->
+    <CFG_PosunNaDalsiPolozku>false</CFG_PosunNaDalsiPolozku>
+    <!-- ANO : True=Povoluje zadani zaporneho mnozstvi; False=Nepovoli zadani zaporneho mnozstvi; Poznamka: nulove mnozstvi nelze zadat v zadnem pripade -->
+    <CFG_PovolitZaporneMnozstvi>false</CFG_PovolitZaporneMnozstvi>
+    <!-- ANO : True=Provadi pred odeslanim kontrolu uplnosti invnetury; False: neprovadi kontrolu uplnosti pred odeslanim -->
+    <CFG_KontrolaUplnosti>false</CFG_KontrolaUplnosti>
+    <!-- NE -->
+    <CFG_PovolitZmenuLokace>true</CFG_PovolitZmenuLokace>
+  </Parametry>
+</Inventura2>

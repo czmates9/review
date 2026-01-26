@@ -1,0 +1,25 @@
+﻿
+body { background-color: #606061; color: #ffffff; margin: 0; }
+
+#sidebar {
+width: auto;
+color: white;
+float: left;
+/*padding-bottom: 1000px;
+margin-bottom: -1000px;*/
+}
+#primary {
+width: auto;
+/*padding-bottom: 1000px;
+margin-bottom: -1000px;*/
+}
+
+
+#divFooter 
+{
+
+            position: fixed;
+            bottom: 0;
+    
+   
+}

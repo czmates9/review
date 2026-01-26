@@ -1,0 +1,3 @@
+﻿-17.2.2021
+-špatně vymyslene reference, projekt by nemnelmit referenci na Konzoly, jakožto hlavny projekt
+-cez interface by mnely byt konfiguračne parametry predavane, a reference musí zmiznut

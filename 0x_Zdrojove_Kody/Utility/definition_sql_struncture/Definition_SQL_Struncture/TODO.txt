@@ -1,0 +1,3 @@
+rozšírit o pole NOTE
+-udelat možnost exportovat jak SQL zakladaci skript
+-udelat možnost export jak excel tabulka, do dokumentace...

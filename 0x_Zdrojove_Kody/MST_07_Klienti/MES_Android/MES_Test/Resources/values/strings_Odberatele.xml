@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="ProdejOdberatele_ID">ID: {0}</string>
+  <string name="ProdejOdberatele_CKod">Č.Kód: {0}</string>
+  <string name="ProdejOdberatele_ICO">IČO: {0}</string>
+  <string name="ProdejOdberatele_DIC">DIČ: {0}</string>
+  <string name="Prodej_Odberatele_Label">Odběratele</string>
+</resources>

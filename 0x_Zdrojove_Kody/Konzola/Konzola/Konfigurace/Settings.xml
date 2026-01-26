@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <appSettings>
+    
+    <add key="ScannerType" value="COM" />
+    <add key="ApplicationPosition" value="-8; -8" />
+
+
+    <add key="PouzivatTabulkuZbozi" value="False" />
+
+    <add key="Loging" value="True" />
+
+    <!-- Sklady -->
+    <add key="SkladyPovolit" value="True" />
+    <add key="SkladyStavAutomatickyAktualizovatData"  value="True" />
+    <!-- Pohledy na data -->
+    <add key="SkladyPohledAktualni" value="fask_view_pohyby_aktualni" />
+    <add key="SkladyPohledArchivni" value="fask_view_pohyby_archivni" />
+    <add key="SkladyPohledAktualniAArchivni" value="fask_view_pohyby_aktualni_a_archivni" />
+    <add key="SkladyPodledyNaDataArchivniPovolit" value ="False" />
+    <!-- Ciselniky -->
+    <add key="SkladyCiselnikyPovolit" value="True" />
+    <add key="SkladyCiselnikMapaLokaciPovolit" value="True" />
+    <add key="SkladyCiselnikOdberatelePovolit" value="True" />
+    <add key="SkladyCiselnikSkladyPovolit" value="True" />
+    <add key="SkladyCiselnikStrediskaPovolit" value="True" />
+    <add key="SkladyCiselnikUzivatelePovolit" value="true" />
+    <add key="SkladyCiselnikZboziPovolit" value="True" />
+    <add key="SkladyCiselnikTypyLokaciPovolit" value="True" />
+    <add key="SkladyCiselnikLokaceVariantySortimentPovolit" value="True" />
+    <add key="SkladyCiselnikTypyDokladuPovolit" value="True" />
+    <add key="SkladyCiselnikPracovnici_synchronizaceAD" value="false" />
+    <!-- Transakce -->
+    <add key="SkladyTransakcePovolit" value="True" />
+    <add key="SkladyTransakcePohybyPovolit" value="True" />
+    <add key="SkladyTransakceStavyPovolit" value="true" />
+    <add key="SkladyTransakceInventuraPohybyVariantyLokaciPovolit" value="True" />
+    <add key="SkladyTransakceInventuraStavyPovolit" value="True" />
+    <add key="SkladyTransakceInventuraPredlohaAlternaceCarKody" value="true" />  
+    <add key="SkladyTransakceVydejPrirazeniPrioritPovolit" value="true" />
+    <add key="SkladyTransakceVydejPovolit" value="True" />
+    <add key="SkladyTransakceVydejPredloha" value="True" />
+    <add key="SkladyTransakceVydejNasnimane" value="True" />
+    <add key="SkladyTransakceVydejRizeniPriorit" value="True" />
+    <add key="SkladyTransakceVydejPredlohaKontrolaPreplneni" value="True" />
+    <add key="SkladyTransakceExpedicePovolit" value="False" />
+    <add key="SkladyTransakcePrijemPovolit" value="True" />
+    <add key="SkladyTransakcePrijemPredloha" value="True" />
+    <add key="SkladyTransakcePrijemRizeniPriorit" value="True" />
+    <add key="SkladyTransakcePrijemNasnimane" value="True" />
+    <add key="SkladyTransakceExpediceDodaciListy" value="True" />
+    <add key="SkladyTransakceExpediceBaleniAPalety" value="True" />
+    <add key="SkladyTransakceVolnyPohyb" value="True" />
+    <add key="SkladyTransakceVolnyPohybNasnimane" value="True" />
+    <add key="SkladyTransakcePrevod" value="True" />
+    <add key="SkladyTransakceInventura" value="True" />
+    <add key="SkladyTransakceInventuraPredloha" value="True" />
+    <add key="SkladyTransakceInventuraNasnimane" value="True" />
+    <add key="SkladyTransakceInventuraINVPredloha_Filter" value="rb_Zakladni" />
+    <!--Rozbory-->
+    <add key="SkladyRozboryPohybyPovolit" value="True" />
+    <add key="SkladyRozboryStavyPovolit" value="True" />
+    <add key="SkladyRozboryLokMechStavSkladuPovolit" value="True" />
+    <add key="SkladyRozboryPovolit" value="True" />
+    <add key="SkladyRozboryLokMechLokMech" value="True" />
+    <!--RFID -->
+    <add key="SkladyRFID_Enable" value="false" />
+    <add key="SkladyRFID_ComPort" value="COM4" />
+    <add key="SkladyRFID_Baudrate" value="_57600bps" />
+    <add key="SkladyRFID_Address" value="FF" />
+    <!-- Exporty -->
+    <add key="ExportyExcelOtevritPoVygenerovani" value="false" />
+    <add key="ExportyExcelFormatDatum" value="d.M.yyyy H:m.s" />
+    <add key="ExportyPath" value="C:\" />
+    <add key="ExportyExcelFileName" value="Export.xlsx" />
+    <add key="ExportyCSVFileName" value="Export.csv" />
+    <add key="ExportyXMLFileName" value="Export.xml" />
+    <!-- Import -->
+    <add key="ImportPath" value="d:\xxx\xxx_2019\xxx_2019_0307_034_Chevron\" />
+    
+    <!-- Expedice-->
+    <add key="ExpedicePovolit" value="false" />
+    <!-- Prijem-->
+    <add key="PrijemPovolit" value="false" />  
+    <!-- Prodej-->
+    <add key="Prodej_ImportDokladuGrupuj" value="true" />    
+    <!--Poloha SplitContaineru v Vazby Materialy-->
+    <add key="VazbyMaterialySplitPoloha" value="300" />
+    <add key="Vazby_P_PS_SplitPoloha" value="1000" />
+    <add key="FormPlanovaniVyroby_Rozbor_SplitPoloha" value="1000" />
+    <add key="FormVyrobniPrikazList_SplitPoloha" value="1000" />
+
+    <add key="ProgressIndicatorSize" value="40" />
+    <add key="KonfiguraceHeslo" value="1IAPjp9GFw3Zt/2p6mtHFw==" />
+    <add key="SkladyStavZobrazitAktualniMnozstvi" value="True" />
+    <add key="Tisky_Leitz_Pouzivat" value="False" />
+    
+    <add key="FormLokaceMapaGenerovaniLokaci_N" value="3" />
+  </appSettings>
+</configuration>

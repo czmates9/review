@@ -1,0 +1,75 @@
+// 
+// Printing pokus.lbe
+// to micra 106/12
+// at IP_127.0.0.1
+// 10.11.2014 8:41:49
+// 
+// Labelstar LITE V3.85 (Build 1010)
+// 4A8-170045-
+// 
+// Start Sign: 0x01
+// End Sign: 0x17
+// 
+// LABEL TYPE: Adhesive Labels
+// WIDTH: 50.00 mm
+// HEIGHT: 25.00 mm
+// GAP LENGTH: 2.00 mm
+// ALIGNMENT: 1
+// COLUMNS: 1
+(SOH)EJ000000(ETB)
+(SOH)EE020025(ETB)
+(SOH)FCCO--r0005000-(ETB)
+(SOH)FCCJ--r1-------(ETB)
+(SOH)FCCHA-r1-------(ETB)
+// CUT OFFSET: 21.00 mm
+// DISPENSER OFFSET: 11.00 mm
+(SOH)FCSCA-r+210----(ETB)
+(SOH)FCSDA-r+110----(ETB)
+// Y OFFSET: 0.00 mm
+(SOH)EG-+-000(ETB)
+// X OFFSET: 0.00 mm
+(SOH)EI-+-000(ETB)
+// TEAR OFF: 0.00 mm
+(SOH)FCCG--r+000----(ETB)
+// SPEED: 100 mm/s
+(SOH)FCAA--r100-----(ETB)
+// CONTRAST: 100%
+(SOH)FCAB--r100-----(ETB)
+// CUT MODE: Not available
+// CUT INTERVAL: 1
+(SOH)FCDD--r0-------(ETB)
+(SOH)FBBD--r0001----(ETB)
+// DISPENSER MODE: Not available
+(SOH)FCDC--r0-------(ETB)
+// DISPENSER LEVEL: 2500 mV
+(SOH)FCCF--r+25-----(ETB)
+// LABEL CONTROL: Reflection normal
+// LABEL SCAN POSITION: 10%
+(SOH)FCDE--r1-------(ETB)
+(SOH)FCDEA-r10------(ETB)
+// RIBBON CONTROL: Yes
+// RIBBON SENSE: Weak
+(SOH)FCDB--r10------(ETB)
+// MIRROR LABEL: No
+(SOH)FCDO--r0-------(ETB)
+// ROTATE LABEL: No
+(SOH)FCDN--r0-------(ETB)
+// TEXT (Bitmap)
+// "IVE021"
+...
+// TEXT (Bitmap)
+// "123456789"
+...
+// TEXT (Bitmap)
+// "$ITEMNMBR$"
+...
+// BARCODE (Pixel)
+(SOH)AB010258-0440-03210--------(ETB)
+(SOH)C01100001(ETB)
+(SOH)B01$CZ_CARKOD$0(ETB)
+// LINES: 1
+(SOH)FBA---r01------(ETB)
+// COPIES: 1
+(SOH)FBBA--r0000$PocetVytisku$---(ETB)
+// PRINT
+(SOH)FBC---r--------(ETB)

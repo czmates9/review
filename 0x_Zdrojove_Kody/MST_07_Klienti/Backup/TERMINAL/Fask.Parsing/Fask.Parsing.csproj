@@ -1,0 +1,108 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5427780-D3D6-45D0-93E1-CB4842CDB1C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fask.Parsing</RootNamespace>
+    <AssemblyName>Fask.Parsing</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>\Application\mst_w_7_test</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <DeployDirPrefix>\</DeployDirPrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\!Build!\MST_W\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\!Build!\MST_W\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Codes\BaseCode.cs" />
+    <Compile Include="Codes\BarcodeSlashSarze.cs" />
+    <Compile Include="Codes\Common\Dates.cs" />
+    <Compile Include="Codes\SAB_GS1_BELDICO.cs" />
+    <Compile Include="Codes\InnovaMedical_GS1_Datum.cs" />
+    <Compile Include="Codes\FenixBarcodeObal.cs" />
+    <Compile Include="Codes\GS1.cs" />
+    <Compile Include="Codes\HIBC.cs" />
+    <Compile Include="Codes\Interfaces\ICodeInterniFiremni93.cs" />
+    <Compile Include="Codes\Interfaces\ICodeSarze.cs" />
+    <Compile Include="Codes\Interfaces\ICodeProductionDate.cs" />
+    <Compile Include="Codes\Interfaces\ICodeBarcode.cs" />
+    <Compile Include="Codes\Interfaces\ICodeExpiration.cs" />
+    <Compile Include="Codes\Interfaces\ICodeItemnmbr.cs" />
+    <Compile Include="Codes\Interfaces\ICodeQuantity.cs" />
+    <Compile Include="Codes\Interfaces\ICodeSerialNumber.cs" />
+    <Compile Include="Codes\Interfaces\ICodeWeight.cs" />
+    <Compile Include="Codes\Interfaces\IPocetNasnimanychVariant.cs" />
+    <Compile Include="Codes\SABNeznamyKod.cs" />
+    <Compile Include="Codes\SAB_AustralianNorm.cs" />
+    <Compile Include="Codes\SAB_GS1_BALTON.cs" />
+    <Compile Include="Codes\SAB_GS1_Zavorky.cs" />
+    <Compile Include="Codes\WeightCode_12.cs" />
+    <Compile Include="Codes\WeightCode.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="ParsingFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\WIN_CE\Fask.Logging\Fask.Logging.csproj">
+      <Project>{B106732D-96BF-45A4-BEAA-706592520632}</Project>
+      <Name>Fask.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

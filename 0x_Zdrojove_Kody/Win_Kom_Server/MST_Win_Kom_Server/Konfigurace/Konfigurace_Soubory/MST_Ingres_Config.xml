@@ -1,0 +1,126 @@
+<?xml version="1.0" standalone="yes"?>
+<SQL xmlns="http://tempuri.org/SQL.xsd">
+  <ConnectionString>
+    <FASKDB />
+  </ConnectionString>
+  <Vydej>
+    <AfterDataProcessed_Action />
+    <AfterDataProcessed_Action_Asynchronous>false</AfterDataProcessed_Action_Asynchronous>
+    <AfterDataProcessed_Action_P1 />
+    <AfterDataProcessed_Action_P2 />
+    <GenerateData_Action />
+    <Info1Allow>false</Info1Allow>
+    <Info1Field />
+    <VydejkaDetail>FASK_procGetAdresa</VydejkaDetail>
+    <VydejkaDetail_paramName>@SOPNUMBE</VydejkaDetail_paramName>
+    <VydejkaDetailDavka>fask_VydejDetailDavka</VydejkaDetailDavka>
+    <VydejkaDetailDavka_paramName>:pDavka</VydejkaDetailDavka_paramName>
+    <PokracovatNaJinemTerminalu>false</PokracovatNaJinemTerminalu>
+    <SeznamDavekRazeni>A.COUNTENTRIES DESC</SeznamDavekRazeni>
+    <VydejkaDetail2Hlavicka>false</VydejkaDetail2Hlavicka>
+    <VydejkaDetail_CommandType>StoredProcedure</VydejkaDetail_CommandType>
+    <DexRowIdInsert>false</DexRowIdInsert>
+    <StatusObjectsDirectory>Logs\SoDir\</StatusObjectsDirectory>
+    <VydejkaDetailDavka_CommandType>StoredProcedure</VydejkaDetailDavka_CommandType>
+    <vydejkadetailpolozka_CommandType>StoredProcedure</vydejkadetailpolozka_CommandType>
+    <vydejkadetailpolozka>FASK_procGetpolozka</vydejkadetailpolozka>
+    <vydejkadetailpolozka_paramname>@ITEMNMBR</vydejkadetailpolozka_paramname>
+  </Vydej>
+  <Servis>
+    <AfterDataProcessed_Action />
+    <AfterDataProcessed_Action_Asynchronous>false</AfterDataProcessed_Action_Asynchronous>
+    <AfterDataProcessed_Action_P1 />
+    <AfterDataProcessed_Action_P2 />
+    <GenerateServiska_Action>fask_Servis_Generate_Predloha</GenerateServiska_Action>
+    <GenerateServiska_Action_P1>document_number</GenerateServiska_Action_P1>
+    <GenerateServiska_Action_P2>odb_id</GenerateServiska_Action_P2>
+    <GenerateServiska_Action_P3>okruh_id</GenerateServiska_Action_P3>
+    <GenerateServiska_Action_P4>UserID</GenerateServiska_Action_P4>
+    <GenerateServiska_Action_P5>CountEntries</GenerateServiska_Action_P5>
+    <GenerateServiska_Action_P6>message</GenerateServiska_Action_P6>
+    <GenerateServiska_Data_Action>fask_Servis_Generate_Predloha_Data</GenerateServiska_Data_Action>
+    <GenerateServiska_Data_Action_P1>CountEntries</GenerateServiska_Data_Action_P1>
+    <HesloStornoServiska>1234</HesloStornoServiska>
+    <PathStateDataFile>C:\FASK\</PathStateDataFile>
+  </Servis>
+  <Prodej>
+    <AfterDataProcessed_Action />
+    <AfterDataProcessed_Action_Asynchronous>false</AfterDataProcessed_Action_Asynchronous>
+    <AfterDataProcessed_Action_P1 />
+    <AfterDataProcessed_Action_P2 />
+    <StatusObjectsDirectory>Logs\SoDir\</StatusObjectsDirectory>
+    <GetSklad_procName>getSklad</GetSklad_procName>
+    <GetSklad_paramName1>doc_id</GetSklad_paramName1>
+    <GetSklad_paramName2>matID</GetSklad_paramName2>
+    <GetSklad_paramName3>serialID</GetSklad_paramName3>
+    <GetSklad_paramName4>skladSrc</GetSklad_paramName4>
+    <GetSklad_paramName5>skladDest</GetSklad_paramName5>
+    <AfterDataProcessed_TYPE>PROC</AfterDataProcessed_TYPE>
+    <AfterDataProcessed_EXE_FirstParametrKonstant>/AUTOMAT:MST_IMP</AfterDataProcessed_EXE_FirstParametrKonstant>
+  </Prodej>
+  <Prijem>
+    <AfterDataProcessed_Action />
+    <AfterDataProcessed_Action_Asynchronous>false</AfterDataProcessed_Action_Asynchronous>
+    <AfterDataProcessed_Action_P1 />
+    <AfterDataProcessed_Action_P2 />
+    <PrijemkaDetail>FASK_FIRMAOBJEDNAVKAVYDANA</PrijemkaDetail>
+    <Detail_paramName>IN_DISPLAYNAME</Detail_paramName>
+    <PrijemkaDetail2Hlavicka>false</PrijemkaDetail2Hlavicka>
+    <CommandType>StoredProcedure</CommandType>
+    <DexRowIdInsert>false</DexRowIdInsert>
+    <StatusObjectsDirectory>Logs\SoDir\</StatusObjectsDirectory>
+    <GenerateSerltnum_Action>procGenerateSerltnum</GenerateSerltnum_Action>
+    <GetDoporuceneLokace_Action>procPrijemGetDoporuceneLokace</GetDoporuceneLokace_Action>
+    <GetNezrealizovanePrijemky_Action>procPrijemNezrealizovane</GetNezrealizovanePrijemky_Action>
+  </Prijem>
+  <Inventura2>
+    <DavkaTerminalVice>false</DavkaTerminalVice>
+    <PathDataOutputFile>C:\FASK\</PathDataOutputFile>
+    <PathStateDataFile>C:\FASK\</PathStateDataFile>
+    <PathToXSLT>C:\FASK\</PathToXSLT>
+    <AfterDataProcessed_Action_P1 />
+    <AfterDataProcessed_Action_P2 />
+    <AfterDataProcessed_Action />
+    <AfterDataProcessed_Action_Asynchronous>false</AfterDataProcessed_Action_Asynchronous>
+  </Inventura2>
+  <Inventura>
+    <AfterDataProcessed_Action_P1 />
+    <AfterDataProcessed_Action_P2 />
+    <DavkaTerminalVice>false</DavkaTerminalVice>
+    <AfterDataProcessed_Action />
+    <PathStateDataFile>C:\FASK\</PathStateDataFile>
+    <AfterDataProcessed_Action_Asynchronous>false</AfterDataProcessed_Action_Asynchronous>
+  </Inventura>
+  <Informations>
+    <command1_proc>czmst_se_volne</command1_proc>
+    <command1_paramName1>@param1</command1_paramName1>
+    <command1_paramName2>@param2</command1_paramName2>
+    <MnozstviNaSklade>fask_mnozstvinasklade</MnozstviNaSklade>
+    <MnozstviNaSklade_paramName>@itemnmbr</MnozstviNaSklade_paramName>
+    <MnozstviNaSklade2>fask_mnozstvinasklade2</MnozstviNaSklade2>
+    <MnozstviNaSklade2_paramName1>@itemnmbr</MnozstviNaSklade2_paramName1>
+    <MnozstviNaSklade2_paramName2>@location</MnozstviNaSklade2_paramName2>
+    <DetailItemnumber>fask_polozka_detail</DetailItemnumber>
+    <DetailItemnumber_paramName1>@itemnmbr</DetailItemnumber_paramName1>
+    <DetailItemnumber_paramName2>@doklad</DetailItemnumber_paramName2>
+    <MnozstviNaSklade_CommandType>StoredProcedure</MnozstviNaSklade_CommandType>
+    <MnozstviNaSklade_I_L_CommandType>StoredProcedure</MnozstviNaSklade_I_L_CommandType>
+    <DetailItemnumber_CommandType>StoredProcedure</DetailItemnumber_CommandType>
+    <command1_DataSetName />
+  </Informations>
+  <LokMech>
+    <Vydej_PovolZapornyStav>true</Vydej_PovolZapornyStav>
+  </LokMech>
+  <ComunicatorDriveMapping>
+    <Letter />
+    <Domain />
+    <Password />
+    <UNCPath />
+    <User />
+  </ComunicatorDriveMapping>
+  <EXE>
+    <FileName>C:\FASK\TEXT.exe</FileName>
+    <UseShellExecute>false</UseShellExecute>
+    <WorkingDirectory>C:\FASK\TEXT.exe</WorkingDirectory>
+  </EXE>
+</SQL>

@@ -1,0 +1,254 @@
+*********************
+JiS prevod na sqlite
+--------------------
+- "Stahuje se ciselnik uzivatelú <= ù"
+
+- Inventura2 : SqliteImplementException -> musi se prepsat, protoze sqlite nema resultset...
+- Meny : LoadData -> preimplementovat
+
+*********************
+
+17.06.2019 TaD
+=================
+-Inventura - Nasnimane2, z MSTW6 predelat praci s DATADRIDVIEW + smazat z settings.xml toto ukladani
+-z MSTW4 ESA, predelat prepinani scanner
+
+-Z MSTW6  prenest univerzalny FORM pro zadavani lokaci, ANC
+
+-Upravy pro HANIBAL, TOVOP, tisky z pohody cez XML
+
+-XSD, vytvoøeni objektu(class) z predlohy xsd POHODA, udelat deserializaci RESPONSE, a vraceni seznamu chyb
+
+-LOGOVACI projekt, probrat s JiS a zakomponovat
+
+ANDROID, znovu oživit...
+
+HTTPS- nadefinovani ceritfikatu, pokud ze strany TaD, nejaky potup sem skoušel, mam neco zapsane...
+
+-Dokonèit FASK.Colimns, nech je aj na stranì terminalu, a z terminalu by mnely zmiznit SDF soubory, zustrane pouze prodej.sdf jak template, možno, pokud nepujde vytvaøet programovo...
+
+-Dokonèit, resp. sprovoznit program pro definici XML souboru s SQL stloupcema
+
+
+22.11.2018 TaD
+=================
+-vytahnout creaty .sdf souboru
+-predelat z 6 do 6alfa
+
+
+
+===============
+inventura 
+=> reindexace po stazeni davky...
+
+20.9.2018 TaD
+=================
+Redesign tisku, pokud se chce tisknout z modulu tak se na serveru udela metoda pro tisk kterej se pošne cely datatable s datama
+na Serveru pak mužu byt tisk provider ALA Hanibal ktery udela upravy tisku podle potøeby a nasledne pošle na tisk bez toho aby èteèka neco sprcovavala anebo èekala
+
+19.9.2018 TaD
+=================
+-Dodelat triger pro Baleni Buffer HISTORY i s tabulkou
+
+11.9.2018 TaD
+=================
+-Perform Inser redesign hromadneho plneni.... N položek ku N SN Vydej
+
+7.9.2018 TaD
+=================
+-Mapovani Klaves
+
+5.9.2018 TaD
+=================
+-OK-Preneset z MSTW6 do MSTW6alfa automaticke spoušteni zvoleneho modulu podle konfigurace, Volny pohyb a Prijem + Preskakovani dialogu
+-Sjednotit komunikaci s Serverem jak navratove hodnoty s WebMetod
+-ošetøení a smyslupne zobrazeni chyb komunikaènich uživatelu( ked chce odeslat data na server a neni zapnuta wifi tak blby error)
+
+/******** todo ********/
+2.5.2016 JiS
+============
+Prijem, Vydej, Prodej, Inventura, ... 
+- rozsirit o pole ITEMCODE o hodnotu vlastniho oznaceni vyrobku zakazni z IS ...
+Dialogy zobrazeni hodnot
+- redesignovat, umoznit konfiguracne zobrazeni vybranych hodnot
+- sjednotit zobrazeni ve vsech modulech ...
+
+14.4.2016
+Prodej
+=========
+- pokud je povolen cilovy sklad, tak kontrolovat, zdali neni stejny jako zdrojovy??
+
+Servis
+26.11.2015
+=========
+- rozsirit strukturu vystupnich dat (zdrojpohyb) o sloupec s datem pridani na server (kdyby mela ctecka spatny datum tak, aby se dala data alespon dohledat)
+
+11.11.2015
+=========
+- do budoucna po spusteni aplikace nemazat log.txt
+
+29.10.2015
+=========
+- odpis mnozstvi z ciselniku zbozi pri volnem pohybu
+- online synchronizace stavu zasob materialu
+
+28.11.2014
+=========
+- možnost pøepnutí klávesnice pøi vyplòování textu na numerickou (pøi zadávání èísel) a alfanumerickou (pøi zadávání znakù)
+
+26.11.2014
+=========
+Servis
+- stahovat èíselníky ve více vláknech
+- možnost vypnout šipky na terminálu pøi zadávání textu/èísla
+
+13.1.2014
+=========
+Vztvorit statickou metodu na praci s tabulkou CYMST_DIH
+
+13.5.2014
+=========
+Vydej - Vyber davky jen scannerem pro NEKUPTO
+	=> prevzit z MST v3.0 - ICT_NEKUPTO
+
+// Kontrola seriovych cisel pri sarzi ..
+
+5.12.2013
+=========
+- najit polozky dle CK - odb_id && sklad_id ...
+- dodelat- id odberatele - dotahnout nazev (zmenit na dodavatele)
+- itemcode - prijem, invetura, vydej...
+- odeslani prodeje - zpracovat vystup z pohody.response
+- najit i polozky, ktere nemaji dodavatele??
+
+13.6.2013
+=========
+Vydej - hromadne plneni
+- udelat konfiguracne podminenou volbu hromadneho plneni (automaticky rozhazovat X rucni volba, ktera se plni ...)
+
+13.6.2012
+=========
+Inventura - predloha 
+- umoznit serazeni vysledku podle nejakeho kriteria(ala nasnimane)???
+
+13.6.2012
+=========
+Prodej
+- smazat nasnimanou polozku pomoci bcksp => udelat na dotaz, takto hrozi preklik ...
+- optimalizace rychlosti nacitani polozek (upravit indexaci poli ...)
+- po odeslani davky a chybe, oznacit soubor jako "nemozne" modifikovat/mazat => musi se odeslat ...
+
+15.3.2011
+=========
+vyhledavani car.kodu. pres OR nevyuziva adekvatni index => proverit upravit pomoci MERGE datasetu....???
+
+28.11.2011
+==========
+Dodelat tisky na modulech Vydej, Inventura, Prodej, Prijem_3 dle vzoru Prijem_4
+
+14.11.2011
+==========
+Multistart test nefunguje pri spousteni pres link ... ???
+
+8.3.2011
+========
+vyresit => Dynamicke sloupce v prijmu, vydeji, po restartu aplikace a seznam kdyz je prazdny, mizi nastaveni zobrazovanych sloupcu a jejich razeni ...
+
+2.2.2011
+========
+Zvážit možnosti zpìtné komunikace Server=>Terminál, tedy vyvolání akce serverem, napøíklad odpovìï na nìjakou událost...
+- dùležité pro další rozvoj možností 
+- bude použito v modulu "Úkolování" (samostatný modul)
+
+Zvážit možnosti modulování
+- nutno definovat interfacy pro jednotlivé moduly
+	> konfigurace
+	> Spousteni
+	> Spoluprace
+	> Modulovost - vicenasobne pouziti jednoho modulu 
+	> ... ???
+
+18.1.2011
+=========
+LITRA
+- vybery - designy, vyhledavani, razeni
+- vyhledavani zbozi dle itemnmbr...
+
+
+12.1.2011
+=========
+- automaticke obnoveni seznamu davek po casovem limitu (timer) ...
+- zobrazovat rozpracovanost davky a zobrazit v seznamu davek ke stazeni a v seznamu davek na terminalu
+> umoznit razeni dle sloupcu
+
+- vybery davek upravit aby byl jeden dialog, s podbarvenim, zda davka je na serveru nebo na terminalu, atd ...???
+> upravit funkce nad temito dialogy ...
+> tak jak je to ted je komplikovane a zavadejici???
+
+
+2.12.2010
+=========
+ukladani hesel uzivatelu predelat na zakodovane hesla (MD5 - hash?)
+ukladani hesel prenest do sqlce databaze, chranene heslem...
+
+19.5.2010
+=========
+SOK : Vydej_3 - dohledavat odberatele podle odb_carkode, alternativne podle odb_id dle konfigurace terminalu...
+
+16.5.2010
+=========
+- doimplementovat design Vydej_3
+- zmenit interni logiku prace s daty Vydej_3 (na zpusob Inventura_sqlce)
+
+21.4.2010
+=========
+- pokud se pri odesilani dat modulu vrati vyjimka, pak danou davku oznacit jako oznacenou k odeslani a neumoznit ji otevrit, smazat(prodej - pouze vuci dotazu na server, zda ji uz nezpracoval)
+- Rozsireni o konfiguraci ostatnich typu c.kodu
+
+6.4.2010
+========
+- Osetreni volani webovych sluzeb zobrazenim statusu z WebException nasledujicim kodem
+            catch (WebException ex)
+            {
+                Program.mstw.mbw.EndPracujiForm();
+                HttpWebResponse resp = ex.Response as HttpWebResponse;
+                if (resp != null)
+                    MessageBox.Show(resp.StatusCode + "\n" + resp.StatusDescription, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Hand, MessageBoxDefaultButton.Button1);
+                else
+                    MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+
+                return;
+            }    
+
+ok - Zabezpeceni komunikace (https cetifikat serveru)
+- Komprese(decomprese) obsahu ze serveru
+	 => Komprimace dat pri prenosu (? #ziplib, ?nativni funkce v .netcf 3.5-EnableCompression)
+- Udrzovani stavu MST_W vuci serveru (cookies, autoredirect) 
+	 => toto neni treba pro webservicy, protoze webserver nepouziva Session objekt
+- Prenos dat (davek) po castech (chunks [MTOM])
+- Licencovani softwaru (pomoci xml signing a RSA - asymetricke sifry)
+- Aktualizace softwaru
+- obfuskace kodu
+
+Stare
+=======
+(pozdeji)6. Upravit funkcnost pro stahovani davek dle typu polozky
+- umoznit stahnout terminalem davku s jinym typem polozky, ktera jiz byla terminalem stazena
+- toto znamena vyresit ukladani dat v terminalu a upravu metadatabaze, ktera zajistuje kontrolu nad stazenymi soubory davek
+
+(pozdeji) - upravit pro obecnou konfiguraci, zkratkovych klaves
+
+
+(pozdeji) 30. zajistit synchronizaci casu terminalu vuci serveru, 
+- na MST_W_Server v sekci information bude webova sluzka ktera bude poskytovat aktualni cas
+- terminal pri logovani uzivatele provede synchronizaci casu (pouzit kod z mysystem/systemtime.cs)
+
+1.10.2009
+---------
+- automaticka distribuce configuraci, updatu, upgradu, heslovych souboru ... ???
+
+- pri odesilani dat
+- - zamezit editaci davky, ktera se odeslala a doslo k jejimu neuspesnemu odeslani
+- - zobrazit info - "Podarilo se prenest" nebo "Nepodarilo se prenest, data budou odeslana automaticky"
+
+- dynamicke linkovani jednotlivych modulu do MST_W

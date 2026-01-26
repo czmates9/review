@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+
+  <string name="ProdejSberDat_LC_Title">Otázka...</string>
+  <string name="ProdejSberDat_LC_Message">Přejete si dávku č.{0} před ukončením odeslat?</string>
+
+
+
+  <string name="ProdejSberDat_QTYSHPPD">Množství nasnímáno: {0}</string>
+  <string name="ProdejSberDat_Datum">Datum: {0}</string>
+  <string name="Prodej_SberDat_Label">Sběr dat</string>
+  <string name="Prodej_SberDat_Label_Custom">Č. dávky: {0}</string>
+
+  <string name="Prodej3ProdejListMnozstviVetsiNezStavSkladuPokracovatDotaz">Zadané a načtené množství je větší než stav skladu.\nNově zadané množství: {0}\nNačtené množství: {1}\nStav skladu: {2}\nPokračovat?</string>
+
+  <string name="Lokace">Lokace</string>
+
+  <string name="Prodej_SberDat_SubTitle">Nyní začněte snímat</string>
+
+  <string name="Prodej_SberDat_Palety">Palety F2</string>
+  
+</resources>

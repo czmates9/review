@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Pytle>
+  <pytel nazev="maly" minDelay="0" maxDelay="1000"/>
+  <pytel nazev="stredni" minDelay="1500" maxDelay="3000"/>
+  <pytel nazev="velky" minDelay="3010" maxDelay="50000"/>
+</Pytle>

@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C3F1AC38-70E2-464F-B639-36A54D5E72C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fask.ModulePohodaXML</RootNamespace>
+    <AssemblyName>Fask.ModulePohodaXML</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\MST_Win_Kom_Server\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\MST_Win_Kom_Server\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Pohoda.cs" />
+    <Compile Include="Classes\Prodej2.cs" />
+    <Compile Include="Database\Inventura.cs" />
+    <Compile Include="Database\Pohoda.cs" />
+    <Compile Include="Database\Prijem.cs" />
+    <Compile Include="Database\Prodej2.cs" />
+    <Compile Include="Database\Spolecne.cs" />
+    <Compile Include="Database\Vydej.cs" />
+    <Compile Include="Database\Vyroba.cs" />
+    <Compile Include="Database\Vyroba_Production.cs" />
+    <Compile Include="Datasets\CZMSTPWD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CZMSTPWD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\DatabasePohoda.cs">
+      <DependentUpon>DatabasePohoda.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\DatabasePohoda1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabasePohoda.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\Expedice.cs">
+      <DependentUpon>Expedice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\Expedice.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Expedice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\Inventura.cs">
+      <DependentUpon>Inventura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\Inventura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\Inventura1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventura1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\LokMech.cs">
+      <DependentUpon>LokMech.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\LokMech.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LokMech.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\Meny.cs">
+      <DependentUpon>Meny.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\Meny.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Meny.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\POHODA_V1.cs">
+      <DependentUpon>POHODA_V1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\POHODA_V1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POHODA_V1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\Prijem.cs">
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\Prijem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\Prodej.cs">
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\Prodej.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\ReportInventura1.cs">
+      <DependentUpon>ReportInventura1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\ReportInventura1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportInventura1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\Strediska.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strediska.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Doklady.cs" />
+    <Compile Include="Datasets\Vydej.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\VyrobaDataSet.cs">
+      <DependentUpon>VyrobaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\VyrobaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VyrobaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\Zbozi.cs">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Inventura.cs" />
+    <Compile Include="Datasets\Zbozi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Globals_V1.cs" />
+    <Compile Include="Provider\ProviderBaleni.cs" />
+    <Compile Include="Provider\ProviderInformations.cs" />
+    <Compile Include="Provider\ProviderLokace.cs" />
+    <Compile Include="Provider\ProviderUkolovani.cs" />
+    <Compile Include="Provider\ProviderVydej.cs" />
+    <Compile Include="Provider\ProviderVyroba.cs" />
+    <Compile Include="Routines\AfterProcessAction.cs" />
+    <Compile Include="SettingsModified.cs" />
+    <Compile Include="XML\MST_Pohoda.cs" />
+    <Compile Include="XML\Classes\Detail.cs" />
+    <Compile Include="XML\Classes\ImportDetails.cs" />
+    <Compile Include="XML\Classes\OrderResponse.cs" />
+    <Compile Include="XML\Classes\ProducedDetails.cs" />
+    <Compile Include="XML\Classes\ResponsePackItem.cs" />
+    <Compile Include="XML\PohodaComunication.cs" />
+    <Compile Include="XML\Classes\Response2.cs" />
+    <Compile Include="Classes\Prijem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Provider\ProviderCiselniky.cs" />
+    <Compile Include="Provider\ProviderInventura1.cs" />
+    <Compile Include="Provider\ProviderLogin.cs" />
+    <Compile Include="Provider\ProviderPrijem.cs" />
+    <Compile Include="Provider\ProviderProdej.cs" />
+    <Compile Include="Provider\ProviderConfiguration.cs" />
+    <Compile Include="Provider\ProviderMain.cs" />
+    <Compile Include="XML\Classes\ResponsePack.cs" />
+    <Compile Include="Classes\Vydej.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Datasets\CZMSTPWD.xsc">
+      <DependentUpon>CZMSTPWD.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\CZMSTPWD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CZMSTPWD.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasets\CZMSTPWD.xss">
+      <DependentUpon>CZMSTPWD.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DatabasePohoda.xsc">
+      <DependentUpon>DatabasePohoda.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DatabasePohoda.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabasePohoda1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.SQL.Datasets</CustomToolNamespace>
+    </None>
+    <None Include="Datasets\DatabasePohoda.xss">
+      <DependentUpon>DatabasePohoda.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\Expedice.xsc">
+      <DependentUpon>Expedice.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\Expedice.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Expedice.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasets\Expedice.xss">
+      <DependentUpon>Expedice.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\Inventura.xsc">
+      <DependentUpon>Inventura.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\Inventura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventura.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasets\Inventura.xss">
+      <DependentUpon>Inventura.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\Inventura1.xsc">
+      <DependentUpon>Inventura1.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\Inventura1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventura1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQL.Datasets</CustomToolNamespace>
+    </None>
+    <None Include="Datasets\Inventura1.xss">
+      <DependentUpon>Inventura1.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\LokMech.xsc">
+      <DependentUpon>LokMech.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\LokMech.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LokMech.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasets\LokMech.xss">
+      <DependentUpon>LokMech.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\Meny.xsc">
+      <DependentUpon>Meny.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\Meny.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Meny.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\Meny.xss">
+      <DependentUpon>Meny.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\POHODA_V1.xsc">
+      <DependentUpon>POHODA_V1.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\POHODA_V1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>POHODA_V1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\POHODA_V1.xss">
+      <DependentUpon>POHODA_V1.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\Prijem.xsc">
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\Prijem.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Prijem.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.SQL.Datasets</CustomToolNamespace>
+    </None>
+    <None Include="Datasets\Prijem.xss">
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\ReportInventura1.xsc">
+      <DependentUpon>ReportInventura1.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\ReportInventura1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportInventura1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasets\ReportInventura1.xss">
+      <DependentUpon>ReportInventura1.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\Vydej.xsc">
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\Vydej.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Vydej.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQL.Datasets</CustomToolNamespace>
+    </None>
+    <None Include="Datasets\Vydej.xss">
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\Prodej.xsc">
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\Prodej.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Prodej.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\Prodej.xss">
+      <DependentUpon>Prodej.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\VyrobaDataSet.xsc">
+      <DependentUpon>VyrobaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\VyrobaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VyrobaDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasets\VyrobaDataSet.xss">
+      <DependentUpon>VyrobaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="xml_imp.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\Fask.Columns\Fask.Columns.csproj">
+      <Project>{9FE07D18-7A04-4A20-8EE8-929F9BE5DF16}</Project>
+      <Name>Fask.Columns</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\Fask.Logging\Fask.Logging.csproj">
+      <Project>{89E8C070-4694-4F11-AB01-A674BF8B9F80}</Project>
+      <Name>Fask.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\FASK.Logins\FASK.Logins.csproj">
+      <Project>{bc4b8c29-bb68-4e66-9257-356603fcf7d2}</Project>
+      <Name>FASK.Logins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\Fask.POHODA.Disponibility\Fask.POHODA.Disponibility.csproj">
+      <Project>{35A80609-485A-490F-9CA3-B5D302FE5B48}</Project>
+      <Name>Fask.POHODA.Disponibility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\Fask.Rady\Fask.Rady.csproj">
+      <Project>{789768c6-60f7-43a3-b9a9-9a4b169b9514}</Project>
+      <Name>Fask.Rady</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fask.MyPath\Fask.MyPath.csproj">
+      <Project>{49386A7A-1C55-4811-9E73-5AB8206B7802}</Project>
+      <Name>Fask.MyPath</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fask.Server.Interfaces\Fask.Server.Interfaces.csproj">
+      <Project>{40594B84-CB0F-4988-B2C0-E2F701E1E062}</Project>
+      <Name>Fask.Server.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fask.Tracing\Fask.Tracing.csproj">
+      <Project>{14569DD3-5250-4CDB-998E-198BFD548113}</Project>
+      <Name>Fask.Tracing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="!!!Dokumentace!!!\dokumentace.txt" />
+    <None Include="Datasets\DatabasePohoda_skripty.txt" />
+    <None Include="Datasets\Strediska.xsc">
+      <DependentUpon>Strediska.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\Strediska.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Strediska.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\Strediska.xss">
+      <DependentUpon>Strediska.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\Zbozi.xsc">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\Zbozi.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Zbozi.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasets\Zbozi.xss">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+    <Content Include="Readme.Fask.ModulePohodaXML.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="TiskovaSestavaInventura1.Perlacasa.xslt">
+    </None>
+    <Content Include="ToDo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

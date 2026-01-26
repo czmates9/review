@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://fask.cz/Vydejky.xsd" xmlns="http://fask.cz/Vydejky.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://fask.cz/Vydejky.xsd" id="Vydejky" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="en-US" name="Vydejky">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Hlavicky">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CountEntries" type="xs:string" />
+              <xs:element name="SOPNUMBE" type="xs:string" />
+              <xs:element minOccurs="0" name="CntItems" type="xs:int" />
+              <xs:element minOccurs="0" name="SumItems" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VNDDOCNM" type="xs:string" />
+              <xs:element minOccurs="0" name="Info1" type="xs:string" />
+              <xs:element minOccurs="0" name="PRIORITY" type="xs:int" />
+              <xs:element minOccurs="0" name="ROZPRACOVANO" type="xs:int" />
+              <xs:element minOccurs="0" name="Sloucena" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

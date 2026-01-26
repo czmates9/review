@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B805E197-419A-401D-BB7A-12FFB03F39DB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pohoda_Schema_2._0</RootNamespace>
+    <AssemblyName>Pohoda_Schema_2.0</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Prijemky\data.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Prijemky\prijemka.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Prijemky\type.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\accountancy.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\accountingunit.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\addressbook.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\balance.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\bank.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\category.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\contract.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\data-package.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\data.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\documentresponse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\enquiry.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\filter.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\individualPrice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\intDoc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\intParam.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\invoice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\list.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\list_addBook.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\list_contract.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\list_stock.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\offer.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\order.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\parameter.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\prevodka.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\prijemka.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\print.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\prodejka.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\response.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\stock.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\storage.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\supplier.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\type.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\voucher.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\vydejka.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\vyroba.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Objednavka02_CM_test.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Prijemka02_import.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ObjPrij01_import.xml" />
+    <Content Include="ObjVyd01_import.xml" />
+    <Content Include="Prijemka01_import.xml" />
+    <Content Include="Prijemky\Prijemka02_import.xml" />
+    <Content Include="eurom_etiketa.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Objednavky\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

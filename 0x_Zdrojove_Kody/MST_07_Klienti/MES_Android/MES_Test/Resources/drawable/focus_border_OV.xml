@@ -1,0 +1,43 @@
+﻿<layer-list
+xmlns:android="http://schemas.android.com/apk/res/android"
+>
+  <item >
+    >
+    <!-- Shape je border okolo -->
+    <shape
+    android:shape="rectangle"  >
+
+      <!--Stroke je hrubka ohraničení + barva -->
+      <stroke
+        android:width="4dp"
+        android:color="#00cc33"
+    />
+
+      <!-- Corner je zaoblení rohu -->
+      <corners 
+      android:radius="5dp"
+      />
+
+      <!-- Padding je medzera vevnitř -->
+      <padding
+      android:bottom="2dp"
+      android:top="2dp"
+      android:left="2dp"
+      android:right="2dp"
+       />
+
+      <!-- Gradient je barva pozadi vevnitř, ked sa chce nejaky prechod-->
+      <!--<gradient 
+      android:angle="0" 
+      android:startColor="#F00"
+      android:endColor="#FF0"
+      />-->
+
+      <!-- Tohle je barva ked sa chce pouze jedna-->
+      <solid android:color="#FFF"  />
+      
+    </shape>
+  </item>
+</layer-list>
+
+

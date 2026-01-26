@@ -1,0 +1,58 @@
+﻿using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using System.Net;
+using System.Web.Services;
+
+namespace MES_Android._WebReferences_Globals
+{
+
+    [System.Web.Services.WebServiceBindingAttribute(Name = "TestSoap", Namespace = "http://Test.fask.cz/")]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public class TestServiceSession : MES_Android.PrintServerTestService.Test
+    {
+        #region Session state by cookies ...
+        private string cookie = null;
+        protected override System.Net.WebRequest GetWebRequest(Uri uri)
+        {
+            //return base.GetWebRequest(uri);
+            WebRequest req = (WebRequest)base.GetWebRequest(uri);
+            if (cookie != null)
+            {
+                req.Headers.Add("Cookie", cookie);
+            }
+            return req;
+        }
+
+        protected override WebResponse GetWebResponse(WebRequest request)
+        {
+            //return base.GetWebResponse(request);
+            WebResponse rep = (WebResponse)base.GetWebResponse(request);
+            if (rep.Headers["Set-Cookie"] != null)
+            {
+                cookie = rep.Headers["Set-Cookie"];
+            }
+            return rep;
+        }
+
+        protected override WebResponse GetWebResponse(WebRequest request, IAsyncResult result)
+        {
+            //return base.GetWebResponse(request, result);
+            WebResponse rep = (WebResponse)base.GetWebResponse(request, result);
+            if (rep.Headers["Set-Cookie"] != null)
+            {
+                cookie = rep.Headers["Set-Cookie"];
+            }
+            return rep;
+        }
+        #endregion
+    }
+}

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="ProdejZasoby_ITEMNMBR">ID: {0}</string>
+  <string name="ProdejZasoby_ITEMCODE">Kód: {0}</string>
+  <string name="ProdejZasoby_VNDITNUM">Č. Kód: {0}</string>
+  <string name="ProdejZasoby_CZCarKod">Č. Kód2: {0}</string>
+  <string name="Prodej_Zasoby_Label">Zásoby</string>
+</resources>

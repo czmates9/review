@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+  <string name="Prodej_PridatPolozku">Přidat Položku</string>
+
+  <string name="PPP_OK">OK</string>
+  <string name="PPP_Storno">Zrušit</string>
+
+  <string name="text_ITEMCODE">Kód: {0}</string>
+  <string name="text_ITEMNMBR">Pol. č.: {0}</string>
+  <string name="text_CZ_CarKod">Č. kód: {0}</string>
+  <string name="text_SERLTNUM">SN: {0}</string>
+  <string name="text_MJ">MJ: {0}</string>
+  <string name="text_QTYPACK">Balení: {0}</string>
+  <string name="text_LOCNCODE">Lokace: {0}</string>
+  <string name="text_QTYSHPPD">Kusů: {0}</string>
+  <string name="text_CZ_SerNum_Track">Sledováno: {0}</string>
+  <string name="text_WEIGHT">Váha: {0}</string>
+  <string name="text_PRICE">Cena: {0}</string>
+  <string name="text_TAXRATE">Daň: {0}</string>
+
+  <string name="text_HIN">Prosím zadejte ...</string>
+
+
+  <string name="FormsSejmiKodFormVlozteKod">Vložte kód!</string>
+  <string name="FormsSejmiKodFormSmiteZadavatPouzeCisla">Smíte vkládat pouze čísla!</string>
+  <string name="FormsSejmiKodFormCisloJeMimoRozsah">Číslo je mimo povolený rozsah (-999999999,999999999)</string>
+  <string name="FormsSejmiKodFormKodJeMensiNezX">Kód je delší než {0} znaků</string>
+  <string name="FormsSejmiKodFormKodJeDelsiNezXUlozitDotaz">Sejmutý kód je delší než {0} znaků. Chcete ho uložit?</string>
+  <string name="FormsSejmiKodFormKodJeKratsiNezXUlozitDotaz">Sejmutý kód je kratší než {0} znaků. Chcete ho uložit?</string>
+
+  <string name="FormsSejmiKodFormDotaz">Dotaz</string>
+
+  </resources>

@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Button_Save.Text" xml:space="preserve">
+    <value>Uložit</value>
+  </data>
+  <data name="Providers.Provider" xml:space="preserve">
+    <value>Provider Hlavný</value>
+    <comment>Jedná se o hlavný provider který se bude použivat. &lt;br&gt; Podporované :
+&lt;ul&gt;
+&lt;li&gt;"bin\Fask.ModuleSql.dll" &lt;/li&gt;
+&lt;li&gt;"bin\Fask.ModulePohodaXML.dll" &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Providers.Provider_Ciselniky" xml:space="preserve">
+    <value>Provider Čiselniky</value>
+    <comment>Jedná se o provider který implementuje číselníky.&lt;br&gt; Podporované :
+&lt;ul&gt;
+&lt;li&gt;"bin\Fask.ModuleSql.dll" &lt;/li&gt;
+&lt;li&gt;"bin\Fask.ModulePohodaXML.dll" &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Providers.Provider_Vydej" xml:space="preserve">
+    <value>Provider Výdej</value>
+    <comment>Jedná se o provider který implementuje výdej.&lt;br&gt; Podporované :
+&lt;ul&gt;
+&lt;li&gt;"bin\Fask.ModuleSql.dll" &lt;/li&gt;
+&lt;li&gt;"bin\Fask.ModulePohodaXML.dll" &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Providers.Provider_Prijem" xml:space="preserve">
+    <value>Provider Příem</value>
+    <comment>Jedná se o provider který implementuje příjem.&lt;br&gt; Podporované :
+&lt;ul&gt;
+&lt;li&gt;"bin\Fask.ModuleSql.dll" &lt;/li&gt;
+&lt;li&gt;"bin\Fask.ModulePohodaXML.dll" &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Providers.Provider_Prodej" xml:space="preserve">
+    <value>Provider Prodej</value>
+    <comment>Jedná se o provider který implementuje prodej.&lt;br&gt; Podporované :
+&lt;ul&gt;
+&lt;li&gt;"bin\Fask.ModuleSql.dll" &lt;/li&gt;
+&lt;li&gt;"bin\Fask.ModulePohodaXML.dll" &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Providers.Provider_Inventura1" xml:space="preserve">
+    <value>Provider Inventúra1</value>
+    <comment>Jedná se o provider který implementuje inventura1.&lt;br&gt; Podporované :
+&lt;ul&gt;
+&lt;li&gt;"bin\Fask.ModuleSql.dll" &lt;/li&gt;
+&lt;li&gt;"bin\Fask.ModulePohodaXML.dll" &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Providers.Provider_Inventura2" xml:space="preserve">
+    <value>Provider Inventura2</value>
+    <comment>Jedná se o provider který implementuje inventura2.&lt;br&gt; Podporované :
+&lt;ul&gt;
+&lt;li&gt;"bin\Fask.ModuleSql.dll" &lt;/li&gt;
+&lt;li&gt;"bin\Fask.ModulePohodaXML.dll" &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Providers.Provider_Login" xml:space="preserve">
+    <value>Provider Login</value>
+    <comment>Jedná se o provider který implementuje login.&lt;br&gt; Podporované :
+&lt;ul&gt;
+&lt;li&gt;"bin\Fask.ModuleSql.dll" &lt;/li&gt;
+&lt;li&gt;"bin\Fask.ModulePohodaXML.dll" &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Providers.Provider_Servis" xml:space="preserve">
+    <value>Provider Servis</value>
+    <comment>Jedná se o provider který implementuje servis.&lt;br&gt; Podporované :
+&lt;ul&gt;
+&lt;li&gt;"bin\Fask.ModuleSql.dll" &lt;/li&gt;
+&lt;li&gt;"bin\Fask.ModulePohodaXML.dll" &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Providers.Provider_Lokace" xml:space="preserve">
+    <value>Provider Lokace</value>
+    <comment>Jedná se o provider který implementuje lokace.&lt;br&gt; Podporované :
+&lt;ul&gt;
+&lt;li&gt;"bin\Fask.ModuleSql.dll" &lt;/li&gt;
+&lt;li&gt;"bin\Fask.ModulePohodaXML.dll" &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Providers.Provider_Expedice" xml:space="preserve">
+    <value>Provider Expedice</value>
+    <comment>Jedná se o provider který implementuje expedice&lt;br&gt; Podporované :
+&lt;ul&gt;
+&lt;li&gt;"bin\Fask.ModuleSql.dll" &lt;/li&gt;
+&lt;li&gt;"bin\Fask.ModulePohodaXML.dll" &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Providers.Provider_Tisky" xml:space="preserve">
+    <value>Provider Tisky</value>
+    <comment>Jedná se o provider který implementuje tisky&lt;br&gt; Podporované :
+&lt;ul&gt;
+&lt;li&gt;"bin\Fask.ModuleSql.dll" &lt;/li&gt;
+&lt;li&gt;"bin\Fask.ModulePohodaXML.dll" &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Providers.Provider_Tisky2" xml:space="preserve">
+    <value>Provider Tisky2</value>
+    <comment>Jedná se o provider který implementuje tisky2&lt;br&gt; Podporované :
+&lt;ul&gt;
+&lt;li&gt;"bin\Fask.ModuleSql.dll" &lt;/li&gt;
+&lt;li&gt;"bin\Fask.ModulePohodaXML.dll" &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Providers.Provider_RFID" xml:space="preserve">
+    <value>Provider RFID</value>
+    <comment>Jedná se o provider který implementuje RFID&lt;br&gt; Podporované :
+&lt;ul&gt;
+&lt;li&gt;"bin\Fask.ModuleSql.dll" &lt;/li&gt;
+&lt;li&gt;"bin\Fask.ModulePohodaXML.dll" &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Providers.Provider_PaletovyListek" xml:space="preserve">
+    <value>Provider PaletovyListek</value>
+    <comment>Když bude potřeba je možno přenest s projektu Steinex a udelat providerovo...</comment>
+  </data>
+  <data name="Providers.Provider_Graphics" xml:space="preserve">
+    <value>Provider Graphics</value>
+    <comment>Jedná se o provider který implementuje graphics&lt;br&gt; Podporované :
+&lt;ul&gt;
+&lt;li&gt;"bin\Fask.ModuleSql.dll" &lt;/li&gt;
+&lt;li&gt;"bin\Fask.ModulePohodaXML.dll" &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Providers.Provider_Informations" xml:space="preserve">
+    <value>Provider Informations</value>
+    <comment>Jedná se o provider který implementuje informations&lt;br&gt; Podporované :
+&lt;ul&gt;
+&lt;li&gt;"bin\Fask.ModuleSql.dll" &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Image.ImagesUserName" xml:space="preserve">
+    <value>Uživatelské jméno</value>
+    <comment>Na modulu servis pri archivaci obrazku, se personalizuje uživatel s jménem a heslem, a nasledne po archivaci se spatky odpersnonalizje...&lt;br&gt;  &lt;font color="red"&gt;&lt;b&gt;Pouze když je vyplnene jmeno uživatele!&lt;/b&gt;&lt;/font&gt; </comment>
+  </data>
+  <data name="Image.ImagesUserPassword" xml:space="preserve">
+    <value>Heslo</value>
+    <comment>Na modulu servis pri archivaci obrazku, se personalizuje uživatel s jménem a heslem, a nasledne po archivaci se spatky odpersnonalizje...&lt;br&gt;  &lt;font color="red"&gt;&lt;b&gt;Pouze když je vyplnene jmeno uživatele!&lt;/b&gt;&lt;/font&gt; </comment>
+  </data>
+  <data name="Image.ImagesDomainName" xml:space="preserve">
+    <value>Jméno domény</value>
+    <comment>Na modulu servis pri archivaci obrazku, se personalizuje uživatel s jménem a heslem, a nasledne po archivaci se spatky odpersnonalizje...&lt;br&gt;  &lt;font color="red"&gt;&lt;b&gt;Pouze když je vyplnene jmeno uživatele!&lt;/b&gt;&lt;/font&gt; </comment>
+  </data>
+  <data name="PaletovyListek.PrinterName" xml:space="preserve">
+    <value>Tiskarna</value>
+    <comment>ve webmetode ProcessSoupis na Prodeji se nastavuje tiskarna, na kterou se ma tisknout</comment>
+  </data>
+  <data name="PaletovyListek.RemoveDiacritic" xml:space="preserve">
+    <value>Odstran diaktiriku</value>
+    <comment>Povolit na tisku Soupisu a Etikety odstranovat diakritiku</comment>
+  </data>
+  <data name="PaletovyListek.PrintEncodingPage" xml:space="preserve">
+    <value>Kodovani</value>
+    <comment>Nastavit kodovani tisku stranky na tisku etikety a soupisu</comment>
+  </data>
+  <data name="PaletovyListek.UserPassword" xml:space="preserve">
+    <value>Heslo</value>
+    <comment>Na modulu tisku se personalizuje uživatel s jménem a heslem, a nasledne po archivaci se spatky odpersnonalizje...&lt;br&gt;  &lt;font color="red"&gt;&lt;b&gt;Pouze když je vyplnene jmeno uživatele!&lt;/b&gt;&lt;/font&gt; </comment>
+  </data>
+  <data name="PaletovyListek.UserName" xml:space="preserve">
+    <value>Uživatelské jméno</value>
+    <comment>Na modulu tisku se personalizuje uživatel s jménem a heslem, a nasledne po archivaci se spatky odpersnonalizje...&lt;br&gt;  &lt;font color="red"&gt;&lt;b&gt;Pouze když je vyplnene jmeno uživatele!&lt;/b&gt;&lt;/font&gt; </comment>
+  </data>
+  <data name="PaletovyListek.DomainName" xml:space="preserve">
+    <value>Jméno domény</value>
+    <comment>Na modulu tisku se personalizuje uživatel s jménem a heslem, a nasledne po archivaci se spatky odpersnonalizje...&lt;br&gt;  &lt;font color="red"&gt;&lt;b&gt;Pouze když je vyplnene jmeno uživatele!&lt;/b&gt;&lt;/font&gt; </comment>
+  </data>
+  <data name="Licenses.Check_Application_BeginRequest" xml:space="preserve">
+    <value>Check Application BeginRequest</value>
+    <comment>Povolí v Global.asax pri BeginRequest kontrolu licence</comment>
+  </data>
+  <data name="Licenses.Show_Info_On_Terminal_Before_Expiration" xml:space="preserve">
+    <value>Ukaž info o exipraci </value>
+    <comment>Nastavuje hodnotu počet mesicu, kolik pred exipraci licence se to ma zobrazit na terminalu...</comment>
+  </data>
+  <data name="Licenses.Collecting_Stats" xml:space="preserve">
+    <value>Collecting Stats</value>
+    <comment>Povolí nebo zakaže počítaní počtu requestu na server, a za kadych N hodin to zaloguje emailem počet requestu...</comment>
+  </data>
+  <data name="Licenses.Collecting_Stats_Time_Hours" xml:space="preserve">
+    <value>Collecting Stats Time Hours</value>
+    <comment>Při povolenem počitani requestu je toto N, každych kolik hodin to ma odeslam email s pořtem requestu...</comment>
+  </data>
+  <data name="ConnectionString.FASKDB" xml:space="preserve">
+    <value>FASK DB</value>
+    <comment>Jedná se o Connection string na FASK Databázi na SQL serveru.</comment>
+  </data>
+  <data name="Logs.Errors" xml:space="preserve">
+    <value>Chyby</value>
+    <comment>Tento parametr se zatím nepoužívá, bude sloužit k vypnuti a zapnuti logovani chyb...</comment>
+  </data>
+  <data name="Logs.Prints" xml:space="preserve">
+    <value>Tisk</value>
+    <comment>Tento parametr slouží k povoleni/zakázání logovani tiskovych informaci...</comment>
+  </data>
+  <data name="Logs.Traces" xml:space="preserve">
+    <value>Stopování</value>
+    <comment>Tento parametr slouží k povoleni/zakázání stopování/ tracer informací....</comment>
+  </data>
+  <data name="Logs.ErrorsSendByMail" xml:space="preserve">
+    <value>Zasílat chyby emailem</value>
+    <comment>Tento parametr slouží k povoleni/zakázání zasílaní logovani do emailu...</comment>
+  </data>
+  <data name="Directories.Error" xml:space="preserve">
+    <value>Chyby</value>
+    <comment>Tento parametr nastavuje cestu pro ukladani chybovych souboru...</comment>
+  </data>
+  <data name="Directories.Print" xml:space="preserve">
+    <value>Tisky</value>
+    <comment>Tento parametr nastavuje cestu pro ukladani tiskovych uloh a souboru...</comment>
+  </data>
+  <data name="Directories.Processed" xml:space="preserve">
+    <value>Zpracováno</value>
+    <comment>Tento parametr nastavuje cestu pro ukladani zpracovaných souboru...</comment>
+  </data>
+  <data name="Directories.StatusObjects" xml:space="preserve">
+    <value>Status Objects</value>
+    <comment>Tento parametr nastavuje cestu pro ukladani tzv. Status objektú, ktere slouží pro ukladani stavu...</comment>
+  </data>
+  <data name="Directories.Images" xml:space="preserve">
+    <value>Obrázky</value>
+    <comment>Tento parametr nastavuje cestu pro ukladani obrazku...</comment>
+  </data>
+  <data name="Directories.Tracing" xml:space="preserve">
+    <value>Stopování</value>
+    <comment>Tento parametr nastavuje cestu pro ukladani tracking souboru...</comment>
+  </data>
+  <data name="Directories.TemplateDirectory" xml:space="preserve">
+    <value>Tiskové šablony</value>
+    <comment>Tento parametr nastavuje cestu kde jsou uloženy tiskové šablony...</comment>
+  </data>
+  <data name="Providers.Provider_Vyroba" xml:space="preserve">
+    <value>Provider Výroba</value>
+    <comment>Jedná se o provider který implementuje výrobu.&lt;br&gt; Podporované :
+&lt;ul&gt;
+&lt;li&gt;"bin\Fask.ModulePohodaXML.dll" &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Vyroba.ApplicationEndPass" xml:space="preserve">
+    <value>Heslo ukončení</value>
+    <comment>Zde je uvedené heslo pomoci ktereho je možno ukončit aplikaci na terminalu/ tabletu</comment>
+  </data>
+  <data name="Vyroba.AllowUserProductionOnMoreMachines" xml:space="preserve">
+    <value>Odvadeni na vice strojich</value>
+    <comment>Kontrolni funkce pro odvadeni vzhledem ke stroji. true - uzivatel muze soucasne odvadet na vice strojich, false - nemuze (defaultne se pouziva true)</comment>
+  </data>
+  <data name="Vyroba.ProcessProductionDataMainThread" xml:space="preserve">
+    <value>Odvadeni v hlavnem vlaknu</value>
+    <comment>Odvadeni pouze v hlavnim vlakne (kvuli navratove hodnote)</comment>
+  </data>
+  <data name="Providers.Provider_Baleni" xml:space="preserve">
+    <value>Provider Baleni</value>
+    <comment>Jedná se o provider který implementuje baleni.&lt;br&gt; Podporované :
+&lt;ul&gt;
+&lt;li&gt;"bin\Fask.ModuleSql.dll" &lt;/li&gt;
+&lt;li&gt;"bin\Fask.ModulePohodaXML.dll" &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+  <data name="Providers.Provider_Ukolovani" xml:space="preserve">
+    <value>Provider Ukolovani</value>
+    <comment>Jedná se o provider který implementuje ukolovani.&lt;br&gt; Podporované :
+&lt;ul&gt;
+&lt;li&gt;"bin\Fask.ModuleSql.dll" &lt;/li&gt;
+&lt;li&gt;"bin\Fask.ModulePohodaXML.dll" &lt;/li&gt;
+&lt;/ul&gt;</comment>
+  </data>
+</root>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="OdvadeniPrehled_Label">Odvádění Přehled</string>
+  <string name="OdvadeniPrehled_OK">OK</string>
+  <string name="OdvadeniPrehled_Storno">Zrušit</string>
+  <string name="OdvadeniPrehled_Label_Text">Odvádění Přehled</string>
+
+  <string name="OdvadeniPrehled_TW_dfVphSOPNUMBE">Příkaz:</string>
+  <string name="OdvadeniPrehled_TW_dfVphSOPDESC">Popis:</string>
+  <string name="OdvadeniPrehled_TW_dfVppItemnmbr">Operace:</string>
+  <string name="OdvadeniPrehled_TW_dfVppItemdesc">Název:</string>
+  <string name="OdvadeniPrehled_TW_dfVppVnditnum">Čár. kód:</string>
+  <string name="OdvadeniPrehled_TW_dfVppBarcodeP">Číslo oper.:</string>
+  <string name="OdvadeniPrehled_TW_dfTimeStateActual">Stav:</string>
+  <string name="OdvadeniPrehled_TW_dfLastSOPNUMBER">Příkaz před.:</string>
+  <string name="OdvadeniPrehled_TW_dfLastITEMDESC">Název:</string>
+  <string name="OdvadeniPrehled_TW_dfLastBarcodeP">Číslo oper.:</string>
+  <string name="OdvadeniPrehled_TW_dfLastQuantity">Množství:</string>
+  <string name="OdvadeniPrehled_TW_dfTimeStateLast">Stav:</string>
+  
+  <string name="OdvadeniPrehled_TW_SPACE">Jsem mezera :)</string>
+</resources>

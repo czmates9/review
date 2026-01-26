@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsRFID" targetNamespace="http://tempuri.org/DsRFID.xsd" xmlns:mstns="http://tempuri.org/DsRFID.xsd" xmlns="http://tempuri.org/DsRFID.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="data source=D:\_work_\_Vyvoj_Subversion_04_cipisek\MST_07\TERMINAL\MST_W\SqlCEDBs\tmp.sqlite" IsAppSettingsProperty="false" Modifier="Assembly" Name="SQLite [tmp]" ParameterPrefix="@" Provider="System.Data.SQLite" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PredlohaTableAdapter" GeneratorDataComponentClassName="PredlohaTableAdapter" Name="Predloha" UserDataComponentName="PredlohaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SQLite [tmp]" DbObjectName="CZMST_SE" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select countentries, sopnumbe, itemnmbr, ord, sum(qtyshppd) as mnozstvi, itemdesc, 0 as mnozstviRFID
+from czmst_se 
+where qtypack=0
+group by countentries, sopnumbe, itemnmbr, ord, itemdesc</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CountEntries" DataSetColumn="CountEntries" />
+              <Mapping SourceColumn="SOPNUMBE" DataSetColumn="SOPNUMBE" />
+              <Mapping SourceColumn="ITEMNMBR" DataSetColumn="ITEMNMBR" />
+              <Mapping SourceColumn="ORD" DataSetColumn="ORD" />
+              <Mapping SourceColumn="mnozstvi" DataSetColumn="mnozstvi" />
+              <Mapping SourceColumn="ITEMDESC" DataSetColumn="ITEMDESC" />
+              <Mapping SourceColumn="mnozstviRFID" DataSetColumn="mnozstviRFID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RfidTableAdapter" GeneratorDataComponentClassName="RfidTableAdapter" Name="Rfid" UserDataComponentName="RfidTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SQLite [tmp]" DbObjectName="CZMST_SI_RFID" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select countentries, documentnmbr as SOPNUMBE, itemnmbr, ord, count(*) as mnozstvi
+from czmst_si_rfid
+group by countentries, documentnmbr, itemnmbr, ord</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CountEntries" DataSetColumn="CountEntries" />
+              <Mapping SourceColumn="SOPNUMBE" DataSetColumn="SOPNUMBE" />
+              <Mapping SourceColumn="ITEMNMBR" DataSetColumn="ITEMNMBR" />
+              <Mapping SourceColumn="ORD" DataSetColumn="ORD" />
+              <Mapping SourceColumn="mnozstvi" DataSetColumn="mnozstvi" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsRFID" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsRFID" msprop:Generator_DataSetName="DsRFID" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Predloha" msprop:Generator_UserTableName="Predloha" msprop:Generator_RowDeletedName="PredlohaRowDeleted" msprop:Generator_RowChangedName="PredlohaRowChanged" msprop:Generator_RowClassName="PredlohaRow" msprop:Generator_RowChangingName="PredlohaRowChanging" msprop:Generator_RowEvArgName="PredlohaRowChangeEvent" msprop:Generator_RowEvHandlerName="PredlohaRowChangeEventHandler" msprop:Generator_TableClassName="PredlohaDataTable" msprop:Generator_TableVarName="tablePredloha" msprop:Generator_RowDeletingName="PredlohaRowDeleting" msprop:Generator_TablePropName="Predloha">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CountEntries" msprop:Generator_UserColumnName="CountEntries" msprop:Generator_ColumnVarNameInTable="columnCountEntries" msprop:Generator_ColumnPropNameInRow="CountEntries" msprop:Generator_ColumnPropNameInTable="CountEntriesColumn" type="xs:int" />
+              <xs:element name="SOPNUMBE" msprop:Generator_UserColumnName="SOPNUMBE" msprop:Generator_ColumnVarNameInTable="columnSOPNUMBE" msprop:Generator_ColumnPropNameInRow="SOPNUMBE" msprop:Generator_ColumnPropNameInTable="SOPNUMBEColumn" type="xs:string" />
+              <xs:element name="ITEMNMBR" msprop:Generator_UserColumnName="ITEMNMBR" msprop:Generator_ColumnVarNameInTable="columnITEMNMBR" msprop:Generator_ColumnPropNameInRow="ITEMNMBR" msprop:Generator_ColumnPropNameInTable="ITEMNMBRColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ORD" msprop:Generator_UserColumnName="ORD" msprop:Generator_ColumnVarNameInTable="columnORD" msprop:Generator_ColumnPropNameInRow="ORD" msprop:Generator_ColumnPropNameInTable="ORDColumn" type="xs:int" />
+              <xs:element name="mnozstvi" msdata:ReadOnly="true" msprop:Generator_UserColumnName="mnozstvi" msprop:Generator_ColumnVarNameInTable="columnmnozstvi" msprop:Generator_ColumnPropNameInRow="mnozstvi" msprop:Generator_ColumnPropNameInTable="mnozstviColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ITEMDESC" msprop:Generator_UserColumnName="ITEMDESC" msprop:Generator_ColumnVarNameInTable="columnITEMDESC" msprop:Generator_ColumnPropNameInRow="ITEMDESC" msprop:Generator_ColumnPropNameInTable="ITEMDESCColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="mnozstviRFID" msprop:Generator_UserColumnName="mnozstviRFID" msprop:Generator_ColumnVarNameInTable="columnmnozstviRFID" msprop:Generator_ColumnPropNameInRow="mnozstviRFID" msprop:Generator_ColumnPropNameInTable="mnozstviRFIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="zbyva" msdata:ReadOnly="true" msdata:Expression="mnozstvi - mnozstviRFID" msprop:Generator_UserColumnName="zbyva" msprop:Generator_ColumnVarNameInTable="columnzbyva" msprop:Generator_ColumnPropNameInRow="zbyva" msprop:Generator_ColumnPropNameInTable="zbyvaColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Rfid" msprop:Generator_UserTableName="Rfid" msprop:Generator_RowDeletedName="RfidRowDeleted" msprop:Generator_RowChangedName="RfidRowChanged" msprop:Generator_RowClassName="RfidRow" msprop:Generator_RowChangingName="RfidRowChanging" msprop:Generator_RowEvArgName="RfidRowChangeEvent" msprop:Generator_RowEvHandlerName="RfidRowChangeEventHandler" msprop:Generator_TableClassName="RfidDataTable" msprop:Generator_TableVarName="tableRfid" msprop:Generator_RowDeletingName="RfidRowDeleting" msprop:Generator_TablePropName="Rfid">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CountEntries" msprop:Generator_UserColumnName="CountEntries" msprop:Generator_ColumnVarNameInTable="columnCountEntries" msprop:Generator_ColumnPropNameInRow="CountEntries" msprop:Generator_ColumnPropNameInTable="CountEntriesColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SOPNUMBE" msprop:Generator_UserColumnName="SOPNUMBE" msprop:Generator_ColumnVarNameInTable="columnSOPNUMBE" msprop:Generator_ColumnPropNameInRow="SOPNUMBE" msprop:Generator_ColumnPropNameInTable="SOPNUMBEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ITEMNMBR" msprop:Generator_UserColumnName="ITEMNMBR" msprop:Generator_ColumnVarNameInTable="columnITEMNMBR" msprop:Generator_ColumnPropNameInRow="ITEMNMBR" msprop:Generator_ColumnPropNameInTable="ITEMNMBRColumn" type="xs:string" />
+              <xs:element name="ORD" msprop:Generator_UserColumnName="ORD" msprop:Generator_ColumnVarNameInTable="columnORD" msprop:Generator_ColumnPropNameInRow="ORD" msprop:Generator_ColumnPropNameInTable="ORDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="mnozstvi" msdata:ReadOnly="true" msprop:Generator_UserColumnName="mnozstvi" msprop:Generator_ColumnVarNameInTable="columnmnozstvi" msprop:Generator_ColumnPropNameInRow="mnozstvi" msprop:Generator_ColumnPropNameInTable="mnozstviColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

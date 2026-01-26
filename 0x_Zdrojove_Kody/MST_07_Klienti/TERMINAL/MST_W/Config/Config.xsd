@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Config" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified">
+	<xs:element name="Config">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Assembly" maxOccurs="1" minOccurs="0"/>
+				<xs:element name="Modules" maxOccurs="1" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Inventura1" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+									<xs:sequence>
+										<xs:element name="Allow" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="NameModul" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="ShowInMST" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="ZadaniLocncodePredSN" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="ZadaniLocncodeJednou" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="ZadaniLocncodePamatovatPosledni" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PolozkaNasnimatPouzeJednou" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="OnlineKontrola" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="OnlineTimeout" type="xs:int" maxOccurs="1" minOccurs="1" />
+										<xs:element name="ChunkTimeout" type="xs:int" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PouzitCiselnikSkladu" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PolozkyVyberJenScannerem" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="REZ1Nazev" type="xs:string" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="REZ1IsNumber" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="REZ1Mandatory" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="REZ2Nazev" type="xs:string" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="REZ2IsNumber" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="REZ2Mandatory" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                  </xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Inventura2" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+									<xs:sequence>
+										<xs:element name="Allow" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="NameModul" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="ShowInMST" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="DotazKancl" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="DotazLokace" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="DotazOsoba" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="DotazStredisko" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Prodej" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+									<xs:sequence>
+										<xs:element name="Allow" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="NameModul" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="PriceIsWithTax" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="PriceIsWithTaxEnable" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="OneOdberatelAutoSelect" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="RangeEnable" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="Range" minOccurs="1" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Deleted" minOccurs="0" maxOccurs="999999999">
+														<xs:complexType>
+															<xs:sequence />
+															<xs:attribute name="Number" type="xs:int" />
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="Prefix" type="xs:int" use="required" />
+												<xs:attribute name="Next" type="xs:int" use="required" />
+												<xs:attribute name="PrefixFormat" type="xs:string" use="required" />
+												<xs:attribute name="NextFormat" type="xs:string" use="required" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Price0IsWithTax" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="Price1IsWithTax" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="Price2IsWithTax" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="Price3IsWithTax" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="Price4IsWithTax" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="Price5IsWithTax" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="TypDokladu" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Strediska" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Sklad" type="xs:string" />
+										<xs:element name="DisponibilityCheck" type="xs:boolean" />
+										<xs:element name="Odberatel" type="xs:boolean" />
+										<xs:element name="Vnditnum2Serltnum" type="xs:boolean" />
+										<xs:element name="SkladID" type="xs:string" maxOccurs="1" minOccurs="1" />
+										<xs:element name="OneOdberatelOnly" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="RucniVolbaOdberatele" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="KontrolaStavuSkladu" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="StrediskoKPolozce" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="StrediskoJednoNaDavku" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="ZadaniLocncodePredSN" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PovolitZadaniLocncode" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="StrediskoText" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rez1Cislo" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rez2Cislo" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rez3Cislo" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rez4Cislo" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rez1Povinne" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rez2Povinne" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rez3Povinne" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rez4Povinne" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rez1Pamatovat" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rez2Pamatovat" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rez3Pamatovat" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rez4Pamatovat" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="FiltrCiselnikSkladu" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="FiltrCiselnikSkladuOnlyOne" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Mnozstvi1Auto" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="MnozstviREZ1Vypln" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="FindDefaultMJ" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="OnlineDetailPolozka" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="OnlinePocetKusu" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="OnlinePocetKusuSklad" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="GridViewRowCount" type="xs:int" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Pracovnici" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PracovniciJedenNaDavku" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PracovniciKPolozce" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PracovniciText" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PracovniciVyberJenScannerem" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PolozkyVyberJenScannerem" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PovolitNovouPolozku" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="DotazPridatNovaPolozka" type="xs:boolean" maxOccurs="1" minOccurs="1" />										
+										<xs:element name="PaletyPovolit" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="ZobrazovatListPolozek" type="xs:boolean" maxOccurs="1" minOccurs="1" />										
+										<xs:element name="FiltrDodavatele" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="OverovatPohyb" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="PovolitTisk" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="PovolitPrevodMeziSklady" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="PovolitZadaniMnozstviScannerem" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="TiskSoupisuPriUzavreniDavky" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="PovolitTiskSoupisu" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="TiskEtiketyPoPridaniZbozi" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="PredvyplneneMnozstviTiskuEtikety" type="xs:string" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="PredvyplneneMnozstviTiskuSoupisu" type="xs:string" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="PolozkyVyhledatPomociSarze" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="OverovatZdrojovouLokaci" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="OverovatCilovouLokaci" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="DoporuceneCiloveLokace" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="DoporucenePalety" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="AktualizaceZboziPredVyberemDavky" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="PouzitSklady" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="PozadovatHesloProOtevreniRozpracovaneDavky" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="ZobrazitDialogZadaniMnozstviParsovanehoKodu" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="PovolitExportCiselniku" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="NacistSkladIDOnline" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="PovolitCeny" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                  </xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Vydej" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+									<xs:sequence>
+										<xs:element name="Allow" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="NameModul" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="LocationQuestion" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="ItemTypeQuestion" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="TypyPoctyPalet" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="TypOznaceniPalety" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="MaxPocetDavek" type="xs:int" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PovolitPreplneniPolozky" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PocetDavekZobraz" type="xs:int" maxOccurs="1" minOccurs="1" />
+										<xs:element name="RezimCelePalety" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="DoplnitPrefix" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="DelkaKoduPalety" type="xs:int" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Prefix" type="xs:string" maxOccurs="1" minOccurs="1" />
+										<xs:element name="ZadaniLocncodePredSN" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="LocationPouzitCiselnik" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="LocationFiltrovatData" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="LocationAllowAutocommit" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PokracovatNaJinemTerminalu" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="HledaniCkAutoVyberPrvniNeuplne" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="EtiketaTiskPoVlozeniDotaz" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rozsireni1Rezerva2Zadavat" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rozsireni1Rezerva2Nazev" type="xs:string" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rozsireni1Rezerva2Default" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PovolitZmenuOdberatele" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PocetKusuNaSklade" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PocetKusu" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PolozkaDetail" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="ObjednavkaDetail" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="ZboziPouzitCiselnik" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PovolitRazeniVydejek" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="StahnoutNejvyssiPrioritu" type="xs:boolean" maxOccurs="1" minOccurs="1" />										
+										<xs:element name="PovolitSlucovaniDavek" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PovolitHromadneVyplnovani" type="xs:boolean" maxOccurs="1" minOccurs="1" />										
+										<xs:element name="PolozkyVyberJenScannerem" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="ZboziVyberJenScannerem" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="ZboziVyhledaniDleSloupce" type="xs:string" maxOccurs="1" minOccurs="1" />
+										<xs:element name="VyberTiskarnyDokladu" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="VyberPracovnika" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="DavkyVyberJenScannerem" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PovolitKontrolaSNPredloha" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="PovolitOcipovani" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="SkladPouzit" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="SkladID" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="GenerovaniPrikazuPozadovatSklad" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="PrevzitIDSkladuZCiselnikuSkladu" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="FiltrCiselnikSkladuOnlyOne" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="GenerovatDataPrikazuOnline" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="GenerovatNenalezenouVydejku" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                  </xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Prijem" minOccurs="0" maxOccurs="1">
+								<xs:complexType mixed="false">
+									<xs:sequence>
+                    <xs:element name="Allow" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="NameModul" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="Model" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="OverFillItem" type="xs:boolean" maxOccurs="1" minOccurs="1"/>
+										<xs:element name="DelkaKontrolySN" type="xs:int" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Datum" type="xs:dateTime" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PosledniGenSN" type="xs:int" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PocetCislicVlastniSN" type="xs:int" maxOccurs="1" minOccurs="1" />
+										<xs:element name="MaxDelkaZakazSN" type="xs:int" maxOccurs="1" minOccurs="1" />
+										<xs:element name="MaxPocetZakazSN" type="xs:int" maxOccurs="1" minOccurs="1" />
+										<xs:element name="ZadaniLocncodePredSN" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rez1Cislo" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rez2Cislo" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rez1Povinne" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rez2Povinne" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rez1Pamatovat" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="Rez2Pamatovat" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="ZobrazitZaznamu" type="xs:int" maxOccurs="1" minOccurs="1" />
+										<xs:element name="HledaniCkAutoVyberPrvniNeuplne" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="EtiketaTiskPoVlozeniDotaz" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="EtiketyTiskPredOdeslanimDotaz" type="xs:boolean" maxOccurs="1" minOccurs="1" />										
+										<xs:element name="PrijemTimeDialog" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PrijemTimeDialogInterval" type="xs:int" maxOccurs="1" minOccurs="1" />
+										<xs:element name="ObjednavkaDetail" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PolozkaDetail" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PolozkaKusuNaSklade" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PolozkaKusuPovolit" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="PolozkyVyberJenScannerem" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="SlucovaniDavek" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="OnlinePohyby" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="ViceTerminaly" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="ZmenaDataDokladu" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="GenerovaniPrikazuPozadovatSklad" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="GenerovaniSarze" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="OverovatLokaci" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="PovolitFoceniPriPridaniPolozky" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="DavkaOtevritIhnedPoStazeni" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="PovolitZalokovani" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="ZalokovaniPozadovatZadaniMnozstvi" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="DoporuceneLokace" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="KontrolovatSNsPredlohou" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="GenerovatNenalezenouPrijemku" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="PrevzitIDSkladuZCiselnikuSkladu" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="FiltrCiselnikSkladuOnlyOne" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="KontrolaVyplneniLokaciPredOdeslanim" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="NezrealizovanePrijemky" type="xs:boolean" maxOccurs="1" minOccurs="1" />                    
+                    <xs:element name="EtiketyTiskPoOtevreniDotaz" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="OnlineHmotnost" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="PovolitPrazdnouHodnotuSN" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="ZobrazitDialogZadaniSN" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="SkladPouzit" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="SkladID" type="xs:string" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="DoplneniVychoziLokacePovolit" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="ParsovaniCarovehoKoduPovolit" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="PovolitLokaceNaDavku" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="ZobrazitDialogZadaniMnozstviParsovanehoKodu" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="NacistSkladIDOnline" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="PovolitZmenuRezimuZadaniLokace" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+                  </xs:sequence>
+								</xs:complexType>
+							</xs:element>
+              <!--
+              <xs:element name="Prevod" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+									<xs:sequence>
+										<xs:element name="Allow" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="NameModul" type="xs:string" minOccurs="1" maxOccurs="1" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+              -->
+              <!--
+							<xs:element name="VydejVS" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+									<xs:sequence>
+										<xs:element name="Allow" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="NameModul" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="Cycles" minOccurs="1" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Cycle" minOccurs="1" maxOccurs="99">
+														<xs:complexType>
+															<xs:sequence />
+															<xs:attribute name="Name" type="xs:string" use="required" />
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="PrefixSkladVydejVS" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+              -->
+              <!--
+              <xs:element name="Zavoz" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+									<xs:sequence>
+										<xs:element name="Allow" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="NameModul" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="PrefixSkladZavoz" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+              -->
+							<xs:element name="Servis" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+									<xs:sequence>
+										<xs:element name="Allow" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="ShowInMST" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="TimeoutOnline" type="xs:int" minOccurs="1" maxOccurs="1" />
+										<xs:element name="TimeoutSynchronize" type="xs:int" maxOccurs="1" minOccurs="1" />
+                    <xs:element name="DavkoveZpracovani" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="DavkaOtevritIhnedPoStazeni" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="VyberOdberatelPovolit" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="VyberOkruhPovolit" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="AutoUpdateInterval" type="xs:int" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="AllowCamera" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="UkonceniStavuNavrat" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="ServisPozadovatPotvrzeniZmenyStavu" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="ServisPozadovatPotvrzeniZmenyCinnosti" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="ServisPrehratZvukPoVyberuMoznosti" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="ServisStatusBarZobrazitNazevStavu" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="ServisStatusBarZobrazitIdZdroje" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="ServisStatusBarZobrazitTypZdroje" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="ServisStatusBarZobrazitOznaceniZdroje" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="FiltrZobrazeniPovolit" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="AutomatickaZmenaStavuPovolit" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="SynchronizaceZdrojePoVyberuPovolit" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="PovolitOdeslaniDatNaPozadi" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="PovolitOdeslaniDatPoUkonceniZadavani" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                  </xs:sequence>                  
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Events" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+									<xs:sequence>
+										<xs:element name="Allow" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="ShowInMST" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="Online" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="OnlineTimeout" type="xs:int" maxOccurs="1" minOccurs="1" />
+										<xs:element name="OnlineConfirm" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+										<xs:element name="SynchronizationInterval" type="xs:int" maxOccurs="1" minOccurs="1" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Tasks" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+									<xs:sequence>
+										<xs:element name="Allow" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="ShowInMST" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+										<xs:element name="Timeout" type="xs:int" maxOccurs="1" minOccurs="1" />
+										<xs:element name="SynchronizationInterval" type="xs:int" maxOccurs="1" minOccurs="1" />
+										<xs:element name="NotifyDialogShowSeconds" type="xs:int" maxOccurs="1" minOccurs="1" />										
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+              <xs:element name="Expedice" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Allow" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="ShowInMST" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="NameModul" type="xs:string" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="SkladID" type="xs:string" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="PovolitParsovaniCK" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="PovolitPredvyplneniMnozstvi" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="ZobrazitZadaniSarzePouzeJednou" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="ZobrazitDialogZadaniMnozstviParsovanehoKodu" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="PovolitTiskPalet" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="PovolitTiskSoupisu" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>        
+				<xs:element name="Terminal" maxOccurs="1" minOccurs="0">
+          <xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID" type="xs:byte" minOccurs="1" maxOccurs="1" />
+							<xs:element name="Address" type="xs:string" minOccurs="1" maxOccurs="1" />
+							<xs:element name="ServiceTimeOut" type="xs:int" minOccurs="1" maxOccurs="1" />
+							<xs:element name="ScannerType" type="xs:string" minOccurs="1" maxOccurs="1" />
+							<xs:element name="RFIDScannerType" type="xs:string" minOccurs="1" maxOccurs="1" />
+							<xs:element name="RFIDAllowUHF" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+							<xs:element name="RFIDLoadAsciiTextData" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+							<xs:element name="RFIDPowerLevel" type="xs:int" minOccurs="1" maxOccurs="1" />
+							<xs:element name="Storage" type="xs:string" maxOccurs="1" minOccurs="1" />
+							<xs:element name="Log" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+              <xs:element name="LogAdvanced" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+							<xs:element name="ShowPanelButtons" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+							<xs:element name="SqlCe" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+              <xs:element name="LokalizacePovolit" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+              <xs:element name="LokalizaceVlastniPovolit" type="xs:boolean" maxOccurs="1" minOccurs="1" />
+              <xs:element name="LokalizaceZvolena" type="xs:string" maxOccurs="1" minOccurs="1" />
+              <xs:element name="ScrollDataGridUp" type="xs:string" maxOccurs="1" minOccurs="1" />
+							<xs:element name="ScrollDataGridDown" type="xs:string" maxOccurs="1" minOccurs="1" />
+							<xs:element name="ServerAccess" type="xs:string" maxOccurs="1" minOccurs="1" />
+							<xs:element name="ServerAccessUsername" type="xs:string" maxOccurs="1" minOccurs="1" />
+							<xs:element name="ServerAccessPassword" type="xs:string" maxOccurs="1" minOccurs="1" />
+							<xs:element name="ServerAccessDomain" type="xs:string" maxOccurs="1" minOccurs="1" />
+							<xs:element name="ServerAccessPreauthenticate" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+							<xs:element name="ServerAccessAllowRedirection" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+							<xs:element name="ServerAccessAllowDecompression" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+							<xs:element name="ServerAccessCertificatesTrust" type="xs:string" minOccurs="1" maxOccurs="1" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Strings" maxOccurs="1" minOccurs="0">
+          <xs:complexType>
+						<xs:sequence>
+							<xs:element name="EAN_L" type="xs:string" />
+							<xs:element name="EAN_S" type="xs:string" maxOccurs="1" minOccurs="1" />
+							<xs:element name="SN_L" type="xs:string" />
+							<xs:element name="SN_S" type="xs:string" />
+							<xs:element name="SW_L" type="xs:string" />
+							<xs:element name="SW_S" type="xs:string" />
+							<xs:element name="DV_L" type="xs:string" maxOccurs="1" minOccurs="1" />
+							<xs:element name="DV_S" type="xs:string" />
+							<xs:element name="PON_NAME" type="xs:string" />
+							<xs:element name="LC_NAME" type="xs:string" />
+							<xs:element name="REZ1_PRIJ_NAME" type="xs:string" maxOccurs="1" minOccurs="1" />
+							<xs:element name="REZ2_PRIJ_NAME" type="xs:string" maxOccurs="1" minOccurs="1" />
+							<xs:element name="REZ1_PROD_NAME" type="xs:string" maxOccurs="1" minOccurs="1" />
+							<xs:element name="REZ2_PROD_NAME" type="xs:string" maxOccurs="1" minOccurs="1" />
+							<xs:element name="REZ3_PROD_NAME" type="xs:string" maxOccurs="1" minOccurs="1" />
+							<xs:element name="REZ4_PROD_NAME" type="xs:string" maxOccurs="1" minOccurs="1" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

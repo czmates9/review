@@ -1,0 +1,5 @@
+29.6.2012 - Synchronizacni interval zmenit na [sekundy] ->> 10.7.2012 - JK Naimplementovano, vyzkouseno.
+1.8.2012 - Historie operaci (jedna historie pro vse do panelu) ->> Ok
+1.8.2012 - Vystredit dialogy pro zadavani scanovani ->> Ok
+1.8.2012 - Upravit hlasku na nesouhlasny material (Information, jen zprava a material) ->> Ok
+1.8.2012 - Vlozit dynamicky vkladane datasety dovnitr operace! ->> ok

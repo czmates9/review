@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsCZMSTCFG" targetNamespace="http://fask.cz/dsCZMSTCFG.xsd" xmlns:mstns="http://fask.cz/dsCZMSTCFG.xsd" xmlns="http://fask.cz/dsCZMSTCFG.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsCZMSTCFG" msdata:IsDataSet="true" msdata:Locale="" msprop:Generator_DataSetName="dsCZMSTCFG" msprop:Generator_UserDSName="dsCZMSTCFG" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMSTCFG" msprop:Generator_UserTableName="CZMSTCFG" msprop:Generator_RowDeletedName="CZMSTCFGRowDeleted" msprop:Generator_TableClassName="CZMSTCFGDataTable" msprop:Generator_RowChangedName="CZMSTCFGRowChanged" msprop:Generator_RowClassName="CZMSTCFGRow" msprop:Generator_RowChangingName="CZMSTCFGRowChanging" msprop:Generator_RowEvArgName="CZMSTCFGRowChangeEvent" msprop:Generator_RowEvHandlerName="CZMSTCFGRowChangeEventHandler" msprop:Generator_TablePropName="CZMSTCFG" msprop:Generator_TableVarName="tableCZMSTCFG" msprop:Generator_RowDeletingName="CZMSTCFGRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PNAME" msprop:Generator_UserColumnName="PNAME" msprop:Generator_ColumnPropNameInRow="PNAME" msprop:Generator_ColumnVarNameInTable="columnPNAME" msprop:Generator_ColumnPropNameInTable="PNAMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PVALUEBL" msprop:Generator_UserColumnName="PVALUEBL" msprop:Generator_ColumnPropNameInRow="PVALUEBL" msprop:Generator_ColumnVarNameInTable="columnPVALUEBL" msprop:Generator_ColumnPropNameInTable="PVALUEBLColumn" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="PVALUEIN" msprop:Generator_UserColumnName="PVALUEIN" msprop:Generator_ColumnPropNameInRow="PVALUEIN" msprop:Generator_ColumnVarNameInTable="columnPVALUEIN" msprop:Generator_ColumnPropNameInTable="PVALUEINColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PVALUECH" msprop:Generator_UserColumnName="PVALUECH" msprop:Generator_ColumnPropNameInRow="PVALUECH" msprop:Generator_ColumnVarNameInTable="columnPVALUECH" msprop:Generator_ColumnPropNameInTable="PVALUECHColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

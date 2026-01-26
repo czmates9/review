@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="nacteno_l.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="nacteno_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt, style=Bold</value>
+  </data>
+  <data name="nacteno_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 174</value>
+  </data>
+  <data name="nacteno_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 20</value>
+  </data>
+  <data name="nacteno_l.Text" xml:space="preserve">
+    <value>Nacteno:</value>
+  </data>
+  <data name="&gt;&gt;nacteno_l.Name" xml:space="preserve">
+    <value>nacteno_l</value>
+  </data>
+  <data name="&gt;&gt;nacteno_l.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nacteno_l.Parent" xml:space="preserve">
+    <value>panelData</value>
+  </data>
+  <data name="&gt;&gt;nacteno_l.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="nacist_l.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="nacist_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt, style=Bold</value>
+  </data>
+  <data name="nacist_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 154</value>
+  </data>
+  <data name="nacist_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 20</value>
+  </data>
+  <data name="nacist_l.Text" xml:space="preserve">
+    <value>Nacist:</value>
+  </data>
+  <data name="&gt;&gt;nacist_l.Name" xml:space="preserve">
+    <value>nacist_l</value>
+  </data>
+  <data name="&gt;&gt;nacist_l.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nacist_l.Parent" xml:space="preserve">
+    <value>panelData</value>
+  </data>
+  <data name="&gt;&gt;nacist_l.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="baleni_l.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="baleni_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt, style=Bold</value>
+  </data>
+  <data name="baleni_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 134</value>
+  </data>
+  <data name="baleni_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 20</value>
+  </data>
+  <data name="baleni_l.Text" xml:space="preserve">
+    <value>Balení: </value>
+  </data>
+  <data name="&gt;&gt;baleni_l.Name" xml:space="preserve">
+    <value>baleni_l</value>
+  </data>
+  <data name="&gt;&gt;baleni_l.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;baleni_l.Parent" xml:space="preserve">
+    <value>panelData</value>
+  </data>
+  <data name="&gt;&gt;baleni_l.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="CZ_CarKod_l.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="CZ_CarKod_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt, style=Bold</value>
+  </data>
+  <data name="CZ_CarKod_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 64</value>
+  </data>
+  <data name="CZ_CarKod_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 20</value>
+  </data>
+  <data name="CZ_CarKod_l.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;CZ_CarKod_l.Name" xml:space="preserve">
+    <value>CZ_CarKod_l</value>
+  </data>
+  <data name="&gt;&gt;CZ_CarKod_l.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CZ_CarKod_l.Parent" xml:space="preserve">
+    <value>panelData</value>
+  </data>
+  <data name="&gt;&gt;CZ_CarKod_l.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="ItemDesc_l.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="ItemDesc_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt, style=Bold</value>
+  </data>
+  <data name="ItemDesc_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 24</value>
+  </data>
+  <data name="ItemDesc_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 40</value>
+  </data>
+  <data name="ItemDesc_l.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;ItemDesc_l.Name" xml:space="preserve">
+    <value>ItemDesc_l</value>
+  </data>
+  <data name="&gt;&gt;ItemDesc_l.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ItemDesc_l.Parent" xml:space="preserve">
+    <value>panelData</value>
+  </data>
+  <data name="&gt;&gt;ItemDesc_l.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ItemNmbr_l.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="ItemNmbr_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt, style=Bold</value>
+  </data>
+  <data name="ItemNmbr_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 4</value>
+  </data>
+  <data name="ItemNmbr_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 20</value>
+  </data>
+  <data name="ItemNmbr_l.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;ItemNmbr_l.Name" xml:space="preserve">
+    <value>ItemNmbr_l</value>
+  </data>
+  <data name="&gt;&gt;ItemNmbr_l.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ItemNmbr_l.Parent" xml:space="preserve">
+    <value>panelData</value>
+  </data>
+  <data name="&gt;&gt;ItemNmbr_l.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="toolBarButtonNeshodne.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <metadata name="imageListExtended.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="imageListExtended.ImageSize" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="resource" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAIAEBAQAAAABAAoAQAAJgAAACAgEAAAAAQA6AIAAE4BAAAoAAAAEAAAACAAAAABAAQAAAAAAIAA
+        AAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAICAgADAwMAAAAD/AAD/
+        AAAA//8A/wAAAP8A/wD//wAA////AABwAAAAAAAAAHIiIiIiIgAAciAAACIiAAByIiIgAiIAAHIiIiAC
+        IgAAciIAAAIiAAByIAAAIiIAAHIgAiIiIgAAciACcAAAAAByIgAAAiBwAHIiInIiBwAAciIiciBwAABy
+        IiJyBwAAAHIiInBwAAAAd3d3dwAAAAAAAAAAAAAAwAEAAMABAADAAQAAwAEAAMABAADAAQAAwAEAAMAB
+        AADAAQAAwAEAAMADAADABwAAwA8AAMAfAADAPwAA//8AACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAA
+        AAAAAAAAEAAAABAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAICAgAAAAP8AAP8AAAD/
+        /wD/AAAA/wD/AP//AAD///8AAACIAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAAAAAAAAAAAAIgiIiIiIiIi
+        IiIiIgAAAACIIiIiIiIiIiIiIiIAAAAAiCIiAAAAAAAiIiIiAAAAAIgiIgAAAAAAIiIiIgAAAACIIiIi
+        IiIiAAAiIiIAAAAAiCIiIiIiIgAAIiIiAAAAAIgiIiIiIiIAACIiIgAAAACIIiIiIiIiAAAiIiIAAAAA
+        iCIiIgAAAAAAIiIiAAAAAIgiIiIAAAAAACIiIgAAAACIIiIAAAAAACIiIiIAAAAAiCIiAAAAAAAiIiIi
+        AAAAAIgiIgAAIiIiIiIiIgAAAACIIiIAACIiIiIiIiIAAAAAiCIiAAAiiAAAAAAAAAAAAIgiIgAAIogA
+        AAAAAAAAAACIIiIiAAAAAAAiIgCIAAAAiCIiIgAAAAAAIiIAiAAAAIgiIiIiIogiIiIAiAAAAACIIiIi
+        IiKIIiIiAIgAAAAAiCIiIiIiiCIiAIgAAAAAAIgiIiIiIogiIgCIAAAAAACIIiIiIiKIIgCIAAAAAAAA
+        iCIiIiIiiCIAiAAAAAAAAIgiIiIiIogAiAAAAAAAAACIIiIiIiKIAIgAAAAAAAAAiIiIiIiIiIgAAAAA
+        AAAAAIiIiIiIiIiIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAD8AAAA/AA
+        AAPwAAAD8AAAA/AAAAPwAAAD8AAAA/AAAAPwAAAD8AAAA/AAAAPwAAAD8AAAA/AAAAPwAAAD8AAAA/AA
+        AAPwAAAD8AAAA/AAAA/wAAAP8AAAP/AAAD/wAAD/8AAA//AAA//wAAP/8AAP//AAD////////////w==
+</value>
+  </data>
+  <data name="resource1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAIAEBAQAAAABAAoAQAAJgAAACAgEAAAAAQA6AIAAE4BAAAoAAAAEAAAACAAAAABAAQAAAAAAIAA
+        AAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAICAgADAwMAAAAD/AAD/
+        AAAA//8A/wAAAP8A/wD//wAA////AABwAAAAAAAAAHmZmZmZmQAAeZCZmQmZAAB5kJmZCZkAAHmQmZAJ
+        mQAAeZCZAAmZAAB5kJAACZkAAHmQAAkJmQAAeZAAcAAAAAB5kAl5CZBwAHmZmXmZBwAAeZmZeZBwAAB5
+        mZl5BwAAAHmZmXBwAAAAd3d3dwAAAAAAAAAAAAAAwAEAAMABAADAAQAAwAEAAMABAADAAQAAwAEAAMAB
+        AADAAQAAwAEAAMADAADABwAAwA8AAMAfAADAPwAA//8AACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAA
+        AAAAAAAAEAAAABAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAICAgAAAAP8AAP8AAAD/
+        /wD/AAAA/wD/AP//AAD///8AAACIAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAAAAAAAAAAAAIiZmZmZmZmZ
+        mZmZmQAAAACImZmZmZmZmZmZmZkAAAAAiJmZAJmZmZkAmZmZAAAAAIiZmQCZmZmZAJmZmQAAAACImZkA
+        mZmZmQCZmZkAAAAAiJmZAJmZmZkAmZmZAAAAAIiZmQCZmZkAAJmZmQAAAACImZkAmZmZAACZmZkAAAAA
+        iJmZAJmZAAAAmZmZAAAAAIiZmQCZmQAAAJmZmQAAAACImZkAmQAAAACZmZkAAAAAiJmZAJkAAAAAmZmZ
+        AAAAAIiZmQAAAACZAJmZmQAAAACImZkAAAAAmQCZmZkAAAAAiJmZAAAAiAAAAAAAAAAAAIiZmQAAAIgA
+        AAAAAAAAAACImZkAAJmImQCZmQCIAAAAiJmZAACZiJkAmZkAiAAAAIiZmZmZmYiZmZkAiAAAAACImZmZ
+        mZmImZmZAIgAAAAAiJmZmZmZiJmZAIgAAAAAAIiZmZmZmYiZmQCIAAAAAACImZmZmZmImQCIAAAAAAAA
+        iJmZmZmZiJkAiAAAAAAAAIiZmZmZmYgAiAAAAAAAAACImZmZmZmIAIgAAAAAAAAAiIiIiIiIiIgAAAAA
+        AAAAAIiIiIiIiIiIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAD8AAAA/AA
+        AAPwAAAD8AAAA/AAAAPwAAAD8AAAA/AAAAPwAAAD8AAAA/AAAAPwAAAD8AAAA/AAAAPwAAAD8AAAA/AA
+        AAPwAAAD8AAAA/AAAA/wAAAP8AAAP/AAAD/wAAD/8AAA//AAA//wAAP/8AAP//AAD////////////w==
+</value>
+  </data>
+  <data name="&gt;&gt;toolBarExtended.Name" xml:space="preserve">
+    <value>toolBarExtended</value>
+  </data>
+  <data name="&gt;&gt;toolBarExtended.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBarExtended.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;toolBarExtended.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Note_l.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="Note_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt, style=Bold</value>
+  </data>
+  <data name="Note_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 104</value>
+  </data>
+  <data name="Note_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 20</value>
+  </data>
+  <data name="Note_l.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;Note_l.Name" xml:space="preserve">
+    <value>Note_l</value>
+  </data>
+  <data name="&gt;&gt;Note_l.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Note_l.Parent" xml:space="preserve">
+    <value>panelData</value>
+  </data>
+  <data name="&gt;&gt;Note_l.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="SERLTNUM_l.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="SERLTNUM_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt, style=Bold</value>
+  </data>
+  <data name="SERLTNUM_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 84</value>
+  </data>
+  <data name="SERLTNUM_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 20</value>
+  </data>
+  <data name="SERLTNUM_l.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;SERLTNUM_l.Name" xml:space="preserve">
+    <value>SERLTNUM_l</value>
+  </data>
+  <data name="&gt;&gt;SERLTNUM_l.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SERLTNUM_l.Parent" xml:space="preserve">
+    <value>panelData</value>
+  </data>
+  <data name="&gt;&gt;SERLTNUM_l.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelData.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panelData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="panelData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>262, 194</value>
+  </data>
+  <data name="&gt;&gt;panelData.Name" xml:space="preserve">
+    <value>panelData</value>
+  </data>
+  <data name="&gt;&gt;panelData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelData.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelData.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.FormFactorShadowProperty" xml:space="preserve">
+    <value>WEBPAD</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Skin" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>262, 317</value>
+  </data>
+  <data name="&gt;&gt;toolBarButton1.Name" xml:space="preserve">
+    <value>toolBarButton1</value>
+  </data>
+  <data name="&gt;&gt;toolBarButton1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonNeshodne.Name" xml:space="preserve">
+    <value>toolBarButtonNeshodne</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonNeshodne.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imageListExtended.Name" xml:space="preserve">
+    <value>imageListExtended</value>
+  </data>
+  <data name="&gt;&gt;imageListExtended.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SejmiKodInfoForm4</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Microsoft.CompactFramework.Design.UnsafeForm, Microsoft.CompactFramework.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

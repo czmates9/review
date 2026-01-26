@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<Settings>
+  <Printers>
+    <!--
+    <Printer name="Label 300" type="A5" height="827" width="583"/>
+    <Printer name="Label 300" type="A4" height="1169" width="827"/>
+    -->
+    <Printer name="HP Brno fakturace" type="A4" height="1169" width="827"/>
+  </Printers>
+</Settings>

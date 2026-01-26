@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComPortSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ComPortName>COM3</ComPortName>
+  <ComPortBitsPerSecond>9600</ComPortBitsPerSecond>
+  <ComPortDataBits>8</ComPortDataBits>
+  <ComPortParity>None</ComPortParity>
+  <ComPortStopBits>One</ComPortStopBits>
+  <ComReadTimeOut>100</ComReadTimeOut>
+</ComPortSettings>

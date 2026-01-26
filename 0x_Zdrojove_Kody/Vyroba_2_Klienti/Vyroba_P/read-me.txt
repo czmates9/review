@@ -1,0 +1,645 @@
+[25.4.2024] v4.74 MaR
+=================
+- uprava form "o aplikaci"
+- zvyseni verze
+
+[23.4.2024] v4.73 MaR
+=================
+- Mereni Papouch pri vyrobe, konfiguracne nastavitelne
+- zvyseni verze
+
+
+[24.10.2024] v4.72 MaR
+=================
+- Vyrobky a Materialy cislo skladu dohledani a overeni z tabulky CZMST093, propis podle issue #108
+-povoleni taskbar pro pouzivani prepinani aplikaci
+-kiosk mod, vypnuti pomoci konfigurace
+- zvyseni verze
+
+[22.10.2024] v4.71 MaR
+=================
+- Vyrobky a Materialy propis cisla skladu, dohledani a overeni z tabulky CZMST093
+- zvyseni verze
+
+[2.9.2024] v4.70 MaR
+=================
+- podbarveni formulare na odvod materialy
+- ukonceni aplikace bez hesla na zaklade konfig. parametru
+- zvyseni verze
+
+[21.2.2024] v4.69 MaR
+=================
+- obrazovky vstupu materiálů
+- funkce on-line pro kontrolu šaže oproti S4S
+- pridan vstup pro scaner material car.kod
+- zvyseni verze
+
+[14.2.2024] v4.68 MaR
+=================
+- designove doplnky podle JaS
+- zvyseni verze
+
+[9.2.2024] v4.67 MaR
+=================
+- overovani sarze na zaklade procedury v DB
+- konfigurace doplnena o connection string do DB a zaskrkavatko over sarzi
+- zvyseni verze
+
+
+[1.2.2024] v4.67 MaR
+=================
+- dopocet materialu rozhodovani o zapisu sarzi, 2dial. okna, parametr v nastaveni
+- zvyseni verze
+
+[23.1.2024] v4.66 MaR
+=================
+- design dialogu na cele okno
+- oprava pocty materialu na desetinnna mista, pozor koef. musi byt s teckou, jinak se bere s carkou jako miliony
+- zvyseni verze
+
+
+[19.1.2024] v4.65 MaR
+=================
+-scaner vyber materialu, odchytavani vyjimky v invoke
+- zvyseni verze
+
+
+[11.1.2024] v4.64 MaR
+=================
+-Pokud yadám materiál částečně, už ho nedopočítávat.
+-Před dopočtem se dotázat: "Dopočíst materiály" Ano/ Ne
+-Přidat do konfigurace parametr: "Pokud zbývá jeden materiál, automaticky vybrat" True/False
+- nezobrazovat material, ktery je uz zcela vydan
+- konfiguracne dopocist nevydany material
+- sarze v konfiguraci - konstanta
+- zvyseni verze
+
+
+[9.1.2024] v4.63 MaR
+=================
+
+- nevydano material,priznak, presto vyplnit
+- preplneni materialu na zaklade dopoctu zbyvajiciho poctu
+- zvyseni verze
+
+[5.1.2024] v4.62 MaR
+=================
+
+- dopocet materialu, novy formular nad tabulkou Vyroba_TP, pocet zbyvajicich materialu metoda ziskana z datagridu
+- zvyseni verze
+
+
+[20.12.2023] v4.61 MaR
+=================
+
+- vyber materialu, novy formular nad tabulkou Vyroba_TP
+- zvyseni verze
+
+
+[25.04.2023] v4.6 MaR
+=================
+
+- vytvorena verze E
+
+*********************************************************************************************************
+
+
+[09.03.2023] v4.5 TaD
+=================
+- Rozšíření struktur tabulek
+  - CZPRO_VPP
+  - CZPRO_VPH
+  - Production
+
+- Vytvořena + přidana logika pro zadavani REZ hodnot + lokalizace okna
+
+
+[21.04.2022] v4.4 MaR
+=================
+-logika dotisk stitku
+- odvadeni - prihlaseni bez hesla
+
+[04.04.2022] v4.3 MaR
+=================
+-logika vyber VP po zadani cisla polozky
+- uprava synchronizace dat
+
+
+[04.03.2022] v4.2 MaR
+=================
+- rozsireno o projekt Palety_SSCC s SQLite
+- pridano do konfigurace zapnuti generovani SSCC a nastaveni tisku
+- v odvadeni vyroby pridana logika pro tisk paletových štítku a pouziti automatickeho generovani SSCC
+- rozsirena struktura production
+
+
+[21.09.2021] v4.1 TaD
+=================
+-Preneseni projektu do Visual Studia 2019
+-Odtraneni projektu MTOM na stahovani a odesilani... nepoužival se...
+-Nahrazeni původniho Fask.Logging za nový sdílení Fask.Logging
+-Predelano na SQLite
+
+-Sprovozneno a testvano pro AGRO
+
+[19.03.2019] v4.0 TaD
+=================
+
+-Vytvořeni Vyroba V4.0
+
+
+[23.07.2018] v3.65 TaD
+=================
+-Upravene pri mazani posledni operace pri odvadeni, Ked neni zadan v konfiguraci stroj tak to vyžaduje pred odvadenim zadat stroj
+-tento zadany stroj se pak použiva pri smazani. a to iste i uživatel
+
+
+
+[16.07.2018] v3.64 TaD
+=================
+-Upravena ukladani Gatagridview Ukolovani(odesilani emailu)
+-moznost pak v xml souboru menit vyzor tabulky
+
+
+[3.07.2018] v3.63 TaD
+=================
+-pridana moznost napsat poznamku ktera bude odeslana v emailu servisakovy
+-pred odeslanim emailu se musi uzivatel prokazat ID anebo uz musi byt prihlasen
+-pridana do settings.xml položka predmet pro sms a email verzi
+
+
+[26.06.2018] v3.62 TaD
+=================
+-Upravene chyby po TPr
+-Vytvoreni formu "Ukolovani" ktery obsahuje seznam v3ech nadefinovanych servisnich techniku
+-pridana nova tabulka ktera definuje seznam servidaku a kontakty na nich
+-po vybrani servisaka a stlaceni OK se odesel bud email nabo email jak SMS.
+
+
+[19.06.2018] v3.61 TaD
+=================
+-Uprava stahovani pomoci zipovani a requestu na server
+
+
+[12.06.2018] v3.60 TPr
+=================
+Korekce
+- v korekci přidaný nový textbox pro description
+
+[22.11.2017] v3.59 JiS
+=================
+Konfigurace
+- novy parametr: "Vyžadovat zadání časů korekcí"
+	=> potlaci zadavani korekci ...
+- novy parametr: "Zobrazovat potvrzení operace"
+	=> potlaci okno prehledu potvrzeni opearace
+		:: dusledek je ten, ze se nezadavaji korekce
+
+Dohledavani posledniho odvodu z lokalu
+- autonomni rezim
+	=> dohledavani posledniho odvodu(vyroby, korekce) se deje z InternalState.Production
+	=> data se vzdy ukladaji sem ... 
+
+[7.11.2017] v3.58 TaD
+=================
+-upravene pořadi v StopOdvod: Mnozstvi, Sklad, Lokace, Korekce
+
+[7.11.2017] v3.57 TaD
+=================
+-pridan konfuguracne vypnuti overovani VS pri odmazavani prikazu
+
+
+[2.11.2017] v3.56 TaD
+=================
+
+-upraven spusob cetni dat z funcke na sql serveru
+-osetrene ruzne chybove stavy
+
+[26.10.2017] v3.55 TaD
+=================
+- v Data/InternalState.sdf pridanz pouye odkaz na soubor ktery je presunut do serveru
+
+v main_load pridana kontrola zda v zarizeni suu sobory InternalState.sdf a Production.sdf
+-pokud se zde nenachazeji tak se prazne a aktualne verze stahnou z serveru
+pridane webreference na prepare metody na strane serveru
+
+v3.54 24.10.2017 TaD
+-------------------
+FormConfig: pribudly možnosti konfiguračne
+            -Zobrazovat potvrzení Operace(checkbox)
+            -Zobrazovat přehled(checkbox)
+            -Dotazovat se na nečinnost(checkbox)
+
+            -Povolit Zrušení Operace(checkbox)
+            
+            -ID UEvent zruseni odvod(textbox)
+            -ID UEvent zruseni priprava(textbox)
+
+            -Zadávat použité materiály :
+                                *Zadávat použité materiály výrobku(checkbox)
+                                *Před výrobou(checkbox)
+                                *V prúběhu výroby(checkbox)
+                                *Po výrobě(checkbox)
+            -Sklady a Lokace:
+                                *Zadávat cílový sklad(checkbox)
+                                *Cílový sklad ID:(textbox)
+                                *Zadávat cílovou lokaci(checkbox)
+                                *Cílová lokace ID:(textbox)
+                                
+            -Sklady a lokace Materialy:
+                                *Zadávat cílový sklad(checkbox)
+                                *Cílový sklad ID:(textbox)
+                                *Zadávat cílovou lokaci(checkbox)
+                                *Cílová lokace ID:(textbox)
+
+FormInputQuantity: zmena c'tor bez parametru z private na public z duvodnu vytvoreni instance v FormMaterialy
+
+FormOdvadeni: 
+-enum TIMESTATE rozsireno o Unknown a pribudly konkretne hodnoty
+
+-novy button "Zrušit poslední operaci" :
+-metoda DeleteOperace(); 
+
+
+umistena v FormOdvadeniMethods.cs
+-rozhodovaci logika podle predchoziho stavu
+-pomoci TIMESTATE se pak urci dalsi kroky
+-zruseni Odvodu nebo pripravy
+-vytvorene metody :DeletePriprava() 
+*na smazani pripravy tak ze se prida do TIMEPREPSTOP = TIMEPREPSTART + 10ms
+*pridana poznamka o smazani
+-vytvorene metody :DeleteOdvod() 
+*na smazani pripravy tak ze se prida do TIMESTOP = TIMESTART + 10ms
+*pridana poznamka o smazani
+
+-StopOdvod rozšireny o jednu hodnotu pruduction sources data table
+-StopOdvod pridane zadavani skladu a lokaci, materialu
+
+-pridane odstranovani odvodu a pripravy
+
+FormOperacePotvrzeni2:
+-pridane tlačitko na zadavani materialu(konfigurovatelne)
+-pridany resize ktery upravuje tlačitka podle velkosti oknaa zda je rozrazene pro materialy nebo ne
+
+Settings.cs
+-pridane globalne premenne pro konfiguraci viz više.
+-ukladaji se do xml souboru podle key
+                                
+-pridana WebReference ve WebServiceVyroba
+-VyrobaDataSet_StatistikaOdvadeni.xsd
+-webmetoda Production_Filter ktera ma vstupny parameter Vyroba_P.WebServiceVyroba.FiltersHistory(zadane filtry)
+
+Pridane Formy:
+*Odvadeni/FormHeslo  - slouži pri dazadani UserID a hesla pro potvrzeni, overuje zda je uzivatel VS
+*Odvadeni/FormOdvadeniPrehled - slouzi jak prehled informaci u odvodu
+*Odvadeni/Materialy/Formaterialy - slouži na pridavani materialu
+*Odvadeni/Materialy/FormaterialyVyber - slouza pri vyber materialu když je na vic skladoch
+
+*Forms/FormFiltr - slouži pro zobrazeni vyfiltrovanych udaju statistik prebrane z kom. serveru a ten z sql funkce
+
+Pridany graficky privek DataField pro zobrazeni hodnot v prehledu
+
+ucDataViews/Historie/ucHistory.cs
+-pridane tlacitko "Statistika Odvádění"
+-zobrazuje FormFiltr
+-pridana defultna hodnota ID pracovnika predavana do online metody a do funkce na serveru
+
+-v datagrigview upraveny stloupce pocet kusu a korekce casu v min zobrazeno 1 desetinne cislo
+
+              
+                    
+v3.53 25.1.2017 JiS
+-------------------
+Labara - vice uprav 
+TODO: doplnit informace pred commit a po otestovani ...
+
+
+v3.52 6.12.2016 JiS
+-------------------
+Prehled Historie
+- uprava zobrazeni casu statusbar : zobrazeni HH:mm:ss	
+
+v3.51 29.11.2016 JiS
+-------------------
+Prehled Historie
+- nova webova metoda ProductionHistoryFilter
+- nově jsou dle konfigurace dotahována data ze serveru, pokud je to požadováno. Jsou zohledněny požadované filtry
+- doplněn filtr na stroj
+- doplněn filtr "přednastavit" : nastavení se neukládá, tedy se pamatuje pouze v rámci spuštěné instance. Po ukončení a znovu spuštění aplikace je ve výchozím nastavení dokud nebude provedena změna uživatelem	
+- optimalizace nastavení filtrů pohledu
+- upraveno zobrazení hodnot v status baru
+	:: upraveno zobrazení aktivních filtrů : jsou zobrazeny aktuální nastavené hodnoty pro jednotlivé filtry
+	:: probíhá výpočet časů dle aktivních filtrů : data jsou vypočítána ze zobrazených hodnot v gridu
+
+ucTime
+- vlastnost pro formatovani casu
+- vlastnost pro nastaveni velikosti komponenty
+
+Konfigurace
+- oprava nastaveni casovych intervalu
+- Settings.ModulPrehledPocetHodinHistorieServer : udává maximální počet hodin od aktuálního času zpět, která budou vrácena ze serveru, pokud není nastaven časový interval...
+
+Formuláře
+- ID Stroje : předvyplnění hodnoty aktuálním nastaveným strojem, 
+- ID Pracovníka : předvyplnění hodnoty aktuálním přihlášeným uživatelem
+
+
+v3.50 10.11.2016 JiS
+-------------------
+Korekce
+- novy parametr konfigurace : "Povolit zadání Korekcí typu ÚSPORA"
+	=> default hodnota : false(=nezobrazovat dialog zadani korekce uspora a automaticky vlozit usporu)
+	=> typu Uspora :  Pokud neni nastaveno rucni zadani korekce uspora, tak se automaticky vlozi 1. vyskyt uspory bez zobrazeni okna prehledu odvodu
+
+v3.49 12.10.2016 JiS
+-------------------
+- oprava vypoctu korekci a celkoveho casu v ruznych rezimech odvodu Start[0] x Start/Stop, Start/Start/Stop[1,2]
+- zobrazeni casu v ruznych formatech a sirka pole (pouze v Settings.xml)
+
+v3.48 27.9.2016 JiS
+-------------------
+- prihlasovani : uprava prihlaseni pracovnika
+- odhlasovani : pri odhlasovani je mozne zobrazit prehled pro uzivatele od prihlaseni do okamziku odhlaseni
+
+v3.47 27.9.2016 JiS
+-------------------
+- seznam korekci pri odvodu rozsiren o dateeve-cas porizeni korekce
+- vypocet korekci rozsiren o celkovy cas -K a +K a zobrazeni v prehledu odvodu casu
+- pri prechodu z -K do +K se znovu nacte seznam korekci
+- uprava ukladani korekci
+	=> -K : ukladaji se vzdy v intervalu <PAU(posledni akce uzivatele), PAU+delk korekce>
+		tyto korekce mohou presahnout delku trvani operace
+	=> +K : ukladaji se postupne za sebe od zahajeni operace: [<ZOn, ZOn+delka>*]
+- opraveno zobrazovani seznamu korekci, v pripade zadani vice korekci
+- automaticke posunuti zahajeni operace k posledni akci uzivatele pri prekroceni nastaveneho casu "UserMaxTimeSpanNoAction"
+- nastaveni spravneho casu akce dateeve pro jednotlive zaznamy v Production
+- korekce jsou vkladany prioritne pred koncem odvodu
+- automaticke zobrazovani dialogu zadani korekci, pokud jsou vyzadovany
+
+
+v3.46 2.9.2016 JiS
+------------------
+- oprava zohledneni pripravneho casu pri start/stop
+- uprava zadavani -Korekci
+- oprava synchronizace odvodu
+- pridana komponenta zobrazeni casu na hlavnim formulari vpravo nahore
+- vynucene zadani korekci nove parametry [%, cas]
+
+
+v3.44 2.9.2016 JiS
+------------------
+- korekce hlidani +Korekci
+- rozsireni o typ korekce (0-zpozdeni, 1-uspora)
+
+v3.44 2.9.2016 JiS
+--------------------
+- rozsirene logovani v debug verzi
+- odstraneni diakritiky u konfiguracniho parametru 'SouhrnPoStartzakazky'
+- flexiblemessagebox.show - doplneno o vazbu na aktualni formular aby bylo zobrazeno nad oknem v kontextu aplikace(formulare)
+- rozsireni o pozadavek na zadani korekce ...
+
+
+v3.43 2.12.2015 PeV
+--------------------
+- uprava status baru na uvodni obrazovce (zmenseni pisma a uprava formatovani datumu)
+- oprava cest k konfiguracnim souborum (Scanner.xml a TiskSablony.xml)
+- nacitani konfigurace scanneru dano do using() kvuli ukoncovani streamwriteru, streamreaderu
+- pridana virtualni klavesnice do konfigurace scanneru
+- uprava FlexibleMessageBoxu, aby nedochazelo k pretekani textu v rezimu aplikace na vysku
+- do adresare Extensions byl pridan formular MessageTest, ktery obsahuje inicializaci FlexibleMessageBoxu (kvuli testum)
+
+v3.42 23.9.2015 PeV
+--------------------
+- konfiguracni moznost "Sledovat castecne odvody" jiz nema vliv na StartStartStop (timemode 2)
+- pridana moznost zahajit opetovne odvadeni ihned po dokonceni StartStop (timemode 1) - probehne zobrazeni dotazu a pri potvrzeni dojde k pridani noveho zahajovaciho zaznamu do Production
+
+v3.41 13.8.2015 PeV
+--------------------
+- do konfigurace pridana moznost zmenit typ zadavani korekci
+- defaultne je navolen jednorazovy typ korekci (zacatek i konec)
+
+v3.40 11.8.2015 PeV
+--------------------
+- rozsirene logovani pri zahajovani prestavky probiha pouze u debug verze
+
+v3.39 23.7.2015 PeV
+--------------------
+- pridana trida CustomVyroba, ktera nacita data ze serveru pomoci Json a konvertuje zpet do datasetu
+- do konfigurace aplikace pridana moznost povoleni odvadeni s mnozstvim 0
+
+v3.38 20.7.2015 PeV
+--------------------
+- pridano logovani hibernace, sleep modu a probuzeni
+- pri zahajovani prestavky se pridavaji primarni klice (kvuli merge)
+
+v3.37 14.7.2015 PeV
+--------------------
+- do vypisu neukonceneho odvadeni vyroby pridana konfiguracni moznost zobrazit data pouze ke stroji a zobrazit data pouze k aktualne prihlasenemu uzivateli 
+
+v3.36 26.6.2015 PeV
+--------------------
+- scanner se jiz vypina po potvrzeni korekce (jak vazane tak nevazane k vyrobe)
+
+v3.34 21.5.2015 PeV
+--------------------
+- prepsana trida DatabaseActions, ktera slouzi k ukladani do Production
+- do ucHistory pridan filtr na nedokoncene zakazky
+- pri nacitani ucHistory dojde k promazani dat starsich nez X dnu (v konfiguraci aplikace je mozne nastavit pocet dnu)
+- je mozno ukoncit zakazku z jineho stroje + pridan dialog, ktery upozorni uzivatele, zdali je to mozne a pripadne ze ukoncuje zakazku z jineho stroje (umozneni ukonceni zakazky je mozne konfiguracne zapnout/vypnout, zobrazeni dialogu ne)
+- pridana lokalni cache do databaze InternalState, ktera uchovava posledni zakazku/soubeh zakazek a korekci k uzivateli
+- odvadeni nadop se nekontroluje na neodeslana data, ale na lokalni cache
+- nadop - pri kontrole neukoncenych zakazek se programove pridava primary key na guid, aby merge neduplikoval zaznamy (pokud nyni dojde k editaci neukoncene zakazky na serveru a podari se pri online kontrole stahnout tyto data, vyuzije se zaznam ze serveru ... podle GUID)
+- odstranen z datasetu Production sloupec "id"
+
+v3.33 29.4.2015 PeV
+--------------------
+- ucOpenedProduction pridan filtr na BarcodeP (z tabulky CZPRO_VPH)
+- oprava auto update intervalu a filter reset intervalu u ucOpenedProduction (vyuzival konfiguraci z ucHistory)
+- konfigurace Labara - pro ukladani odvadeni do databaze se jiz nepouziva dataset (problem vytizeni 1 GB RAM)
+- start/stop pripravy nyni prirazuje SOUBEHGUID (odlisny od pripadneho start/stop odvodu)
+- ucOpenedProduction take zobrazuje neukoncenou pripravu
+- Cas zahajeni/ukonceni pripravy v ucOpenedProduction a ucHistory zobrazuje sekundy
+- v konfiguracnim souboru datagridviewu je mozne prejmenovat hlavicky sloupcu
+- flexible message box jiz nezobrazuje pouze jeden radek
+- u flexible message boxu je mozne zmenit barvu pozadi
+- barevne odliseni zahajeni zakazky/pripravy
+
+v3.31 17.4.2015 PeV
+--------------------
+- pri startu aplikace se kontroluje, zdali existuje ProductionHist.sdf a pokud ne, dojde k vytvoreni (kopirovani Production.sdf)
+
+v3.30 31.3.2015 PeV
+--------------------
+- pri ukoncovani aplikace se neprepisuje umisteni aplikace
+- u filtru na datum v ucHistory se automaticky prednastavuje jako "Datum od" 0 hodin a 0 minut daneho dne
+
+v3.29 16.3.2015 PeV
+--------------------
+- pri vstupu do konfigurace dojde k ulozeni rozlozeni datagridu
+- pri zahajeni/ukonceni prestavky a odchodu z pracoviste se aplikace vraci na uvodni obrazovku
+- u filtrovani podle zakazek se jiz oznaci textbox na zadavani v pripade chyby nebo pri nenalezeni zakazky
+- pridano logovani spusteni a ukonceni aplikace
+- pri vstupu do konfigurace, ukonceni aplikace a odhlaseni smeny se zobrazuji pouze hvezdicky misto zadaneho hesla
+
+v3.28 5.3.2015 PeV
+--------------------
+- oprava filtru na zakazky u vypisu historie a otevrenych zakazek
+- pridana moznost zmenit velikost  pisma u vypisu historie a otevrenych zakazek (radku a cele komponenty)
+- vypnuty multiselect u datagridu pro vypis historie a otevrenych zakazek
+- filtr u vypisu historie a otevrenych zakazek opetovne nacte data z databaze (obcas pribylo několik zaznamu navic do vypisu)
+- pridana klavesnice do konfigurace aplikace
+- zapnuti DoubleBuffered kvuli vyraznemu zrychleni zobrazeni dat
+- pri zahajeni/ukonceni prestavky a odchodu z pracoviste se aplikace vraci na uvodni obrazovku
+- u filtrovani podle zakazek se jiz oznaci textbox na zadavani v pripade chyby nebo pri nenalezeni zakazky
+
+v3.27 4.3.2015 PeV
+--------------------
+- pri odesilani dat z Production jiz nedochazi ke kopirovani databaze Production (pri spusteni aplikace dojde ke kopirovani databaze Production (pokud neexistuje) a nasledne se z ni pri odesilani prvne data smazou a nasledne vlozi nove)
+- pridano try/catch do nekolika casti odvadeni Nadop
+
+v3.26 27.2.2015 PeV
+--------------------
+- pridana konfiguracni moznost "Zobrazit cas prihlaseni pracovnika" kvuli moznosti vypnout zobrazeni formulare pri odvadeni, kde se zadava cas prihlaseni
+- pridana do konfigurace moznost zobrazeni vypisu otevrenych odvadeni
+- pridana moznost konfiguracne zapnout/vypnout nacitani historie a otevrenych odvadeni ze serveru
+- pridana moznost scrollovani v konfiguraci aplikace
+
+v3.25 26.2.2015 PeV
+--------------------
+- pridana moznost skryt/zobrazit sloupce v datagridech
+- pri vypisu nedokoncenych zakazek se kontroluji data jak ze serveru, tak neodeslana data
+- pridana konfiguracni moznost pro zapnuti/vypnuti sledovani castecnych odvodu (Labara vs Esa)
+
+v3.24 19.2.2015 PeV
+--------------------
+- jiz nejde spustit nekolik instanci aplikace
+- pridana konfiguracni moznost na zobrazeni dialogu "Položka již byla odvedena.\n\nChcete pokračovat?" pri odvadeni
+- pridana konfiguracni moznost na zobrazeni dialogu "Je zadán větší počet k odvedení, než je požadováno\nZbývá: " + pocetZbyva.ToString("0.00") + "\nZadáno:" + pocetOdvedeno.ToString("0.00") + "\n\nChcete pokračovat?" pri odvadeni
+- pridan soubehguid do konfigurace Labara
+- rozlozeni v konfiguraci aplikace je rozdeleno pomoci groupboxu
+- pridan user control ucOpenedProduction pro zobrazeni neodvedene produkce (produkce, ktere chybi timestop) - nekontroluje neodeslanou produkci
+- doplnen CORRGUID do tabulky Production a do datasetu
+
+v3.23 17.2.2015 PeV
+--------------------
+- oprava vypnuti scanneru u vyberu pracovnika pro filtrovani v historii
+- nastaveni fontu u tlacitek
+
+v3.22 17.2.2015 PeV
+--------------------
+- uprava defaultnich hodnot nastavenych pro pozice tlacitek u vsech modulu
+- vytvoren vlastni dataset pro historii produkce
+- v historii produkce je zobrazeno cele jmeno, prijmeni, id operace a id stroje
+- DataGridView si pamatuje rozmisteni a velikost sloupcu (pridano rozsireni DataGridViewExt)
+- zmena formatu datumu u vypisu datagridu
+- zmena fontu u datagridu
+
+v3.21 13.2.2015 PeV
+--------------------
+- pridana konfiguracni moznost volit moduly a menit jejich umisteni (+ rozchozeni samotne funkcnosti)
+- po ulozeni nastaveni probehne aktualizace navolenych modulu a nasledne zobrazeni (jiz neni treba vypinat a zapinat aplikaci) 
+
+v3.20 11.2.2015 PeV
+--------------------
+- v FormInputKodWithVPHList se zaznamy radi od nejnovejsiho
+- historie produkce se uklada podle toho, zdali je modul zaply
+uprava user control pro zobrazeni historie operaci:
+ - nacitani ve vlaknech
+ - pridan lock
+ - vyuziti pouze jednoho timeru
+ - ukladani dat primo do databaze historie
+ - prejmenovany sloupce)
+ - datagrid jiz zobrazuje scrollbary
+ - datagrid si pamatuje pozici
+
+
+v3.19 11.2.2015 PeV
+--------------------
+- pridan vypis nazvu zakazky na tlacitko Odvadeni
+- v FormInputKodWithVPHList je mozno scrollovat navolene zakazky (focus stale zustava na zadavani textu)
+- vytvoren formular FormDatumOdDo pro zadavani datumu od a do (kvuli filtrovani vypisu v datagridu)
+- vytvoren formular FormVyberZakazka pro zadavani id zakazky (kvuli filtrovani vypisu v datagridu)
+- pridan user control pro zobrazeni historie operaci (data prvne nacte, ulozi do databaze ProductionHist a nasledne zobrazi)
+
+v3.18 6.2.2015 PeV
+--------------------
+Nadop
+- SOUBEHGUID se pridava u vsech zakazek
+- konfiguracni moznost vypnuti zobrazeni chybovych hlasek pri nedostupnosti web serveru
+- pridan formular FormInputKodWithVPHList pro zobrazeni navolenych zakazek v soubehu
+- pridana konfiguracni moznost vypnuti tlacitek na uvodni obrazovce (odvadeni, korekce, udalosti)
+
+v3.17 2.2.2015 PeV
+--------------------
+- vytvoren formular umoznujici zobrazeni souhrnu nove vytvorene zakazky
+- konfiguracni moznost zobrazeni shrnuti odvadene zakazky
+- pridana moznost nastaveni ovladani pouze numerickou klavesnici (prozatim nikde neni implementovana funkcnost)
+- zapinani/vypinani tlacitek podle volby v konfiguraci prihlaseni smeny/pracovnika se jiz projevuje
+
+v3.16 30.1.2015 PeV
+--------------------
+- pridana konfiguracni moznost "Predvyplnit zbyvajici mnozstvi" pri odvadeni
+- pokud je v udalostech povoleni prihlaseni pracovnika vypnuto, tak dojde k vypnuti daneho tlacitka
+- pridana volba smeny pri odvadeni pokud je Settings.UEventSmenaEnabled = true; a vedouci smeny nebyl vybran
+- pridana volba zakazky pri odvadeni pokud je Settings.VyberZakazkyPoPrihlaseni = true; a zakazka nebyla pri spusteni aplikace vybrana
+- odstraneni administrativniho pristupu
+- pridan sloupec VS (vedouci smeny) do tabulky Logins + uprava struktur a datasetu (jak na PC, tak serveru)
+- pridana kontrola na vedouciho smeny do FormSmenaLogin
+- FormOperacePotvrzeni zobrazuje TIMESTART, TIMESTOP a kolik kusu zbyva
+- pri zruseni volby zakazky nedojde k odhlaseni z aplikace
+
+v3.15 28.1.2015 PeV
+--------------------
+Esa baleni
+- pridany konfiguracni moznosti vypnout zobrazovani hlasky "Necinnost trvala dele nez ..." a "Zahajit zakazku ..." pri odvadeni
+
+v3.14 27.1.2015 PeV
+--------------------
+- přidána konfigurační možnost požadovat heslo při odhlášení směny (pokud je v nastavení text box prázdný, heslo se nepožaduje)
+
+v3.13 22.1.2015 PeV
+--------------------
+Nadop
+- doplněn ScannerStop() do FormKorekceStart při stisknutí OK
+- změna textu při zadávání dalších zakázek do souběhu
+- opraveno fungování scanneru při zadávání zakázek v souběhu
+- přidána kontrola na DBNULL při vyhledávání zakázek v souběhu (při ukončení zakázky)
+
+v3.12 13.1.2015 PeV
+--------------------
+- doplněn ScannerStop() při zahájení přestávky, ukončení a odchodu z pracoviště
+
+v3.11 19.12.2014 PeV
+--------------------
+- přidána konfigurační možnost odhlášení pracovníka při volbě přestávky/odchodu z pracoviště (u tlačítek při volbě zakázky)
+- opravy chyb
+- úprava zobrazení pracovníka ve status baru
+
+v3.10 10.12.2014 PeV
+--------------------
+- oprava, kdy nešlo pracovat v offline režimu
+
+v3.9 10.12.2014 PeV
+--------------------
+- přidáno logování celých vyjímek (ne jen message) do FormMain
+
+v3.8 9.12.2014 PeV
+--------------------
+- oprava při kliknutí na tlačítko OK v událostech, pokud není žádný záznam (null - zobrazovala se hláška "Odkaz na objekt není nastaven na instanci objektu")
+
+v3.7 9.12.2014 PeV
+--------------------
+- přidán stavový řádek se jménem uživatele do FormUserLoginWithTimeInput, FormIDMachine a FormOdvadeni
+- přejmenován popis stroj ve stavovém řádku na pracoviště
+- v konfiguraci aplikace je možné zvolit záznam, který bude znamenat přestávku
+- do volby zakázky přidány tlačitka pro (pokud není v nastavení aplikace zvoleno id přestávky, budou tlačítka příchod a odchoz vypnuta):
+	- odchod na přestávku (proběhne kontrola existující korekce a následné nastavení přestávky)
+	- příchod z přestávky (proběhne ukončení korekce přestávka)
+	- odchod z pracoviště (dojde k ukončení zakázek, korekcí a odhlášení uživatele) 
+- přejmenována tlačítka storno na zpět
+
+v3.5 16.10.2014 PeV
+--------------------
+- oprava formátu času při výpisu TimeSpan
+- zobrazen dialog s chybou při prázdném textboxu u potvrzování odvádění
+- FlexibleMessageBox by se měl zobrazit na správném monitoru (monitor se určuje z Settings.xml - ApplicationPosition) a jako top most

@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47A881E6-17A6-4C17-B5FE-627B406D9301}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Definition_SQL_Struncture</RootNamespace>
+    <AssemblyName>Definition_SQL_Struncture</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\!!!Build!!!\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\!!!Build!!!\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.11.24.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.24\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreateStruncture\DS_Information.cs">
+      <DependentUpon>DS_Information.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CreateStruncture\DS_Information.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Information.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Definice_Dokumentace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Definice_Dokumentace.Designer.cs">
+      <DependentUpon>Definice_Dokumentace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Definice_Dokumentace_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Definice_Dokumentace_Edit.Designer.cs">
+      <DependentUpon>Definice_Dokumentace_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Definice_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Definice_Edit.Designer.cs">
+      <DependentUpon>Definice_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Definice_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Definice_List.Designer.cs">
+      <DependentUpon>Definice_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Definice_Validace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Definice_Validace.Designer.cs">
+      <DependentUpon>Definice_Validace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dokumentace\Databaze_Com.cs" />
+    <Compile Include="Dokumentace\DS_Dok.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Dok.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dokumentace\FileHelper.cs" />
+    <Compile Include="Dokumentace\Generate_HTML\Cell.cs" />
+    <Compile Include="Dokumentace\Generate_HTML\Classes\HelperClass_V2.cs" />
+    <Compile Include="Dokumentace\Generate_HTML\Classes\HelperClass.cs" />
+    <Compile Include="Dokumentace\Generate_HTML\Constants\Common.cs" />
+    <Compile Include="Dokumentace\Generate_HTML\GeneratorDokumentace.cs" />
+    <Compile Include="Dokumentace\Generate_HTML\Row_Table_View.cs" />
+    <Compile Include="Dokumentace\Generate_HTML\Row_Table_View_List.cs" />
+    <Compile Include="Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main.Designer.cs">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="Definice_Dokumentace.resx">
+      <DependentUpon>Definice_Dokumentace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Definice_Dokumentace_Edit.resx">
+      <DependentUpon>Definice_Dokumentace_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Definice_Edit.resx">
+      <DependentUpon>Definice_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Definice_List.resx">
+      <DependentUpon>Definice_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Definice_Validace.resx">
+      <DependentUpon>Definice_Validace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main.resx">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="CreateStruncture\DS_Information.xsc">
+      <DependentUpon>DS_Information.xsd</DependentUpon>
+    </None>
+    <None Include="CreateStruncture\DS_Information.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Information.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CreateStruncture\DS_Information.xss">
+      <DependentUpon>DS_Information.xsd</DependentUpon>
+    </None>
+    <None Include="Dokumentace\DS_Dok.xsc">
+      <DependentUpon>DS_Dok.xsd</DependentUpon>
+    </None>
+    <None Include="Dokumentace\DS_Dok.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Dok.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dokumentace\DS_Dok.xss">
+      <DependentUpon>DS_Dok.xsd</DependentUpon>
+    </None>
+    <None Include="Dokumentace\TemplateDokumentace\Grafika\CSS\bootstrap.css.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dokumentace\TemplateDokumentace\Grafika\CSS\bootstrap.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dokumentace\TemplateDokumentace\Grafika\CSS\TaD_Sheet.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dokumentace\TemplateDokumentace\Grafika\Image\G3_poznamka.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dokumentace\TemplateDokumentace\Grafika\Image\G3_ul1.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dokumentace\TemplateDokumentace\Grafika\Image\G3_ul2.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dokumentace\TemplateDokumentace\Grafika\Image\G3_ul3.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dokumentace\TemplateDokumentace\Grafika\Image\G3_ul_obsah.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dokumentace\TemplateDokumentace\Grafika\Image\Gen_TopBand.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dokumentace\TemplateDokumentace\Grafika\JS\bootstrap.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dokumentace\TemplateDokumentace\Grafika\JS\CommentShowHide.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dokumentace\TemplateDokumentace\Grafika\JS\jquery.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dokumentace\TemplateDokumentace\Main.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Editace_Funkce_Proc\ReadMe.txt" />
+    <Content Include="Settings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

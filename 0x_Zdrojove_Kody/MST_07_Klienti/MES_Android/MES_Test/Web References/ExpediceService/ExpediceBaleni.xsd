@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/ExpediceBaleni.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/ExpediceBaleni.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/ExpediceBaleni.xsd" id="ExpediceBaleni" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="ExpediceBaleni">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST_Expedice_Baleni_Hlavicka">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="ID" type="xs:string" />
+              <xs:element minOccurs="0" name="Rozpracovano" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="UserID" type="xs:int" />
+              <xs:element name="TermID" type="xs:int" />
+              <xs:element minOccurs="0" name="Barcode" type="xs:string" />
+              <xs:element name="DateCreated" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DateFinished" type="xs:dateTime" />
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="DEX_ROW_ID" type="xs:int" />
+              <xs:element minOccurs="0" name="SKL_ID" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_Expedice_Baleni_Polozky">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="ID" type="xs:string" />
+              <xs:element msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="IDH" type="xs:string" />
+              <xs:element name="ITEMNMBR" type="xs:string" />
+              <xs:element minOccurs="0" name="ITEMDESC" type="xs:string" />
+              <xs:element minOccurs="0" name="VNDITNUM" type="xs:string" />
+              <xs:element minOccurs="0" name="CZ_CarKod" type="xs:string" />
+              <xs:element minOccurs="0" name="LOCNCODE" type="xs:string" />
+              <xs:element minOccurs="0" name="SKL_ID" type="xs:string" />
+              <xs:element name="QTY" type="xs:decimal" />
+              <xs:element minOccurs="0" name="QTYPACK" type="xs:decimal" />
+              <xs:element name="QTYMJ" type="xs:decimal" />
+              <xs:element minOccurs="0" name="MJ" type="xs:string" />
+              <xs:element minOccurs="0" name="SERLTNUM" type="xs:string" />
+              <xs:element minOccurs="0" name="WEIGHT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NMBRPAL" type="xs:string" />
+              <xs:element minOccurs="0" name="TYPEPAL" type="xs:string" />
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="DEX_ROW_ID" type="xs:int" />
+              <xs:element minOccurs="0" name="PRINTED" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="LOCNCODE_SRC" type="xs:string" />
+              <xs:element minOccurs="0" name="SKL_ID_SRC" type="xs:string" />
+              <xs:element minOccurs="0" name="NMBRBAL" type="xs:string" />
+              <xs:element msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" minOccurs="0" name="IDPol" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Expedice_Baleni_Polozka">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ITEMNMBR" type="xs:string" />
+              <xs:element minOccurs="0" name="ITEMDESC" type="xs:string" />
+              <xs:element minOccurs="0" name="CZ_CarKod" type="xs:string" />
+              <xs:element minOccurs="0" name="VNDITNUM" type="xs:string" />
+              <xs:element minOccurs="0" name="LOCNCODE" type="xs:string" />
+              <xs:element minOccurs="0" name="SKL_ID" type="xs:string" />
+              <xs:element name="QTY" type="xs:decimal" />
+              <xs:element minOccurs="0" name="MJ" type="xs:string" />
+              <xs:element minOccurs="0" name="SERLTNUM" type="xs:string" />
+              <xs:element minOccurs="0" name="WEIGHT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NMBRPAL" type="xs:string" />
+              <xs:element minOccurs="0" name="TYPEPAL" type="xs:string" />
+              <xs:element minOccurs="0" name="QTYPACK" type="xs:decimal" />
+              <xs:element name="CZ_SerNum_Track" type="xs:unsignedByte" />
+              <xs:element msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" minOccurs="0" name="IDPol" type="xs:string" />
+              <xs:element minOccurs="0" name="NMBRBAL" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_Expedice_Baleni_Polozky_TISK">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ITEMNMBR" type="xs:string" />
+              <xs:element minOccurs="0" name="ITEMDESC" type="xs:string" />
+              <xs:element minOccurs="0" name="VNDITNUM" type="xs:string" />
+              <xs:element minOccurs="0" name="CZ_CarKod" type="xs:string" />
+              <xs:element name="MJ" type="xs:string" />
+              <xs:element minOccurs="0" name="NMBRPAL" type="xs:string" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="QTY" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SERLTNUMSeznam" type="xs:string" />
+              <xs:element minOccurs="0" name="LLSN" type="xs:string" />
+              <xs:element minOccurs="0" name="FontSizeSN_HEIGHT" type="xs:string" />
+              <xs:element minOccurs="0" name="FontSizeSN_WIDTH" type="xs:string" />
+              <xs:element minOccurs="0" name="Firma" type="xs:string" />
+              <xs:element minOccurs="0" name="Utvar" type="xs:string" />
+              <xs:element minOccurs="0" name="Jmeno" type="xs:string" />
+              <xs:element minOccurs="0" name="Ulice" type="xs:string" />
+              <xs:element minOccurs="0" name="PSC" type="xs:string" />
+              <xs:element minOccurs="0" name="Obec" type="xs:string" />
+              <xs:element minOccurs="0" name="ICO" type="xs:string" />
+              <xs:element minOccurs="0" name="DIC" type="xs:string" />
+              <xs:element minOccurs="0" name="Doklad" type="xs:string" />
+              <xs:element minOccurs="0" name="VNDDOCNM" type="xs:string" />
+              <xs:element minOccurs="0" name="PocetBaliku" type="xs:int" />
+              <xs:element minOccurs="0" name="Doprava" type="xs:string" />
+              <xs:element minOccurs="0" name="SNPart" type="xs:string" />
+              <xs:element minOccurs="0" name="VNDDOCNMList" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

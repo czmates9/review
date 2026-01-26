@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ExpediceBaleniHlavicky" targetNamespace="http://tempuri.org/ExpediceBaleniHlavicky.xsd" xmlns:mstns="http://tempuri.org/ExpediceBaleniHlavicky.xsd" xmlns="http://tempuri.org/ExpediceBaleniHlavicky.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ExpediceBaleniHlavicky" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ExpediceBaleniHlavicky" msprop:Generator_DataSetName="ExpediceBaleniHlavicky" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST_Expedice_Baleni_Hlavicka" msprop:Generator_UserTableName="CZMST_Expedice_Baleni_Hlavicka" msprop:Generator_RowDeletedName="CZMST_Expedice_Baleni_HlavickaRowDeleted" msprop:Generator_RowChangedName="CZMST_Expedice_Baleni_HlavickaRowChanged" msprop:Generator_RowClassName="CZMST_Expedice_Baleni_HlavickaRow" msprop:Generator_RowChangingName="CZMST_Expedice_Baleni_HlavickaRowChanging" msprop:Generator_RowEvArgName="CZMST_Expedice_Baleni_HlavickaRowChangeEvent" msprop:Generator_RowEvHandlerName="CZMST_Expedice_Baleni_HlavickaRowChangeEventHandler" msprop:Generator_TableClassName="CZMST_Expedice_Baleni_HlavickaDataTable" msprop:Generator_TableVarName="tableCZMST_Expedice_Baleni_Hlavicka" msprop:Generator_RowDeletingName="CZMST_Expedice_Baleni_HlavickaRowDeleting" msprop:Generator_TablePropName="CZMST_Expedice_Baleni_Hlavicka">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:string" />
+              <xs:element name="Rozpracovano" msprop:Generator_UserColumnName="Rozpracovano" msprop:Generator_ColumnVarNameInTable="columnRozpracovano" msprop:Generator_ColumnPropNameInRow="Rozpracovano" msprop:Generator_ColumnPropNameInTable="RozpracovanoColumn" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="UserID" msprop:Generator_UserColumnName="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TermID" msprop:Generator_UserColumnName="TermID" msprop:Generator_ColumnVarNameInTable="columnTermID" msprop:Generator_ColumnPropNameInRow="TermID" msprop:Generator_ColumnPropNameInTable="TermIDColumn" type="xs:int" />
+              <xs:element name="Barcode" msprop:Generator_UserColumnName="Barcode" msprop:Generator_ColumnVarNameInTable="columnBarcode" msprop:Generator_ColumnPropNameInRow="Barcode" msprop:Generator_ColumnPropNameInTable="BarcodeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateCreated" msprop:Generator_UserColumnName="DateCreated" msprop:Generator_ColumnVarNameInTable="columnDateCreated" msprop:Generator_ColumnPropNameInRow="DateCreated" msprop:Generator_ColumnPropNameInTable="DateCreatedColumn" type="xs:dateTime" />
+              <xs:element name="DateFinished" msprop:Generator_UserColumnName="DateFinished" msprop:Generator_ColumnVarNameInTable="columnDateFinished" msprop:Generator_ColumnPropNameInRow="DateFinished" msprop:Generator_ColumnPropNameInTable="DateFinishedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DEX_ROW_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="DEX_ROW_ID" msprop:Generator_ColumnVarNameInTable="columnDEX_ROW_ID" msprop:Generator_ColumnPropNameInRow="DEX_ROW_ID" msprop:Generator_ColumnPropNameInTable="DEX_ROW_IDColumn" type="xs:int" />
+              <xs:element name="SKL_ID" msprop:Generator_UserColumnName="SKL_ID" msprop:Generator_ColumnVarNameInTable="columnSKL_ID" msprop:Generator_ColumnPropNameInRow="SKL_ID" msprop:Generator_ColumnPropNameInTable="SKL_IDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SumItems" msprop:Generator_UserColumnName="SumItems" msprop:Generator_ColumnVarNameInTable="columnSumItems" msprop:Generator_ColumnPropNameInRow="SumItems" msprop:Generator_ColumnPropNameInTable="SumItemsColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

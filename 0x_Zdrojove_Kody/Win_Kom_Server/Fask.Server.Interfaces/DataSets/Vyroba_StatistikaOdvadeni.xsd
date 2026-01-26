@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Vyroba_StatistikaOdvadeni" targetNamespace="http://tempuri.org/Vyroba_StatistikaOdvadeni.xsd" xmlns:mstns="http://tempuri.org/Vyroba_StatistikaOdvadeni.xsd" xmlns="http://tempuri.org/Vyroba_StatistikaOdvadeni.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Vyroba_StatistikaOdvadeni" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Vyroba_StatistikaOdvadeni" msprop:Generator_UserDSName="Vyroba_StatistikaOdvadeni">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FASK_Filter" msprop:Generator_TableClassName="FASK_FilterDataTable" msprop:Generator_TableVarName="tableFASK_Filter" msprop:Generator_TablePropName="FASK_Filter" msprop:Generator_RowDeletingName="FASK_FilterRowDeleting" msprop:Generator_RowChangingName="FASK_FilterRowChanging" msprop:Generator_RowEvHandlerName="FASK_FilterRowChangeEventHandler" msprop:Generator_RowDeletedName="FASK_FilterRowDeleted" msprop:Generator_UserTableName="FASK_Filter" msprop:Generator_RowChangedName="FASK_FilterRowChanged" msprop:Generator_RowEvArgName="FASK_FilterRowChangeEvent" msprop:Generator_RowClassName="FASK_FilterRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Firstname" msprop:Generator_ColumnVarNameInTable="columnFirstname" msprop:Generator_ColumnPropNameInRow="Firstname" msprop:Generator_ColumnPropNameInTable="FirstnameColumn" msprop:Generator_UserColumnName="Firstname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Surname" msprop:Generator_ColumnVarNameInTable="columnSurname" msprop:Generator_ColumnPropNameInRow="Surname" msprop:Generator_ColumnPropNameInTable="SurnameColumn" msprop:Generator_UserColumnName="Surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DatumDo" msprop:Generator_ColumnVarNameInTable="columnDatumDo" msprop:Generator_ColumnPropNameInRow="DatumDo" msprop:Generator_ColumnPropNameInTable="DatumDoColumn" msprop:Generator_UserColumnName="DatumDo" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DatumOd" msprop:Generator_ColumnVarNameInTable="columnDatumOd" msprop:Generator_ColumnPropNameInRow="DatumOd" msprop:Generator_ColumnPropNameInTable="DatumOdColumn" msprop:Generator_UserColumnName="DatumOd" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PocetNormohodin" msprop:Generator_ColumnVarNameInTable="columnPocetNormohodin" msprop:Generator_ColumnPropNameInRow="PocetNormohodin" msprop:Generator_ColumnPropNameInTable="PocetNormohodinColumn" msprop:Generator_UserColumnName="PocetNormohodin" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="korekce_KeSchvaleni" msprop:Generator_ColumnVarNameInTable="columnkorekce_KeSchvaleni" msprop:Generator_ColumnPropNameInRow="korekce_KeSchvaleni" msprop:Generator_ColumnPropNameInTable="korekce_KeSchvaleniColumn" msprop:Generator_UserColumnName="korekce_KeSchvaleni" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="korekce_NeSchvalene" msprop:Generator_ColumnVarNameInTable="columnkorekce_NeSchvalene" msprop:Generator_ColumnPropNameInRow="korekce_NeSchvalene" msprop:Generator_ColumnPropNameInTable="korekce_NeSchvaleneColumn" msprop:Generator_UserColumnName="korekce_NeSchvalene" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="korekce_Schvalene" msprop:Generator_ColumnVarNameInTable="columnkorekce_Schvalene" msprop:Generator_ColumnPropNameInRow="korekce_Schvalene" msprop:Generator_ColumnPropNameInTable="korekce_SchvaleneColumn" msprop:Generator_UserColumnName="korekce_Schvalene" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

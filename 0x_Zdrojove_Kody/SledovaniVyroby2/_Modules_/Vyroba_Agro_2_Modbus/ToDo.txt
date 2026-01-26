@@ -1,0 +1,41 @@
+﻿
+SensorLevelWithoutTimeoutGet !!!!!!!!!!!!!!!!
+
+
+ToDo:
+- pridan debug informace: pocet prectenych kodu, sepnuti cidla...
+- adam ostraneni komentaru...
+- timer testovani - odkomentovani..
+- indikatory stavu rele, ktere je zaple,vyple
+- zobrazeni poctu nactenych kodu, seplych cidel...
+- kiosk mode (heslo)
+- automaticke spusteni
+- pocty sepnuti vsech cidel...
+- upozorneni pri x% neprectenyc, upozorneni..
+- mailovani chyb...
+- test zahaleni link...
+- upravit nacitani dat z adama..
+- upravit pocet sepnuti vsech cidel...
+- otestovat problem: odhlaseni smeny pricteni poctu odvedenych kusu...nepotvrzene pytle, vlozeni kodu, odhlaseni + x pytlu...
+
+http://forum.adamcommunity.com/archiver/?tid-2650.html
+
+
+5) smazat z referenci u VyrobaAgro SQLCECommLib...
+
+Data Source=localhost\PEPA-PC\,1433;Initial Catalog=Nadop;User ID=sa;Password=sasa
+
+
+    <SqlConnectionStringLocal>Data Source=PEPA-PC;Initial Catalog=Nadop;User ID=sasa;Password=sasa</SqlConnectionStringLocal>
+    
+    192.168.1.4 (PC)
+      192.168.1.3 (ADAM)
+      255.255.255.0
+      192.168.1.1
+      
+      QX 830:
+      115200
+      Parity None
+      StopBits One
+      Data Bits 8
+      

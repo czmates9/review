@@ -1,0 +1,147 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Zuby.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MenuStrip_SORTDATETIMEASC" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Seřadit od nejstarší po nejnovější</Value>
+    </Setting>
+    <Setting Name="MenuStrip_SORTDATETIMEDESC" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Seřadit od nejnovější po nejstarší</Value>
+    </Setting>
+    <Setting Name="MenuStrip_SORTBOOLASC" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Seřadit podle False/True</Value>
+    </Setting>
+    <Setting Name="MenuStrip_SORTBOOLDESC" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Seřadit podle True/False</Value>
+    </Setting>
+    <Setting Name="MenuStrip_SORTNUMASC" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Seřadit od nejmenší po největší</Value>
+    </Setting>
+    <Setting Name="MenuStrip_SORTNUMDESC" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Seřadit od největší po nejmenší</Value>
+    </Setting>
+    <Setting Name="MenuStrip_SORTTEXTASC" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Seřadit od А do Z</Value>
+    </Setting>
+    <Setting Name="MenuStrip_SORTTEXTDESC" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Seřadit od Z do A</Value>
+    </Setting>
+    <Setting Name="MenuStrip_ADDCUSTOMFILTER" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Přidejte vlastní filtr</Value>
+    </Setting>
+    <Setting Name="MenuStrip_CUSTOMFILTER" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Přidejte filtr</Value>
+    </Setting>
+    <Setting Name="MenuStrip_CLEARFILTER" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Smazat filtr</Value>
+    </Setting>
+    <Setting Name="MenuStrip_CLEARSORT" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Smazat řazení</Value>
+    </Setting>
+    <Setting Name="MenuStrip_BUTTONOK" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Filtr</Value>
+    </Setting>
+    <Setting Name="MenuStrip_BUTTONCANCEL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">zrušit</Value>
+    </Setting>
+    <Setting Name="MenuStrip_NODESELECTALL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">(Vybrat vše)</Value>
+    </Setting>
+    <Setting Name="MenuStrip_NODESELECTEMPTY" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">(mezera)</Value>
+    </Setting>
+    <Setting Name="MenuStrip_FILTERCHECKLISTDISABLED" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Seznam filtrů je zakázán</Value>
+    </Setting>
+    <Setting Name="ToolBar_LABELSEARCH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Vyhledávání:</Value>
+    </Setting>
+    <Setting Name="ToolBar_BUTTONFROMBEGINTOOLTIP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Od začátku</Value>
+    </Setting>
+    <Setting Name="ToolBar_BUTTONCASESENSITIVETOOLTIP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Rozlišovat velká/malá písmena</Value>
+    </Setting>
+    <Setting Name="ToolBar_BUTTONSEARCHTOOLTIP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Najdi další</Value>
+    </Setting>
+    <Setting Name="ToolBar_BUTTONCLOSETOOLTIP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Skrýt</Value>
+    </Setting>
+    <Setting Name="ToolBar_BUTTONWHOLEWORDTOOLTIP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Vyhledat pouze celé slovo</Value>
+    </Setting>
+    <Setting Name="ToolBar_COMBOBOXCOLUMNSALL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">(Všechny sloupce)</Value>
+    </Setting>
+    <Setting Name="ToolBar_TEXTBOXSEARCHTOOLTIP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Hodnota pro vyhledávání</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_EQUALS" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Rovná se</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_DOES_NOT_EQUAL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Nerovná se</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_EARLIER_THAN" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Dříve než</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_LATER_THAN" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Později než</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_BETWEEN" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">medzi</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_GREATER_THAN" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">větší než</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_GREATER_THAN_OR_EQUAL_TO" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">větší nebo roven</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_LESS_THAN" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">méně než</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_LESS_THAN_OR_EQUAL_TO" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">menší nebo rovné</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_BEGINS_WITH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">začíná s</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_DOES_NOT_BEGIN_WITH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">nezačíná s</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_ENDS_WITH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">končí s</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_DOES_NOT_END_WITH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">nekončí s</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_CONTAINS" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">obsahuje</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_DOES_NOT_CONTAIN" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">neobsahuje</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_INVALID_VALUE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Neplatná hodnota</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_FILTER_STRING_DESCRIPTION" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Zobrazit řádky, kde je hodnota {0}\{1}\</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_FORM_TITLE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Vlastní filtr</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_LABEL_COLUMNNAMETEXT" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Zobrazit řádky, kde je hodnota</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_LABEL_AND" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">A</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_BUTTON_OK" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ok</Value>
+    </Setting>
+    <Setting Name="FormCustomFilter_BUTTON_CANCEL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">storno</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

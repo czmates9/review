@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF70800E-85EA-4605-8CC2-8AE5D7ECAE8E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fask.Parsing</RootNamespace>
+    <AssemblyName>Fask.Parsing</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Codes\BarcodeSlashSarze.cs" />
+    <Compile Include="Codes\BaseCode.cs" />
+    <Compile Include="Codes\Common\Dates.cs" />
+    <Compile Include="Codes\FenixBarcodeObal.cs" />
+    <Compile Include="Codes\GS1.cs" />
+    <Compile Include="Codes\GS1_StriktniNorma.cs" />
+    <Compile Include="Codes\HIBC.cs" />
+    <Compile Include="Codes\Interfaces\ICodeBarcode.cs" />
+    <Compile Include="Codes\Interfaces\ICodeExpiration.cs" />
+    <Compile Include="Codes\Interfaces\ICodeItemnmbr.cs" />
+    <Compile Include="Codes\Interfaces\ICodeProductionDate.cs" />
+    <Compile Include="Codes\Interfaces\ICodeQuantity.cs" />
+    <Compile Include="Codes\Interfaces\ICodeSerialNumber.cs" />
+    <Compile Include="Codes\Interfaces\ICodeSerltnmbr.cs" />
+    <Compile Include="Codes\Interfaces\ICodeWeight.cs" />
+    <Compile Include="Codes\Interfaces\IPocetNasnimanychVariant.cs" />
+    <Compile Include="Codes\SABNeznamyKod.cs" />
+    <Compile Include="Codes\SAB_AustralianNorm.cs" />
+    <Compile Include="Codes\SAB_GS1_BALTON.cs" />
+    <Compile Include="Codes\SAB_GS1_Zavorky.cs" />
+    <Compile Include="Codes\WeightCode.cs" />
+    <Compile Include="Codes\WeightCode_12.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="ParsingFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fask.Logging\Fask.Logging.csproj">
+      <Project>{6d9a9e99-a0c3-4eeb-bc0e-103f8f574d22}</Project>
+      <Name>Fask.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

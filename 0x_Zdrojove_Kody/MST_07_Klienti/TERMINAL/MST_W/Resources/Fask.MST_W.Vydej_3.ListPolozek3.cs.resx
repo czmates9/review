@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="df_VNDDOCNM.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="df_VNDDOCNM.DataEnable" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="df_VNDDOCNM.DataFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15pt</value>
+  </data>
+  <data name="df_VNDDOCNM.DataMaxLength" type="System.Int32, mscorlib">
+    <value>32767</value>
+  </data>
+  <data name="df_VNDDOCNM.DataTextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="df_VNDDOCNM.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="df_VNDDOCNM.Popis" xml:space="preserve">
+    <value>Dokument</value>
+  </data>
+  <data name="df_VNDDOCNM.PopisFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15pt, style=Bold</value>
+  </data>
+  <data name="df_VNDDOCNM.PopisTextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="df_VNDDOCNM.PopisWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="df_VNDDOCNM.ReadOnly" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="df_VNDDOCNM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 1</value>
+  </data>
+  <data name="df_VNDDOCNM.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;df_VNDDOCNM.Name" xml:space="preserve">
+    <value>df_VNDDOCNM</value>
+  </data>
+  <data name="&gt;&gt;df_VNDDOCNM.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField3, Fask.Graphic, Version=1.11.6612.24624, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_VNDDOCNM.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_VNDDOCNM.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="df_Itemnmbr.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="df_Itemnmbr.DataEnable" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="df_Itemnmbr.DataFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15pt, style=Bold</value>
+  </data>
+  <data name="df_Itemnmbr.DataMaxLength" type="System.Int32, mscorlib">
+    <value>32767</value>
+  </data>
+  <data name="df_Itemnmbr.DataTextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="df_Itemnmbr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 113</value>
+  </data>
+  <data name="df_Itemnmbr.Popis" xml:space="preserve">
+    <value>Položka</value>
+  </data>
+  <data name="df_Itemnmbr.PopisFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15pt</value>
+  </data>
+  <data name="df_Itemnmbr.PopisTextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="df_Itemnmbr.PopisWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="df_Itemnmbr.ReadOnly" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="df_Itemnmbr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 25</value>
+  </data>
+  <data name="df_Itemnmbr.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;df_Itemnmbr.Name" xml:space="preserve">
+    <value>df_Itemnmbr</value>
+  </data>
+  <data name="&gt;&gt;df_Itemnmbr.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField3, Fask.Graphic, Version=1.11.6612.24624, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_Itemnmbr.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_Itemnmbr.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="df_Itemdesc.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="df_Itemdesc.DataEnable" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="df_Itemdesc.DataFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 16pt, style=Bold</value>
+  </data>
+  <data name="df_Itemdesc.DataMaxLength" type="System.Int32, mscorlib">
+    <value>32767</value>
+  </data>
+  <data name="df_Itemdesc.DataTextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="df_Itemdesc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 28</value>
+  </data>
+  <data name="df_Itemdesc.Popis" xml:space="preserve">
+    <value>Název</value>
+  </data>
+  <data name="df_Itemdesc.PopisFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 16pt</value>
+  </data>
+  <data name="df_Itemdesc.PopisTextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="df_Itemdesc.PopisWidth" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="df_Itemdesc.ReadOnly" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="df_Itemdesc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 85</value>
+  </data>
+  <data name="df_Itemdesc.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;df_Itemdesc.Name" xml:space="preserve">
+    <value>df_Itemdesc</value>
+  </data>
+  <data name="&gt;&gt;df_Itemdesc.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField3, Fask.Graphic, Version=1.11.6612.24624, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_Itemdesc.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_Itemdesc.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="df_Sopnumbe.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="df_Sopnumbe.DataEnable" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="df_Sopnumbe.DataFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15pt, style=Bold</value>
+  </data>
+  <data name="df_Sopnumbe.DataMaxLength" type="System.Int32, mscorlib">
+    <value>32767</value>
+  </data>
+  <data name="df_Sopnumbe.DataTextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="df_Sopnumbe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="df_Sopnumbe.Popis" xml:space="preserve">
+    <value>Obj.</value>
+  </data>
+  <data name="df_Sopnumbe.PopisFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15pt</value>
+  </data>
+  <data name="df_Sopnumbe.PopisTextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="df_Sopnumbe.PopisWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="df_Sopnumbe.ReadOnly" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="df_Sopnumbe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 1</value>
+  </data>
+  <data name="df_Sopnumbe.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;df_Sopnumbe.Name" xml:space="preserve">
+    <value>df_Sopnumbe</value>
+  </data>
+  <data name="&gt;&gt;df_Sopnumbe.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField3, Fask.Graphic, Version=1.11.6612.24624, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_Sopnumbe.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_Sopnumbe.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="df_Baleni.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="df_Baleni.DataEnable" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="df_Baleni.DataFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15pt, style=Bold</value>
+  </data>
+  <data name="df_Baleni.DataMaxLength" type="System.Int32, mscorlib">
+    <value>32767</value>
+  </data>
+  <data name="df_Baleni.DataTextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="df_Baleni.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 163</value>
+  </data>
+  <data name="df_Baleni.Popis" xml:space="preserve">
+    <value>Balení</value>
+  </data>
+  <data name="df_Baleni.PopisFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15pt</value>
+  </data>
+  <data name="df_Baleni.PopisTextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="df_Baleni.PopisWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="df_Baleni.ReadOnly" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="df_Baleni.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 25</value>
+  </data>
+  <data name="df_Baleni.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;df_Baleni.Name" xml:space="preserve">
+    <value>df_Baleni</value>
+  </data>
+  <data name="&gt;&gt;df_Baleni.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField3, Fask.Graphic, Version=1.11.6612.24624, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_Baleni.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_Baleni.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="df_Quantity.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="df_Quantity.DataEnable" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="df_Quantity.DataFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15pt, style=Bold</value>
+  </data>
+  <data name="df_Quantity.DataMaxLength" type="System.Int32, mscorlib">
+    <value>32767</value>
+  </data>
+  <data name="df_Quantity.DataTextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="df_Quantity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 138</value>
+  </data>
+  <data name="df_Quantity.Popis" xml:space="preserve">
+    <value>Množství</value>
+  </data>
+  <data name="df_Quantity.PopisFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15pt</value>
+  </data>
+  <data name="df_Quantity.PopisTextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="df_Quantity.PopisWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="df_Quantity.ReadOnly" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="df_Quantity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 25</value>
+  </data>
+  <data name="df_Quantity.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;df_Quantity.Name" xml:space="preserve">
+    <value>df_Quantity</value>
+  </data>
+  <data name="&gt;&gt;df_Quantity.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField3, Fask.Graphic, Version=1.11.6612.24624, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_Quantity.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_Quantity.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="df_Nasnimano.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="df_Nasnimano.DataEnable" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="df_Nasnimano.DataFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15pt, style=Bold</value>
+  </data>
+  <data name="df_Nasnimano.DataMaxLength" type="System.Int32, mscorlib">
+    <value>32767</value>
+  </data>
+  <data name="df_Nasnimano.DataTextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="df_Nasnimano.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 188</value>
+  </data>
+  <data name="df_Nasnimano.Popis" xml:space="preserve">
+    <value>Nasnímáno</value>
+  </data>
+  <data name="df_Nasnimano.PopisFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15pt</value>
+  </data>
+  <data name="df_Nasnimano.PopisTextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="df_Nasnimano.PopisWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="df_Nasnimano.ReadOnly" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="df_Nasnimano.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 25</value>
+  </data>
+  <data name="df_Nasnimano.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;df_Nasnimano.Name" xml:space="preserve">
+    <value>df_Nasnimano</value>
+  </data>
+  <data name="&gt;&gt;df_Nasnimano.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField3, Fask.Graphic, Version=1.11.6612.24624, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_Nasnimano.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_Nasnimano.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="df_Locncode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="df_Locncode.DataEnable" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="df_Locncode.DataFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14pt, style=Bold</value>
+  </data>
+  <data name="df_Locncode.DataMaxLength" type="System.Int32, mscorlib">
+    <value>32767</value>
+  </data>
+  <data name="df_Locncode.DataTextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="df_Locncode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="df_Locncode.Popis" xml:space="preserve">
+    <value>Lokace</value>
+  </data>
+  <data name="df_Locncode.PopisFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14pt</value>
+  </data>
+  <data name="df_Locncode.PopisTextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="df_Locncode.PopisWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="df_Locncode.ReadOnly" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="df_Locncode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 23</value>
+  </data>
+  <data name="df_Locncode.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;df_Locncode.Name" xml:space="preserve">
+    <value>df_Locncode</value>
+  </data>
+  <data name="&gt;&gt;df_Locncode.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField3, Fask.Graphic, Version=1.11.6612.24624, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_Locncode.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;df_Locncode.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+</root>

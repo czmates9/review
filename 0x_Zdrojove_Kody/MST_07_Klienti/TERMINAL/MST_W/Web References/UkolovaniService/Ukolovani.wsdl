@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://ukolovani.fask.cz/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://ukolovani.fask.cz/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba pro přenos úkolů</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://ukolovani.fask.cz/">
+      <s:import namespace="http://sqlce.fask.cz/Ukoly.xsd" />
+      <s:import namespace="http://tempuri.org/Pristupy.xsd" />
+      <s:import schemaLocation="http://localhost/MST_Win_Kom_Server_7_Cipisek/Ukolovani.asmx?schema=Pristupy" namespace="http://tempuri.org/Pristupy.xsd" />
+      <s:import schemaLocation="http://localhost/MST_Win_Kom_Server_7_Cipisek/Ukolovani.asmx?schema=Ukoly" namespace="http://sqlce.fask.cz/Ukoly.xsd" />
+      <s:element name="PrepareDB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalid" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="userid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="filename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrepareDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrepareDBResult" type="tns:StatusObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StatusObject">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="_statusFile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusText" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Exception" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DatumZapisu" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" default="false" name="Finished" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalid" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="userid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ukol" type="tns:Ukol" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Ukol">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nazev" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="state" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="datechanged" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="useridchanged" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="note" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="datenotify" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="datefinished" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateResult" type="tns:StatusObject" />
+            <s:element minOccurs="0" maxOccurs="1" name="ukol" type="tns:Ukol" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalid" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="userid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ukol" type="tns:Ukol" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertResult" type="tns:StatusObject" />
+            <s:element minOccurs="0" maxOccurs="1" name="ukol" type="tns:Ukol" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceMan">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServiceManResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServiceManResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://sqlce.fask.cz/Ukoly.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmailToServiceMan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Pristupy.xsd" name="namespace" />
+                <s:attribute fixed="FASK_LoginsDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="MachineID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmailToServiceManResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendEmailToServiceManResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmailToServiceManFull">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Pristupy.xsd" name="namespace" />
+                <s:attribute fixed="FASK_LoginsDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="MachineID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="poznamka" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmailToServiceManFullResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendEmailToServiceManFullResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PrepareDBSoapIn">
+    <wsdl:part name="parameters" element="tns:PrepareDB" />
+  </wsdl:message>
+  <wsdl:message name="PrepareDBSoapOut">
+    <wsdl:part name="parameters" element="tns:PrepareDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert" />
+  </wsdl:message>
+  <wsdl:message name="InsertSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceManSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServiceMan" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceManSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServiceManResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailToServiceManSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmailToServiceMan" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailToServiceManSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmailToServiceManResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailToServiceManFullSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmailToServiceManFull" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailToServiceManFullSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmailToServiceManFullResponse" />
+  </wsdl:message>
+  <wsdl:portType name="UkolovaniSoap">
+    <wsdl:operation name="PrepareDB">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Připraví databázi z aktuálních dat na serveru pro přenos do terminálu</wsdl:documentation>
+      <wsdl:input message="tns:PrepareDBSoapIn" />
+      <wsdl:output message="tns:PrepareDBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Aktualizace stavu ůkolu</wsdl:documentation>
+      <wsdl:input message="tns:UpdateSoapIn" />
+      <wsdl:output message="tns:UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Vložení nového úkolu z terminálu</wsdl:documentation>
+      <wsdl:input message="tns:InsertSoapIn" />
+      <wsdl:output message="tns:InsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceMan">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Vraci seznam kontaktu na servisaku</wsdl:documentation>
+      <wsdl:input message="tns:GetServiceManSoapIn" />
+      <wsdl:output message="tns:GetServiceManSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailToServiceMan">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Odeslani Emailu pomoci programu</wsdl:documentation>
+      <wsdl:input message="tns:SendEmailToServiceManSoapIn" />
+      <wsdl:output message="tns:SendEmailToServiceManSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailToServiceManFull">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Odeslani Emailu pomoci programu + poznamka</wsdl:documentation>
+      <wsdl:input message="tns:SendEmailToServiceManFullSoapIn" />
+      <wsdl:output message="tns:SendEmailToServiceManFullSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UkolovaniSoap" type="tns:UkolovaniSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PrepareDB">
+      <soap:operation soapAction="http://ukolovani.fask.cz/PrepareDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="http://ukolovani.fask.cz/Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert">
+      <soap:operation soapAction="http://ukolovani.fask.cz/Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceMan">
+      <soap:operation soapAction="http://ukolovani.fask.cz/GetServiceMan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailToServiceMan">
+      <soap:operation soapAction="http://ukolovani.fask.cz/SendEmailToServiceMan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailToServiceManFull">
+      <soap:operation soapAction="http://ukolovani.fask.cz/SendEmailToServiceManFull" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UkolovaniSoap12" type="tns:UkolovaniSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PrepareDB">
+      <soap12:operation soapAction="http://ukolovani.fask.cz/PrepareDB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap12:operation soapAction="http://ukolovani.fask.cz/Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert">
+      <soap12:operation soapAction="http://ukolovani.fask.cz/Insert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceMan">
+      <soap12:operation soapAction="http://ukolovani.fask.cz/GetServiceMan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailToServiceMan">
+      <soap12:operation soapAction="http://ukolovani.fask.cz/SendEmailToServiceMan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailToServiceManFull">
+      <soap12:operation soapAction="http://ukolovani.fask.cz/SendEmailToServiceManFull" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Ukolovani">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba pro přenos úkolů</wsdl:documentation>
+    <wsdl:port name="UkolovaniSoap" binding="tns:UkolovaniSoap">
+      <soap:address location="http://localhost/MST_Win_Kom_Server_7_Cipisek/Ukolovani.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UkolovaniSoap12" binding="tns:UkolovaniSoap12">
+      <soap12:address location="http://localhost/MST_Win_Kom_Server_7_Cipisek/Ukolovani.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

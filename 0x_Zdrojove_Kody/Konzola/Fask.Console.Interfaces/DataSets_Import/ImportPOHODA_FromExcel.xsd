@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ImportPOHODA_FromExcel" targetNamespace="http://tempuri.org/ImportPOHODA_FromExcel.xsd" xmlns:mstns="http://tempuri.org/ImportPOHODA_FromExcel.xsd" xmlns="http://tempuri.org/ImportPOHODA_FromExcel.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ImportPOHODA_FromExcel" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ImportPOHODA_FromExcel" msprop:Generator_UserDSName="ImportPOHODA_FromExcel">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FASK_ZASOBY_IMPORT_POHODA_SKzNC" msprop:Generator_TableClassName="FASK_ZASOBY_IMPORT_POHODA_SKzNCDataTable" msprop:Generator_TableVarName="tableFASK_ZASOBY_IMPORT_POHODA_SKzNC" msprop:Generator_TablePropName="FASK_ZASOBY_IMPORT_POHODA_SKzNC" msprop:Generator_RowDeletingName="FASK_ZASOBY_IMPORT_POHODA_SKzNCRowDeleting" msprop:Generator_RowChangingName="FASK_ZASOBY_IMPORT_POHODA_SKzNCRowChanging" msprop:Generator_RowEvHandlerName="FASK_ZASOBY_IMPORT_POHODA_SKzNCRowChangeEventHandler" msprop:Generator_RowDeletedName="FASK_ZASOBY_IMPORT_POHODA_SKzNCRowDeleted" msprop:Generator_UserTableName="FASK_ZASOBY_IMPORT_POHODA_SKzNC" msprop:Generator_RowChangedName="FASK_ZASOBY_IMPORT_POHODA_SKzNCRowChanged" msprop:Generator_RowEvArgName="FASK_ZASOBY_IMPORT_POHODA_SKzNCRowChangeEvent" msprop:Generator_RowClassName="FASK_ZASOBY_IMPORT_POHODA_SKzNCRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DefDod" msprop:Generator_ColumnVarNameInTable="columnDefDod" msprop:Generator_ColumnPropNameInRow="DefDod" msprop:Generator_ColumnPropNameInTable="DefDodColumn" msprop:Generator_UserColumnName="DefDod" type="xs:boolean" minOccurs="0" />
+              <xs:element name="RefAg" msprop:Generator_ColumnVarNameInTable="columnRefAg" msprop:Generator_ColumnPropNameInRow="RefAg" msprop:Generator_ColumnPropNameInTable="RefAgColumn" msprop:Generator_UserColumnName="RefAg" type="xs:int" minOccurs="0" />
+              <xs:element name="IDS_SKz" msprop:Generator_ColumnVarNameInTable="columnIDS_SKz" msprop:Generator_ColumnPropNameInRow="IDS_SKz" msprop:Generator_ColumnPropNameInTable="IDS_SKzColumn" msprop:Generator_UserColumnName="IDS_SKz" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_sSklad" msprop:Generator_ColumnVarNameInTable="columnID_sSklad" msprop:Generator_ColumnPropNameInRow="ID_sSklad" msprop:Generator_ColumnPropNameInTable="ID_sSkladColumn" msprop:Generator_UserColumnName="ID_sSklad" type="xs:int" minOccurs="0" />
+              <xs:element name="RefAD" msprop:Generator_ColumnVarNameInTable="columnRefAD" msprop:Generator_ColumnPropNameInRow="RefAD" msprop:Generator_ColumnPropNameInTable="RefADColumn" msprop:Generator_UserColumnName="RefAD" type="xs:int" minOccurs="0" />
+              <xs:element name="Firma" msprop:Generator_ColumnVarNameInTable="columnFirma" msprop:Generator_ColumnPropNameInRow="Firma" msprop:Generator_ColumnPropNameInTable="FirmaColumn" msprop:Generator_UserColumnName="Firma" type="xs:string" minOccurs="0" />
+              <xs:element name="NakupC" msprop:Generator_ColumnVarNameInTable="columnNakupC" msprop:Generator_ColumnPropNameInRow="NakupC" msprop:Generator_ColumnPropNameInTable="NakupCColumn" msprop:Generator_UserColumnName="NakupC" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RefCM" msprop:Generator_ColumnVarNameInTable="columnRefCM" msprop:Generator_ColumnPropNameInRow="RefCM" msprop:Generator_ColumnPropNameInTable="RefCMColumn" msprop:Generator_UserColumnName="RefCM" type="xs:int" minOccurs="0" />
+              <xs:element name="CmKurs" msprop:Generator_ColumnVarNameInTable="columnCmKurs" msprop:Generator_ColumnPropNameInRow="CmKurs" msprop:Generator_ColumnPropNameInTable="CmKursColumn" msprop:Generator_UserColumnName="CmKurs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EAN" msprop:Generator_ColumnVarNameInTable="columnEAN" msprop:Generator_ColumnPropNameInRow="EAN" msprop:Generator_ColumnPropNameInTable="EANColumn" msprop:Generator_UserColumnName="EAN" type="xs:string" minOccurs="0" />
+              <xs:element name="MJEAN" msprop:Generator_ColumnVarNameInTable="columnMJEAN" msprop:Generator_ColumnPropNameInRow="MJEAN" msprop:Generator_ColumnPropNameInTable="MJEANColumn" msprop:Generator_UserColumnName="MJEAN" type="xs:string" minOccurs="0" />
+              <xs:element name="MJkoefEAN" msprop:Generator_ColumnVarNameInTable="columnMJkoefEAN" msprop:Generator_ColumnPropNameInRow="MJkoefEAN" msprop:Generator_ColumnPropNameInTable="MJkoefEANColumn" msprop:Generator_UserColumnName="MJkoefEAN" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Pozn" msprop:Generator_ColumnVarNameInTable="columnPozn" msprop:Generator_ColumnPropNameInRow="Pozn" msprop:Generator_ColumnPropNameInTable="PoznColumn" msprop:Generator_UserColumnName="Pozn" type="xs:string" minOccurs="0" />
+              <xs:element name="DEX_ROW_ID" msprop:Generator_ColumnVarNameInTable="columnDEX_ROW_ID" msprop:Generator_ColumnPropNameInRow="DEX_ROW_ID" msprop:Generator_ColumnPropNameInTable="DEX_ROW_IDColumn" msprop:Generator_UserColumnName="DEX_ROW_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Status_Err" msprop:Generator_ColumnVarNameInTable="columnStatus_Err" msprop:Generator_ColumnPropNameInRow="Status_Err" msprop:Generator_ColumnPropNameInTable="Status_ErrColumn" msprop:Generator_UserColumnName="Status_Err" type="xs:int" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

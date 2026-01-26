@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SkladLokace" targetNamespace="http://tempuri.org/SkladLokace.xsd" xmlns:mstns="http://tempuri.org/SkladLokace.xsd" xmlns="http://tempuri.org/SkladLokace.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SkladLokace" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SkladLokace" msprop:Generator_UserDSName="SkladLokace">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST094" msprop:Generator_TableClassName="CZMST094DataTable" msprop:Generator_TableVarName="tableCZMST094" msprop:Generator_TablePropName="CZMST094" msprop:Generator_RowDeletingName="CZMST094RowDeleting" msprop:Generator_RowChangingName="CZMST094RowChanging" msprop:Generator_RowEvHandlerName="CZMST094RowChangeEventHandler" msprop:Generator_RowDeletedName="CZMST094RowDeleted" msprop:Generator_UserTableName="CZMST094" msprop:Generator_RowChangedName="CZMST094RowChanged" msprop:Generator_RowEvArgName="CZMST094RowChangeEvent" msprop:Generator_RowClassName="CZMST094Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SKL_ID" msprop:Generator_ColumnVarNameInTable="columnSKL_ID" msprop:Generator_ColumnPropNameInRow="SKL_ID" msprop:Generator_ColumnPropNameInTable="SKL_IDColumn" msprop:Generator_UserColumnName="SKL_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="LOCNCODE" msprop:Generator_ColumnVarNameInTable="columnLOCNCODE" msprop:Generator_ColumnPropNameInRow="LOCNCODE" msprop:Generator_ColumnPropNameInTable="LOCNCODEColumn" msprop:Generator_UserColumnName="LOCNCODE" type="xs:string" />
+              <xs:element name="TYPE" msprop:Generator_ColumnVarNameInTable="columnTYPE" msprop:Generator_ColumnPropNameInRow="TYPE" msprop:Generator_ColumnPropNameInTable="TYPEColumn" msprop:Generator_UserColumnName="TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="DEX_ROW_ID" msprop:Generator_ColumnVarNameInTable="columnDEX_ROW_ID" msprop:Generator_ColumnPropNameInRow="DEX_ROW_ID" msprop:Generator_ColumnPropNameInTable="DEX_ROW_IDColumn" msprop:Generator_UserColumnName="DEX_ROW_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="Barcode" msprop:Generator_ColumnVarNameInTable="columnBarcode" msprop:Generator_ColumnPropNameInRow="Barcode" msprop:Generator_ColumnPropNameInTable="BarcodeColumn" msprop:Generator_UserColumnName="Barcode" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_SkladLokace_LokaceTypy" msprop:Generator_TableClassName="CZMST_SkladLokace_LokaceTypyDataTable" msprop:Generator_TableVarName="tableCZMST_SkladLokace_LokaceTypy" msprop:Generator_TablePropName="CZMST_SkladLokace_LokaceTypy" msprop:Generator_RowDeletingName="CZMST_SkladLokace_LokaceTypyRowDeleting" msprop:Generator_RowChangingName="CZMST_SkladLokace_LokaceTypyRowChanging" msprop:Generator_RowEvHandlerName="CZMST_SkladLokace_LokaceTypyRowChangeEventHandler" msprop:Generator_RowDeletedName="CZMST_SkladLokace_LokaceTypyRowDeleted" msprop:Generator_UserTableName="CZMST_SkladLokace_LokaceTypy" msprop:Generator_RowChangedName="CZMST_SkladLokace_LokaceTypyRowChanged" msprop:Generator_RowEvArgName="CZMST_SkladLokace_LokaceTypyRowChangeEvent" msprop:Generator_RowClassName="CZMST_SkladLokace_LokaceTypyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TYPE" msprop:Generator_ColumnVarNameInTable="columnTYPE" msprop:Generator_ColumnPropNameInRow="TYPE" msprop:Generator_ColumnPropNameInTable="TYPEColumn" msprop:Generator_UserColumnName="TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="Barcode" msprop:Generator_ColumnVarNameInTable="columnBarcode" msprop:Generator_ColumnPropNameInRow="Barcode" msprop:Generator_ColumnPropNameInTable="BarcodeColumn" msprop:Generator_UserColumnName="Barcode" type="xs:string" minOccurs="0" />
+              <xs:element name="IS_RECEIVE" msprop:Generator_ColumnVarNameInTable="columnIS_RECEIVE" msprop:Generator_ColumnPropNameInRow="IS_RECEIVE" msprop:Generator_ColumnPropNameInTable="IS_RECEIVEColumn" msprop:Generator_UserColumnName="IS_RECEIVE" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IS_DEFAULT" msprop:Generator_ColumnVarNameInTable="columnIS_DEFAULT" msprop:Generator_ColumnPropNameInRow="IS_DEFAULT" msprop:Generator_ColumnPropNameInTable="IS_DEFAULTColumn" msprop:Generator_UserColumnName="IS_DEFAULT" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IS_NORMAL" msprop:Generator_ColumnVarNameInTable="columnIS_NORMAL" msprop:Generator_ColumnPropNameInRow="IS_NORMAL" msprop:Generator_ColumnPropNameInTable="IS_NORMALColumn" msprop:Generator_UserColumnName="IS_NORMAL" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_SkladLokace_Mapa" msprop:Generator_TableClassName="CZMST_SkladLokace_MapaDataTable" msprop:Generator_TableVarName="tableCZMST_SkladLokace_Mapa" msprop:Generator_TablePropName="CZMST_SkladLokace_Mapa" msprop:Generator_RowDeletingName="CZMST_SkladLokace_MapaRowDeleting" msprop:Generator_RowChangingName="CZMST_SkladLokace_MapaRowChanging" msprop:Generator_RowEvHandlerName="CZMST_SkladLokace_MapaRowChangeEventHandler" msprop:Generator_RowDeletedName="CZMST_SkladLokace_MapaRowDeleted" msprop:Generator_UserTableName="CZMST_SkladLokace_Mapa" msprop:Generator_RowChangedName="CZMST_SkladLokace_MapaRowChanged" msprop:Generator_RowEvArgName="CZMST_SkladLokace_MapaRowChangeEvent" msprop:Generator_RowClassName="CZMST_SkladLokace_MapaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SKL_ID" msprop:Generator_ColumnVarNameInTable="columnSKL_ID" msprop:Generator_ColumnPropNameInRow="SKL_ID" msprop:Generator_ColumnPropNameInTable="SKL_IDColumn" msprop:Generator_UserColumnName="SKL_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="LOCNCODE" msprop:Generator_ColumnVarNameInTable="columnLOCNCODE" msprop:Generator_ColumnPropNameInRow="LOCNCODE" msprop:Generator_ColumnPropNameInTable="LOCNCODEColumn" msprop:Generator_UserColumnName="LOCNCODE" type="xs:string" minOccurs="0" />
+              <xs:element name="TYPE" msprop:Generator_ColumnVarNameInTable="columnTYPE" msprop:Generator_ColumnPropNameInRow="TYPE" msprop:Generator_ColumnPropNameInTable="TYPEColumn" msprop:Generator_UserColumnName="TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="DEX_ROW_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnDEX_ROW_ID" msprop:Generator_ColumnPropNameInRow="DEX_ROW_ID" msprop:Generator_ColumnPropNameInTable="DEX_ROW_IDColumn" msprop:Generator_UserColumnName="DEX_ROW_ID" type="xs:int" />
+              <xs:element name="SkladOznaceni" msprop:Generator_ColumnVarNameInTable="columnSkladOznaceni" msprop:Generator_ColumnPropNameInRow="SkladOznaceni" msprop:Generator_ColumnPropNameInTable="SkladOznaceniColumn" msprop:Generator_UserColumnName="SkladOznaceni" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="Barcode" msprop:Generator_ColumnVarNameInTable="columnBarcode" msprop:Generator_ColumnPropNameInRow="Barcode" msprop:Generator_ColumnPropNameInTable="BarcodeColumn" msprop:Generator_UserColumnName="Barcode" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_SkladLokace_LokaceVariantySortiment" msprop:Generator_TableClassName="CZMST_SkladLokace_LokaceVariantySortimentDataTable" msprop:Generator_TableVarName="tableCZMST_SkladLokace_LokaceVariantySortiment" msprop:Generator_TablePropName="CZMST_SkladLokace_LokaceVariantySortiment" msprop:Generator_RowDeletingName="CZMST_SkladLokace_LokaceVariantySortimentRowDeleting" msprop:Generator_RowChangingName="CZMST_SkladLokace_LokaceVariantySortimentRowChanging" msprop:Generator_RowEvHandlerName="CZMST_SkladLokace_LokaceVariantySortimentRowChangeEventHandler" msprop:Generator_RowDeletedName="CZMST_SkladLokace_LokaceVariantySortimentRowDeleted" msprop:Generator_UserTableName="CZMST_SkladLokace_LokaceVariantySortiment" msprop:Generator_RowChangedName="CZMST_SkladLokace_LokaceVariantySortimentRowChanged" msprop:Generator_RowEvArgName="CZMST_SkladLokace_LokaceVariantySortimentRowChangeEvent" msprop:Generator_RowClassName="CZMST_SkladLokace_LokaceVariantySortimentRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ITEMNMBR" msprop:Generator_ColumnVarNameInTable="columnITEMNMBR" msprop:Generator_ColumnPropNameInRow="ITEMNMBR" msprop:Generator_ColumnPropNameInTable="ITEMNMBRColumn" msprop:Generator_UserColumnName="ITEMNMBR" type="xs:string" />
+              <xs:element name="SKL_ID" msprop:Generator_ColumnVarNameInTable="columnSKL_ID" msprop:Generator_ColumnPropNameInRow="SKL_ID" msprop:Generator_ColumnPropNameInTable="SKL_IDColumn" msprop:Generator_UserColumnName="SKL_ID" type="xs:string" />
+              <xs:element name="LOCNCODE" msprop:Generator_ColumnVarNameInTable="columnLOCNCODE" msprop:Generator_ColumnPropNameInRow="LOCNCODE" msprop:Generator_ColumnPropNameInTable="LOCNCODEColumn" msprop:Generator_UserColumnName="LOCNCODE" type="xs:string" />
+              <xs:element name="TYPE" msprop:Generator_ColumnVarNameInTable="columnTYPE" msprop:Generator_ColumnPropNameInRow="TYPE" msprop:Generator_ColumnPropNameInTable="TYPEColumn" msprop:Generator_UserColumnName="TYPE" type="xs:string" />
+              <xs:element name="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID" type="xs:int" minOccurs="0" />
+              <xs:element name="TermID" msprop:Generator_ColumnVarNameInTable="columnTermID" msprop:Generator_ColumnPropNameInRow="TermID" msprop:Generator_ColumnPropNameInTable="TermIDColumn" msprop:Generator_UserColumnName="TermID" type="xs:int" minOccurs="0" />
+              <xs:element name="ZboziITEMDESC" msprop:Generator_ColumnVarNameInTable="columnZboziITEMDESC" msprop:Generator_ColumnPropNameInRow="ZboziITEMDESC" msprop:Generator_ColumnPropNameInTable="ZboziITEMDESCColumn" msprop:Generator_UserColumnName="ZboziITEMDESC" type="xs:string" minOccurs="0" />
+              <xs:element name="ZboziITEMCODE" msprop:Generator_ColumnVarNameInTable="columnZboziITEMCODE" msprop:Generator_ColumnPropNameInRow="ZboziITEMCODE" msprop:Generator_ColumnPropNameInTable="ZboziITEMCODEColumn" msprop:Generator_UserColumnName="ZboziITEMCODE" type="xs:string" minOccurs="0" />
+              <xs:element name="ZboziCZ_CarKod" msprop:Generator_ColumnVarNameInTable="columnZboziCZ_CarKod" msprop:Generator_ColumnPropNameInRow="ZboziCZ_CarKod" msprop:Generator_ColumnPropNameInTable="ZboziCZ_CarKodColumn" msprop:Generator_UserColumnName="ZboziCZ_CarKod" type="xs:string" minOccurs="0" />
+              <xs:element name="TypIS_RECEIVE" msprop:Generator_ColumnVarNameInTable="columnTypIS_RECEIVE" msprop:Generator_ColumnPropNameInRow="TypIS_RECEIVE" msprop:Generator_ColumnPropNameInTable="TypIS_RECEIVEColumn" msprop:Generator_UserColumnName="TypIS_RECEIVE" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TypIS_DEFAULT" msprop:Generator_ColumnVarNameInTable="columnTypIS_DEFAULT" msprop:Generator_ColumnPropNameInRow="TypIS_DEFAULT" msprop:Generator_ColumnPropNameInTable="TypIS_DEFAULTColumn" msprop:Generator_UserColumnName="TypIS_DEFAULT" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TypIS_NORMAL" msprop:Generator_ColumnVarNameInTable="columnTypIS_NORMAL" msprop:Generator_ColumnPropNameInRow="TypIS_NORMAL" msprop:Generator_ColumnPropNameInTable="TypIS_NORMALColumn" msprop:Generator_UserColumnName="TypIS_NORMAL" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DEX_ROW_ID" msprop:Generator_ColumnVarNameInTable="columnDEX_ROW_ID" msprop:Generator_ColumnPropNameInRow="DEX_ROW_ID" msprop:Generator_ColumnPropNameInTable="DEX_ROW_IDColumn" msprop:Generator_UserColumnName="DEX_ROW_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="ZboziVNDITNUM" msprop:Generator_ColumnVarNameInTable="columnZboziVNDITNUM" msprop:Generator_ColumnPropNameInRow="ZboziVNDITNUM" msprop:Generator_ColumnPropNameInTable="ZboziVNDITNUMColumn" msprop:Generator_UserColumnName="ZboziVNDITNUM" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ListPolozkyNasnimaneDS" targetNamespace="http://fask.cz/ListPolozkyNasnimaneDS.xsd" xmlns:mstns="http://fask.cz/ListPolozkyNasnimaneDS.xsd" xmlns="http://fask.cz/ListPolozkyNasnimaneDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=D:\_work_\_Vyvoj_Subversion\Fask\MST\MST_W_Server\MST_W_Server_Source\SqlCEDBs\Inventura2.sdf" IsAppSettingsProperty="false" Modifier="Assembly" Name="Inventura2ConnectionString" ParameterPrefix="@" Provider="Microsoft.SqlServerCe.Client.3.5" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ListPolozkyNasnimaneDS" msdata:IsDataSet="true" msdata:Locale="" msprop:Generator_UserDSName="ListPolozkyNasnimaneDS" msprop:Generator_DataSetName="ListPolozkyNasnimaneDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Polozky" msprop:Generator_UserTableName="Polozky" msprop:Generator_RowDeletedName="PolozkyRowDeleted" msprop:Generator_RowChangedName="PolozkyRowChanged" msprop:Generator_RowClassName="PolozkyRow" msprop:Generator_RowChangingName="PolozkyRowChanging" msprop:Generator_RowEvArgName="PolozkyRowChangeEvent" msprop:Generator_RowEvHandlerName="PolozkyRowChangeEventHandler" msprop:Generator_TableClassName="PolozkyDataTable" msprop:Generator_TableVarName="tablePolozky" msprop:Generator_RowDeletingName="PolozkyRowDeleting" msprop:Generator_TablePropName="Polozky">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
+              <xs:element name="KATEGORIE" msprop:Generator_UserColumnName="KATEGORIE" msprop:Generator_ColumnVarNameInTable="columnKATEGORIE" msprop:Generator_ColumnPropNameInRow="KATEGORIE" msprop:Generator_ColumnPropNameInTable="KATEGORIEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="I_CISLO" msprop:Generator_UserColumnName="I_CISLO" msprop:Generator_ColumnVarNameInTable="columnI_CISLO" msprop:Generator_ColumnPropNameInRow="I_CISLO" msprop:Generator_ColumnPropNameInTable="I_CISLOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NAZEV" msprop:Generator_UserColumnName="NAZEV" msprop:Generator_ColumnVarNameInTable="columnNAZEV" msprop:Generator_ColumnPropNameInRow="NAZEV" msprop:Generator_ColumnPropNameInTable="NAZEVColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="STRED" msprop:Generator_UserColumnName="STRED" msprop:Generator_ColumnVarNameInTable="columnSTRED" msprop:Generator_ColumnPropNameInRow="STRED" msprop:Generator_ColumnPropNameInTable="STREDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="STRED_NAZEV" msprop:Generator_UserColumnName="STRED_NAZEV" msprop:Generator_ColumnVarNameInTable="columnSTRED_NAZEV" msprop:Generator_ColumnPropNameInRow="STRED_NAZEV" msprop:Generator_ColumnPropNameInTable="STRED_NAZEVColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OSOBA" msprop:Generator_UserColumnName="OSOBA" msprop:Generator_ColumnVarNameInTable="columnOSOBA" msprop:Generator_ColumnPropNameInRow="OSOBA" msprop:Generator_ColumnPropNameInTable="OSOBAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="OSOBA_NAZEV" msdata:Caption="STRED_NAZEV" msprop:Generator_UserColumnName="OSOBA_NAZEV" msprop:Generator_ColumnVarNameInTable="columnOSOBA_NAZEV" msprop:Generator_ColumnPropNameInRow="OSOBA_NAZEV" msprop:Generator_ColumnPropNameInTable="OSOBA_NAZEVColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LOKACE1" msprop:Generator_UserColumnName="LOKACE1" msprop:Generator_ColumnVarNameInTable="columnLOKACE1" msprop:Generator_ColumnPropNameInRow="LOKACE1" msprop:Generator_ColumnPropNameInTable="LOKACE1Column" type="xs:string" minOccurs="0" />
+              <xs:element name="LOKACE2" msprop:Generator_UserColumnName="LOKACE2" msprop:Generator_ColumnVarNameInTable="columnLOKACE2" msprop:Generator_ColumnPropNameInRow="LOKACE2" msprop:Generator_ColumnPropNameInTable="LOKACE2Column" type="xs:string" minOccurs="0" />
+              <xs:element name="LOKACE_NAZEV" msdata:Caption="STRED_NAZEV" msprop:Generator_UserColumnName="LOKACE_NAZEV" msprop:Generator_ColumnVarNameInTable="columnLOKACE_NAZEV" msprop:Generator_ColumnPropNameInRow="LOKACE_NAZEV" msprop:Generator_ColumnPropNameInTable="LOKACE_NAZEVColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="KANCELAR" msprop:Generator_UserColumnName="KANCELAR" msprop:Generator_ColumnVarNameInTable="columnKANCELAR" msprop:Generator_ColumnPropNameInRow="KANCELAR" msprop:Generator_ColumnPropNameInTable="KANCELARColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="KANCELAR_NAZEV" msdata:Caption="STRED_NAZEV" msprop:Generator_UserColumnName="KANCELAR_NAZEV" msprop:Generator_ColumnVarNameInTable="columnKANCELAR_NAZEV" msprop:Generator_ColumnPropNameInRow="KANCELAR_NAZEV" msprop:Generator_ColumnPropNameInTable="KANCELAR_NAZEVColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="EAN" msprop:Generator_UserColumnName="EAN" msprop:Generator_ColumnVarNameInTable="columnEAN" msprop:Generator_ColumnPropNameInRow="EAN" msprop:Generator_ColumnPropNameInTable="EANColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="KUSU" msprop:Generator_UserColumnName="KUSU" msprop:Generator_ColumnVarNameInTable="columnKUSU" msprop:Generator_ColumnPropNameInRow="KUSU" msprop:Generator_ColumnPropNameInTable="KUSUColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KLIC_LOK" msprop:Generator_UserColumnName="KLIC_LOK" msprop:Generator_ColumnPropNameInRow="KLIC_LOK" msprop:Generator_ColumnVarNameInTable="columnKLIC_LOK" msprop:Generator_ColumnPropNameInTable="KLIC_LOKColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="OS_ZPR" msprop:Generator_UserColumnName="OS_ZPR" msprop:Generator_ColumnPropNameInRow="OS_ZPR" msprop:Generator_ColumnVarNameInTable="columnOS_ZPR" msprop:Generator_ColumnPropNameInTable="OS_ZPRColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CAS_ZPR" msprop:Generator_UserColumnName="CAS_ZPR" msprop:Generator_ColumnPropNameInRow="CAS_ZPR" msprop:Generator_ColumnVarNameInTable="columnCAS_ZPR" msprop:Generator_ColumnPropNameInTable="CAS_ZPRColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ID_MAJETEK" msprop:Generator_UserColumnName="ID_MAJETEK" msprop:Generator_ColumnVarNameInTable="columnID_MAJETEK" msprop:Generator_ColumnPropNameInRow="ID_MAJETEK" msprop:Generator_ColumnPropNameInTable="ID_MAJETEKColumn" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Polozky" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="ProdejSklady_ID">ID: {0}</string>
+  <string name="ProdejSklady_Typ">Typ: {0}</string>
+  <string name="ProdejSklady_Ckod">Č. Kód: {0}</string>
+  <string name="ProdejSklady_DRI">DRI: {0}</string>
+  <string name="Prodej_Sklady_Label">Sklady</string>
+  <string name="Prodej_SkladZdroj_label">Sklad Zdroj</string>
+  <string name="Prodej_SkladCil_Label">Sklad Cil</string>
+</resources>

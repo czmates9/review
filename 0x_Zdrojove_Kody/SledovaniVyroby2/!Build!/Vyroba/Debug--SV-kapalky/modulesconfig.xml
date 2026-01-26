@@ -1,0 +1,9 @@
+<?xml version="1.0" standalone="yes"?>
+<ConfigModules xmlns="http://tempuri.org/ConfigModules.xsd">
+  <Modules>
+    <Name>Agro</Name>
+    <Assembly>Vyroba_Agro_Kapalky_SV.dll</Assembly>
+    <Object>FASK.SledovaniVyroby.Module.Vyroba_Agro_Kapalky_SV.frmMain</Object>
+    <Id>0</Id>
+  </Modules>
+</ConfigModules>

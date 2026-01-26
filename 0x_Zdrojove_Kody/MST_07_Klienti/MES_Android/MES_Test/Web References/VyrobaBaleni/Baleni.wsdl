@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://Baleni.fask.cz/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://Baleni.fask.cz/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba pro baleni</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Baleni.fask.cz/">
+      <s:element name="GetBaleniData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objednavkacislo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBaleniDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBaleniDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="balikcislo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BaleniDataCommit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="terminalid" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="objednavkacislo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="balikcislo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="printedtime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BaleniDataCommitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BaleniDataCommitResult" type="tns:StatusBaleni" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StatusBaleni">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="tns:STATUS" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="STATUS">
+        <s:restriction base="s:string">
+          <s:enumeration value="OK" />
+          <s:enumeration value="ERROR" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBaleniDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBaleniData" />
+  </wsdl:message>
+  <wsdl:message name="GetBaleniDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBaleniDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="BaleniDataCommitSoapIn">
+    <wsdl:part name="parameters" element="tns:BaleniDataCommit" />
+  </wsdl:message>
+  <wsdl:message name="BaleniDataCommitSoapOut">
+    <wsdl:part name="parameters" element="tns:BaleniDataCommitResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BaleniSoap">
+    <wsdl:operation name="GetBaleniData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Vraci data, ktera se budou tisknout</wsdl:documentation>
+      <wsdl:input message="tns:GetBaleniDataSoapIn" />
+      <wsdl:output message="tns:GetBaleniDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BaleniDataCommit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Potvrzeni o vytisknuti baliku</wsdl:documentation>
+      <wsdl:input message="tns:BaleniDataCommitSoapIn" />
+      <wsdl:output message="tns:BaleniDataCommitSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BaleniSoap" type="tns:BaleniSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBaleniData">
+      <soap:operation soapAction="http://Baleni.fask.cz/GetBaleniData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BaleniDataCommit">
+      <soap:operation soapAction="http://Baleni.fask.cz/BaleniDataCommit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BaleniSoap12" type="tns:BaleniSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBaleniData">
+      <soap12:operation soapAction="http://Baleni.fask.cz/GetBaleniData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BaleniDataCommit">
+      <soap12:operation soapAction="http://Baleni.fask.cz/BaleniDataCommit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Baleni">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba pro baleni</wsdl:documentation>
+    <wsdl:port name="BaleniSoap" binding="tns:BaleniSoap">
+      <soap:address location="http://localhost/MST_Win_Kom_Server_7_Dasenka/Baleni.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BaleniSoap12" binding="tns:BaleniSoap12">
+      <soap12:address location="http://localhost/MST_Win_Kom_Server_7_Dasenka/Baleni.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

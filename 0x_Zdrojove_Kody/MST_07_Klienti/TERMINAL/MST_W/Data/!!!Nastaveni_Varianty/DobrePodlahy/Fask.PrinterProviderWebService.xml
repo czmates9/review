@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<DSConfigPrinterProviderWebService xmlns="http://fask.cz/DSConfigPrinterProviderWebService.xsd">
+  <Params>
+    <Address>http://192.168.1.121:8122</Address>
+    <Name />
+    <Timeout>100000</Timeout>
+    <PrinterName>ZDesigner ZD420-203dpi ZPL (51)</PrinterName>
+    <OneWayPrint>false</OneWayPrint>
+  </Params>
+</DSConfigPrinterProviderWebService>

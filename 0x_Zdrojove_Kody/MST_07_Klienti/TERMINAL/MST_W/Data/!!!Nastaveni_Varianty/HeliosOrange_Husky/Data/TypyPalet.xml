@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="yes"?>
+<TypyPalet xmlns="http://fask.cz/TypyPalet.xsd">
+  <Palety>
+    <ID>P</ID>
+    <Name>Paleta</Name>
+  </Palety>
+  <Palety>
+    <ID>K</ID>
+    <Name>Kartón</Name>
+  </Palety>
+</TypyPalet>

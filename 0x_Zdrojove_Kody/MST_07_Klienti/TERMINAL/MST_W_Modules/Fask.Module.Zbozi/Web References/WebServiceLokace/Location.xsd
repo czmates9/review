@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/Location.xsd" xmlns="http://tempuri.org/Location.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/Location.xsd" id="Location" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="Location">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST_SkladLokace_Stav">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ITEMNMBR" type="xs:string" />
+              <xs:element minOccurs="0" name="ITEMDESC" type="xs:string" />
+              <xs:element name="QTYSHPPD_DEF" type="xs:decimal" />
+              <xs:element name="QTYSHPPD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SKL_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="LOCNCODE" type="xs:string" />
+              <xs:element name="DATECHANGE" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="EXPIRATION" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Index" type="xs:int" />
+              <xs:element name="SERLTNUM" type="xs:string" />
+              <xs:element minOccurs="0" name="QTY_OWNER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PRAC_ID_OWNER" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_SkladLokace_StavPohyb">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ITEMNMBR" type="xs:string" />
+              <xs:element minOccurs="0" name="DOCUMENT_NUMBER" type="xs:string" />
+              <xs:element minOccurs="0" name="POHYB_TYPE" type="xs:string" />
+              <xs:element minOccurs="0" name="POHYB_SRC" type="xs:string" />
+              <xs:element minOccurs="0" name="SOURCE" type="xs:string" />
+              <xs:element minOccurs="0" name="CountEntries" type="xs:int" />
+              <xs:element name="QTYSHPPD" type="xs:decimal" />
+              <xs:element name="SERLTNUM" type="xs:string" />
+              <xs:element minOccurs="0" name="SKL_ID_SRC" type="xs:string" />
+              <xs:element minOccurs="0" name="SKL_ID_DST" type="xs:string" />
+              <xs:element minOccurs="0" name="LOCNCODE_SRC" type="xs:string" />
+              <xs:element minOccurs="0" name="LOCNCODE_DST" type="xs:string" />
+              <xs:element name="UserID" type="xs:int" />
+              <xs:element name="TermID" type="xs:int" />
+              <xs:element msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="guid" type="xs:string" />
+              <xs:element name="dateeveS" type="xs:dateTime" />
+              <xs:element name="dateeveT" type="xs:dateTime" />
+              <xs:element name="id" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_SkladLokace_Mapa">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="SKL_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="LOCNCODE" type="xs:string" />
+              <xs:element minOccurs="0" name="TYPE" type="xs:string" />
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="DEX_ROW_ID" type="xs:int" />
+              <xs:element minOccurs="0" name="Barcode" type="xs:string" />
+              <xs:element minOccurs="0" name="Description" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_SkladLokace_LokaceVariantySortiment">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ITEMNMBR" type="xs:string" />
+              <xs:element name="SKL_ID" type="xs:string" />
+              <xs:element name="LOCNCODE" type="xs:string" />
+              <xs:element name="TYPE" type="xs:string" />
+              <xs:element minOccurs="0" name="UserID" type="xs:int" />
+              <xs:element minOccurs="0" name="TermID" type="xs:int" />
+              <xs:element name="DateCreated" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_SkladLokace_LokaceTypy">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="TYPE" type="xs:string" />
+              <xs:element minOccurs="0" name="Description" type="xs:string" />
+              <xs:element name="IS_RECEIVE" type="xs:boolean" />
+              <xs:element name="IS_DEFAULT" type="xs:boolean" />
+              <xs:element name="IS_NORMAL" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:CZMST_SkladLokace_StavPohyb" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

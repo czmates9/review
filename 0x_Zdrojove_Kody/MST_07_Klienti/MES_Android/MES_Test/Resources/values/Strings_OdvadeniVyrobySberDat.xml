@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="OdvadeniVyroby_SberDat_Label">Odvádění výroby</string>
+  <string name="OdvadeniVyroby_SberDat_OK">OK</string>
+  <string name="OdvadeniVyroby_SberDat_Storno">Zrušit</string>
+  
+  <string name="OdvadeniVyroby_SberDat_Label_VyrobniOperace">Číslo operace</string>
+
+  <string name="OdvadeniVyroby_SberDat_hint_VyrobniOperace">Zadejte Kód</string>
+
+  
+
+</resources>

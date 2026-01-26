@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" standalone="yes" ?>
+<Prijem xmlns="http://fask.cz/Prijem.xsd">
+	<Parametry>
+    <!--(MST_W:Ano) Povolena duplicita SN/Sarze (True=duplicita povolena)-->
+    <CONFIG_DUPLIC_SN>true</CONFIG_DUPLIC_SN>
+    <!--(MST_W:Ne) Provadet kontroly na delku cisla (MST_W automaticky provadi kontorlu, dle nastaveni u polozky v tabulce _PE(CZ_SerNum_Delka,CZ_SW_Delka,CZ_DatVyr_Delka), je-li hodnota >0 -->
+    <CONFIG_KONT_DELKA>false</CONFIG_KONT_DELKA>
+    <!--(MST_W:Ano) Kontrola uplnosti davky-->
+    <CONFIG_KONT_DOKONCENOSTI>false</CONFIG_KONT_DOKONCENOSTI>
+    <!--(MST_W:Ne) ???-->
+    <CONFIG_KONT_NUL_DELKA>false</CONFIG_KONT_NUL_DELKA>
+    <!--(MST_W:Ano) Po zadani SN/Sarze kontroluje, zda je polozka uplne zadana nebo ne, pokud ne, pak zobrazi dotaz, zda ukoncit-->
+    <CONFIG_KONT_UPL_POL>false</CONFIG_KONT_UPL_POL>
+    <!--(MST_W:Ano) Aktivuje rezim zobrazeni (True=Detail, False=Seznam(List))-->
+    <CONFIG_LISTSNIM>false</CONFIG_LISTSNIM>
+    <!--(MST_W:Ne) Zalozeni nove karty zbozi -->
+    <CONFIG_NOVA_KARTA>false</CONFIG_NOVA_KARTA>
+    <!--(MST_W:Ano) Kontrola uplnosti polozky(provadi se pred nacitanim mnozstvi a po zadani mnozstvi)-->
+    <CONFIG_POKRDOHLED>false</CONFIG_POKRDOHLED>
+    <!--(MST_W:Ano) Neni-li povolena duplicita SN/Sarze, urcuje typ klice pro overeni duplicity (testu) na existenci SN/Sarze na vystupu v tabulce CZMST_PI (True=ITEMNMBR,SERLTNUM, False=PONUMBER,ORD,SERLTNUM)-->
+    <CONFIG_PRIM_KEY1>false</CONFIG_PRIM_KEY1>
+    <!--(MST_W:Ne) ??? -->
+    <CONFIG_PTATSE_NEANO>false</CONFIG_PTATSE_NEANO>
+    <!--(MST_W:Ano) Pozadavek na zadavani hodnoty LOCNCODE(True=zadavat, False=nezadavat) -->
+    <CONFIG_SNIM_LOCNCODE>false</CONFIG_SNIM_LOCNCODE>
+    <!--(MST_W:Ano) Vyzadovat zadani nove hodnoty s nazvem PON_NAME, ktera se ulozi na vystup do VNDITNUM -->
+    <CONFIG_SNIM_PONUMBER>false</CONFIG_SNIM_PONUMBER>
+    <!--(MST_W:Ano) Vyzadovat zadani doplnkove hodnoty REZ2 (pred zadanim mnozstvi) -->
+    <CONFIG_SNIM_REZ2>false</CONFIG_SNIM_REZ2>
+    <!--(MST_W:Ne) ??? -->
+    <CONFIG_SNIMAT_POL1>false</CONFIG_SNIMAT_POL1>
+    <!--(MST_W:Ne) ??? -->
+    <CONFIG_SNIMAT_POL2>false</CONFIG_SNIMAT_POL2>
+    <!--(MST_W:Ano) Vyzadovat zadani doplnujici hodnoty do REZ1(Po zadani mnozstvi) -->
+    <CONFIG_SNIMAT_POL3>false</CONFIG_SNIMAT_POL3>
+    <!--(MST_W:Ne) ??? -->
+    <CONFIG_SNIMATZADAT_SN>true</CONFIG_SNIMATZADAT_SN>
+    <!--(MST_W:Ano) vracet se po zadani mnozstvi zpet na seznam polozek(True=Vracet, False=Zustat v zadavani)-->
+    <CONFIG_ZADAT_MN_POKAZDE>true</CONFIG_ZADAT_MN_POKAZDE>
+    <!--(MST_W:Ano) Povoluje/zakazuje aktivaci rezimu zobrazeni(True=[dle CONFIG_LISTSNIM], False=Detail)-->
+    <ENABLE_LISTSNIM>true</ENABLE_LISTSNIM>
+    <!--(MST_W:Ne) ??? -->
+    <ENABLE_SNIMATZADAT_SN>true</ENABLE_SNIMATZADAT_SN>
+    <!--(MST_W:Ano) Povoluje predvyplneni hodnoty mnozstvi -->
+    <CONFIG_MNOZSTVI_PREDVYPLNIT>true</CONFIG_MNOZSTVI_PREDVYPLNIT>
+    <!--(MST_W:Ano) Predvyplni mnozstvi "1" -->
+    <CONFIG_MNOZSTVI_PREDVYPLNIT_JEDNA>false</CONFIG_MNOZSTVI_PREDVYPLNIT_JEDNA>
+    <!--(MST_W:Ano) Predvyplni zbyvajici mnozstvi -->
+    <CONFIG_MNOZSTVI_PREDVYPLNIT_ZBYVAJICI>false</CONFIG_MNOZSTVI_PREDVYPLNIT_ZBYVAJICI>
+    <!--(MST_W:Ano) Automaticke ulozeni hodnoty dle prednabizeneho mnozstvi(CONFIG_ZADAT_MN_POKAZDE musi byt nastaveno na True) -->
+    <CONFIG_MNOZSTVI_ZADAVAT>true</CONFIG_MNOZSTVI_ZADAVAT>
+    <!--(MST_W:Ano) Povoluje zadani mnozstvi scannerem -->
+    <CONFIG_MNOZSTVI_SCANNEREM>true</CONFIG_MNOZSTVI_SCANNEREM>
+    <!-- (MST_W:Ano) V pripade povoleni CONFIG_LOKACE_POVOLIT dojde k zapnuti lokacniho mechanismu pro terminal i server. -->
+    <CONFIG_LOKACE_POVOLIT>false</CONFIG_LOKACE_POVOLIT>
+    <!-- (MST_W:Ano) V pripade povoleni CONFIG_LOKACE_PRIJMOVA dojde pri snimani polozek k automatickemu vyplneni lokace na prijmovou (vyber prijmove lokace probiha pri otevreni davky) -->
+    <CONFIG_LOKACE_PRIJMOVA>false</CONFIG_LOKACE_PRIJMOVA>
+    <!-- (MST_W:Ano) Timeout pro komunikaci se serverem (lokacni mechanismus). -->
+    <CONFIG_LOKACE_TIMEOUT>20000</CONFIG_LOKACE_TIMEOUT>
+  </Parametry>
+</Prijem>

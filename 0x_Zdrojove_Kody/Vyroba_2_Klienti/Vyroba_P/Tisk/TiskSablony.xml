@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<TiskSablony xmlns="http://fask.cz/TiskSablony.xsd">
+  <Sablony>
+    <Nazev>Polotovar 10x10</Nazev>
+    <Soubor>.\Tisk\TiskSablona_polotovar.txt</Soubor>
+    <ITEMTYPE>P</ITEMTYPE>
+    <PrinterName>Zebra  S4M</PrinterName>
+  </Sablony>
+  <Sablony>
+    <Nazev>Polotovar 5x5</Nazev>
+    <Soubor>.\Tisk\TiskSablona_polotovar.txt</Soubor>
+    <ITEMTYPE>P</ITEMTYPE>
+    <PrinterName>Zebra  S4M</PrinterName>
+  </Sablony>
+  <Sablony>
+    <Nazev>Finál 1x1</Nazev>
+    <Soubor>.\Tisk\TiskSablona_final.txt</Soubor>
+    <ITEMTYPE>F</ITEMTYPE>
+    <PrinterName>Zebra  S4M</PrinterName>
+  </Sablony>
+</TiskSablony>

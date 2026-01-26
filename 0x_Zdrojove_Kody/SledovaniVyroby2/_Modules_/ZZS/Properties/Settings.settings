@@ -1,0 +1,87 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FASK.SledovaniVyroby.Module.ZZS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ProdejConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=d:\_work_GIT_\MES\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\_Modules_\ZZS\SQLCEDB\Prodej.sdf&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Microsoft.SqlServerCe.Client.3.5&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=d:\_work_GIT_\MES\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\_Modules_\ZZS\SQLCEDB\Prodej.sdf</Value>
+    </Setting>
+    <Setting Name="ZZS_CiselnikService_CiselnikService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/MST_Win_Kom_Server_6_alfa/Ciselnik.asmx</Value>
+    </Setting>
+    <Setting Name="CiselnikTypDokladuDB" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">TypDokladu.sdf</Value>
+    </Setting>
+    <Setting Name="CiselnikKatalogZboziDB" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Zbozi.sdf</Value>
+    </Setting>
+    <Setting Name="TypDokladuConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=d:\_work_GIT_\MES\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\_Modules_\ZZS\SQLCEDB\TypDokladu.sdf&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Microsoft.SqlServerCe.Client.3.5&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=d:\_work_GIT_\MES\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\_Modules_\ZZS\SQLCEDB\TypDokladu.sdf</Value>
+    </Setting>
+    <Setting Name="ZboziConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=d:\_work_GIT_\MES\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\_Modules_\ZZS\SQLCEDB\Zbozi.sdf&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Microsoft.SqlServerCe.Client.3.5&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=d:\_work_GIT_\MES\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\_Modules_\ZZS\SQLCEDB\Zbozi.sdf</Value>
+    </Setting>
+    <Setting Name="TimeOut_Ciselniky" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5000</Value>
+    </Setting>
+    <Setting Name="SkladyConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=d:\_work_GIT_\MES\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\_Modules_\ZZS\SQLCEDB\Sklady.sdf&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Microsoft.SqlServerCe.Client.3.5&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=d:\_work_GIT_\MES\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\_Modules_\ZZS\SQLCEDB\Sklady.sdf</Value>
+    </Setting>
+    <Setting Name="CiselnikSkladyDB" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Sklady.sdf</Value>
+    </Setting>
+    <Setting Name="OdberateleConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=d:\_work_GIT_\MES\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\_Modules_\ZZS\SQLCEDB\Odberatele.sdf&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Microsoft.SqlServerCe.Client.3.5&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=d:\_work_GIT_\MES\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\_Modules_\ZZS\SQLCEDB\Odberatele.sdf</Value>
+    </Setting>
+    <Setting Name="Predani_dodavateli_sluzeb_prani" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">S01toS02</Value>
+    </Setting>
+    <Setting Name="Prevzeti_od_dodavatele" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">S02toS01</Value>
+    </Setting>
+    <Setting Name="ZZS_ProdejService_ProdejService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/MST_Win_Kom_Server_6_alfa/Prodej.asmx</Value>
+    </Setting>
+    <Setting Name="ZZS_FileTransferService_FileTransfer" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/MST_Win_Kom_Server_6_alfa/FileTransfer.asmx</Value>
+    </Setting>
+    <Setting Name="PracovniciConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=d:\_work_GIT_\MES\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\_Modules_\ZZS\SQLCEDB\Pracovnici.sdf&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Microsoft.SqlServerCe.Client.3.5&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=d:\_work_GIT_\MES\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\_Modules_\ZZS\SQLCEDB\Pracovnici.sdf</Value>
+    </Setting>
+    <Setting Name="CiselnikPracovniciDB" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Pracovnici.sdf</Value>
+    </Setting>
+    <Setting Name="CiselnikOdberateleDB" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Odberatele.sdf</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

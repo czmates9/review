@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dat:dataPack xmlns:dat="http://www.stormware.cz/schema/version_2/data.xsd" xmlns:lst="http://www.stormware.cz/schema/version_2/list.xsd" id="IMP001" ico="28280725" application="MST_Pohoda" version="2.0" note="uživatelské seznamy">
+  <dat:dataPackItem version="2.0" id="IMP001">
+    <lst:listUserCode version="1.1" code="FXTS" constants="true" name="Hodnota typu sledování">
+      <lst:itemUserCode name="Množství" code="Množství" constant="1" />
+      <lst:itemUserCode name="Seriové číslo" code="SN" constant="2" />
+      <lst:itemUserCode name="Šarže" code="Šarže" constant="3" />
+    </lst:listUserCode>
+  </dat:dataPackItem>
+</dat:dataPack>

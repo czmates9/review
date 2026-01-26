@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{516D19DE-351A-4E3A-9ADC-5B8A88353693}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fask.Module.ABRA.SAB</RootNamespace>
+    <AssemblyName>Fask.Module.ABRA.SAB</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\MST_Win_Kom_Server\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\MST_Win_Kom_Server\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=10.3.4.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FirebirdSql.Data.FirebirdClient.10.3.4\lib\netstandard2.0\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RestSharp.106.0.0\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe.6.1.0\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.Serialization.Primitives.4.3.0\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Threading.Tasks.Extensions.4.6.0\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABRA_Datasets\Inventura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ABRA_Datasets\Lokace.cs">
+      <DependentUpon>Lokace.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ABRA_Datasets\Lokace.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lokace.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ABRA_Datasets\Prijem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ABRA_Datasets\Vydej.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ABRA_Datasets\Zbozi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ABRA.cs" />
+    <Compile Include="Classes\ABRA_BO\DIP.cs" />
+    <Compile Include="Classes\ABRA_BO\PRP.cs" />
+    <Compile Include="Classes\ABRA_BO\PRV.cs" />
+    <Compile Include="Classes\ABRA_BO\HIP.cs" />
+    <Compile Include="Classes\ABRA_BO\PR.cs" />
+    <Compile Include="Classes\ABRA_BO\DL.cs" />
+    <Compile Include="Classes\ABRA_BO\FV.cs" />
+    <Compile Include="Classes\ABRA_BO\SB.cs" />
+    <Compile Include="Classes\ABRA_BO\CZMST_SI.cs" />
+    <Compile Include="Classes\Doklad.cs" />
+    <Compile Include="Classes\Prehled_DIP.cs" />
+    <Compile Include="Classes\Export_DIP.cs" />
+    <Compile Include="Classes\Inventura.cs" />
+    <Compile Include="Classes\JSON_Class.cs" />
+    <Compile Include="Classes\Lokace.cs" />
+    <Compile Include="Classes\Prijem.cs" />
+    <Compile Include="Classes\Prodej.cs" />
+    <Compile Include="Classes\TransformerCiselniky.cs" />
+    <Compile Include="Classes\Vydej.cs" />
+    <Compile Include="Classes\WEBAPI\ABRAComunication.cs" />
+    <Compile Include="Classes\WEBAPI\PRV_to_PRP.cs" />
+    <Compile Include="Classes\WEBAPI\DL_to_FV.cs" />
+    <Compile Include="Classes\WEBAPI\OV_to_PR.cs" />
+    <Compile Include="Classes\WEBAPI\OP_to_DL.cs" />
+    <Compile Include="Classes\WEBAPI\PMState.cs" />
+    <Compile Include="Classes\WEBAPI\RequestResponse.cs" />
+    <Compile Include="Constants\Common.cs" />
+    <Compile Include="Database\ABRA.cs" />
+    <Compile Include="Database\Ciselniky.cs" />
+    <Compile Include="Database\Inventura.cs" />
+    <Compile Include="Database\Lokace.cs" />
+    <Compile Include="Database\Ostatni.cs" />
+    <Compile Include="Database\Prijem.cs" />
+    <Compile Include="Database\Prodej.cs" />
+    <Compile Include="Database\Vydej.cs" />
+    <Compile Include="Database\Zbozi.cs" />
+    <Compile Include="Globals_V1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Provider\ProviderCiselniky.cs" />
+    <Compile Include="Provider\ProviderConfiguration.cs" />
+    <Compile Include="Provider\ProviderInformations.cs" />
+    <Compile Include="Provider\ProviderInventura1.cs" />
+    <Compile Include="Provider\ProviderLokace.cs" />
+    <Compile Include="Provider\ProviderMain.cs" />
+    <Compile Include="Provider\ProviderOstatni.cs" />
+    <Compile Include="Provider\ProviderPrijem.cs" />
+    <Compile Include="Provider\ProviderProdej.cs" />
+    <Compile Include="Provider\ProviderTest.cs" />
+    <Compile Include="Provider\ProviderVydej.cs" />
+    <Compile Include="SQL_Datasets\ABRA_V1.cs">
+      <DependentUpon>ABRA_V1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Datasets\ABRA_V1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABRA_V1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Datasets\Ciselniky.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ciselniky.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Datasets\Inventura.cs">
+      <DependentUpon>Inventura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Datasets\Inventura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Datasets\Lokace.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lokace.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Datasets\Ostatni.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ostatni.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Datasets\Prijem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Datasets\ReportInventura1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportInventura1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Datasets\Vydej.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Datasets\Zbozi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\Fask.Columns\Fask.Columns.csproj">
+      <Project>{9FE07D18-7A04-4A20-8EE8-929F9BE5DF16}</Project>
+      <Name>Fask.Columns</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\Fask.Logging\Fask.Logging.csproj">
+      <Project>{89E8C070-4694-4F11-AB01-A674BF8B9F80}</Project>
+      <Name>Fask.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\Fask.Rady\Fask.Rady.csproj">
+      <Project>{789768c6-60f7-43a3-b9a9-9a4b169b9514}</Project>
+      <Name>Fask.Rady</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\Fask.RestSharp\Fask.RestSharp.csproj">
+      <Project>{dcd07eda-015d-49cb-a3f0-855bc143440f}</Project>
+      <Name>Fask.RestSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fask.MyPath\Fask.MyPath.csproj">
+      <Project>{49386A7A-1C55-4811-9E73-5AB8206B7802}</Project>
+      <Name>Fask.MyPath</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fask.Server.Interfaces\Fask.Server.Interfaces.csproj">
+      <Project>{40594B84-CB0F-4988-B2C0-E2F701E1E062}</Project>
+      <Name>Fask.Server.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fask.Tracing\Fask.Tracing.csproj">
+      <Project>{14569DD3-5250-4CDB-998E-198BFD548113}</Project>
+      <Name>Fask.Tracing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ABRA_Datasets\Inventura.xsc">
+      <DependentUpon>Inventura.xsd</DependentUpon>
+    </None>
+    <None Include="ABRA_Datasets\Inventura.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventura.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ABRA_Datasets\Inventura.xss">
+      <DependentUpon>Inventura.xsd</DependentUpon>
+    </None>
+    <None Include="ABRA_Datasets\Lokace.xsc">
+      <DependentUpon>Lokace.xsd</DependentUpon>
+    </None>
+    <None Include="ABRA_Datasets\Lokace.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Lokace.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ABRA_Datasets\Lokace.xss">
+      <DependentUpon>Lokace.xsd</DependentUpon>
+    </None>
+    <None Include="ABRA_Datasets\Prijem.xsc">
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </None>
+    <None Include="ABRA_Datasets\Prijem.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Prijem.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ABRA_Datasets\Prijem.xss">
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </None>
+    <None Include="ABRA_Datasets\Vydej.xsc">
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </None>
+    <None Include="ABRA_Datasets\Vydej.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Vydej.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ABRA_Datasets\Vydej.xss">
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </None>
+    <None Include="ABRA_Datasets\Zbozi.xsc">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+    <None Include="ABRA_Datasets\Zbozi.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Zbozi.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ABRA_Datasets\Zbozi.xss">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQL_Datasets\ABRA_V1.xsc">
+      <DependentUpon>ABRA_V1.xsd</DependentUpon>
+    </None>
+    <None Include="SQL_Datasets\ABRA_V1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ABRA_V1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQL_Datasets\ABRA_V1.xss">
+      <DependentUpon>ABRA_V1.xsd</DependentUpon>
+    </None>
+    <None Include="SQL_Datasets\Ciselniky.xsc">
+      <DependentUpon>Ciselniky.xsd</DependentUpon>
+    </None>
+    <None Include="SQL_Datasets\Ciselniky.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ciselniky.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQL_Datasets\Ciselniky.xss">
+      <DependentUpon>Ciselniky.xsd</DependentUpon>
+    </None>
+    <None Include="SQL_Datasets\Inventura.xsc">
+      <DependentUpon>Inventura.xsd</DependentUpon>
+    </None>
+    <None Include="SQL_Datasets\Inventura.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventura.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SQL_Datasets\Inventura.xss">
+      <DependentUpon>Inventura.xsd</DependentUpon>
+    </None>
+    <None Include="SQL_Datasets\Lokace.xsc">
+      <DependentUpon>Lokace.xsd</DependentUpon>
+    </None>
+    <None Include="SQL_Datasets\Lokace.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Lokace.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQL_Datasets\Lokace.xss">
+      <DependentUpon>Lokace.xsd</DependentUpon>
+    </None>
+    <None Include="SQL_Datasets\Ostatni.xsc">
+      <DependentUpon>Ostatni.xsd</DependentUpon>
+    </None>
+    <None Include="SQL_Datasets\Ostatni.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ostatni.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQL_Datasets\Ostatni.xss">
+      <DependentUpon>Ostatni.xsd</DependentUpon>
+    </None>
+    <None Include="SQL_Datasets\Prijem.xsc">
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </None>
+    <None Include="SQL_Datasets\Prijem.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Prijem.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SQL_Datasets\Prijem.xss">
+      <DependentUpon>Prijem.xsd</DependentUpon>
+    </None>
+    <None Include="SQL_Datasets\ReportInventura1.xsc">
+      <DependentUpon>ReportInventura1.xsd</DependentUpon>
+    </None>
+    <None Include="SQL_Datasets\ReportInventura1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportInventura1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQL_Datasets\ReportInventura1.xss">
+      <DependentUpon>ReportInventura1.xsd</DependentUpon>
+    </None>
+    <None Include="SQL_Datasets\Vydej.xsc">
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </None>
+    <None Include="SQL_Datasets\Vydej.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Vydej.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SQL_Datasets\Vydej.xss">
+      <DependentUpon>Vydej.xsd</DependentUpon>
+    </None>
+    <None Include="SQL_Datasets\Zbozi.xsc">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+    <None Include="SQL_Datasets\Zbozi.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Zbozi.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQL_Datasets\Zbozi.xss">
+      <DependentUpon>Zbozi.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

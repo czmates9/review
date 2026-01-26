@@ -1,0 +1,6 @@
+<?xml version="1.0" standalone="yes"?>
+<Servis xmlns="http://fask.cz/Servis.xsd">
+  <Parametry>
+    <CONFIG_KONT_DOKONCENOSTI>true</CONFIG_KONT_DOKONCENOSTI>
+  </Parametry>
+</Servis>

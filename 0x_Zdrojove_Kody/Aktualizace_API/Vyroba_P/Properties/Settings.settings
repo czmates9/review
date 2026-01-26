@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Fask.Vyroba_P.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Vyroba_P_WebServiceVyroba_Vyroba" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/MST_Win_Kom_Server_7_Dasenka/Vyroba.asmx</Value>
+    </Setting>
+    <Setting Name="Vyroba_P_UkolovaniService_Ukolovani" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/MST_Win_Kom_Server_7_Dasenka/Ukolovani.asmx</Value>
+    </Setting>
+    <Setting Name="Vyroba_P_WebServiceTisk_Tisk" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/MST_Win_Kom_Server_7_Dasenka/Tisk.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

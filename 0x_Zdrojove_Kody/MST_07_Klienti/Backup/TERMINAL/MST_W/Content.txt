@@ -1,0 +1,44 @@
+Hlavni adresar MST_W : Obsahuje vykonne soubory a podpurne knihovny a nektera uzivatelska nastaveni pro beh programu MST_W
+====================
+CAENRFIDLibraryPocketPC.dll	: RFID modul pro terminal T+T Nettcom
+CSVParserDevice.dll			: CSV Parser
+Fask.Encryption.dll			: Podpora pro sifrovani dat
+Fask.Graphic.dll			: Graficke komponenty projektu
+Fask.Logging.dll			: Podpora Logovani
+Fask.ModuleProvider.dll		: Podpora pro dynamicke moduly zarazene do prostredi MST
+Fask.ScannerFactory			: Implementace dynamickeho pouziti typu scanneru
+Fask.ScannerProvider		: Rozhrani pro dynamicke objekty scanneru ruznych vyrobcu
+Fask.ScannerProviderXXXX	: Implementace rozhrani Fask.ScannerProvider pro konkretniho vyrobce
+IOExpander.dll				: SDK pro terminal TT8800
+Symbol.dll					: SDK pro terminal Motorola
+Symbol.Barcode.dll			: SDK pro terminal Motorola
+Symbol.BarcodeForms.dll		: SDK pro terminal Motorola
+Symbol.RFID2.Device.dll		: SDK pro terminal Motorola - rozhrani RFID 2
+Symbol.RFID3.Device.dll		: SDK pro terminal Motorola - rozhrani RFID 3
+Symbol.StandardForms.dll	: SDK pro terminal Motorola
+TTNC850SDK.dll				: SDK pro terminal T+T Nettcom
+USICF.dll					: SDK pro terminal Unitech
+MST_W.exe					: Vykonne jadro aplikace MST_W
+Readme.txt					: Popis zmen verzi
+Install.txt					: Popis instalace a nastaveni dynamickych rozhrani do MST_W
+Settings.xml				: Uzivatelska nastaveni aplikace
+ScannerFactory.xml			: Nastaveni typu pouziteho scanneru (viz. Install.txt)
+
+Adresar Data : obsahuje konfiguracni soubory + defaultne se sem ukladaji soubory Davek
+============
+
+Data\ConfigModules.xml	: Nastaveni jednotlivych modulu MST_W (Prodej, Prijem, Vydej, Inventura, ...)
+Data\ConfigTerminal.xml	: Nastaveni terminalu (Server address, timeouty, id terminalu, ...)
+Data\passwd.xml		: Soubor Loginu a Hesel pro prihlaseni uzivatelu k aplikaci
+Data\TypyPalet.xml	: Podurny konfiguracni soubor typu palet ...
+
+Adresar Sounds : Obsahuje zvukove soubory pro MessageBoxBig dialog
+==============
+Sounds\dotaz.wav	: zvuk pro Message dialog typu Question
+Sounds\chimes.wav	: zvuk pro Message dialog typu Warning
+Sounds\chyba.wav	: zvuk pro Message dialog typu Exclamation
+Sounds\info.wav		: zvuk pro Message dialog typu Inforamtion
+
+Adresar Fask.SQLiteDBs : Obsahuje Templaty pro moduly
+================
+SqlCEDBs\Prodej.sdf	: Template pro davky modulu Prodej

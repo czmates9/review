@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://print.fask.cz/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://print.fask.cz/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://print.fask.cz/">
+      <s:import namespace="http://tempuri.org/DB.xsd" />
+      <s:import schemaLocation="http://localhost/MST_Print_Server/Tisk.asmx?schema=DB" namespace="http://tempuri.org/DB.xsd" />
+      <s:element name="Service_SkontrolujNevytisknuteListky">
+        <s:complexType />
+      </s:element>
+      <s:element name="Service_SkontrolujNevytisknuteListkyResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Service_Wait">
+        <s:complexType />
+      </s:element>
+      <s:element name="Service_WaitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Service_WaitResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Service_Printing">
+        <s:complexType />
+      </s:element>
+      <s:element name="Service_PrintingResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Terminal_VytiskniPaletovyListek">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="polozky">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DB.xsd" name="namespace" />
+                <s:attribute fixed="CZMST_SIDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="id_terminal" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Terminal_VytiskniPaletovyListekResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Terminal_VytiskniPaletovyListekResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Terminal_Vytiskni">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SN" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="parametry" type="tns:TiskData" />
+            <s:element minOccurs="1" maxOccurs="1" name="id_terminal" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TiskData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CountEntries" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PONUMBER" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ORD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ITEMNMBR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VNDDOCNM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VNDITNUM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LOCNCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QTYSHPPD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QTYPACK" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SERLTNUM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KOD_SW" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DAT_VYROBY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DATEDONE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIMEDONE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CZ_CarKod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REZ_1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REZ_2" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Terminal_VytiskniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Terminal_VytiskniResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Terminal_VytiskniDocasneStitky">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="id_terminal" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Terminal_VytiskniDocasneStitkyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Terminal_VytiskniDocasneStitkyResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Terminal_SaveTiskarna">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jmeno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="port" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="soubor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="com" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="timeout" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Terminal_SaveTiskarnaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Terminal_SaveTerminal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idterminal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idtiskarna" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Terminal_SaveTerminalResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Test_SSCCGenerate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Test_SSCCGenerateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Test_SSCCGenerateResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Test_VytiskniPaletovyListek">
+        <s:complexType />
+      </s:element>
+      <s:element name="Test_VytiskniPaletovyListekResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Test_Vsetko">
+        <s:complexType />
+      </s:element>
+      <s:element name="Test_VsetkoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Test_DocasnyListek">
+        <s:complexType />
+      </s:element>
+      <s:element name="Test_DocasnyListekResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Service_SkontrolujNevytisknuteListkySoapIn">
+    <wsdl:part name="parameters" element="tns:Service_SkontrolujNevytisknuteListky" />
+  </wsdl:message>
+  <wsdl:message name="Service_SkontrolujNevytisknuteListkySoapOut">
+    <wsdl:part name="parameters" element="tns:Service_SkontrolujNevytisknuteListkyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_WaitSoapIn">
+    <wsdl:part name="parameters" element="tns:Service_Wait" />
+  </wsdl:message>
+  <wsdl:message name="Service_WaitSoapOut">
+    <wsdl:part name="parameters" element="tns:Service_WaitResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_PrintingSoapIn">
+    <wsdl:part name="parameters" element="tns:Service_Printing" />
+  </wsdl:message>
+  <wsdl:message name="Service_PrintingSoapOut">
+    <wsdl:part name="parameters" element="tns:Service_PrintingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Terminal_VytiskniPaletovyListekSoapIn">
+    <wsdl:part name="parameters" element="tns:Terminal_VytiskniPaletovyListek" />
+  </wsdl:message>
+  <wsdl:message name="Terminal_VytiskniPaletovyListekSoapOut">
+    <wsdl:part name="parameters" element="tns:Terminal_VytiskniPaletovyListekResponse" />
+  </wsdl:message>
+  <wsdl:message name="Terminal_VytiskniSoapIn">
+    <wsdl:part name="parameters" element="tns:Terminal_Vytiskni" />
+  </wsdl:message>
+  <wsdl:message name="Terminal_VytiskniSoapOut">
+    <wsdl:part name="parameters" element="tns:Terminal_VytiskniResponse" />
+  </wsdl:message>
+  <wsdl:message name="Terminal_VytiskniDocasneStitkySoapIn">
+    <wsdl:part name="parameters" element="tns:Terminal_VytiskniDocasneStitky" />
+  </wsdl:message>
+  <wsdl:message name="Terminal_VytiskniDocasneStitkySoapOut">
+    <wsdl:part name="parameters" element="tns:Terminal_VytiskniDocasneStitkyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Terminal_SaveTiskarnaSoapIn">
+    <wsdl:part name="parameters" element="tns:Terminal_SaveTiskarna" />
+  </wsdl:message>
+  <wsdl:message name="Terminal_SaveTiskarnaSoapOut">
+    <wsdl:part name="parameters" element="tns:Terminal_SaveTiskarnaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Terminal_SaveTerminalSoapIn">
+    <wsdl:part name="parameters" element="tns:Terminal_SaveTerminal" />
+  </wsdl:message>
+  <wsdl:message name="Terminal_SaveTerminalSoapOut">
+    <wsdl:part name="parameters" element="tns:Terminal_SaveTerminalResponse" />
+  </wsdl:message>
+  <wsdl:message name="Test_SSCCGenerateSoapIn">
+    <wsdl:part name="parameters" element="tns:Test_SSCCGenerate" />
+  </wsdl:message>
+  <wsdl:message name="Test_SSCCGenerateSoapOut">
+    <wsdl:part name="parameters" element="tns:Test_SSCCGenerateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Test_VytiskniPaletovyListekSoapIn">
+    <wsdl:part name="parameters" element="tns:Test_VytiskniPaletovyListek" />
+  </wsdl:message>
+  <wsdl:message name="Test_VytiskniPaletovyListekSoapOut">
+    <wsdl:part name="parameters" element="tns:Test_VytiskniPaletovyListekResponse" />
+  </wsdl:message>
+  <wsdl:message name="Test_VsetkoSoapIn">
+    <wsdl:part name="parameters" element="tns:Test_Vsetko" />
+  </wsdl:message>
+  <wsdl:message name="Test_VsetkoSoapOut">
+    <wsdl:part name="parameters" element="tns:Test_VsetkoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Test_DocasnyListekSoapIn">
+    <wsdl:part name="parameters" element="tns:Test_DocasnyListek" />
+  </wsdl:message>
+  <wsdl:message name="Test_DocasnyListekSoapOut">
+    <wsdl:part name="parameters" element="tns:Test_DocasnyListekResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TiskSoap">
+    <wsdl:operation name="Service_SkontrolujNevytisknuteListky">
+      <wsdl:input message="tns:Service_SkontrolujNevytisknuteListkySoapIn" />
+      <wsdl:output message="tns:Service_SkontrolujNevytisknuteListkySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Service_Wait">
+      <wsdl:input message="tns:Service_WaitSoapIn" />
+      <wsdl:output message="tns:Service_WaitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Service_Printing">
+      <wsdl:input message="tns:Service_PrintingSoapIn" />
+      <wsdl:output message="tns:Service_PrintingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Terminal_VytiskniPaletovyListek">
+      <wsdl:input message="tns:Terminal_VytiskniPaletovyListekSoapIn" />
+      <wsdl:output message="tns:Terminal_VytiskniPaletovyListekSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Terminal_Vytiskni">
+      <wsdl:input message="tns:Terminal_VytiskniSoapIn" />
+      <wsdl:output message="tns:Terminal_VytiskniSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Terminal_VytiskniDocasneStitky">
+      <wsdl:input message="tns:Terminal_VytiskniDocasneStitkySoapIn" />
+      <wsdl:output message="tns:Terminal_VytiskniDocasneStitkySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Terminal_SaveTiskarna">
+      <wsdl:input message="tns:Terminal_SaveTiskarnaSoapIn" />
+      <wsdl:output message="tns:Terminal_SaveTiskarnaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Terminal_SaveTerminal">
+      <wsdl:input message="tns:Terminal_SaveTerminalSoapIn" />
+      <wsdl:output message="tns:Terminal_SaveTerminalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test_SSCCGenerate">
+      <wsdl:input message="tns:Test_SSCCGenerateSoapIn" />
+      <wsdl:output message="tns:Test_SSCCGenerateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test_VytiskniPaletovyListek">
+      <wsdl:input message="tns:Test_VytiskniPaletovyListekSoapIn" />
+      <wsdl:output message="tns:Test_VytiskniPaletovyListekSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test_Vsetko">
+      <wsdl:input message="tns:Test_VsetkoSoapIn" />
+      <wsdl:output message="tns:Test_VsetkoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test_DocasnyListek">
+      <wsdl:input message="tns:Test_DocasnyListekSoapIn" />
+      <wsdl:output message="tns:Test_DocasnyListekSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TiskSoap" type="tns:TiskSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Service_SkontrolujNevytisknuteListky">
+      <soap:operation soapAction="http://print.fask.cz/Service_SkontrolujNevytisknuteListky" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Service_Wait">
+      <soap:operation soapAction="http://print.fask.cz/Service_Wait" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Service_Printing">
+      <soap:operation soapAction="http://print.fask.cz/Service_Printing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Terminal_VytiskniPaletovyListek">
+      <soap:operation soapAction="http://print.fask.cz/Terminal_VytiskniPaletovyListek" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Terminal_Vytiskni">
+      <soap:operation soapAction="http://print.fask.cz/Terminal_Vytiskni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Terminal_VytiskniDocasneStitky">
+      <soap:operation soapAction="http://print.fask.cz/Terminal_VytiskniDocasneStitky" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Terminal_SaveTiskarna">
+      <soap:operation soapAction="http://print.fask.cz/Terminal_SaveTiskarna" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Terminal_SaveTerminal">
+      <soap:operation soapAction="http://print.fask.cz/Terminal_SaveTerminal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test_SSCCGenerate">
+      <soap:operation soapAction="http://print.fask.cz/Test_SSCCGenerate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test_VytiskniPaletovyListek">
+      <soap:operation soapAction="http://print.fask.cz/Test_VytiskniPaletovyListek" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test_Vsetko">
+      <soap:operation soapAction="http://print.fask.cz/Test_Vsetko" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test_DocasnyListek">
+      <soap:operation soapAction="http://print.fask.cz/Test_DocasnyListek" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TiskSoap12" type="tns:TiskSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Service_SkontrolujNevytisknuteListky">
+      <soap12:operation soapAction="http://print.fask.cz/Service_SkontrolujNevytisknuteListky" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Service_Wait">
+      <soap12:operation soapAction="http://print.fask.cz/Service_Wait" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Service_Printing">
+      <soap12:operation soapAction="http://print.fask.cz/Service_Printing" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Terminal_VytiskniPaletovyListek">
+      <soap12:operation soapAction="http://print.fask.cz/Terminal_VytiskniPaletovyListek" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Terminal_Vytiskni">
+      <soap12:operation soapAction="http://print.fask.cz/Terminal_Vytiskni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Terminal_VytiskniDocasneStitky">
+      <soap12:operation soapAction="http://print.fask.cz/Terminal_VytiskniDocasneStitky" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Terminal_SaveTiskarna">
+      <soap12:operation soapAction="http://print.fask.cz/Terminal_SaveTiskarna" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Terminal_SaveTerminal">
+      <soap12:operation soapAction="http://print.fask.cz/Terminal_SaveTerminal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test_SSCCGenerate">
+      <soap12:operation soapAction="http://print.fask.cz/Test_SSCCGenerate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test_VytiskniPaletovyListek">
+      <soap12:operation soapAction="http://print.fask.cz/Test_VytiskniPaletovyListek" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test_Vsetko">
+      <soap12:operation soapAction="http://print.fask.cz/Test_Vsetko" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test_DocasnyListek">
+      <soap12:operation soapAction="http://print.fask.cz/Test_DocasnyListek" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Tisk">
+    <wsdl:port name="TiskSoap" binding="tns:TiskSoap">
+      <soap:address location="http://localhost/MST_Print_Server/Tisk.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TiskSoap12" binding="tns:TiskSoap12">
+      <soap12:address location="http://localhost/MST_Print_Server/Tisk.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

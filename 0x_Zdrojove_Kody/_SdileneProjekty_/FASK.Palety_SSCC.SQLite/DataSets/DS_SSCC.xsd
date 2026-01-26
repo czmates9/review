@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_SSCC" targetNamespace="http://tempuri.org/DS_SSCC.xsd" xmlns:mstns="http://tempuri.org/DS_SSCC.xsd" xmlns="http://tempuri.org/DS_SSCC.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_SSCC" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_SSCC" msprop:Generator_UserDSName="DS_SSCC">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST_SSCC_SEQUENCE" msprop:Generator_TableClassName="CZMST_SSCC_SEQUENCEDataTable" msprop:Generator_TableVarName="tableCZMST_SSCC_SEQUENCE" msprop:Generator_RowChangedName="CZMST_SSCC_SEQUENCERowChanged" msprop:Generator_TablePropName="CZMST_SSCC_SEQUENCE" msprop:Generator_RowDeletingName="CZMST_SSCC_SEQUENCERowDeleting" msprop:Generator_RowChangingName="CZMST_SSCC_SEQUENCERowChanging" msprop:Generator_RowEvHandlerName="CZMST_SSCC_SEQUENCERowChangeEventHandler" msprop:Generator_RowDeletedName="CZMST_SSCC_SEQUENCERowDeleted" msprop:Generator_RowClassName="CZMST_SSCC_SEQUENCERow" msprop:Generator_UserTableName="CZMST_SSCC_SEQUENCE" msprop:Generator_RowEvArgName="CZMST_SSCC_SEQUENCERowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="seq_id" msprop:Generator_ColumnVarNameInTable="columnseq_id" msprop:Generator_ColumnPropNameInRow="seq_id" msprop:Generator_ColumnPropNameInTable="seq_idColumn" msprop:Generator_UserColumnName="seq_id" type="xs:int" minOccurs="0" />
+              <xs:element name="sequence_count" msprop:Generator_ColumnVarNameInTable="columnsequence_count" msprop:Generator_ColumnPropNameInRow="sequence_count" msprop:Generator_ColumnPropNameInTable="sequence_countColumn" msprop:Generator_UserColumnName="sequence_count" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_SSCC_PARAMETERS" msprop:Generator_TableClassName="CZMST_SSCC_PARAMETERSDataTable" msprop:Generator_TableVarName="tableCZMST_SSCC_PARAMETERS" msprop:Generator_RowChangedName="CZMST_SSCC_PARAMETERSRowChanged" msprop:Generator_TablePropName="CZMST_SSCC_PARAMETERS" msprop:Generator_RowDeletingName="CZMST_SSCC_PARAMETERSRowDeleting" msprop:Generator_RowChangingName="CZMST_SSCC_PARAMETERSRowChanging" msprop:Generator_RowEvHandlerName="CZMST_SSCC_PARAMETERSRowChangeEventHandler" msprop:Generator_RowDeletedName="CZMST_SSCC_PARAMETERSRowDeleted" msprop:Generator_RowClassName="CZMST_SSCC_PARAMETERSRow" msprop:Generator_UserTableName="CZMST_SSCC_PARAMETERS" msprop:Generator_RowEvArgName="CZMST_SSCC_PARAMETERSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_SSCC" msprop:Generator_ColumnVarNameInTable="columnID_SSCC" msprop:Generator_ColumnPropNameInRow="ID_SSCC" msprop:Generator_ColumnPropNameInTable="ID_SSCCColumn" msprop:Generator_UserColumnName="ID_SSCC" type="xs:int" minOccurs="0" />
+              <xs:element name="DESC_SSCC" msprop:Generator_ColumnVarNameInTable="columnDESC_SSCC" msprop:Generator_ColumnPropNameInRow="DESC_SSCC" msprop:Generator_ColumnPropNameInTable="DESC_SSCCColumn" msprop:Generator_UserColumnName="DESC_SSCC" type="xs:string" minOccurs="0" />
+              <xs:element name="LV" msprop:Generator_ColumnVarNameInTable="columnLV" msprop:Generator_ColumnPropNameInRow="LV" msprop:Generator_ColumnPropNameInTable="LVColumn" msprop:Generator_UserColumnName="LV" type="xs:int" minOccurs="0" />
+              <xs:element name="GCP" msprop:Generator_ColumnVarNameInTable="columnGCP" msprop:Generator_ColumnPropNameInRow="GCP" msprop:Generator_ColumnPropNameInTable="GCPColumn" msprop:Generator_UserColumnName="GCP" type="xs:int" minOccurs="0" />
+              <xs:element name="GCP_count" msprop:Generator_ColumnVarNameInTable="columnGCP_count" msprop:Generator_ColumnPropNameInRow="GCP_count" msprop:Generator_ColumnPropNameInTable="GCP_countColumn" msprop:Generator_UserColumnName="GCP_count" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

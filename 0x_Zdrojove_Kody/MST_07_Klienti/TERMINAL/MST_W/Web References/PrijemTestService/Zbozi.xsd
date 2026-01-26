@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://sqlce.fask.cz/Zbozi.xsd" xmlns="http://sqlce.fask.cz/Zbozi.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://sqlce.fask.cz/Zbozi.xsd" id="Zbozi" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="" name="Zbozi">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST095">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ITEMNMBR" type="xs:string" />
+              <xs:element minOccurs="0" name="ITEMDESC" type="xs:string" />
+              <xs:element minOccurs="0" name="VNDITNUM" type="xs:string" />
+              <xs:element minOccurs="0" name="CZ_CarKod" type="xs:string" />
+              <xs:element minOccurs="0" name="LOCNCODE" type="xs:string" />
+              <xs:element name="QTY" type="xs:decimal" />
+              <xs:element minOccurs="0" name="QTYPACK" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TAXRATE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PRICE0" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PRICE1" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PRICE2" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PRICE3" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PRICE4" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PRICE5" type="xs:decimal" />
+              <xs:element name="CZ_SerNum_Track" type="xs:unsignedByte" />
+              <xs:element name="CZ_SerNum_Delka" type="xs:short" />
+              <xs:element name="CZ_Rez1_Track" type="xs:unsignedByte" />
+              <xs:element name="CZ_Rez2_Track" type="xs:unsignedByte" />
+              <xs:element name="CZ_Rez3_Track" type="xs:unsignedByte" />
+              <xs:element name="CZ_Rez4_Track" type="xs:unsignedByte" />
+              <xs:element name="DEX_ROW_ID" type="xs:int" />
+              <xs:element minOccurs="0" name="SKL_ID" type="xs:string" />
+              <xs:element name="MJ" type="xs:string" />
+              <xs:element name="DMJ" type="xs:string" />
+              <xs:element minOccurs="0" name="REZ1" type="xs:string" />
+              <xs:element minOccurs="0" name="ITEMCODE" type="xs:string" />
+              <xs:element minOccurs="0" name="ODB_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="REZ2" type="xs:string" />
+              <xs:element minOccurs="0" name="REZ3" type="xs:string" />
+              <xs:element minOccurs="0" name="REZ4" type="xs:string" />
+              <xs:element minOccurs="0" name="MENA_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="SERLTNUM" type="xs:string" />
+              <xs:element minOccurs="0" name="WEIGHT" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST095M">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ITEMNMBR" type="xs:string" />
+              <xs:element name="mena_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="PRICE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PRICEX" type="xs:int" />
+              <xs:element name="DEX_ROW_ID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

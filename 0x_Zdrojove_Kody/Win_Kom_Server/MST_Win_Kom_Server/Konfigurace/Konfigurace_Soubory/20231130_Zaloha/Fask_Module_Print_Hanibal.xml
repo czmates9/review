@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<Konfig xmlns="http://tempuri.org/Konfig.xsd">
+  <ConnectionStrings>
+    <PohodaDB />
+  </ConnectionStrings>
+  <PrintParams>
+    <CenovkaCena1>doporučená cena</CenovkaCena1>
+    <CenovkaCena2>cena po slevě</CenovkaCena2>
+    <CenovkaCena3>cena Hanibal</CenovkaCena3>
+    <Template1>H2_01.prn</Template1>
+    <Template2>H2_02.prn</Template2>
+    <Template3>H2_03.prn</Template3>
+    <ZPL_SKRT>^FT50,195^GB190,0,3^FS</ZPL_SKRT>
+    <PocetZnakuMensiNez>20</PocetZnakuMensiNez>
+    <PocetZnakuVetsiNez>50</PocetZnakuVetsiNez>
+  </PrintParams>
+</Konfig>

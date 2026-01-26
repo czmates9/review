@@ -1,0 +1,70 @@
+::mst 
+==> testovani modulu <==
+ok - Overit CK 
+ok - Prijem
+	: globalObject
+	: prijemServis => globalObject
+	: tableadaptery a vlastni specialni metody pro zprehledneni kodu
+	: ucesavani ...
+- Vydej
+> ma vyssi prioritu, kvuli CARPu => JiS?
+- Prodej
+> ma vyssi prioritu kvuli CARPu => TaD?
+- Uzivatele 
+- EventsTypes
+- EventsUser
+- Inventura 1
+- Inventura 2
+- Udalosti
+- Ukoly
+- Servis
+- Expedice
+- Obecne
+
+
+Poznamky:
+
+1) sqlite uklada retezce tak jak jsou vcetne mezer -> 
+!!! je treba vsude orezavat, jinak je ulozeno vcetne mezer
+
+2) sqliteconnection, sqlitecommand, sqliteadapter
+!!! je nutne je explicitne disposovat
+!!! vsude kde je treba pouzivat using ... 
+
+3) listovani (Paging) na strane terminalu
+- bylo by vhodne vyuzit jinou funkcnost na strane terminalu a to row_order...
+- nicmene seeking funguje relativne rychle (rychleji nez na sqlce pres resultsety ...), takze zatim takto ponechano ... 
+
+4) na inventure problem pri ukonceni aplikace disposovani sqlite connection
+> existuje nejaka moznost, jak zjistit otevrene objekty sqlite a jejich vypis?
+
+5) Protokoly stahovani dat ciselniku, davek atd. dle Vydejek (Wrapper, StatusObjecty, ...)=> terminal reakce na statusObjecty ... 
+
+6) Hmotnost.asmx (HmotnostService na terminalu) -> byla pro Eurom jako doplnkovy modul na webserveru ... nyni uz neni ... 
+=?> zrusit <?=
+
+7) VYDEJ
+- chybi ITEMCODE a WEIGHT !!!
+
+8) transformace jednoho radku z sqlitedatareader do typoveho datarow
+> udelat ve vlastni rezii mapovani sloupcu dle nazvu z datareaderu vytahovat odpovidajici sloupce a kontrolovat datove typy ... ?
+
+9) shown metody
+> predelat z timeru na this.begininvoke...?
+> nebo task, action? genericke metody?
+
+10) server
+- sklady trimy ... 
+> na serveru vytvorena Extension Metoda pro DataRow.TrimStringColumns, ktera trimne stringove sloupce objektu Datarow
+=> z providera byse toto melo ostrovat...
+
+11) stahovani / decompress
+> pokud se nepovede stazeni/dekomprese, tak hlaska a opakovat ... 
+> duvodem mohou byt otevrene dataadaptery, commandy sqlite ... ? 
+=> osetrit tyto stavy ...
+
+12) GlobalObject
+doplnit do I1, I2, Prijem, ... vsechno takto
+
+13) designery maji problem s vlozenim do formu, pokud jsou definovany tableadaptery
+=> prenest metody do vlastnich controleru a zbavit se tableadapteru

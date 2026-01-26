@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7E00B2D-1105-4108-BB2E-E05D39663923}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FASK.SledovaniVyroby.Main</RootNamespace>
+    <AssemblyName>Vyroba</AssemblyName>
+    <ApplicationIcon>Resources\TrayIcon.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\!Build!\Vyroba\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\!Build!\Vyroba\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Win_Kom_Server\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Win_Kom_Server\packages\RestSharp.106.0.0\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\WEBAPI\Comunication.cs" />
+    <Compile Include="Classes\WEBAPI\JSON_Class.cs" />
+    <Compile Include="Configuration\BarCodeParser.cs" />
+    <Compile Include="Configuration\clsMachine.cs" />
+    <Compile Include="Configuration\Config.cs" />
+    <Compile Include="Configuration\ConfigModules.cs">
+      <DependentUpon>ConfigModules.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\ConfigModules.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConfigModules.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\ConfigMod.cs" />
+    <Compile Include="Configuration\frmGlobalConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuration\frmGlobalConfiguration.Designer.cs">
+      <DependentUpon>frmGlobalConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\GlobalConfig.cs">
+      <DependentUpon>GlobalConfig.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\GlobalConfig.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalConfig.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Update\TransferManager.cs" />
+    <Compile Include="Configuration\Update\UpdateInfo.cs">
+      <DependentUpon>UpdateInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Update\UpdateInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Update\Updater.cs" />
+    <Compile Include="Extensions\FlexibleMessageBox.cs" />
+    <Compile Include="Extensions\MessageTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extensions\MessageTest.Designer.cs">
+      <DependentUpon>MessageTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\TimeSpan.cs" />
+    <Compile Include="FormInputKod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInputKod.Designer.cs">
+      <DependentUpon>FormInputKod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutBox.designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainApp.Designer.cs">
+      <DependentUpon>frmMainApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreen.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Configuration\frmGlobalConfiguration.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGlobalConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extensions\MessageTest.resx">
+      <DependentUpon>MessageTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInputKod.resx">
+      <DependentUpon>FormInputKod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainApp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMainApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Configuration\GlobalConfig.xsc">
+      <DependentUpon>GlobalConfig.xsd</DependentUpon>
+    </None>
+    <None Include="Configuration\GlobalConfig.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GlobalConfig.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Configuration\GlobalConfig.xss">
+      <DependentUpon>GlobalConfig.xsd</DependentUpon>
+    </None>
+    <None Include="Configuration\Update\UpdateInfo.xsc">
+      <DependentUpon>UpdateInfo.xsd</DependentUpon>
+    </None>
+    <None Include="Configuration\Update\UpdateInfo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateInfo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Configuration\Update\UpdateInfo.xss">
+      <DependentUpon>UpdateInfo.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TrayIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ActionRequired_03.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BuilderDialog_delete.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear_1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear_32.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Configuration\ConfigModules.xsc">
+      <DependentUpon>ConfigModules.xsd</DependentUpon>
+    </None>
+    <None Include="Configuration\ConfigModules.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConfigModules.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Configuration\ConfigModules.xss">
+      <DependentUpon>ConfigModules.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\class.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\_SdileneProjekty_\Fask.Logging\Fask.Logging.csproj">
+      <Project>{89e8c070-4694-4f11-ab01-a674bf8b9f80}</Project>
+      <Name>Fask.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\Fask.RestSharp\Fask.RestSharp.csproj">
+      <Project>{dcd07eda-015d-49cb-a3f0-855bc143440f}</Project>
+      <Name>Fask.RestSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Database\Database.csproj">
+      <Project>{53601A7B-F9FC-47DA-A99F-E8A47DDDF947}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Emailing\Emailing\Emailing.csproj">
+      <Project>{FB082FE8-178B-40D4-8A2B-36CE544A00C7}</Project>
+      <Name>Emailing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ErrorLog\ErrorLog.csproj">
+      <Project>{3151DDC5-73BA-4E7A-AD51-873EFBBA0FDC}</Project>
+      <Name>ErrorLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICommDatabase\ICommDatabase.csproj">
+      <Project>{091B2F54-A19D-426A-9B7A-6B9065685BA2}</Project>
+      <Name>ICommDatabase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logging\Logging.csproj">
+      <Project>{8B038B30-3962-410F-A306-1DA2CDC74266}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFID_SR-5102\RFID_SR_5102_Provider.csproj">
+      <Project>{862B5AC4-AC3F-48D7-937A-4E691204FF8B}</Project>
+      <Name>RFID_SR_5102_Provider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TouchscreenKeyboard\TouchscreenKeyboard\TouchscreenKeyboard.csproj">
+      <Project>{94070b1d-6de4-4d45-b2b9-5da09d0e15c9}</Project>
+      <Name>TouchscreenKeyboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VyrobaIfc\VyrobaIfc.csproj">
+      <Project>{AEF304CD-C27C-46A4-ACA9-D3EBECAF0F5F}</Project>
+      <Name>VyrobaIfc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.TXT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\logo_FASK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

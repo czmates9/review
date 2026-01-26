@@ -1,0 +1,4 @@
+
+ALTER TABLE FASK_RADY
+ADD Import_Doklad_Pohoda bit NOT NULL DEFAULT(1)
+GO

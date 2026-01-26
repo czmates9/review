@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ConfigTable" targetNamespace="http://tempuri.org/ConfigTable.xsd" xmlns:mstns="http://tempuri.org/ConfigTable.xsd" xmlns="http://tempuri.org/ConfigTable.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ConfigTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ConfigTable" msprop:Generator_DataSetName="ConfigTable" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Pila" msprop:Generator_UserTableName="Pila" msprop:Generator_RowDeletedName="PilaRowDeleted" msprop:Generator_RowChangedName="PilaRowChanged" msprop:Generator_RowClassName="PilaRow" msprop:Generator_RowChangingName="PilaRowChanging" msprop:Generator_RowEvArgName="PilaRowChangeEvent" msprop:Generator_RowEvHandlerName="PilaRowChangeEventHandler" msprop:Generator_TableClassName="PilaDataTable" msprop:Generator_TableVarName="tablePila" msprop:Generator_RowDeletingName="PilaRowDeleting" msprop:Generator_TablePropName="Pila">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SP_OUT_PortName" msdata:Caption="SP_IN_PortName" msprop:Generator_UserColumnName="SP_OUT_PortName" msprop:Generator_ColumnVarNameInTable="columnSP_OUT_PortName" msprop:Generator_ColumnPropNameInRow="SP_OUT_PortName" msprop:Generator_ColumnPropNameInTable="SP_OUT_PortNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SP_IN_PortName" msprop:Generator_UserColumnName="SP_IN_PortName" msprop:Generator_ColumnVarNameInTable="columnSP_IN_PortName" msprop:Generator_ColumnPropNameInRow="SP_IN_PortName" msprop:Generator_ColumnPropNameInTable="SP_IN_PortNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SP_OUT_DataBits" msdata:Caption="SP_IN_DataBits" msprop:Generator_UserColumnName="SP_OUT_DataBits" msprop:Generator_ColumnVarNameInTable="columnSP_OUT_DataBits" msprop:Generator_ColumnPropNameInRow="SP_OUT_DataBits" msprop:Generator_ColumnPropNameInTable="SP_OUT_DataBitsColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SP_IN_DataBits" msprop:Generator_UserColumnName="SP_IN_DataBits" msprop:Generator_ColumnVarNameInTable="columnSP_IN_DataBits" msprop:Generator_ColumnPropNameInRow="SP_IN_DataBits" msprop:Generator_ColumnPropNameInTable="SP_IN_DataBitsColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SP_OUT_Parity" msdata:Caption="SP_IN_Parity" msprop:Generator_UserColumnName="SP_OUT_Parity" msprop:Generator_ColumnVarNameInTable="columnSP_OUT_Parity" msprop:Generator_ColumnPropNameInRow="SP_OUT_Parity" msprop:Generator_ColumnPropNameInTable="SP_OUT_ParityColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SP_IN_Parity" msprop:Generator_UserColumnName="SP_IN_Parity" msprop:Generator_ColumnVarNameInTable="columnSP_IN_Parity" msprop:Generator_ColumnPropNameInRow="SP_IN_Parity" msprop:Generator_ColumnPropNameInTable="SP_IN_ParityColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SP_OUT_StopBits" msdata:Caption="SP_IN_StopBits" msprop:Generator_UserColumnName="SP_OUT_StopBits" msprop:Generator_ColumnVarNameInTable="columnSP_OUT_StopBits" msprop:Generator_ColumnPropNameInRow="SP_OUT_StopBits" msprop:Generator_ColumnPropNameInTable="SP_OUT_StopBitsColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SP_IN_StopBits" msprop:Generator_UserColumnName="SP_IN_StopBits" msprop:Generator_ColumnVarNameInTable="columnSP_IN_StopBits" msprop:Generator_ColumnPropNameInRow="SP_IN_StopBits" msprop:Generator_ColumnPropNameInTable="SP_IN_StopBitsColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SP_OUT_BaudRate" msdata:Caption="SP_IN_BaudRate" msprop:Generator_UserColumnName="SP_OUT_BaudRate" msprop:Generator_ColumnVarNameInTable="columnSP_OUT_BaudRate" msprop:Generator_ColumnPropNameInRow="SP_OUT_BaudRate" msprop:Generator_ColumnPropNameInTable="SP_OUT_BaudRateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SP_IN_BaudRate" msprop:Generator_UserColumnName="SP_IN_BaudRate" msprop:Generator_ColumnVarNameInTable="columnSP_IN_BaudRate" msprop:Generator_ColumnPropNameInRow="SP_IN_BaudRate" msprop:Generator_ColumnPropNameInTable="SP_IN_BaudRateColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Print_Server" msprop:Generator_UserTableName="Print_Server" msprop:Generator_RowDeletedName="Print_ServerRowDeleted" msprop:Generator_RowChangedName="Print_ServerRowChanged" msprop:Generator_RowClassName="Print_ServerRow" msprop:Generator_RowChangingName="Print_ServerRowChanging" msprop:Generator_RowEvArgName="Print_ServerRowChangeEvent" msprop:Generator_RowEvHandlerName="Print_ServerRowChangeEventHandler" msprop:Generator_TableClassName="Print_ServerDataTable" msprop:Generator_TableVarName="tablePrint_Server" msprop:Generator_RowDeletingName="Print_ServerRowDeleting" msprop:Generator_TablePropName="Print_Server">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PrinterAddress" msprop:Generator_UserColumnName="PrinterAddress" msprop:Generator_ColumnPropNameInRow="PrinterAddress" msprop:Generator_ColumnVarNameInTable="columnPrinterAddress" msprop:Generator_ColumnPropNameInTable="PrinterAddressColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PrinterName" msprop:Generator_UserColumnName="PrinterName" msprop:Generator_ColumnPropNameInRow="PrinterName" msprop:Generator_ColumnVarNameInTable="columnPrinterName" msprop:Generator_ColumnPropNameInTable="PrinterNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Template" msprop:Generator_UserColumnName="Template" msprop:Generator_ColumnPropNameInRow="Template" msprop:Generator_ColumnVarNameInTable="columnTemplate" msprop:Generator_ColumnPropNameInTable="TemplateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Timeout" msprop:Generator_UserColumnName="Timeout" msprop:Generator_ColumnPropNameInRow="Timeout" msprop:Generator_ColumnVarNameInTable="columnTimeout" msprop:Generator_ColumnPropNameInTable="TimeoutColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

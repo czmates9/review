@@ -1,0 +1,34 @@
+﻿TODO
+-napady, informace, postřehy...
+
+
+!!!!!!!!!! pridat možnost po uspešnem vytvořeni VP aby se nastavily defaultne hodnoty... konfiguračne jake....
+
+
+-v pohode je možno "programovat" nejake ukony pomoci VBA (Visual Basic for aplication)
+
+Tabulky : sVP a sVPpol
+sVP  - je Hlavička pro Volitelne parametry
+sVPpol - sou jednotlive položky volitelne parametry
+
+sVPUL - dochází zde k uložení všech Uživatelských seznamů, které byly vytvořeny.
+sVPULpol - dochází zde k uložení všech položek Uživatelských seznamů, které byly vytvořeny.
+
+
+sUsrFrm - dochází zde k uložení Formuláře úprav pro agendu programu POHODA E1 včetně Uživatelské agendy.  
+
+
+select * from sVP
+select * from sVPpol
+
+select * from sVPUL
+select * from sVPULpol
+
+select * from sUsrFrm
+
+21.1.2019
+-Pokusy uspe3ne importovat Volitelne parametry do pohody probehly uspešne
+-Pokud sou parametry importovany tak nejdou nasledne v Pohode upravovat
+
+TODO- Dodelat konfigraci, heslo aby bylo šifrovane jak Licence na MSTW 
+-pridat zadani stareho hesla, plus možnost po kliku ukazka na chvylku jak maju win10

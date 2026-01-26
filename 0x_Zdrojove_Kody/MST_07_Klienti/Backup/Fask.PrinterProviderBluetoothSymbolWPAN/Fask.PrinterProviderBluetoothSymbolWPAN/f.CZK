@@ -1,0 +1,26 @@
+﻿! 0 200 200 30 1
+IN-MILLIMETERS
+JOURNAL
+PW 104
+PREFEED 0
+POSTFEED 0
+SET-TOF 0
+T CN.CPF 0 0 0 ════════════════════════════════════════════════════════════════
+T CN.CPF 0 0 3 $mena_idM$
+RIGHT 26
+T CN.CPF 0 0 3 Množstvo
+RIGHT 58
+T CN.CPF 0 0 3 bez DPH
+LEFT
+T CN.CPF 0 0 6 Spolu:
+RIGHT 26
+T CN.CPF 0 0 6 $sum_mn$
+RIGHT 58
+T CN.CPF 0 0 6 $sum_bdphM$ $mena_symbolM$
+T CN.CPF 0 0 9 ════════════════════════════════════════════════════════════════
+LEFT
+T CN.CPF 0 0 12 Vystavené: $datetime$
+LEFT
+T CN.CPF 0 50 12 Prevzal:
+PRESENT-AT 0 0
+PRINT

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://fask.cz/Events.xsd" xmlns="http://fask.cz/Events.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://fask.cz/Events.xsd" id="Events" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="" name="Events">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST_EventsTypes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="eid" type="xs:string" />
+              <xs:element name="etype" type="xs:string" />
+              <xs:element minOccurs="0" name="edesc" type="xs:string" />
+              <xs:element minOccurs="0" name="ebarcode" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CZMST_EventsUser">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="id" type="xs:int" />
+              <xs:element msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="eguid" type="xs:string" />
+              <xs:element name="eid" type="xs:string" />
+              <xs:element name="etype" type="xs:string" />
+              <xs:element name="etime" type="xs:dateTime" />
+              <xs:element name="termid" type="xs:int" />
+              <xs:element name="userid" type="xs:int" />
+              <xs:element minOccurs="0" name="loginid" type="xs:string" />
+              <xs:element minOccurs="0" name="machineid" type="xs:string" />
+              <xs:element minOccurs="0" name="modul" type="xs:string" />
+              <xs:element minOccurs="0" name="countentries" type="xs:int" />
+              <xs:element minOccurs="0" name="docnmbr" type="xs:string" />
+              <xs:element minOccurs="0" name="itemnmbr" type="xs:string" />
+              <xs:element minOccurs="0" name="REZ1" type="xs:string" />
+              <xs:element minOccurs="0" name="REZ2" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:CZMST_EventsUser" />
+      <xs:field xpath="mstns:eguid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

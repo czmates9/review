@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<ConfigTable xmlns="http://tempuri.org/ConfigTable.xsd">
+  <Scanner>
+    <SP_IN_PortName>COM6</SP_IN_PortName>
+    <SP_IN_DataBits>8</SP_IN_DataBits>
+    <SP_IN_Parity>None</SP_IN_Parity>
+    <SP_IN_StopBits>One</SP_IN_StopBits>
+    <SP_IN_BaudRate>9600</SP_IN_BaudRate>
+  </Scanner>
+  <ChipScanner>
+    <SP_IN_PortName>COM6</SP_IN_PortName>
+    <SP_IN_DataBits>8</SP_IN_DataBits>
+    <SP_IN_Parity>None</SP_IN_Parity>
+    <SP_IN_StopBits>One</SP_IN_StopBits>
+    <SP_IN_BaudRate>9600</SP_IN_BaudRate>
+    <Assembly />
+    <Object />
+  </ChipScanner>
+  <LoginMetod>
+    <Method>4</Method>
+    <Description>Zadaný uživatel</Description>
+    <Login>0</Login>
+    <Password>1</Password>
+  </LoginMetod>
+  <RFID>
+    <ComPort>COM1</ComPort>
+    <Baudrate>_57600bps</Baudrate>
+    <Address>FF</Address>
+  </RFID>
+</ConfigTable>

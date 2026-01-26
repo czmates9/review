@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <appSettings>
+    <add key="ScannerType" value="Symbol_MC3000" />
+    <add key="WebServiceTimeOut" value="25000" />
+    <add key="WebServiceAddressVyroba" value="http://faskcz-cv005/Vyroba/Vyroba.asmx" />
+    <add key="TimerUploadInterval" value="10000" />
+    <add key="TimerDownloadInterval" value="600000" />
+    <add key="Loging" value="True" />
+    <add key="UEventSmenaEnabled" value="False" />
+    <add key="TerminalID" value="1" />
+    <add key="UEventSmenaLogin" value="1" />
+    <add key="UEventSmenaLogout" value="2" />
+    <add key="UEventPracovnikPrihlaseni" value="3" />
+    <add key="UEventPracovnikOdhlaseni" value="4" />
+    <add key="LastDownload" value="1/29/2019 4:01:15 PM" />
+    <add key="LoginUserTimeOut" value="09:00:00" />
+    <add key="StopPripravaStartVyrobaIhned" value="True" />
+    <add key="VyberZakazkyPoPrihlaseni" value="True" />
+    <add key="ProductionOnlineTimeout" value="5000" />
+    <add key="Production_UserMaxTimeSpanNoAction" value="00:10:00" />
+    <add key="Production_MachineID_Preset" value="1" />
+    <add key="LastProductionUserID" value="1" />
+    <add key="UEventPracovnikLoginEnabled" value="True" />
+    <add key="LastProductionDateTime" value="1/29/2019 4:06:13 PM" />
+    <add key="MachineID" value="" />
+    <add key="Production_Destination_SKLID_Enter" value="False" />
+    <add key="Production_Destination_SKLID" value="001" />
+    <add key="Production_Destination_LOCNCODE_Enter" value="False" />
+    <add key="Production_Destination_LOCNCODE" value="1" />
+    <add key="Production_Material_Enter" value="False" />
+    <add key="Production_Material_Source_SKLID_Enter" value="True" />
+    <add key="Production_Material_Source_SKLID" value="001" />
+    <add key="Production_Material_Source_LOCNCODE_Enter" value="True" />
+    <add key="Production_Material_Source_LOCNCODE" value="1" />
+    <add key="Production_Material_PredVyrobou" value="True" />
+    <add key="Production_Material_OperacePotvrzeniButton" value="True" />
+    <add key="Production_Material_PoVyrobe" value="True" />
+    <add key="Odvadeni_PotvrzeniOperace" value="True" />
+    <add key="Odvadeni_Prehled" value="True" />
+    <add key="Odvadeni_CasNecinnosti" value="False" />
+    <add key="Odvadeni_production_onlyPositive" value="True" />
+    <add key="Odvadeni_production_NeupozornovatNaVetsiPocet" value="False" />
+    <add key="Vyroba_Online" value="True" />
+    <add key="OdvadeniSledovatCastecneOdvody" value="False" />
+    <add key="StopVyrobaPoStartVyrobaIhned" value="False" />
+  </appSettings>
+</configuration>

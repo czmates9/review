@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <appSettings>
+    <add key="ScannerType" value="COM" />
+    <add key="ApplicationPosition" value="-8; -8" />
+    <add key="FiltryVazatNaUzivatele" value="False" />
+    <add key="DataGridVazatNaUzivatele" value="False" />
+    <add key="PouzivatTabulkuZbozi" value="False" />
+    <add key="TerminalID" value="61" />
+    <add key="Loging" value="True" />
+    <add key="UkolovaniPovolit" value="True" />
+    <add key="UkolovaniUzivatelePovolit" value="False" />
+    <add key="UkolovaniUkolyPovolit" value="True" />
+    <add key="UkolovaniPrehledUkoluPovolit" value="True" />
+    <add key="UkolovaniHistorieUkoluPovolit" value="True" />
+    <add key="UkolovaniPovolitBarevneZvyrazneniStavu" value="True" />
+    <add key="VyrobaPovolit" value="False" />
+    <add key="VyrobaPouzivatTabulkuZbozi" value="False" />
+    <add key="VyrobaUzivatelePovolit" value="True" />
+    <add key="VyrobaSkupinyPovolit" value="True" />
+    <add key="VyrobaZboziPovolit" value="True" />
+    <add key="VyrobaVyrobniPrikazyPovolit" value="True" />
+    <add key="VyrobaPrehledPovolit" value="True" />
+    <add key="StavSkladuPovolit" value="False" />
+    <add key="ServisPovolit" value="False" />
+    <add key="ServisTvorbaZdrojePriraditStavOkruhPovolit" value="True" />
+    <add key="ServisImagesDataFileDirectory" value="d:\_work_\_Vyvoj_Subversion_01\MST_04.01\SERVER\MST_Win_Kom_Server\Logs\ImagesDataFileDirectory" />
+    <add key="ServisCinnostiPovolit" value="True" />
+    <add key="ServisOdberatelePovolit" value="True" />
+    <add key="ServisStavyPovolit" value="True" />
+    <add key="ServisOkruhyPovolit" value="True" />
+    <add key="ServisUzivatelePovolit" value="True" />
+    <add key="ServisVazbyStavStavNextPovolit" value="True" />
+    <add key="ServisVazbyCinnostCinnostNextPovolit" value="True" />
+    <add key="ServisVazbyZdrojZdrojSeznamPovolit" value="true" />
+    <add key="ServisVazbyOkruhZdrojSeznamPovolit" value="True" />
+    <add key="ServisVazbyDynamickeTabulkyPovolit" value="True" />
+    <add key="ServisZdrojePovolit" value="True" />
+    <add key="ServisStavyZdrojuPovolit" value="True" />
+    <add key="ServisPohybyZdrojuPovolit" value="True" />
+    <add key="SkladyPovolit" value="True" />
+    <add key="SkladyStavAutomatickyAktualizovatData" value="True" />
+    <add key="SkladyPohledAktualni" value="fask_view_pohyby_aktualni" />
+    <add key="SkladyPohledArchivni" value="fask_view_pohyby_archivni" />
+    <add key="SkladyPohledAktualniAArchivni" value="fask_view_pohyby_aktualni_a_archivni" />
+    <add key="SkladyCiselnikyPovolit" value="True" />
+    <add key="SkladyCiselnikMapaLokaciPovolit" value="False" />
+    <add key="SkladyCiselnikOdberatelePovolit" value="True" />
+    <add key="SkladyCiselnikSkladyPovolit" value="True" />
+    <add key="SkladyCiselnikStrediskaPovolit" value="True" />
+    <add key="SkladyCiselnikUzivatelePovolit" value="True" />
+    <add key="SkladyCiselnikZboziPovolit" value="True" />
+    <add key="SkladyCiselnikTypyLokaciPovolit" value="False" />
+    <add key="SkladyCiselnikLokaceVariantySortimentPovolit" value="False" />
+    <add key="SkladyTransakcePohybyPovolit" value="True" />
+    <add key="SkladyTransakceStavyPovolit" value="True" />
+    <add key="SkladyPodledyNaDataArchivniPovolit" value="True" />
+    <add key="SkladyTransakceInventuraPohybyPovolit" value="True" />
+    <add key="SkladyTransakceInventuraPohybyVariantyLokaciPovolit" value="False" />
+    <add key="SkladyTransakceInventuraStavyPovolit" value="True" />
+    <add key="Provider.Konzola" value="Fask.ModuleSql.dll" />
+    <add key="FormInventuraPredlohaListVypocetStavuDlePolozky" value="True" />
+    <add key="ProgressIndicatorSize" value="40" />
+    <add key="SkladyStavZobrazitAktualniMnozstvi" value="True" />
+    <add key="FormSkladStavLokaceListVypocetStavuDlePolozky" value="True" />
+    <add key="FormSkladPohybListZobrazeniDat" value="Aktualni" />
+    <add key="SkladyFormSkladStavLokaceListSplitterDistance" value="300" />
+    <add key="UIFormatDesCisel" value="N" />
+  </appSettings>
+</configuration>

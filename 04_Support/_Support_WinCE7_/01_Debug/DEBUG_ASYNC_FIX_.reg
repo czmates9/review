@@ -1,0 +1,5 @@
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETCompactFramework]
+  
+"JITCodeBufferSizeLimitEnabled"=dword:1
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/ExpediceHlavicky.xsd" xmlns="http://tempuri.org/ExpediceHlavicky.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/ExpediceHlavicky.xsd" id="ExpediceHlavicky" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="ExpediceHlavicky">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CZMST_Expedice_Hlavicka">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="ID" type="xs:string" />
+              <xs:element minOccurs="0" name="PrepravceID" type="xs:string" />
+              <xs:element minOccurs="0" name="PrepravceSPZ" type="xs:string" />
+              <xs:element minOccurs="0" name="Rozpracovano" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="UserID" type="xs:int" />
+              <xs:element name="TermID" type="xs:int" />
+              <xs:element minOccurs="0" name="Barcode" type="xs:string" />
+              <xs:element name="DateCreated" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DateFinished" type="xs:dateTime" />
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="DEX_ROW_ID" type="xs:int" />
+              <xs:element minOccurs="0" name="SKL_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="SumItems" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

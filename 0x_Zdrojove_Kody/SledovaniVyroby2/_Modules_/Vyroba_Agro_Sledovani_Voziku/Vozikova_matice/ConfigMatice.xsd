@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ConfigMatice" targetNamespace="http://tempuri.org/ConfigMatice.xsd" xmlns:mstns="http://tempuri.org/ConfigMatice.xsd" xmlns="http://tempuri.org/ConfigMatice.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ConfigMatice" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ConfigMatice" msprop:Generator_UserDSName="ConfigMatice">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Matice_stavy" msprop:Generator_TableClassName="Matice_stavyDataTable" msprop:Generator_TableVarName="tableMatice_stavy" msprop:Generator_TablePropName="Matice_stavy" msprop:Generator_RowDeletingName="Matice_stavyRowDeleting" msprop:Generator_RowChangingName="Matice_stavyRowChanging" msprop:Generator_RowEvHandlerName="Matice_stavyRowChangeEventHandler" msprop:Generator_RowDeletedName="Matice_stavyRowDeleted" msprop:Generator_UserTableName="Matice_stavy" msprop:Generator_RowChangedName="Matice_stavyRowChanged" msprop:Generator_RowEvArgName="Matice_stavyRowChangeEvent" msprop:Generator_RowClassName="Matice_stavyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="L1" msprop:Generator_ColumnVarNameInTable="columnL1" msprop:Generator_ColumnPropNameInRow="L1" msprop:Generator_ColumnPropNameInTable="L1Column" msprop:Generator_UserColumnName="L1" type="xs:boolean" minOccurs="0" />
+              <xs:element name="L2" msprop:Generator_ColumnVarNameInTable="columnL2" msprop:Generator_ColumnPropNameInRow="L2" msprop:Generator_ColumnPropNameInTable="L2Column" msprop:Generator_UserColumnName="L2" type="xs:boolean" minOccurs="0" />
+              <xs:element name="L3" msprop:Generator_ColumnVarNameInTable="columnL3" msprop:Generator_ColumnPropNameInRow="L3" msprop:Generator_ColumnPropNameInTable="L3Column" msprop:Generator_UserColumnName="L3" type="xs:boolean" minOccurs="0" />
+              <xs:element name="L4" msprop:Generator_ColumnVarNameInTable="columnL4" msprop:Generator_ColumnPropNameInRow="L4" msprop:Generator_ColumnPropNameInTable="L4Column" msprop:Generator_UserColumnName="L4" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ID_FASK_Machines" msprop:Generator_ColumnVarNameInTable="columnID_FASK_Machines" msprop:Generator_ColumnPropNameInRow="ID_FASK_Machines" msprop:Generator_ColumnPropNameInTable="ID_FASK_MachinesColumn" msprop:Generator_UserColumnName="ID_FASK_Machines" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

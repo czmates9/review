@@ -1,0 +1,20 @@
+﻿SELECT        FA.ID AS FA_ID, FA.RelCR AS FA_RelCR, FA.Cislo AS FA_Cislo, FA.VarSym AS FA_VarSym, FA.SText AS FA_SText, FApol.ID AS FApol_ID, FApol.SText AS FApol_SText, FApol.Mnozstvi AS FApol_Mnozstvi, 
+                         FApol.Prenes AS FApol_Prenes, FApol.MJ AS FApol_MJ, FApol.MJKoef AS FApol_MJKoef, FApol.Kod AS FApol_Kod, SKz.ID AS SKz_ID, SKz.IDS AS SKz_IDS, SKz.EAN AS SKz_EAN, SKz.RelSKzVC AS SKz_RelSKzVC, 
+                         SKz.MJ2 AS Skz_MJ2, SKz.MJ3 AS Skz_MJ3, SKz.MJ2Koef AS Skz_MJ2Koef, SKz.MJ3Koef AS Skz_MJ3Koef, SKz.RefSklad AS Skz_RefSklad, SKz.SText AS SKz_SText, SKz.RefVPrFXTS AS SKz_RefVPrFXTS, 
+                         SKz.RefVPrFDTS AS SKz_RefVPrFDTS, SKz.RefVPrFITS AS SKz_RefVPrFITS, SKz.RefVPrFPTS AS SKz_RefVPrFPTS, SKz.RefVPrFVTS AS SKz_RefVPrFVTS, SKz.VPrFXTS AS SKz_VPrFXTS, SKz.VPrFDTS AS SKz_VPrFDTS, 
+                         SKz.VPrFITS AS SKz_VPrFITS, SKz.VPrFPTS AS SKz_VPrFPTS, SKz.VPrFVTS AS SKz_VPrFVTS
+FROM (           FA LEFT OUTER JOIN
+                         FApol ON FApol.RefAg = FA.ID ) LEFT OUTER JOIN
+                         SKz ON SKz.ID = FApol.RefSKz
+WHERE        (FA.Cislo = ?)
+
+
+
+
+SELECT        FA.ID AS FA_ID, FA.RelCR AS FA_RelCR, FA.Cislo AS FA_Cislo, FA.VarSym AS FA_VarSym, FA.SText AS FA_SText, FApol.ID AS FApol_ID, FApol.SText AS FApol_SText, FApol.Mnozstvi AS FApol_Mnozstvi, 
+                         FApol.Prenes AS FApol_Prenes, FApol.MJ AS FApol_MJ, FApol.MJKoef AS FApol_MJKoef, FApol.Kod AS FApol_Kod, SKz.ID AS SKz_ID, SKz.IDS AS SKz_IDS, SKz.EAN AS SKz_EAN, SKz.RelSKzVC AS SKz_RelSKzVC, 
+                         SKz.MJ2 AS Skz_MJ2, SKz.MJ3 AS Skz_MJ3, SKz.MJ2Koef AS Skz_MJ2Koef, SKz.MJ3Koef AS Skz_MJ3Koef, SKz.RefSklad AS Skz_RefSklad, SKz.SText AS SKz_SText
+FROM (           FA LEFT OUTER JOIN
+                         FApol ON FApol.RefAg = FA.ID ) LEFT OUTER JOIN
+                         SKz ON SKz.ID = FApol.RefSKz
+WHERE        (FA.Cislo = ?)

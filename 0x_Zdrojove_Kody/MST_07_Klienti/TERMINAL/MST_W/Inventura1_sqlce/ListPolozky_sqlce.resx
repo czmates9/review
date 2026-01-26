@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="mainMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="menuItemOnlineNovyEAN.Text" xml:space="preserve">
+    <value>F5 - Nový EAN</value>
+  </data>
+  <data name="menuItemOnline.Text" xml:space="preserve">
+    <value>Online</value>
+  </data>
+  <data name="menuItem7.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="menuItem6.Text" xml:space="preserve">
+    <value>F1 - Název</value>
+  </data>
+  <data name="menuItemHledatCarKod.Text" xml:space="preserve">
+    <value>F2 - Čár. kód</value>
+  </data>
+  <data name="menuItemHledatPozice.Text" xml:space="preserve">
+    <value>F3 - Pozice</value>
+  </data>
+  <data name="menuItem8.Text" xml:space="preserve">
+    <value>F4 - Kód položky</value>
+  </data>
+  <data name="menuItem5.Text" xml:space="preserve">
+    <value>Hledat</value>
+  </data>
+  <data name="menuItem3.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="miTisk.Text" xml:space="preserve">
+    <value>F6 - Tisk</value>
+  </data>
+  <data name="menuItem9.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="menuItemPridat.Text" xml:space="preserve">
+    <value>Ent - Přidat</value>
+  </data>
+  <data name="menuItemSmazat.Text" xml:space="preserve">
+    <value>Bksp - Smazat</value>
+  </data>
+  <data name="menuItem4.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="menuItemKonec.Text" xml:space="preserve">
+    <value>Esc - Konec</value>
+  </data>
+  <data name="menuItem1.Text" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="menuItemZobrazeniVse.Text" xml:space="preserve">
+    <value>1 - Vše</value>
+  </data>
+  <data name="menuItemZobrazeniSwitchRezim.Text" xml:space="preserve">
+    <value>2 - List / Detail</value>
+  </data>
+  <data name="menuItemNasnimane.Text" xml:space="preserve">
+    <value>3 - Nasnímané</value>
+  </data>
+  <data name="menuItem2.Text" xml:space="preserve">
+    <value>Zobrazeni</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dataFieldITEMCODE.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="dataFieldITEMCODE.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="dataFieldITEMCODE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 198</value>
+  </data>
+  <data name="dataFieldITEMCODE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 16</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dataFieldITEMCODE.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;dataFieldITEMCODE.Name" xml:space="preserve">
+    <value>dataFieldITEMCODE</value>
+  </data>
+  <data name="&gt;&gt;dataFieldITEMCODE.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.7696.16371, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dataFieldITEMCODE.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dataFieldITEMCODE.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dataFieldREZ2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="dataFieldREZ2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="dataFieldREZ2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 182</value>
+  </data>
+  <data name="dataFieldREZ2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 16</value>
+  </data>
+  <data name="dataFieldREZ2.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;dataFieldREZ2.Name" xml:space="preserve">
+    <value>dataFieldREZ2</value>
+  </data>
+  <data name="&gt;&gt;dataFieldREZ2.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.7696.16371, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dataFieldREZ2.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dataFieldREZ2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dataFieldREZ1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="dataFieldREZ1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="dataFieldREZ1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 166</value>
+  </data>
+  <data name="dataFieldREZ1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 16</value>
+  </data>
+  <data name="dataFieldREZ1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;dataFieldREZ1.Name" xml:space="preserve">
+    <value>dataFieldREZ1</value>
+  </data>
+  <data name="&gt;&gt;dataFieldREZ1.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.7696.16371, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dataFieldREZ1.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dataFieldREZ1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="dataFieldNasnimano.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="dataFieldNasnimano.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt, style=Bold</value>
+  </data>
+  <data name="dataFieldNasnimano.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 148</value>
+  </data>
+  <data name="dataFieldNasnimano.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 18</value>
+  </data>
+  <data name="dataFieldNasnimano.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;dataFieldNasnimano.Name" xml:space="preserve">
+    <value>dataFieldNasnimano</value>
+  </data>
+  <data name="&gt;&gt;dataFieldNasnimano.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.7696.16371, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dataFieldNasnimano.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dataFieldNasnimano.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="dataFieldSNFind.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="dataFieldSNFind.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="dataFieldSNFind.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 132</value>
+  </data>
+  <data name="dataFieldSNFind.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 16</value>
+  </data>
+  <data name="dataFieldSNFind.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dataFieldSNFind.Name" xml:space="preserve">
+    <value>dataFieldSNFind</value>
+  </data>
+  <data name="&gt;&gt;dataFieldSNFind.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.7696.16371, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dataFieldSNFind.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dataFieldSNFind.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="dataFieldSNTrack.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="dataFieldSNTrack.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="dataFieldSNTrack.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 116</value>
+  </data>
+  <data name="dataFieldSNTrack.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 16</value>
+  </data>
+  <data name="dataFieldSNTrack.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;dataFieldSNTrack.Name" xml:space="preserve">
+    <value>dataFieldSNTrack</value>
+  </data>
+  <data name="&gt;&gt;dataFieldSNTrack.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.7696.16371, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dataFieldSNTrack.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dataFieldSNTrack.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="dataFieldCarKodVlastni.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="dataFieldCarKodVlastni.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="dataFieldCarKodVlastni.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 100</value>
+  </data>
+  <data name="dataFieldCarKodVlastni.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 16</value>
+  </data>
+  <data name="dataFieldCarKodVlastni.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;dataFieldCarKodVlastni.Name" xml:space="preserve">
+    <value>dataFieldCarKodVlastni</value>
+  </data>
+  <data name="&gt;&gt;dataFieldCarKodVlastni.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.7696.16371, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dataFieldCarKodVlastni.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dataFieldCarKodVlastni.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="dataFieldSklad.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="dataFieldSklad.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="dataFieldSklad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 84</value>
+  </data>
+  <data name="dataFieldSklad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 16</value>
+  </data>
+  <data name="dataFieldSklad.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;dataFieldSklad.Name" xml:space="preserve">
+    <value>dataFieldSklad</value>
+  </data>
+  <data name="&gt;&gt;dataFieldSklad.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.7696.16371, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dataFieldSklad.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dataFieldSklad.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="dataFieldLocnCode.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="dataFieldLocnCode.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="dataFieldLocnCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 68</value>
+  </data>
+  <data name="dataFieldLocnCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 16</value>
+  </data>
+  <data name="dataFieldLocnCode.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dataFieldLocnCode.Name" xml:space="preserve">
+    <value>dataFieldLocnCode</value>
+  </data>
+  <data name="&gt;&gt;dataFieldLocnCode.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.7696.16371, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dataFieldLocnCode.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dataFieldLocnCode.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="dataFieldQUANTITY.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="dataFieldQUANTITY.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="dataFieldQUANTITY.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 52</value>
+  </data>
+  <data name="dataFieldQUANTITY.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 16</value>
+  </data>
+  <data name="dataFieldQUANTITY.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dataFieldQUANTITY.Name" xml:space="preserve">
+    <value>dataFieldQUANTITY</value>
+  </data>
+  <data name="&gt;&gt;dataFieldQUANTITY.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.7696.16371, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dataFieldQUANTITY.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dataFieldQUANTITY.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="dataFieldITEMDESC.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="dataFieldITEMDESC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt, style=Bold</value>
+  </data>
+  <data name="dataFieldITEMDESC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="dataFieldITEMDESC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 36</value>
+  </data>
+  <data name="dataFieldITEMDESC.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dataFieldITEMDESC.Name" xml:space="preserve">
+    <value>dataFieldITEMDESC</value>
+  </data>
+  <data name="&gt;&gt;dataFieldITEMDESC.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.7696.16371, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dataFieldITEMDESC.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dataFieldITEMDESC.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="dataFieldItemnmbr.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="dataFieldItemnmbr.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="dataFieldItemnmbr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dataFieldItemnmbr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 16</value>
+  </data>
+  <data name="dataFieldItemnmbr.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dataFieldItemnmbr.Name" xml:space="preserve">
+    <value>dataFieldItemnmbr</value>
+  </data>
+  <data name="&gt;&gt;dataFieldItemnmbr.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.7696.16371, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dataFieldItemnmbr.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;dataFieldItemnmbr.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="panelDetail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 53</value>
+  </data>
+  <data name="panelDetail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 242</value>
+  </data>
+  <data name="&gt;&gt;panelDetail.Name" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;panelDetail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelDetail.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelDetail.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="sbInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="sbInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 546</value>
+  </data>
+  <data name="sbInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>743, 20</value>
+  </data>
+  <data name="&gt;&gt;sbInfo.Name" xml:space="preserve">
+    <value>sbInfo</value>
+  </data>
+  <data name="&gt;&gt;sbInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sbInfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;sbInfo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="dataGrid.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dataGrid.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt</value>
+  </data>
+  <data name="dataGrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dataGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 320</value>
+  </data>
+  <data name="dataGrid.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dataGrid.Name" xml:space="preserve">
+    <value>dataGrid</value>
+  </data>
+  <data name="&gt;&gt;dataGrid.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataGrid2, Fask.Graphic, Version=1.11.7696.16371, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dataGrid.Parent" xml:space="preserve">
+    <value>panelGrid</value>
+  </data>
+  <data name="&gt;&gt;dataGrid.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelGrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>308, 53</value>
+  </data>
+  <data name="panelGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 320</value>
+  </data>
+  <data name="&gt;&gt;panelGrid.Name" xml:space="preserve">
+    <value>panelGrid</value>
+  </data>
+  <data name="&gt;&gt;panelGrid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelGrid.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelGrid.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="toolBarButtonFirst.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="toolBarButtonPrev.ImageIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="toolBarButtonPrev.ToolTipText" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="toolBarButtonNext.ImageIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="toolBarButtonNext.ToolTipText" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="toolBarButtonLast.ImageIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>126, 17</value>
+  </metadata>
+  <data name="resource" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABc0lEQVQ4T2M4cOAARRirICkYQ+DZ20f/
+        lx+c+Z+QGAyjcEAKlx2Y8T8qJwyuGJsYMoYzQArXnVjw/8KHff+9oz3AirGJoWMUzde/HP+///WK/+7h
+        rv+X7Znzv2FaCYrY5JUd/3sXNf/vnFP/v2V6NdhAsOYt55bBFa5+MPH/spNT/ifUhv4/cH8DXGzng2X/
+        112d+3/Rqcn/px/o/G/jaQUxYP6OSf+vfjz2/+i79f/XPpz0f/GNzv+5bUn/5x/s/3/k7Tq42NRTdf/b
+        dhf8L1uT/D+62/u/qYMxxICrN6/+D8sI+t+4LP//0lvd/3v3lv1v2ZT/3zXYCS7WtqXgf+WKtP/Zs6P+
+        x/b5/Q9odP6vY6YNMQBE3L53639Aou//0lmp/6tXZ4Cd1zGhHUMMZCtIo7K20n8ZJWmEATBDUkrj/8c0
+        +MOdh00MHaNwrl6/ClZoZGsIV4xNDBljCIA0wPyHTwyGMQRIxVgFScFYBYnHBxgAe+pxCq2h8hUAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="resource1" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABQUlEQVQ4T2M4cOAARRirICkYQ2DOlgn/
+        n7199J9YcRQOCE9e1fm/ZXr1/+sPLqEoxiUOZ8Bwz8Km/zseLsVQjEucYdGeqf9BzgPZAFLUMqPm/+6n
+        K/5PO94AVnzy6uH/i7fMxhCHGQL228mPW/4febfu//5Xq/7vfLLk/7YHi//3HCz737ApF6x4w5X5WMWv
+        P7z8H+y3Y+83/l/7aPL/xTe6/8842whRtDXnf8mqpP8pk8L+p5cl4BQH+23fy5X/2zYX/69dlfW/ZEHS
+        /6zpUWBFfuXO/2WUpP+ndURiFd93aN9/BpDflLWV/uuYaf83dTD+b+Np9T+hNxCuaOrsKf9j02IwxA8d
+        OwQJA1hownD9pAoMRfjEUTSDMEghSNHeA3vhivCJwxkwDFJ49fpVFEX4xFE45GCsgqRgrILE4wMMAOzp
+        bo8KwiWMAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="resource2" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABHUlEQVQ4T2M4cOAARRirICkYqyAMP3v7
+        6P+cLRP+Y5ODYayCIHz9waX/LdOr/09e1Um6ATDNOx4u/d+zsIk0A2Capx1v+L/76Yr/LTNqwIaAXALy
+        zqI9U1EMRNX88DJYc8Om3P89B8v+b3uw+P/OJ0v+73+16v+Rd+v+n/y4BSNMUAxIL0v4nzIp7H/JqqT/
+        DVtzwIbMONv4f/GN7v9rH03+f+z9RowwQTFg36F9/2WUpP/7lTuDDcmaHvW/ZEHS/9pVWf/bNhf/3/dy
+        JUaYoBgAwoeOHYIbktAb+N/G0+q/qYPxfx0z7f/K2krgMEFWj6IZhpENqZ9UgaIBHWMVBOG9B/aCDSHb
+        ABC+ev0qZQYQg7EKkoKxChKPDzAAAMTKXRc8n3vnAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="resource3" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABJElEQVQ4T2M4cOAARRirICkYqyAMz9ky
+        4f+zt4/+Y5ODYayCMDx5Vef/lunV/68/uITTEKyCMNyzsOn/jodL8RqCwlm0Z+p/kLNBNoM0t8yo+b/7
+        6Yr/04434DQEhQPSfPLjlv9H3q37v//Vqv87nyz5v+3B4v89B8v+N2zKhRjy8DKKISgGgGw+9n7j/7WP
+        Jv9ffKP7/4yzjRDNW3P+l6xK+p8yKex/elkCbgNAzt73cuX/ts3F/2tXZf0vWZD0P2t6FFizX7nzfxkl
+        6f/7Du3DbQDIz8raSv91zLT/mzoY/7fxtPqf0BsI13zo2CH8YYCO6ydV4NUMwhgCyBhkAEjz3gN7sWoG
+        YayCMAwy4Or1qzg1gzBWQVIwVkFSMFZB4vEBBgDmQl0XEgu/UAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="&gt;&gt;toolBar1.Name" xml:space="preserve">
+    <value>toolBar1</value>
+  </data>
+  <data name="&gt;&gt;toolBar1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBar1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;toolBar1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.FormFactorShadowProperty" xml:space="preserve">
+    <value>WEBPAD</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Skin" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>67</value>
+  </metadata>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>743, 566</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Položky inventury</value>
+  </data>
+  <data name="&gt;&gt;mainMenu1.Name" xml:space="preserve">
+    <value>mainMenu1</value>
+  </data>
+  <data name="&gt;&gt;mainMenu1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MainMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem1.Name" xml:space="preserve">
+    <value>menuItem1</value>
+  </data>
+  <data name="&gt;&gt;menuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItemOnline.Name" xml:space="preserve">
+    <value>menuItemOnline</value>
+  </data>
+  <data name="&gt;&gt;menuItemOnline.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItemOnlineNovyEAN.Name" xml:space="preserve">
+    <value>menuItemOnlineNovyEAN</value>
+  </data>
+  <data name="&gt;&gt;menuItemOnlineNovyEAN.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem7.Name" xml:space="preserve">
+    <value>menuItem7</value>
+  </data>
+  <data name="&gt;&gt;menuItem7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem5.Name" xml:space="preserve">
+    <value>menuItem5</value>
+  </data>
+  <data name="&gt;&gt;menuItem5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem6.Name" xml:space="preserve">
+    <value>menuItem6</value>
+  </data>
+  <data name="&gt;&gt;menuItem6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItemHledatCarKod.Name" xml:space="preserve">
+    <value>menuItemHledatCarKod</value>
+  </data>
+  <data name="&gt;&gt;menuItemHledatCarKod.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItemHledatPozice.Name" xml:space="preserve">
+    <value>menuItemHledatPozice</value>
+  </data>
+  <data name="&gt;&gt;menuItemHledatPozice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem8.Name" xml:space="preserve">
+    <value>menuItem8</value>
+  </data>
+  <data name="&gt;&gt;menuItem8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem3.Name" xml:space="preserve">
+    <value>menuItem3</value>
+  </data>
+  <data name="&gt;&gt;menuItem3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miTisk.Name" xml:space="preserve">
+    <value>miTisk</value>
+  </data>
+  <data name="&gt;&gt;miTisk.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem9.Name" xml:space="preserve">
+    <value>menuItem9</value>
+  </data>
+  <data name="&gt;&gt;menuItem9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItemPridat.Name" xml:space="preserve">
+    <value>menuItemPridat</value>
+  </data>
+  <data name="&gt;&gt;menuItemPridat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItemSmazat.Name" xml:space="preserve">
+    <value>menuItemSmazat</value>
+  </data>
+  <data name="&gt;&gt;menuItemSmazat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem4.Name" xml:space="preserve">
+    <value>menuItem4</value>
+  </data>
+  <data name="&gt;&gt;menuItem4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItemKonec.Name" xml:space="preserve">
+    <value>menuItemKonec</value>
+  </data>
+  <data name="&gt;&gt;menuItemKonec.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem2.Name" xml:space="preserve">
+    <value>menuItem2</value>
+  </data>
+  <data name="&gt;&gt;menuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItemZobrazeniVse.Name" xml:space="preserve">
+    <value>menuItemZobrazeniVse</value>
+  </data>
+  <data name="&gt;&gt;menuItemZobrazeniVse.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItemZobrazeniSwitchRezim.Name" xml:space="preserve">
+    <value>menuItemZobrazeniSwitchRezim</value>
+  </data>
+  <data name="&gt;&gt;menuItemZobrazeniSwitchRezim.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItemNasnimane.Name" xml:space="preserve">
+    <value>menuItemNasnimane</value>
+  </data>
+  <data name="&gt;&gt;menuItemNasnimane.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonFirst.Name" xml:space="preserve">
+    <value>toolBarButtonFirst</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonFirst.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonPrev.Name" xml:space="preserve">
+    <value>toolBarButtonPrev</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonPrev.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonNext.Name" xml:space="preserve">
+    <value>toolBarButtonNext</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonNext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonLast.Name" xml:space="preserve">
+    <value>toolBarButtonLast</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonLast.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imageList1.Name" xml:space="preserve">
+    <value>imageList1</value>
+  </data>
+  <data name="&gt;&gt;imageList1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ListPolozky_sqlce</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

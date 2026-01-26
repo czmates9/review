@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+  <string name="ProdejTypDokladu_Carkod">Č. kód: {0}</string>
+  <string name="ProdejTypDokladu_ID">ID: {0}</string>
+  <string name="ProdejTypDokladu_ID2">ID2: {0}</string>
+  <string name="ProdejTypDokladu_Typ">Typ: {0}</string>
+
+  <string name="Prodej_TypDokladu_Label">Typy dokladů</string>
+</resources>

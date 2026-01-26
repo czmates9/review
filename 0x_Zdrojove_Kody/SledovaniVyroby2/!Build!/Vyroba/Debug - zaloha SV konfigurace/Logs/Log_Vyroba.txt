@@ -1,0 +1,24 @@
+15.03.2023 12:55:59 : Ukonceni hlavni aplikace
+15.03.2023 12:56:20 : Ukonceni hlavni aplikace
+15.03.2023 13:00:39 : Ukonceni hlavni aplikace
+15.03.2023 13:19:21 : Ukonceni hlavni aplikace
+15.03.2023 13:49:42 : Ukonceni hlavni aplikace
+15.03.2023 13:57:46 : Ukonceni hlavni aplikace
+15.03.2023 13:59:48 : Ukonceni hlavni aplikace
+15.03.2023 14:03:31 : Ukonceni hlavni aplikace
+29.05.2023 10:53:54 : Neošetřená vyjímka:
+ ExceptionObject: System.Data.StrongTypingException: The value for column 'Time_ADAM1' in table 'Vykladka' is DBNull. ---> System.InvalidCastException: Určené přetypování není platné.
+   v FASK.SledovaniVyroby.Module.Vyroba_Agro_Sledovani_Voziku.Configuration.ConfigTable.VykladkaRow.get_Time_ADAM1() v d:\_w\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\_Modules_\Vyroba_Agro_Sledovani_Voziku\Configuration\ConfigTable.Designer.cs:řádek 10277
+   --- Konec trasování zásobníku pro vnitřní výjimku ---
+   v FASK.SledovaniVyroby.Module.Vyroba_Agro_Sledovani_Voziku.Configuration.ConfigTable.VykladkaRow.get_Time_ADAM1() v d:\_w\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\_Modules_\Vyroba_Agro_Sledovani_Voziku\Configuration\ConfigTable.Designer.cs:řádek 10280
+   v FASK.SledovaniVyroby.Module.Vyroba_Agro_Sledovani_Voziku.frmMain.frmMain_Load(Object sender, EventArgs e) v d:\_w\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\_Modules_\Vyroba_Agro_Sledovani_Voziku\frmMain.cs:řádek 640
+   v System.Windows.Forms.Form.OnLoad(EventArgs e)
+   v System.Windows.Forms.Form.OnCreateControl()
+   v System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   v System.Windows.Forms.Control.CreateControl()
+   v System.Windows.Forms.Control.WmShowWindow(Message& m)
+   v System.Windows.Forms.Control.WndProc(Message& m)
+   v System.Windows.Forms.Form.WmShowWindow(Message& m)
+   v System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam) IsTerminating: True Sender: Název:Vyroba.exe
+Kontextové zásady neexistují.
+Unhandled Exception

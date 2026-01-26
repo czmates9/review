@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Pristupy" targetNamespace="http://tempuri.org/Pristupy.xsd" xmlns:mstns="http://tempuri.org/Pristupy.xsd" xmlns="http://tempuri.org/Pristupy.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Pristupy" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Pristupy" msprop:Generator_UserDSName="Pristupy">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FASK_AGENDA" msprop:Generator_TableClassName="FASK_AGENDADataTable" msprop:Generator_TableVarName="tableFASK_AGENDA" msprop:Generator_TablePropName="FASK_AGENDA" msprop:Generator_RowDeletingName="FASK_AGENDARowDeleting" msprop:Generator_RowChangingName="FASK_AGENDARowChanging" msprop:Generator_RowEvHandlerName="FASK_AGENDARowChangeEventHandler" msprop:Generator_RowDeletedName="FASK_AGENDARowDeleted" msprop:Generator_UserTableName="FASK_AGENDA" msprop:Generator_RowChangedName="FASK_AGENDARowChanged" msprop:Generator_RowEvArgName="FASK_AGENDARowChangeEvent" msprop:Generator_RowClassName="FASK_AGENDARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AGENDAID" msprop:Generator_ColumnVarNameInTable="columnAGENDAID" msprop:Generator_ColumnPropNameInRow="AGENDAID" msprop:Generator_ColumnPropNameInTable="AGENDAIDColumn" msprop:Generator_UserColumnName="AGENDAID" type="xs:string" minOccurs="0" />
+              <xs:element name="NAME" msprop:Generator_ColumnVarNameInTable="columnNAME" msprop:Generator_ColumnPropNameInRow="NAME" msprop:Generator_ColumnPropNameInTable="NAMEColumn" msprop:Generator_UserColumnName="NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCIPTION" msprop:Generator_ColumnVarNameInTable="columnDESCIPTION" msprop:Generator_ColumnPropNameInRow="DESCIPTION" msprop:Generator_ColumnPropNameInTable="DESCIPTIONColumn" msprop:Generator_UserColumnName="DESCIPTION" type="xs:string" minOccurs="0" />
+              <xs:element name="AUTH" msprop:Generator_ColumnVarNameInTable="columnAUTH" msprop:Generator_ColumnPropNameInRow="AUTH" msprop:Generator_ColumnPropNameInTable="AUTHColumn" msprop:Generator_UserColumnName="AUTH" type="xs:unsignedByte" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FASK_Logins" msprop:Generator_TableClassName="FASK_LoginsDataTable" msprop:Generator_TableVarName="tableFASK_Logins" msprop:Generator_TablePropName="FASK_Logins" msprop:Generator_RowDeletingName="FASK_LoginsRowDeleting" msprop:Generator_RowChangingName="FASK_LoginsRowChanging" msprop:Generator_RowEvHandlerName="FASK_LoginsRowChangeEventHandler" msprop:Generator_RowDeletedName="FASK_LoginsRowDeleted" msprop:Generator_UserTableName="FASK_Logins" msprop:Generator_RowChangedName="FASK_LoginsRowChanged" msprop:Generator_RowEvArgName="FASK_LoginsRowChangeEvent" msprop:Generator_RowClassName="FASK_LoginsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="USERID" msprop:Generator_ColumnVarNameInTable="columnUSERID" msprop:Generator_ColumnPropNameInRow="USERID" msprop:Generator_ColumnPropNameInTable="USERIDColumn" msprop:Generator_UserColumnName="USERID" type="xs:string" />
+              <xs:element name="firstname" msprop:Generator_ColumnVarNameInTable="columnfirstname" msprop:Generator_ColumnPropNameInRow="firstname" msprop:Generator_ColumnPropNameInTable="firstnameColumn" msprop:Generator_UserColumnName="firstname" type="xs:string" />
+              <xs:element name="surname" msprop:Generator_ColumnVarNameInTable="columnsurname" msprop:Generator_ColumnPropNameInRow="surname" msprop:Generator_ColumnPropNameInTable="surnameColumn" msprop:Generator_UserColumnName="surname" type="xs:string" />
+              <xs:element name="psswd" msprop:Generator_ColumnVarNameInTable="columnpsswd" msprop:Generator_ColumnPropNameInRow="psswd" msprop:Generator_ColumnPropNameInTable="psswdColumn" msprop:Generator_UserColumnName="psswd" type="xs:string" />
+              <xs:element name="CREATED" msprop:Generator_ColumnVarNameInTable="columnCREATED" msprop:Generator_ColumnPropNameInRow="CREATED" msprop:Generator_ColumnPropNameInTable="CREATEDColumn" msprop:Generator_UserColumnName="CREATED" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="VALIDFROM" msprop:Generator_ColumnVarNameInTable="columnVALIDFROM" msprop:Generator_ColumnPropNameInRow="VALIDFROM" msprop:Generator_ColumnPropNameInTable="VALIDFROMColumn" msprop:Generator_UserColumnName="VALIDFROM" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="VALIDTO" msprop:Generator_ColumnVarNameInTable="columnVALIDTO" msprop:Generator_ColumnPropNameInRow="VALIDTO" msprop:Generator_ColumnPropNameInTable="VALIDTOColumn" msprop:Generator_UserColumnName="VALIDTO" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RFID" msprop:Generator_ColumnVarNameInTable="columnRFID" msprop:Generator_ColumnPropNameInRow="RFID" msprop:Generator_ColumnPropNameInTable="RFIDColumn" msprop:Generator_UserColumnName="RFID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FASK_Logins_Auth" msprop:Generator_TableClassName="FASK_Logins_AuthDataTable" msprop:Generator_TableVarName="tableFASK_Logins_Auth" msprop:Generator_TablePropName="FASK_Logins_Auth" msprop:Generator_RowDeletingName="FASK_Logins_AuthRowDeleting" msprop:Generator_RowChangingName="FASK_Logins_AuthRowChanging" msprop:Generator_RowEvHandlerName="FASK_Logins_AuthRowChangeEventHandler" msprop:Generator_RowDeletedName="FASK_Logins_AuthRowDeleted" msprop:Generator_UserTableName="FASK_Logins_Auth" msprop:Generator_RowChangedName="FASK_Logins_AuthRowChanged" msprop:Generator_RowEvArgName="FASK_Logins_AuthRowChangeEvent" msprop:Generator_RowClassName="FASK_Logins_AuthRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="USERID" msprop:Generator_ColumnVarNameInTable="columnUSERID" msprop:Generator_ColumnPropNameInRow="USERID" msprop:Generator_ColumnPropNameInTable="USERIDColumn" msprop:Generator_UserColumnName="USERID" type="xs:string" minOccurs="0" />
+              <xs:element name="AGENDAID" msprop:Generator_ColumnVarNameInTable="columnAGENDAID" msprop:Generator_ColumnPropNameInRow="AGENDAID" msprop:Generator_ColumnPropNameInTable="AGENDAIDColumn" msprop:Generator_UserColumnName="AGENDAID" type="xs:string" minOccurs="0" />
+              <xs:element name="AUTH" msprop:Generator_ColumnVarNameInTable="columnAUTH" msprop:Generator_ColumnPropNameInRow="AUTH" msprop:Generator_ColumnPropNameInTable="AUTHColumn" msprop:Generator_UserColumnName="AUTH" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="DEX_ROW_ID" msprop:Generator_ColumnVarNameInTable="columnDEX_ROW_ID" msprop:Generator_ColumnPropNameInRow="DEX_ROW_ID" msprop:Generator_ColumnPropNameInTable="DEX_ROW_IDColumn" msprop:Generator_UserColumnName="DEX_ROW_ID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FASK_Logins_View_Prava" msprop:Generator_TableClassName="FASK_Logins_View_PravaDataTable" msprop:Generator_TableVarName="tableFASK_Logins_View_Prava" msprop:Generator_TablePropName="FASK_Logins_View_Prava" msprop:Generator_RowDeletingName="FASK_Logins_View_PravaRowDeleting" msprop:Generator_RowChangingName="FASK_Logins_View_PravaRowChanging" msprop:Generator_RowEvHandlerName="FASK_Logins_View_PravaRowChangeEventHandler" msprop:Generator_RowDeletedName="FASK_Logins_View_PravaRowDeleted" msprop:Generator_UserTableName="FASK_Logins_View_Prava" msprop:Generator_RowChangedName="FASK_Logins_View_PravaRowChanged" msprop:Generator_RowEvArgName="FASK_Logins_View_PravaRowChangeEvent" msprop:Generator_RowClassName="FASK_Logins_View_PravaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="USERID" msprop:Generator_ColumnVarNameInTable="columnUSERID" msprop:Generator_ColumnPropNameInRow="USERID" msprop:Generator_ColumnPropNameInTable="USERIDColumn" msprop:Generator_UserColumnName="USERID" type="xs:string" />
+              <xs:element name="firstname" msprop:Generator_ColumnVarNameInTable="columnfirstname" msprop:Generator_ColumnPropNameInRow="firstname" msprop:Generator_ColumnPropNameInTable="firstnameColumn" msprop:Generator_UserColumnName="firstname" type="xs:string" />
+              <xs:element name="surname" msprop:Generator_ColumnVarNameInTable="columnsurname" msprop:Generator_ColumnPropNameInRow="surname" msprop:Generator_ColumnPropNameInTable="surnameColumn" msprop:Generator_UserColumnName="surname" type="xs:string" />
+              <xs:element name="psswd" msprop:Generator_ColumnVarNameInTable="columnpsswd" msprop:Generator_ColumnPropNameInRow="psswd" msprop:Generator_ColumnPropNameInTable="psswdColumn" msprop:Generator_UserColumnName="psswd" type="xs:string" />
+              <xs:element name="CREATED" msprop:Generator_ColumnVarNameInTable="columnCREATED" msprop:Generator_ColumnPropNameInRow="CREATED" msprop:Generator_ColumnPropNameInTable="CREATEDColumn" msprop:Generator_UserColumnName="CREATED" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="VALIDFROM" msprop:Generator_ColumnVarNameInTable="columnVALIDFROM" msprop:Generator_ColumnPropNameInRow="VALIDFROM" msprop:Generator_ColumnPropNameInTable="VALIDFROMColumn" msprop:Generator_UserColumnName="VALIDFROM" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="VALIDTO" msprop:Generator_ColumnVarNameInTable="columnVALIDTO" msprop:Generator_ColumnPropNameInRow="VALIDTO" msprop:Generator_ColumnPropNameInTable="VALIDTOColumn" msprop:Generator_UserColumnName="VALIDTO" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AGENDAID" msprop:Generator_ColumnVarNameInTable="columnAGENDAID" msprop:Generator_ColumnPropNameInRow="AGENDAID" msprop:Generator_ColumnPropNameInTable="AGENDAIDColumn" msprop:Generator_UserColumnName="AGENDAID" type="xs:string" minOccurs="0" />
+              <xs:element name="RFID" msprop:Generator_ColumnVarNameInTable="columnRFID" msprop:Generator_ColumnPropNameInRow="RFID" msprop:Generator_ColumnPropNameInTable="RFIDColumn" msprop:Generator_UserColumnName="RFID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

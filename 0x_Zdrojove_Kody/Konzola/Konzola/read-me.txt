@@ -1,0 +1,2353 @@
+﻿v3.29 23.1.2026 MaR
+-------------------
+- Vyroba/Ciselniky
+- pridano okno Moduly tabulka MachinesDefinition
+- zvyseni verze
+
+v3.28 19.1.2026 MaR
+-------------------
+- Vyroba/Ciselniky
+- pridano okno Stroje tabulka Machines
+- zvyseni verze
+
+v3.27 19.1.2026 MaR
+-------------------
+- SSS rozbory analyza - vyhledani comboBox STROJ podle tabulky Machines parametr sloupec name
+- zvyseni verze
+
+v3.26 16.1.2026 MaR
+-------------------
+- SSS rozbory analyza - chybove dialogove okno pri dohledavani a vyprseni casu s DB
+- zmane nazvu procedury pridan prefix FASK_
+- zvyseni verze
+
+v3.25 15.1.2026 MaR
+-------------------
+- SSS rozbory ve vyrobe pridany prvky StrojSklad a StrojLokace, take rozsireno v procedure pro navratove hodnoty
+- rozsiren filtr o tyto hodnoty pro dohledani, modifikace parametru v procedure v MSSQL!
+- zvyseni verze
+
+v3.24 8.12.2025 MaR
+-------------------
+- Print Report vice logovani o chybach skrz netisknuti RDLC sestav
+- zvyseni verze
+
+v3.23 5.12.2025 MaR
+-------------------
+- nove okno  - Rozbor odvodů/SSS
+- procedura ktera dohledava data provider SQL a PohodaXML s nazvem: dbo.MachineStateSetHistory_Analyza_Odvodu
+- zvyseni verze
+
+v3.22 1.12.2025 MaR
+-------------------
+- Plánování Výroby/Výdeje - Načtení obchodního požadavku -- akce Nacist osetrena hlaskou a dialogovem okne pro volbu
+- zvyseni verze
+
+v3.21 27.11.2025 MaR
+-------------------
+- Plánování Výroby/Výdeje - Načtení obchodního požadavku -- akce Nacteni zapisuje do IS jen pri Pohoda E1, dohledani zaznamu zobrazi
+zaznamy podbarvene zda je již v našich tabulkách, podbarvit:
+
+není  - bez podbreavení
+je ve shodném množství - zeleně
+je v rozdílném množství - žlutě
+
+- zvyseni verze
+
+v3.20 25.11.2025 MaR
+-------------------
+- Plánování Výroby/Výdeje - Načtení obchodního požadavku -- dohledani dat pres proceduru - FASK_proc_EXPORT_POHODA_FASK_NacteniOPlanu a FASK_proc_EXPORT_SQL_FASK_NacteniOPlanu
+- v provider SQL v tomto okne po akci Nacteni jsou nefunkcni metody, nejsou doimplementovany/preneseny z prover PohodaXML
+- zvyseni verze
+
+v3.19 24.11.2025 MaR
+-------------------
+- Plánování Výroby/Výdeje - Provider SQL -- zprovozneno okno, jde vyhledani, ale dalsi funkce nejsou doimplementovany/preneseny z providera PohodaXML
+- pridan button Importovat, nazvy procedur jsou: FASK_proc_EXPORT_SQL_FASK_PlanovaniVyroby a FASK_proc_EXPORT_POHODA_FASK_PlanovaniVyroby
+- zvyseni verze
+
+v3.18 21.11.2025 MaR
+-------------------
+-Výroba\Odvod POHODA Při "Zpracovat výrobu" po volbě odvodu - přidat kontrolu, zda všechny výrobky i materiály jsou schválené.
+ Pokud ne, dotaz "Chcete odvést neschválené výrobky i materiál" ANO/NE
+- zvyseni verze
+
+v3.17 20.11.2025 MaR
+-------------------
+- sklad/rozbory/prehled vyrobky - oprava SQL UPDATE v provider SQL, okno upravit vychozi data na 1.1.1900 a vaha old pri null je na 0
+- opravneni na schvalovani pod K_E_, oprava bitoveho pole enum pri vstupu opravneni do formularovych oken
+- zvyseni verze
+
+v3.16 19.11.2025 MaR
+-------------------
+- sklad/rozbory/pohyby - oprava SQL select aby se neprojevovaly duplicitni zaznamy z hlavicek, rozsiren i filtr na typ pohybu a typ polozek ktery umoznuje zadavat viceslozkove oddelene carkou
+- zvyseni verze
+
+v3.15 13.11.2025 MaR
+-------------------
+- sklad/rozbory/pohyby - rozsireny dataset o prvky historie, udelany SQL selecty s rozsirenim pro parametry v providrech SQL a pohodaXML
+- restrukturovány SQL views pro data - POZOR - brat spravny zakladaci script pri zalozeni nove databaze
+- zvyseni verze
+
+v3.14 12.11.2025 MaR
+-------------------
+- Volny pohyb/nasnimane CZMST_DI pridany chybejici prvky do formulare a take do editacniho okna, uprava metod SQL update v provider SQL a pohodaXML
+- Pohyb s předlohou\Nasnímané\ editacni okno doplneny prvky a revize SQL dotazu
+- Konzola\Sklady\Rozbory\Pohyby přejmenovani první sloupec z Typy pohybu na Druhy pohybu, Pridan sloupec "Typ pohybu", pro "Volný pohyb" z CZMST_DI prvek DOC_ID
+- zvyseni verze
+
+v3.13 7.11.2025 MaR
+-------------------
+- IT cast/Typy dokladu, pridany chybejici parametry, novy a upravit take parametry pridany, insert i update aktualizovan v provederech SQL a PohodaXML
+
+- zvyseni verze
+
+v3.12 5.11.2025 MaR
+-------------------
+- Tisk RDLC oprava razeni ve vsech formularu s tisky
+- Pracovnici import provider Pohoda a SQL
+
+- zvyseni verze
+
+v3.11 3.11.2025 MaR
+-------------------
+- provider SQL import procedura vazbaMaterialy
+- Pracovnici Tisky a sablona RDLC
+
+- zvyseni verze
+
+v3.10 31.10.2025 MaR
+-------------------
+- provider PohodaXML import procedura vazbaMaterialy
+
+- zvyseni verze
+
+v3.9 14.10.2025 MaR
+-------------------
+- FormVyrobniPrikazList logika osetreni starych dat v pameti VPH a VPP pri editaci záznamu
+
+- zvyseni verze
+
+v3.8 1.10.2025 MaR
+-------------------
+- vyroba/rozbory/prehled_stroju_chyby implementace volba Tisk/Tisk Etiket, chybi sablona RDLC
+- vyroba/rozbory/prehled_vyrobky_SN/sarze implementace volba Tisk/Tisk Etiket, promene pro GS1 QrKod a CK, chybi sablona RDLC
+- vyroba/rozbory/prehled_materialy implementace volba Tisk/Tisk Etiket, chybi sablona RDLC -- readme
+- planovani/kapacitni planovani/mat. pro vyrobu TISK zpl implementace
+- sklady/rozbory/pohyby TISK zpl implementace
+- sklady/rozbory/stavy TISK zpl implementace
+- sklady/rozbory/inventura/stav inventury TISK zpl implementace
+
+- zvyseni verze
+
+v3.7 25.9.2025 MaR
+-------------------
+- Konzola vyroba/rozbory/Přehled odvádění strojů a Vyráběné položky - příkazy *priprava RDLC sestav + implementace dohledani dat pro provider Sql
+- zvyseni verze
+
+v3.6 10.9.2025 MaR
+-------------------
+- Konzola sklady/transakce/inventura/predloha doplneny promenne pro CK a oprava tiskove promenne CountEntries pro RDLC sestavy INTERTACT
+- zvyseni verze
+
+v3.5 9.9.2025 MaR
+-------------------
+- Konzola vyroba/transakce/vyrobni prikazy-oprava kodu pro vypsani promennych
+  do RDLC sestavy a zalogovani error logu pri spatnem GS1 UDI kodu kvuli prvku BarcodeP < 5 znaku
+- zvyseni verze
+
+v3.4 8.9.2025 MaR
+-------------------
+- vyroba/vyrobni prikazy oprava UDI kod kdyz je VDNITNUM null
+- vyroba ciselniky/zasoby doplneni promennych CK VNDITNUM_IMG,CZ_CarKod_IMG,LOCNCODE_IMG
+- vyroba/ciselnyky/vazba materialy CK VNDITNUM_Vyrobky_IMG,VNDITNUM_Materialy_IMG a oprava SQL prikazu v provider SQL
+- vyroba/ciselnyky/skupiny doplneni promennych CK ID_IMG
+- sklady/ciselnyky/Sklady doplneni promennych CK skl_carcode_IMG
+- sklady/ciselnyky/Lokace doplneni promennych CK Barcode_IMG
+- sklady/ciselnyky/Strediska doplneni promennych CK str_carcode_IMG
+- sklady/ciselnyky/Zasoby doplneni promennych CK VNDITNUM_IMG,CZ_CarKod_IMG,LOCNCODE_IMG
+- sklady/ciselnyky/Adresar doplneni promennych CK odb_carcode_IMG
+- Vyroba/rozbory/prehled vyrobky SQL provider oprava select vyhledavani
+- Vyroba/rozbory/prehled vyrobky PohodaXML  provider oprava select vyhledavani
+- zvyseni verze
+
+v3.3 27.8.2025 MaR
+-------------------
+- formulář Lokace v Zasoby/Ciselniky provider SQL a PohodaXML
+- kofigurace pro zobrazeni formulare Lokace a pridany prvek <Povolit_Lokace>true</Povolit_Lokace> v xml souboru MST_Konfig_Konzola.xml
+- Lokace import dat z CSV souboru
+- Transakce/Volný pohyb/Nasnímané a Transakce/Pohyb s předlohou/Nasnímané uprava SQL dotazu pro jednoznacne zaznamy, provider SQL a PohodaXML
+- Lokace import pres proceduru
+- zvyseni verze
+
+v3.2 10.7.2025 MaR
+-------------------
+- export DI do pohody, rozsireni typu dokladu
+- zvednuti verze pro rozpoznani Android verze
+
+v3.1 26.6.2025 MaR
+-------------------
+- importni muste import z EXCEL osetreni nul hodnoty
+- zvednuti verze pro rozpoznani Android verze
+
+v3.000 20.6.2025 MaR
+-------------------
+- vydej s predloho na pohyb s predlohou, filtrovani podle ITEMTYPE
+- zvednuti verze pro rozpoznani Android verze
+
+
+v2.139 19.6.2025 MaR
+-------------------
+- RDLC sestavy
+- zvednuti verze
+
+
+
+v2.137 12.6.2025 MaR
+-------------------
+- přidat do "O aplikaci" prvek, zda je o verzi SQL nebo E1 z konfigurace
+- heslo do konfigurace je podle konfigurace
+- zvednuti verze
+
+
+
+v2.136 10.6.2025 MaR
+-------------------
+--KONZOLA sklady/transakce/vydej s predlohou/nasnimane--upravit okno opravene textBoxy a labely
+
+v2.135 6.2.2025 MaR
+-------------------
+- reseni rozostreni TISK RDLC zvyseni DPI na 300, oprava RestSharp verze na 106 !! 
+--vyuzil jsem RDLC sablony v ramci tohoto projektu, uz se nemusi otevirat ve visual 2008 a je to ted lehci pro programatora
+- zvednuti verze
+
+
+
+v2.134 27.1.2025 MaR
+-------------------
+- #issue118 pokracovani
+- zvednuti verze
+
+
+v2.133 27.1.2025 MaR
+-------------------
+- #issue118
+- zvednuti verze
+
+
+
+v2.132 24.1.2025 MaR
+-------------------
+- brainstorming s JaS
+- zvednuti verze
+
+
+
+
+v2.131 20.1.2025 MaR
+-------------------
+- issue #115 VyrabenePolozky, filtry Active a uprava design prvku UI
+- zvednuti verze
+
+v2.130 17.1.2025 MaR
+-------------------
+- issue #115 VyrabenePolozky, filtry TISK a uprava design prvku UI
+- zvednuti verze
+
+
+v2.129 9.1.2025 MaR
+-------------------
+- VPP editace prvek merna jednotka baleni, generovat SN zmena a funkce
+- zvednuti verze
+
+
+v2.128 8.1.2025 MaR
+-------------------
+- Vyrobni prikazy, doplneni BIOMAG_ promennych + tvorba sablony por datametrix UDI
+- zvednuti verze
+
+
+v2.127 6.1.2025 MaR
+-------------------
+- novy formular vyrabene polozky
+- zvednuti verze
+
+
+v2.126 5.12.2024 MaR
+-------------------
+- oprava dat ZPL/RD vyroba/transakce/vyr. prikazy
+- zvednuti verze
+
+
+
+v2.125 5.12.2024 MaR
+-------------------
+- sjednoceni ZPL/RD planovani,vyroba,sklady
+- zvednuti verze
+
+
+v2.124 25.11.2024 MaR
+-------------------
+- import dat z CSV do SQL u sklad/ciselniky/odberatele
+- zvednuti verze
+
+
+
+v2.123 14.11.2024 MaR
+-------------------
+- KONZOLA issue #110 - tisk Zasoby, prime tisky, metoda RDLC a ZPL, konfiguracne nastavitelne
+- zvednuti verze
+
+
+v2.122 12.11.2024 MaR
+-------------------
+- KONZOLA issue #99 - tisk ZPL ciselniky/zasoby, vybrane zaznamy tisknuti
+- zvednuti verze
+
+
+v2.121 8.11.2024 MaR
+-------------------
+- KONZOLA sjednoceni TISK, dohledani zaznamu z formulare RD nebo ZPL
+- zvednuti verze
+
+
+v2.120 5.11.2024 MaR
+-------------------
+- KONZOLA sjednoceni TISK reportu do log printInfo, jejich promenne pro PaV
+- zvednuti verze
+
+v2.119 23.10.2024 MaR
+-------------------
+- KONZOLA sjednoceni velikosti tlacitek na pravem sloupci, propis insert a update do tabulky CZMST093-oprava a opusteni table adapter
+- zvednuti verze
+
+
+v2.118 18.9.2024 MaR
+-------------------
+- KONZOLA sjednoceni prav pro import a editaci
+- zvednuti verze
+
+v2.117 12.9.2024 MaR
+-------------------
+-KONZOLA vyroba prehled vyrobky, paletovy stitek tisk 3vrstve
+- zvednuti verze
+
+v2.116 9.9.2024 MaR
+-------------------
+-KONZOLA vyroba a Sklady sjednoceni ciselniky pro provider PohodaXML a Sql, akce novy editace a odstraneni
+-import do ciselniku, viz procedury
+- zvednuti verze
+
+v2.115 30.8.2024 MaR
+-------------------
+-KONZOLA FASK_ZASOBY nacitani dat ze souboru CSV, implementace kodu JiS pomoci CSV reader
+- zvednuti verze
+
+
+v2.114 28.8.2024 MaR
+-------------------
+-KONZOLA vyroba-transakce --> pridani tisk paletoveho stitku
+- zvednuti verze
+
+
+v2.113 27.8.2024 MaR
+-------------------
+-KONZOLA prehled stavy vyrobky, ZPL sablona dohledani podle klice ZP ve FASK_FORMULAR tabulce
+
+-------POZOR v konfig souboru "MST_Konfig_Konzola.xml" pridat tyto radky:
+  <Tisk>
+    <Stitky_Klic>ZP</Stitky_Klic>
+  </Tisk>
+  -------POZOR END
+  - zvednuti verze
+
+
+v2.112 23.8.2024 MaR
+-------------------
+- prehled vyrobky, TISK paletove stitky ukladani do souboru
+
+--POZOR v konfig souboru "MST_Konfig_Konzola.xml" pridat tyto radky:
+
+  <Vyroba>
+    <EtiketaTISKUkladat>true</EtiketaTISKUkladat>
+  </Vyroba>
+
+  <Tisk>
+    <Ukladat_Stitky_Do_Souboru>true</Ukladat_Stitky_Do_Souboru>
+    <Stitky_Path>d:\_w\MES-Projekt\0x_Zdrojove_Kody\!Build!\Konzola\Debug\Logs\</Stitky_Path>
+  </Tisk>
+
+  --POZOR END
+
+- zvednuti verze
+
+v2.111 21.8.2024 MaR
+-------------------
+
+- zbozi, priprava na nahravani z CSV - docasne zakomentovana logika
+- prehled vyrobky, TISK implementace promenne datum na paletove stitky
+- zvednuti verze
+
+v2.110 22.4.2024 MaR
+-------------------
+
+- nacitaci okenko, pridany popisky do Info
+- inventura predloha, TISK implementace vyberu sablony na tisk
+- zvednuti verze
+
+v2.109 19.4.2024 MaR
+-------------------
+
+- inventura predloha, filtr 3varianty serazeni
+- zvednuti verze
+
+v2.108 11.4.2024 MaR
+-------------------
+
+- Vyroba sledovani stavu stroju, pridan filtr podle procesu, roletka se stazenymi daty z machineDef..provider a modifikace kom.serveru
+- zvednuti verze
+
+
+v2.107 11.3.2024 MaR
+-------------------
+
+Dodělávky:
+
+funkci Storno dávky přejmenovat všude jen slovo Storno
+sjednotit funkce Storno podle chování ve Výdeji s předlohou
+ve Výdeji s předlohou umožnit ve funkci Upravit editovat i CZ_doslo
+v pohledu na všechny výstupy graficky zarovnat pole horního filtru (nyní je čas odsazený)
+Výdej s předlohou - Kontrola dávky ošetřit hláškou "Neimplementováno"
+Výdej s předlohou - upravit default zaškrtávátka v horním filtru - vše zapnuto (zpracované...)
+
+-test nad daty z SAB
+
+- zvednuti verze
+
+v2.106 7.3.2024 MaR
+-------------------
+
+- skaldy storno SI SE DI PI PE, vyhledavani podle filtru casu
+- zvednuti verze
+
+
+
+v2.105 6.3.2024 MaR
+-------------------
+
+- sklady transakce odstranit
+- zvednuti verze
+
+v2.104 29.2.2024 MaR
+-------------------
+
+- vydej, predloha a nasnimane form upravit a komunikace s DB, nove tridy SE a SI
+- zvednuti verze
+
+v2.103 26.2.2024 MaR
+-------------------
+
+- sklady transakce predloha a nasnimane 3formulare pro editaci a primou komunikaci s DB, nove tridy PE a PI a DI
+- zvednuti verze
+
+v2.102 07.12.2023 MaR
+-------------------
+
+- zvyseni verze knihovny Zxing.Net + vytvoreni GS1 Datamatrix ve vyrobnichPrikazech
+- zvednuti verze
+
+
+v2.101 24.10.2023 MaR
+-------------------
+
+- tiskova sablona vytvoreni a smazani zaznamu
+- zvednuti verze
+
+v2.100 20.10.2023 MaR
+-------------------
+
+- tiskova sablona editace, vstup pomoci typ a vyhledavani z roletky
+
+
+v2.100 29.08.2023 MaR
+-------------------
+
+- archivace dodelavky dialog okno focus na ne
+- zvednuti verze
+
+v2.99 23.08.2023 MaR
+-------------------
+
+- archivace pridani podle opravneni do hlavnich formularu
+- zvednuti verze
+
+
+v2.98 4.08.2023 MaR
+-------------------
+
+- archivace production do history
+- zvednuti verze
+
+v2.97 28.07.2023 MaR
+-------------------
+
+- SKlady volny pohyb konfiguracne skryti prvku, hledani podle datumu
+- zvednuti verze
+
+v2.96 27.07.2023 MaR
+-------------------
+
+- SKlady volny pohyb 3vrstvost
+- zvednuti verze
+
+v2.95 17.07.2023 MaR
+-------------------
+
+- Vyroba formulare cisla zarovnany doprava, jinak se zarovnava doleva
+- zvednuti verze
+
+v2.94 28.06.2023 MaR
+-------------------
+
+- Vyroba, pridani konfiguracne nastaveni poctu desetinnych mist
+- zvednuti verze
+
+v2.93 12.06.2023 MaR
+-------------------
+
+- transakce, rozsireni logiky na tisk datumExpirace a SN
+- zvednuti verze
+
+v2.92 7.06.2023 MaR
+-------------------
+
+- úprava formuláře přehled stavů strojů
+- úprava formuláře vybrání tiskové šablony, přehození tlačítek a zobrazení název souboru sloupec rozšířen na celé okno
+- zvednutí verze
+
+v2.91 6.06.2023 MaR
+-------------------
+
+- form vybrani tiskove šablony pro odvadeni vyroby vyrobni položky
+- zvednutí verze
+
+v2.90 5.06.2023 MaR
+-------------------
+
+- form vybrani tiskove šablony, zvetseny šířky sloupce
+- zvednutí verze
+
+v2.89 17.05.2023 MaR
+-------------------
+
+- UDI kod bez zadane sirky a vysky posilany na tiskovou sablonu
+
+
+v2.88 15.05.2023 MaR
+-------------------
+
+- vybrani tiskove sablony + posilani UDI kodu na tiskovou šablonu
+
+
+v2.87 25.04.2023 TaD
+-------------------
+
+- vytvorena verze E
+
+*********************************************************************************************************
+
+v2.86 25.04.2023 MaR
+-------------------
+- Výdej s předlohou, storno dávky
+
+
+v2.85 30.03.2023 TaD
+-------------------
+- Spatky zakometovani vlastnosti že se ve vyrobnich přikazech nevyselektuje řadek
+- Oprava mazani položke pomoci API verze
+-Změna formatu z yyyyMMdd na yyMMdd při tvorbě Vyrobniho přikazu
+
+
+v2.84 29.03.2023 MaR 
+-------------------
+- Oprava okna pro editaci Production, zadavani Vahy
+
+
+v2.83 23.03.2023 MaR
+-------------------
+- uprava formulare sledovani stavu stroju, pridan atribut číslo služby, ID_group
+
+v2.82 13.03.2023 MaR + TaD
+-------------------
+- Uprava okna editace Production, ukladani WEIGHT_OLD pri editaci WEIGHT
+- Editace REZ kodnot v production
+
+
+v2.81 09.03.2023 MaR
+-------------------
+- uprava formulare sledovani stavu ADAM, rozsiren datatable Vyroba.MachineStateSet o prvek description, uprava providerSQL a API rozsireni o dotaz
+	description z tabulky MachinesDefinition a dotazeni dat, take uprava setrizeni podle DateModified od nejmladsiho
+
+v2.81 09.03.2023 TaD
+-------------------
+- Rozšíření struktur tabulek
+  - CZPRO_VPP
+  - CZPRO_VPH
+  - Production
+
+- Uprava oken pro zobrazení rozšířeních tabulek
+- při tvorbě vyrobniho přikazu možnost zadavat sledovani REZ hodnot + Vahy
+- Vytvořen generator "Seriovych čísel" - zadava se do vyrobních příkazů do BarcodeP aby podle toho šlo identifikovat
+- Vytvořen novy typ pro import do IS POHODA - pouze z Production vznikne Prijemka
+  - do poznamky se uklada BarcodeP (FAKE seriove čislo) + REZ hodnoty
+
+- Odstraneni v časti vyroba co nejvíc datatable při rozřírovani struktur a upravach dotazu
+
+
+
+v2.80 06.03.2023 MaR
+-------------------
+- vytvoren novy formular sledovani stavu stroju, ve vyroba rozbory
+- zalozen provider sql a rest api pro praci s daty nad tabulkou MachineStateSetHistory
+- uprava filtru, regularni vyrazy v IP a ulozeni filtru
+
+v2.79 26.01.2023 TaD
+-------------------
+
+Opravy:
+  -v AdvanceDaraGridView, oprava filtru pokud obsahuje datum
+  - při exportu do EXCEL, XML, CSV když byl skrit primarny klič tak to hodilo chybu, ted i když je skrity tak se exportuje, lebo je primarny a hlavny :)
+  - V pohledu na Production vytažen LoginID stloupec
+  - v POHODA provideru byly upravene umisteni nazvu souboru pro XML import
+
+- Vytvořen novy importny můstek medzi EXCEL a IS POHODA
+- jedná se o import "Dodavatele zasob"
+- je možnost načíst data z EXCEL souboru do nové tabulky v SQL
+  - je ste chybovy system který analizuje chyby v souboru a podle toho nastavuje status
+  -je zde okno ktere vypíše seznam chyb v souboru pred importem
+- je zde možnost editovat naimportovane zaznamy
+- možnost import do IS POHODA
+
+
+
+-CHYBY
+  - IS POHODA je neschodpna import vícero zasob najednou, proste to neumí
+  - IS POHODA je neschopna udelat update pomoci XML, a delat DELETE nad SQL je prasarna anestojí to za ty problemy...
+
+
+v2.78 23.11.2022 TaD
+-------------------
+-Vyrobny prikaz (dale VP), tisk, pridany prepočet na palety
+
+- VP, pridane filtry, pamatovani filtru
+- pridano jak do pohoda, sql aj API provideru
+- upravena logiky s dohledanim VPP z vybrane VPH
+- upravena logika s selectem na řadek VPP
+
+
+- pohled na production, pridany filtr na terminalID
+  - je mo6nost odělovat čarkou
+
+- Vytvorena API logika tisku paletoveho stitku z producion
+- Novy konfig soubor kde se definuje tiskarna
+- nachystano na možnost mist vicero tiskaren a vybirat z seznamu
+
+
+v2.77 23.09.2022 TaD
+-------------------
+-Hlavna obrazovka, otayni4ek v lev dole
+  - upraveno zobrazeni info o SQL_API variante
+
+- Production, upraveno pri editaci, se nezapiduje IDVS
+
+
+
+v2.76 19.09.2022 TaD
+-------------------
+- Předelani Interface na zdileni medzi serverem a konzolu
+
+
+v2.75 15.09.2022 TaD
+-------------------
+-Uprava, Vydej předloha
+- pro tisk přidany filtr na pouze kladné množství u položek
+
+
+
+v2.74 26.07.2022 TaD
+-------------------
+- Rozšíření okna pro pohled na nasminama data z Volneho pohybu
+- přidane tlačítko ktere se tvaří jak klavesový výstup do klavesnice 
+- v konfiguraci se nefinuje nazev procesu, template, čas medzi vystupama do klavesnice a separator pro template
+
+- Uprava konfigurací, přesunití ConnectionString a DSInformation.exe musí byt natvrdo současti projektu
+
+
+v2.73 1.7.2022 MaR
+-------------------
+-FormProductionList
+*pridan prvek pro tisk paletovehostitku
+*vyber jednoho radku a nasledny tisks
+
+
+v2.72 14.06.2022 MaR
+-------------------
+-FaskEventsErr
+*vytvořeno okno pro zobrazení záznamů z FaskEventErr
+* implementace do 3vrst a přímé SQL dotazy
+
+v2.71 10.06.2022 MaR
+-------------------
+* ProviderUzivatele _API
+* ProviderCiselniky_Zbozi _API
+* Vyroba - Odebrani table adapteru a sjednoceni DataSetu
+* ProviderCiselniky_Sklady _API
+* Extensions metody tabulek z ciselniku
+* implementace volani metody GET s vice parametry
+* ProviderOdvodEvents _API
+* ProviderVPH _API
+* Univerzalni metoda na transformaci BO a DT
+* ProviderVPP _API
+* ProvideProduction _API
+* ProviderGroups _API
+* nove obecne tridy Vyroba_xxx
+* ProviderMachines _API
+* ProviderOperations _API
+* ProviderVMachinesOperations _API
+* ProviderCorrects _API
+
+v2.70 07.06.2022 TaD
+-------------------
+-Production
+* oprava okna pro editaci production
+* Uprava načteni pouze STOP ODVOD
+* uprava logiky pro schvalovaní
+
+
+v2.69 06.06.2022 TaD
+-------------------
+-Okno planovani vydeje, načteni ochodniho požadavku
+* Uprava zapamatovani fitru
+
+
+- Pohled na production
+* oprava ukladani upraveneho zaznamu, špatně se kontoloval uživatel
+
+
+v2.68 10.05.2022 TaD
+-------------------
+-Okno planovani vydeje
+* Přidaný filtr pro stloupec "Datum zaplanovani"
+* pridany filtr s vyberem času dle predem dany hodnot
+
+
+
+v2.67 05.04.2022 TaD
+-------------------
+-Pohled na Production
+*pridani filtru na hlavičku
+* pamatovani rozloženi
+
+
+-Pohled na FASK_Events
+* oprava filtru, pamatovani koretkne
+* pridani ukladani rozloženi stloupcu do filtru
+
+
+v2.66 21.03.2022 TaD
+-------------------
+-Rozšířen interface o TISK
+- do konfigurace přidán parametr pro provider tisk
+-Vytvořen nový projekt pro skladaí GS1 kodu podle normy
+-z stavu lok.Mech kde je možnost tisku etikety, zmodernizovan tisk
+
+
+FASK_Events
+-pridana kontrola aktualneho stavu pres stornem
+
+
+v2.65 09.03.2022 TaD
+-------------------
+- Storno uprava, pořadi tlačitek
+- uprava podminky pro storno pouze pro (status 0 anebo 900) A automaticke ulozeni paleta
+- Pridany online dotaz pro ověření statusu, tesne pred stornem
+
+
+v2.64 08.03.2022 TaD
+-------------------
+
+-Inventura
+*  Pohoda provider, implementace promazani dat lokmech
+* uprava porovnavai logiky, včetně expirace
+* uprava tisk rozdilovy report
+ 
+- Fask_EVENTS
+* storno logika nad fask events
+
+
+
+v2.63 28.02.2022 TaD
+-------------------
+-Vytvořene nove okno pro porovnani Inventury I4 vs V123
+-vytvořen standartní export + Tisk s šablonu
+
+-Vytvořeni export v POHODA provideru pro Inventuru do I2 předloha šarže/SN + Expirace
+
+* Plus ruzne drobne upravy
+- pamatobvani rozloženi oken
+-pamatovani fitru
+- atd...
+
+v2.62 01.02.2022 TaD
+-------------------
+-Uprava SQL providera, možnost export čiselniku zasob pomoci procedury
+
+
+v2.61 10.01.2022 TaD
+-------------------
+-AGRO, okno pro pohled na FASK_Events
+-přidane filtry
+-přidane možnost do filtru, řazeni
+-opravene ukladani filtru
+
+
+
+v2.60 06.01.2022 TaD
+-------------------
+-Uprava, číselnik zasob. Tvorba nove zasoby ručne, při nevyplneni hodnot davat misto null, string.empty
+
+-uprava pri vkladani položky do vyrobniho přikazu, ošetrene všechny položky na null, tak aby nehodily vynimku
+-pridany try catch kdyby nahodou
+
+
+v2.59 13.12.2021 TaD
+-------------------
+-Vytvořene nové okno pro porovnani IS vs LokMech
+-vetšina dotazu sql tvořena funkcema
+-možnost poloautomaticke napravy lokmech na fake lokace
+-možnost zobrazit lokace na ktery se položka nachazi
+-možnost zobrazit pohyby v lokmech
+
+
+v2.58 10.12.2021 TaD
+-------------------
+- Navrhar
+- novy parametr pro slu4ovani po množství s objednavkama
+* použivaji se parametry s množstvím
+* v podmine jsou že se služby nezapočitavaj
+* v konfiguraci jsou MJ které jsou definovane a z nich se bere množství, pokud neni definovana tak je množstvi 1
+
+
+v2.57 02.12.2021 TaD
+-------------------
+
+Rozšíření SQL strukur
+
+    FASK_Events
+        QTYPACK – přepočtový koeficient
+        PackType – UP (uplná paleta) anebo NP (Neuplna paleta)
+        WEIGHT – Váha
+    CZPRO_VPP
+        BarcodeT – příznak zda sledovat č.kód
+Rozšířené pohledy na FASK_Events a Vyrobne přikazy
+Uprava  tiskové šablony vyrobneho přikazu o QTYPACK
+Hlavička VPH možnost Aktive na stavy 0, 1 a 200
+Uprava QTYPACK a BarcodeT na VPP
+
+
+v2.56 30.11.2021 TaD
+-------------------
+-Uprava Vyroba
+- SQL Provider, 
+* VyrobaVPP odstranene table adaptery
+*  rozšiřene struktury o BarcodeT, přiznak zda sledovat EAN
+* rozšířen pohled o tyto prvky
+* upravena možnost editovat přiznak BarcodeT a QTYPACK
+
+- VPH
+* upravena možnosz zadavat hodnoty do Aktivny :
+- 0 neaktivni
+- 1 Aktivni
+- 200 Ukončen
+
+- Uprava tiskove šablony AGRO
+
+-FASK_Events
+* rozšířen o QTYPACK, PackType a WEIGHT
+* rozšířen pohled o tyto prvky
+
+
+
+
+v2.55 03.11.2021 TaD
+-------------------
+-Uprava konfigurace, korektne načitrava a ukladani
+
+v2.54 30.09.2021 TaD
+-------------------
+-Uprava okna kde je pohled na FASK_Events
+-pridane dotahovani ITEMDESC
+-oprava filtru na čas, prace s plus jeden den. chyba nastala 30 ked mesic mnel 30 dni a chtelo to nastavit 31
+
+
+v2.53 21.09.2021 TaD
+-------------------
+-Zboži, tvorba ručne položky do čiselniku zasob
+-ošetreny null hodnot
+
+
+v2.52 21.09.2021 TaD
+-------------------
+-HlavneMenu, PrehledPlanVyroby se špatne tohanovalo vypinani k konfigurace
+-Uprava pohoda provider dotaz do production, s joinama
+
+-AGRO
+-uprava dotazu do Production pro SQL providera
+-uprava dotahu do VPP pro SQL Providera
+
+-Oprava chybičky pri vkladani položky do vyrobniho přikazu vic jak jedné
+
+-Pohled na FASK_Events, pridane časove filtry, pro oba časove udeja, isProcessed, dateeve
+
+-Uprava SQL providera, pri dotahovani VPP na zahlade vybraneho VPH pridani mazani datatable, pred fill
+
+-
+
+v2.51 03.09.2021 TaD
+-------------------
+- Okno pro Odvod Events, rozšířena struktura pro AGRO
+
+
+v2.50 28.06.2021 TaD
+-------------------
+-Upravy s tiskem ladeni..
+
+
+v2.49 27.05.2021 TaD
+-------------------
+-Vyroba, tisk vyrobniho příkazu, rozšíření tisku do hlavičky o SOPDESC (popis výrobiho příkazu)
+-možnost pridat do šablony parametr Param_SOPDESC
+
+-Výroba, vkladani položky která nemá č.kod. ošetřeno na null
+
+v2.48 25.05.2021 TaD
+-------------------
+-Vydej, planovani, kontrola na null
+-Planovani, tračitka označit k zaplanovani a odznačit k zaplanovani, šlo kliknut i když byla položaka zaplanovana, ošetřeno
+
+
+v2.47 20.05.2021 TaD
+-------------------
+-Planovani vydeje, nektere položky nemaju vyplneni VNDITNUM (presne je to doprava)
+-pak se pri planovani misto null daval string.empty
+-opraveno
+
+
+Vydej I-Tec
+-jenerovaní predlohy do vydeje, pridane dva parametry, ktere učiju zda se použit tahle funkčnost
+- a jaky typ položek se ma přenašet. 
+Je to z duvodu aby se ignorovaly služby
+-ktere se nasledně na serveru po odeslaní vkladanu korektne pod tu konkretni položku
+
+v2.46 06.05.2021 TaD
+-------------------
+-Planovani Vydeje/Vyroby, do logiky navrhaře pribudla nova podminkova vec, která určije pro Hanibal, zda je objednavka zaplacena anebo ne,
+je to řešeno funkcí na SQL serveru.
+
+
+v2.45 09.04.2021 TaD
+-------------------
+-POHODA, generovaní číselniku zasob pomoci procedury
+
+
+v2.44 25.02.2021 TaD
+-------------------
+-Verze Dašenka
+-Oprava pri nahravani do IS pohoda vyrobu, do Vyroby pohoda, kde z FASK_RADY se dotahuje stredisko, cinnost a zakazka
+-chyba pri kontrole na null
+
+
+v2.43 09.02.2021 TaD
+-------------------
+-Uzavření verze CIPISEK
+
+
+
+v2.42 02.02.2021 TaD
+-------------------
+- Planovani, když je zaplanovani do vydeje, tak pribudla na SQL funkce, která vrací stloupec s přiznakem či načíst rovnou do vydeje
+-pokud je true, tak se položka zapiše rovnou do SI
+-tady je pak nutne aby aj server aj terminal byl nastraven na vykriti na vicero terminalech
+
+-Lok MEchanizmus Stavy :
+	- Pridany parametr pro nazev tiskarny, pokud je vyplneny nazev tiskarny tak se tiskne na ni, pokud neni tak se použije PrintDialog a tiskarnu je nutno zadat
+	- do filtru pridany parametr pro pouze nenulovy stav
+
+v2.41 26.01.2020 TaD
+-------------------
+-Kompletne odtraneny Settings.xml a predelany na "lepší" spusob konfigurac
+-serializovany dataset
+-Pridana první verze Licence
+
+-Planovani, do načtení obchodniho požadavku, pridana na SQL funcke, která vrací seznam nečeho 
+kde je vracena tabulka s ORD a 5 volitelnych parametru
+
+
+
+
+v2.40 08.01.2020 TaD
+-------------------
+POZOR, navhar funguje iba po položkach
+-Při zaplanovani rozšířená struktur FASK_Vyroba_PVH do TypDok co je tyk dokladu do ktreho je zaplanovano
+	* Vyroba
+	* Vydej
+
+Načtení obchodniho požadavku, 
+-Rozšířeny pohled o datum zapisu (blbe pomenovane jak OBJ_DATE_ZAPL)
+-upravene filtry na datumy OD, DO a Zapisu
+	* každy ma dva možne datumy pro zadani
+-Pri načitani položek, je možno vybral podle čeho se bude řadit načitavani, a či to bude asc anebo desc
+	*Funguje aj po položkach, aj po hlavičkach
+
+
+-V Provider pohoda, predelana prace nektera z TableAdapteru na primo napsane SQL dozaty a inserty atd..
+-Odtraneny datatable FASK_Vyroba_PVH a používa se ten který je v interface
+
+-Pri zobrazovaní položek nachystanych do planovani, pridany order by DEX_ROW_ID
+
+-Pridana funkčnost, zapamatovat si ktery TabPage byl prepnuty... v okně kde se planuje, i v načtení obchodniho požadavku
+
+-V okne kde se planuje, je po kliknuti pravym vybrat položky které jsou označene True, že je možno ich zaplanovat
+
+-Pri zaplanovani do Vydeje, se uklada číslo dávky do Fask_Vyroba_PVH
+
+-Pri kliknuti pravym na položku, anebo dvojkliku se zobrazí detail položky. Nově je vybrany radek podle ITEMNMBR konretny položky
+
+-Ve variantach Navrhaře je možnost smazat variantu, Nově je ošetřena hlaškou, aby omylen nesmazal
+
+
+v2.39 14.12.2020 TaD
+-------------------
+-Planovani vydeje/vyroby
+	-přidané okno pro detail položky
+		-dvojklik na radek
+		-klik pravym na radek
+	-oprava logiky kontroly dispo
+	-Uprava filtru při zaplanovani  like XXX + %
+	-tlačítko navrk pri překliku na po hlavičke disable
+	
+
+
+v2.39 09.12.2020 TaD
+-------------------
+-Inventura, uprava komunikace s IS POHODA
+-odstranení TableAdapteru
+
+
+v2.38 27.11.2020 TaD
+-------------------
+-Fask Zasoby, pridavany novej zasoby, defaultne hodnoty...
+-Prejmenovane tlačitko Přehled Odvod na Prehled odvadení strojů
+
+
+v2.37 19.11.2020 TaD
+-------------------
+-Pridane nové okno do vyroby na Production_SN
+-Zadavani zboží loginid nesmy byt null ale aspon string empty
+
+
+
+v2.36 09.11.2020 TaD
+-------------------
+-Přidaná hláška, při ukladani XML souboru, a uživatel nemá prava, tak aby kontaktoval sveho IT Správce.
+
+-Kompletna revize okna Editace v LokMech, 
+-Přesunuti podle vyznamu, zabaleni do regionu...
+-LokMech, přidana, možnost převodu
+
+-V okně kde se zobrazují vazby, tak přidane dotahovani online z IS POHODA BD :
+	-ITEMCODE
+	-VNDITNUM
+	Vetev 1 až 7z IS POHODA
+
+
+v2.35 03.11.2020 TaD
+-------------------
+-Rozdelane updavy vramci Inventury, nove okno, 
+-jeste je potreba doladit lokalizaci
+-atd..
+
+
+v2.34 29.10.2020 TaD
+-------------------
+-Zboží, pridany stloupec s lokalizaci typu polozky + filtr natvrdo pro IS POHODA
+-Pridany provider pro tisky z LokMech Etikety (Dobre Podlahy), ladeni
+-Pridany provider pro tisky z Prodeje (SAB)
+-LokMech prtidana mo6nost prednabyzet Prijem a Vydej pro klik pravym
+-Projdeni všech resourcem a předelane nazcy stloupcu, pro efektivnejší lokalizaci
+
+-Vyrobny prozaz, pri pridavani polozky, lse prevyplnit možnost do filtru
+
+
+v2.33 23.10.2020 TaD
+-------------------
+-LokMech stav,  přidana možnost tisku štitku ala DObrePodlahy
+
+
+v2.32 21.10.2020 TaD
+-------------------
+-číselni zboží, Rozšířen o 7 větví skladu
+-Implementovano, do POHODA provideru
+
+-VPP, když se vklada položka a NEMÁ	EAN tak se vyplnuje ITEMCODE
+-pomoci parametru e da zapnout puvodni funkcionalita
+
+
+v2.31 16.10.2020 TaD
+-------------------
+-Planovaní do Vydeje, přidane stloupce statusu, s rozlišovaním Barev
+-Ladeni chyb při planovani po hlavičce
+-Implemnetace vše do Providera
+
+
+-SQL provider, sprovzneny pohled na Inventuru
+-Možnost naplnit LokMech z Inventury
+
+
+-Potřeba materialu, uprava advaceDatragridView
+
+
+
+v2.30 08.10.2020 TaD
+-------------------
+-Potřeba materialu, rozšířeno o dotahovani aktualnych dat z IS POHODA
+-přidaný počitaný stloupec, který když je zaporny tak je řadek červeny
+
+-Uprava PLANOVANI Vydeje a Vyroby,
+-přidana možnost načitavat obchodni požadvaek po hlavičkách, kompletně
+
+-Pridán přehled, planovani po hlavičce,
+-přidana možnost označit a odznačit po hlavičce
+-přidana možnost zaplanovat do Vydeje/Vyroby po hlavičce
+
+
+
+v2.29 25.09.2020 TaD
+-------------------
+-Pridavani položky do vyrobeho pčřikazu, pamatovani si Typu odvadeni,
+i po tom jak se vybere položka z FASK_ZASOBY, kde je hodnota bud předvyplnena, při exportu z IS pohoda
+
+-Oprava, pomaleho načitavani položek
+
+-Oprava kontrola duplicity Vydej, generovani přikazu
+
+v2.28 15.09.2020 TaD
+-------------------
+-Spojeni verze z Trunk a Branch do jednej
+
+
+v2.27 11.09.2020 TaD
+-------------------
+-Upravane v hlavnim okne, zobrazeny seznam databaz ke kterym je připojen, a provider...
+
+-Uprava při planovani vyroby, byla špatně komunikce s SQL, při vytažení MAX CountEntires z SE...
+-Povolene upravovani Production, vyřešena logika s Lokacema
+
+-Při přidavani položky do vyrobniho přizaku přidana vlastnost, že si to pamatuje naposledny zadanu
+
+-Výrobné přikazy, při přidavani položky rozšířeno o zobrazení a přenašení přiznaku CZ_SerNumTrack co VPP
+
+-Upravene menu podle zadani od JaS
+
+-Plánovaní vyroby, rozšířeno o zaplanovaní do výdeje...
+-Okno rozšířeno o skryty stlupe, který určuje farby... 
+
+
+
+v2.26 05.08.2020 TaD
+-------------------
+-Upravy do Odvadeni Vyroby POHODA, možnost odmazat ISOK
+
+v2.25 28.07.2020 TaD
+-------------------
+-Upravy filtry čislenik zboží
+-přidane FASK.RADY pro import do POHODY
+-upravy při dotahovani položek do vyrobniho přikazu
+
+
+v2.24 23.06.2020 TaD
+-------------------
+--BugFix, uprava podminek v disponibilite
+-Verze cipisek, taky přemenovano v Assambly
+-Preneseny projekt do VS2019
+
+
+v2.23 1.04.2020 TaD
+-------------------
+-Uprava pri importu do IS POHODA
+-Nahrada textu : text = "Vytvoreno cez FASK"; za text = "Vytvořeno MES FASK";
+
+
+v2.22 24.03.2020 TaD
+-------------------
+-Premenovani z BOBEŠ alfa na čisto BOBEŠ
+-sestavni verze na testy pred uzavřenim
+
+
+v2.21 16.03.2020 TaD
+-------------------
+-SQL Procider, upravena logika na typu lokaci dle pohoda provider
+-Sklad Pohyby, na SQL provideru opravene dotahovani dle pohoda provideru
+
+
+v2.20 11.03.2020 TaD
+-------------------
+-Vytvořeni nové logiky pro odvadeni Výroby do IS POHODA
+-Pokud je položka na vyrobnim přikazu typu 'výrobek' 
+-Tak lze odvest do pohody do agendy Vyroba, kde se provedou odpisy typu Výdej a přijem automaticky(teda pokud je vše skladem)
+
+-VELKE ALE... disponibilita se z naši strany neřeši... muže spusobovat chyby...
+
+-Varianty materialu v LokMech
+-v editaci a přidavani se nezobrazovaly typy lokaci, opraveno
+-V Stavy při dotahovani se použival v SQL dotahu v textu historicky CZMSTPWD
+
+v2.19 03.03.2020 TaD
+-------------------
+-Upravy dle požadavku JaS, na agende Vyroby
+-Planovani vyroby, upravy v vypočtovej logike množtvi
+-Upravy pri odmazavani
+-Upravy pri editovani
+-Pridana možnost tisku
+
+
+v2.18 19.02.2020 TaD
+-------------------
+-VYDEJ předloha,Uprava SQL providera, přenesena logika dotahovani z POHODA providera do SQL providera, 
+-Chybka v zboži když je varianta Vyber a ne List
+
+v2.17 16.12.2020 TaD
+-------------------
+-Vydej kontrola, pridany stloupec IDS, nebolo ITEMCODE, neboli kód z pohody
+- Projdeni všech oken
+-Pridani do každeho okna AdvancedataGridView
+-Pridani do každeho okna AdvanceButtonPanel
+
+-Projdeni všech menu a prejmenovani na rovnaky format
+-Projdeni všech eventu formu a prejmenovani podle formu
+
+-Opraveny ručny pohyb v lok.mech
+
+v2.16 26.11.2019 TaD
+-------------------
+-Započate prace na Kapacitnim planovani
+-Uprava pri ukladani do FASK_Vyroba_TP , a dotahovani IDH tak abz se dotahovalo jak int i když je to nvarchar
+
+-trochu uprava podbarveni radku v oknech
+- Přejmenovaní kompletně projektu Vyroba_Konzola pouze na Konzola
+
+
+- Úpravy Data setů v SQL provider a PohodaXML provider, všude se nachází pouze jeden ConnectionString (CS), a ten směřuje do settings, a v settings NESMI  byt vyplněný
+-Typ pádem jediné místa kde zůstává CS Konzola.exe.config a v případě POHODAXML providera ještě MST_Pohoda_Config.xml
+
+- Přejmenovaní projektu Fask.ModulePohodaXML.Perlacasa  na Fask.ModulePohodaXML 
+
+-Predelani Logovani chyb, použity sdileny projekt Fask.Loggins, společný zatím pro Kom. Server a Konzoly
+
+-Uprava projektu kontroly Disponibility
+-Uprava podminek na data ktere se vraci z disponibility
+
+přeneseni BugFixu z amalky do teto verze, upravy pro I-Tec
+
+
+
+
+v2.15 17.10.2019 TaD
+-------------------
+-Vytvořena verze Bobeš alfa
+
+
+
+v2.14 7.10.2019 TaD
+-------------------
+-Uzavřena verze AMALKA
+
+
+v2.13 03.10.2019 TaD
+-------------------
+-Amalka ALFA, přejmenovano z duvodu ladeni chyb
+-Oprava, na Disponibilite pri ODVOD POHODA, chyba pri vykreslovani barev a skrit stloupec ZBUDE
+
+
+v2.12 03.10.2019 TaD
+-------------------
+-Uzavřena verze AMALKA
+-Oprava, v Prijem predloha se pořad objevoval ProviderUzivatele...
+
+
+v2.11 01.10.2019 TaD
+-------------------
+-Sprovozneni Doxygeny v projektu Konzola... dale pokračovat v čišteni kodu, a komentovani pro vyhenerovani korektnej dokumentace
+
+-Vytvořena logika pro pomenovavani okne podle umisteni v menu
+-Upravene dotahovani konfiguračnych parametru z provideru do hlavneho projektu, hlavne pro POHODA
+
+-v časti modifikace TP sprovoznena logika pro zameni materialu ve vazbach z jineho skladu
+-ModifikaceTP, předelany giganticky select aby dotahoval data korektne, a rozřišen o vicero stloupcu
+
+-odvod pohoda, předelane okno zobrazujici stav disponibility
+-přidane dotahovani nazvu materialu
+
+-VazbyMaterialy pridane pamatovani si řadku
+
+-revize konfigurace
+-revize formMain
+
+
+
+v2.10 20.09.2019 TaD
+-------------------
+-Oprava chyby DataGridView
+-Rozšiřene pohledy :
+*Zboží
+*Vazba Materály
+*pridavani materialu
+*pridavani vyrobku
+*Odvod POHODA
+*Modifikace TP
+
+
+
+v2.9 13.09.2019 TaD
+-------------------
+-Prenesena uprava do Inventury predlohy z projektu STEINEX
+
+-Výroba, část výrobních příkazů nově obsahuje tlačítko : "Potřeba materiálů" 
+-Otevře se nové okno které obsahuje dvě záložky. : "Přehled" a "Jen součty"
+
+-v okně "přehled" je dotažen přehled všech materiálu které je potřeba podle "normy" 
+která je nadefinována v FASK_Vyroba_TP
+-každý řádek obsahuje informaci o 
+	• materiálu který je potřebný a kolik
+	• výrobku který se bude vyrábět 
+	• výrobním příkazu na kterém je daný výrobek
+
+-v okně "Jen součty" obsahuje pohled na Grupnuté všechny materiály, 
+s tohoto okna se uživatel dozví jaké všechny materiály potřebuje aby bych
+ schopen pokryt všechny vybrané výrobní příkazy
+
+
+v2.8 10.09.2019 TaD
+-------------------
+- Predelani přihlačovani a vedeni uživatelu a prav uživatelu
+-existuje pouze jedna tabulka FASK_Logins a k ni FASK_Logins_auth kde sou 1>N prava
+-prava sou definovana v FASK_AGENDA
+
+-tabulky logins a CZMSTPWD už se nepouživani na SQL
+
+-Kompletne ostraneny stopy již zminenych tabulek v projektu a použiva se novy projekt na zprávu loginsu...
+
+-Vytvořeno nove okno pro modifikaci TP
+
+-opravy prubežnych chyb podle testovani...
+
+
+v2.7 29.08.2019 TaD
+-------------------
+
+-Upravz na formu Odvod vyroby, volani procedury rozširene o Material a o spetnu zpravu o provedeni
+-Upravy Filtru na datumy
+-Uprava filtru na GUID
+
+v2.6 7.08.2019 TaD
+-------------------
+-Predelani kompletne cele konzoly z CZMST095 a FASK_CONS_095  na FASK_ZASOBY s tabulkou FASK_ZASOBY_PARAMETRY 
+-Upravena editace tychto tabulek
+-Pri vytvařeni Vydejky do pohody z materialu probehne kontrola na disponibilitu a když neprojde ukaže farebnz seznam položek co sou zle
+
+-Prvy etapa sjednoceni uživatelu
+
+
+v2.5 21.06.2019 TaD
+-------------------
+-upraven pohled na FASK_Events
+-Z tohoto pohledu možnost volat proceduru na tranformaci FASK_Events to Production
+-Production rozšiřen o šarži a expiraci....
+
+
+v2.4 19.06.2019 TaD
+-------------------
+-Uprava konfigurace, možnost zakazat IT část a pohled na FASK_Events
+
+
+
+v2.3 17.06.2019 TaD
+-------------------
+-Filtry v interface, pridane dedeni z FiltryBase
+-VNC
+....X dalších uprav
+
+v2.2 16.04.2019 TaD
+-------------------
+-Vytvořeni nové časti Vyroby, Planovaní výroby
+-viz. readme  POHODA
+
+
+
+v2.1 28.03.2019 TaD
+-------------------
+-Predelani Vyroby a Ukolovani kompletne do Providera
+-Zbaveni se projektu Production.DataServices ktery obsahovat Datasety s Table adapterama, ted je vše cez PROVIDER
+
+-oprava XMLserializer, vytvařeni objektu pomoci NEkonstruktoru
+
+-Vyroba, vytvořeni pohledu na vazby medzi Vyrobkama a spotřebovanyma materialama
+
+-Vydej, Sjednoceni v Interface, + Provideroch tabulku CZMST_SE + dotahovani vahy do predlohy
+
+
+v2.0 19.03.2019 TaD
+-------------------
+-Vytvoreni verze Vyroba 2.0 
+
+
+============================================================================
+============================================================================
+
+
+v1.37 07.03.2019 TaD
+-------------------
+-Sjednoceni pohledu číselniku
+-Sjednoceni "Výstupu" do Excel  + novinka do CSV
+-pridani na Provider Pohoda Export Skladu a střediska do čiselniku
+
+
+
+
+v1.36 21.02.2019 TaD
+-------------------
+-Uprava Datasetu, odmazani MaxLength
+-Pridan do rootu soubor "DS_Information.xml"
+-Tento soubor nese definice v všech tabulek a stloupcu
+
+
+v1.35 14.02.2019 TaD
+-------------------
+-Pridany pohled na Typy dokladu, zatim jen pohled a v testovacim režimu
+
+-Implementovany Prodej Pohled na nasnimana data a Import do pohody Prijemka a Prevodka podle typu dokladu (Stara funkcionalita řad) CZMST_DI
+-v settings možno zmenit grupovani dat pred importem
+
+-Implementovany Prijem, Pouze pohled na Predlohu CZMST_PE
+-Prijem, Nasminane, Zatim pouze pohled na data CZMST_PI
+
+-Pridany vydej pohled na Nasnimana data CZMST_SI
+
+-Pridan projekt na šifronavy, pro budouci Licence
+-šifrovany je použite pro pristup do Konfigurace, Pokud je uživate ADM tak ma pravo pro pristup do konfigurace
+-Pokud neni ADM tak musi zadat heslo
+-Heslo pro konfiguraci se nastavuje v konfiguraci a muže ho zemenit pouze ADM
+-POkud se zaklada ručne uživatel tak nelze zmazat posledniho ADM, kedže mazat muže pouze ADM a nemuže zmazat svuj učet pod rukama
+
+-drobna uprava Testovaciho AdvanceButtonPanel, až po revizi Konfigurace a meniček se upravi do použitelnej podoby
+
+-Prodej, Implementace s čiselnima řadama Pohoda(stary spusob)
+
+-Revize meniček v časti Sklady
+-Revize Zakladaciho SQL Skriptu pro Vyrobu
+
+
+
+ 
+
+
+v1.34 13.12.2018 TaD
+-------------------
+-Uprava Tisk etiket na mapa lokaci
+-Vydej, pohoda, pri generovani predlohy do SE je mo6no potlačit již vykrite položky
+-Dotahovani adresy do Baliciho listu
+
+
+v1.33 09.11.2018 TaD
+-------------------
+-do čiselniku pracovniku pridana možnost synchronizovat vuči AD(Active Directory)
+-Implementovano v SQL provider
+
+
+v1.32 08.11.2018 TaD
+-------------------
+-Uprava logiky vykreslovani Barev pri kontrole davky Vydej
+-Testovaci okno s dynamickyma tlačitkama
+
+
+v1.31 05.11.2018 TaD
+-------------------
+- po zavreni okna s kontrolu davky se provede refresh(znovuvyhledani) Tabulky
+-do kontroly davky na Vydej pridany stloupec "Vlastni čarovy kod" 
+-Uprava tisk šablony pro Balici List
+
+v1.30 24.10.2018 TaD
+-------------------
+-Davky Vydeje, pridan tisk Baliciho Listu
+-Online dotahovani adresy odberatele do hlavičky
+-v settings.xml je adresa dodavatele
+
+
+v1.29 22.10.2018 TaD
+-------------------
+-Vytvořeni kontroly vydejky online nad provider Pohoda
+
+
+
+v1.28 17.10.2018 TaD
+-------------------
+-Upraven filtr pri dohledavani Pohyby, kontrola zda je sarže prazdna
+
+
+v1.27 10.10.2018 TaD
+-------------------
+-Vytvořeni pohlednu na Expedice Buffer spojeny s Expedice položky
+-Uprava časti modulu Pohoda dotahovani přiznaku SN a VNDDOCNM
+
+
+v1.26 27.9.2018 JiS
+-------------------
+- uprava - moznost provedeni pohybu lokacniho mechanismu, pokud je sarze prazdna 
+
+
+v1.25 12.9.2018 TaD
+-------------------
+-Uprava editace FormSkladLokaceStavEdit
+-tab prepinani
+-validave množstvi QTY_OWNER možnost zadat prazdne
+
+
+v1.24 11.9.2018 TaD
+-------------------
+-Oprava špatné inicializace Provideru v časti lokačneho mechanizmu
+
+
+v1.23 29.8.2018 TaD
+-------------------
+-Uprava konfigurace dotahovani SerNumTrack z IS primo s karty zbozi
+-Uprava select dotazu na Pohyby, vynechane zakaznicke rešeni pro ZZS, predela se do Pohledu (View na SQL server)
+-Upravy logiky zobrazovani po editovani Davky na Vydej a po generovani
+
+
+
+v1.22 20.8.2018 TaD
+-------------------
+-Udelane generovani davky do již existujici davky ktera neni uvolnena(slučovani davky)
+
+
+v1.21 17.8.2018 TaD
+-------------------
+-Uprava inseru pri exportu do SE
+-Pridana možnost uvolneni davky
+-ruzne drobne upravy logiky...
+
+
+v1.20 19.7.2018 TaD
+-------------------
+-Upravy, rozsiřovani vyrobu do provideru pro Pohodu
+-upravy logiky upravovani hodnot
+-ulehčovani uživatelovy praci s konzoli
+-upravy generovani xml requestu objektovo
+-upravy vydeje a prijemek ceny...
+-uprava textu po uspešnem exportovani vydejky a prijemky to napiše uspešne exportovano.
+
+
+v1.19 6.6.2018 TaD
+-------------------
+-Rozsireni o noveho providera pro Pohodu
+-Implementovany novy spusob pou6ivani Interface, pro kazdu  metodu zvlast novy interface s jednym hlavnim
+-vyhoda, moznost implementovat pouze nektere metody
+
+-použiti provder pro Vyrobu
+
+*implementovane vyhledavani v pro tabulky 
+-Zbozi (bez filtru ,poze dotaz na vse cet tableAdapter) Export z pohody do FASK_CONS_095
+-Production, vyhledavani s filtrama plus import prijemky do Pohody
+-Production sources , vyhledavani s filtrama plus import vydejky do Pohody
+
+
+
+
+v1.18 17.5.2018 TaD
+-------------------
+-Projekt konzoly rozšiřen o možnost zadavat a editovat čišelnik pracovniku, CZMST096
+- Pridana do projektu možnost použivat RFID čtečku na usb
+-Upravena možnost tisku, použiva se nove vytvořena knihovna ktera renderuje report a zobrazuje nahled pred tiskem je použiva v tomto projektu a v porojektu nadop modul zzs
+
+-Upravene filtry Lokačnem mechazmoch o PracID
+-pri vytvařeni pohybu v lok. mech lze zadavat SN pomoci RFID
+
+
+
+v1.17 18.4.2018 TaD
+-------------------
+-Uprava v editaci Vyrobku a zmeny materialu/vyrobku, Focus automaticky na VNDITNUM, po nacteni caroveho kodu ctecku a budto stlaceni enter,
+anebo enter z ctecky automaticky provede vyhledani a nasledne nastavi FOCUS na datagridview, pak po stlaceni enter se vybere radek ktery je zvyraznen
+
+-do Production pridana možnost edistace ITEMDESC
+
+-Pro ZZS, ciselniky pridana možnost pridat do Zboži položku.
+-Implementovane metody pro interface, delete, insert a update IZbozi
+
+
+
+v1.16 21.3.2018 TaD
+-------------------
+-V editaci Vyrobku a materialy vynikla moznost zmeny materialu/vyrobku
+-nove dialogove okno ktere zobrazi 095 ciselnik zbozi v kterem je možno vybrat položku a tou nahradi statu polozku
+-Pri vazbach  vyrobek-> material vznikla možnost editovat vice hodnot najednou tlacitkem Vše
+
++
+Pro DDD opava se delala šablona a template FASK zustal
+
+
+
+v1.15 20.3.2018 JiS
+-------------------
+::Tisky
+- Povoleni pouzivat externi ovladace pro Tiskarnu LEITZ (ovladace jsou pouze 32bit, proto je treba pri pouziti tohoto ovladace aplikaci spoustet v 32bit rezimu, jinak nefunguje korektne...)
+::Vyroba
+- Externi akce pripravy vyrobnich prikazu importem z IS ...
+	=> ?nove komunikacni rozhrani pro 
+
+v1.14 29.1.2018 TaD
+-------------------
+-povolene zobrazeni okna s Report Sestava, dynamicka tabulka
+-export pouze do Excel, neexistuje navrh šablony
+
+
+
+v1.13 18.1.2018 TaD
+-------------------
+
+Servis, pohyby zdrojů přidaná možnost tisk denních reportu
+-přidaná šablona, která musí byt umístěna v Servis/Print/Templates/Report_TEST.rdlc
+a pojmenovaná Report_TEST.rdlc
+dále přidaná možnost načteni loga do šablony, logo musí byt umístěné v Servis/Print/Templates/LOGO.jpg
+a pojmenované LOGO.jpg
+-po zobrazení dat v tabulce je po zvolení možnosti tisk report vše vytisknut report z všemi daty které sou zobrazeni v tabulce
+a v pořadí v jakém sou v tabulce, je možno seřadit jednotlivé sloupce
+-při vyberu jednotlivých sloupců pomocí ctrl + „klik na řádek“
+-v reportu budou vytisknuté řádky v pořadí v jakém je uživatel vybral
+
+
+-Přidán Form pro zobrazeni "Velkého" reportu FormReportSestava
+-tento form obsahuje filtry pro dané hodnoty, a možnost volby generovaných dat po určitých obdobích.
+-obsahuje dynamické sloupce v tabulce kde je počet sloupců proměnlivý podle typu reportu
+-Pro tuto verzi tato možnost ještě není povolena
+
+
+pridano v report viewer zakazany exportu do Excel a world
+a automaticky zobrazi print layout na tisk
+
+-uprava šablony: šablona se momentalne musi udelat pro každeho zakaznika na miru. Do budoucna se budou všechny informace o zakaznikovy doplnovat automaticky
+
+
+v1.12 5.12.2017 TaD
+-------------------
+- updava Prehled materialu, pridane zobrzeni vazby vyrobek a kolko bylo pouzite materialu 
+- pirdany filtr na vyrobky
+
+- zaktualizovani casti materialy po zmazani vyrobku
+
+
+v1.11 29.11.2017 TaD
+-----------------
+-pridana moznost pridavat Polotovar
+-Polotovar musí byt nejdřiv nadefinovany jako vyrobek s vazbama
+-pridana možnost Editovat material
+-upravene nacitavani tabulek
+
+-do dialogu Pridavani/editace pridane zobrazovani poctu materialu/polotovaru na pridavani
+-pridano tlacitko na preskoceni zadavani
+-pomoci storno se zruzi zadavani
+
+
+
+v1.10 20.11.2017 TaD
+-----------------
+-Vyroba
+  -Pridana možnost pridavat vazby "Vyrobek >> Material"  v Hlavnem okne založka Vyroba: Vazba materiály
+
+-Pridano dialogove okno s Prehledem vazeb medzi vyrobkem a materialem
+    - možnosti Pridat vyrobek, smazat vyrobek, pridat material, odtranit material,
+
+-V kažtem temto okne je moznot pouzit filtry na danu tabulku
+
+-v možnosti pridat materialy je po vybrani jednoho nebo vice materialu uživatel vyzvan aby zadal
+koeficient sluzici pro prepocet pouziteho mnozsvi pro dany vyrobek.
+- dale je možnost zadavat alternativy pro jeden material 
+
+
+v1.09 13.9.2017 TaD
+-----------------
+- v tabulke Production_Sources USER_ID zmeneno z int na string  
+-rozsireni VyrobaDataSet.xsd o popiszakazky,nazevvyrobku,cislovyrobku a EANvyrobku
+-do Prehled vyrobku pridany stloupec popis zakazky
+-v Prehled vyrobky pridana možnost filtrovat podle popisu zakazky   
+-Prehled Material pridane stloupce popis zakazky, popis zbozi, carovy kod polozky, cislo vyrobku
+-v Prehled materialu pridane pri editaci radku informativni nacteni popis zakazky, popis zbozi, carovy kod polozky, cislo vyrobku
+
+
+
+v1.08 7.9.2017 TaD
+------------------
+-rozsireni FormProductionSourecesList.cs o moznost schvalit vybrane radky
+-rozsirena databaze Production_Sources o idVS a dateedit
+-rozsireny dataset VyrobaDataSet tabulka Production_Sources o idVS a dateedit
+-pridano tlacitko a do toolstripmenu možnost povrdit jeden nebo vice vybranych radku
+-pridano do FormProductionSourcesEdit2.cs načteni idVS a dateedit
+-po uloženi editace se nastavi aktualny datum, cas editace a id z Globals.Pracovnik
+-zmeny sa pomoci update  nahraji rovno na server pomoci Tableadapteru 
+
+
+v1.07 6.9.2017 TaD
+------------------
+-pridany form FormProductionSourecesList.cs pro prehled materialu
+-pridany form FormProductionSourcesEdit2.cs pro editaci vzbraneho radku materialu
+
+FormProductionSourecesList: 
+- udelane filtry, uprava radku, export do exel, export vybranych do exel
+
+FormProductionSourcesEdit2 : 
+-rozparsovani radku do jednotlivych textboxu a comboboxu
+-po editaci ulozeni do serveru 
+
+
+
+v1.06 1.9.2017 JiS
+------------------
+Vyroba 
+- Prehled : Vyroba prehled => Vyroba vyrobky
+	: doplneni sloupcu Sklad a Lokace
+		:: moznost zmeny techto hodnot v editacnim dialogu
+
+v1.05 17.5.2017 JiS
+------------------
+Vyroba
+- Vyrobni prikazy
+	: hromadne plneni poradi vstupu
+		:: [car.kod => enter => mnozstvi => enter => vlozeni mnozstvi]*
+		:: oprava vlozeni car.kodu do prikazu operace z vnditnum<=>barcodep
+		:: oprava zobrazeni prehledu produkce => vice zbozi zpusobilo chybu => upraven dotaz (select distinct itemdesc, itemnmbr from fask_cons_095)
+
+v1.04 12.5.2017 JiS
+------------------
+Vyroba
+- Vyrobni prikazy
+	: aktivni/neaktivni - novy db sloupec na czpro_vph
+	: hromadne plneni - vyhledavani dle car.kodu
+	: hromadne plneni - navysovanim mnozstvi o zadany pocet
+
+v1.03 13.4.2017 JiS
+------------------
+Vyroba
+- Vyrobni prikazy 
+	: hromadne naplneni polozek vyberem/zadanim mnozstvi
+	: v menu nove funkce "Přidat zboží hromadně", zkraková klávesa CTRL+Shift+Z
+
+
+v1.02 27.3.2017 JiS
+------------------
+Servis
+- doplneni pole Misto do noveho zdroje
+- doplneni filtru Misto, Typ do pohybu zdroju
+
+v1.01 27.2.2017 JiS
+------------------
+Servis
+- zdrojepohybylist
+	: rozsireni filtrovani dle cisla davky
+	: dotazeni neevidovanych zdroju okruhu pro kazdou davku vystupu
+	: doplenni idterminalu a iduzivatele dle existujicich zaznamu (predpoklada se jeden terminal a jeden uzivatel na davku)
+	: priznak exportovano - novy db sloupec (zdrojpohyb.dateExported datetime null)
+
+v0.56 16.2.2017 JiS
+------------------
+Servis
+- tisk etiket
+	::ZdrojeStavy - revize
+	::Zdroje
+	::Odberatele
+	::Okruhy
+	::Uzivatele
+
+v0.55 16.2.2017 JiS
+------------------
+Servis
+- Duplikace Zdroju
+
+v0.54 16.2.2017 JiS
+------------------
+Servis
+- Zdroje : pridan sloupec Misto
+
+v0.53 8.2.2017 JiS
+------------------
+Servis:
+PohybyZdrojuList
+- doplena funkce "Vsechny zdroje okruhu"
+- umozneno serazeni vysledku dle vice sloupcu pomoci drzeni klavesy Control + klik mysi na hlavicku sloupce
+- export vse : zachovava nastavene razeni do vystupu excelu ...
+
+v0.52 20.1.2017 JiS
+------------------
+Administrator ma moznost desifrovat connectionstring
+Inventura-stavy : moznost importu a exportu dat inventur...
+
+v0.51 20.1.2017 JiS
+------------------
+Servis
+- Zdroje Stavy 
+	: moznost vyberu vice radku soucasne
+	: pridana funkce Menu/Tisk Etika => provadi primy tisk na tiskarnu etiket
+		:: 1) Primym dosazenim hodnot do template pro tisk etikety (\Servis\Print\Templates\Etiketa_ZdrojStav.txt)
+		:: 2) Pro tiskarny "Leitz" : pouzitim SDK Leitz, pouzitim template (\Servis\Print\Templates\Etiketa_ZdrojStav.LeitzLbl) a naplnenim definovanych poli v tomto template
+				Pozn: dle vyjadreni podpory k SDK tiskarny Leitz, je treba mit nastaveno pevnou IP adresu tiskarny v Portech tiskarny (funkce sdk IsPrinterOnline() nefunguje, pokud je port tiskarny nastaven na nazev tiskarny => neprobiha korektne preklad na IP adresu ... )
+				!!! nutne vyzkouset s tiskarnou ... 
+
+v0.50 9.1.2017 JiS
+------------------
+Servis : podpora pro tisky reportu/etiket na tiskarnu graficky/ZPL
+- Zdoje (mozne vyberem)
+- Zdroje Stavy (pouze jeden zvoleny)
+
+
+v0.49 25.8.2016 PeV
+--------------------
+- formulare, kde je mozne filtrovat data podle datumu nyni zobrazuji jako datumOd zacatek aktualniho dne a jako datumDo konec aktualniho dne
+SqlProvider
+- opravy, kdy kdy mohlo dojit k vraceni spatne polozky pri vyhledavani podle ID (pokud nebylo nic zadano pri vyhledavani)
+-> test na prazdnost take resi primo formular, takze by nemelo k tomuto stavu dojit
+Ukolovani
+- pridany kontroly na null hodnoty
+Servis
+- upravy providera a nacitani dat v oddelenem vlakne (pouze v nekterych formularich)
+- sjednoceni formulare pro vyber, pridavani, editaci, ... zdroju + pridani filtru
+
+v0.48 19.8.2016 PeV
+--------------------
+- mensi upravy vzhledu (resp. sjednoceni) vsech formularu
+- sjednocovani nekolika formularu v ciselnicich (editace, pridavani, vyber, ...)
+Lokacni mechanismus
+- tvorba formulare pro editaci lokacniho mechanismu (provadeni prijmu a vydeju) + implementace providera
+Sklady
+- rozsireni datasetu o sloupec SOURCE (zdroj pohybu)
+SqlProvider
+- upravy providera
+
+v0.47 16.8.2016 PeV
+--------------------
+- implementace formulare pro vyber, editaci, ... uzivatelu terminalu (FormUzivateleList2) vyuzivajiciho providera
+- implementace formulare pro editaci uzivatelu vyuzivajiciho providera
+SqlProvider
+- upravy providera
+Ciselniky
+- zjednoduseni kodu, odstranovani duplicitniho kodu, kde nebyl potreba
+Expedice
+- implementace interface a formulare pro zobrazeni dat dodacich listu
+
+v0.46 11.8.2016 PeV
+--------------------
+- knihovna Interfaces rozsirena o konstanty, ktere obsahuji veskere nazvy tabulek kvuli zprehledneni a pripadnemu pridavani novych provideru
+SqlProvider
+- upravy providera
+Ciselniky
+- zjednoduseni kodu, odstranovani duplicitniho kodu, kde nebyl potreba
+- implementace formulare pro vyber, editaci, ... uzivatelu terminalu (FormUzivateleList2) TODO: je potreba ho dodelat (editace, pridavani a odstranovani zaznamu pomoci interface ...)
+-> prozatim se vyuziva pouze pro vyber uzivatelu
+
+v0.45 14.7.2016 PeV
+--------------------
+- bez verze
+- filtrovani - pridana moznost 'vycisteni' vyplnenych dat do vsech formularu, kde je filtrovani implementovano
+- oprava, kdy bylo mozne zvolit vice zaznamu u variant lokaci zbozi a pritom umoznit smazani zaznamu
+-> nyni jde smazat pouze v pripade, ze je vybran pouze jeden zaznam
+Sklady
+- rozsireni pohledu o sloupce: GUID, VNDDOCNM, VNDITNUM, ITEMCODE, WEIGHT
+- rozsireni o moznost vyhledavani podle ITEMCODE ve formularich
+Ciselnik zbozi
+- doplneno zobrazeni sloupce vaha
+- upravy formulare pro zobrazeni ciselniku zbozi
+- doplneni chybejicich sloupcu do datasetu (vaha, ...) + upravy formularu, aby se nove sloupce zobrazovaly
+- umozneni filtrovani ciselniku zbozi
+- pridan filtr na zobrazeni polozek se shodnym carovym kodem
+- implementace moznosti ulozeni, nacteni, ... filtru u ciselniku
+Sql provider
+- cistka connection stringu, vyuziva se pouze jeden
+Lokacni mechanismus
+- implementace providera pro lokacni mechanismus
+- tvorba formulare pro vyber a zobrazeni aktualniho stavu skladu lokacniho mechanismu + pridani nekolika filtru, ...
+- sjednoceni formularu pro vyber a zobrazeni stavu skladu do jednoho
+- implementace moznosti ulozeni, nacteni, ... filtru u stavu skladu
+
+v0.44 1.6.2016 PeV
+--------------------
+InputBox
+- rozsireni o moznost validace cisel a moznosti zadat minimalni/maximalni cislo
+Vydej
+- implementace moznosti zmeny priority davky + rozsireni konfigurace aplikace
+- uprava selectu pro zobrazeni hlavicek tak, aby vracel CZ_Doslo
+
+v0.43 27.5.2016 PeV
+--------------------
+Exporty
+- konfigurace aplikace rozsirena o nastavovani exportu dat (moznost otevrit soubor po dokonceni a nastavit format datumu)
+- odstranena reference na knihovnu Microsoft.Office.Interop.Excel
+- kompletne prepsan extension datagridu pro export do excelu
+- pro export do xls se nyni pouziva knihovna EPPlus
+-> hlavni duvody: 
+	neni potreba mit nainstalovan excel na PC, kde se exportuji data
+	rychlost
+	mnohem vice moznosti nastaveni vystupniho souboru
+
+v0.42 26.5.2016 PeV
+--------------------
+Servis
+- vypnuta kontrola na povinne zadani oznaceni
+- pri tvorbe vazeb Okruh -> ZdrojSeznam probiha kontrola na to, zdali jiz neni umisten v nejakem seznamu okruhu
+- pridana moznost exportu dat do excelu u okruhu, zdroju, dynamickych tabulek a seznamu zdroju
+
+v0.41 17.5.2016 PeV
+--------------------
+Ciselniky
+- pri editaci varianty lokace je mozne editovat locncode, uprava tab indexu
+Sklady
+- pridana moznost zapnuti/vypnuti pouzivani archivnich pohledu
+Inventura
+- uprava plneni variant lokaci z inventury
+
+v0.40 10.5.2016 PeV
+--------------------
+- pridana knihovna pro MessageBox (z projektu PavEx)
+Inventura
+- pridana moznost naplneni ciselniku variant lokaci materialu primo z inventury
+
+v0.39 10.5.2016 PeV
+--------------------
+- tvorba formulare pro vyber z ciselniku zbozi (czmst095) + pridani nekolika filtru
+
+v0.38 9.5.2016 PeV
+--------------------
+- pridana moznost zasifrovani connection stringu pres konfiguraci aplikace (!! nutno zasifrovat na jinem PC, nez kde bude konzola umistena... !!)
+- uprava pohledu + tvorba novych do historie
+- tvorba extensionu pro vypocitani delky comboboxu (aby se do nej vesel veskery text)
+- filtrovani dat presunuto do toolstripu
+- pridani ikon do filtru na zaznamy
+- kompletne predelana konfigurace aplikace
+- doplneni chybejicich konfiguraci
+- pridani moznosti povoleni zobrazeni formularu ve vsech modulech (Servis, Ukolovani, Vyroba, Inventura, ...) -> doted se zobrazily vsechny formulare pro dany modul
+- pridana moznost ukladani rozlozeni datagridu ve vsech modulech pro kazdeho uzivatele zvlast
+Sklady
+- upravy filtrovani
+- uprava aplikace, aby bylo mozne pracovat v historii pohybu s aktualnimi, archivnimi, pripadne kombinaci obou zaznamu
+- pridana moznost prace s filtry do historie pohybu a inventury
+- pridany potvrzujici dotazy pri editaci filtru
+- uprava vzhledu formularu a rozlozeni komponent
+Inventura
+- pridan filtr pro zobrazeni nenasnimanych dat
+Ciselniky
+- aktualizace struktur mapy skladu
+- tvorba zobrazeni, editace, ... ciselniku typu lokaci
+- tvorba zobrazeni, editace, ... ciselniku variant lokaci + vazby
+- oprava nefunkcnosti filtru variant k lokacim
+Ukolovani
+- uprava tabindexu
+Servis
+- doplneni ukladani pozice vsech splitteru
+- tvorba formulare pro vyber okruhu
+- tvorba formulare pro vytvoreni noveho zdroje vcetne pridani dat do tabulky ZdrojStav a ZdrojSeznam (aby se nemuselo tyto data zadavat ve trech ruznych formularich ...)
+- pridan filtr na okruh a na ignorovani prechodu mezi stavy
+- do vypisu historie pohybu a aktualnich stavu zdroju doplneno oznaceni okruhu + uprava datasetu a providera
+
+v0.37 12.4.2016 PeV
+--------------------
+- pridany scroll bary do formulare pro zobrazovani fotografii (pokud je fotografie moc velka)
+- upravy klavesovych zkratek pro hlavni formular
+- uprava formulare pro prihlaseni uzivatele
+Sklady
+- implementace providera
+- nacitani dat probiha v oddelenem vlakne... TODO: potreba upravit
+- oprava, kdy nebylo mozne zobrazit ciselnik odberatelu
+- pridani progress baru pri nacitani dat do datagridu u ciselniku (krome uzivatelu, ty je potreba prepsat, aby vyuzivali providera)
+- vypocet stavu skladu probiha v oddelenem vlakne
+Ukolovani
+- uchovavani pozice splitteru pri vyberu ze seznamu ukolu
+Inventura
+- implementace providera
+- vytvoren formular pro zobrazeni dat predlohy (vcetne zobrazeni nasnimaneho mnozstvi)
+- vytvoren formular pro zobrazeni nasnimanych dat
+Ciselniky
+- pridana moznost zobrazit, editovat, ... ciselnik lokaci
+
+v0.36 23.3.2016 PeV
+--------------------
+- pridani tlacitka pro zobrazeni fotky/vybraneho radku dynamicke tabulky do historie pohybu
+Servis
+- implementace providera
+- prace na formularich pro praci s ZdrojeStavy (zobrazeni, editace, pridani, ...) -> momentalne je mozne pouze nastavit ID zdroje, stavu a cinnosti
+- pri nastaveni stavu se automaticky predvoli cinnost, ktera je prirazena danemu stavu
+- vytvoren novy dataset pro ZdrojStav (jeden, ktery zobrazje nazev odberatele, cinnosti, stavu, ...) a druhy pro porovnani zaznamu (zdali nahodou nenastaly zmeny pri editaci)
+- pri vytvareni vazeb (cinnost -> cinnostnext a stav -> stavnext) oznaci nove vytvoreny zaznam
+- pridavani/editace ZdrojStav a Stav jiz po kliknuti na tlacitka aktualizuje napovedu
+- pri dvojkliku na radek v datagridu dojde k otevreni formulare pro editaci vybraneho zaznamu
+- doplneni zobrazeni IDValue do vazeb pro Cinnost -> CinnostNext
+- tvorba providera pro ciselnik uzivatelu czmstpwd (zbyva implementovat vkladani a editaci uzivatele + formular, aby vyuzival providera)
+- tvorba formulare pro zobrazeni historie pohybu vcetne nekolika zakladnich filtru (uzivatel, zdroj, stav, cinnost, odberatel, datum od, datum do)
+- tvorba noveho datasetu pro zobrazeni historie pohybu (kvuli dotahnuti oznaceni, typu, ...)
+- upravy/opravy skladani filtru pro zobrazeni historie pohybu
+- rozsireni providera o moznost pracovat s okruhy a seznamy zdroju
+- pridana kontrola overeni existence stavu a cinnosti pri vytvareni vazeb
+- pri mazani stavu a cinnosti automaticky dojde k odstraneni navaznosti
+- pridana moznost prirazovat vazby mezi okruhy a zdroji
+- tvorba formulare pro vyber odberatele
+- tvorba formulare pro zobrazeni, editaci a vytvareni okruhu
+- tvorba formulare pro tvorbu vazeb mezi okruhy a zdroji + implementace samotneho vytvoreni vazby
+- přejmenování sloupců v datagridech + doplnění null hodnot
+- doplnění několika datasetů pro porovnávání aktuálnosti záznamu, který se edituje
+- pri vytvareni/editaci cinnosti se zadava typ cinnosti pomoci comboboxu (drive byl textbox)
+- oprava nefunkcniho updatu zaznamu pomoci sql datasetu datasetu
+- rozsireni providera o praci s dynamickymi tabulkami
+- tvorba formularu pro praci s dynamickymi tabulkami (aby bylo mozne vytvaret vazby a tabulky, mazat tabulky, pridavat/editovat/mazat zaznamy dynamicke tabulky, ...)
+- pridani testu na existenci typevalue pri vytvareni databazove cinnosti (zdali tabulka existuje)
+- pri mazani zdroje dojde v transakci k odstraneni take z tabulky ZdrojStav a ZdrojSeznam
+- opravy chyb
+Sklady
+- pridana moznost zobrazeni ciselniku zbozi (czmst095), stredisek a skladu pomoci providera -> potreba dodelat editaci, zobrazeni a mazani 
+
+v0.35 29.2.2016 PeV
+--------------------
+- upravy tab indexu
+- uprava aplikace, aby se vyuzival pouze jeden provider
+- upravy kontroly prihlaseneho uzivatele
+- pridan dotaz na potvrzeni ukonceni aplikace (pri ukonceni aplikace z menu)
+- pridan InputBox dialog pro zadavani hodnot
+Vyroba
+- pridano trimovani pri nacitani dat z datasetu
+Servis
+- implementace providera
+- oprava aktualizace zaznamu pri prirazovani cinnosti
+- pri zadavani navaznosti cinnosti dojde k zobrazeni dialogu pro zadani IDValue
+- pridana moznost zobrazeni,editace,pridavani a odstranovani zaznamu v ciselnicich:
+	- CZMST090 (Odberatele)
+	- CZMST_Servis_Cinnost
+	- CZMST_Servis_Stav
+	- CZMST_Servis_Zdroj
+pridana moznost prace s vazbami:
+	- CZMST_Servis_StavNext
+	- CZMST_Servis_CinnostNext
+- pridany kontroly, zdali zaznam nebyl zmenen pri editaci
+- pridani panelu do napovedy (kvuli zmensovani/zvetsovani velikosti okna)
+Stav skladu
+- struktury rozsireny o ITEMCODE
+- uprava datasetu
+- pridani moznosti filtrovat podle ITEMCODE
+
+v0.34 21.1.2016 PeV
+--------------------
+- pred ulozenim konfigurace aplikace a editaci/pridani/mazani uzivatele konzole mistra dochazi ke kontrole, zdali je uzivatel prihlasen a je administrator
+- pridana moznost zobrazeni a moznost editace uzivatelu konzole mistra
+- pridano overeni, zdali je uzivatel prihlasen pri vytvareni, uprave, mazani a exportu jakychkoliv dat
+- oprava, kdy nebylo mozne exportovat data do excelu v pripade, ze jeden z exportovanych sloupcu byl Guid
+- uprava validace zaznamu - vyuziti error providera
+IKonzola
+- rozsireni o nacteni dat uzivatelu konzole mistra, pridani noveho uzivatele a odstraneni zvoleneho uzivatele
+- oprava, kdy se neprenaselo prijmeni do DB pri tvorbe noveho uzivatele
+ModuleFirebird & ModuleSql
+- implementace nove vytvorenych metod
+- pridani transakci
+Production
+- pridana moznost exportovat data do excelu
+Stav skladu
+- pri nacitani formulare FormStavSkladuHistorieList, FormStavSkladuList se nacitaji data ve vedlejsim vlakne
+
+v0.33 19.11.2015 PeV
+--------------------
+- odstraneni klavesove zkratky CTRL+A
+Stav skladu
+- pridani moznosti filtrovani historie pohybu podle cilove lokace a ciloveho skladu
+- preusporadani poradi filtru v aktualnim stavu skladu a historii
+- uprava tab indexu
+
+v0.32 18.11.2015 PeV
+--------------------
+Export dat do Excelu
+- uprava formatovani exportovanych dat
+
+v0.31 19.10.2015 PeV
+--------------------
+- prejmenovan nazev aplikace v "O aplikaci" na Konzola mistra
+- ikona z mdi formulare se jiz nezobrazuje v hlavnim menu
+- oprava, kdy pri exportu dat do excelu chybel v nekterych pripadech jeden zaznam
+- odstranena knihovna VedouciSkladu, Production, Ukolovani a jejich obsah presunut do hlavniho formulare
+- implementace prace s providery
+- vytvorena knihovna Fask.Console.Interface
+- vytvoreny moduly Fask.ModuleSql a Fask.ModuleFirebird
+- upravy vzhledu datagridu
+- upravy sestavovani filtrovacich selectu
+Prihlaseni uzivatele
+- vyuziva moduly
+- zakomentovana veskera prace se scannerem
+Stav skladu
+- oprava, kdy nebylo mozne filtrovat podle nazvu materialu v historii pohybu
+- pridano vyhledavani podle sarze do historie pohybu a skladu skladu
+- u vypisu historie pohybu probiha razeni podle datumu a nasledne podle ID
+- uprava tab indexu
+- vyuziti datasetu z provideru
+- oprava, kdy se u stavu skladu nacitali uzivatele do comboboxu lokaci (nasledne probehlo smazani zaznamu z comboboxu a nacteni lokaci, takze se chyba nijak neprojevila)
+- tvorba provideru + nasledne pouziti (prozatim implementovan pouze Firebird)
+- pridani ciselniku skladu
+- vypis aktualniho stavu skladu a historie pohybu jsou opreny o ciselnik skladu (czmst093)
+- vypis aktualniho stavu skladu a historie pohybu nyni vypisuji nazev skladu
+- pridany filtry na mnozstvi (mozno si navolit, zdali ma byt zadane mnozstvi vetsi, mensi, rovno nebo kombinace)
+
+v0.0.30 19.10.2015 PeV
+--------------------
+- zmena nazvu connection stringu pro konzolovou cast aplikace (FASK_CONS_Login, ...)
+- konfigurace aplikace rozsirena o moznost praci se sklady
+- pridana knihovna pro praci s firebird DB
+Stav skladu
+- tvorba noveho modulu
+- vytvoren formular pro zobrazeni aktualniho stavu skladu vcetne nekolika filtru (nazev materialu, popis, datum expirace od/do, lokace, sklad) a moznosti exportu dat do Excelu
+- vytvoren formular pro zobrazeni historie pohybu skladu vcetne nekolika filtru (uzivatel, nazev materialu, datum udalosti od/do, lokace, sklad)
+- pri exportu do Excelu je nastaven format pro vsechny bunky jako Text (xlWorksheet.Cells.NumberFormat = "@";)
+- oprava nemoznosti filtrovani podle itemnmbr a itemdesc v historii pohybu
+
+v0.0.29 08.09.2015 PeV
+--------------------
+Vyroba
+- pri ukoncovani zakazek/korekci se jako 'dateeve' automaticky vyplnuje TIMESTOP/TIMECORSTOP misto DateTime.Now
+
+v0.0.28 9.7.2015 PeV
+--------------------
+Vyroba
+- uprava selectu na nedokoncene zakazky v FormProductionList
+- pokud nic neni vyplnene v comboboxech, tak se nerozsiruje select
+
+v0.0.27 18.5.2015 PeV
+--------------------
+Ukolovani
+- oprava, kdy export do excelu po sobe neukoncoval proces (jiz neni treba ukoncit aplikaci)
+- pridano try/catch na chybejicich mistech
+- pridany datasety slouzici k porovnavani + pouzivani v aplikaci
+- editace zaznamu (cz_ukol, cz_ukol_uziv, czmstpwd) se nyni provadi v transakci
+- v FormUkolyAktualniList a FormUkolyHistoryList se nyni vypisuji udaje o uzivateli a ukolu
+- pridany try/catch pri volani close()
+- pridana moznost duplikace ukolu
+- odstranovani ukolu vcetne prideleneho ukolu vyuziva transakci
+- pridana konfiguracni moznost zapnout/vypnout barevne zvyrazneni stavu + implementace samotne funkcnosti
+- rozsiren dataset a tabulka cz_ukol_state o barvu
+- barevne zvyrazneni stavu jiz nemeni barvu textu, ale celou bunku
+- umozneni priradit ukol vice uzivatelum soucasne + pridano do transakce
+- barevne zvyrazneni stavu pridano do FormUkolyAktualniList a FormUkolyHistoryList
+
+v0.0.26 13.5.2015 PeV
+--------------------
+Ukolovani
+- v dataadapteru vytvoreno insertquery, ktere vraci id nove vytvoreneho zaznamu
+- pri pridavani noveho uzivatele, ukolu, prirazeneho ukolu dojde k oznaceni nove vytvoreneho zaznamu
+
+v0.0.25 12.5.2015 PeV
+--------------------
+Ukolovani
+- pri exportu do Excelu se nezobrazuje savefiledialog (nic nedelal)
+- pridano tlacitko pro editaci zaznamu z  CZ_Ukol_Uziv
+- pridany klavesove zkratky
+- oprava, kdy se zobrazovalo spatne jmeno uzivatele, ktery mel prirazeny ukol
+- uprava tab indexu u nekolika formularu
+- uprava klavesovych zkratek (nektere byly stejne jako v FormMain)
+- pokud se edituje zaznam a byl mezitim zmenen jinou aplikaci, dojde k zobrazeni dialogu, zdali presto upravit. Pokud uzivatel zvoli ne, dojde k refreshi zaznamu
+- uprava nazvu, poradi a velikosti sloupcu
+- zaznamy se defaultne radi podle ID
+- datagridy v FormUkolyUzivList jsou blize u sebe
+- uprava uzivatelskeho rozhrani
+- groupbox v FormUkolyUzivList jiz meni velikost
+- dvojklik v datagridu otevre editaci zaznamu (v FormUzivateleSelect vybere zaznam)
+- razeni zaznamu pomoci hlavicek datagridu jiz nemeni focus (resp. zustane oznacen stejny zaznam ikdyz by byl po serazeni na jine pozici)
+- aktualizace zaznamu pomoci klavesy F jiz nemeni focus
+- pri editaci zaznamu se jiz nemeni focus na jiny prvek
+- dvojklid na hlavicku datagridu jiz neotevre editaci zaznamu
+
+v0.0.24 7.5.2015 PeV
+--------------------
+- uprava konfigurace aplikace (resp. vytvoreni)
+- do konfigurace pridana moznost zapnuti/vypnuti vyroby a ukolovani
+- po odchodu z konfigurace aplikace dojde k znovunacteni konfigurace
+- upravy FormMain
+- pridana kontrola na prihlaseneho uzivatele u otevirani formularu vyroby
+Ukolovani
+ - Pridana moznost zobrazit/vytvaret/upravovat/odstranovat uzivatele CZMSTPWD
+ - pridana moznost zobrazovat a filtrovat data z tabulky CZ_UKOL_UZIV a CZ_UKOL_UZIV_HIST
+ - pridana moznost zobrazit/vytvaret/upravovat/odstranovat ukoly z tabulky CZ_UKOL
+ - pridana moznost zobrazit/vytvaret/odstranovat ukoly z tabulky CZ_UKOL_UZIV
+ - pridana moznost priradit zvoleny ukol navolenemu uzivateli
+ - pridana hromada validaci
+ - pristup do konfigurace aplikace je mozny pouze, pokud ma uzivatel opravneni ADM na 1 (a vice)
+ - oprava refreshe zaznamu pri pridavani noveho ukolu
+ - pridana nova tlacitka do menu FormUkolyUzivList
+ - oprava, kdy nebylo mozne filtrovat podle ukolu
+ - pri potvrzovani editace ukolu/uivatele dochazi ke kontrole, zdali se zaznam od posledniho nacteninezmenil
+ - vytvorena extension pro datagridview, ktera umozni exportovat data do Excelu (veskera data nebo pouze oznacene radky)
+ - export do excelu muze zohlednovat viditelnost sloupcu (pokud je sloupec viditelny, prida se do excelu jinak ne)
+ - upravy/opravy designeru ve dvou formularich - zmizely definice nekolika komponent
+ - pridany klavesove skratky nekolika tlacitkum
+ - pridan filtr na stavy (do historie i do aktualnich ukolu)
+ - pred editaci zaznamu dochazi k porovnani s aktualnimi daty v databazi
+
+v0.0.23 29.4.2015 PeV
+--------------------
+- v konfiguracnim souboru datagridviewu je mozne prejmenovat hlavicky sloupcu
+
+v0.0.22 16.3.2015 PeV
+--------------------
+- pridany filtry na stroje a operace do vypisu Production
+
+v0.0.21 16.3.2015 PeV
+--------------------
+- moznost upravy, vytvareni, mazani skupin (vcetne navaznosti)
+- u seznamu uzivatelu se vypisuje nazev skupiny
+- pri vytvareni/uprave uzivatele je mozne priradit skupinu (pouze jednu)
+- pridan filtr skupin do vypisu Production
+
+v0.0.20 5.3.2015 PeV
+--------------------
+- zmenena ikona aplikace
+- pridana kontrola, zdali byl zmenen cas u zakazek v soubehu u editace Production
+- zapnuti DoubleBuffered kvuli vyraznemu zrychleni zobrazeni dat
+
+v0.0.19 4.3.2015 PeV
+--------------------
+- moznost upravit cas u Production pouze u jedne zakazky v soubehu
+- pridana moznost vytvaret skupiny
+- pridani tabulek a datasetu "Groups" a "VLoginsGroups"
+- pridana validace u vytvareni skupiny na maximalni pocet znaku
+
+v0.0.18 26.2.2015 PeV
+--------------------
+- pridana moznost skryt/zobrazit sloupce v datagridech
+- kompletne predelana editace zaznamu Production
+	- jde editovat zakazky i korekce
+	- dochazi i k uprave paroveho zaznamu (pokud existuje)
+	- pridana hromada validaci (nektere chybi, viz. TODO)
+- pridana moznost ukoncit zakazky a korekce
+- vytvoren formular pro zadavani mnozstvi a casu (kvuli ukoncovani zakazek)
+
+v0.0.17 19.2.2015 PeV
+--------------------
+- pridan filtr na nedokoncene zakazky v soubehu
+- pridana moznost zadani merne jednotky u zbozi
+- uprava struktury 095 - rozsireni MJ na 5 znaku
+- uprava editace a vytvrazeni zaznamu v 095
+- doplnen CORRGUID do datasetu
+- FormProductionList - pridan filtr na nedokoncene a vsechny korekce
+
+v0.0.16 17.2.2015 PeV
+--------------------
+- FormProductionList - datetimepickery maji nastavene sekundy na hodnotu 0
+- aktualizace (update) zaznamu v Production je podle id (misto guid)
+- FormProductionList - pridan filtr na zakazky v soubehu
+
+v0.0.15 17.2.2015 PeV
+--------------------
+- SOPDESC již není povinny udaj pri vytvareni/editaci VPH
+- DataGridView si pamatuje rozmisteni a velikost sloupcu (pridano rozsireni DataGridViewExt)
+- FormProductionList - pridan filtr na zakazky v soubehu
+
+v0.0.14 13.2.2015 PeV
+--------------------
+- pridana moznost duplikace VPH (vcetne zaznamu)
+- pridan pocet odvedenych kusu do selectu podle vyrobniho prikazu
+
+v0.0.13 12.2.2015 PeV
+--------------------
+- rozsireni sloupcu s casy
+
+v0.0.12 9.2.2015 PeV
+--------------------
+- FormProductionList - uprava razeni dat v combo boxech
+- FormVyrobPrikazList - nacita se pouze VPP k danemu VPH
+- pridana tlacitka pro aktualizaci (refresh) zaznamu do vypisu zbozi, vyrobnich prikazu a uzivatelu
+- FormProductionList - pridano hledani podle datumu "od - do" - vsechny varianty (pouze "od", pouze "do", "od" a "do")
+- FormProductionList - vypisuje se nazev stroje a operace
+- ikona se jiz nezobrazuje v FormProductionEdit
+
+v0.0.11 3.2.2015 PeV
+--------------------
+- kompletni predelani FormProductionList + uprava datasetu Production
+- pridana do konfigurace moznost vypnuti vyuzivani ciselniku zbozi (CONS_095) kvuli Nadop
+
+v0.0.10 3.2.2015 PeV
+--------------------
+- pridan formular FormProduction pro zobrazeni produkce s moznosti filtrovani podle hlavicky vyrobniho prikazu a polozek ve vyrobnim prikazu (mozno vyhledavat vyrobni prikaz a polozky podle id, nebo podle volby v comboboxu)
+- pridan formular FormProductionEdit pro upravu odvedeneho mnozstvi
+- uprava datasetu
+- uprava struktury Production
+	- [qtyOld] - odvedene mnozstvi po zmene
+	- [idVS] - id vedouciho smeny, ktery danou zmenu provedl
+	- [dateedit] - datum teto editace
+- pridana validace VPP, jestli jiz neni soucasti vyrobniho prikazu
+- pridana paticka FASK, spol. s.r.o....
+- hromada oprav/uprav
+
+v0.0.9 2.2.2015 PeV
+--------------------
+- rozsireni struktury 095 (zbozi) o timemode
+- pri pridavani/uprave zbozi je mozno zadat jednotkovy cas, pripravny cas a timemode
+- pri pridavani/uprave VPP je mozno pridat jednotkovy cas, pripravny cas
+- do pridavani/upravy VPP pridan textbox na zadavani ID zbozi, ktery pri strate focusu vyhleda dane zbozi a pokud ho najde, tak vyplni veskere hodnoty (tyto hodnoty jdou nasledne upravit)
+
+v0.0.8 30.1.2015 PeV
+--------------------
+- pridano zobrazeni poctu odvedenych zakazek u vypisu VPP
+- pridan trim caroveho kodu pri uprave zbozi
+- pridana moznost nastaveni vedouciho smeny + uprava datasetu
+- pridana editace VPH
+
+v0.0.7 29.1.2015 PeV
+--------------------
+- pri vytvareni VPH se automaticky meni carovy kod podle nazvu hlavicky (je moznost car. kod pripadne zmenit)
+- validace caroveho kodu, aby byl jedinecny
+
+v0.0.6 29.1.2015 PeV
+--------------------
+- do nazvu hlavicky (VPH) se automaticky vyplnuje dnesni datum
+- FormVPPEdit - pri zmene zbozi pomoci comboboxu se automaticky vyplni carovy kod
+
+v0.0.5 29.1.2015 PeV
+--------------------
+- Production formy jsou maximalizovany
+- mensi upravy zobrazeni
+- pridana uprava VPP
+
+v0.0.4 28.1.2015 PeV
+--------------------
+- nastaven connection string u adapteru v FormIDPracovnikaLogin
+
+v0.0.3 28.1.2015 PeV
+--------------------
+- uprava prihlasovani
+- vytvorena tabulka FASK_CONS_095 se zbozim
+- vytvoreny formulare pro upravu, pridavani a odstranovani zbozi z FASK_CONS_095
+- ceske nazvy sloupcu v datagridech
+- formulare pridavani, uprava a mazani uzivatelu (jen dotazani), zbozi
+- formulare pro pridavani a mazani (jen dotazani) VPP a VPH
+- connection string se predava
+
+v0.0.2 27.1.2015 PeV
+--------------------
+- aplikace zmenena na MDI (multi document interface) formu
+- vytvorena nova tabulka s opravnenimi primo pro konzoli mistra + jejich pouziti
+- vytvoren formular na zobrazeni ciselniku uzivatelu + pridany moznosti pridat/upravit/odstranit zaznam
+- pridana knihovna, ktera umoznuje filtrovat zaznamy v datagridu (Edit Collumns -> ColumnType -> DataGridViewAutoFilterTextBoxColumn)
+
+v0.0.1 26.1.2015 PeV
+--------------------
+- vytvoreni zakladniho formulare
+- pridano nastaveni, scanner, flexible message box, logovani, obecny dataset (logovani a obecny dataset prekopirovany do konzole kvuli prechodu na VS 2010)
+- Connection string pridan do nastaveni
+- pridano prihlaseni pracovnika

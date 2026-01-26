@@ -1,0 +1,29 @@
+
+GO
+/****** Object:  StoredProcedure [dbo].[FASK_procGetInfo1]    Script Date: 13.11.2024 9:35:46 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[FASK_procGetInfo1]
+	@CountEntries [int],
+	@OutputParam [nvarchar](255) OUTPUT
+WITH EXECUTE AS CALLER
+AS
+BEGIN
+    -- SET NOCOUNT ON added to prevent extra result sets from interfering with SELECT statements.
+    --SET NOCOUNT ON;
+
+    -- Assign the result to the output parameter
+
+	SELECT @OutputParam = [Note]+';Kg:'+ CAST([WEIGHT] AS varchar)
+    FROM [CZMST_SE]
+    WHERE CountEntries = @CountEntries;
+/*
+	SELECT @OutputParam = [Note]+' Ahoj'+[ITEMDESC]
+    FROM [CZMST_SE]
+    WHERE SOPNUMBE = @SOPNUMBE;
+
+	SELECT [Note]+' Kg:'+CAST([WEIGHT] AS varchar)
+*/
+END

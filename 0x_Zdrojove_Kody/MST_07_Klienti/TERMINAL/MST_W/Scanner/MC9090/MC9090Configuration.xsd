@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MC9090Configuration" targetNamespace="http://tempuri.org/MC9090Configuration.xsd" xmlns:mstns="http://tempuri.org/MC9090Configuration.xsd" xmlns="http://tempuri.org/MC9090Configuration.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MC9090Configuration" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="MC9090Configuration" msprop:Generator_DataSetName="MC9090Configuration" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Reader" msprop:Generator_UserTableName="Reader" msprop:Generator_RowDeletedName="ReaderRowDeleted" msprop:Generator_RowChangedName="ReaderRowChanged" msprop:Generator_RowClassName="ReaderRow" msprop:Generator_RowChangingName="ReaderRowChanging" msprop:Generator_RowEvArgName="ReaderRowChangeEvent" msprop:Generator_RowEvHandlerName="ReaderRowChangeEventHandler" msprop:Generator_TableClassName="ReaderDataTable" msprop:Generator_TableVarName="tableReader" msprop:Generator_RowDeletingName="ReaderRowDeleting" msprop:Generator_TablePropName="Reader">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StartingQ" msprop:Generator_UserColumnName="StartingQ" msprop:Generator_ColumnVarNameInTable="columnStartingQ" msprop:Generator_ColumnPropNameInRow="StartingQ" msprop:Generator_ColumnPropNameInTable="StartingQColumn" type="xs:unsignedByte" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Antena" msprop:Generator_UserTableName="Antena" msprop:Generator_RowDeletedName="AntenaRowDeleted" msprop:Generator_RowChangedName="AntenaRowChanged" msprop:Generator_RowClassName="AntenaRow" msprop:Generator_RowChangingName="AntenaRowChanging" msprop:Generator_RowEvArgName="AntenaRowChangeEvent" msprop:Generator_RowEvHandlerName="AntenaRowChangeEventHandler" msprop:Generator_TableClassName="AntenaDataTable" msprop:Generator_TableVarName="tableAntena" msprop:Generator_RowDeletingName="AntenaRowDeleting" msprop:Generator_TablePropName="Antena">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AntenaName" msprop:Generator_UserColumnName="AntenaName" msprop:Generator_ColumnPropNameInRow="AntenaName" msprop:Generator_ColumnVarNameInTable="columnAntenaName" msprop:Generator_ColumnPropNameInTable="AntenaNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TxPower" msprop:Generator_UserColumnName="TxPower" msprop:Generator_ColumnPropNameInRow="TxPower" msprop:Generator_ColumnVarNameInTable="columnTxPower" msprop:Generator_ColumnPropNameInTable="TxPowerColumn" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="RxPower" msprop:Generator_UserColumnName="RxPower" msprop:Generator_ColumnPropNameInRow="RxPower" msprop:Generator_ColumnVarNameInTable="columnRxPower" msprop:Generator_ColumnPropNameInTable="RxPowerColumn" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Enabled" msprop:Generator_UserColumnName="Enabled" msprop:Generator_ColumnPropNameInRow="Enabled" msprop:Generator_ColumnVarNameInTable="columnEnabled" msprop:Generator_ColumnPropNameInTable="EnabledColumn" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<UpdateInfo xmlns="http://tempuri.org/UpdateInfo.xsd">
+  <UpdateData>
+    <Name>MST W 6</Name>
+    <Version>6.11.6514.30352</Version>
+    <Message>DAAAAAAA aktualizace.Velmi důležité vydání / aktualizace. Toto se zobrazí ve formuláři aktualizace </Message>
+    <Link>http://192.168.1.101/MST_Win_Kom_Server_7/upgrade/Release.zip</Link>
+  </UpdateData>
+  <UpdateData>
+    <Name>MST W 6</Name>
+    <Version>6.12.6514.30352</Version>
+    <Message>5</Message>
+    <Link>http://192.168.1.101/MST_Win_Kom_Server_7/upgrade/Release.zip</Link>
+  </UpdateData>
+  <UpdateData>
+    <Name>MST W 6</Name>
+    <Version>6.13.6513.30352</Version>
+    <Message>Důležitá aktualizace.Velmi důležité vydání / aktualizace. Toto se zobrazí ve formuláři aktualizace </Message>
+    <Link>http://192.168.1.101/MST_Win_Kom_Server_7/upgrade/Release.zip</Link>
+  </UpdateData>
+  <UpdateData>
+    <Name>MST W 6</Name>
+    <Version>6.14.6514.30352</Version>
+    <Message>DAAAAAAA aktualizace.Velmi důležité vydání / aktualizace. Toto se zobrazí ve formuláři aktualizace </Message>
+    <Link>http://192.168.1.101/MST_Win_Kom_Server_7/upgrade/Release.zip</Link>
+  </UpdateData>
+  <UpdateData>
+    <Name>MST W 6</Name>
+    <Version>6.15.6514.30352</Version>
+    <Message>DAAAAAAA aktualizace.Velmi důležité vydání / aktualizace. Toto se zobrazí ve formuláři aktualizace </Message>
+    <Link>http://192.168.1.101/MST_Win_Kom_Server_7/upgrade/Release.zip</Link>
+  </UpdateData>
+  <UpdateData>
+    <Name>MST W 6</Name>
+    <Version>6.16.6514.30352</Version>
+    <Message>DAAAAAAA aktualizace.Velmi důležité vydání / aktualizace. Toto se zobrazí ve formuláři aktualizace </Message>
+    <Link>http://192.168.1.101/MST_Win_Kom_Server_7/upgrade/Release.zip</Link>
+  </UpdateData>
+  <UpdateData>
+    <Name>MST W 6</Name>
+    <Version>6.17.6514.30352</Version>
+    <Message>DAAAAAAA aktualizace.Velmi důležité vydání / aktualizace. Toto se zobrazí ve formuláři aktualizace </Message>
+    <Link>http://192.168.1.101/MST_Win_Kom_Server_7/upgrade/Release.zip</Link>
+  </UpdateData>
+</UpdateInfo>

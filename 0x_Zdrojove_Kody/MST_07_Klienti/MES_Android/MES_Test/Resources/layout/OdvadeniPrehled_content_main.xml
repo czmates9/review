@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/OdvadeniPrehled_app_bar_main"
+    android:fadeScrollbars="true"
+    android:scrollbars="vertical"
+    >
+    <!-- ROW 1 START -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <TextView
+            android:text="@string/OdvadeniPrehled_TW_dfVphSOPNUMBE"
+            android:id="@+id/OdvadeniPrehled_TW_dfVphSOPNUMBE"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:minWidth="150px"
+            android:textStyle="bold"
+        />
+        <TextView
+            android:text="@string/Def_Text"
+            android:id="@+id/OdvadeniPrehled_textview_dfVphSOPNUMBE"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="80"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <!-- ROW 1 STOP -->
+
+    <!-- ROW 2 START -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <TextView
+            android:text="@string/OdvadeniPrehled_TW_dfVphSOPDESC"
+            android:id="@+id/OdvadeniPrehled_TW_dfVphSOPDESC"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:minWidth="150px"
+            android:textStyle="bold"
+        />
+        <TextView
+            android:text="@string/Def_Text"
+            android:id="@+id/OdvadeniPrehled_textview_dfVphSOPDESC"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="80"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <!-- ROW 2 STOP -->
+
+    <!-- ROW 3 START -->
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:background="#000000"
+        >
+        </LinearLayout>
+    <!-- ROW 3 STOP -->
+
+    <!-- ROW 4 START -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <TextView
+            android:text="@string/OdvadeniPrehled_TW_dfVppItemnmbr"
+            android:id="@+id/OdvadeniPrehled_TW_dfVppItemnmbr"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:minWidth="150px"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:text="@string/Def_Text"
+            android:id="@+id/OdvadeniPrehled_textview_dfVppItemnmbr"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="80"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <!-- ROW 4 STOP -->
+
+    <!-- ROW 5 START -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        >
+        <TextView
+            android:text="@string/OdvadeniPrehled_TW_dfVppItemdesc"
+            android:id="@+id/OdvadeniPrehled_TW_dfVppItemdesc"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" 
+            android:layout_weight="20"
+            android:minWidth="150px"
+            android:textStyle="bold"
+            />
+                <TextView
+            android:text="@string/Def_Text"
+            android:id="@+id/OdvadeniPrehled_textview_dfVppItemdesc"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="80"
+            android:textStyle="bold"
+        />
+    </LinearLayout>
+    <!-- ROW 5 STOP -->
+
+    <!-- ROW 7 START -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <TextView
+            android:text="@string/OdvadeniPrehled_TW_dfVppVnditnum"
+            android:id="@+id/OdvadeniPrehled_TW_dfVppVnditnum"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:minWidth="150px"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:text="@string/Def_Text"
+            android:id="@+id/OdvadeniPrehled_textview_dfVppVnditnum"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="80"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <!-- ROW 7 STOP -->
+
+    <!-- ROW 8 START -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <TextView
+            android:text="@string/OdvadeniPrehled_TW_dfVppBarcodeP"
+            android:id="@+id/OdvadeniPrehled_TW_dfVppBarcodeP"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:minWidth="150px"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:text="@string/Def_Text"
+            android:id="@+id/OdvadeniPrehled_textview_dfVppBarcodeP"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="80"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <!-- ROW 8 STOP -->
+
+    <!-- ROW 9 START -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <TextView
+            android:text="@string/OdvadeniPrehled_TW_dfTimeStateActual"
+            android:id="@+id/OdvadeniPrehled_TW_dfTimeStateActual"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:minWidth="150px"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:text="@string/Def_Text"
+            android:id="@+id/OdvadeniPrehled_textview_dfTimeStateActual"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="80"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <!-- ROW 9 STOP -->
+
+    <!-- ROW 10 START -->
+        <LinearLayout android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:background="#000000"
+        >
+        </LinearLayout>
+    <!-- ROW 10 STOP -->
+
+    <!-- ROW 11 START -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <TextView
+            android:text="@string/OdvadeniPrehled_TW_dfLastSOPNUMBER"
+            android:id="@+id/OdvadeniPrehled_TW_dfLastSOPNUMBER"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:minWidth="150px"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:text="@string/Def_Text"
+            android:id="@+id/OdvadeniPrehled_textview_dfLastSOPNUMBER"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="80"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <!-- ROW 11 STOP -->
+
+    <!-- ROW 12 START -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <TextView
+            android:text="@string/OdvadeniPrehled_TW_dfLastITEMDESC"
+            android:id="@+id/OdvadeniPrehled_TW_dfLastITEMDESC"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:minWidth="150px"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:text="@string/Def_Text"
+            android:id="@+id/OdvadeniPrehled_textview_dfLastITEMDESC"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="80"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <!-- ROW 12 STOP -->
+
+    <!-- ROW 13 START -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <TextView
+            android:text="@string/OdvadeniPrehled_TW_dfLastBarcodeP"
+            android:id="@+id/OdvadeniPrehled_TW_dfLastBarcodeP"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:minWidth="150px"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:text="@string/Def_Text"
+            android:id="@+id/OdvadeniPrehled_textview_dfLastBarcodeP"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="80"
+            android:minWidth="150px"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <!-- ROW 13 STOP -->
+
+    <!-- ROW 14 START -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <TextView
+            android:text="@string/OdvadeniPrehled_TW_dfLastQuantity"
+            android:id="@+id/OdvadeniPrehled_TW_dfLastQuantity"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:minWidth="150px"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:text="@string/Def_Text"
+            android:id="@+id/OdvadeniPrehled_textview_dfLastQuantity"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="80"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <!-- ROW 14 STOP -->
+
+    <!-- ROW 15 START -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <TextView
+            android:text="@string/OdvadeniPrehled_TW_dfTimeStateLast"
+            android:id="@+id/OdvadeniPrehled_TW_dfTimeStateLast"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:minWidth="150px"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:text="@string/Def_Text"
+            android:id="@+id/OdvadeniPrehled_textview_dfTimeStateLast"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="80"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <!-- ROW 15 STOP -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:background="#c8e7ff"
+    >
+        <Button
+            android:text="@string/OdvadeniPrehled_Storno"
+            android:nextFocusDown="@id/OdvadeniPrehled_btn_Storno"
+            android:nextFocusLeft="@id/OdvadeniPrehled_btn_Storno"
+            android:nextFocusUp="@id/OdvadeniPrehled_btn_Storno"
+            android:nextFocusRight="@id/OdvadeniPrehled_btn_OK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:id="@+id/OdvadeniPrehled_btn_Storno"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+        <Button
+            android:text="@string/OdvadeniPrehled_OK"
+            android:nextFocusDown="@id/OdvadeniPrehled_btn_OK"
+            android:nextFocusLeft="@id/OdvadeniPrehled_btn_Storno"
+            android:nextFocusUp="@id/OdvadeniPrehled_btn_OK"
+            android:nextFocusRight="@id/OdvadeniPrehled_btn_OK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:id="@+id/OdvadeniPrehled_btn_OK"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+</LinearLayout>

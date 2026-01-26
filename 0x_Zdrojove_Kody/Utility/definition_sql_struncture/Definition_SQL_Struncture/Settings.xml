@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <appSettings>
+    <add key="LastPath" value="d:\_work_\_Vyvoj_Subversion_TESTY\Definition_SQL_Struncture\" />
+    <!--<add key="ConnectionString" value="Data Source=faskcz-CV006\SQL_2017;Initial Catalog=_TEST_Dokumntace_MES_;User ID=sa;Password=sasa" />-->
+    <!--<add key="ConnectionString" value="Data Source=192.168.1.121\SQLEXPRESS;Initial Catalog=FASKPOH_TIERRAVERDE_TEST_Cipisek;User ID=sa;Password=sasa" />-->
+    <add key="ConnectionString" value="Data Source=192.168.1.121\SQLEXPRESS;Initial Catalog=FASKSB_DobrePodlahy_Cip_TEST;User ID=sa;Password=sasa" />
+  </appSettings>
+</configuration>

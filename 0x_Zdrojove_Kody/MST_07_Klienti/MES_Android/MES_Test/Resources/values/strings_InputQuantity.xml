@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="InputQuantity_Label">Zadejte kod</string>
+  <string name="InputQuantity_OK">OK</string>
+  <string name="InputQuantity_Storno">Zrušit</string>
+
+  <string name="InputQuantity_Label_QTY">Množství odvedených kusů výrobku:</string>
+
+  <string name="InputQuantity_PredavanyText">Potvrďte/opravte počet odvedených kusů</string>
+
+  <string name="InputQuantity_hint">Zadejte číslo</string>
+
+</resources>

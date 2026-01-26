@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSTW_Update", "MSTW_Update\MSTW_Update.csproj", "{C172D44D-0FDF-48B8-AD18-631723D3D4DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C172D44D-0FDF-48B8-AD18-631723D3D4DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C172D44D-0FDF-48B8-AD18-631723D3D4DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C172D44D-0FDF-48B8-AD18-631723D3D4DD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C172D44D-0FDF-48B8-AD18-631723D3D4DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C172D44D-0FDF-48B8-AD18-631723D3D4DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C172D44D-0FDF-48B8-AD18-631723D3D4DD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

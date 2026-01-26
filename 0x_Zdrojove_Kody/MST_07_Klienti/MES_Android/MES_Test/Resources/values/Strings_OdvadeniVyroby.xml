@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+  
+  <string name="OdvadeniVyroby_label">Odvádění výroby</string>
+
+  <string name="btn_Odvadeni">Odvádění</string>
+  <string name="btn_Tisk">Tisk</string>
+  <string name="btn_Korekce">Korekce</string>
+  <string name="btn_Udalosti">Události</string>
+	<string name="menu_OV_DB">Databáze</string>
+	<string name="menu_OV_DB_upload">Odeslat data</string>
+	<string name="menu_OV_DB_download">Aktualizace databáze</string>
+</resources>

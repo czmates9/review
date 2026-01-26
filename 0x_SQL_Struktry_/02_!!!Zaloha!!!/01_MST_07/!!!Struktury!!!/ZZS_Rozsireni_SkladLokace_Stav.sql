@@ -1,0 +1,6 @@
+ALTER TABLE CZMST_SkladLokace_Stav
+ADD QTY_OWNER [numeric](19,5) DEFAULT(0) NOT NULL;
+
+ALTER TABLE CZMST_SkladLokace_Stav
+ADD [PRAC_ID_OWNER] [nvarchar](30) NULL;
+ 

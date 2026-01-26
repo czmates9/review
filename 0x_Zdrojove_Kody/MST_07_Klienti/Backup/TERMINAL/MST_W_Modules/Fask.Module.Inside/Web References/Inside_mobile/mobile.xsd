@@ -1,0 +1,2064 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://endpoint.core.nicety.cz/" targetNamespace="http://endpoint.core.nicety.cz/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="BusinessException" type="tns:BusinessException" />
+  <xs:element name="beginSession" type="tns:beginSession" />
+  <xs:element name="beginSessionResponse" type="tns:beginSessionResponse" />
+  <xs:element name="endSession" type="tns:endSession" />
+  <xs:element name="endSessionResponse" type="tns:endSessionResponse" />
+  <xs:element name="getATDocumentById" type="tns:getATDocumentById" />
+  <xs:element name="getATDocumentByIdResponse" type="tns:getATDocumentByIdResponse" />
+  <xs:element name="getATDocuments" type="tns:getATDocuments" />
+  <xs:element name="getATDocumentsResponse" type="tns:getATDocumentsResponse" />
+  <xs:element name="getATItems" type="tns:getATItems" />
+  <xs:element name="getATItemsResponse" type="tns:getATItemsResponse" />
+  <xs:element name="getActivitiesCount" type="tns:getActivitiesCount" />
+  <xs:element name="getActivitiesCountResponse" type="tns:getActivitiesCountResponse" />
+  <xs:element name="getActivityByDate" type="tns:getActivityByDate" />
+  <xs:element name="getActivityByDateResponse" type="tns:getActivityByDateResponse" />
+  <xs:element name="getCodeBookItems" type="tns:getCodeBookItems" />
+  <xs:element name="getCodeBookItemsCount" type="tns:getCodeBookItemsCount" />
+  <xs:element name="getCodeBookItemsCountResponse" type="tns:getCodeBookItemsCountResponse" />
+  <xs:element name="getCodeBookItemsResponse" type="tns:getCodeBookItemsResponse" />
+  <xs:element name="getCurrentDate" type="tns:getCurrentDate" />
+  <xs:element name="getCurrentDateResponse" type="tns:getCurrentDateResponse" />
+  <xs:element name="getDatabaseUrl" type="tns:getDatabaseUrl" />
+  <xs:element name="getDatabaseUrlResponse" type="tns:getDatabaseUrlResponse" />
+  <xs:element name="getHash" type="tns:getHash" />
+  <xs:element name="getHashResponse" type="tns:getHashResponse" />
+  <xs:element name="getPartnersMobileByDate" type="tns:getPartnersMobileByDate" />
+  <xs:element name="getPartnersMobileByDateCount" type="tns:getPartnersMobileByDateCount" />
+  <xs:element name="getPartnersMobileByDateCountResponse" type="tns:getPartnersMobileByDateCountResponse" />
+  <xs:element name="getPartnersMobileByDateResponse" type="tns:getPartnersMobileByDateResponse" />
+  <xs:element name="getProjectProducts" type="tns:getProjectProducts" />
+  <xs:element name="getProjectProductsResponse" type="tns:getProjectProductsResponse" />
+  <xs:element name="getSessionUser" type="tns:getSessionUser" />
+  <xs:element name="getSessionUserResponse" type="tns:getSessionUserResponse" />
+  <xs:element name="saveATDocuments" type="tns:saveATDocuments" />
+  <xs:element name="saveATDocumentsResponse" type="tns:saveATDocumentsResponse" />
+  <xs:element name="saveATItems" type="tns:saveATItems" />
+  <xs:element name="saveATItemsResponse" type="tns:saveATItemsResponse" />
+  <xs:element name="saveActivity" type="tns:saveActivity" />
+  <xs:element name="saveActivityResponse" type="tns:saveActivityResponse" />
+  <xs:element name="savePartnerMobile" type="tns:savePartnerMobile" />
+  <xs:element name="savePartnerMobileResponse" type="tns:savePartnerMobileResponse" />
+  <xs:element name="updateProjectProducts" type="tns:updateProjectProducts" />
+  <xs:element name="updateProjectProductsResponse" type="tns:updateProjectProductsResponse" />
+  <xs:complexType name="getDatabaseUrl">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDatabaseUrlResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saveActivity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="activityItem" type="tns:activityMobile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="activityMobile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activityDate" type="xs:dateTime" />
+      <xs:element name="activityInput" type="xs:boolean" />
+      <xs:element minOccurs="0" name="activityType" type="xs:string" />
+      <xs:element minOccurs="0" name="contentStr" type="xs:string" />
+      <xs:element minOccurs="0" name="contentType" type="xs:string" />
+      <xs:element minOccurs="0" name="docClass" type="xs:string" />
+      <xs:element name="docId" type="xs:long" />
+      <xs:element name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="referentIn" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saveActivityResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BusinessException">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="errors" nillable="true" type="tns:errorItem" />
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="errorItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="attribute" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="details" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="note" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPartnersMobileByDateCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="searchPattern" type="xs:string" />
+      <xs:element minOccurs="0" name="representativeRestriction" type="xs:string" />
+      <xs:element minOccurs="0" name="dateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dateTo" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPartnersMobileByDateCountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="endSession">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="endSessionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getATDocumentById">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+      <xs:element name="id" type="xs:long" />
+      <xs:element name="inclItems" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getATDocumentByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:mobileATDocument" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mobileATDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="centre" type="tns:centreCode" />
+      <xs:element minOccurs="0" name="centreSec" type="tns:centreCode" />
+      <xs:element minOccurs="0" name="createdFrom" type="tns:user" />
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element minOccurs="0" name="docNumberExt" type="xs:string" />
+      <xs:element minOccurs="0" name="docNumberInt" type="xs:string" />
+      <xs:element minOccurs="0" name="documentSubType" type="tns:documentSubType" />
+      <xs:element minOccurs="0" name="documentType" type="tns:documentType" />
+      <xs:element minOccurs="0" name="executionDate" type="xs:dateTime" />
+      <xs:element name="id" type="xs:long" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="items" nillable="true" type="tns:mobileATItem" />
+      <xs:element minOccurs="0" name="modifiedFrom" type="tns:user" />
+      <xs:element name="number" type="xs:int" />
+      <xs:element minOccurs="0" name="orderCode" type="tns:orderCode" />
+      <xs:element minOccurs="0" name="partner" type="tns:partner" />
+      <xs:element minOccurs="0" name="referentIn" type="tns:partner" />
+      <xs:element minOccurs="0" name="referentOut" type="tns:partner" />
+      <xs:element minOccurs="0" name="series" type="tns:series" />
+      <xs:element minOccurs="0" name="transactionType" type="xs:string" />
+      <xs:element minOccurs="0" name="warehouse" type="tns:warehouse" />
+      <xs:element minOccurs="0" name="warehouseSec" type="tns:warehouse" />
+      <xs:element name="year" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="centreCode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="codeBookItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accessRole" type="tns:accessRole" />
+          <xs:element minOccurs="0" name="code1" type="xs:string" />
+          <xs:element minOccurs="0" name="code2" type="xs:string" />
+          <xs:element name="system" type="xs:boolean" />
+          <xs:element minOccurs="0" name="text" type="xs:string" />
+          <xs:element minOccurs="0" name="text1" type="xs:string" />
+          <xs:element minOccurs="0" name="text2" type="xs:string" />
+          <xs:element minOccurs="0" name="type" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="docBase" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element name="active" type="xs:boolean" />
+          <xs:element minOccurs="0" name="createdBy" type="tns:user" />
+          <xs:element minOccurs="0" name="createdOn" type="xs:dateTime" />
+          <xs:element name="deleted" type="xs:boolean" />
+          <xs:element name="locked" type="xs:boolean" />
+          <xs:element minOccurs="0" name="modifiedBy" type="tns:user" />
+          <xs:element minOccurs="0" name="modifiedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="validFrom" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="validTo" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="docId" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:depthAwareItem">
+        <xs:sequence>
+          <xs:element name="id" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="depthAwareItem" abstract="true">
+    <xs:sequence>
+      <xs:element name="depth" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accessRole">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="roleFunctions" nillable="true" type="tns:roleFunction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="roleFunction">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accessRole" type="tns:accessRole" />
+          <xs:element name="denied" type="xs:boolean" />
+          <xs:element minOccurs="0" name="functionAccess" type="tns:functionAccess" />
+          <xs:element minOccurs="0" name="operationAccess" type="tns:operationAccess" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="functionAccess">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="operations" nillable="true" type="tns:operationAccess" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="operationAccess">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="user">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docBase">
+        <xs:sequence>
+          <xs:element name="exportVCardEncoding" type="xs:int" />
+          <xs:element minOccurs="0" name="partner" type="tns:partner" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="roles" nillable="true" type="tns:accessRole" />
+          <xs:element minOccurs="0" name="userName" type="xs:string" />
+          <xs:element name="year" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="partner">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="area" type="tns:area" />
+          <xs:element minOccurs="0" name="assumptionForm" type="tns:assumptionForm" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="bankAccounts" nillable="true" type="tns:bankAccount" />
+          <xs:element minOccurs="0" name="centreCode" type="tns:centreCode" />
+          <xs:element minOccurs="0" name="claimAccount" type="tns:accountCode" />
+          <xs:element minOccurs="0" name="code1" type="xs:string" />
+          <xs:element minOccurs="0" name="code2" type="xs:string" />
+          <xs:element name="compFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="company" type="tns:company" />
+          <xs:element minOccurs="0" name="currency" type="tns:currency" />
+          <xs:element minOccurs="0" name="customerPriceGroup" type="tns:partnerPriceGroupOutput" />
+          <xs:element minOccurs="0" name="debtAccount" type="tns:accountCode" />
+          <xs:element minOccurs="0" name="defaultBankAccount" type="tns:bankAccount" />
+          <xs:element minOccurs="0" name="defaultPostAddress" type="tns:postAddress" />
+          <xs:element minOccurs="0" name="deliveryAddress" type="tns:postAddress" />
+          <xs:element name="discount" type="xs:double" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="electronicAddresses" nillable="true" type="tns:electronicAddress" />
+          <xs:element minOccurs="0" name="forwardingAddress" type="tns:postAddress" />
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+          <xs:element minOccurs="0" name="orderCode" type="tns:orderCode" />
+          <xs:element minOccurs="0" name="partnerGroup" type="tns:partnerGroup" />
+          <xs:element minOccurs="0" name="partnerType" type="tns:partnerType" />
+          <xs:element minOccurs="0" name="payForm" type="tns:payForm" />
+          <xs:element name="paymentsDue" type="xs:int" />
+          <xs:element name="penalty" type="xs:double" />
+          <xs:element minOccurs="0" name="person" type="tns:person" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="postAddresses" nillable="true" type="tns:postAddress" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="prices" nillable="true" type="tns:tradePrice" />
+          <xs:element name="purchaseVat" type="xs:boolean" />
+          <xs:element minOccurs="0" name="region" type="tns:region" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="relatedPartners" nillable="true" type="tns:partnerRelation" />
+          <xs:element name="saleVat" type="xs:boolean" />
+          <xs:element minOccurs="0" name="supplierPriceGroup" type="tns:partnerPriceGroupInput" />
+          <xs:element minOccurs="0" name="transferForm" type="tns:transferForm" />
+          <xs:element minOccurs="0" name="uaList" type="tns:uaList" />
+          <xs:element minOccurs="0" name="user" type="tns:user" />
+          <xs:element minOccurs="0" name="veterinaryCode" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="area">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="assumptionForm">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="bankAccount">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="bankingInstitution" type="tns:bankingInstitution" />
+          <xs:element minOccurs="0" name="currency" type="tns:currency" />
+          <xs:element minOccurs="0" name="iban" type="xs:string" />
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+          <xs:element minOccurs="0" name="partner" type="tns:partner" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="bankingInstitution">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="currency">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="dailyRates" nillable="true" type="tns:dailyRate" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="dailyRate">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element name="amount" type="xs:int" />
+          <xs:element minOccurs="0" name="dailyRateType" type="tns:dailyRateType" />
+          <xs:element minOccurs="0" name="foreignCurrency" type="tns:currency" />
+          <xs:element minOccurs="0" name="homeCurrency" type="tns:currency" />
+          <xs:element name="rate" type="xs:double" />
+          <xs:element minOccurs="0" name="rateDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="dailyRateType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="accountCode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="company">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="companyName" type="xs:string" />
+          <xs:element minOccurs="0" name="companyNumber1" type="xs:string" />
+          <xs:element minOccurs="0" name="companyNumber2" type="xs:string" />
+          <xs:element minOccurs="0" name="companyNumber3" type="xs:string" />
+          <xs:element minOccurs="0" name="companyNumber4" type="xs:string" />
+          <xs:element minOccurs="0" name="companyNumber5" type="xs:string" />
+          <xs:element minOccurs="0" name="companyNumber6" type="xs:string" />
+          <xs:element minOccurs="0" name="companyNumber7" type="xs:string" />
+          <xs:element minOccurs="0" name="partner" type="tns:partner" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="partnerPriceGroupOutput">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence>
+          <xs:element name="bruttoFlag" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="postAddress">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="city" type="xs:string" />
+          <xs:element minOccurs="0" name="partner" type="tns:partner" />
+          <xs:element minOccurs="0" name="postalCode" type="xs:string" />
+          <xs:element minOccurs="0" name="state" type="tns:state" />
+          <xs:element minOccurs="0" name="street" type="xs:string" />
+          <xs:element minOccurs="0" name="type" type="tns:postAddressType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="state">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="postAddressType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="electronicAddress">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="electronicAddress" type="xs:string" />
+          <xs:element minOccurs="0" name="partner" type="tns:partner" />
+          <xs:element minOccurs="0" name="type" type="tns:electronicAddressType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="electronicAddressType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="orderCode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="partnerGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="partnerType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="payForm">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="person">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="birth" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="birthNo" type="xs:string" />
+          <xs:element minOccurs="0" name="drivingLicenceNo" type="xs:string" />
+          <xs:element minOccurs="0" name="employmentNo" type="xs:string" />
+          <xs:element minOccurs="0" name="firstName" type="xs:string" />
+          <xs:element minOccurs="0" name="idCardNo" type="xs:string" />
+          <xs:element minOccurs="0" name="jobTitle" type="xs:string" />
+          <xs:element minOccurs="0" name="lastName" type="xs:string" />
+          <xs:element minOccurs="0" name="maidenName" type="xs:string" />
+          <xs:element minOccurs="0" name="middleName" type="xs:string" />
+          <xs:element minOccurs="0" name="nickName" type="xs:string" />
+          <xs:element minOccurs="0" name="partner" type="tns:partner" />
+          <xs:element minOccurs="0" name="passportNo" type="xs:string" />
+          <xs:element minOccurs="0" name="personalIdNo" type="xs:string" />
+          <xs:element minOccurs="0" name="prefix" type="xs:string" />
+          <xs:element minOccurs="0" name="suffix" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="tradePrice">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element name="amount" type="xs:double" />
+          <xs:element minOccurs="0" name="article" type="tns:article" />
+          <xs:element minOccurs="0" name="currency" type="tns:currency" />
+          <xs:element minOccurs="0" name="customerPriceGroup" type="tns:partnerPriceGroupOutput" />
+          <xs:element minOccurs="0" name="dateFrom" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="dateTo" type="xs:dateTime" />
+          <xs:element name="elementsOnly" type="xs:boolean" />
+          <xs:element name="input" type="xs:boolean" />
+          <xs:element minOccurs="0" name="measureUnit" type="tns:measureUnit" />
+          <xs:element minOccurs="0" name="partner" type="tns:partner" />
+          <xs:element name="position" type="xs:int" />
+          <xs:element minOccurs="0" name="purchasePriceGroup" type="tns:articlePriceGroupInput" />
+          <xs:element minOccurs="0" name="roundingType" type="tns:roundingType" />
+          <xs:element name="roundingValue" type="xs:float" />
+          <xs:element minOccurs="0" name="salePriceGroup" type="tns:articlePriceGroupOutput" />
+          <xs:element minOccurs="0" name="sourceClass" type="xs:string" />
+          <xs:element name="sourceId" type="xs:long" />
+          <xs:element minOccurs="0" name="supplierPriceGroup" type="tns:partnerPriceGroupInput" />
+          <xs:element minOccurs="0" name="type" type="tns:priceType" />
+          <xs:element minOccurs="0" name="uaList" type="tns:uaList" />
+          <xs:element name="value" type="xs:double" />
+          <xs:element name="valueType" type="xs:int" />
+          <xs:element name="vatFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="webSite" type="tns:webSite" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="article">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountCode" type="tns:accountCode" />
+          <xs:element name="advance" type="xs:boolean" />
+          <xs:element name="allowNegativeDisp" type="xs:boolean" />
+          <xs:element minOccurs="0" name="articleCode" type="tns:articleCode" />
+          <xs:element minOccurs="0" name="articleGroup" type="tns:articleGroup" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="articleUnits" nillable="true" type="tns:articleUnit" />
+          <xs:element minOccurs="0" name="baseUnit" type="tns:measureUnit" />
+          <xs:element name="batchPriceTracking" type="xs:boolean" />
+          <xs:element name="batchTracking" type="xs:boolean" />
+          <xs:element minOccurs="0" name="bom" type="tns:billOfMaterial" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="categories" nillable="true" type="tns:category" />
+          <xs:element minOccurs="0" name="centreCode" type="tns:centreCode" />
+          <xs:element minOccurs="0" name="code1" type="xs:string" />
+          <xs:element minOccurs="0" name="code1DA" type="xs:string" />
+          <xs:element minOccurs="0" name="code2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="complexUnits" nillable="true" type="tns:uaList" />
+          <xs:element minOccurs="0" name="costAccount" type="tns:accountCode" />
+          <xs:element minOccurs="0" name="disposableArticle" type="tns:disposableArticle" />
+          <xs:element name="height" type="xs:double" />
+          <xs:element minOccurs="0" name="homeCurrency" type="tns:currency" />
+          <xs:element name="length" type="xs:double" />
+          <xs:element name="locationTracking" type="xs:boolean" />
+          <xs:element minOccurs="0" name="lwhMU" type="tns:measureUnit" />
+          <xs:element name="maxStore" type="xs:double" />
+          <xs:element name="minStore" type="xs:double" />
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+          <xs:element minOccurs="0" name="operation" type="tns:operation" />
+          <xs:element minOccurs="0" name="optimalSupplier" type="tns:partner" />
+          <xs:element minOccurs="0" name="orderCode" type="tns:orderCode" />
+          <xs:element name="orderTracking" type="xs:boolean" />
+          <xs:element minOccurs="0" name="originCountry" type="tns:state" />
+          <xs:element minOccurs="0" name="pat" type="tns:productionArticleType" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="prices" nillable="true" type="tns:tradePrice" />
+          <xs:element minOccurs="0" name="producer" type="tns:partner" />
+          <xs:element minOccurs="0" name="product" type="tns:product" />
+          <xs:element minOccurs="0" name="purchasePriceGroup" type="tns:articlePriceGroupInput" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="relatedArticles" nillable="true" type="tns:articleRelation" />
+          <xs:element minOccurs="0" name="salePriceGroup" type="tns:articlePriceGroupOutput" />
+          <xs:element name="serialNumberTracking" type="xs:boolean" />
+          <xs:element minOccurs="0" name="uaList" type="tns:uaList" />
+          <xs:element name="unitCostPrice1" type="xs:double" />
+          <xs:element name="unitCostPrice2" type="xs:double" />
+          <xs:element name="unitSalePrice" type="xs:double" />
+          <xs:element minOccurs="0" name="variantArticleMuster" type="tns:uaList" />
+          <xs:element minOccurs="0" name="vatTariff" type="tns:vatTariff" />
+          <xs:element name="warehouseEntry" type="xs:boolean" />
+          <xs:element name="weight" type="xs:double" />
+          <xs:element minOccurs="0" name="weightMU" type="tns:measureUnit" />
+          <xs:element name="width" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="articleCode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="articleGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="articleUnit">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="article" type="tns:article" />
+          <xs:element name="rate" type="xs:double" />
+          <xs:element name="reverse" type="xs:boolean" />
+          <xs:element minOccurs="0" name="unit" type="tns:measureUnit" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="measureUnit">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="billOfMaterial">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="alternateNo" type="xs:string" />
+          <xs:element minOccurs="0" name="article" type="tns:article" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="materials" nillable="true" type="tns:bomMaterial" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="products" nillable="true" type="tns:bomProduct" />
+          <xs:element name="progressLevel" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="bomMaterial">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:bomItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="material" type="tns:article" />
+          <xs:element name="overCostPrice1" type="xs:boolean" />
+          <xs:element name="overCostPrice2" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="bomItem" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountCode" type="tns:accountCode" />
+          <xs:element name="amount" type="xs:double" />
+          <xs:element minOccurs="0" name="articleCode" type="tns:articleCode" />
+          <xs:element minOccurs="0" name="bom" type="tns:billOfMaterial" />
+          <xs:element minOccurs="0" name="centreCode" type="tns:centreCode" />
+          <xs:element name="costPrice1" type="xs:double" />
+          <xs:element name="costPrice2" type="xs:double" />
+          <xs:element name="load" type="xs:double" />
+          <xs:element minOccurs="0" name="measureUnit" type="tns:measureUnit" />
+          <xs:element minOccurs="0" name="orderCode" type="tns:orderCode" />
+          <xs:element name="position" type="xs:int" />
+          <xs:element minOccurs="0" name="positionNo" type="xs:string" />
+          <xs:element name="progressLevel" type="xs:int" />
+          <xs:element minOccurs="0" name="supplier" type="tns:partner" />
+          <xs:element minOccurs="0" name="uaList" type="tns:uaList" />
+          <xs:element name="unitCostPrice1" type="xs:double" />
+          <xs:element name="unitCostPrice2" type="xs:double" />
+          <xs:element minOccurs="0" name="warehouse" type="tns:warehouse" />
+          <xs:element minOccurs="0" name="worker" type="tns:partner" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="uaList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="descFormula" type="xs:string" />
+          <xs:element minOccurs="0" name="formula" type="xs:string" />
+          <xs:element minOccurs="0" name="templateName" type="xs:string" />
+          <xs:element minOccurs="0" name="type" type="tns:uaType" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="uaValues" nillable="true" type="tns:uaValue" />
+          <xs:element minOccurs="0" name="unit" type="tns:measureUnit" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="uaValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="allowedCbValues" type="xs:string" />
+          <xs:element minOccurs="0" name="boolValue" type="xs:boolean" />
+          <xs:element minOccurs="0" name="cbValue" type="tns:codeBookItem" />
+          <xs:element minOccurs="0" name="codeBookType" type="tns:codeBookType" />
+          <xs:element minOccurs="0" name="dateValue" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="doubleValue" type="xs:double" />
+          <xs:element minOccurs="0" name="intValue" type="xs:int" />
+          <xs:element minOccurs="0" name="maxDateValue" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="maxDoubleValue" type="xs:double" />
+          <xs:element minOccurs="0" name="maxIntValue" type="xs:int" />
+          <xs:element minOccurs="0" name="minDateValue" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="minDoubleValue" type="xs:double" />
+          <xs:element minOccurs="0" name="minIntValue" type="xs:int" />
+          <xs:element name="position" type="xs:int" />
+          <xs:element name="required" type="xs:boolean" />
+          <xs:element minOccurs="0" name="stringValue" type="xs:string" />
+          <xs:element minOccurs="0" name="uaList" type="tns:uaList" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="codeBookType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence>
+          <xs:element name="stockTracking" type="xs:boolean" />
+          <xs:element minOccurs="0" name="uaClass" type="tns:simpleType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="warehouse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="account" type="tns:accountCode" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="childWarehouses" nillable="true" type="tns:warehouse" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="locations" nillable="true" type="tns:warehouseLocation" />
+          <xs:element minOccurs="0" name="parentWarehouse" type="tns:warehouse" />
+          <xs:element minOccurs="0" name="postAddress" type="tns:postAddress" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="warehouseLocation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="code" type="xs:string" />
+          <xs:element minOccurs="0" name="ledge" type="xs:string" />
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+          <xs:element minOccurs="0" name="rack" type="xs:string" />
+          <xs:element minOccurs="0" name="rank" type="xs:string" />
+          <xs:element minOccurs="0" name="stand" type="xs:string" />
+          <xs:element minOccurs="0" name="warehouse" type="tns:warehouse" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="bomProduct">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:bomItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="costingFormula1" type="tns:costingFormula" />
+          <xs:element minOccurs="0" name="costingFormula2" type="tns:costingFormula" />
+          <xs:element minOccurs="0" name="product" type="tns:product" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="costingFormula">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="formula" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="product">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="article" type="tns:article" />
+          <xs:element name="optBatch" type="xs:double" />
+          <xs:element name="productionLevel" type="xs:int" />
+          <xs:element name="qt" type="xs:boolean" />
+          <xs:element name="timeExp" type="xs:double" />
+          <xs:element minOccurs="0" name="timeUnit" type="tns:timeUnit" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="bomOperation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:bomItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="operation" type="tns:operation" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="operation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="article" type="tns:article" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="category">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="childCategories" nillable="true" type="tns:category" />
+          <xs:element minOccurs="0" name="parentCategory" type="tns:category" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="disposableArticle">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="article" type="tns:article" />
+          <xs:element minOccurs="0" name="code1" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="productionArticleType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="articlePriceGroupInput">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="articleRelation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="article" type="tns:article" />
+          <xs:element minOccurs="0" name="articleRelated" type="tns:article" />
+          <xs:element name="relationDirection" type="xs:boolean" />
+          <xs:element minOccurs="0" name="relationType" type="tns:articleRelationType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="articleRelationType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="articlePriceGroupOutput">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="vatTariff">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="vatRates" nillable="true" type="tns:vatRate" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="vatRate">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="validFrom" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="validTo" type="xs:dateTime" />
+          <xs:element name="vatRate" type="xs:double" />
+          <xs:element minOccurs="0" name="vatTariff" type="tns:vatTariff" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="partnerPriceGroupInput">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence>
+          <xs:element name="bruttoFlag" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="priceType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="webSite">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="articles" nillable="true" type="tns:webArticle" />
+          <xs:element name="authEnabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="authPassword" type="xs:string" />
+          <xs:element minOccurs="0" name="authUserName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="categories" nillable="true" type="tns:webCategory" />
+          <xs:element name="defaultAttributeSetId" type="xs:int" />
+          <xs:element name="defaultRootCategoryId" type="xs:int" />
+          <xs:element minOccurs="0" name="keeper" type="tns:partner" />
+          <xs:element minOccurs="0" name="lastArticlesUpdate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="lastOrdersUpdate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="lastUsersUpdate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="platform" type="xs:string" />
+          <xs:element minOccurs="0" name="referent" type="tns:partner" />
+          <xs:element minOccurs="0" name="series" type="tns:series" />
+          <xs:element minOccurs="0" name="soapAuthPassword" type="xs:string" />
+          <xs:element minOccurs="0" name="soapAuthUserName" type="xs:string" />
+          <xs:element minOccurs="0" name="syncType" type="tns:syncType" />
+          <xs:element minOccurs="0" name="url" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="users" nillable="true" type="tns:webUser" />
+          <xs:element minOccurs="0" name="warehouse" type="tns:warehouse" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="webArticle">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="article" type="tns:article" />
+          <xs:element minOccurs="0" name="articleUrl" type="xs:string" />
+          <xs:element minOccurs="0" name="availability" type="xs:string" />
+          <xs:element minOccurs="0" name="defaultWebArticleFile" type="tns:webArticleFile" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="files" nillable="true" type="tns:webArticleFile" />
+          <xs:element minOccurs="0" name="filterName" type="xs:string" />
+          <xs:element minOccurs="0" name="imageUrl" type="xs:string" />
+          <xs:element name="published" type="xs:boolean" />
+          <xs:element name="rating" type="xs:double" />
+          <xs:element minOccurs="0" name="seoName" type="xs:string" />
+          <xs:element name="stateAction" type="xs:boolean" />
+          <xs:element name="stateNew" type="xs:boolean" />
+          <xs:element name="stateTopSelling" type="xs:boolean" />
+          <xs:element minOccurs="0" name="stateUA" type="tns:uaList" />
+          <xs:element minOccurs="0" name="web" type="tns:webSite" />
+          <xs:element name="webId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="webArticleFile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="description" type="xs:string" />
+          <xs:element name="image" type="xs:boolean" />
+          <xs:element name="imageHeight" type="xs:int" />
+          <xs:element name="imageThumbHeight" type="xs:int" />
+          <xs:element name="imageThumbWidth" type="xs:int" />
+          <xs:element name="imageWidth" type="xs:int" />
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+          <xs:element name="published" type="xs:boolean" />
+          <xs:element minOccurs="0" name="title" type="xs:string" />
+          <xs:element minOccurs="0" name="url" type="xs:string" />
+          <xs:element minOccurs="0" name="webArticle" type="tns:webArticle" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="webCategory">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="category" type="tns:category" />
+          <xs:element name="published" type="xs:boolean" />
+          <xs:element minOccurs="0" name="web" type="tns:webSite" />
+          <xs:element name="webId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="series">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bankBook" type="tns:bankBook" />
+          <xs:element minOccurs="0" name="cashBook" type="tns:cashBook" />
+          <xs:element minOccurs="0" name="homePartner" type="tns:partner" />
+          <xs:element minOccurs="0" name="inputVatType" type="tns:vatType" />
+          <xs:element minOccurs="0" name="intNumberPattern" type="xs:string" />
+          <xs:element minOccurs="0" name="itemPosNumberExtPattern" type="xs:string" />
+          <xs:element minOccurs="0" name="outputVatType" type="tns:vatType" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="seriesNumberings" nillable="true" type="tns:seriesNumbering" />
+          <xs:element minOccurs="0" name="warehouseIn" type="tns:warehouse" />
+          <xs:element minOccurs="0" name="warehouseOut" type="tns:warehouse" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="bankBook">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bankAccount" type="tns:bankAccount" />
+          <xs:element minOccurs="0" name="centreCode" type="tns:centreCode" />
+          <xs:element minOccurs="0" name="currency" type="tns:currency" />
+          <xs:element minOccurs="0" name="exportFilePath" type="xs:string" />
+          <xs:element minOccurs="0" name="importFilePath" type="xs:string" />
+          <xs:element minOccurs="0" name="series" type="tns:series" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="cashBook">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cashier" type="tns:person" />
+          <xs:element minOccurs="0" name="centreCode" type="tns:centreCode" />
+          <xs:element minOccurs="0" name="currency" type="tns:currency" />
+          <xs:element minOccurs="0" name="series" type="tns:series" />
+          <xs:element name="unitedNumbering" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="vatType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="seriesNumbering">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountType" type="tns:accountType" />
+          <xs:element name="actualNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="documentSubType" type="tns:documentSubType" />
+          <xs:element minOccurs="0" name="documentType" type="tns:documentType" />
+          <xs:element minOccurs="0" name="intNumberPattern" type="xs:string" />
+          <xs:element minOccurs="0" name="itemPosNumberExtPattern" type="xs:string" />
+          <xs:element name="numberFrom" type="xs:int" />
+          <xs:element name="numberTo" type="xs:int" />
+          <xs:element minOccurs="0" name="pohodaPattern" type="xs:string" />
+          <xs:element minOccurs="0" name="series" type="tns:series" />
+          <xs:element name="yearFrom" type="xs:int" />
+          <xs:element name="yearTo" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="accountType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="documentSubType" type="tns:documentSubType" />
+          <xs:element minOccurs="0" name="documentType" type="tns:documentType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="documentSubType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="documentType" type="tns:documentType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="documentType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence>
+          <xs:element name="input" type="xs:boolean" />
+          <xs:element minOccurs="0" name="sphere" type="tns:sphere" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="syncType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="webUser">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="documents" nillable="true" type="tns:businessDocument" />
+          <xs:element minOccurs="0" name="lastVisitedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="login" type="tns:electronicAddress" />
+          <xs:element minOccurs="0" name="registeredDate" type="xs:dateTime" />
+          <xs:element name="sendMail" type="xs:boolean" />
+          <xs:element minOccurs="0" name="web" type="tns:webSite" />
+          <xs:element name="webId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="businessDocument" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bruttoPrice" type="tns:foreignValue" />
+          <xs:element minOccurs="0" name="customerPriceGroup" type="tns:partnerPriceGroupOutput" />
+          <xs:element minOccurs="0" name="dailyRate" type="tns:dailyRate" />
+          <xs:element minOccurs="0" name="deliveryAddress" type="tns:postAddress" />
+          <xs:element minOccurs="0" name="description" type="xs:string" />
+          <xs:element name="docClass" type="xs:unsignedShort" />
+          <xs:element minOccurs="0" name="documentSubType" type="tns:documentSubType" />
+          <xs:element minOccurs="0" name="documentType" type="tns:documentType" />
+          <xs:element minOccurs="0" name="executionDate" type="xs:dateTime" />
+          <xs:element name="foreignCurrencyFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="forwardingAddress" type="tns:postAddress" />
+          <xs:element minOccurs="0" name="fullNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="nettoPrice" type="tns:foreignValue" />
+          <xs:element name="number" type="xs:int" />
+          <xs:element minOccurs="0" name="paid" type="tns:foreignValue" />
+          <xs:element minOccurs="0" name="partner" type="tns:partner" />
+          <xs:element minOccurs="0" name="paymentDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="referentIn" type="tns:partner" />
+          <xs:element minOccurs="0" name="referentOut" type="tns:partner" />
+          <xs:element minOccurs="0" name="referentOutTxt" type="xs:string" />
+          <xs:element minOccurs="0" name="series" type="tns:series" />
+          <xs:element minOccurs="0" name="supplierPriceGroup" type="tns:partnerPriceGroupInput" />
+          <xs:element minOccurs="0" name="vat" type="tns:foreignValue" />
+          <xs:element name="vatFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="vatType" type="tns:vatType" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="vats" nillable="true" type="tns:documentVat" />
+          <xs:element minOccurs="0" name="webUser" type="tns:webUser" />
+          <xs:element name="year" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="foreignValue">
+    <xs:sequence>
+      <xs:element name="foreignValue" type="xs:double" />
+      <xs:element name="homeValue" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="documentVat">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="brutto" type="tns:foreignValue" />
+          <xs:element minOccurs="0" name="document" type="tns:businessDocument" />
+          <xs:element minOccurs="0" name="netto" type="tns:foreignValue" />
+          <xs:element minOccurs="0" name="vat" type="tns:foreignValue" />
+          <xs:element minOccurs="0" name="vatRate" type="tns:vatRate" />
+          <xs:element minOccurs="0" name="vatType" type="tns:vatType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="articleTrainDocument">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:businessDocument">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="heads" nillable="true" type="tns:articleTrainHead" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="articleTrainHead" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountType" type="tns:accountType" />
+          <xs:element minOccurs="0" name="assumptionForm" type="tns:assumptionForm" />
+          <xs:element minOccurs="0" name="byCosts" type="tns:foreignValue" />
+          <xs:element minOccurs="0" name="centreCode" type="tns:centreCode" />
+          <xs:element name="docClass" type="xs:unsignedShort" />
+          <xs:element minOccurs="0" name="docNumberExt" type="xs:string" />
+          <xs:element minOccurs="0" name="docNumberInt" type="xs:string" />
+          <xs:element minOccurs="0" name="document" type="tns:articleTrainDocument" />
+          <xs:element minOccurs="0" name="finishedAggr" type="tns:triStateAggregation" />
+          <xs:element name="input" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="items" nillable="true" type="tns:articleTrainItem" />
+          <xs:element minOccurs="0" name="nettoPrice" type="tns:foreignValue" />
+          <xs:element minOccurs="0" name="orderCode" type="tns:orderCode" />
+          <xs:element minOccurs="0" name="orderForm" type="tns:orderForm" />
+          <xs:element minOccurs="0" name="payForm" type="tns:payForm" />
+          <xs:element minOccurs="0" name="transferForm" type="tns:transferForm" />
+          <xs:element minOccurs="0" name="wagonAggregation" type="tns:wagonAggregation" />
+          <xs:element minOccurs="0" name="wagonExtAggregation" type="tns:wagonAggregation" />
+          <xs:element minOccurs="0" name="warehouse" type="tns:warehouse" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="articleTrainItem" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountType" type="tns:accountType" />
+          <xs:element name="amount" type="xs:double" />
+          <xs:element minOccurs="0" name="article" type="tns:article" />
+          <xs:element name="discount" type="xs:double" />
+          <xs:element name="docClass" type="xs:unsignedShort" />
+          <xs:element name="elementNumberInt" type="xs:int" />
+          <xs:element minOccurs="0" name="head" type="tns:articleTrainHead" />
+          <xs:element minOccurs="0" name="measureUnit" type="tns:measureUnit" />
+          <xs:element minOccurs="0" name="posNumberExt" type="xs:string" />
+          <xs:element name="posNumberInt" type="xs:int" />
+          <xs:element minOccurs="0" name="price" type="tns:foreignValue" />
+          <xs:element minOccurs="0" name="unitPrice" type="tns:foreignValue" />
+          <xs:element minOccurs="0" name="unitRawPrice" type="tns:foreignValue" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="wagons" nillable="true" type="tns:wagon" />
+          <xs:element minOccurs="0" name="warehouse" type="tns:warehouse" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="wagon">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="agreementItem" type="tns:agreementItem" />
+          <xs:element name="amount" type="xs:double" />
+          <xs:element minOccurs="0" name="article" type="tns:article" />
+          <xs:element minOccurs="0" name="articleCode" type="tns:articleCode" />
+          <xs:element minOccurs="0" name="askedDate" type="xs:dateTime" />
+          <xs:element name="backAction" type="xs:boolean" />
+          <xs:element minOccurs="0" name="batch" type="tns:batch" />
+          <xs:element name="bomTrivial" type="xs:boolean" />
+          <xs:element minOccurs="0" name="bomWagon" type="tns:wagon" />
+          <xs:element minOccurs="0" name="bookingDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="bookingItem" type="tns:bookingItem" />
+          <xs:element minOccurs="0" name="centreCode" type="tns:centreCode" />
+          <xs:element minOccurs="0" name="commissionItem" type="tns:commissionItem" />
+          <xs:element minOccurs="0" name="confirmDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="deliveryDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="deliveryNoteItem" type="tns:deliveryNoteItem" />
+          <xs:element minOccurs="0" name="demandDate" type="xs:dateTime" />
+          <xs:element name="finished" type="xs:boolean" />
+          <xs:element name="ignoreAgreement" type="xs:boolean" />
+          <xs:element name="ignoreBooking" type="xs:boolean" />
+          <xs:element name="ignoreCommission" type="xs:boolean" />
+          <xs:element name="ignoreDeliveryNote" type="xs:boolean" />
+          <xs:element name="ignoreInvoice" type="xs:boolean" />
+          <xs:element name="ignoreOrder" type="xs:boolean" />
+          <xs:element name="ignoreStockMovement" type="xs:boolean" />
+          <xs:element name="input" type="xs:boolean" />
+          <xs:element minOccurs="0" name="invoiceDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="invoiceItem" type="tns:invoiceItem" />
+          <xs:element minOccurs="0" name="location" type="tns:warehouseLocation" />
+          <xs:element minOccurs="0" name="movementDate" type="xs:dateTime" />
+          <xs:element name="orderAction" type="xs:int" />
+          <xs:element minOccurs="0" name="orderCode" type="tns:orderCode" />
+          <xs:element minOccurs="0" name="orderItem" type="tns:orderItem" />
+          <xs:element name="orderStage" type="xs:int" />
+          <xs:element minOccurs="0" name="partner" type="tns:partner" />
+          <xs:element minOccurs="0" name="serialNumber" type="tns:serialNumber" />
+          <xs:element minOccurs="0" name="sphere" type="tns:sphere" />
+          <xs:element minOccurs="0" name="stockMovementDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="stockMovementItem" type="tns:stockMovementItem" />
+          <xs:element minOccurs="0" name="supplier" type="tns:partner" />
+          <xs:element name="trainId" type="xs:long" />
+          <xs:element minOccurs="0" name="uaList" type="tns:uaList" />
+          <xs:element name="unitByCosts" type="xs:double" />
+          <xs:element name="unitCostPrice1" type="xs:double" />
+          <xs:element name="unitCostPrice2" type="xs:double" />
+          <xs:element name="unitTradePrice" type="xs:double" />
+          <xs:element minOccurs="0" name="vatRate" type="tns:vatRate" />
+          <xs:element minOccurs="0" name="vatType" type="tns:vatType" />
+          <xs:element minOccurs="0" name="warehouse" type="tns:warehouse" />
+          <xs:element minOccurs="0" name="worker" type="tns:partner" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="agreementItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:articleTrainItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="confirmDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="batch">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="article" type="tns:article" />
+          <xs:element minOccurs="0" name="beginDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="code1" type="xs:string" />
+          <xs:element minOccurs="0" name="code2" type="xs:string" />
+          <xs:element minOccurs="0" name="creationDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="expireDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="guaranteeDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="homeCurrency" type="tns:currency" />
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+          <xs:element name="position" type="xs:int" />
+          <xs:element minOccurs="0" name="productionDate" type="xs:dateTime" />
+          <xs:element name="progressLevel" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="bookingItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:articleTrainItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bookingDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="commissionItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:articleTrainItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="askedDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="deliveryNoteItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:articleTrainItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="deliveryDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="invoiceItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:articleTrainItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="orderItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:articleTrainItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="demandDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="serialNumber">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="article" type="tns:article" />
+          <xs:element minOccurs="0" name="creationDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="number1" type="xs:string" />
+          <xs:element minOccurs="0" name="number2" type="xs:string" />
+          <xs:element name="position" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="stockMovementItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:articleTrainItem">
+        <xs:sequence>
+          <xs:element name="includeInAverage" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="orderForm">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="transferForm">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="wagonAggregation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="agreement" type="tns:triStateAggregation" />
+      <xs:element minOccurs="0" name="booking" type="tns:triStateAggregation" />
+      <xs:element minOccurs="0" name="commission" type="tns:triStateAggregation" />
+      <xs:element minOccurs="0" name="deliveryNote" type="tns:triStateAggregation" />
+      <xs:element minOccurs="0" name="invoice" type="tns:triStateAggregation" />
+      <xs:element minOccurs="0" name="order" type="tns:triStateAggregation" />
+      <xs:element minOccurs="0" name="stockMovement" type="tns:triStateAggregation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="commission">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:articleTrainHead">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="availabilityDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="demandDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="supplyDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="order">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:articleTrainHead">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sendingDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="agreement">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:articleTrainHead">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bankAccount" type="tns:bankAccount" />
+          <xs:element name="contract" type="xs:boolean" />
+          <xs:element minOccurs="0" name="dueDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="issueDate" type="xs:dateTime" />
+          <xs:element name="paymentsDue" type="xs:int" />
+          <xs:element name="proFormalInvoice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="saleNoteDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="signDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="booking">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:articleTrainHead">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="availabilityDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="stockMovement">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:articleTrainHead">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="deliveryNote">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:articleTrainHead">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="invoice">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:articleTrainHead">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountingDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="bankAccount" type="tns:bankAccount" />
+          <xs:element minOccurs="0" name="constSymbol" type="xs:string" />
+          <xs:element minOccurs="0" name="dueDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="issueDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="payments" nillable="true" type="tns:payment" />
+          <xs:element name="paymentsDue" type="xs:int" />
+          <xs:element minOccurs="0" name="specSymbol" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="payment">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountType" type="tns:accountType" />
+          <xs:element minOccurs="0" name="amount" type="tns:foreignValue" />
+          <xs:element minOccurs="0" name="description" type="xs:string" />
+          <xs:element minOccurs="0" name="invoice" type="tns:invoice" />
+          <xs:element minOccurs="0" name="item" type="tns:financeDocumentItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="financeDocumentItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountType" type="tns:accountType" />
+          <xs:element minOccurs="0" name="centreCode" type="tns:centreCode" />
+          <xs:element minOccurs="0" name="constSymbol" type="xs:string" />
+          <xs:element minOccurs="0" name="contraAccount" type="tns:bankAccount" />
+          <xs:element minOccurs="0" name="contraAccountBc" type="xs:string" />
+          <xs:element minOccurs="0" name="contraAccountNum" type="xs:string" />
+          <xs:element minOccurs="0" name="dailyRate" type="tns:dailyRate" />
+          <xs:element minOccurs="0" name="description" type="xs:string" />
+          <xs:element minOccurs="0" name="docNumberExt" type="xs:string" />
+          <xs:element minOccurs="0" name="document" type="tns:financeDocument" />
+          <xs:element minOccurs="0" name="executionDate" type="xs:dateTime" />
+          <xs:element name="input" type="xs:boolean" />
+          <xs:element minOccurs="0" name="netto" type="tns:foreignValue" />
+          <xs:element minOccurs="0" name="oppositeItem" type="tns:financeDocumentItem" />
+          <xs:element minOccurs="0" name="orderCode" type="tns:orderCode" />
+          <xs:element minOccurs="0" name="orderDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="payments" nillable="true" type="tns:payment" />
+          <xs:element name="posNumberInt" type="xs:int" />
+          <xs:element name="rateDifference" type="xs:double" />
+          <xs:element minOccurs="0" name="specSymbol" type="xs:string" />
+          <xs:element minOccurs="0" name="sum" type="tns:foreignValue" />
+          <xs:element minOccurs="0" name="vat" type="tns:foreignValue" />
+          <xs:element name="vatFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="vatRate" type="tns:vatRate" />
+          <xs:element minOccurs="0" name="vatType" type="tns:vatType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="financeDocument">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:businessDocument">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="docDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="docNumberInt" type="xs:string" />
+          <xs:element minOccurs="0" name="inputPrice" type="tns:foreignValue" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="items" nillable="true" type="tns:financeDocumentItem" />
+          <xs:element minOccurs="0" name="outputPrice" type="tns:foreignValue" />
+          <xs:element minOccurs="0" name="taxDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="words" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="stocktaking">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:businessDocument">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="stocktakingLists" nillable="true" type="tns:stocktakingList" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="stocktakingList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docBase">
+        <xs:sequence>
+          <xs:element name="batchFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="correction" type="tns:stockMovement" />
+          <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="executive" type="tns:partner" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="items" nillable="true" type="tns:stocktakingItem" />
+          <xs:element name="locationFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+          <xs:element name="orderFlag" type="xs:boolean" />
+          <xs:element name="serialNumberFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="stocktaking" type="tns:stocktaking" />
+          <xs:element minOccurs="0" name="uaList" type="tns:uaList" />
+          <xs:element minOccurs="0" name="warehouse" type="tns:warehouse" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="stocktakingItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="article" type="tns:article" />
+          <xs:element minOccurs="0" name="batch" type="tns:batch" />
+          <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="evidenceAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="location" type="tns:warehouseLocation" />
+          <xs:element minOccurs="0" name="orderCode" type="tns:orderCode" />
+          <xs:element name="realAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="serialNumber" type="tns:serialNumber" />
+          <xs:element minOccurs="0" name="stocktakingList" type="tns:stocktakingList" />
+          <xs:element minOccurs="0" name="uaList" type="tns:uaList" />
+          <xs:element minOccurs="0" name="warehouse" type="tns:warehouse" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="region">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="partnerRelation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="address" type="tns:postAddress" />
+          <xs:element name="job" type="xs:boolean" />
+          <xs:element minOccurs="0" name="partner" type="tns:partner" />
+          <xs:element minOccurs="0" name="partnerRelated" type="tns:partner" />
+          <xs:element name="relationDirection" type="xs:boolean" />
+          <xs:element minOccurs="0" name="relationType" type="tns:partnerRelationType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="partnerRelationType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="attachmentType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="contentType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="activityType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:codeBookItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="mobileATItem">
+    <xs:sequence>
+      <xs:element name="amount" type="xs:double" />
+      <xs:element name="amountA" type="xs:double" />
+      <xs:element name="amountB" type="xs:double" />
+      <xs:element name="amountC" type="xs:double" />
+      <xs:element name="amountD" type="xs:double" />
+      <xs:element name="amountI" type="xs:double" />
+      <xs:element name="amountO" type="xs:double" />
+      <xs:element name="amountS" type="xs:double" />
+      <xs:element minOccurs="0" name="article" type="tns:article" />
+      <xs:element minOccurs="0" name="articleCode" type="tns:articleCode" />
+      <xs:element name="backAction" type="xs:boolean" />
+      <xs:element minOccurs="0" name="batch" type="tns:batch" />
+      <xs:element name="documentId" type="xs:long" />
+      <xs:element name="elementNumberInt" type="xs:int" />
+      <xs:element minOccurs="0" name="executionDate" type="xs:dateTime" />
+      <xs:element name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="input" type="xs:boolean" />
+      <xs:element minOccurs="0" name="location" type="tns:warehouseLocation" />
+      <xs:element minOccurs="0" name="measureUnit" type="tns:measureUnit" />
+      <xs:element name="measureUnitKoef" type="xs:double" />
+      <xs:element minOccurs="0" name="orderCode" type="tns:orderCode" />
+      <xs:element minOccurs="0" name="originalAmount" type="xs:double" />
+      <xs:element name="originalAmountA" type="xs:double" />
+      <xs:element name="originalAmountB" type="xs:double" />
+      <xs:element name="originalAmountC" type="xs:double" />
+      <xs:element name="originalAmountD" type="xs:double" />
+      <xs:element name="originalAmountI" type="xs:double" />
+      <xs:element name="originalAmountO" type="xs:double" />
+      <xs:element name="originalAmountS" type="xs:double" />
+      <xs:element minOccurs="0" name="posNumberExt" type="xs:string" />
+      <xs:element name="posNumberInt" type="xs:int" />
+      <xs:element minOccurs="0" name="serialNumber" type="tns:serialNumber" />
+      <xs:element minOccurs="0" name="transactionType" type="xs:string" />
+      <xs:element minOccurs="0" name="uaList" type="tns:uaList" />
+      <xs:element minOccurs="0" name="worker" type="tns:partner" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCurrentDate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCurrentDateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saveATDocuments">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="mATDocuments" type="tns:mobileATDocument" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saveATDocumentsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSessionUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSessionUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:user" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProjectProducts">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="orderCode" type="tns:orderCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProjectProductsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:projectProduct" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="projectProduct">
+    <xs:sequence>
+      <xs:element name="amount" type="xs:double" />
+      <xs:element name="costPrice" type="xs:double" />
+      <xs:element name="duration" type="xs:double" />
+      <xs:element minOccurs="0" name="measureUnitAmount" type="tns:measureUnit" />
+      <xs:element minOccurs="0" name="measureUnitDuration" type="tns:measureUnit" />
+      <xs:element minOccurs="0" name="orderCode" type="tns:orderCode" />
+      <xs:element minOccurs="0" name="planDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="planDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="productExtId" type="xs:string" />
+      <xs:element minOccurs="0" name="productionDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="status" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCodeBookItemsCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="type" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCodeBookItemsCountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getATDocuments">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="atHeadFilter" type="tns:dmFilterCondition" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="sorting" type="tns:dmSorting" />
+      <xs:element name="inclItems" type="xs:boolean" />
+      <xs:element name="first" type="xs:int" />
+      <xs:element name="count" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="dmFilterCondition">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="boolValue" type="xs:boolean" />
+          <xs:element name="caseSensitive" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="children" nillable="true" type="tns:dmFilterCondition" />
+          <xs:element minOccurs="0" name="childrenOperator" type="tns:logicalOperator" />
+          <xs:element minOccurs="0" name="column" type="tns:dataModelColumn" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="dateValues" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="doubleValues" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="intValues" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="matchMode" type="tns:stringMatch" />
+          <xs:element minOccurs="0" name="nullValue" type="xs:boolean" />
+          <xs:element minOccurs="0" name="operator" type="tns:mathOperator" />
+          <xs:element minOccurs="0" name="otherColumn" type="tns:dataModelColumn" />
+          <xs:element minOccurs="0" name="parent" type="tns:dmFilterCondition" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="stringValues" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="dataModelColumn">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dataModel" type="tns:dataModel" />
+          <xs:element minOccurs="0" name="dataType" type="xs:string" />
+          <xs:element name="definitionId" type="xs:int" />
+          <xs:element minOccurs="0" name="definitionPath" type="xs:string" />
+          <xs:element minOccurs="0" name="fieldName" type="xs:string" />
+          <xs:element minOccurs="0" name="justification" type="tns:justification" />
+          <xs:element minOccurs="0" name="pattern" type="xs:string" />
+          <xs:element name="sortLevel" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="dataModel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="columns" nillable="true" type="tns:dataModelColumn" />
+          <xs:element minOccurs="0" name="entity" type="xs:string" />
+          <xs:element name="pageSize" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="userSettings" nillable="true" type="tns:dmUserSetting" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="dmUserSetting">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dataModel" type="tns:dataModel" />
+          <xs:element minOccurs="0" name="filter" type="tns:dmFilterCondition" />
+          <xs:element minOccurs="0" name="module" type="xs:string" />
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+          <xs:element name="pageSize" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="sortingChain" nillable="true" type="tns:dmSorting" />
+          <xs:element minOccurs="0" name="user" type="tns:user" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="userColumns" nillable="true" type="tns:userColumn" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="dmSorting">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="column" type="tns:dataModelColumn" />
+          <xs:element name="group" type="xs:boolean" />
+          <xs:element minOccurs="0" name="setting" type="tns:dmUserSetting" />
+          <xs:element name="sortDesc" type="xs:boolean" />
+          <xs:element name="sortLevel" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="userColumn">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:docId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="column" type="tns:dataModelColumn" />
+          <xs:element minOccurs="0" name="header" type="xs:string" />
+          <xs:element name="order" type="xs:int" />
+          <xs:element minOccurs="0" name="pattern" type="xs:string" />
+          <xs:element minOccurs="0" name="setting" type="tns:dmUserSetting" />
+          <xs:element name="width" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getATDocumentsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:mobileATDocument" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="beginSession">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dataSourceName" type="xs:string" />
+      <xs:element minOccurs="0" name="userName" type="xs:string" />
+      <xs:element minOccurs="0" name="passwordHashed" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="beginSessionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getActivityByDate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="docClass" type="xs:string" />
+      <xs:element minOccurs="0" name="dateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dateTo" type="xs:dateTime" />
+      <xs:element name="first" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getActivityByDateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:activityMobile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCodeBookItems">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="type" type="xs:string" />
+      <xs:element name="first" type="xs:int" />
+      <xs:element name="count" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCodeBookItemsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:codeBookItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getHash">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="string" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getHashResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateProjectProducts">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="projectProducts" type="tns:projectProduct" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateProjectProductsResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="saveATItems">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="mATItems" type="tns:mobileATItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saveATItemsResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getPartnersMobileByDate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="searchPattern" type="xs:string" />
+      <xs:element minOccurs="0" name="representativeRestriction" type="xs:string" />
+      <xs:element minOccurs="0" name="dateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dateTo" type="xs:dateTime" />
+      <xs:element name="first" type="xs:int" />
+      <xs:element name="count" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPartnersMobileByDateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:partnerMobile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="partnerMobile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="fax" type="xs:string" />
+      <xs:element minOccurs="0" name="mob" type="xs:string" />
+      <xs:element minOccurs="0" name="partner" type="tns:partner" />
+      <xs:element minOccurs="0" name="TFir" type="xs:string" />
+      <xs:element minOccurs="0" name="TPri" type="xs:string" />
+      <xs:element minOccurs="0" name="www" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getActivitiesCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="docClass" type="xs:string" />
+      <xs:element minOccurs="0" name="dateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dateTo" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getActivitiesCountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getATItems">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="docTypeCode" type="xs:string" />
+      <xs:element minOccurs="0" name="wagonFilter" type="tns:dmFilterCondition" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="sorting" type="tns:dmSorting" />
+      <xs:element name="first" type="xs:int" />
+      <xs:element name="count" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getATItemsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:mobileATItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="savePartnerMobile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="partnerM" type="tns:partnerMobile" />
+      <xs:element minOccurs="0" name="representativeRestriction" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="savePartnerMobileResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="uaType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ARTICLE" />
+      <xs:enumeration value="PARTNER" />
+      <xs:enumeration value="COMPLEX_UNIT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="simpleType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BOOLEAN" />
+      <xs:enumeration value="INTEGER" />
+      <xs:enumeration value="DOUBLE" />
+      <xs:enumeration value="DATE" />
+      <xs:enumeration value="STRING" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="timeUnit">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SECOND" />
+      <xs:enumeration value="MINUTE" />
+      <xs:enumeration value="HOUR" />
+      <xs:enumeration value="DAY" />
+      <xs:enumeration value="WEEK" />
+      <xs:enumeration value="MONTH" />
+      <xs:enumeration value="YEAR" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="roundingType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MATH_ROUNDING" />
+      <xs:enumeration value="UP_ROUNDING" />
+      <xs:enumeration value="DOWN_ROUNDING" />
+      <xs:enumeration value="NONE_ROUNDING" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="sphere">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TRADE" />
+      <xs:enumeration value="INTERNAL" />
+      <xs:enumeration value="PRODUCTION" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="triStateAggregation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NONE" />
+      <xs:enumeration value="SOME" />
+      <xs:enumeration value="ALL" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="logicalOperator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AND" />
+      <xs:enumeration value="OR" />
+      <xs:enumeration value="NOT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="justification">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LEFT" />
+      <xs:enumeration value="CENTER" />
+      <xs:enumeration value="RIGHT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="stringMatch">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EXACT" />
+      <xs:enumeration value="START" />
+      <xs:enumeration value="END" />
+      <xs:enumeration value="ANYWHERE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="mathOperator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EQ" />
+      <xs:enumeration value="NE" />
+      <xs:enumeration value="GT" />
+      <xs:enumeration value="GE" />
+      <xs:enumeration value="LT" />
+      <xs:enumeration value="LE" />
+      <xs:enumeration value="BW_II" />
+      <xs:enumeration value="BW_IE" />
+      <xs:enumeration value="BW_EI" />
+      <xs:enumeration value="BW_EE" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,664 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{58BA7827-FC6C-4138-8D14-1859BF4E4ACE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fask.Vyroba_W</RootNamespace>
+    <AssemblyName>Vyroba_W</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>Application\Vyroba_W_test</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FormFactorID>
+    </FormFactorID>
+    <ApplicationIcon>Resources\logo_FASK1.ico</ApplicationIcon>
+    <DeployDirPrefix>\</DeployDirPrefix>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\!Build!\Vyroba_W\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\!Build!\Vyroba_W\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip.CF, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\!!!_Support_!!!\Ionic.Zip.CF\Ionic.Zip.CF.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json.Compact, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_SdileneKnihovny_\WinCE\Newtonsoft\Compact\Newtonsoft.Json.Compact.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_SdileneKnihovny_\WinCE\RestSharpCE\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Symbol, Version=2.8.0.0, Culture=neutral, PublicKeyToken=68ec8db391f150ca, processorArchitecture=MSIL" />
+    <Reference Include="Symbol.Barcode, Version=2.9.0.0, Culture=neutral, PublicKeyToken=68ec8db391f150ca, processorArchitecture=MSIL" />
+    <Reference Include="Symbol.BarcodeForms, Version=2.9.0.0, Culture=neutral, PublicKeyToken=68ec8db391f150ca, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SQLite, Version=1.0.112.0, Culture=neutral, PublicKeyToken=1fdb50b1b62b4c84, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\04_Support\_Support_\SQLite\sqlite-netFx35-binary-PocketPC-ARM-2008-1.0.112.0\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="USICF, Version=2.4.2714.30188, Culture=neutral" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\_SdileneTridy_\RestSharp\Communication_3_5.cs">
+      <Link>RestSharp_API\Communication_3_5.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\RestSharp\Communication_Base.cs">
+      <Link>RestSharp_API\Communication_Base.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\RestSharp\TrustAllCertificatePolicy.cs">
+      <Link>RestSharp_API\TrustAllCertificatePolicy.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_InternalState.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_InternalState.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Controller_Vyroba.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Controller_Vyroba.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\SQLite_Static.cs">
+      <Link>SQLiteDBs\Controllers\SQLite_Static.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_SdileneTridy_\SQLite\Controllers\_Routines.cs">
+      <Link>SQLiteDBs\Controllers\_Routines.cs</Link>
+    </Compile>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Data\DatabaseActions.cs" />
+    <Compile Include="Extensions\TimeSpan.cs" />
+    <Compile Include="FileTransfer\CompressFile.cs" />
+    <Compile Include="FileTransfer\Downloading.cs" />
+    <Compile Include="FileTransfer\Uploading.cs" />
+    <Compile Include="Forms\DateTimeInputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DateTimeInputBox.Designer.cs">
+      <DependentUpon>DateTimeInputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormConfig.Designer.cs">
+      <DependentUpon>FormConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormIDPracovnikaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormIDPracovnikaLogin.Designer.cs">
+      <DependentUpon>FormIDPracovnikaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormInputKod2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormInputKod2.Designer.cs">
+      <DependentUpon>FormInputKod2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLocation.cs" />
+    <Compile Include="Forms\FormSmenaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSmenaLogin.Designer.cs">
+      <DependentUpon>FormSmenaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormBaseButtonOKStorno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBaseButtonOKStorno.Designer.cs">
+      <DependentUpon>FormBaseButtonOKStorno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormInputKod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormInputKod.Designer.cs">
+      <DependentUpon>FormInputKod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormUserLoginWithTimeInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormUserLoginWithTimeInput.Designer.cs">
+      <DependentUpon>FormUserLoginWithTimeInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InputBox.Designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalObject.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="Korekce\FormKorekce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korekce\FormKorekce.Designer.cs">
+      <DependentUpon>FormKorekce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySystem\DateTimeOperations.cs" />
+    <Compile Include="MySystem\Path.cs" />
+    <Compile Include="Odvadeni\FormInput_Production_SN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odvadeni\FormInput_Production_SN.Designer.cs">
+      <DependentUpon>FormInput_Production_SN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odvadeni\FormMaterialAlternaceVyber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odvadeni\FormMaterialAlternaceVyber.Designer.cs">
+      <DependentUpon>FormMaterialAlternaceVyber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odvadeni\FormOdvadeniPrehled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odvadeni\FormOdvadeniPrehled.Designer.cs">
+      <DependentUpon>FormOdvadeniPrehled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odvadeni\FormMaterialVyber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odvadeni\FormMaterialVyber.Designer.cs">
+      <DependentUpon>FormMaterialVyber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odvadeni\FormInputQuantity2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odvadeni\FormInputQuantity2.Designer.cs">
+      <DependentUpon>FormInputQuantity2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odvadeni\FormOperaceVyber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odvadeni\FormOperaceVyber.Designer.cs">
+      <DependentUpon>FormOperaceVyber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odvadeni\FormPrikazVyber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odvadeni\FormPrikazVyber.Designer.cs">
+      <DependentUpon>FormPrikazVyber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odvadeni\FormMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odvadeni\FormMaterial.Designer.cs">
+      <DependentUpon>FormMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odvadeni\FormInputQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odvadeni\FormInputQuantity.Designer.cs">
+      <DependentUpon>FormInputQuantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odvadeni\FormKorekceCasu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odvadeni\FormKorekceCasu.Designer.cs">
+      <DependentUpon>FormKorekceCasu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odvadeni\FormOperacePotvrzeni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odvadeni\FormOperacePotvrzeni.Designer.cs">
+      <DependentUpon>FormOperacePotvrzeni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odvadeni\FormOdvadeni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odvadeni\FormOdvadeni.Designer.cs">
+      <DependentUpon>FormOdvadeni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odvadeni\FormIDMachine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odvadeni\FormIDMachine.Designer.cs">
+      <DependentUpon>FormIDMachine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odvadeni\FormIDPracovnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odvadeni\FormIDPracovnika.Designer.cs">
+      <DependentUpon>FormIDPracovnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odvadeni\Methods\Vyroba_Online.cs" />
+    <Compile Include="Odvadeni\Tisk\OdvedeniTisk.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\DateTimeInputBox.resx">
+      <DependentUpon>DateTimeInputBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormConfig.resx">
+      <DependentUpon>FormConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormIDPracovnikaLogin.resx">
+      <DependentUpon>FormIDPracovnikaLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormInputKod2.resx">
+      <DependentUpon>FormInputKod2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSmenaLogin.resx">
+      <DependentUpon>FormSmenaLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBaseButtonOKStorno.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormBaseButtonOKStorno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormInputKod.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormInputKod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormUserLoginWithTimeInput.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormUserLoginWithTimeInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korekce\FormKorekce.resx">
+      <DependentUpon>FormKorekce.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odvadeni\FormInput_Production_SN.resx">
+      <DependentUpon>FormInput_Production_SN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odvadeni\FormMaterialAlternaceVyber.resx">
+      <DependentUpon>FormMaterialAlternaceVyber.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odvadeni\FormOdvadeniPrehled.resx">
+      <DependentUpon>FormOdvadeniPrehled.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odvadeni\FormMaterialVyber.resx">
+      <DependentUpon>FormMaterialVyber.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odvadeni\FormInputQuantity2.resx">
+      <DependentUpon>FormInputQuantity2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odvadeni\FormOperaceVyber.resx">
+      <DependentUpon>FormOperaceVyber.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odvadeni\FormPrikazVyber.resx">
+      <DependentUpon>FormPrikazVyber.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odvadeni\FormMaterial.resx">
+      <DependentUpon>FormMaterial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odvadeni\FormInputQuantity.resx">
+      <DependentUpon>FormInputQuantity.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odvadeni\FormKorekceCasu.resx">
+      <DependentUpon>FormKorekceCasu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odvadeni\FormOperacePotvrzeni.resx">
+      <DependentUpon>FormOperacePotvrzeni.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odvadeni\FormOdvadeni.resx">
+      <DependentUpon>FormOdvadeni.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odvadeni\FormIDMachine.resx">
+      <DependentUpon>FormIDMachine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odvadeni\FormIDPracovnika.resx">
+      <DependentUpon>FormIDPracovnika.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tisk\Baleni\FormBaleniMain.resx">
+      <DependentUpon>FormBaleniMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Udalosti\FormUdalosti.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormUdalosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Scanner\ScannerBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scanner\ScannerHT660.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scanner\ScannerMC3000.cs" />
+    <Compile Include="Scanner\ScannerNone.cs" />
+    <Compile Include="Scanner\ScannerPT8800.cs" />
+    <Compile Include="ServerAccess\CertificatesPolicy\QueryTrustCertificatePolicy.cs" />
+    <Compile Include="ServerAccess\CertificatesPolicy\TrustAllCertificatePolicy.cs" />
+    <Compile Include="ServerAccess\Credentials.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="MySystem\FileOperations.cs" />
+    <Compile Include="SQLiteDBs\DataSets\InternalState.cs">
+      <DependentUpon>InternalState.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\InternalState.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InternalState.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Vyroba.cs">
+      <DependentUpon>Vyroba.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteDBs\DataSets\Vyroba.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vyroba.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Tisk\Baleni\BaleniTisk.cs" />
+    <Compile Include="Tisk\Baleni\FormBaleniMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tisk\Baleni\FormBaleniMain.Designer.cs">
+      <DependentUpon>FormBaleniMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tisk\ProviderWebServicePrint\Provider.cs" />
+    <Compile Include="Udalosti\FormUdalosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Udalosti\FormUdalosti.Designer.cs">
+      <DependentUpon>FormUdalosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebServiceTisk\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebServiceVyrobaBaleni\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebServiceVyroba\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="_WebRefernces_Globals\WebServiceTiskSession.cs" />
+    <Compile Include="_WebRefernces_Globals\WebServiceVyrobaBaleniSession.cs" />
+    <Compile Include="_WebRefernces_Globals\WebServiceVyrobaSession.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Dasenka/Tisk.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\WebServiceTisk\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Dasenka/Tisk.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Dasenka/Baleni.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\WebServiceVyrobaBaleni\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Dasenka/Baleni.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/MST_Win_Kom_Server_7_Dasenka/Vyroba.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\WebServiceVyroba\</RelPath>
+      <UpdateFromURL>http://localhost/MST_Win_Kom_Server_7_Dasenka/Vyroba.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Web References\WebServiceVyroba\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebServiceVyroba\Vyroba.disco" />
+    <None Include="Web References\WebServiceVyroba\Vyroba.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\04_Support\_Support_\SQLite\sqlite-netFx35-binary-PocketPC-ARM-2008-1.0.112.0\SQLite.Interop.112.dll">
+      <Link>SQLite.Interop.112.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="logo_fask_1616.ico" />
+    <None Include="Resources\logo_FASK1.ico" />
+    <None Include="Resources\logo_FASK.ico" />
+    <None Include="SQLiteDBs\DataSets\InternalState.xsc">
+      <DependentUpon>InternalState.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\InternalState.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InternalState.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\InternalState.xss">
+      <DependentUpon>InternalState.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Vyroba.xsc">
+      <DependentUpon>Vyroba.xsd</DependentUpon>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Vyroba.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Vyroba.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Fask.SQLiteDBs.DataSets</CustomToolNamespace>
+    </None>
+    <None Include="SQLiteDBs\DataSets\Vyroba.xss">
+      <DependentUpon>Vyroba.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\WebServiceTisk\DSValues.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WebServiceTisk\DSValues.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WebServiceTisk\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebServiceTisk\Tisk.wsdl" />
+    <None Include="Web References\WebServiceVyrobaBaleni\Baleni.wsdl" />
+    <None Include="Web References\WebServiceVyrobaBaleni\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebServiceVyrobaBaleni\StatusBaleni.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WebServiceVyroba\ProductionState.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WebServiceVyroba\Report_UserDay.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WebServiceVyroba\VyrobaDataSet.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WebServiceVyroba\VyrobaDataSet.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Settings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\chimes.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\chyba.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\dotaz.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\info.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="readme.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TODO.txt" />
+    <Content Include="USICF.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Web References\WebServiceTisk\Tisk.disco" />
+    <None Include="Web References\WebServiceVyrobaBaleni\Baleni.disco" />
+    <None Include="Web References\WebServiceVyroba\VyrobaDataSet_StatistikaOdvadeni.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WebServiceVyroba\VyrobaDataSet_StatistikaOdvadeni.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\_SdileneProjekty_\WIN_CE\Fask.Logging\Fask.Logging.csproj">
+      <Project>{D1FCBFF1-3EB0-4179-B4C4-D4F63A6AC21E}</Project>
+      <Name>Fask.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\WIN_CE\Fask.PrinterFactory\Fask.PrinterFactory.csproj">
+      <Project>{B64467B4-7A09-4B58-9A34-3646823950E0}</Project>
+      <Name>Fask.PrinterFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\WIN_CE\Fask.PrinterProviderWebService\Fask.PrinterProviderWebService.csproj">
+      <Project>{EC5CF361-AC66-44A8-8587-44D153C89D32}</Project>
+      <Name>Fask.PrinterProviderWebService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\_SdileneProjekty_\WIN_CE\Fask.PrinterProvider\Fask.PrinterProvider.csproj">
+      <Project>{77D1BFD4-752D-4DE0-BB33-238A5E842168}</Project>
+      <Name>Fask.PrinterProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Graphics\Fask.Graphic.csproj">
+      <Project>{0CEB12E9-FDF8-4E05-975A-53B69EDF0BDA}</Project>
+      <Name>Fask.Graphic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fask.Parsing\Fask.Parsing.csproj">
+      <Project>{A5427780-D3D6-45D0-93E1-CB4842CDB1C6}</Project>
+      <Name>Fask.Parsing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MySystem\MySystem.csproj">
+      <Project>{748385ED-109B-40E7-806C-E307DF4E7D4D}</Project>
+      <Name>MySystem</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v3.5'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+</Project>

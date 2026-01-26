@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fask.SystemTime", "SystemTime\Fask.SystemTime.csproj", "{3AB15F02-46C2-41A9-A5F8-BAF95A0857B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fask.ISystemTime", "ISystemTime\Fask.ISystemTime.csproj", "{C711CE45-D5E3-474C-B2F2-DF2894822CAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AB15F02-46C2-41A9-A5F8-BAF95A0857B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AB15F02-46C2-41A9-A5F8-BAF95A0857B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AB15F02-46C2-41A9-A5F8-BAF95A0857B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AB15F02-46C2-41A9-A5F8-BAF95A0857B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C711CE45-D5E3-474C-B2F2-DF2894822CAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C711CE45-D5E3-474C-B2F2-DF2894822CAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C711CE45-D5E3-474C-B2F2-DF2894822CAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C711CE45-D5E3-474C-B2F2-DF2894822CAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

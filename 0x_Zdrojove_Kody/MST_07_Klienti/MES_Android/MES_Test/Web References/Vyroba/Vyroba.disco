@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost/MST_Win_Kom_Server_7_Dasenka/Vyroba.asmx?wsdl" docRef="http://localhost/MST_Win_Kom_Server_7_Dasenka/Vyroba.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost/MST_Win_Kom_Server_7_Dasenka/Vyroba.asmx" xmlns:q1="http://Vyroba.fask.cz/" binding="q1:VyrobaSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://localhost/MST_Win_Kom_Server_7_Dasenka/Vyroba.asmx" xmlns:q2="http://Vyroba.fask.cz/" binding="q2:VyrobaSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

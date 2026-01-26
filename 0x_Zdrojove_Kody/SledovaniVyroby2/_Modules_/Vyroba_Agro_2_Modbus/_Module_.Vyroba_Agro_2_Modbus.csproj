@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D604F632-5978-4E60-BB6A-F858ED1EDFA1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FASK.SledovaniVyroby.Module.Vyroba_Agro_Modbus</RootNamespace>
+    <AssemblyName>Vyroba_Agro_Modbus</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\!Build!\Vyroba\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\!Build!\Vyroba\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Advantech.Adam, Version=8.2.6.0, Culture=neutral, PublicKeyToken=c24039c75946be9c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\!Support!\Advantech\Advantech.Adam.dll</HintPath>
+    </Reference>
+    <Reference Include="Advantech.Common, Version=8.2.6.0, Culture=neutral, PublicKeyToken=c24039c75946be9c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\!Support!\Advantech\Advantech.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Advantech.Protocol, Version=8.2.6.0, Culture=neutral, PublicKeyToken=c24039c75946be9c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\!Support!\Advantech\Advantech.Protocol.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TabTipLib">
+      <HintPath>..\..\!Support!\TabTipLib\TabTipLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Utils.cs">
+      <Link>Utils.cs</Link>
+    </Compile>
+    <Compile Include="ADAM\ADAM_60XX.cs" />
+    <Compile Include="Classes\Cidlo.cs" />
+    <Compile Include="Classes\OSK.cs" />
+    <Compile Include="Classes\VyrPrikaz.cs" />
+    <Compile Include="Configuration\ConfigTable.cs">
+      <DependentUpon>ConfigTable.xsd</DependentUpon>
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Configuration\ConfigTable.Designer.cs">
+      <DependentUpon>ConfigTable.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Constants\Common.cs" />
+    <Compile Include="frmPosledniPaleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPosledniPaleta.Designer.cs">
+      <DependentUpon>frmPosledniPaleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyboardText.cs" />
+    <Compile Include="Classes\CidloScanner.cs" />
+    <Compile Include="Classes\Odvod.cs" />
+    <Compile Include="Classes\Sensor.cs" />
+    <Compile Include="Classes\DataVyroba.cs" />
+    <Compile Include="Classes\Database_AGRO2.cs" />
+    <Compile Include="Classes\NotoficationMail.cs" />
+    <Compile Include="Classes\Udalosti.cs" />
+    <Compile Include="Configuration\Config.cs" />
+    <Compile Include="DataSets\Data.cs">
+      <DependentUpon>Data.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Data.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Pytel.cs">
+      <DependentUpon>Pytel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Pytel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pytel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainAgroVyroba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainAgroVyroba.Designer.cs">
+      <DependentUpon>frmMainAgroVyroba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoForm.Designer.cs">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InformationUC.Designer.cs">
+      <DependentUpon>InformationUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyboardUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KeyboardUC.Designer.cs">
+      <DependentUpon>KeyboardUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Scan.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\Fask.Logging\Fask.Logging.csproj">
+      <Project>{89e8c070-4694-4f11-ab01-a674bf8b9f80}</Project>
+      <Name>Fask.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\_SdileneProjekty_\FASK.Palety_SSCC.SQLite\FASK.Palety_SSCC.SQLite.csproj">
+      <Project>{bd9f1b1f-4be5-463f-850f-21a87668dc33}</Project>
+      <Name>FASK.Palety_SSCC.SQLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Database\Database.csproj">
+      <Project>{53601A7B-F9FC-47DA-A99F-E8A47DDDF947}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Emailing\Emailing\Emailing.csproj">
+      <Project>{FB082FE8-178B-40D4-8A2B-36CE544A00C7}</Project>
+      <Name>Emailing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ErrorLog\ErrorLog.csproj">
+      <Project>{3151DDC5-73BA-4E7A-AD51-873EFBBA0FDC}</Project>
+      <Name>ErrorLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ICommDatabase\ICommDatabase.csproj">
+      <Project>{091B2F54-A19D-426A-9B7A-6B9065685BA2}</Project>
+      <Name>ICommDatabase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IScannerProvider\IScannerProvider.csproj">
+      <Project>{B24889A4-2446-48F8-A99E-670A2D4FE3CB}</Project>
+      <Name>IScannerProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Logging\Logging.csproj">
+      <Project>{8B038B30-3962-410F-A306-1DA2CDC74266}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ScannerFactory\ScannerFactory.csproj">
+      <Project>{74824146-2E98-4DA6-878C-846D918B4A37}</Project>
+      <Name>ScannerFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ScannerProviderSerialPortQX830\ScannerProviderSerialPortQX830.csproj">
+      <Project>{E7E4DAAA-1B15-4730-AD70-9D60F3D7B294}</Project>
+      <Name>ScannerProviderSerialPortQX830</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TouchscreenKeyboard\TouchscreenKeyboard\TouchscreenKeyboard.csproj">
+      <Project>{94070B1D-6DE4-4D45-B2B9-5DA09D0E15C9}</Project>
+      <Name>TouchscreenKeyboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VyrobaIfc\VyrobaIfc.csproj">
+      <Project>{AEF304CD-C27C-46A4-ACA9-D3EBECAF0F5F}</Project>
+      <Name>VyrobaIfc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmMainAgroVyroba.resx">
+      <DependentUpon>frmMainAgroVyroba.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPosledniPaleta.resx">
+      <DependentUpon>frmPosledniPaleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoForm.resx">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformationUC.resx">
+      <DependentUpon>InformationUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeyboardUC.resx">
+      <DependentUpon>KeyboardUC.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Configuration\ConfigTable.xsc">
+      <DependentUpon>ConfigTable.xsd</DependentUpon>
+    </None>
+    <None Include="Configuration\ConfigTable.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConfigTable.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Configuration\ConfigTable.xss">
+      <DependentUpon>ConfigTable.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Pytel.xsc">
+      <DependentUpon>Pytel.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Pytel.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pytel.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\Pytel.xss">
+      <DependentUpon>Pytel.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pytle.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="ClassDiagram.cd" />
+    <None Include="DataSets\Data.xsc">
+      <DependentUpon>Data.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Data.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Data.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\Data.xss">
+      <DependentUpon>Data.xsd</DependentUpon>
+    </None>
+    <Content Include="ToDo.txt" />
+    <Content Include="Vyroba_Agro_Readme_Modbus.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+    <Folder Include="_Documentation_\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

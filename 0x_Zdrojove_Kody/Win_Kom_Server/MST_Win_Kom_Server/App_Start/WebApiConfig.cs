@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.Http;
+using System.Web.Http.Cors;
+
+namespace Fask.MST_W_Server
+{
+    public static class WebApiConfig
+    {
+        // pro spravnu funkčnost musí byt WebDAV na IIS NEnainstalovano
+
+        public static void Register(HttpConfiguration config)
+        {
+            // Web API configuration and services
+
+            //var cors = new EnableCorsAttribute("*", "*", "*");
+            //config.EnableCors(cors);
+
+            // Web API routes
+            config.MapHttpAttributeRoutes();
+
+            config.Formatters.XmlFormatter.SupportedMediaTypes.Add(new System.Net.Http.Headers.MediaTypeHeaderValue("multipart/form-data"));
+
+            config.Routes.MapHttpRoute(
+                name: "DefaultApi",
+                routeTemplate: "api/{controller}/{id}",
+                defaults: new { id = RouteParameter.Optional }
+            );
+        }
+    }
+}

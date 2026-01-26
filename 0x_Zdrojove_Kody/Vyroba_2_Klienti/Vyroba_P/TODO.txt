@@ -1,0 +1,20 @@
+﻿22.11.2017 JiS
+--------------
+Pokud neexistuje zadny datovy soubor a webovy server je nedostupny, pak je vyhozena neosetrena vyjimka ...
+
+19.2.2015 PeV
+-------------------
+- otestovat historii u korekce spojene s vyrobou
+
+13.2.2015 PeV
+-------------------
+- zmenit text Prihlasit pracovnika(smenu)/Odhlasit pracovnika(smenu) podle toho, co jezrovna aktualni
+
+11.2.2015 PeV
+-------------------
+- predelat nacitani modulu (s moznosti konfiguracne menit)
+
+10.12.2014 PeV
+-------------------
+- v případě nedostupnosti SQL serveru (když je komunikační server dostupný) nedojde k uložení dat a přitom se klientovi vrátí, že data byla uložena bez problému (takže je klient smaže)
+- při kliknutí na korekce se nenačítají korekce z lokálního umístění (pouze ze serveru). Při offline režimu se tedy žádné nezobrazí. Chyba??

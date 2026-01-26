@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost/MST_Win_Kom_Server_7_Dasenka/Expedice.asmx?schema=ExpediceBaleni" filename="ExpediceBaleni.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost/MST_Win_Kom_Server_7_Dasenka/Expedice.asmx?schema=Expedice" filename="Expedice.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost/MST_Win_Kom_Server_7_Dasenka/Expedice.asmx?schema=ExpediceBaleniHlavicky" filename="ExpediceBaleniHlavicky.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost/MST_Win_Kom_Server_7_Dasenka/Expedice.asmx?wsdl" filename="Expedice.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://localhost/MST_Win_Kom_Server_7_Dasenka/Expedice.asmx?disco" filename="Expedice.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost/MST_Win_Kom_Server_7_Dasenka/Expedice.asmx?schema=ExpediceHlavicky" filename="ExpediceHlavicky.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

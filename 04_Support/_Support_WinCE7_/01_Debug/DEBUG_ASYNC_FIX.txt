@@ -1,0 +1,14 @@
+
+Kde provere .reg zmenu :   [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETCompactFramework]
+Jakou provede zmenu    :   "JITCodeBufferSizeLimitEnabled"=dword:1
+
+
+The above is the key needed for resolving the debugger issue over ActiveSync
+
+Zdroj:
+https://developer.zebra.com/thread/3000 
+
+Jak aplikovat do Terminalu :
+1. Nakopirovat soubor 'DEBUG_ASYNC_FIX.reg' do Terminalu "\Application\"
+2. proveset studenej restart (Cold-Boot (1-9-POWER)) pro zmenu nastavena
+3. Enjoy Debuging :)

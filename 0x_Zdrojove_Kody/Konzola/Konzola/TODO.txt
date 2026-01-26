@@ -1,0 +1,131 @@
+﻿
+13.5.2020
+OK Do TaskBaru přidat nazev Databaze na kterou je konzola nasmerovana...
+
+19.6.2019
+Licence...
+
+
+17.6.2019
+Ukladani filtru pro Formy :
+-FormZdrojePohybList
+-FormStavSkladuList
+-FormStavSkladuHistorieList
+-FormReportSestava
+-FormProductionList
+-FormProductionSourecesList
+
+
+
+
+29.5.2019
+OK - Udelat ABSTRACT class pro filtre
+
+
+
+19.12.2018  TaD
+-------------------
+-Lokalizace AKA PavEX, ale ukladani textu  do resource, a možnost menit jazik v konfiguraci anebo za behu aplikace? 
+
+
+Vyroba
+- kompletne prepsat, implementovat a zacit vyuzivat providera
+- !! transakce pridat !!
+- zbavit se knihovny 'Production.DataServices' (souvisi s providerem)
+Ukolovani
+- kompletne prepsat, implementovat a zacit vyuzivat providera
+Servis
+- nacitat data v jinem vlakne
+Formulare *List, *Select sjednotit do jednoho (viz napr. Ciselniky\FormZboziList, Ciselniky\FormUzivateleList2, ...)
+Obecne
+- sjednotit nazvoslovi (zbozi x material, ...) ve vsech formularich
+-> idealne lokalizace aplikace
+- kompletne predelat vzhled aplikace
+- opravneni k aplikaci??
+Lokacni mechanismus
+- logovat provedene pohyby?? (do pohybu se nezaznamenava ID uzivatele, ktery pohyb provedl)
+
+11.8.2016
+-------------------
+- FormUzivateleList a FormUzivateleSelect odstranit ... zkontrolovat, zdali se uvnitr formularu neprovadi jeste nejaka jina operace a pripadne provest doimplementaci, tak aby se pouzival pouze FormUzivateleList2
+
+15.7.2016
+-------------------
+- pohled na historii pohybu lokacniho mechanismu
+
+9.6.2016
+-------------------
+- po insertu/editaci pouze smazat/aktualizovat vybrany radek z datasetu a neprovadet znovunacteni vsech zaznamu
+
+27.5.2016
+-------------------
+Exporty
+- konfiguraci rozsirit o cilovy adresar, pripadne defaultni nazev souboru??
+
+17.5.2016
+-------------------
+- spojit formulare *List.cs a *Select.cs do jednoho + pridat filtry 
+- u formulare variant lokaci si pamatovat oznaceny radek po insertu, updatu, ...
+
+10.5.2016
+-------------------
+- export do excelu, pridat nejaky progress dialog + export v oddelenem vlakne
+
+12.4.2016
+-------------------
+- kompletne zmenit vzhled aplikace
+
+11.4.2016
+-------------------
+- validovat maximalni mozny pocet znaku (Servis, Vyroba, Ukolovani, ...)
+- nevracet pomoci providera datasety, ale pouze datatable??
+- konfiguracne moznost povolovat/zakazovat urcite ciselniky, ...
+- pouzivat SQL dataset pro inserty, updaty
+Servis
+- pridat kontrolu existence stavu/cinnosti pri vytvareni vazeb
+Sklady
+- dodelat moznost editace, pridani a mazani skladu, stredisek a zbozi
+
+4.3.2016
+-------------------
+- lokalizace aplikace (moznost prejmenovani tlacitek, ...)
+
+5.1.2016
+-------------------
+- editace Production - pokud jsou zakazky v soubehu, tak zakazat, aby slo cislo zakazky (sopnumbe) zmenit na stejne, ktere jiz je v soubehu
+
+6.11.2015
+-------------------
+- vytvorit providery pro Ukolovani a Vyrobu
+
+13.5.2015
+-------------------
+- opravneni aplikace upravit/pridat/vyresit ... momentalne je ve strukturach a nepouziva se az na ADM, ktery ma pristup do konfigurace aplikace
+
+25.2.2015 PeV
+-------------------
+- editace Production - pridat kontrolu casu souvisejici korekce s zakazkou (aby navoleny cas patril do dane zakazky)
+- kontrola podle SOUBEHGUID, jestli daná zakázka již není přiřazena ...
+- ukoncit vice zakazek/korekci soucasne
+
+18.2.2015 PeV
+-------------------
+- odstraneni VPH v kaskade nesmaze zaznamy z VPP
+
+11.2.2015 PeV
+-------------------
+- nacitat data v jinem vlakne
+
+3.2.2015 PeV
+-------------------
+- pridat prubeznou aktualizaci dat
+
+2.2.2015 PeV
+-------------------
+- pri zadavani float (timeprep, timeunit) odstranit replace znaku (desetinna carka za tecku) a upravit kod
+- updaty/inserty,... delat primo nad datasetem a odstranit refresh datagridu, kdy se stahnou znova veskera data
+
+28.1.2015 PeV
+-------------------
+Production
+- zaznamy z VPH mazat v kaskade

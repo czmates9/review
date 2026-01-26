@@ -1,0 +1,15 @@
+﻿
+16.4.2019 TaD v2.0
+-Prenesena Vyroba a Ukolovani do providera(sem)
+-Vytvořena nova čast Vyroby. Planovani vyroby
+* kde z OBJ(objednávky) vytvoří predlohu do VPP a VPH pro vyrobu
+-Vytvořenataky možnost odvedeni vyroby, kde vytvoří vydejku ma materialy a příjemku na hotový výrobek.
+
+
+
+
+18.6.2018 TaD v1.1
+
+- Upravena pri exportovani/importovani (zaleži na uhlu pohledu) cena ktera je pridava do prijemky a vydejky
+-pri vydejke je cena vždy 0
+-pri Prijemke je cena počitavana s spotrebovaneho materialu

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+  <string name="WeightCode">Váhový kód: </string>
+  <string name="WeightCode_12">Váhový kód (Vlach): </string>
+  <string name="SABNeznamyKod">Neznámý kód (SAB): </string>
+  <string name="BarcodeSlashSarze">Č. Kód / šarže: </string>
+  <string name="FenixBarcodeObal">Barcode Obal (Fenix): </string>
+  <string name="Fenix_HIBC">HIBC (Fenix): </string>
+  <string name="GS1_FASK">GS1 (FASK): </string>
+  <string name="SAB_AustralianNorm">Australian Norm (SAB): </string>
+  <string name="SAB_GS1_Zavorky">GS1 Závorky AI (SAB): </string>
+  <string name="SAB_Balton">Balton prasárna (SAB): </string>
+
+  <string name="SaveBtn">Pokračovat</string>
+
+
+
+  <string name="nameScanKod">Nasnímat kód</string>
+  <string name="nameShowKod">Nasnímáno</string>
+  <string name="nameKonfigurace">Konfigurace</string>
+
+  <string name="ExampleText">012345678901234567890123456789012345678901234567890123456789</string>
+  <string name="ExampleTextEmpty"></string>
+  <string name="TypeCode">Typ kódu:</string>
+  <string name="Code">Nasnímaný kód:</string>
+
+</resources>

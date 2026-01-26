@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+  <!--
+  <Scanner Type="MC3090" Path="/Storage Card/MST_W_Agro_Inventura_Rikov/Fask.ScannerProviderMC3090.dll" />
+  <Scanner Type="MC3090" Path="\Storage Card\MST_W_Agro_Inventura_Rikov\Fask.ScannerProviderMC3090.dll" />
+  <Scanner Type="MC3090" Path="Fask.ScannerProviderMC3090.dll" />
+  <Scanner Type="SerialPort" Path="ScannerProviderSerialPort.dll" />
+  <Scanner Type="SerialPort" Path="ScannerProviderSerialPortQX830.dll" />
+  -->
+    <Scanner Type="SerialPort" Path="ScannerProviderSerialPort.dll" />
+</Settings>

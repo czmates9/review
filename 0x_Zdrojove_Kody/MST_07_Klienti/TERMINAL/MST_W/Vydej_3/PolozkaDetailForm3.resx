@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ok_but.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ok_but.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="ok_but.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 246</value>
+  </data>
+  <data name="ok_but.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 35</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ok_but.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="ok_but.Text" xml:space="preserve">
+    <value>Zpět</value>
+  </data>
+  <data name="&gt;&gt;ok_but.Name" xml:space="preserve">
+    <value>ok_but</value>
+  </data>
+  <data name="&gt;&gt;ok_but.Type" xml:space="preserve">
+    <value>Fask.Graphic.GraphicButton, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ok_but.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ok_but.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="df_sscccode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="df_sscccode.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt</value>
+  </data>
+  <data name="df_sscccode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 68</value>
+  </data>
+  <data name="df_sscccode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 20</value>
+  </data>
+  <data name="df_sscccode.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="&gt;&gt;df_sscccode.Name" xml:space="preserve">
+    <value>df_sscccode</value>
+  </data>
+  <data name="&gt;&gt;df_sscccode.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;df_sscccode.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;df_sscccode.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="snimatSW_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt</value>
+  </data>
+  <data name="snimatSW_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="snimatSW_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 20</value>
+  </data>
+  <data name="snimatSW_l.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="&gt;&gt;snimatSW_l.Name" xml:space="preserve">
+    <value>snimatSW_l</value>
+  </data>
+  <data name="&gt;&gt;snimatSW_l.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;snimatSW_l.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;snimatSW_l.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="datumnasklade_l.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="datumnasklade_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt</value>
+  </data>
+  <data name="datumnasklade_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 68</value>
+  </data>
+  <data name="datumnasklade_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 20</value>
+  </data>
+  <data name="datumnasklade_l.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="&gt;&gt;datumnasklade_l.Name" xml:space="preserve">
+    <value>datumnasklade_l</value>
+  </data>
+  <data name="&gt;&gt;datumnasklade_l.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;datumnasklade_l.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;datumnasklade_l.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="snimatDV_l.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="snimatDV_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt</value>
+  </data>
+  <data name="snimatDV_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>185, 0</value>
+  </data>
+  <data name="snimatDV_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="snimatDV_l.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;snimatDV_l.Name" xml:space="preserve">
+    <value>snimatDV_l</value>
+  </data>
+  <data name="&gt;&gt;snimatDV_l.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;snimatDV_l.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;snimatDV_l.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="nasklade_l.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="nasklade_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt</value>
+  </data>
+  <data name="nasklade_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>185, 20</value>
+  </data>
+  <data name="nasklade_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="nasklade_l.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="&gt;&gt;nasklade_l.Name" xml:space="preserve">
+    <value>nasklade_l</value>
+  </data>
+  <data name="&gt;&gt;nasklade_l.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;nasklade_l.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;nasklade_l.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="sklad_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt</value>
+  </data>
+  <data name="sklad_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 20</value>
+  </data>
+  <data name="sklad_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 20</value>
+  </data>
+  <data name="sklad_l.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="&gt;&gt;sklad_l.Name" xml:space="preserve">
+    <value>sklad_l</value>
+  </data>
+  <data name="&gt;&gt;sklad_l.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;sklad_l.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;sklad_l.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="snimatSN_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt</value>
+  </data>
+  <data name="snimatSN_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 0</value>
+  </data>
+  <data name="snimatSN_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 20</value>
+  </data>
+  <data name="snimatSN_l.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="&gt;&gt;snimatSN_l.Name" xml:space="preserve">
+    <value>snimatSN_l</value>
+  </data>
+  <data name="&gt;&gt;snimatSN_l.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;snimatSN_l.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;snimatSN_l.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="davka_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt</value>
+  </data>
+  <data name="davka_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 20</value>
+  </data>
+  <data name="davka_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 20</value>
+  </data>
+  <data name="davka_l.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="&gt;&gt;davka_l.Name" xml:space="preserve">
+    <value>davka_l</value>
+  </data>
+  <data name="&gt;&gt;davka_l.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;davka_l.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;davka_l.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lbl_note.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lbl_note.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt, style=Bold</value>
+  </data>
+  <data name="lbl_note.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 40</value>
+  </data>
+  <data name="lbl_note.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 28</value>
+  </data>
+  <data name="lbl_note.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;lbl_note.Name" xml:space="preserve">
+    <value>lbl_note</value>
+  </data>
+  <data name="&gt;&gt;lbl_note.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbl_note.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;lbl_note.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 158</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 89</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ItemNmbr_l.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="ItemNmbr_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt</value>
+  </data>
+  <data name="ItemNmbr_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 138</value>
+  </data>
+  <data name="ItemNmbr_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 20</value>
+  </data>
+  <data name="ItemNmbr_l.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="&gt;&gt;ItemNmbr_l.Name" xml:space="preserve">
+    <value>ItemNmbr_l</value>
+  </data>
+  <data name="&gt;&gt;ItemNmbr_l.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ItemNmbr_l.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;ItemNmbr_l.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ItemDesc_l.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="ItemDesc_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt</value>
+  </data>
+  <data name="ItemDesc_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 100</value>
+  </data>
+  <data name="ItemDesc_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 38</value>
+  </data>
+  <data name="ItemDesc_l.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ItemDesc_l.Name" xml:space="preserve">
+    <value>ItemDesc_l</value>
+  </data>
+  <data name="&gt;&gt;ItemDesc_l.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ItemDesc_l.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;ItemDesc_l.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="baleni_l.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="baleni_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt</value>
+  </data>
+  <data name="baleni_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 80</value>
+  </data>
+  <data name="baleni_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 20</value>
+  </data>
+  <data name="baleni_l.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="&gt;&gt;baleni_l.Name" xml:space="preserve">
+    <value>baleni_l</value>
+  </data>
+  <data name="&gt;&gt;baleni_l.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;baleni_l.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;baleni_l.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="CZ_CarKod_l.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="CZ_CarKod_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt</value>
+  </data>
+  <data name="CZ_CarKod_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 60</value>
+  </data>
+  <data name="CZ_CarKod_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 20</value>
+  </data>
+  <data name="CZ_CarKod_l.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="&gt;&gt;CZ_CarKod_l.Name" xml:space="preserve">
+    <value>CZ_CarKod_l</value>
+  </data>
+  <data name="&gt;&gt;CZ_CarKod_l.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;CZ_CarKod_l.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;CZ_CarKod_l.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="nacist_l.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="nacist_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt</value>
+  </data>
+  <data name="nacist_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 40</value>
+  </data>
+  <data name="nacist_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 20</value>
+  </data>
+  <data name="nacist_l.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;nacist_l.Name" xml:space="preserve">
+    <value>nacist_l</value>
+  </data>
+  <data name="&gt;&gt;nacist_l.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;nacist_l.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;nacist_l.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="nacteno_l.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="nacteno_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt</value>
+  </data>
+  <data name="nacteno_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 20</value>
+  </data>
+  <data name="nacteno_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 20</value>
+  </data>
+  <data name="nacteno_l.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="&gt;&gt;nacteno_l.Name" xml:space="preserve">
+    <value>nacteno_l</value>
+  </data>
+  <data name="&gt;&gt;nacteno_l.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;nacteno_l.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;nacteno_l.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lokace_l.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lokace_l.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt</value>
+  </data>
+  <data name="lokace_l.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lokace_l.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 20</value>
+  </data>
+  <data name="lokace_l.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;lokace_l.Name" xml:space="preserve">
+    <value>lokace_l</value>
+  </data>
+  <data name="&gt;&gt;lokace_l.Type" xml:space="preserve">
+    <value>Fask.Graphic.DataField, Fask.Graphic, Version=1.11.5777.19059, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lokace_l.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lokace_l.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 246</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.FormFactorShadowProperty" xml:space="preserve">
+    <value>WEBPAD</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Skin" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>285, 281</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Detail položky</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PolozkaDetailForm3</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

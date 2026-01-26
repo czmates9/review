@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://Informations.fask.cz/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://Informations.fask.cz/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba informací</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Informations.fask.cz/">
+      <s:element name="Command1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="param1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="param2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Command1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Command1Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MnozstviNaSklade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ItemNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MnozstviNaSkladeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MnozstviNaSkladeResult" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MnozstviNaSklade_Itemnumber_Location">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ItemNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MnozstviNaSklade_Itemnumber_LocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MnozstviNaSklade_Itemnumber_LocationResult" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetailItemnumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="doklad" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetailItemnumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetailItemnumberResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="body" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendMailResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Command1SoapIn">
+    <wsdl:part name="parameters" element="tns:Command1" />
+  </wsdl:message>
+  <wsdl:message name="Command1SoapOut">
+    <wsdl:part name="parameters" element="tns:Command1Response" />
+  </wsdl:message>
+  <wsdl:message name="MnozstviNaSkladeSoapIn">
+    <wsdl:part name="parameters" element="tns:MnozstviNaSklade" />
+  </wsdl:message>
+  <wsdl:message name="MnozstviNaSkladeSoapOut">
+    <wsdl:part name="parameters" element="tns:MnozstviNaSkladeResponse" />
+  </wsdl:message>
+  <wsdl:message name="MnozstviNaSklade_Itemnumber_LocationSoapIn">
+    <wsdl:part name="parameters" element="tns:MnozstviNaSklade_Itemnumber_Location" />
+  </wsdl:message>
+  <wsdl:message name="MnozstviNaSklade_Itemnumber_LocationSoapOut">
+    <wsdl:part name="parameters" element="tns:MnozstviNaSklade_Itemnumber_LocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="DetailItemnumberSoapIn">
+    <wsdl:part name="parameters" element="tns:DetailItemnumber" />
+  </wsdl:message>
+  <wsdl:message name="DetailItemnumberSoapOut">
+    <wsdl:part name="parameters" element="tns:DetailItemnumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMailSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMail" />
+  </wsdl:message>
+  <wsdl:message name="SendMailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="InformationsServiceSoap">
+    <wsdl:operation name="Command1">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vrací dataset z uložené procedury definované v konfiguraci pod hodnotou přijatou v parametru příkazu. Uložená procedura na serveru SQL vyžaduje 2 parametry řetězce a vrací výsledek tabulky SQL.</wsdl:documentation>
+      <wsdl:input message="tns:Command1SoapIn" />
+      <wsdl:output message="tns:Command1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MnozstviNaSklade">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vrací množství zboží na skladě. Je závislé na uložené proceduře s jedním parametrem typu char, který obsahuje interní číslo zboží.</wsdl:documentation>
+      <wsdl:input message="tns:MnozstviNaSkladeSoapIn" />
+      <wsdl:output message="tns:MnozstviNaSkladeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MnozstviNaSklade_Itemnumber_Location">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda která vrací množství položky s interním číslem na skladu. Závislé na uložené proceduře v db servereru(parametr1:itemnumber[char], parametr2:location[char])</wsdl:documentation>
+      <wsdl:input message="tns:MnozstviNaSklade_Itemnumber_LocationSoapIn" />
+      <wsdl:output message="tns:MnozstviNaSklade_Itemnumber_LocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetailItemnumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metoda pro načteni deailu polozky dle ID, podle konfigurace webConfig DetailItemnumber + parametry</wsdl:documentation>
+      <wsdl:input message="tns:DetailItemnumberSoapIn" />
+      <wsdl:output message="tns:DetailItemnumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <wsdl:input message="tns:SendMailSoapIn" />
+      <wsdl:output message="tns:SendMailSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InformationsServiceSoap" type="tns:InformationsServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Command1">
+      <soap:operation soapAction="http://Informations.fask.cz/Command1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MnozstviNaSklade">
+      <soap:operation soapAction="http://Informations.fask.cz/MnozstviNaSklade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MnozstviNaSklade_Itemnumber_Location">
+      <soap:operation soapAction="http://Informations.fask.cz/MnozstviNaSklade_Itemnumber_Location" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailItemnumber">
+      <soap:operation soapAction="http://Informations.fask.cz/DetailItemnumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <soap:operation soapAction="http://Informations.fask.cz/SendMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="InformationsServiceSoap12" type="tns:InformationsServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Command1">
+      <soap12:operation soapAction="http://Informations.fask.cz/Command1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MnozstviNaSklade">
+      <soap12:operation soapAction="http://Informations.fask.cz/MnozstviNaSklade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MnozstviNaSklade_Itemnumber_Location">
+      <soap12:operation soapAction="http://Informations.fask.cz/MnozstviNaSklade_Itemnumber_Location" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailItemnumber">
+      <soap12:operation soapAction="http://Informations.fask.cz/DetailItemnumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <soap12:operation soapAction="http://Informations.fask.cz/SendMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InformationsService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Služba informací</wsdl:documentation>
+    <wsdl:port name="InformationsServiceSoap" binding="tns:InformationsServiceSoap">
+      <soap:address location="http://localhost/MST_Win_Kom_Server_7_Cipisek/Informations.asmx" />
+    </wsdl:port>
+    <wsdl:port name="InformationsServiceSoap12" binding="tns:InformationsServiceSoap12">
+      <soap12:address location="http://localhost/MST_Win_Kom_Server_7_Cipisek/Informations.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

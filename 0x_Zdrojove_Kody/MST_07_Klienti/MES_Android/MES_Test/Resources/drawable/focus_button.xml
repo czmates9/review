@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item android:bottom="2dp" android:left="2dp">
+    <shape>
+
+      <!-- farba tlacitka od hora dole prechod-->
+      <gradient
+          android:startColor="#AA0000"
+          android:endColor="#7C97C1"
+          android:angle="270" />
+
+      <!--ramecek okolo tlacitka-->
+      <stroke
+          android:width="1dp"
+          android:color="#dcdcdc" />
+
+      <!--zaobleni rohu okolo tlacitka-->
+      <corners
+          android:radius="4dp" />
+
+      <padding
+          android:left="5dp"
+          android:top="5dp"
+          android:right="5dp"
+          android:bottom="5dp" />
+
+    </shape>
+
+  </item>
+
+</selector>

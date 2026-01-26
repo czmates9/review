@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <appSettings>
+    <add key="ScannerType" value="Symbol_MC3000" />
+    <add key="TimeOut" value="500000" />
+    <add key="Adresa_API" value="46.234.106.158:8191" />
+    <add key="isHTTPS" value="True" />
+    <add key="Autorizace_API" value="MDox" />
+    <add key="API_konstant" value="api" />
+    <add key="TimerUploadInterval" value="100000" />
+    <add key="TimerDownloadInterval" value="600000" />
+    <add key="Loging" value="True" />
+    <add key="UEventSmenaEnabled" value="False" />
+    <add key="TerminalID" value="14" />
+    <add key="UEventSmenaLogin" value="1" />
+    <add key="UEventSmenaLogout" value="2" />
+    <add key="UEventPracovnikPrihlaseni" value="3" />
+    <add key="UEventPracovnikOdhlaseni" value="4" />
+    <add key="LastDownload" value="25.10.2021 17:22:54" />
+    <add key="LoginUserTimeOut" value="09:00:00" />
+    <add key="StopPripravaStartVyrobaIhned" value="True" />
+    <add key="VyberZakazkyPoPrihlaseni" value="True" />
+    <add key="ProductionOnlineTimeout" value="5000" />
+    <add key="Production_UserMaxTimeSpanNoAction" value="00:10:00" />
+    <add key="Production_MachineID_Preset" value="1" />
+    <add key="LastProductionUserID" value="1" />
+    <add key="UEventPracovnikLoginEnabled" value="True" />
+    <add key="LastProductionDateTime" value="25.10.2021 17:24:21" />
+    <add key="MachineID" value="" />
+    <add key="Production_Destination_SKLID_Enter" value="False" />
+    <add key="Production_Destination_SKLID" value="36" />
+    <add key="Production_Destination_LOCNCODE_Enter" value="False" />
+    <add key="Production_Destination_LOCNCODE" value="" />
+    <add key="Production_Material_Enter" value="False" />
+    <add key="Production_Material_Source_SKLID_Enter" value="False" />
+    <add key="Production_Material_Source_SKLID" value="" />
+    <add key="Production_Material_Source_LOCNCODE_Enter" value="False" />
+    <add key="Production_Material_Source_LOCNCODE" value="" />
+    <add key="Production_Material_PredVyrobou" value="False" />
+    <add key="Production_Material_OperacePotvrzeniButton" value="False" />
+    <add key="Production_Material_PoVyrobe" value="False" />
+    <add key="Production_Sarze_SN_Enable" value="false" />
+    <add key="Production_Tisk_Etiketa_Enable" value="False" />
+    <add key="Odvadeni_PotvrzeniOperace" value="False" />
+    <add key="Odvadeni_Prehled" value="True" />
+    <add key="Odvadeni_CasNecinnosti" value="False" />
+    <add key="Odvadeni_production_onlyPositive" value="True" />
+    <add key="Odvadeni_production_NeupozornovatNaVetsiPocet" value="True" />
+    <add key="Vyroba_Online" value="False" />
+    <add key="OdvadeniSledovatCastecneOdvody" value="False" />
+    <add key="StopVyrobaPoStartVyrobaIhned" value="False" />
+    <add key="TiskBaleniSablona" value="balenivyroba.prn" />
+    <add key="TiskBaleniTiskarna" value="Zebra ZT230 IP196" />
+    <add key="TiskPotvrzovaniPoctuVytisku" value="True" />
+    <add key="TiskPocetVytisku" value="1" />
+    <add key="TiskWebServiceAddress" value="http://192.168.1.121:8121" />
+    <add key="TiskWebServiceTimeOut" value="10000" />
+    <add key="PovolParsovani" value="False" />
+    <add key="PovolParsovani_WeightCode_12" value="False" />
+    <add key="PovolParsovani_WeightCode" value="False" />
+    <add key="ServerAccessCertificateTrust" value="TrustAll" />
+    <add key="ServerAccess" value="Anonymous" />
+    <add key="ServerAccessUsername" value="" />
+    <add key="ServerAccessPassword" value="" />
+    <add key="ServerAccessDomain" value="" />
+    <add key="ServerAccessPreauthenticate" value="False" />
+    <add key="ServerAccessAllowRedirection" value="False" />
+    <add key="ServerAccessAllowDecompression" value="False" />
+    <add key="TiskOneWayPrint" value="False" />
+    <add key="UdalostiStatusDescWidth" value="70" />
+    <add key="UdalostiStatusIDWidth" value="50" />
+    <add key="UdalostiStatusRowHeight" value="23" />
+  </appSettings>
+</configuration>

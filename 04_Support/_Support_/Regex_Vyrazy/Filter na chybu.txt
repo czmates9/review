@@ -1,0 +1,16 @@
+
+regularny vyraz pro
+
+
+
+30. 3. 2021 10:05:53 : Provider v Informations.asmx > 'MnozstviNaSklade(string ItemNumber)' nenastaven.
+
+
+\d+[.]\s\d+[.]\s\d+\s\d+[:]\d+[:]\d+\s[:]\s[a-zA-Z\s.>'()]+
+
+
+
+
+Anebo ked chyba začina Prov
+
+\d+[.]\s\d+[.]\s\d+\s\d+[:]\d+[:]\d+\s[:]\s[P][r][o][v][a-zA-Z\s.>'()]+

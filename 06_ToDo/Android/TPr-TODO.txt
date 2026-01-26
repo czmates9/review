@@ -1,0 +1,19 @@
+smazání dávky pridat prompt - done
+
+online kontrola StaticMethods.OnlineCheck()
+
+otocení zabije appku - done (login, vyberDavky)
+
+vertikální cára v tabulce
+
+pridat global. promenné do configu (inventura1ZadaniLocncodePamatovatPosledni, inventura1ZadaniLocncodeJednou) - done
+
+prístup do waitDialogu z hl. vlákna - pro pridání % nacítání atd.
+
+stažená a lokální dávka se zobrazují jako jedna v tabulce
+
+problém s odesíláním dávky - done
+
+ListViewAdapter_DynmaicallyTableTest_dataSet - v c'toru predávaný paramter string pro urcení lokalizace tabulky
+
+barevne oddelit dávky které jsou na sql/lokální

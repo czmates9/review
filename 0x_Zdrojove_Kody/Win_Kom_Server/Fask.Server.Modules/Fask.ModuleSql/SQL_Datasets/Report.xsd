@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Report" targetNamespace="http://tempuri.org/Report.xsd" xmlns:mstns="http://tempuri.org/Report.xsd" xmlns="http://tempuri.org/Report.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Report" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="Report" msprop:Generator_UserDSName="Report" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Polozka" msprop:Generator_UserTableName="Polozka" msprop:Generator_RowDeletedName="PolozkaRowDeleted" msprop:Generator_TableClassName="PolozkaDataTable" msprop:Generator_RowChangedName="PolozkaRowChanged" msprop:Generator_RowClassName="PolozkaRow" msprop:Generator_RowChangingName="PolozkaRowChanging" msprop:Generator_RowEvArgName="PolozkaRowChangeEvent" msprop:Generator_RowEvHandlerName="PolozkaRowChangeEventHandler" msprop:Generator_TablePropName="Polozka" msprop:Generator_TableVarName="tablePolozka" msprop:Generator_RowDeletingName="PolozkaRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Kategorie" msprop:Generator_UserColumnName="Kategorie" msprop:Generator_ColumnPropNameInRow="Kategorie" msprop:Generator_ColumnVarNameInTable="columnKategorie" msprop:Generator_ColumnPropNameInTable="KategorieColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="I_Cislo" msprop:Generator_UserColumnName="I_Cislo" msprop:Generator_ColumnPropNameInRow="I_Cislo" msprop:Generator_ColumnVarNameInTable="columnI_Cislo" msprop:Generator_ColumnPropNameInTable="I_CisloColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MnozstviEvidovane" msprop:Generator_UserColumnName="MnozstviEvidovane" msprop:Generator_ColumnPropNameInRow="MnozstviEvidovane" msprop:Generator_ColumnVarNameInTable="columnMnozstviEvidovane" msprop:Generator_ColumnPropNameInTable="MnozstviEvidovaneColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MnozstviSkutecne" msprop:Generator_UserColumnName="MnozstviSkutecne" msprop:Generator_ColumnPropNameInRow="MnozstviSkutecne" msprop:Generator_ColumnVarNameInTable="columnMnozstviSkutecne" msprop:Generator_ColumnPropNameInTable="MnozstviSkutecneColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Nazev" msprop:Generator_UserColumnName="Nazev" msprop:Generator_ColumnPropNameInRow="Nazev" msprop:Generator_ColumnVarNameInTable="columnNazev" msprop:Generator_ColumnPropNameInTable="NazevColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_Inv" msprop:Generator_UserColumnName="ID_Inv" msprop:Generator_ColumnPropNameInRow="ID_Inv" msprop:Generator_ColumnVarNameInTable="columnID_Inv" msprop:Generator_ColumnPropNameInTable="ID_InvColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Kancl" msprop:Generator_UserColumnName="Kancl" msprop:Generator_ColumnPropNameInRow="Kancl" msprop:Generator_ColumnVarNameInTable="columnKancl" msprop:Generator_ColumnPropNameInTable="KanclColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Kancl_novy" msprop:Generator_UserColumnName="Kancl_novy" msprop:Generator_ColumnPropNameInRow="Kancl_novy" msprop:Generator_ColumnVarNameInTable="columnKancl_novy" msprop:Generator_ColumnPropNameInTable="Kancl_novyColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Kancl_nazev" msprop:Generator_UserColumnName="Kancl_nazev" msprop:Generator_ColumnPropNameInRow="Kancl_nazev" msprop:Generator_ColumnVarNameInTable="columnKancl_nazev" msprop:Generator_ColumnPropNameInTable="Kancl_nazevColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

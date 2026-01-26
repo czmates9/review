@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="yes"?>
+<Emailing>
+  <!-- 
+    Povinne udaje - pri jejich absenci je vyvolana vyjimka. 
+    I kdyz je je pak v programu mozne cist ci menit.
+  -->
+  <SmtpServer>mail.websupport.sk</SmtpServer>
+  <Port>25</Port>
+  <SenderEmailAdress>dohled@fask.cz</SenderEmailAdress>
+  <SenderName>FASK EMAIL SERVICE</SenderName>
+  <SenderLogin>dohled@fask.cz</SenderLogin>
+  <SenderPassword>69f793f9</SenderPassword>
+
+
+  <Recipients>
+    <RecipientEmailAdress>11111111@fask.cz</RecipientEmailAdress>
+  </Recipients>
+
+  <!-- 
+    Volitelne udaje - pri jejich absenci neni vyvolana vyjimka. 
+    Opet mozne cist i menit v programu.
+    (Defaultni hodnoty - v pripade, ze by nebylo zadano telo ci predmet.)
+  -->
+  <!-- Neni nutno zadat zde ani v programu - nastaveno automaticky -->
+  <UseHTML></UseHTML>
+  <EnableSSL>false</EnableSSL>
+  <Timeout>2000</Timeout>
+  <!-- Pokud neni nastaveno telo ani zde, ani v programu, dojde k chybe pri pokusu odeslani -->
+  <Head>Agro linka 1 test</Head>
+  <Body>Agro linka 1 test</Body>
+  <DeleteSendedEmailFile>True</DeleteSendedEmailFile>
+</Emailing>

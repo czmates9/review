@@ -1,0 +1,293 @@
+Pøevod databáze POHODA
+Vèetnì obnovy databáze
+Zdrojovı soubor: StwPhFASK_12345678_2012
+
+Poèet kritickıch chyb : 0
+
+• Pøi opravì integrity dat mùe dojít ke zmìnám v úèetnictví,
+   zvláštì pokud je úèetní jednotka ji po úèetní èi datové uzávìrce.
+   Oprava integrity dat a pøepoèet váené nákupní ceny proto
+   nebyl proveden.
+
+Konfigurace (sKonfig):  Pøevedeno 1 záznamù.
+Konfigurace (sPrelom):  Pøevedeno 0 záznamù.
+Uivatelské nastavení (sUsrAgS):  Pøevedeno 345 záznamù.
+Uivatelské nastavení (sUsrSet):  Pøevedeno 1 záznamù.
+Volitelné parametry (sVP):  Pøevedeno 0 záznamù.
+Volitelné parametry (sVPpol):  Pøevedeno 0 záznamù.
+Volitelné parametry (sVPref):  Pøevedeno 0 záznamù.
+Uivatelské seznamy (sVPUL):  Pøevedeno 0 záznamù.
+Uivatelské seznamy (sVPULpol):  Pøevedeno 0 záznamù.
+Úètová osnova (pOS):  Pøevedeno 290 záznamù.
+Pøedkontace (pPK):  Pøevedeno 153 záznamù.
+Úèty (sUcet):  Pøevedeno 4 záznamù.
+Èíselné øady (sCRady):  Pøevedeno 48 záznamù.
+Pøiznání DPH (DPH):  Pøevedeno 1 záznamù.
+Èlenìní DPH (sDPH):  Pøevedeno 88 záznamù.
+Souhrnné hlášení (DPHSH):  Pøevedeno 1 záznamù.
+Souhrnné hlášení (DPHSHpol):  Pøevedeno 1 záznamù.
+Souhrnné hlášení (DPHShPodklady):  Pøevedeno 1 záznamù.
+Vıpis z evidence k reimu pøenesení daòové povinnosti (DPHEVD):  Pøevedeno 0 záznamù.
+Vıpis z evidence k reimu pøenesení daòové povinnosti (DPHEVDpol):  Pøevedeno 0 záznamù.
+Registrace DPH v EU (sRegDPHvEU):  Pøevedeno 1 záznamù.
+Støediska (sSTR):  Pøevedeno 4 záznamù.
+Èinnosti (sCIN):  Pøevedeno 3 záznamù.
+Zakázky (sZAK):  Pøevedeno 2 záznamù.
+Kódy bank (sBanky):  Pøevedeno 49 záznamù.
+Mìrné jednotky (sMJ):  Pøevedeno 10 záznamù.
+Formy úhrad (sFormUh):  Pøevedeno 15 záznamù.
+Implicitní šablony (Tdef):  Pøevedeno 0 záznamù.
+Èíselníky (Recent):  Pøevedeno 0 záznamù.
+Datovı sklad (DataStrg):  Pøevedeno 10 záznamù.
+Uloené dotazy (Dotazy):  Pøevedeno 0 záznamù.
+Adresáø (AD):  Pøevedeno 24 záznamù.
+Individuální slevy (ADcn):  Pøevedeno 0 záznamù.
+Události (ADhist):  Pøevedeno 6 záznamù.
+Hromadné události (ADhistVaz):  Pøevedeno 0 záznamù.
+Zemì (sZeme):  Pøevedeno 267 záznamù.
+Skupiny (sADskup):  Pøevedeno 0 záznamù.
+Klíèe (sADklic):  Pøevedeno 0 záznamù.
+Èlenìní událostí (sADhis):  Pøevedeno 4 záznamù.
+Zástupci dokumentù (DOC):  Pøevedeno 0 záznamù.
+Zástupci dokumentù (DocDirs):  Pøevedeno 0 záznamù.
+Bankovní úèty v Adresáøi (ADucet):  Pøevedeno 15 záznamù.
+Dodací adresy v Adresári (ADdodaci):  Pøevedeno 3 záznamù.
+XML log (XML):  Pøevedeno 23 záznamù.
+XML log (XMLpol):  Pøevedeno 23 záznamù.
+Smlouvy (Smlouvy):  Pøevedeno 1 záznamù.
+Smlouvy (sSmlouvy):  Pøevedeno 4 záznamù.
+Platební tituly (sPTitul):  Pøevedeno 154 záznamù.
+Pøíznaky zásob (SkEURO):  Pøevedeno 1 záznamù.
+Cizí mìny (sCMeny):  Pøevedeno 11 záznamù.
+Kurzovı lístek (sCKurs):  Pøevedeno 1 záznamù.
+Kurzovı lístek (sCKurspol):  Pøevedeno 2 záznamù.
+Úèetní deník (pUD):  Pøevedeno 147 záznamù.
+Poèáteèní stavy salda (pSaldo):  Pøevedeno 4 záznamù.
+Analıza (pCF):  Pøevedeno 3 záznamù.
+Analıza (pCFpol):  Pøevedeno 143 záznamù.
+Loòskı stav vısledkovıch úètù (pVysl):  Pøevedeno 0 záznamù.
+Vıkazy minulého roku (pRozv):  Pøevedeno 43 záznamù.
+Èasové rozlišení (CasRoz):  Pøevedeno 1 záznamù.
+Èasové rozlišení (CasRozPol):  Pøevedeno 4 záznamù.
+Banka (BV):  Pøevedeno 14 záznamù.
+Banka (BVpol):  Pøevedeno 8 záznamù.
+Pokladna (HO):  Pøevedeno 8 záznamù.
+Pokladna (HOpol):  Pøevedeno 6 záznamù.
+Interní doklady (pINT):  Pøevedeno 6 záznamù.
+Interní doklady (pINTpol):  Pøevedeno 10 záznamù.
+Úhrady (Uhrady):  Pøevedeno 12 záznamù.
+Úhrady (VzZ):  Pøevedeno 0 záznamù.
+Úhrady (Likv):  Pøevedeno 0 záznamù.
+Homebanking (HB):  Pøevedeno 1 záznamù.
+Internetové obchody (IObchod):  Pøevedeno 0 záznamù.
+Kasy (Kasa):  Pøevedeno 0 záznamù.
+Kasy (KasaHist):  Pøevedeno 0 záznamù.
+Pøíkazy k úhradì (BP):  Pøevedeno 3 záznamù.
+Pøíkazy k úhradì (BPpol):  Pøevedeno 2 záznamù.
+Prodejky (PH):  Pøevedeno 8 záznamù.
+Prodejky (PHpol):  Pøevedeno 14 záznamù.
+Prodejky (UhrDokl):  Pøevedeno 8 záznamù.
+Faktury (FA):  Pøevedeno 59 záznamù.
+Faktury (FApol):  Pøevedeno 93 záznamù.
+Faktury (UhradaFM):  Pøevedeno 0 záznamù.
+Nabídky (NAB):  Pøevedeno 2 záznamù.
+Nabídky (NABpol):  Pøevedeno 8 záznamù.
+Objednávky (OBJ):  Pøevedeno 8 záznamù.
+Objednávky (OBJpol):  Pøevedeno 23 záznamù.
+Kniha jízd (GlxsUcel):  Pøevedeno 7 záznamù.
+Skupiny øidièù (GlxRidicSkup):  Pøevedeno 2 záznamù.
+Øidièi (DJridic):  Pøevedeno 3 záznamù.
+Vozidla (DJvoz):  Pøevedeno 2 záznamù.
+Kniha jízd (DJjizdy):  Pøevedeno 7 záznamù.
+Kniha jízd (tDJjizdy):  Pøevedeno 0 záznamù.
+Tuzemské cestovní pøíkazy (CP):  Pøevedeno 2 záznamù.
+Tuzemské cestovní pøíkazy (CPEtapy):  Pøevedeno 7 záznamù.
+Tuzemské cestovní pøíkazy (CPZalohy):  Pøevedeno 2 záznamù.
+Tuzemské cestovní pøíkazy (CPVydaje):  Pøevedeno 5 záznamù.
+Tuzemské cestovní pøíkazy (CPSmeny):  Pøevedeno 0 záznamù.
+Tuzemské cestovní pøíkazy (CPStrav):  Pøevedeno 7 záznamù.
+Tuzemské cestovní pøíkazy (CPNahr):  Pøevedeno 0 záznamù.
+Tuzemské cestovní pøíkazy (CPVyuct):  Pøevedeno 3 záznamù.
+Tuzemské cestovní pøíkazy (GlxDoklad):  Pøevedeno 0 záznamù.
+Vıkaz majetku (UZ):  Pøevedeno 2 záznamù.
+Zdravotní pojišovny (sMzPoj):  Pøevedeno 10 záznamù.
+Personalistika (rpZAMpodkl):  Pøevedeno 0 záznamù.
+Penzijní spoleènosti (sMzFond):  Pøevedeno 15 záznamù.
+ivotní pojišovny (sMzZivPj):  Pøevedeno 10 záznamù.
+Personalistika (ZAM):  Pøevedeno 5 záznamù.
+Personalistika (ZAMpDet):  Pøevedeno 14 záznamù.
+Personalistika (ZAMpDov):  Pøevedeno 4 záznamù.
+Personalistika (ZAMpSra):  Pøevedeno 4 záznamù.
+Mzdy (MZ):  Pøevedeno 5 záznamù.
+Mzdy (MZdoklad):  Pøevedeno 17 záznamù.
+Mzdy (MZsraz):  Pøevedeno 4 záznamù.
+Mzdy (MZdavky):  Pøevedeno 0 záznamù.
+Mzdy (MZvvz):  Pøevedeno 0 záznamù.
+Mzdy (MZnahr):  Pøevedeno 1 záznamù.
+Podání NEMPRI (NEMPRI):  Pøevedeno 0 záznamù.
+Podání NEMPRI (NEMPRIpol):  Pøevedeno 0 záznamù.
+Podání ELDP (ELDP):  Pøevedeno 1 záznamù.
+Podání ELDP (ELDPpol):  Pøevedeno 1 záznamù.
+Podání ELDP (MZzauct):  Pøevedeno 1 záznamù.
+Personalistika (ZAMpDovZapoc):  Pøevedeno 0 záznamù.
+Místa vıkonu práce (sMzMist):  Pøevedeno 2 záznamù.
+Elektronická podání (EPodani):  Pøevedeno 0 záznamù.
+Vıkazy pøíspìvkovıch organizací (PrisVykaz):  Pøevedeno 0 záznamù.
+Vıkazy pøíspìvkovıch organizací (PrisVykazy):  Pøevedeno 0 záznamù.
+
+Import skladù.
+
+Sklady (sSklad):  Pøevedeno 3 záznamù.
+Èlenìní skladù (SkSt):  Pøevedeno 7 záznamù.
+Reklamace (staré) (SkRekl):  Pøevedeno 0 záznamù.
+Reklamace (staré) (SkReklpol):  Pøevedeno 0 záznamù.
+Vyøízení reklamace (sZpVyr):  Pøevedeno 5 záznamù.
+Stavy reklamace a servisu (sReklStav):  Pøevedeno 16 záznamù.
+Stavy reklamace a servisu (sReklZpVyr):  Pøevedeno 11 záznamù.
+Stavy reklamace a servisu (sReklZpPredani):  Pøevedeno 3 záznamù.
+Parametry inter. obchodù (SkParam):  Pøevedeno 10 záznamù.
+Parametry inter. obchodù (SkParamList):  Pøevedeno 11 záznamù.
+Kategorie inter. obchodù (SkKat):  Pøevedeno 12 záznamù.
+Kategorie inter. obchodù (SkRefParam):  Pøevedeno 7 záznamù.
+Zásoby (SkzIoZbozi):  Pøevedeno 2 záznamù.
+Kategorie inter. obchodù (SkRefKat):  Pøevedeno 6 záznamù.
+Obrázky (SkRefObraz):  Pøevedeno 0 záznamù.
+Obrázky (SkRefSvazany):  Pøevedeno 0 záznamù.
+Obrázky (SkRefOdkazy):  Pøevedeno 0 záznamù.
+Seznam hodnot pro internetové parametry (SKRefParamList):  Pøevedeno 3 záznamù.
+Prodejní ceny (SkCeny):  Pøevedeno 6 záznamù.
+Cenové skupiny (SkCS):  Pøevedeno 3 záznamù.
+Cenové skupiny (SkCSpol):  Pøevedeno 18 záznamù.
+Zásoby (SKz):  Pøevedeno 27 záznamù.
+Zásoby (SKzBuf):  Pøevedeno 27 záznamù.
+Inventura (SKzInvLst):  Pøevedeno 2 záznamù.
+Inventura (SKzInv):  Pøevedeno 48 záznamù.
+Inventura (SKzInvVC):  Pøevedeno 14 záznamù.
+Inventurní seznamy (SKzInvSeznamy):  Pøevedeno 2 záznamù.
+Inventurní seznamy (SKzInvSeznamyPol):  Pøevedeno 10 záznamù.
+Zásoby (SKzCn):  Pøevedeno 162 záznamù.
+Zásoby (SKzNC):  Pøevedeno 0 záznamù.
+Zásoby (SKzPoh):  Pøevedeno 98 záznamù.
+Zásoby (SkzPol):  Pøevedeno 9 záznamù.
+Zásoby (SkzCnPol):  Pøevedeno 6 záznamù.
+Evidenèní èísla (SKzVC):  Pøevedeno 7 záznamù.
+Evidenèní èísla (SKzVChst):  Pøevedeno 0 záznamù.
+Zásoby (SKzVNChist):  Pøevedeno 0 záznamù.
+Pøíjemky (SKPP):  Pøevedeno 14 záznamù.
+Pøíjemky (SKPPpol):  Pøevedeno 43 záznamù.
+Vıdejky (SKPV):  Pøevedeno 9 záznamù.
+Vıdejky (SKPVpol):  Pøevedeno 17 záznamù.
+Vıroba (SKMV):  Pøevedeno 2 záznamù.
+Vıroba (SKMVpol):  Pøevedeno 2 záznamù.
+Vırobní list (SKMVlist):  Pøevedeno 4 záznamù.
+Pøevod (SKMP):  Pøevedeno 1 záznamù.
+Pøevod (SKMPpol):  Pøevedeno 1 záznamù.
+
+Majetek:
+
+Dlouhodobı majetek (sHospObd):  Pøevedeno 0 záznamù.
+Dlouhodobı majetek (IM):  Pøevedeno 4 záznamù.
+Dlouhodobı majetek (IModpis):  Pøevedeno 34 záznamù.
+Dlouhodobı majetek (IModpisM):  Pøevedeno 388 záznamù.
+Dlouhodobı majetek (IMuodpis):  Pøevedeno 16 záznamù.
+Dlouhodobı majetek (IMpohyb):  Pøevedeno 28 záznamù.
+Dlouhodobı majetek (IMpredm):  Pøevedeno 6 záznamù.
+Odpisové plány (sIMO):  Pøevedeno 4 záznamù.
+Odpisové plány (sIMOpol):  Pøevedeno 9 záznamù.
+Umístìní majetku (IMmist):  Pøevedeno 1 záznamù.
+Èlenìní majetku (IMclen):  Pøevedeno 0 záznamù.
+Drobnı majetek (DM):  Pøevedeno 7 záznamù.
+Leasingovı majetek (LM):  Pøevedeno 1 záznamù.
+Leasingovı majetek (LMspl):  Pøevedeno 61 záznamù.
+Leasingovı majetek (LMdun):  Pøevedeno 5 záznamù.
+Vıèet platidel (sPlatidla):  Pøevedeno 2 záznamù.
+Vıèet platidel (sPlatidlaPol):  Pøevedeno 28 záznamù.
+Odloené prodejky (sKasaOdlozPH):  Pøevedeno 0 záznamù.
+Odloené prodejky (sKasaOdlozPHpol):  Pøevedeno 0 záznamù.
+Reklamace (Rekl):  Pøevedeno 4 záznamù.
+Pøedmìt reklamace (ReklPredm):  Pøevedeno 4 záznamù.
+Stavy reklamace a servisu (ReklStav):  Pøevedeno 11 záznamù.
+Komponenty (ReklKomp):  Pøevedeno 0 záznamù.
+Servis (Serv):  Pøevedeno 1 záznamù.
+Pøedmìt servisu (ServPredm):  Pøevedeno 1 záznamù.
+Servis (Servpol):  Pøevedeno 2 záznamù.
+
+Šablony:
+
+Adresáø (tAD):  Pøevedeno 0 záznamù.
+Události (tADhist):  Pøevedeno 0 záznamù.
+Adresáø (tADucet):  Pøevedeno 0 záznamù.
+Banka (tBV):  Pøevedeno 0 záznamù.
+Banka (tBVpol):  Pøevedeno 0 záznamù.
+Pokladna (tHO):  Pøevedeno 0 záznamù.
+Pokladna (tHOpol):  Pøevedeno 0 záznamù.
+Interní doklady (tpINT):  Pøevedeno 0 záznamù.
+Interní doklady (tpINTpol):  Pøevedeno 0 záznamù.
+Prodejky (tPH):  Pøevedeno 0 záznamù.
+Prodejky (tPHpol):  Pøevedeno 0 záznamù.
+Prodejky (tUhrDokl):  Pøevedeno 0 záznamù.
+Pøíjemky (tSKPP):  Pøevedeno 0 záznamù.
+Pøíjemky (tSKPPpol):  Pøevedeno 0 záznamù.
+Vıdejky (tSKPV):  Pøevedeno 0 záznamù.
+Vıdejky (tSKPVpol):  Pøevedeno 0 záznamù.
+Faktury (tFA):  Pøevedeno 0 záznamù.
+Faktury (tFApol):  Pøevedeno 0 záznamù.
+Nabídky (tNAB):  Pøevedeno 0 záznamù.
+Nabídky (tNABpol):  Pøevedeno 0 záznamù.
+Objednávky (tOBJ):  Pøevedeno 0 záznamù.
+Objednávky (tOBJpol):  Pøevedeno 0 záznamù.
+Tuzemské cestovní pøíkazy (tCP):  Pøevedeno 0 záznamù.
+Tuzemské cestovní pøíkazy (tCPEtapy):  Pøevedeno 0 záznamù.
+Tuzemské cestovní pøíkazy (tCPZalohy):  Pøevedeno 0 záznamù.
+Tuzemské cestovní pøíkazy (tCPVydaje):  Pøevedeno 0 záznamù.
+Tuzemské cestovní pøíkazy (tCPSmeny):  Pøevedeno 0 záznamù.
+Reklamace (tRekl):  Pøevedeno 0 záznamù.
+Pøedmìt reklamace (tReklPredm):  Pøevedeno 0 záznamù.
+Stavy reklamace a servisu (tReklStav):  Pøevedeno 0 záznamù.
+Komponenty (tReklKomp):  Pøevedeno 0 záznamù.
+Servis (tServ):  Pøevedeno 0 záznamù.
+Pøedmìt servisu (tServPredm):  Pøevedeno 0 záznamù.
+Servis (tServpol):  Pøevedeno 0 záznamù.
+Zkratky zásob (sKasaSkzButton):  Pøevedeno 0 záznamù.
+Zkratky zásob (sKasaSkzButtonPol):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgZAK):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgZAKpol):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgAD):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgADpol):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgBV):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgBVpol):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgHO):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgHOpol):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgINT):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgINTpol):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgNAB):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgNABpol):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgOBJ):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgOBJpol):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgFA):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgFApol):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgBP):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgBPpol):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgSKz):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgSKzpol):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgSKPP):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgSKPPpol):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgSKPV):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgSKPVpol):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgSKMV):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgSKMVpol):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgSKMP):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgSKMPpol):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgRekl):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgReklpol):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgPH):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgPHpol):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgZAM):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgZAMpol):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgMAJ):  Pøevedeno 0 záznamù.
+Historie oprav dokladu (lgMAJpol):  Pøevedeno 0 záznamù.
+Odeslané e-maily (EmailsTmpl):  Pøevedeno 0 záznamù.
+Odeslané e-maily (EmailsSent):  Pøevedeno 0 záznamù.
+Odpovìdné osoby (sOdpOsoby):  Pøevedeno 4 záznamù.
+Konec pøevodu.
+

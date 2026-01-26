@@ -1,0 +1,18 @@
+﻿
+17.6.2019 TaD
+-vicemužna obsluha?
+-Tisk?
+-Expedice?
+
+
+ok : Posledni akce uzivatele
+- online funkce
+- pokud neprojde, tak z lokalu je platna
+- pokud neni, tak vyzve k zadani casu prihlaseni
+
+ok : Test na delku posledni necinnosti
+- pokud je delsi nez nastavena (v minutach), tak vyzve k zadani korekce casu (mimo zakazaku)
+
+Korekce casu
+- jak?
+

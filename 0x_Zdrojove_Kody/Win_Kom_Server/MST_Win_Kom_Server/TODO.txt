@@ -1,0 +1,71 @@
+
+
+11.9.2019
+-Vydej, rozšiøit o ITEMCODE a WEIGHT
+
+
+17.7.2019
+-Pri zmene konfigurace v trerminalu by se upravene soubory odesilaly na aserver,a udržovala by se historie zmen v konfiguraci.
+-Pri spuštení terminalu by se na odeslala na server data a udelala by se synchronizace parametru, èi neprobehla nejaka zmena (promenne parametry, typ ID davky by se nejak ignorovaly)
+-pokud by nastala nejaka zmena v terminalu anebo na serveru tak by se to synchronizovalo
+
+
+22.11.2018 TaD 
+-Uprava WebConfig souboru, konfiguraène parametry vykuchat do jineho konfiguraèneho souboru aby se dalo
+cez web prohližeè editovat
+-Vytvoøit v konfiguraci možnost zakladani sdf souboru s zakladacich skriptu
+
+-pro MSTW 7 Predelat všechny Interface na verze 2 viz šafranek anebo konzole...
+-Poøadne okolemtovat všechny promenne a metody pro Doxygen ktery generuje dokumentaci
+
+
+21.9.2018
+-Write error logy pro Exception
+
+
+19.4.2016
+providerLogin
+- doplnit nacitani eanu pri generovani davky (minimalne v sql providerovi chybi)
+
+14.4.2016
+- revidovani struktur ... prejit na varchary, ...
+
+1.2.2016
+Trasovani
+- rozsirit trasovani do vsech metod (ne jen pri zpracovani dat, ale take pri nacitani a podobne ... logovat terminal, id uzivatele, nazev metody)
+
+26.1.2016
+Lokace
+- vyresit praci s expiraci (vyhledavani, navrat dat, ...)
+
+5.10.2015
+Prodej
+- konfiguracne uchovavat/neuchovavat historii
+
+Merna jednotka
+- ModulePohodaXML chybí v DB sloupec ordernumber
+- doplnit rozhrani serveru pro Events, Tasks, ...
+
+- doplnit na Prijmu a Vydeji ... 
+
+- odstranit logy z publish a odstranit i sqlcedb...
+- zvysit verzi..
+
+
+- moznost kontroly zmeny systemoveho casu
+
+- GUI rozhrani
+- Vsechny prenosy datovych davek pomoci FileTransfer...
+
+- Ingres, problem s O_Checked na I1 => prevest na INTEGER???
+- Ingres, problem s hodnotou GUID ??? overeni dalsi pouzite typy (vyjit z predlohy od UNIS...)
+
+- Proverit Vydej.asmx - ProcessVydejkaDb, pri uploadu se zmeni DEX_ROW_ID a nelze data uploadovat ...
+- Vydej.asmx - povolit stazeni davky terminalu, ktery ji jiz stahl (zamezeni zamknuti davky pri neuspesnem doruceni zpravy o zamknuti pro terminal)
+
+- ProcessData : vsechny moduly - pokud se vkladaji jiz vlozena data, pak terminalu odeslat true, a data zalogovat do errordirectory a logu
+
+- Omezit ve vsech modulech v seznamu hlavicek data pouze na polozky s qtypack=0 (viz. GetVydejky - Agro)
+
+
+	

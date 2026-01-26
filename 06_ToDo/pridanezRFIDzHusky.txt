@@ -1,0 +1,137 @@
+/****** RFID ******/
+CREATE TABLE [CZMST_RFID_ITEMS](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[ITEMNMBR] [nvarchar](31) NOT NULL,
+	[ITEMDESC] [nvarchar](51) NULL,
+	[SEQUENCENMBR] [int] NOT NULL default(0)
+) ON [PRIMARY]
+
+CREATE TABLE [CZMST_RFID_ITEMS_ASSIGNS](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[ITEMNMBR] [nvarchar](31) NOT NULL,
+	[SEQUENCENMBR] [int] NOT NULL,
+	[SKL_ID] [nvarchar](20) NULL,
+	[CountEntries] [int] NULL,
+	[DOCUMENTNMBR] [nvarchar](20) NULL,
+	[ORD] [int] NULL,
+	[SERLNMBR] [nvarchar](31) NULL,
+	[guid] [uniqueidentifier] NOT NULL UNIQUE,
+	[M_ID] [nvarchar](100) NULL,
+	[M_TID] [nvarchar](100) NULL,
+	[M_EPC] [nvarchar](100) NULL,
+	[M_USER] [nvarchar](150) NULL,
+	[M_RESERVED] [nvarchar](100) NULL,
+	[O_M_ID] [nvarchar](100) NULL,
+	[O_M_TID] [nvarchar](100) NULL,
+	[O_M_EPC] [nvarchar](100) NULL,
+	[O_M_USER] [nvarchar](150) NULL,
+	[O_M_RESERVED] [nvarchar](100) NULL,
+	[TerminalID] [int] NOT NULL,
+	[UserID] [int] NOT NULL,
+	[Created_T] [datetime] NOT NULL,
+	[Created_S] [datetime] NOT NULL Default(getdate())
+) ON [PRIMARY]
+
+
+/*
+Procedura, ktera vraci poradova cisla sekvence ...
+*/
+CREATE PROCEDURE [dbo].[proc_CZMST_RFID_Next]
+ @itemnmbr nvarchar(31),
+ @countnumbers int,
+ @minsequencenmbr int OUTPUT,
+ @maxsequencenmbr int OUTPUT
+AS
+BEGIN
+	SET TRANSACTION ISOLATION LEVEL SERIALIZABLE		
+		DECLARE @id int;
+		DECLARE @sequencenmbr int;
+				
+		select @id = ID
+		from CZMST_RFID_ITEMS
+		where ITEMNMBR = @itemnmbr
+
+		IF @id is NULL 
+		BEGIN
+			INSERT INTO CZMST_RFID_ITEMS (ITEMNMBR) VALUES (@itemnmbr)
+		END
+
+		select @id = ID, @sequencenmbr = SEQUENCENMBR
+		from CZMST_RFID_ITEMS
+		where ITEMNMBR = @itemnmbr
+		
+		SET @minsequencenmbr = @sequencenmbr + 1;
+		SET @maxsequencenmbr = @sequencenmbr + @countnumbers;
+		
+		UPDATE CZMST_RFID_ITEMS
+		SET    SEQUENCENMBR = @maxsequencenmbr
+		WHERE  ID = @id
+
+		-- vraci pocet vracenych cisel, melo by byt stejne jako je @countnumbers
+		RETURN (@maxsequencenmbr - @minsequencenmbr + 1);
+END
+
+/***** RFID konec *****/
+
+
+
+
+
+CREATE TABLE [CZMST_DI_RFID](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[ITEMNMBR] [nvarchar](31) NOT NULL,
+	[SEQUENCENMBR] [int] NOT NULL,
+	[SKL_ID] [nvarchar](20) NULL,
+	[CountEntries] [int] NULL,
+	[DOCUMENTNMBR] [nvarchar](20) NULL,
+	[ORD] [int] NULL,
+	[SERLNMBR] [nvarchar](31) NULL,
+	[guid] [uniqueidentifier] NOT NULL UNIQUE,
+	[M_ID] [nvarchar](100) NULL,
+	[M_TID] [nvarchar](100) NULL,
+	[M_EPC] [nvarchar](100) NULL,
+	[M_USER] [nvarchar](150) NULL,
+	[M_RESERVED] [nvarchar](100) NULL,
+	[O_M_ID] [nvarchar](100) NULL,
+	[O_M_TID] [nvarchar](100) NULL,
+	[O_M_EPC] [nvarchar](100) NULL,
+	[O_M_USER] [nvarchar](150) NULL,
+	[O_M_RESERVED] [nvarchar](100) NULL,
+	[TerminalID] [int] NOT NULL,
+	[UserID] [int] NOT NULL,
+	[Created_T] [datetime] NOT NULL,
+	[Created_S] [datetime] NOT NULL default(getdate())
+) ON [PRIMARY]
+
+
+
+
+
+
+
+
+CREATE TABLE [CZMST_SI_RFID](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[ITEMNMBR] [nvarchar](31) NOT NULL,
+	[SEQUENCENMBR] [int] NOT NULL,
+	[SKL_ID] [nvarchar](20) NULL,
+	[CountEntries] [int] NULL,
+	[DOCUMENTNMBR] [nvarchar](20) NULL,
+	[ORD] [int] NULL,
+	[SERLNMBR] [nvarchar](31) NULL,
+	[guid] [uniqueidentifier] NOT NULL UNIQUE,
+	[M_ID] [nvarchar](100) NULL,
+	[M_TID] [nvarchar](100) NULL,
+	[M_EPC] [nvarchar](100) NULL,
+	[M_USER] [nvarchar](150) NULL,
+	[M_RESERVED] [nvarchar](100) NULL,
+	[O_M_ID] [nvarchar](100) NULL,
+	[O_M_TID] [nvarchar](100) NULL,
+	[O_M_EPC] [nvarchar](100) NULL,
+	[O_M_USER] [nvarchar](150) NULL,
+	[O_M_RESERVED] [nvarchar](100) NULL,
+	[TerminalID] [int] NOT NULL,
+	[UserID] [int] NOT NULL,
+	[Created_T] [datetime] NOT NULL,
+	[Created_S] [datetime] NOT NULL default(getdate())
+) ON [PRIMARY]

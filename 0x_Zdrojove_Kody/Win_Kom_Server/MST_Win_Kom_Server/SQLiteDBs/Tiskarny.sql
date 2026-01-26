@@ -1,0 +1,15 @@
+create table [CZMST_TISKARNA]
+(
+    [ID] INTEGER CONSTRAINT CZMST_TISKARNY_ID_PK PRIMARY KEY,
+    [NAME] TEXT not null,
+    [LOCATION] TEXT,
+    [IP] TEXT,
+    [PORT] TEXT,
+    [COM] TEXT,
+    [SOUBOR] TEXT,
+    [TIMEOUT] INTEGER,
+    [BARCODE] TEXT,
+    [DEFAULT] NUMERIC default 0
+);
+create unique index UQ__CZMST_TISKARNA__0000000000000036 on [CZMST_TISKARNA] ([NAME]);
+

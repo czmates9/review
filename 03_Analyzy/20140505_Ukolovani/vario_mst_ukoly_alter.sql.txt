@@ -1,0 +1,73 @@
+/*
+
+Plnìní tabulek úkolù v MST (CZ_UKOL, CZ_UKOL_UZIV) 
+- uloženou procedurou, která je spouštìna v pravidelných intervalech (tøeba 5 min.)
+- plní se úkoly, kde ve variu Popis != '' && Kategorie == 'Terminál' && Referen v seznamu uživatelù terminálù
+- pøi plnìní se 
+-- vloží nové úkoly (není vyplnìn vario.ict_mst_id), 
+-- aktualizují zmìny (vario.upsize_ts != mst.upsize_ts) a 
+-- z mst se odstraní úkoly, které byly ve variu smazány (mst.Rowguid not in Vario)
+
+Zpracování zmìn z MST do varia
+-- bude se spouštìt procedura, s jakými parametry, pøi které akci?
+-- co všechno uživatel mùže editovat, vytváøet a mazat na terminálu? Podle toho se vymyslí zpracování zmìn z mst.
+-- doplní se historie o nové zmìny
+
+Ostatní nejasnosti:
+-- jak je to s možnosti nastavit pøipomenutí úkolu (v tolik a tolik dej o sobì vìdìt)?
+
+Stavy úkolu ve variu
+- Probíhá - 2
+- Nezahájeno - 1
+- Dokonèeno - 0
+- Èeká na nìkoho dalšího - 3
+- Odloženo - 4
+
+Mapování sloupcù z Varia do MST
+CZ_UKOL
+[ID] [int] IDENTITY(1,1) NOT NULL, -> automatické èíslo
+[Name] [nvarchar](50) NOT NULL, -> Popis 
+[Description] [ntext] NOT NULL, -> Poznamky
+[Code] [nvarchar](50) NULL, -> ???
+[CreatorID] [int] NOT NULL, .> ???, jak se bude plnit tabulka s uživateli (ruènì, nebo se doplní chybìjící, ...), jednáli se o tvùrce úkolu, tak ten ani nemusí být mezi uživateli terminálù?
+[DateCreated] [datetime] NOT NULL, -> Datum zadání
+[DateFrom] [datetime] NULL, -> Datum zahájení
+[DateTo] [datetime] NULL, -> Splnit úkol do
+[State] [nvarchar](1) NOT NULL, -> ???, viz stavy úkolù ve Variu. Jaké jsou a budou stavy úkolu v MST, jake bude mapování?
+[Kind] [nvarchar](1) NULL, -> ???, pøedpokládám, že nebudeme používat
+[Type] [nvarchar](1) NULL, -> ???, pøedpokládám, že nebudeme používat
+[Priority] [int] NOT NULL, -> Priorita - 1 (Vario = 1 -> MST = 0)
+[PartnerID] [nvarchar](20) NULL, -> nebude použito
+[Rowguid] [uniqueidentifier] ROWGUIDCOL  NOT NULL -> Rowguid, pøidaný sloupec, odkaz na úkol z Varia, plní se plnicí procedurou
+
+CZ_UKOL_UZIV -> opravdu se jedná o pøíøazení více vlastníku k jednomu úkolu? V pøípadì nekupta bude vždy pouze jeden vlastník
+[ID] [int] IDENTITY(1,1) NOT NULL, -> automatické èíslo
+[UkolID] [int] NOT NULL, -> vazba na úkol
+[UserID] [int] NOT NULL, -> vazba na vlastníka úkolu
+[State] [nvarchar](1) NOT NULL, ??? -> doplnit specifikaci stavù
+[DateChanged] [datetime] NULL, ???
+[UserIDChanged] [int] NULL, ???
+[Note] [nvarchar](200) NULL, ???
+[DateNotify] [datetime] NULL, ???
+[DateFinished] [datetime] NULL, datum dokonèení (úkolu), opravdu?
+
+CZ_UKOL_UZIV_HIST -> z tabulky budeme pouze èíst a vytváøet historii ve variu, je možné v terminálu editovat stávající záznam, nebo se vytváøí pouze nové?
+[ID_HIST] [int] IDENTITY(1,1) NOT NULL, -> automatické èíslo
+[ID] [int] NOT NULL, -> ???
+[UkolID] [int] NOT NULL, -> id úkolu
+[UserID] [int] NOT NULL, -> id uživatele, který udìlal zmìnu na úkolu, nemìl by to být pouze jeho vlastník?
+[State] [nvarchar](1) NOT NULL, -> doplnit specifikaci stavù
+[DateChanged] [datetime] NULL, -> datum vzniku zmìny
+[UserIDChanged] [int] NULL, -> ???
+[Note] [nvarchar](200) NULL, -> ???, jedná se o výsledek úkolu, kam se výsledek úkolu zapisuje?
+[DateNotify] [datetime] NULL, -> ???
+[DateFinished] [datetime] NULL, -> ???
+
+
+*/
+
+
+-- doplnìní vazby na úkol do Varia
+ALTER TABLE cz_ukol ADD [Rowguid] [uniqueidentifier] ROWGUIDCOL  NOT NULL
+-- doplnìní timestamp úkolu z Varia, identifikuje zmìnu úkolu ve Variu
+ALTER TABLE cz_ukol ADD [upsize_ts] [bigint] NOT NULL

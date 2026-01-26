@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <Printers>
+    <Printer type="None" />
+    <Printer type="WebService" library="Fask.PrinterProviderWebService.dll" />
+    <Printer type="Bluetooth" library="Fask.PrinterProviderBluetoothSymbolWPAN.dll" />
+  </Printers>
+  <Modules>
+    <Prijem>
+      <Predloha printer="WebService" template="PrijemPredloha" />
+      <Nasnimane printer="WebService" template="PrijemNasnimane" />
+    </Prijem>
+    <Vydej>
+      <Predloha printer="WebService" template="VydejPredloha" />
+      <Nasnimane printer="WebService" template="VydejNasnimane" />
+      <Paletovylistek printer="WebService" template="VydejPallistek" />
+    </Vydej>
+    <Prodej>
+      <Predloha printer="WebService" template="ProdejPredloha" />
+      <Nasnimane printer="WebService" template="ProdejNasnimane" />
+      <SoupisHlavicka printer="WebService" template="h" />
+      <SoupisRadek printer="WebService" template="r" />
+      <SoupisPaticka printer="WebService" template="f" />
+    </Prodej>
+    <Inventura>
+      <Predloha printer="WebService" template="InventuraPredloha" />
+      <Nasnimane printer="WebService" template="InventuraNasnimane" />
+    </Inventura>
+    <Text>
+      <Volny printer="Bluetooth" template="VolnyText" />
+    </Text>
+  </Modules>
+</Settings>

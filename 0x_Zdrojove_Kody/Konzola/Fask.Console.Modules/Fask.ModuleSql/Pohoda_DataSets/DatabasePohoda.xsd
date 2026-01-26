@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DatabasePohoda" targetNamespace="http://tempuri.org/DatabasePohoda.xsd" xmlns:mstns="http://tempuri.org/DatabasePohoda.xsd" xmlns="http://tempuri.org/DatabasePohoda.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DatabasePohoda" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DatabasePohoda" msprop:Generator_UserDSName="DatabasePohoda">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OBJpol" msprop:Generator_TableClassName="OBJpolDataTable" msprop:Generator_TableVarName="tableOBJpol" msprop:Generator_TablePropName="OBJpol" msprop:Generator_RowDeletingName="OBJpolRowDeleting" msprop:Generator_RowChangingName="OBJpolRowChanging" msprop:Generator_RowEvHandlerName="OBJpolRowChangeEventHandler" msprop:Generator_RowDeletedName="OBJpolRowDeleted" msprop:Generator_UserTableName="OBJpol" msprop:Generator_RowChangedName="OBJpolRowChanged" msprop:Generator_RowEvArgName="OBJpolRowChangeEvent" msprop:Generator_RowClassName="OBJpolRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Mnozstvi" msprop:Generator_ColumnVarNameInTable="columnMnozstvi" msprop:Generator_ColumnPropNameInRow="Mnozstvi" msprop:Generator_ColumnPropNameInTable="MnozstviColumn" msprop:Generator_UserColumnName="Mnozstvi" type="xs:double" minOccurs="0" />
+              <xs:element name="Dodano" msprop:Generator_ColumnVarNameInTable="columnDodano" msprop:Generator_ColumnPropNameInRow="Dodano" msprop:Generator_ColumnPropNameInTable="DodanoColumn" msprop:Generator_UserColumnName="Dodano" type="xs:double" minOccurs="0" />
+              <xs:element name="MJ" msprop:Generator_ColumnVarNameInTable="columnMJ" msprop:Generator_ColumnPropNameInRow="MJ" msprop:Generator_ColumnPropNameInTable="MJColumn" msprop:Generator_UserColumnName="MJ" type="xs:string" minOccurs="0" />
+              <xs:element name="MJKoef" msprop:Generator_ColumnVarNameInTable="columnMJKoef" msprop:Generator_ColumnPropNameInRow="MJKoef" msprop:Generator_ColumnPropNameInTable="MJKoefColumn" msprop:Generator_UserColumnName="MJKoef" type="xs:double" minOccurs="0" />
+              <xs:element name="KcJedn" msprop:Generator_ColumnVarNameInTable="columnKcJedn" msprop:Generator_ColumnPropNameInRow="KcJedn" msprop:Generator_ColumnPropNameInTable="KcJednColumn" msprop:Generator_UserColumnName="KcJedn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Sleva" msprop:Generator_ColumnVarNameInTable="columnSleva" msprop:Generator_ColumnPropNameInRow="Sleva" msprop:Generator_ColumnPropNameInTable="SlevaColumn" msprop:Generator_UserColumnName="Sleva" type="xs:double" minOccurs="0" />
+              <xs:element name="RelSzDPH" msprop:Generator_ColumnVarNameInTable="columnRelSzDPH" msprop:Generator_ColumnPropNameInRow="RelSzDPH" msprop:Generator_ColumnPropNameInTable="RelSzDPHColumn" msprop:Generator_UserColumnName="RelSzDPH" type="xs:int" minOccurs="0" />
+              <xs:element name="ProcentoDPH" msprop:Generator_ColumnVarNameInTable="columnProcentoDPH" msprop:Generator_ColumnPropNameInRow="ProcentoDPH" msprop:Generator_ColumnPropNameInTable="ProcentoDPHColumn" msprop:Generator_UserColumnName="ProcentoDPH" type="xs:double" minOccurs="0" />
+              <xs:element name="SDph" msprop:Generator_ColumnVarNameInTable="columnSDph" msprop:Generator_ColumnPropNameInRow="SDph" msprop:Generator_ColumnPropNameInTable="SDphColumn" msprop:Generator_UserColumnName="SDph" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CmJedn" msprop:Generator_ColumnVarNameInTable="columnCmJedn" msprop:Generator_ColumnPropNameInRow="CmJedn" msprop:Generator_ColumnPropNameInTable="CmJednColumn" msprop:Generator_UserColumnName="CmJedn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RefStr" msprop:Generator_ColumnVarNameInTable="columnRefStr" msprop:Generator_ColumnPropNameInRow="RefStr" msprop:Generator_ColumnPropNameInTable="RefStrColumn" msprop:Generator_UserColumnName="RefStr" type="xs:int" minOccurs="0" />
+              <xs:element name="RefCin" msprop:Generator_ColumnVarNameInTable="columnRefCin" msprop:Generator_ColumnPropNameInRow="RefCin" msprop:Generator_ColumnPropNameInTable="RefCinColumn" msprop:Generator_UserColumnName="RefCin" type="xs:int" minOccurs="0" />
+              <xs:element name="CisloZAK" msprop:Generator_ColumnVarNameInTable="columnCisloZAK" msprop:Generator_ColumnPropNameInRow="CisloZAK" msprop:Generator_ColumnPropNameInTable="CisloZAKColumn" msprop:Generator_UserColumnName="CisloZAK" type="xs:string" minOccurs="0" />
+              <xs:element name="RefSKz" msprop:Generator_ColumnVarNameInTable="columnRefSKz" msprop:Generator_ColumnPropNameInRow="RefSKz" msprop:Generator_ColumnPropNameInTable="RefSKzColumn" msprop:Generator_UserColumnName="RefSKz" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SKz" msprop:Generator_TableClassName="SKzDataTable" msprop:Generator_TableVarName="tableSKz" msprop:Generator_TablePropName="SKz" msprop:Generator_RowDeletingName="SKzRowDeleting" msprop:Generator_RowChangingName="SKzRowChanging" msprop:Generator_RowEvHandlerName="SKzRowChangeEventHandler" msprop:Generator_RowDeletedName="SKzRowDeleted" msprop:Generator_UserTableName="SKz" msprop:Generator_RowChangedName="SKzRowChanged" msprop:Generator_RowEvArgName="SKzRowChangeEvent" msprop:Generator_RowClassName="SKzRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="RefSklad" msprop:Generator_ColumnVarNameInTable="columnRefSklad" msprop:Generator_ColumnPropNameInRow="RefSklad" msprop:Generator_ColumnPropNameInTable="RefSkladColumn" msprop:Generator_UserColumnName="RefSklad" type="xs:int" minOccurs="0" />
+              <xs:element name="RefStruct" msprop:Generator_ColumnVarNameInTable="columnRefStruct" msprop:Generator_ColumnPropNameInRow="RefStruct" msprop:Generator_ColumnPropNameInTable="RefStructColumn" msprop:Generator_UserColumnName="RefStruct" type="xs:int" minOccurs="0" />
+              <xs:element name="RelSKzVC" msprop:Generator_ColumnVarNameInTable="columnRelSKzVC" msprop:Generator_ColumnPropNameInRow="RelSKzVC" msprop:Generator_ColumnPropNameInTable="RelSKzVCColumn" msprop:Generator_UserColumnName="RelSKzVC" type="xs:int" minOccurs="0" />
+              <xs:element name="IDS" msprop:Generator_ColumnVarNameInTable="columnIDS" msprop:Generator_ColumnPropNameInRow="IDS" msprop:Generator_ColumnPropNameInTable="IDSColumn" msprop:Generator_UserColumnName="IDS" type="xs:string" minOccurs="0" />
+              <xs:element name="EAN" msprop:Generator_ColumnVarNameInTable="columnEAN" msprop:Generator_ColumnPropNameInRow="EAN" msprop:Generator_ColumnPropNameInTable="EANColumn" msprop:Generator_UserColumnName="EAN" type="xs:string" minOccurs="0" />
+              <xs:element name="Nazev" msprop:Generator_ColumnVarNameInTable="columnNazev" msprop:Generator_ColumnPropNameInRow="Nazev" msprop:Generator_ColumnPropNameInTable="NazevColumn" msprop:Generator_UserColumnName="Nazev" type="xs:string" minOccurs="0" />
+              <xs:element name="MJ" msprop:Generator_ColumnVarNameInTable="columnMJ" msprop:Generator_ColumnPropNameInRow="MJ" msprop:Generator_ColumnPropNameInTable="MJColumn" msprop:Generator_UserColumnName="MJ" type="xs:string" minOccurs="0" />
+              <xs:element name="MJ2" msprop:Generator_ColumnVarNameInTable="columnMJ2" msprop:Generator_ColumnPropNameInRow="MJ2" msprop:Generator_ColumnPropNameInTable="MJ2Column" msprop:Generator_UserColumnName="MJ2" type="xs:string" minOccurs="0" />
+              <xs:element name="MJ3" msprop:Generator_ColumnVarNameInTable="columnMJ3" msprop:Generator_ColumnPropNameInRow="MJ3" msprop:Generator_ColumnPropNameInTable="MJ3Column" msprop:Generator_UserColumnName="MJ3" type="xs:string" minOccurs="0" />
+              <xs:element name="MJ2Koef" msprop:Generator_ColumnVarNameInTable="columnMJ2Koef" msprop:Generator_ColumnPropNameInRow="MJ2Koef" msprop:Generator_ColumnPropNameInTable="MJ2KoefColumn" msprop:Generator_UserColumnName="MJ2Koef" type="xs:double" minOccurs="0" />
+              <xs:element name="MJ3Koef" msprop:Generator_ColumnVarNameInTable="columnMJ3Koef" msprop:Generator_ColumnPropNameInRow="MJ3Koef" msprop:Generator_ColumnPropNameInTable="MJ3KoefColumn" msprop:Generator_UserColumnName="MJ3Koef" type="xs:double" minOccurs="0" />
+              <xs:element name="StavZ" msprop:Generator_ColumnVarNameInTable="columnStavZ" msprop:Generator_ColumnPropNameInRow="StavZ" msprop:Generator_ColumnPropNameInTable="StavZColumn" msprop:Generator_UserColumnName="StavZ" type="xs:double" minOccurs="0" />
+              <xs:element name="RefAD" msprop:Generator_ColumnVarNameInTable="columnRefAD" msprop:Generator_ColumnPropNameInRow="RefAD" msprop:Generator_ColumnPropNameInTable="RefADColumn" msprop:Generator_UserColumnName="RefAD" type="xs:int" minOccurs="0" />
+              <xs:element name="RefVPrFVTS" msprop:Generator_ColumnVarNameInTable="columnRefVPrFVTS" msprop:Generator_ColumnPropNameInRow="RefVPrFVTS" msprop:Generator_ColumnPropNameInTable="RefVPrFVTSColumn" msprop:Generator_UserColumnName="RefVPrFVTS" type="xs:int" minOccurs="0" />
+              <xs:element name="RefVPrFPTS" msprop:Generator_ColumnVarNameInTable="columnRefVPrFPTS" msprop:Generator_ColumnPropNameInRow="RefVPrFPTS" msprop:Generator_ColumnPropNameInTable="RefVPrFPTSColumn" msprop:Generator_UserColumnName="RefVPrFPTS" type="xs:int" minOccurs="0" />
+              <xs:element name="RefVPrFITS" msprop:Generator_ColumnVarNameInTable="columnRefVPrFITS" msprop:Generator_ColumnPropNameInRow="RefVPrFITS" msprop:Generator_ColumnPropNameInTable="RefVPrFITSColumn" msprop:Generator_UserColumnName="RefVPrFITS" type="xs:int" minOccurs="0" />
+              <xs:element name="RefVPrFDTS" msprop:Generator_ColumnVarNameInTable="columnRefVPrFDTS" msprop:Generator_ColumnPropNameInRow="RefVPrFDTS" msprop:Generator_ColumnPropNameInTable="RefVPrFDTSColumn" msprop:Generator_UserColumnName="RefVPrFDTS" type="xs:int" minOccurs="0" />
+              <xs:element name="RefVPrFXTS" msprop:Generator_ColumnVarNameInTable="columnRefVPrFXTS" msprop:Generator_ColumnPropNameInRow="RefVPrFXTS" msprop:Generator_ColumnPropNameInTable="RefVPrFXTSColumn" msprop:Generator_UserColumnName="RefVPrFXTS" type="xs:int" minOccurs="0" />
+              <xs:element name="VPrFXTS" msprop:Generator_ColumnVarNameInTable="columnVPrFXTS" msprop:Generator_ColumnPropNameInRow="VPrFXTS" msprop:Generator_ColumnPropNameInTable="VPrFXTSColumn" msprop:Generator_UserColumnName="VPrFXTS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="VPrFDTS" msprop:Generator_ColumnVarNameInTable="columnVPrFDTS" msprop:Generator_ColumnPropNameInRow="VPrFDTS" msprop:Generator_ColumnPropNameInTable="VPrFDTSColumn" msprop:Generator_UserColumnName="VPrFDTS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="VPrFPTS" msprop:Generator_ColumnVarNameInTable="columnVPrFPTS" msprop:Generator_ColumnPropNameInRow="VPrFPTS" msprop:Generator_ColumnPropNameInTable="VPrFPTSColumn" msprop:Generator_UserColumnName="VPrFPTS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="VPrFVTS" msprop:Generator_ColumnVarNameInTable="columnVPrFVTS" msprop:Generator_ColumnPropNameInRow="VPrFVTS" msprop:Generator_ColumnPropNameInTable="VPrFVTSColumn" msprop:Generator_UserColumnName="VPrFVTS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="VPrFITS" msprop:Generator_ColumnVarNameInTable="columnVPrFITS" msprop:Generator_ColumnPropNameInRow="VPrFITS" msprop:Generator_ColumnPropNameInTable="VPrFITSColumn" msprop:Generator_UserColumnName="VPrFITS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Hmotnost" msprop:Generator_ColumnVarNameInTable="columnHmotnost" msprop:Generator_ColumnPropNameInRow="Hmotnost" msprop:Generator_ColumnPropNameInTable="HmotnostColumn" msprop:Generator_UserColumnName="Hmotnost" type="xs:double" minOccurs="0" />
+              <xs:element name="RelSkTyp" msprop:Generator_ColumnVarNameInTable="columnRelSkTyp" msprop:Generator_ColumnPropNameInRow="RelSkTyp" msprop:Generator_ColumnPropNameInTable="RelSkTypColumn" msprop:Generator_UserColumnName="RelSkTyp" type="xs:int" minOccurs="0" />
+              <xs:element name="VPrCZExpTrackIS" msprop:Generator_ColumnVarNameInTable="columnVPrCZExpTrackIS" msprop:Generator_ColumnPropNameInRow="VPrCZExpTrackIS" msprop:Generator_ColumnPropNameInTable="VPrCZExpTrackISColumn" msprop:Generator_UserColumnName="VPrCZExpTrackIS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="VPrCZSerNumTrIS" msprop:Generator_ColumnVarNameInTable="columnVPrCZSerNumTrIS" msprop:Generator_ColumnPropNameInRow="VPrCZSerNumTrIS" msprop:Generator_ColumnPropNameInTable="VPrCZSerNumTrISColumn" msprop:Generator_UserColumnName="VPrCZSerNumTrIS" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AD" msprop:Generator_TableClassName="ADDataTable" msprop:Generator_TableVarName="tableAD" msprop:Generator_TablePropName="AD" msprop:Generator_RowDeletingName="ADRowDeleting" msprop:Generator_RowChangingName="ADRowChanging" msprop:Generator_RowEvHandlerName="ADRowChangeEventHandler" msprop:Generator_RowDeletedName="ADRowDeleted" msprop:Generator_UserTableName="AD" msprop:Generator_RowChangedName="ADRowChanged" msprop:Generator_RowEvArgName="ADRowChangeEvent" msprop:Generator_RowClassName="ADRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Cislo" msprop:Generator_ColumnVarNameInTable="columnCislo" msprop:Generator_ColumnPropNameInRow="Cislo" msprop:Generator_ColumnPropNameInTable="CisloColumn" msprop:Generator_UserColumnName="Cislo" type="xs:string" minOccurs="0" />
+              <xs:element name="Firma" msprop:Generator_ColumnVarNameInTable="columnFirma" msprop:Generator_ColumnPropNameInRow="Firma" msprop:Generator_ColumnPropNameInTable="FirmaColumn" msprop:Generator_UserColumnName="Firma" type="xs:string" minOccurs="0" />
+              <xs:element name="ICO" msprop:Generator_ColumnVarNameInTable="columnICO" msprop:Generator_ColumnPropNameInRow="ICO" msprop:Generator_ColumnPropNameInTable="ICOColumn" msprop:Generator_UserColumnName="ICO" type="xs:string" minOccurs="0" />
+              <xs:element name="RefCM" msprop:Generator_ColumnVarNameInTable="columnRefCM" msprop:Generator_ColumnPropNameInRow="RefCM" msprop:Generator_ColumnPropNameInTable="RefCMColumn" msprop:Generator_UserColumnName="RefCM" type="xs:int" minOccurs="0" />
+              <xs:element name="Obec" msprop:Generator_ColumnVarNameInTable="columnObec" msprop:Generator_ColumnPropNameInRow="Obec" msprop:Generator_ColumnPropNameInTable="ObecColumn" msprop:Generator_UserColumnName="Obec" type="xs:string" minOccurs="0" />
+              <xs:element name="Ulice" msprop:Generator_ColumnVarNameInTable="columnUlice" msprop:Generator_ColumnPropNameInRow="Ulice" msprop:Generator_ColumnPropNameInTable="UliceColumn" msprop:Generator_UserColumnName="Ulice" type="xs:string" minOccurs="0" />
+              <xs:element name="PSC" msprop:Generator_ColumnVarNameInTable="columnPSC" msprop:Generator_ColumnPropNameInRow="PSC" msprop:Generator_ColumnPropNameInTable="PSCColumn" msprop:Generator_UserColumnName="PSC" type="xs:string" minOccurs="0" />
+              <xs:element name="DIC" msprop:Generator_ColumnVarNameInTable="columnDIC" msprop:Generator_ColumnPropNameInRow="DIC" msprop:Generator_ColumnPropNameInTable="DICColumn" msprop:Generator_UserColumnName="DIC" type="xs:string" minOccurs="0" />
+              <xs:element name="P1" msprop:Generator_ColumnVarNameInTable="columnP1" msprop:Generator_ColumnPropNameInRow="P1" msprop:Generator_ColumnPropNameInTable="P1Column" msprop:Generator_UserColumnName="P1" type="xs:boolean" minOccurs="0" />
+              <xs:element name="P2" msprop:Generator_ColumnVarNameInTable="columnP2" msprop:Generator_ColumnPropNameInRow="P2" msprop:Generator_ColumnPropNameInTable="P2Column" msprop:Generator_UserColumnName="P2" type="xs:boolean" minOccurs="0" />
+              <xs:element name="P3" msprop:Generator_ColumnVarNameInTable="columnP3" msprop:Generator_ColumnPropNameInRow="P3" msprop:Generator_ColumnPropNameInTable="P3Column" msprop:Generator_UserColumnName="P3" type="xs:boolean" minOccurs="0" />
+              <xs:element name="P4" msprop:Generator_ColumnVarNameInTable="columnP4" msprop:Generator_ColumnPropNameInRow="P4" msprop:Generator_ColumnPropNameInTable="P4Column" msprop:Generator_UserColumnName="P4" type="xs:boolean" minOccurs="0" />
+              <xs:element name="P5" msprop:Generator_ColumnVarNameInTable="columnP5" msprop:Generator_ColumnPropNameInRow="P5" msprop:Generator_ColumnPropNameInTable="P5Column" msprop:Generator_UserColumnName="P5" type="xs:boolean" minOccurs="0" />
+              <xs:element name="P6" msprop:Generator_ColumnVarNameInTable="columnP6" msprop:Generator_ColumnPropNameInRow="P6" msprop:Generator_ColumnPropNameInTable="P6Column" msprop:Generator_UserColumnName="P6" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sCMeny" msprop:Generator_TableClassName="sCMenyDataTable" msprop:Generator_TableVarName="tablesCMeny" msprop:Generator_TablePropName="sCMeny" msprop:Generator_RowDeletingName="sCMenyRowDeleting" msprop:Generator_RowChangingName="sCMenyRowChanging" msprop:Generator_RowEvHandlerName="sCMenyRowChangeEventHandler" msprop:Generator_RowDeletedName="sCMenyRowDeleted" msprop:Generator_UserTableName="sCMeny" msprop:Generator_RowChangedName="sCMenyRowChanged" msprop:Generator_RowEvArgName="sCMenyRowChangeEvent" msprop:Generator_RowClassName="sCMenyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Sel" msprop:Generator_ColumnVarNameInTable="columnSel" msprop:Generator_ColumnPropNameInRow="Sel" msprop:Generator_ColumnPropNameInTable="SelColumn" msprop:Generator_UserColumnName="Sel" type="xs:boolean" />
+              <xs:element name="Pouzit" msprop:Generator_ColumnVarNameInTable="columnPouzit" msprop:Generator_ColumnPropNameInRow="Pouzit" msprop:Generator_ColumnPropNameInTable="PouzitColumn" msprop:Generator_UserColumnName="Pouzit" type="xs:boolean" />
+              <xs:element name="Kod" msprop:Generator_ColumnVarNameInTable="columnKod" msprop:Generator_ColumnPropNameInRow="Kod" msprop:Generator_ColumnPropNameInTable="KodColumn" msprop:Generator_UserColumnName="Kod" type="xs:string" minOccurs="0" />
+              <xs:element name="IDS" msprop:Generator_ColumnVarNameInTable="columnIDS" msprop:Generator_ColumnPropNameInRow="IDS" msprop:Generator_ColumnPropNameInTable="IDSColumn" msprop:Generator_UserColumnName="IDS" type="xs:string" minOccurs="0" />
+              <xs:element name="Zeme" msprop:Generator_ColumnVarNameInTable="columnZeme" msprop:Generator_ColumnPropNameInRow="Zeme" msprop:Generator_ColumnPropNameInTable="ZemeColumn" msprop:Generator_UserColumnName="Zeme" type="xs:string" minOccurs="0" />
+              <xs:element name="Mnozstvi" msprop:Generator_ColumnVarNameInTable="columnMnozstvi" msprop:Generator_ColumnPropNameInRow="Mnozstvi" msprop:Generator_ColumnPropNameInTable="MnozstviColumn" msprop:Generator_UserColumnName="Mnozstvi" type="xs:int" minOccurs="0" />
+              <xs:element name="DenEUR" msprop:Generator_ColumnVarNameInTable="columnDenEUR" msprop:Generator_ColumnPropNameInRow="DenEUR" msprop:Generator_ColumnPropNameInTable="DenEURColumn" msprop:Generator_UserColumnName="DenEUR" type="xs:boolean" />
+              <xs:element name="DatDen" msprop:Generator_ColumnVarNameInTable="columnDatDen" msprop:Generator_ColumnPropNameInRow="DatDen" msprop:Generator_ColumnPropNameInTable="DatDenColumn" msprop:Generator_UserColumnName="DatDen" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="KoefEUR" msprop:Generator_ColumnVarNameInTable="columnKoefEUR" msprop:Generator_ColumnPropNameInRow="KoefEUR" msprop:Generator_ColumnPropNameInTable="KoefEURColumn" msprop:Generator_UserColumnName="KoefEUR" type="xs:float" minOccurs="0" />
+              <xs:element name="Oznacil" msprop:Generator_ColumnVarNameInTable="columnOznacil" msprop:Generator_ColumnPropNameInRow="Oznacil" msprop:Generator_ColumnPropNameInTable="OznacilColumn" msprop:Generator_UserColumnName="Oznacil" type="xs:string" minOccurs="0" />
+              <xs:element name="Ucetni" msprop:Generator_ColumnVarNameInTable="columnUcetni" msprop:Generator_ColumnPropNameInRow="Ucetni" msprop:Generator_ColumnPropNameInTable="UcetniColumn" msprop:Generator_UserColumnName="Ucetni" type="xs:string" minOccurs="0" />
+              <xs:element name="Creator" msprop:Generator_ColumnVarNameInTable="columnCreator" msprop:Generator_ColumnPropNameInRow="Creator" msprop:Generator_ColumnPropNameInTable="CreatorColumn" msprop:Generator_UserColumnName="Creator" type="xs:string" minOccurs="0" />
+              <xs:element name="Pozn" msprop:Generator_ColumnVarNameInTable="columnPozn" msprop:Generator_ColumnPropNameInRow="Pozn" msprop:Generator_ColumnPropNameInTable="PoznColumn" msprop:Generator_UserColumnName="Pozn" type="xs:string" minOccurs="0" />
+              <xs:element name="NullCheck_Kod" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNullCheck_Kod" msprop:Generator_ColumnPropNameInRow="NullCheck_Kod" msprop:Generator_ColumnPropNameInTable="NullCheck_KodColumn" msprop:Generator_UserColumnName="NullCheck_Kod" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OBJ" msprop:Generator_TableClassName="OBJDataTable" msprop:Generator_TableVarName="tableOBJ" msprop:Generator_TablePropName="OBJ" msprop:Generator_RowDeletingName="OBJRowDeleting" msprop:Generator_RowChangingName="OBJRowChanging" msprop:Generator_RowEvHandlerName="OBJRowChangeEventHandler" msprop:Generator_RowDeletedName="OBJRowDeleted" msprop:Generator_UserTableName="OBJ" msprop:Generator_RowChangedName="OBJRowChanged" msprop:Generator_RowEvArgName="OBJRowChangeEvent" msprop:Generator_RowClassName="OBJRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="RefCin" msprop:Generator_ColumnVarNameInTable="columnRefCin" msprop:Generator_ColumnPropNameInRow="RefCin" msprop:Generator_ColumnPropNameInTable="RefCinColumn" msprop:Generator_UserColumnName="RefCin" type="xs:int" minOccurs="0" />
+              <xs:element name="RefStr" msprop:Generator_ColumnVarNameInTable="columnRefStr" msprop:Generator_ColumnPropNameInRow="RefStr" msprop:Generator_ColumnPropNameInTable="RefStrColumn" msprop:Generator_UserColumnName="RefStr" type="xs:int" minOccurs="0" />
+              <xs:element name="CisloZAK" msprop:Generator_ColumnVarNameInTable="columnCisloZAK" msprop:Generator_ColumnPropNameInRow="CisloZAK" msprop:Generator_ColumnPropNameInTable="CisloZAKColumn" msprop:Generator_UserColumnName="CisloZAK" type="xs:string" minOccurs="0" />
+              <xs:element name="SText" msprop:Generator_ColumnVarNameInTable="columnSText" msprop:Generator_ColumnPropNameInRow="SText" msprop:Generator_ColumnPropNameInTable="STextColumn" msprop:Generator_UserColumnName="SText" type="xs:string" minOccurs="0" />
+              <xs:element name="HistSzDPH" msprop:Generator_ColumnVarNameInTable="columnHistSzDPH" msprop:Generator_ColumnPropNameInRow="HistSzDPH" msprop:Generator_ColumnPropNameInTable="HistSzDPHColumn" msprop:Generator_UserColumnName="HistSzDPH" type="xs:boolean" minOccurs="0" />
+              <xs:element name="RefCM" msprop:Generator_ColumnVarNameInTable="columnRefCM" msprop:Generator_ColumnPropNameInRow="RefCM" msprop:Generator_ColumnPropNameInTable="RefCMColumn" msprop:Generator_UserColumnName="RefCM" type="xs:int" minOccurs="0" />
+              <xs:element name="CmKurs" msprop:Generator_ColumnVarNameInTable="columnCmKurs" msprop:Generator_ColumnPropNameInRow="CmKurs" msprop:Generator_ColumnPropNameInTable="CmKursColumn" msprop:Generator_UserColumnName="CmKurs" type="xs:double" minOccurs="0" />
+              <xs:element name="Vyrizeno" msprop:Generator_ColumnVarNameInTable="columnVyrizeno" msprop:Generator_ColumnPropNameInRow="Vyrizeno" msprop:Generator_ColumnPropNameInTable="VyrizenoColumn" msprop:Generator_UserColumnName="Vyrizeno" type="xs:boolean" minOccurs="0" />
+              <xs:element name="BDodano" msprop:Generator_ColumnVarNameInTable="columnBDodano" msprop:Generator_ColumnPropNameInRow="BDodano" msprop:Generator_ColumnPropNameInTable="BDodanoColumn" msprop:Generator_UserColumnName="BDodano" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TrvalyDok" msprop:Generator_ColumnVarNameInTable="columnTrvalyDok" msprop:Generator_ColumnPropNameInRow="TrvalyDok" msprop:Generator_ColumnPropNameInTable="TrvalyDokColumn" msprop:Generator_UserColumnName="TrvalyDok" type="xs:boolean" minOccurs="0" />
+              <xs:element name="RefAD" msprop:Generator_ColumnVarNameInTable="columnRefAD" msprop:Generator_ColumnPropNameInRow="RefAD" msprop:Generator_ColumnPropNameInTable="RefADColumn" msprop:Generator_UserColumnName="RefAD" type="xs:int" minOccurs="0" />
+              <xs:element name="Firma" msprop:Generator_ColumnVarNameInTable="columnFirma" msprop:Generator_ColumnPropNameInRow="Firma" msprop:Generator_ColumnPropNameInTable="FirmaColumn" msprop:Generator_UserColumnName="Firma" type="xs:string" minOccurs="0" />
+              <xs:element name="Utvar" msprop:Generator_ColumnVarNameInTable="columnUtvar" msprop:Generator_ColumnPropNameInRow="Utvar" msprop:Generator_ColumnPropNameInTable="UtvarColumn" msprop:Generator_UserColumnName="Utvar" type="xs:string" minOccurs="0" />
+              <xs:element name="Jmeno" msprop:Generator_ColumnVarNameInTable="columnJmeno" msprop:Generator_ColumnPropNameInRow="Jmeno" msprop:Generator_ColumnPropNameInTable="JmenoColumn" msprop:Generator_UserColumnName="Jmeno" type="xs:string" minOccurs="0" />
+              <xs:element name="Ulice" msprop:Generator_ColumnVarNameInTable="columnUlice" msprop:Generator_ColumnPropNameInRow="Ulice" msprop:Generator_ColumnPropNameInTable="UliceColumn" msprop:Generator_UserColumnName="Ulice" type="xs:string" minOccurs="0" />
+              <xs:element name="PSC" msprop:Generator_ColumnVarNameInTable="columnPSC" msprop:Generator_ColumnPropNameInRow="PSC" msprop:Generator_ColumnPropNameInTable="PSCColumn" msprop:Generator_UserColumnName="PSC" type="xs:string" minOccurs="0" />
+              <xs:element name="Obec" msprop:Generator_ColumnVarNameInTable="columnObec" msprop:Generator_ColumnPropNameInRow="Obec" msprop:Generator_ColumnPropNameInTable="ObecColumn" msprop:Generator_UserColumnName="Obec" type="xs:string" minOccurs="0" />
+              <xs:element name="ICO" msprop:Generator_ColumnVarNameInTable="columnICO" msprop:Generator_ColumnPropNameInRow="ICO" msprop:Generator_ColumnPropNameInTable="ICOColumn" msprop:Generator_UserColumnName="ICO" type="xs:string" minOccurs="0" />
+              <xs:element name="DIC" msprop:Generator_ColumnVarNameInTable="columnDIC" msprop:Generator_ColumnPropNameInRow="DIC" msprop:Generator_ColumnPropNameInTable="DICColumn" msprop:Generator_UserColumnName="DIC" type="xs:string" minOccurs="0" />
+              <xs:element name="ICDPH" msprop:Generator_ColumnVarNameInTable="columnICDPH" msprop:Generator_ColumnPropNameInRow="ICDPH" msprop:Generator_ColumnPropNameInTable="ICDPHColumn" msprop:Generator_UserColumnName="ICDPH" type="xs:string" minOccurs="0" />
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" type="xs:string" minOccurs="0" />
+              <xs:element name="Firma2" msprop:Generator_ColumnVarNameInTable="columnFirma2" msprop:Generator_ColumnPropNameInRow="Firma2" msprop:Generator_ColumnPropNameInTable="Firma2Column" msprop:Generator_UserColumnName="Firma2" type="xs:string" minOccurs="0" />
+              <xs:element name="Utvar2" msprop:Generator_ColumnVarNameInTable="columnUtvar2" msprop:Generator_ColumnPropNameInRow="Utvar2" msprop:Generator_ColumnPropNameInTable="Utvar2Column" msprop:Generator_UserColumnName="Utvar2" type="xs:string" minOccurs="0" />
+              <xs:element name="Jmeno2" msprop:Generator_ColumnVarNameInTable="columnJmeno2" msprop:Generator_ColumnPropNameInRow="Jmeno2" msprop:Generator_ColumnPropNameInTable="Jmeno2Column" msprop:Generator_UserColumnName="Jmeno2" type="xs:string" minOccurs="0" />
+              <xs:element name="Ulice2" msprop:Generator_ColumnVarNameInTable="columnUlice2" msprop:Generator_ColumnPropNameInRow="Ulice2" msprop:Generator_ColumnPropNameInTable="Ulice2Column" msprop:Generator_UserColumnName="Ulice2" type="xs:string" minOccurs="0" />
+              <xs:element name="PSC2" msprop:Generator_ColumnVarNameInTable="columnPSC2" msprop:Generator_ColumnPropNameInRow="PSC2" msprop:Generator_ColumnPropNameInTable="PSC2Column" msprop:Generator_UserColumnName="PSC2" type="xs:string" minOccurs="0" />
+              <xs:element name="Obec2" msprop:Generator_ColumnVarNameInTable="columnObec2" msprop:Generator_ColumnPropNameInRow="Obec2" msprop:Generator_ColumnPropNameInTable="Obec2Column" msprop:Generator_UserColumnName="Obec2" type="xs:string" minOccurs="0" />
+              <xs:element name="Email2" msprop:Generator_ColumnVarNameInTable="columnEmail2" msprop:Generator_ColumnPropNameInRow="Email2" msprop:Generator_ColumnPropNameInTable="Email2Column" msprop:Generator_UserColumnName="Email2" type="xs:string" minOccurs="0" />
+              <xs:element name="Fax" msprop:Generator_ColumnVarNameInTable="columnFax" msprop:Generator_ColumnPropNameInRow="Fax" msprop:Generator_ColumnPropNameInTable="FaxColumn" msprop:Generator_UserColumnName="Fax" type="xs:string" minOccurs="0" />
+              <xs:element name="Pozn" msprop:Generator_ColumnVarNameInTable="columnPozn" msprop:Generator_ColumnPropNameInRow="Pozn" msprop:Generator_ColumnPropNameInTable="PoznColumn" msprop:Generator_UserColumnName="Pozn" type="xs:string" minOccurs="0" />
+              <xs:element name="Pozn2" msprop:Generator_ColumnVarNameInTable="columnPozn2" msprop:Generator_ColumnPropNameInRow="Pozn2" msprop:Generator_ColumnPropNameInTable="Pozn2Column" msprop:Generator_UserColumnName="Pozn2" type="xs:string" minOccurs="0" />
+              <xs:element name="DICRegDPHEU" msprop:Generator_ColumnVarNameInTable="columnDICRegDPHEU" msprop:Generator_ColumnPropNameInRow="DICRegDPHEU" msprop:Generator_ColumnPropNameInTable="DICRegDPHEUColumn" msprop:Generator_UserColumnName="DICRegDPHEU" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SKPPpol" msprop:Generator_TableClassName="SKPPpolDataTable" msprop:Generator_TableVarName="tableSKPPpol" msprop:Generator_TablePropName="SKPPpol" msprop:Generator_RowDeletingName="SKPPpolRowDeleting" msprop:Generator_RowChangingName="SKPPpolRowChanging" msprop:Generator_RowEvHandlerName="SKPPpolRowChangeEventHandler" msprop:Generator_RowDeletedName="SKPPpolRowDeleted" msprop:Generator_UserTableName="SKPPpol" msprop:Generator_RowChangedName="SKPPpolRowChanged" msprop:Generator_RowEvArgName="SKPPpolRowChangeEvent" msprop:Generator_RowClassName="SKPPpolRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="RefPol" msprop:Generator_ColumnVarNameInTable="columnRefPol" msprop:Generator_ColumnPropNameInRow="RefPol" msprop:Generator_ColumnPropNameInTable="RefPolColumn" msprop:Generator_UserColumnName="RefPol" type="xs:int" minOccurs="0" />
+              <xs:element name="RelAgID" msprop:Generator_ColumnVarNameInTable="columnRelAgID" msprop:Generator_ColumnPropNameInRow="RelAgID" msprop:Generator_ColumnPropNameInTable="RelAgIDColumn" msprop:Generator_UserColumnName="RelAgID" type="xs:int" minOccurs="0" />
+              <xs:element name="RefSKz" msprop:Generator_ColumnVarNameInTable="columnRefSKz" msprop:Generator_ColumnPropNameInRow="RefSKz" msprop:Generator_ColumnPropNameInTable="RefSKzColumn" msprop:Generator_UserColumnName="RefSKz" type="xs:int" minOccurs="0" />
+              <xs:element name="Mnozstvi" msprop:Generator_ColumnVarNameInTable="columnMnozstvi" msprop:Generator_ColumnPropNameInRow="Mnozstvi" msprop:Generator_ColumnPropNameInTable="MnozstviColumn" msprop:Generator_UserColumnName="Mnozstvi" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SKzAlternatives" msprop:Generator_TableClassName="SKzAlternativesDataTable" msprop:Generator_TableVarName="tableSKzAlternatives" msprop:Generator_TablePropName="SKzAlternatives" msprop:Generator_RowDeletingName="SKzAlternativesRowDeleting" msprop:Generator_RowChangingName="SKzAlternativesRowChanging" msprop:Generator_RowEvHandlerName="SKzAlternativesRowChangeEventHandler" msprop:Generator_RowDeletedName="SKzAlternativesRowDeleted" msprop:Generator_UserTableName="SKzAlternatives" msprop:Generator_RowChangedName="SKzAlternativesRowChanged" msprop:Generator_RowEvArgName="SKzAlternativesRowChangeEvent" msprop:Generator_RowClassName="SKzAlternativesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="RefStruct" msprop:Generator_ColumnVarNameInTable="columnRefStruct" msprop:Generator_ColumnPropNameInRow="RefStruct" msprop:Generator_ColumnPropNameInTable="RefStructColumn" msprop:Generator_UserColumnName="RefStruct" type="xs:int" minOccurs="0" />
+              <xs:element name="RelSKzVC" msprop:Generator_ColumnVarNameInTable="columnRelSKzVC" msprop:Generator_ColumnPropNameInRow="RelSKzVC" msprop:Generator_ColumnPropNameInTable="RelSKzVCColumn" msprop:Generator_UserColumnName="RelSKzVC" type="xs:int" minOccurs="0" />
+              <xs:element name="IDS" msprop:Generator_ColumnVarNameInTable="columnIDS" msprop:Generator_ColumnPropNameInRow="IDS" msprop:Generator_ColumnPropNameInTable="IDSColumn" msprop:Generator_UserColumnName="IDS" type="xs:string" minOccurs="0" />
+              <xs:element name="EAN" msprop:Generator_ColumnVarNameInTable="columnEAN" msprop:Generator_ColumnPropNameInRow="EAN" msprop:Generator_ColumnPropNameInTable="EANColumn" msprop:Generator_UserColumnName="EAN" type="xs:string" minOccurs="0" />
+              <xs:element name="Nazev" msprop:Generator_ColumnVarNameInTable="columnNazev" msprop:Generator_ColumnPropNameInRow="Nazev" msprop:Generator_ColumnPropNameInTable="NazevColumn" msprop:Generator_UserColumnName="Nazev" type="xs:string" minOccurs="0" />
+              <xs:element name="MJ" msprop:Generator_ColumnVarNameInTable="columnMJ" msprop:Generator_ColumnPropNameInRow="MJ" msprop:Generator_ColumnPropNameInTable="MJColumn" msprop:Generator_UserColumnName="MJ" type="xs:string" minOccurs="0" />
+              <xs:element name="StavZ" msprop:Generator_ColumnVarNameInTable="columnStavZ" msprop:Generator_ColumnPropNameInRow="StavZ" msprop:Generator_ColumnPropNameInTable="StavZColumn" msprop:Generator_UserColumnName="StavZ" type="xs:double" minOccurs="0" />
+              <xs:element name="NCEAN" msprop:Generator_ColumnVarNameInTable="columnNCEAN" msprop:Generator_ColumnPropNameInRow="NCEAN" msprop:Generator_ColumnPropNameInTable="NCEANColumn" msprop:Generator_UserColumnName="NCEAN" type="xs:string" minOccurs="0" />
+              <xs:element name="NCMJEAN" msprop:Generator_ColumnVarNameInTable="columnNCMJEAN" msprop:Generator_ColumnPropNameInRow="NCMJEAN" msprop:Generator_ColumnPropNameInTable="NCMJEANColumn" msprop:Generator_UserColumnName="NCMJEAN" type="xs:string" minOccurs="0" />
+              <xs:element name="RefSklad" msprop:Generator_ColumnVarNameInTable="columnRefSklad" msprop:Generator_ColumnPropNameInRow="RefSklad" msprop:Generator_ColumnPropNameInTable="RefSkladColumn" msprop:Generator_UserColumnName="RefSklad" type="xs:int" minOccurs="0" />
+              <xs:element name="NCRefAD" msprop:Generator_ColumnVarNameInTable="columnNCRefAD" msprop:Generator_ColumnPropNameInRow="NCRefAD" msprop:Generator_ColumnPropNameInTable="NCRefADColumn" msprop:Generator_UserColumnName="NCRefAD" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SKzNC" msprop:Generator_TableClassName="SKzNCDataTable" msprop:Generator_TableVarName="tableSKzNC" msprop:Generator_TablePropName="SKzNC" msprop:Generator_RowDeletingName="SKzNCRowDeleting" msprop:Generator_RowChangingName="SKzNCRowChanging" msprop:Generator_RowEvHandlerName="SKzNCRowChangeEventHandler" msprop:Generator_RowDeletedName="SKzNCRowDeleted" msprop:Generator_UserTableName="SKzNC" msprop:Generator_RowChangedName="SKzNCRowChanged" msprop:Generator_RowEvArgName="SKzNCRowChangeEvent" msprop:Generator_RowClassName="SKzNCRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RefAg" msprop:Generator_ColumnVarNameInTable="columnRefAg" msprop:Generator_ColumnPropNameInRow="RefAg" msprop:Generator_ColumnPropNameInTable="RefAgColumn" msprop:Generator_UserColumnName="RefAg" type="xs:int" minOccurs="0" />
+              <xs:element name="Firma" msprop:Generator_ColumnVarNameInTable="columnFirma" msprop:Generator_ColumnPropNameInRow="Firma" msprop:Generator_ColumnPropNameInTable="FirmaColumn" msprop:Generator_UserColumnName="Firma" type="xs:string" minOccurs="0" />
+              <xs:element name="EAN" msprop:Generator_ColumnVarNameInTable="columnEAN" msprop:Generator_ColumnPropNameInRow="EAN" msprop:Generator_ColumnPropNameInTable="EANColumn" msprop:Generator_UserColumnName="EAN" type="xs:string" minOccurs="0" />
+              <xs:element name="MJEAN" msprop:Generator_ColumnVarNameInTable="columnMJEAN" msprop:Generator_ColumnPropNameInRow="MJEAN" msprop:Generator_ColumnPropNameInTable="MJEANColumn" msprop:Generator_UserColumnName="MJEAN" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sSklad" msprop:Generator_TableClassName="sSkladDataTable" msprop:Generator_TableVarName="tablesSklad" msprop:Generator_TablePropName="sSklad" msprop:Generator_RowDeletingName="sSkladRowDeleting" msprop:Generator_RowChangingName="sSkladRowChanging" msprop:Generator_RowEvHandlerName="sSkladRowChangeEventHandler" msprop:Generator_RowDeletedName="sSkladRowDeleted" msprop:Generator_UserTableName="sSklad" msprop:Generator_RowChangedName="sSkladRowChanged" msprop:Generator_RowEvArgName="sSkladRowChangeEvent" msprop:Generator_RowClassName="sSkladRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="IDS" msprop:Generator_ColumnVarNameInTable="columnIDS" msprop:Generator_ColumnPropNameInRow="IDS" msprop:Generator_ColumnPropNameInTable="IDSColumn" msprop:Generator_UserColumnName="IDS" type="xs:string" minOccurs="0" />
+              <xs:element name="SText" msprop:Generator_ColumnVarNameInTable="columnSText" msprop:Generator_ColumnPropNameInRow="SText" msprop:Generator_ColumnPropNameInTable="STextColumn" msprop:Generator_UserColumnName="SText" type="xs:string" minOccurs="0" />
+              <xs:element name="Reklam" msprop:Generator_ColumnVarNameInTable="columnReklam" msprop:Generator_ColumnPropNameInRow="Reklam" msprop:Generator_ColumnPropNameInTable="ReklamColumn" msprop:Generator_UserColumnName="Reklam" type="xs:boolean" />
+              <xs:element name="Pozn" msprop:Generator_ColumnVarNameInTable="columnPozn" msprop:Generator_ColumnPropNameInRow="Pozn" msprop:Generator_ColumnPropNameInTable="PoznColumn" msprop:Generator_UserColumnName="Pozn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sCRady" msprop:Generator_TableClassName="sCRadyDataTable" msprop:Generator_TableVarName="tablesCRady" msprop:Generator_TablePropName="sCRady" msprop:Generator_RowDeletingName="sCRadyRowDeleting" msprop:Generator_RowChangingName="sCRadyRowChanging" msprop:Generator_RowEvHandlerName="sCRadyRowChangeEventHandler" msprop:Generator_RowDeletedName="sCRadyRowDeleted" msprop:Generator_UserTableName="sCRady" msprop:Generator_RowChangedName="sCRadyRowChanged" msprop:Generator_RowEvArgName="sCRadyRowChangeEvent" msprop:Generator_RowClassName="sCRadyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="IDS" msprop:Generator_ColumnVarNameInTable="columnIDS" msprop:Generator_ColumnPropNameInRow="IDS" msprop:Generator_ColumnPropNameInTable="IDSColumn" msprop:Generator_UserColumnName="IDS" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SKMPPolVazba" msprop:Generator_TableClassName="SKMPPolVazbaDataTable" msprop:Generator_TableVarName="tableSKMPPolVazba" msprop:Generator_TablePropName="SKMPPolVazba" msprop:Generator_RowDeletingName="SKMPPolVazbaRowDeleting" msprop:Generator_RowChangingName="SKMPPolVazbaRowChanging" msprop:Generator_RowEvHandlerName="SKMPPolVazbaRowChangeEventHandler" msprop:Generator_RowDeletedName="SKMPPolVazbaRowDeleted" msprop:Generator_UserTableName="SKMPPolVazba" msprop:Generator_RowChangedName="SKMPPolVazbaRowChanged" msprop:Generator_RowEvArgName="SKMPPolVazbaRowChangeEvent" msprop:Generator_RowClassName="SKMPPolVazbaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RefSKz" msprop:Generator_ColumnVarNameInTable="columnRefSKz" msprop:Generator_ColumnPropNameInRow="RefSKz" msprop:Generator_ColumnPropNameInTable="RefSKzColumn" msprop:Generator_UserColumnName="RefSKz" type="xs:int" minOccurs="0" />
+              <xs:element name="RefSKz1" msprop:Generator_ColumnVarNameInTable="columnRefSKz1" msprop:Generator_ColumnPropNameInRow="RefSKz1" msprop:Generator_ColumnPropNameInTable="RefSKz1Column" msprop:Generator_UserColumnName="RefSKz1" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SKzParametry" msprop:Generator_TableClassName="SKzParametryDataTable" msprop:Generator_TableVarName="tableSKzParametry" msprop:Generator_TablePropName="SKzParametry" msprop:Generator_RowDeletingName="SKzParametryRowDeleting" msprop:Generator_RowChangingName="SKzParametryRowChanging" msprop:Generator_RowEvHandlerName="SKzParametryRowChangeEventHandler" msprop:Generator_RowDeletedName="SKzParametryRowDeleted" msprop:Generator_UserTableName="SKzParametry" msprop:Generator_RowChangedName="SKzParametryRowChanged" msprop:Generator_RowEvArgName="SKzParametryRowChangeEvent" msprop:Generator_RowClassName="SKzParametryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="zID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnzID" msprop:Generator_ColumnPropNameInRow="zID" msprop:Generator_ColumnPropNameInTable="zIDColumn" msprop:Generator_UserColumnName="zID" type="xs:int" minOccurs="0" />
+              <xs:element name="zIDS" msprop:Generator_ColumnVarNameInTable="columnzIDS" msprop:Generator_ColumnPropNameInRow="zIDS" msprop:Generator_ColumnPropNameInTable="zIDSColumn" msprop:Generator_UserColumnName="zIDS" type="xs:string" minOccurs="0" />
+              <xs:element name="pValText" msprop:Generator_ColumnVarNameInTable="columnpValText" msprop:Generator_ColumnPropNameInRow="pValText" msprop:Generator_ColumnPropNameInTable="pValTextColumn" msprop:Generator_UserColumnName="pValText" type="xs:string" minOccurs="0" />
+              <xs:element name="pID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpID" msprop:Generator_ColumnPropNameInRow="pID" msprop:Generator_ColumnPropNameInTable="pIDColumn" msprop:Generator_UserColumnName="pID" type="xs:int" minOccurs="0" />
+              <xs:element name="pIDS" msprop:Generator_ColumnVarNameInTable="columnpIDS" msprop:Generator_ColumnPropNameInRow="pIDS" msprop:Generator_ColumnPropNameInTable="pIDSColumn" msprop:Generator_UserColumnName="pIDS" type="xs:string" minOccurs="0" />
+              <xs:element name="pSText" msprop:Generator_ColumnVarNameInTable="columnpSText" msprop:Generator_ColumnPropNameInRow="pSText" msprop:Generator_ColumnPropNameInTable="pSTextColumn" msprop:Generator_UserColumnName="pSText" type="xs:string" minOccurs="0" />
+              <xs:element name="pDelka" msprop:Generator_ColumnVarNameInTable="columnpDelka" msprop:Generator_ColumnPropNameInRow="pDelka" msprop:Generator_ColumnPropNameInTable="pDelkaColumn" msprop:Generator_UserColumnName="pDelka" type="xs:int" minOccurs="0" />
+              <xs:element name="pRelTyp" msprop:Generator_ColumnVarNameInTable="columnpRelTyp" msprop:Generator_ColumnPropNameInRow="pRelTyp" msprop:Generator_ColumnPropNameInTable="pRelTypColumn" msprop:Generator_UserColumnName="pRelTyp" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SKzObjedV" msprop:Generator_TableClassName="SKzObjedVDataTable" msprop:Generator_TableVarName="tableSKzObjedV" msprop:Generator_TablePropName="SKzObjedV" msprop:Generator_RowDeletingName="SKzObjedVRowDeleting" msprop:Generator_RowChangingName="SKzObjedVRowChanging" msprop:Generator_RowEvHandlerName="SKzObjedVRowChangeEventHandler" msprop:Generator_RowDeletedName="SKzObjedVRowDeleted" msprop:Generator_UserTableName="SKzObjedV" msprop:Generator_RowChangedName="SKzObjedVRowChanged" msprop:Generator_RowEvArgName="SKzObjedVRowChangeEvent" msprop:Generator_RowClassName="SKzObjedVRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="ObjedV" msprop:Generator_ColumnVarNameInTable="columnObjedV" msprop:Generator_ColumnPropNameInRow="ObjedV" msprop:Generator_ColumnPropNameInTable="ObjedVColumn" msprop:Generator_UserColumnName="ObjedV" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SKzBuf" msprop:Generator_TableClassName="SKzBufDataTable" msprop:Generator_TableVarName="tableSKzBuf" msprop:Generator_TablePropName="SKzBuf" msprop:Generator_RowDeletingName="SKzBufRowDeleting" msprop:Generator_RowChangingName="SKzBufRowChanging" msprop:Generator_RowEvHandlerName="SKzBufRowChangeEventHandler" msprop:Generator_RowDeletedName="SKzBufRowDeleted" msprop:Generator_UserTableName="SKzBuf" msprop:Generator_RowChangedName="SKzBufRowChanged" msprop:Generator_RowEvArgName="SKzBufRowChangeEvent" msprop:Generator_RowClassName="SKzBufRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="RefSKz" msprop:Generator_ColumnVarNameInTable="columnRefSKz" msprop:Generator_ColumnPropNameInRow="RefSKz" msprop:Generator_ColumnPropNameInTable="RefSKzColumn" msprop:Generator_UserColumnName="RefSKz" type="xs:int" minOccurs="0" />
+              <xs:element name="ObjedP" msprop:Generator_ColumnVarNameInTable="columnObjedP" msprop:Generator_ColumnPropNameInRow="ObjedP" msprop:Generator_ColumnPropNameInTable="ObjedPColumn" msprop:Generator_UserColumnName="ObjedP" type="xs:double" minOccurs="0" />
+              <xs:element name="ObjedV" msprop:Generator_ColumnVarNameInTable="columnObjedV" msprop:Generator_ColumnPropNameInRow="ObjedV" msprop:Generator_ColumnPropNameInTable="ObjedVColumn" msprop:Generator_UserColumnName="ObjedV" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FakturaCislo" msprop:Generator_TableClassName="FakturaCisloDataTable" msprop:Generator_TableVarName="tableFakturaCislo" msprop:Generator_TablePropName="FakturaCislo" msprop:Generator_RowDeletingName="FakturaCisloRowDeleting" msprop:Generator_RowChangingName="FakturaCisloRowChanging" msprop:Generator_RowEvHandlerName="FakturaCisloRowChangeEventHandler" msprop:Generator_RowDeletedName="FakturaCisloRowDeleted" msprop:Generator_UserTableName="FakturaCislo" msprop:Generator_RowChangedName="FakturaCisloRowChanged" msprop:Generator_RowEvArgName="FakturaCisloRowChangeEvent" msprop:Generator_RowClassName="FakturaCisloRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FA_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnFA_ID" msprop:Generator_ColumnPropNameInRow="FA_ID" msprop:Generator_ColumnPropNameInTable="FA_IDColumn" msprop:Generator_UserColumnName="FA_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="FA_RelCR" msprop:Generator_ColumnVarNameInTable="columnFA_RelCR" msprop:Generator_ColumnPropNameInRow="FA_RelCR" msprop:Generator_ColumnPropNameInTable="FA_RelCRColumn" msprop:Generator_UserColumnName="FA_RelCR" type="xs:int" minOccurs="0" />
+              <xs:element name="FA_Cislo" msprop:Generator_ColumnVarNameInTable="columnFA_Cislo" msprop:Generator_ColumnPropNameInRow="FA_Cislo" msprop:Generator_ColumnPropNameInTable="FA_CisloColumn" msprop:Generator_UserColumnName="FA_Cislo" type="xs:string" minOccurs="0" />
+              <xs:element name="FA_VarSym" msprop:Generator_ColumnVarNameInTable="columnFA_VarSym" msprop:Generator_ColumnPropNameInRow="FA_VarSym" msprop:Generator_ColumnPropNameInTable="FA_VarSymColumn" msprop:Generator_UserColumnName="FA_VarSym" type="xs:string" minOccurs="0" />
+              <xs:element name="FA_SText" msprop:Generator_ColumnVarNameInTable="columnFA_SText" msprop:Generator_ColumnPropNameInRow="FA_SText" msprop:Generator_ColumnPropNameInTable="FA_STextColumn" msprop:Generator_UserColumnName="FA_SText" type="xs:string" minOccurs="0" />
+              <xs:element name="FApol_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnFApol_ID" msprop:Generator_ColumnPropNameInRow="FApol_ID" msprop:Generator_ColumnPropNameInTable="FApol_IDColumn" msprop:Generator_UserColumnName="FApol_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="FApol_SText" msprop:Generator_ColumnVarNameInTable="columnFApol_SText" msprop:Generator_ColumnPropNameInRow="FApol_SText" msprop:Generator_ColumnPropNameInTable="FApol_STextColumn" msprop:Generator_UserColumnName="FApol_SText" type="xs:string" minOccurs="0" />
+              <xs:element name="FApol_Mnozstvi" msprop:Generator_ColumnVarNameInTable="columnFApol_Mnozstvi" msprop:Generator_ColumnPropNameInRow="FApol_Mnozstvi" msprop:Generator_ColumnPropNameInTable="FApol_MnozstviColumn" msprop:Generator_UserColumnName="FApol_Mnozstvi" type="xs:double" minOccurs="0" />
+              <xs:element name="FApol_Prenes" msprop:Generator_ColumnVarNameInTable="columnFApol_Prenes" msprop:Generator_ColumnPropNameInRow="FApol_Prenes" msprop:Generator_ColumnPropNameInTable="FApol_PrenesColumn" msprop:Generator_UserColumnName="FApol_Prenes" type="xs:double" minOccurs="0" />
+              <xs:element name="FApol_MJ" msprop:Generator_ColumnVarNameInTable="columnFApol_MJ" msprop:Generator_ColumnPropNameInRow="FApol_MJ" msprop:Generator_ColumnPropNameInTable="FApol_MJColumn" msprop:Generator_UserColumnName="FApol_MJ" type="xs:string" minOccurs="0" />
+              <xs:element name="FApol_MJKoef" msprop:Generator_ColumnVarNameInTable="columnFApol_MJKoef" msprop:Generator_ColumnPropNameInRow="FApol_MJKoef" msprop:Generator_ColumnPropNameInTable="FApol_MJKoefColumn" msprop:Generator_UserColumnName="FApol_MJKoef" type="xs:double" minOccurs="0" />
+              <xs:element name="FApol_Kod" msprop:Generator_ColumnVarNameInTable="columnFApol_Kod" msprop:Generator_ColumnPropNameInRow="FApol_Kod" msprop:Generator_ColumnPropNameInTable="FApol_KodColumn" msprop:Generator_UserColumnName="FApol_Kod" type="xs:string" minOccurs="0" />
+              <xs:element name="SKz_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSKz_ID" msprop:Generator_ColumnPropNameInRow="SKz_ID" msprop:Generator_ColumnPropNameInTable="SKz_IDColumn" msprop:Generator_UserColumnName="SKz_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="SKz_IDS" msprop:Generator_ColumnVarNameInTable="columnSKz_IDS" msprop:Generator_ColumnPropNameInRow="SKz_IDS" msprop:Generator_ColumnPropNameInTable="SKz_IDSColumn" msprop:Generator_UserColumnName="SKz_IDS" type="xs:string" minOccurs="0" />
+              <xs:element name="SKz_EAN" msprop:Generator_ColumnVarNameInTable="columnSKz_EAN" msprop:Generator_ColumnPropNameInRow="SKz_EAN" msprop:Generator_ColumnPropNameInTable="SKz_EANColumn" msprop:Generator_UserColumnName="SKz_EAN" type="xs:string" minOccurs="0" />
+              <xs:element name="SKz_RelSKzVC" msprop:Generator_ColumnVarNameInTable="columnSKz_RelSKzVC" msprop:Generator_ColumnPropNameInRow="SKz_RelSKzVC" msprop:Generator_ColumnPropNameInTable="SKz_RelSKzVCColumn" msprop:Generator_UserColumnName="SKz_RelSKzVC" type="xs:int" minOccurs="0" />
+              <xs:element name="Skz_MJ2" msprop:Generator_ColumnVarNameInTable="columnSkz_MJ2" msprop:Generator_ColumnPropNameInRow="Skz_MJ2" msprop:Generator_ColumnPropNameInTable="Skz_MJ2Column" msprop:Generator_UserColumnName="Skz_MJ2" type="xs:string" minOccurs="0" />
+              <xs:element name="Skz_MJ3" msprop:Generator_ColumnVarNameInTable="columnSkz_MJ3" msprop:Generator_ColumnPropNameInRow="Skz_MJ3" msprop:Generator_ColumnPropNameInTable="Skz_MJ3Column" msprop:Generator_UserColumnName="Skz_MJ3" type="xs:string" minOccurs="0" />
+              <xs:element name="Skz_MJ2Koef" msprop:Generator_ColumnVarNameInTable="columnSkz_MJ2Koef" msprop:Generator_ColumnPropNameInRow="Skz_MJ2Koef" msprop:Generator_ColumnPropNameInTable="Skz_MJ2KoefColumn" msprop:Generator_UserColumnName="Skz_MJ2Koef" type="xs:double" minOccurs="0" />
+              <xs:element name="Skz_MJ3Koef" msprop:Generator_ColumnVarNameInTable="columnSkz_MJ3Koef" msprop:Generator_ColumnPropNameInRow="Skz_MJ3Koef" msprop:Generator_ColumnPropNameInTable="Skz_MJ3KoefColumn" msprop:Generator_UserColumnName="Skz_MJ3Koef" type="xs:double" minOccurs="0" />
+              <xs:element name="Skz_RefSklad" msprop:Generator_ColumnVarNameInTable="columnSkz_RefSklad" msprop:Generator_ColumnPropNameInRow="Skz_RefSklad" msprop:Generator_ColumnPropNameInTable="Skz_RefSkladColumn" msprop:Generator_UserColumnName="Skz_RefSklad" type="xs:int" minOccurs="0" />
+              <xs:element name="SKz_SText" msprop:Generator_ColumnVarNameInTable="columnSKz_SText" msprop:Generator_ColumnPropNameInRow="SKz_SText" msprop:Generator_ColumnPropNameInTable="SKz_STextColumn" msprop:Generator_UserColumnName="SKz_SText" type="xs:string" minOccurs="0" />
+              <xs:element name="SKz_RefVPrFXTS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSKz_RefVPrFXTS" msprop:Generator_ColumnPropNameInRow="SKz_RefVPrFXTS" msprop:Generator_ColumnPropNameInTable="SKz_RefVPrFXTSColumn" msprop:Generator_UserColumnName="SKz_RefVPrFXTS" type="xs:int" minOccurs="0" />
+              <xs:element name="SKz_RefVPrFDTS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSKz_RefVPrFDTS" msprop:Generator_ColumnPropNameInRow="SKz_RefVPrFDTS" msprop:Generator_ColumnPropNameInTable="SKz_RefVPrFDTSColumn" msprop:Generator_UserColumnName="SKz_RefVPrFDTS" type="xs:int" minOccurs="0" />
+              <xs:element name="SKz_RefVPrFITS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSKz_RefVPrFITS" msprop:Generator_ColumnPropNameInRow="SKz_RefVPrFITS" msprop:Generator_ColumnPropNameInTable="SKz_RefVPrFITSColumn" msprop:Generator_UserColumnName="SKz_RefVPrFITS" type="xs:int" minOccurs="0" />
+              <xs:element name="SKz_RefVPrFPTS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSKz_RefVPrFPTS" msprop:Generator_ColumnPropNameInRow="SKz_RefVPrFPTS" msprop:Generator_ColumnPropNameInTable="SKz_RefVPrFPTSColumn" msprop:Generator_UserColumnName="SKz_RefVPrFPTS" type="xs:int" minOccurs="0" />
+              <xs:element name="SKz_RefVPrFVTS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSKz_RefVPrFVTS" msprop:Generator_ColumnPropNameInRow="SKz_RefVPrFVTS" msprop:Generator_ColumnPropNameInTable="SKz_RefVPrFVTSColumn" msprop:Generator_UserColumnName="SKz_RefVPrFVTS" type="xs:int" minOccurs="0" />
+              <xs:element name="SKz_VPrFXTS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSKz_VPrFXTS" msprop:Generator_ColumnPropNameInRow="SKz_VPrFXTS" msprop:Generator_ColumnPropNameInTable="SKz_VPrFXTSColumn" msprop:Generator_UserColumnName="SKz_VPrFXTS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SKz_VPrFDTS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSKz_VPrFDTS" msprop:Generator_ColumnPropNameInRow="SKz_VPrFDTS" msprop:Generator_ColumnPropNameInTable="SKz_VPrFDTSColumn" msprop:Generator_UserColumnName="SKz_VPrFDTS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SKz_VPrFITS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSKz_VPrFITS" msprop:Generator_ColumnPropNameInRow="SKz_VPrFITS" msprop:Generator_ColumnPropNameInTable="SKz_VPrFITSColumn" msprop:Generator_UserColumnName="SKz_VPrFITS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SKz_VPrFPTS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSKz_VPrFPTS" msprop:Generator_ColumnPropNameInRow="SKz_VPrFPTS" msprop:Generator_ColumnPropNameInTable="SKz_VPrFPTSColumn" msprop:Generator_UserColumnName="SKz_VPrFPTS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SKz_VPrFVTS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSKz_VPrFVTS" msprop:Generator_ColumnPropNameInRow="SKz_VPrFVTS" msprop:Generator_ColumnPropNameInTable="SKz_VPrFVTSColumn" msprop:Generator_UserColumnName="SKz_VPrFVTS" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SKPV" msprop:Generator_TableClassName="SKPVDataTable" msprop:Generator_TableVarName="tableSKPV" msprop:Generator_TablePropName="SKPV" msprop:Generator_RowDeletingName="SKPVRowDeleting" msprop:Generator_RowChangingName="SKPVRowChanging" msprop:Generator_RowEvHandlerName="SKPVRowChangeEventHandler" msprop:Generator_RowDeletedName="SKPVRowDeleted" msprop:Generator_UserTableName="SKPV" msprop:Generator_RowChangedName="SKPVRowChanged" msprop:Generator_RowEvArgName="SKPVRowChangeEvent" msprop:Generator_RowClassName="SKPVRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SKPVpol" msprop:Generator_TableClassName="SKPVpolDataTable" msprop:Generator_TableVarName="tableSKPVpol" msprop:Generator_TablePropName="SKPVpol" msprop:Generator_RowDeletingName="SKPVpolRowDeleting" msprop:Generator_RowChangingName="SKPVpolRowChanging" msprop:Generator_RowEvHandlerName="SKPVpolRowChangeEventHandler" msprop:Generator_RowDeletedName="SKPVpolRowDeleted" msprop:Generator_UserTableName="SKPVpol" msprop:Generator_RowChangedName="SKPVpolRowChanged" msprop:Generator_RowEvArgName="SKPVpolRowChangeEvent" msprop:Generator_RowClassName="SKPVpolRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="RefPol" msprop:Generator_ColumnVarNameInTable="columnRefPol" msprop:Generator_ColumnPropNameInRow="RefPol" msprop:Generator_ColumnPropNameInTable="RefPolColumn" msprop:Generator_UserColumnName="RefPol" type="xs:int" minOccurs="0" />
+              <xs:element name="RelAgID" msprop:Generator_ColumnVarNameInTable="columnRelAgID" msprop:Generator_ColumnPropNameInRow="RelAgID" msprop:Generator_ColumnPropNameInTable="RelAgIDColumn" msprop:Generator_UserColumnName="RelAgID" type="xs:int" minOccurs="0" />
+              <xs:element name="RefSKz" msprop:Generator_ColumnVarNameInTable="columnRefSKz" msprop:Generator_ColumnPropNameInRow="RefSKz" msprop:Generator_ColumnPropNameInTable="RefSKzColumn" msprop:Generator_UserColumnName="RefSKz" type="xs:int" minOccurs="0" />
+              <xs:element name="Mnozstvi" msprop:Generator_ColumnVarNameInTable="columnMnozstvi" msprop:Generator_ColumnPropNameInRow="Mnozstvi" msprop:Generator_ColumnPropNameInTable="MnozstviColumn" msprop:Generator_UserColumnName="Mnozstvi" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OBJCislo" msprop:Generator_TableClassName="OBJCisloDataTable" msprop:Generator_TableVarName="tableOBJCislo" msprop:Generator_TablePropName="OBJCislo" msprop:Generator_RowDeletingName="OBJCisloRowDeleting" msprop:Generator_RowChangingName="OBJCisloRowChanging" msprop:Generator_RowEvHandlerName="OBJCisloRowChangeEventHandler" msprop:Generator_RowDeletedName="OBJCisloRowDeleted" msprop:Generator_UserTableName="OBJCislo" msprop:Generator_RowChangedName="OBJCisloRowChanged" msprop:Generator_RowEvArgName="OBJCisloRowChangeEvent" msprop:Generator_RowClassName="OBJCisloRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OBJ_Cislo" msprop:Generator_ColumnVarNameInTable="columnOBJ_Cislo" msprop:Generator_ColumnPropNameInRow="OBJ_Cislo" msprop:Generator_ColumnPropNameInTable="OBJ_CisloColumn" msprop:Generator_UserColumnName="OBJ_Cislo" type="xs:string" minOccurs="0" />
+              <xs:element name="SKz_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSKz_ID" msprop:Generator_ColumnPropNameInRow="SKz_ID" msprop:Generator_ColumnPropNameInTable="SKz_IDColumn" msprop:Generator_UserColumnName="SKz_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="SKz_Nazev" msprop:Generator_ColumnVarNameInTable="columnSKz_Nazev" msprop:Generator_ColumnPropNameInRow="SKz_Nazev" msprop:Generator_ColumnPropNameInTable="SKz_NazevColumn" msprop:Generator_UserColumnName="SKz_Nazev" type="xs:string" minOccurs="0" />
+              <xs:element name="SKz_EAN" msprop:Generator_ColumnVarNameInTable="columnSKz_EAN" msprop:Generator_ColumnPropNameInRow="SKz_EAN" msprop:Generator_ColumnPropNameInTable="SKz_EANColumn" msprop:Generator_UserColumnName="SKz_EAN" type="xs:string" minOccurs="0" />
+              <xs:element name="SKz_IDS" msprop:Generator_ColumnVarNameInTable="columnSKz_IDS" msprop:Generator_ColumnPropNameInRow="SKz_IDS" msprop:Generator_ColumnPropNameInTable="SKz_IDSColumn" msprop:Generator_UserColumnName="SKz_IDS" type="xs:string" minOccurs="0" />
+              <xs:element name="SKz_RefSklad" msprop:Generator_ColumnVarNameInTable="columnSKz_RefSklad" msprop:Generator_ColumnPropNameInRow="SKz_RefSklad" msprop:Generator_ColumnPropNameInTable="SKz_RefSkladColumn" msprop:Generator_UserColumnName="SKz_RefSklad" type="xs:int" minOccurs="0" />
+              <xs:element name="OBJ_Mnozstvi" msprop:Generator_ColumnVarNameInTable="columnOBJ_Mnozstvi" msprop:Generator_ColumnPropNameInRow="OBJ_Mnozstvi" msprop:Generator_ColumnPropNameInTable="OBJ_MnozstviColumn" msprop:Generator_UserColumnName="OBJ_Mnozstvi" type="xs:double" minOccurs="0" />
+              <xs:element name="OBJPol_MJ" msprop:Generator_ColumnVarNameInTable="columnOBJPol_MJ" msprop:Generator_ColumnPropNameInRow="OBJPol_MJ" msprop:Generator_ColumnPropNameInTable="OBJPol_MJColumn" msprop:Generator_UserColumnName="OBJPol_MJ" type="xs:string" minOccurs="0" />
+              <xs:element name="OBJpol_MJKoef" msprop:Generator_ColumnVarNameInTable="columnOBJpol_MJKoef" msprop:Generator_ColumnPropNameInRow="OBJpol_MJKoef" msprop:Generator_ColumnPropNameInTable="OBJpol_MJKoefColumn" msprop:Generator_UserColumnName="OBJpol_MJKoef" type="xs:double" minOccurs="0" />
+              <xs:element name="SKz_RelSKzVC" msprop:Generator_ColumnVarNameInTable="columnSKz_RelSKzVC" msprop:Generator_ColumnPropNameInRow="SKz_RelSKzVC" msprop:Generator_ColumnPropNameInTable="SKz_RelSKzVCColumn" msprop:Generator_UserColumnName="SKz_RelSKzVC" type="xs:int" minOccurs="0" />
+              <xs:element name="OBJpol_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnOBJpol_ID" msprop:Generator_ColumnPropNameInRow="OBJpol_ID" msprop:Generator_ColumnPropNameInTable="OBJpol_IDColumn" msprop:Generator_UserColumnName="OBJpol_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="SKz_SText" msprop:Generator_ColumnVarNameInTable="columnSKz_SText" msprop:Generator_ColumnPropNameInRow="SKz_SText" msprop:Generator_ColumnPropNameInTable="SKz_STextColumn" msprop:Generator_UserColumnName="SKz_SText" type="xs:string" minOccurs="0" />
+              <xs:element name="SKz_RefVPrFXTS" msprop:Generator_ColumnVarNameInTable="columnSKz_RefVPrFXTS" msprop:Generator_ColumnPropNameInRow="SKz_RefVPrFXTS" msprop:Generator_ColumnPropNameInTable="SKz_RefVPrFXTSColumn" msprop:Generator_UserColumnName="SKz_RefVPrFXTS" type="xs:int" minOccurs="0" />
+              <xs:element name="SKz_RefVPrFDTS" msprop:Generator_ColumnVarNameInTable="columnSKz_RefVPrFDTS" msprop:Generator_ColumnPropNameInRow="SKz_RefVPrFDTS" msprop:Generator_ColumnPropNameInTable="SKz_RefVPrFDTSColumn" msprop:Generator_UserColumnName="SKz_RefVPrFDTS" type="xs:int" minOccurs="0" />
+              <xs:element name="SKz_RefVPrFITS" msprop:Generator_ColumnVarNameInTable="columnSKz_RefVPrFITS" msprop:Generator_ColumnPropNameInRow="SKz_RefVPrFITS" msprop:Generator_ColumnPropNameInTable="SKz_RefVPrFITSColumn" msprop:Generator_UserColumnName="SKz_RefVPrFITS" type="xs:int" minOccurs="0" />
+              <xs:element name="SKz_RefVPrFPTS" msprop:Generator_ColumnVarNameInTable="columnSKz_RefVPrFPTS" msprop:Generator_ColumnPropNameInRow="SKz_RefVPrFPTS" msprop:Generator_ColumnPropNameInTable="SKz_RefVPrFPTSColumn" msprop:Generator_UserColumnName="SKz_RefVPrFPTS" type="xs:int" minOccurs="0" />
+              <xs:element name="SKz_RefVPrFVTS" msprop:Generator_ColumnVarNameInTable="columnSKz_RefVPrFVTS" msprop:Generator_ColumnPropNameInRow="SKz_RefVPrFVTS" msprop:Generator_ColumnPropNameInTable="SKz_RefVPrFVTSColumn" msprop:Generator_UserColumnName="SKz_RefVPrFVTS" type="xs:int" minOccurs="0" />
+              <xs:element name="SKz_VPrFXTS" msprop:Generator_ColumnVarNameInTable="columnSKz_VPrFXTS" msprop:Generator_ColumnPropNameInRow="SKz_VPrFXTS" msprop:Generator_ColumnPropNameInTable="SKz_VPrFXTSColumn" msprop:Generator_UserColumnName="SKz_VPrFXTS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SKz_VPrFDTS" msprop:Generator_ColumnVarNameInTable="columnSKz_VPrFDTS" msprop:Generator_ColumnPropNameInRow="SKz_VPrFDTS" msprop:Generator_ColumnPropNameInTable="SKz_VPrFDTSColumn" msprop:Generator_UserColumnName="SKz_VPrFDTS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SKz_VPrFITS" msprop:Generator_ColumnVarNameInTable="columnSKz_VPrFITS" msprop:Generator_ColumnPropNameInRow="SKz_VPrFITS" msprop:Generator_ColumnPropNameInTable="SKz_VPrFITSColumn" msprop:Generator_UserColumnName="SKz_VPrFITS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SKz_VPrFPTS" msprop:Generator_ColumnVarNameInTable="columnSKz_VPrFPTS" msprop:Generator_ColumnPropNameInRow="SKz_VPrFPTS" msprop:Generator_ColumnPropNameInTable="SKz_VPrFPTSColumn" msprop:Generator_UserColumnName="SKz_VPrFPTS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SKz_VPrFVTS" msprop:Generator_ColumnVarNameInTable="columnSKz_VPrFVTS" msprop:Generator_ColumnPropNameInRow="SKz_VPrFVTS" msprop:Generator_ColumnPropNameInTable="SKz_VPrFVTSColumn" msprop:Generator_UserColumnName="SKz_VPrFVTS" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SKzObjedP" msprop:Generator_TableClassName="SKzObjedPDataTable" msprop:Generator_TableVarName="tableSKzObjedP" msprop:Generator_TablePropName="SKzObjedP" msprop:Generator_RowDeletingName="SKzObjedPRowDeleting" msprop:Generator_RowChangingName="SKzObjedPRowChanging" msprop:Generator_RowEvHandlerName="SKzObjedPRowChangeEventHandler" msprop:Generator_RowDeletedName="SKzObjedPRowDeleted" msprop:Generator_UserTableName="SKzObjedP" msprop:Generator_RowChangedName="SKzObjedPRowChanged" msprop:Generator_RowEvArgName="SKzObjedPRowChangeEvent" msprop:Generator_RowClassName="SKzObjedPRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="ObjedP" msprop:Generator_ColumnVarNameInTable="columnObjedP" msprop:Generator_ColumnPropNameInRow="ObjedP" msprop:Generator_ColumnPropNameInTable="ObjedPColumn" msprop:Generator_UserColumnName="ObjedP" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Kontrola" msprop:Generator_TableClassName="KontrolaDataTable" msprop:Generator_TableVarName="tableKontrola" msprop:Generator_TablePropName="Kontrola" msprop:Generator_RowDeletingName="KontrolaRowDeleting" msprop:Generator_RowChangingName="KontrolaRowChanging" msprop:Generator_RowEvHandlerName="KontrolaRowChangeEventHandler" msprop:Generator_RowDeletedName="KontrolaRowDeleted" msprop:Generator_UserTableName="Kontrola" msprop:Generator_RowChangedName="KontrolaRowChanged" msprop:Generator_RowEvArgName="KontrolaRowChangeEvent" msprop:Generator_RowClassName="KontrolaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OBJ_Rezer" msprop:Generator_ColumnVarNameInTable="columnOBJ_Rezer" msprop:Generator_ColumnPropNameInRow="OBJ_Rezer" msprop:Generator_ColumnPropNameInTable="OBJ_RezerColumn" msprop:Generator_UserColumnName="OBJ_Rezer" type="xs:boolean" />
+              <xs:element name="SKz_Rezer" msprop:Generator_ColumnVarNameInTable="columnSKz_Rezer" msprop:Generator_ColumnPropNameInRow="SKz_Rezer" msprop:Generator_ColumnPropNameInTable="SKz_RezerColumn" msprop:Generator_UserColumnName="SKz_Rezer" type="xs:double" minOccurs="0" />
+              <xs:element name="SKz_StavZ" msprop:Generator_ColumnVarNameInTable="columnSKz_StavZ" msprop:Generator_ColumnPropNameInRow="SKz_StavZ" msprop:Generator_ColumnPropNameInTable="SKz_StavZColumn" msprop:Generator_UserColumnName="SKz_StavZ" type="xs:double" minOccurs="0" />
+              <xs:element name="SKz_ObjedP" msprop:Generator_ColumnVarNameInTable="columnSKz_ObjedP" msprop:Generator_ColumnPropNameInRow="SKz_ObjedP" msprop:Generator_ColumnPropNameInTable="SKz_ObjedPColumn" msprop:Generator_UserColumnName="SKz_ObjedP" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pPK_Predkontace" msprop:Generator_TableClassName="pPK_PredkontaceDataTable" msprop:Generator_TableVarName="tablepPK_Predkontace" msprop:Generator_TablePropName="pPK_Predkontace" msprop:Generator_RowDeletingName="pPK_PredkontaceRowDeleting" msprop:Generator_RowChangingName="pPK_PredkontaceRowChanging" msprop:Generator_RowEvHandlerName="pPK_PredkontaceRowChangeEventHandler" msprop:Generator_RowDeletedName="pPK_PredkontaceRowDeleted" msprop:Generator_UserTableName="pPK_Predkontace" msprop:Generator_RowChangedName="pPK_PredkontaceRowChanged" msprop:Generator_RowEvArgName="pPK_PredkontaceRowChangeEvent" msprop:Generator_RowClassName="pPK_PredkontaceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDS" msprop:Generator_ColumnVarNameInTable="columnIDS" msprop:Generator_ColumnPropNameInRow="IDS" msprop:Generator_ColumnPropNameInTable="IDSColumn" msprop:Generator_UserColumnName="IDS" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sPrelom" msprop:Generator_TableClassName="sPrelomDataTable" msprop:Generator_TableVarName="tablesPrelom" msprop:Generator_TablePropName="sPrelom" msprop:Generator_RowDeletingName="sPrelomRowDeleting" msprop:Generator_RowChangingName="sPrelomRowChanging" msprop:Generator_RowEvHandlerName="sPrelomRowChangeEventHandler" msprop:Generator_RowDeletedName="sPrelomRowDeleted" msprop:Generator_UserTableName="sPrelom" msprop:Generator_RowChangedName="sPrelomRowChanged" msprop:Generator_RowEvArgName="sPrelomRowChangeEvent" msprop:Generator_RowClassName="sPrelomRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="UsIDS" msprop:Generator_ColumnVarNameInTable="columnUsIDS" msprop:Generator_ColumnPropNameInRow="UsIDS" msprop:Generator_ColumnPropNameInTable="UsIDSColumn" msprop:Generator_UserColumnName="UsIDS" type="xs:string" minOccurs="0" />
+              <xs:element name="IsPrelom" msprop:Generator_ColumnVarNameInTable="columnIsPrelom" msprop:Generator_ColumnPropNameInRow="IsPrelom" msprop:Generator_ColumnPropNameInTable="IsPrelomColumn" msprop:Generator_UserColumnName="IsPrelom" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UsRok" msprop:Generator_ColumnVarNameInTable="columnUsRok" msprop:Generator_ColumnPropNameInRow="UsRok" msprop:Generator_ColumnPropNameInTable="UsRokColumn" msprop:Generator_UserColumnName="UsRok" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SKPP" msprop:Generator_TableClassName="SKPPDataTable" msprop:Generator_TableVarName="tableSKPP" msprop:Generator_TablePropName="SKPP" msprop:Generator_RowDeletingName="SKPPRowDeleting" msprop:Generator_RowChangingName="SKPPRowChanging" msprop:Generator_RowEvHandlerName="SKPPRowChangeEventHandler" msprop:Generator_RowDeletedName="SKPPRowDeleted" msprop:Generator_UserTableName="SKPP" msprop:Generator_RowChangedName="SKPPRowChanged" msprop:Generator_RowEvArgName="SKPPRowChangeEvent" msprop:Generator_RowClassName="SKPPRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sSTR" msprop:Generator_TableClassName="sSTRDataTable" msprop:Generator_TableVarName="tablesSTR" msprop:Generator_TablePropName="sSTR" msprop:Generator_RowDeletingName="sSTRRowDeleting" msprop:Generator_RowChangingName="sSTRRowChanging" msprop:Generator_RowEvHandlerName="sSTRRowChangeEventHandler" msprop:Generator_RowDeletedName="sSTRRowDeleted" msprop:Generator_UserTableName="sSTR" msprop:Generator_RowChangedName="sSTRRowChanged" msprop:Generator_RowEvArgName="sSTRRowChangeEvent" msprop:Generator_RowClassName="sSTRRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="IDS" msprop:Generator_ColumnVarNameInTable="columnIDS" msprop:Generator_ColumnPropNameInRow="IDS" msprop:Generator_ColumnPropNameInTable="IDSColumn" msprop:Generator_UserColumnName="IDS" type="xs:string" minOccurs="0" />
+              <xs:element name="SText" msprop:Generator_ColumnVarNameInTable="columnSText" msprop:Generator_ColumnPropNameInRow="SText" msprop:Generator_ColumnPropNameInTable="STextColumn" msprop:Generator_UserColumnName="SText" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SKz_FiltrTyp" msprop:Generator_TableClassName="SKz_FiltrTypDataTable" msprop:Generator_TableVarName="tableSKz_FiltrTyp" msprop:Generator_TablePropName="SKz_FiltrTyp" msprop:Generator_RowDeletingName="SKz_FiltrTypRowDeleting" msprop:Generator_RowChangingName="SKz_FiltrTypRowChanging" msprop:Generator_RowEvHandlerName="SKz_FiltrTypRowChangeEventHandler" msprop:Generator_RowDeletedName="SKz_FiltrTypRowDeleted" msprop:Generator_UserTableName="SKz_FiltrTyp" msprop:Generator_RowChangedName="SKz_FiltrTypRowChanged" msprop:Generator_RowEvArgName="SKz_FiltrTypRowChangeEvent" msprop:Generator_RowClassName="SKz_FiltrTypRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="RelSkTyp" msprop:Generator_ColumnVarNameInTable="columnRelSkTyp" msprop:Generator_ColumnPropNameInRow="RelSkTyp" msprop:Generator_ColumnPropNameInTable="RelSkTypColumn" msprop:Generator_UserColumnName="RelSkTyp" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SKz_StavZasob" msprop:Generator_TableClassName="SKz_StavZasobDataTable" msprop:Generator_TableVarName="tableSKz_StavZasob" msprop:Generator_TablePropName="SKz_StavZasob" msprop:Generator_RowDeletingName="SKz_StavZasobRowDeleting" msprop:Generator_RowChangingName="SKz_StavZasobRowChanging" msprop:Generator_RowEvHandlerName="SKz_StavZasobRowChangeEventHandler" msprop:Generator_RowDeletedName="SKz_StavZasobRowDeleted" msprop:Generator_UserTableName="SKz_StavZasob" msprop:Generator_RowChangedName="SKz_StavZasobRowChanged" msprop:Generator_RowEvArgName="SKz_StavZasobRowChangeEvent" msprop:Generator_RowClassName="SKz_StavZasobRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="StavZ" msprop:Generator_ColumnVarNameInTable="columnStavZ" msprop:Generator_ColumnPropNameInRow="StavZ" msprop:Generator_ColumnPropNameInTable="StavZColumn" msprop:Generator_UserColumnName="StavZ" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:OBJpol" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="SKz_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SKz" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="AD_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AD" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="sCMeny_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:sCMeny" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="OBJ_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:OBJ" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="SKPPpol_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SKPPpol" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="sSklad_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:sSklad" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="sCRady_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:sCRady" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="SKzObjedV_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SKzObjedV" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="SKzBuf_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SKzBuf" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="SKPV_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SKPV" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="SKPVpol_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SKPVpol" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="OBJCislo_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:OBJCislo" />
+      <xs:field xpath="mstns:SKz_ID" />
+    </xs:unique>
+    <xs:unique name="SKzObjedP_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SKzObjedP" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="sPrelom_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:sPrelom" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="SKPP_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SKPP" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="sSTR_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:sSTR" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

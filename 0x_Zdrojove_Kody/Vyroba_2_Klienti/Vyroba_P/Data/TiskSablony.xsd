@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TiskSablony" targetNamespace="http://fask.cz/TiskSablony.xsd" xmlns:mstns="http://fask.cz/TiskSablony.xsd" xmlns="http://fask.cz/TiskSablony.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TiskSablony" msdata:IsDataSet="true" msdata:Locale="" msprop:Generator_UserDSName="TiskSablony" msprop:Generator_DataSetName="TiskSablony" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Sablony" msprop:Generator_UserTableName="Sablony" msprop:Generator_RowDeletedName="SablonyRowDeleted" msprop:Generator_RowChangedName="SablonyRowChanged" msprop:Generator_RowClassName="SablonyRow" msprop:Generator_RowChangingName="SablonyRowChanging" msprop:Generator_RowEvArgName="SablonyRowChangeEvent" msprop:Generator_RowEvHandlerName="SablonyRowChangeEventHandler" msprop:Generator_TableClassName="SablonyDataTable" msprop:Generator_TableVarName="tableSablony" msprop:Generator_RowDeletingName="SablonyRowDeleting" msprop:Generator_TablePropName="Sablony">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nazev" msprop:Generator_UserColumnName="Nazev" msprop:Generator_ColumnVarNameInTable="columnNazev" msprop:Generator_ColumnPropNameInRow="Nazev" msprop:Generator_ColumnPropNameInTable="NazevColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Soubor" msprop:Generator_UserColumnName="Soubor" msprop:Generator_ColumnVarNameInTable="columnSoubor" msprop:Generator_ColumnPropNameInRow="Soubor" msprop:Generator_ColumnPropNameInTable="SouborColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ITEMTYPE" msprop:Generator_UserColumnName="ITEMTYPE" msprop:Generator_ColumnPropNameInRow="ITEMTYPE" msprop:Generator_ColumnVarNameInTable="columnITEMTYPE" msprop:Generator_ColumnPropNameInTable="ITEMTYPEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PrinterName" msprop:Generator_UserColumnName="PrinterName" msprop:Generator_ColumnPropNameInRow="PrinterName" msprop:Generator_ColumnVarNameInTable="columnPrinterName" msprop:Generator_ColumnPropNameInTable="PrinterNameColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

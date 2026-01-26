@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<dat:dataPack version="2.0" id="Ex001"  ico="64086551" note="Žádost o seznam volitelných parametrů"
+              xmlns:lst="http://www.stormware.cz/schema/version_2/list.xsd"
+              xmlns:dat="http://www.stormware.cz/schema/version_2/data.xsd"
+              xmlns:prm="http://www.stormware.cz/schema/version_2/parameter.xsd"
+              xmlns:typ="http://www.stormware.cz/schema/version_2/type.xsd">
+  <dat:dataPackItem version="2.0" id="prmTest" >
+    <lst:listParameter version="2.0" >
+      <lst:parameter version="2.0" idsAgenda="zasoby" >
+        <prm:formParameter>
+          <prm:parameterDef>
+            <prm:label>Příznak sledování Výdej </prm:label>
+            <prm:name>VPrFVTS</prm:name>
+            <prm:type>boolean</prm:type>
+          </prm:parameterDef>
+          <prm:parameterDef>
+            <prm:label>Příznak sledování Příjem</prm:label>
+            <prm:name>VPrFPTS</prm:name>
+            <prm:type>boolean</prm:type>
+          </prm:parameterDef>
+          <prm:parameterDef>
+            <prm:label>Příznak sledování Vše</prm:label>
+            <prm:name>VPrFXTS</prm:name>
+            <prm:type>boolean</prm:type>
+          </prm:parameterDef>
+          <prm:parameterDef>
+            <prm:label>Typ sledování Výdej</prm:label>
+            <prm:name>RefVPrFVTS</prm:name>
+            <prm:type>list</prm:type>
+            <prm:list>
+              <typ:id>802</typ:id>
+            </prm:list>
+          </prm:parameterDef>
+          <prm:parameterDef>
+            <prm:label>Typ sledování Příjem</prm:label>
+            <prm:name>RefVPrFPTS</prm:name>
+            <prm:type>list</prm:type>
+            <prm:list>
+              <typ:id>802</typ:id>
+            </prm:list>
+          </prm:parameterDef>
+          <prm:parameterDef>
+            <prm:label>Typ sledování Vše</prm:label>
+            <prm:name>RefVPrFXTS</prm:name>
+            <prm:type>list</prm:type>
+            <prm:list>
+              <typ:id>802</typ:id>
+            </prm:list>
+          </prm:parameterDef>
+          <prm:parameterDef>
+            <prm:label>Příznak sledování Inventura</prm:label>
+            <prm:name>VPrFITS</prm:name>
+            <prm:type>boolean</prm:type>
+          </prm:parameterDef>
+          <prm:parameterDef>
+            <prm:label>Příznak sledování Prodej</prm:label>
+            <prm:name>VPrFDTS</prm:name>
+            <prm:type>boolean</prm:type>
+          </prm:parameterDef>
+          <prm:parameterDef>
+            <prm:label>Typ sledování Inventura</prm:label>
+            <prm:name>RefVPrFITS</prm:name>
+            <prm:type>list</prm:type>
+            <prm:list>
+              <typ:id>802</typ:id>
+            </prm:list>
+          </prm:parameterDef>
+          <prm:parameterDef>
+            <prm:label>Typ sledování Prodej</prm:label>
+            <prm:name>RefVPrFDTS</prm:name>
+            <prm:type>list</prm:type>
+            <prm:list>
+              <typ:id>802</typ:id>
+            </prm:list>
+          </prm:parameterDef>
+        </prm:formParameter>
+        <prm:userForm>
+          <prm:ctrlDef>
+            <prm:name/>
+            <prm:label>Volitelné parametry</prm:label>
+            <prm:rect left="0" top="0" right="759" bottom="491"/>
+            <prm:type>group</prm:type>
+            <prm:style>0</prm:style>
+          </prm:ctrlDef>
+          <prm:ctrlDef>
+            <prm:name>VPrFITS</prm:name>
+            <prm:label>Příznak sledování Inventura</prm:label>
+            <prm:rect left="33" top="105" right="197" bottom="125"/>
+            <prm:type>check</prm:type>
+            <prm:style>0</prm:style>
+          </prm:ctrlDef>
+          <prm:ctrlDef>
+            <prm:name>VPrFXTS</prm:name>
+            <prm:label>Příznak sledování Vše</prm:label>
+            <prm:rect left="33" top="135" right="197" bottom="155"/>
+            <prm:type>check</prm:type>
+            <prm:style>0</prm:style>
+          </prm:ctrlDef>
+          <prm:ctrlDef>
+            <prm:name/>
+            <prm:label>Typ sledování Vše</prm:label>
+            <prm:rect left="215" top="165" right="369" bottom="188"/>
+            <prm:type>text</prm:type>
+            <prm:style>0</prm:style>
+          </prm:ctrlDef>
+          <prm:ctrlDef>
+            <prm:name>RefVPrFXTS</prm:name>
+            <prm:label/>
+            <prm:rect left="353" top="165" right="453" bottom="186"/>
+            <prm:type>list</prm:type>
+            <prm:style>1</prm:style>
+          </prm:ctrlDef>
+          <prm:ctrlDef>
+            <prm:name/>
+            <prm:label>Fask Typy sledování</prm:label>
+            <prm:rect left="16" top="24" right="473" bottom="212"/>
+            <prm:type>group</prm:type>
+            <prm:style>4</prm:style>
+          </prm:ctrlDef>
+          <prm:ctrlDef>
+            <prm:name>VPrFPTS</prm:name>
+            <prm:label>Příznak sledování Příjem</prm:label>
+            <prm:rect left="33" top="45" right="197" bottom="65"/>
+            <prm:type>check</prm:type>
+            <prm:style>0</prm:style>
+          </prm:ctrlDef>
+          <prm:ctrlDef>
+            <prm:name>VPrFVTS</prm:name>
+            <prm:label>Příznak sledování Výdej </prm:label>
+            <prm:rect left="33" top="75" right="197" bottom="95"/>
+            <prm:type>check</prm:type>
+            <prm:style>0</prm:style>
+          </prm:ctrlDef>
+          <prm:ctrlDef>
+            <prm:name/>
+            <prm:label>Typ sledování Příjem</prm:label>
+            <prm:rect left="213" top="45" right="367" bottom="65"/>
+            <prm:type>text</prm:type>
+            <prm:style>0</prm:style>
+          </prm:ctrlDef>
+          <prm:ctrlDef>
+            <prm:name>RefVPrFPTS</prm:name>
+            <prm:label/>
+            <prm:rect left="353" top="45" right="453" bottom="65"/>
+            <prm:type>list</prm:type>
+            <prm:style>1</prm:style>
+          </prm:ctrlDef>
+          <prm:ctrlDef>
+            <prm:name/>
+            <prm:label>Typ sledování Výdej</prm:label>
+            <prm:rect left="213" top="75" right="367" bottom="95"/>
+            <prm:type>text</prm:type>
+            <prm:style>0</prm:style>
+          </prm:ctrlDef>
+          <prm:ctrlDef>
+            <prm:name>RefVPrFVTS</prm:name>
+            <prm:label/>
+            <prm:rect left="353" top="75" right="453" bottom="95"/>
+            <prm:type>list</prm:type>
+            <prm:style>1</prm:style>
+          </prm:ctrlDef>
+          <prm:ctrlDef>
+            <prm:name/>
+            <prm:label>Typ sledování Prodej</prm:label>
+            <prm:rect left="213" top="105" right="367" bottom="125"/>
+            <prm:type>text</prm:type>
+            <prm:style>0</prm:style>
+          </prm:ctrlDef>
+          <prm:ctrlDef>
+            <prm:name>RefVPrFITS</prm:name>
+            <prm:label/>
+            <prm:rect left="353" top="105" right="453" bottom="125"/>
+            <prm:type>list</prm:type>
+            <prm:style>1</prm:style>
+          </prm:ctrlDef>
+          <prm:ctrlDef>
+            <prm:name/>
+            <prm:label>Typ sledování Inventura</prm:label>
+            <prm:rect left="213" top="135" right="367" bottom="155"/>
+            <prm:type>text</prm:type>
+            <prm:style>0</prm:style>
+          </prm:ctrlDef>
+          <prm:ctrlDef>
+            <prm:name>RefVPrFDTS</prm:name>
+            <prm:label/>
+            <prm:rect left="353" top="135" right="453" bottom="155"/>
+            <prm:type>list</prm:type>
+            <prm:style>1</prm:style>
+          </prm:ctrlDef>
+          <prm:ctrlDef>
+            <prm:name>VPrFDTS</prm:name>
+            <prm:label>Příznak sledování Prodej</prm:label>
+            <prm:rect left="33" top="165" right="197" bottom="185"/>
+            <prm:type>check</prm:type>
+            <prm:style>0</prm:style>
+          </prm:ctrlDef>
+        </prm:userForm>
+      </lst:parameter>
+    </lst:listParameter>
+  </dat:dataPackItem>
+</dat:dataPack>

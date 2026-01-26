@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+  <!-- cesta k ini souboru s konfiguraci pro IS Pohoda 
+  <PathToINIFile>D:\Pohoda\xml_imp_I-TEC.ini</PathToINIFile>
+  <PathToINIFile>D:\Pohoda\xml_imp_HANIBAL.ini</PathToINIFile>
+  <PathToINIFile>D:\Pohoda\xml_imp_VLACH.ini</PathToINIFile>
+ <PathToINIFile>D:\Pohoda\xml_imp_Konference2019.ini</PathToINIFile>
+ -->
+  <PathToINIFile>D:\Pohoda\xml_imp_VLACH_Original.ini</PathToINIFile>
+  
+  <!-- login uzivatele -->
+  <Login>Admin</Login>
+
+  <!-- inicialy uzivatele -->
+  <Login_IDS>@</Login_IDS>
+
+  <!-- heslo uzivatele -->
+  <Password>admin</Password>
+
+  <!-- cesta k exe souboru s pohodou C:\Program Files\STORMWARE\POHODA\Pohoda.exe D:\ISPohoda\Pohoda.exe -->
+  <!--
+  <PathToPohodaEXE>\\Faskcz-cv004\POHODA_E1\Pohoda.exe</PathToPohodaEXE>
+  <PathToPohodaEXE>\\faskcz-cv005\POHODA\Pohoda.exe</PathToPohodaEXE>
+  <PathToPohodaEXE>c:\POHODA\Pohoda.exe</PathToPohodaEXE>
+  <PathToPohodaEXE>\\faskcz-cv005\POHODA\Pohoda.exe</PathToPohodaEXE>
+  <PathToPohodaEXE>j:\Pohoda.exe</PathToPohodaEXE>
+  <PathToPohodaEXE>z:\Pohoda.exe</PathToPohodaEXE>
+  <PathToPohodaEXE>\\faskcz-cv004\POHODA\Pohoda.exe</PathToPohodaEXE>
+  -->
+  <PathToPohodaEXE>\\192.168.1.121\pohoda_e1\Pohoda.exe</PathToPohodaEXE>
+
+  <!-- cesta kam se budou ukladat xml dotazy, musi byt stejna jako v ini souboru! -->
+  <PathToInputDirectory>D:\Pohoda\export\</PathToInputDirectory>
+
+  <!-- connection string k FASK databazi-->
+  <!--
+	<ConnectionString>Data Source=localhost;Initial Catalog=Fask4.01;User ID=sasa;Password=sasa</ConnectionString>
+	<ConnectionString>Data Source=faskcz-cv005\sql2008_2;Initial Catalog=Fask_04.01_Pohoda;User ID=sa;Password=sasa</ConnectionString>
+	<ConnectionString>Data Source=faskcz-cv005\sql2014_1;Initial Catalog=Fask_4.2_Pohoda_Eurom;User ID=sa;Password=sasa</ConnectionString>
+  <ConnectionString>Data Source=faskcz-cv004\sql_2008;Initial Catalog=Fask_04.01_Pohoda;User ID=sa;Password=sasa</ConnectionString>
+  <ConnectionString>Data Source=faskcz-cv005\sql2008_2;Initial Catalog=Fask_4.2_Pohoda;User ID=sa;Password=sasa</ConnectionString>
+  <ConnectionString>Data Source=faskcz-cv004\sql_2008;Initial Catalog=LokacniMechanismus_Testy;User ID=sa;Password=sasa</ConnectionString>
+  <ConnectionString>Data Source=192.168.1.114\sql_2014;Initial Catalog=FASKPOH_I_Tec;User ID=sa;Password=sasa</ConnectionString>
+  
+  
+  <ConnectionString>Data Source=faskcz-cv006\SQL_2017;Initial Catalog=FASKPOH_VLACH_TEST;User ID=sa;Password=sasa</ConnectionString>
+  -->
+  <!-- connection string k FASK databazi-->
+<ConnectionString>Data Source=192.168.1.121\SQLEXPRESS;Initial Catalog=FASKPOH_TIERRAVERDE_TEST_Cipisek;User ID=sa;Password=sasa</ConnectionString>
+
+
+
+  <!-- Pripojeni k databazi Pohody pres rozhrani OLEDB -->
+  <!--
+	<ConnectionStringPohodaDB>Provider=SQLNCLI10;Data Source=localhost;Initial Catalog=StwPh_12345678_2012;User ID=sasa;Password=sasa</ConnectionStringPohodaDB>
+	<ConnectionStringPohodaDB>Provider=SQLNCLI10;Data Source=faskcz-cv004\sql_2008;Initial Catalog=StwPh160106_12345678_2015;User ID=sa;Password=sasa</ConnectionStringPohodaDB>
+	<ConnectionStringPohodaDB>Provider=SQLNCLI10;Data Source=faskcz-cv005\sql2014_1;Initial Catalog=StwPh_26217686_201501;User ID=sa;Password=sasa</ConnectionStringPohodaDB>
+  <ConnectionStringPohodaDB>Provider=SQLNCLI10;Data Source=faskcz-cv005\sql2014_1;Initial Catalog=StwPh_FASK_2016;User ID=sa;Password=sasa</ConnectionStringPohodaDB>
+  <ConnectionStringPohodaDB>Provider=SQLNCLI10;Data Source=faskcz-cv005\sql2014_1;Initial Catalog=StwPh_FASK_2016;User ID=sa;Password=sasa</ConnectionStringPohodaDB>
+  <ConnectionStringPohodaDB>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\ProgramData\\STORMWARE\\POHODA\\Data\\12345678_2012.mdb;User Id=admin;Password=;</ConnectionStringPohodaDB> 
+  <ConnectionStringPohodaDB>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\\Pohoda\\29186366_2015.mdb;User Id=admin;Password=;</ConnectionStringPohodaDB>
+  D:\\ISPohoda\\Data\\NOVAKPU.mdb
+  <ConnectionStringPohodaDB>Provider=SQLNCLI10;Data Source=faskcz-cv005\sql2008_2;Initial Catalog=StwPh_63489040_2016;User ID=sa;Password=sasa</ConnectionStringPohodaDB>
+  <ConnectionStringPohodaDB>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=c:\POHODA_START_DATA\Data\1_2016.mdb ;User Id=admin;Password=;</ConnectionStringPohodaDB>
+  <ConnectionStringPohodaDB>Provider=Microsoft.ACE.OLEDB.12.0;Data Source=c:\POHODA_START_DATA\Data\1_2016.mdb ;User Id=admin;Password=;Persist Security Info=False;</ConnectionStringPohodaDB>
+  <ConnectionStringPohodaDB>Provider=Microsoft.ACE.OLEDB.14.0;Data Source=c:\POHODA_START_DATA\Data\1_2016.mdb ;User Id=admin;Password=;Persist Security Info=False;</ConnectionStringPohodaDB>
+  <ConnectionStringPohodaDB>Provider=Microsoft.ACE.OLEDB.12.0;Data Source=c:\POHODA_START_DATA\Data\1_2016.mdb ;User Id=admin;Password=;Persist Security Info=False;</ConnectionStringPohodaDB>
+  <ConnectionStringPohodaDB>Provider=Microsoft.ACE.OLEDB.12.0;Data Source=c:\POHODA_START_DATA\Data\1_2016.mdb;User Id=;Password=;Persist Security Info=False;</ConnectionStringPohodaDB>
+  <ConnectionStringPohodaDB>Provider=SQLNCLI10;Data Source=faskcz-cv005\sql2008_2;Initial Catalog=StwPh_29186366_2015;User ID=sa;Password=sasa</ConnectionStringPohodaDB>
+ <ConnectionStringPohodaDB>Provider=SQLNCLI10;Data Source=faskcz-cv004\sql_2014;Initial Catalog=StwPh_04535510_2017;User ID=sa;Password=sasa</ConnectionStringPohodaDB>
+ <ConnectionStringPohodaDB>Provider=SQLNCLI10;Data Source=192.168.1.114\sql_2014;Initial Catalog=StwPh_64086551_201801;User ID=sa;Password=sasa</ConnectionStringPohodaDB>
+ 
+ <ConnectionStringPohodaDB>Provider=SQLNCLI11;Data Source=faskcz-co010\SQLEXPRESS;Initial Catalog=StwPh_04535510_2017;User ID=sa;Password=sasa</ConnectionStringPohodaDB>
+ -->
+
+  <!-- Pripojeni k databazi Pohody pres rozhrani OLEDB -->  
+  <ConnectionStringPohodaDB>Provider=SQLNCLI11;Data Source=192.168.1.121\SQLEXPRESS;Initial Catalog=StwPh_28280725_2019TESTFASK;Password=sasa;User ID=sa;Persist Security Info=True</ConnectionStringPohodaDB>
+
+  <!-- Umisteni error logu -->
+  <ErrorLogFile>..\Logs\log.txt</ErrorLogFile>
+
+  <!-- true - bude se rozlisovat stav objednavky (delivered, executed), false - nebude se rozlisovat stav objednavky -->
+  <StatusObjednavky>false</StatusObjednavky>
+
+  <!-- true - budou se stahovat i dorucene objednavky, false - dorucene objednavky se nebudou stahovat -->
+  <Delivered>false</Delivered>
+
+  <!-- true - budou se stahovat i vyrizene objednavky, false - vyrizene objednavky se nebudou stahovat -->
+  <Executed>false</Executed>
+
+  <!-- true - mnozstvi u polozky bude zbyva (quantity - delivered), false - mnozstvi u polozky bude celkove (delivered) -->
+  <Zbyva>true</Zbyva>
+
+  <!-- Dotahovani informaci o partnerovi -->
+  <DotahovatInformaceDodavatele>false</DotahovatInformaceDodavatele>
+
+  <!-- Ico ucetni jednotky, se kterou se pracuje => musi byt shodne v xml_imp.ini -->
+  <!--
+  <Ico>26217686</Ico> EUROM
+  <Ico>63489040</Ico> FASK
+  <Ico>04535510</Ico> HANIBAL
+    <Ico>04535910</Ico> HANIBAL OSTRA
+  
+  <Ico>64086551</Ico> I-Tec
+  
+  <Ico>10130144</Ico> VLACH original
+  -->
+  <Ico>28280725</Ico>
+
+  <!-- Zkontrolovane polozky budou(True)/nebudou(False) prepsany spocitanou hodnotou z inventury terminalu -->
+  <InventuraPrepisovatZkontrolovanePolozky>false</InventuraPrepisovatZkontrolovanePolozky>
+
+  <!-- Budou exportovany pouze aktivni polozky (Ciselniky) -->
+  <ExportovatPouzeAktivniPolozky>true</ExportovatPouzeAktivniPolozky>
+
+  <!-- filtry pro export ciselniku zbozi -->
+  <!--
+	<ExportSkladFilter>'a1_Hutní'</ExportSkladFilter>
+	<ExportTypFilter>1</ExportTypFilter>
+        <ExportSkladFilter>'a1_Hutní','a2_Kusový','a3_Režijní','c1_VýrMalé','c2_VýrVelk'</ExportSkladFilter>
+	<ExportSkladFilter>'a1_Hutní','a2_Kusový','a3_Režijní','c1_VýrMalé','c2_VýrVelk','a4_drobný'</ExportSkladFilter>
+        <ExportTypFilter>1,5</ExportTypFilter>
+	<ExportSkladFilter>'a1_Hutní','a2_Kusový','a3_Režijní','c1_VýrMalé','c2_VýrVelk','a4_drobný'</ExportSkladFilter>
+  -->
+  <!-- filtr na sklad polozek -->
+  <!--
+  <ExportSkladFilter>'01', '02'</ExportSkladFilter>
+  <ExportSkladFilter>'01-karty'</ExportSkladFilter>
+  -->
+  <ExportSkladFilter>'TRNKOVA','MATERIÁL2'</ExportSkladFilter>  
+  <!-- filtr na typ polozek -->
+  <ExportTypFilter>1,5</ExportTypFilter>
+
+  <!-- kod cizi meny -->
+  <KodCiziMena>EUR</KodCiziMena>
+  <!-- rada dokladu pro vytvoreni v cizi mene => jedna se o fultextovy filtr nazvu rady -->
+  <RadaCiziMenaText>cizí měna</RadaCiziMenaText>
+  <!-- vychozi forma uhrady na vytvarenych dokladech -->
+  <KodFormaUhrady>příkazem</KodFormaUhrady>
+  <!-- vychozi id dodavatele, neni-li urcen ze zdrojoveho dokladu -->
+  <IDDefaultniDodavatel>2357</IDDefaultniDodavatel>
+
+  <!-- cesta k transformaci zobrazeni -->
+  <PathToXSLT>D:\Pohoda</PathToXSLT>
+  <!-- cesta k ulozeni vystupu (prehledu) z weboveho serveru -->
+  <PathDataOutputFile>D:\Pohoda</PathDataOutputFile>
+
+  <!-- Globalni heslo pro zneplatneni davky prijemky -->
+  <HesloStornoPrijemka>4321</HesloStornoPrijemka>
+
+  <!-- Globalni heslo pro zneplatneni davky vydejky -->
+  <HesloStornoVydejka>4321</HesloStornoVydejka>
+
+  <!-- Nastaveni dokladu pro doklady z volneho pohybu(Prodejni modul)
+		 funkce muze byt: 
+			"pri" - prijemka, 
+			"vyd" - vydejka, 
+			"pro" - prodejka 
+			"objv" - vydana objednavka
+			"objvcm" - vydana objednavka v cizi mene (cizi mena definovana jako tag KodCiziMena)
+			"objvm" - vydana objednavka ve zvolene cizi mene z ciselniku na terminalu
+			"objbezodb" - vydana objednavka, kdy se dodavatel zvoli podle odb_id na polozce
+			"objp" - prijata objednavka
+			"objpcm" - prijata objednavka v cizi mene (cizi mena definovana jako tag KodCiziMena)
+			"objpm" - prijata objednavka ve zvolene cizi mene z ciselniku na terminalu
+			"expedice" - dodaci list ... (vydejka) ... ???
+      
+      Example:
+      <doklad docid="0" docid2="01" sklid="1" funkce="objp" idsradatext="Objednávky Brno"/>
+      docid - s typu dokladu, podle tohoto se vyhledava jaky doklad se vytvoři
+      docid2 - zatim se nepouziva
+      sklid - zatim se nepouziva
+      funkce - to je alternace jaky typ dokladu se ma použit
+      idsradatext- dohledavane s SText like'% xxx %' takže nejaky text obsažen v nazvu 
+	<doklad docid="0" funkce="pri" docid2="" sklid="1" idsradatext="TaD Test Prijemky"/>
+  -->
+  <!--<doklad docid="0" funkce="pri" docid2="" sklid="17" idsradatext=""/>
+  <doklad docid="1" funkce="vyd" docid2="" sklid="" idsradatext=""/>
+  <doklad docid="2" funkce="pro" docid2="" sklid="" idsradatext=""/>
+  <doklad docid="3" funkce="objv" docid2="" sklid="" idsradatext=""/>
+  <doklad docid="4" funkce="objvcm" docid2="" sklid="" idsradatext=""/>
+  <doklad docid="5" funkce="objvm" docid2="" sklid="" idsradatext=""/>
+  <doklad docid="6" funkce="objbezodb" docid2="" sklid="" idsradatext=""/>
+  <doklad docid="7" funkce="objp" docid2="" sklid="" idsradatext="Objednávky EUROM"/>
+  <doklad docid="8" funkce="objpcm" docid2="" sklid="" idsradatext=""/>
+  <doklad docid="9" funkce="objpm" docid2="" sklid="" idsradatext=""/>
+  <doklad docid="10" funkce="expedice" docid2="" sklid="" idsradatext=""/>
+  <doklad docid="11" funkce="pre" docid2="" sklid="" idsradatext=""/>-->
+  <!-- dotaz, ktery bude pouzit pro dohledani detailu dokladu objednavky -->
+  <ObjednavkaDetail>
+    SELECT
+    o.Cislo 'ocislo'
+    ,isnull(z.Cislo,'') 'zcislo'
+    ,z.SText 'zstext'
+    ,c.ID 'cid'
+    ,isnull(c.IDS,'') 'cids'
+    ,c.SText 'cstext'
+    from OBJ o
+    left join sZAK z on z.Cislo = o.CisloZAK
+    left join sCIN c on c.ID = o.RefCin
+    where o.Cislo=?
+  </ObjednavkaDetail>
+  <!-- dotaz, ktery bude pouzit pro dohledani detailu polozky dokladu objednavky -->
+  <ObjednavkaDetailPolozka>
+    SELECT
+    o.Cislo 'ocislo'
+    ,isnull(z.Cislo,'') 'zcislo'
+    ,z.SText 'zstext'
+    ,c.ID 'cid'
+    ,isnull(c.IDS,'') 'cids'
+    ,c.SText 'cstext'
+    ,isnull(op.Pozn,'') 'oppozn'
+    from OBJ o
+    left join sZAK z on z.Cislo = o.CisloZAK
+    left join sCIN c on c.ID = o.RefCin
+    join OBJPol op on op.RefAg=o.ID
+    where o.Cislo=? and op.refskz=? and op.ID=?
+  </ObjednavkaDetailPolozka>
+</Settings>

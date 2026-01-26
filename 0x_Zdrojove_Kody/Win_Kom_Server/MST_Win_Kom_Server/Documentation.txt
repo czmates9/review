@@ -1,0 +1,130 @@
+﻿/**
+\page doc Dokumentace projektu Aplikační Server
+
+## Teoretický popis: Aplikačního serveru pro terminaly pod WindowsCE a počátky pro Android
+
+
+
+Třída \c CSLNode ovšem představuje prvek, pomocí kterého je možné vytvářet komplexnější SkipList seznamy, které obsahují několik úrovní ukazatelů. Z [teoretické definice SkipList seznamu](ftp://ftp.cs.umd.edu/pub/skipLists/skiplists.pdf) je zřejmé, že nadřazená úroveň ukazatelů \c Next seznamu obsahuje vždy 
+nanejvýše stejný počet odkazů na další prvky. Prakticky ale pro efektivní fungování algoritmu průchodu seznamy se vždy snažíme o to, aby počet odkazů v každém nadřazené úrovní klesl na polovinu.
+
+\dotfile CSLNodeList.gv "Příklad SkipList seznamu se šesti prvky \c CSLNode"
+\n
+
+Tato skutečnost je z definice SkipList seznamu zajištěna na základě klesající pravděpodobnosti. A to díky využití generátoru náhodných čísel o voleném rozsahu, vždy při vložení nového prvku CSLNode do SkipList seznamu. Tuto funkcionalitu již
+třída \c CSLNode obsahuje ve svém veřejném rozhraní.
+
+
+\n
+##Popis implementace
+V tomto školním C++ projektu je prvek SkipList seznamu realizován jako instance třídy \c CSLNode mající dva předky \c CNode a \c CLanes. Třída \c CNode představující hlavní hodnotu ukládanou do SkipList seznamu a má 
+dále jako předka třídu \c CNodeBase. Třída \c CLanes vždy zapouzdřuje ukazatele v každém prvku a je realizována jako třída vlastnící instanci třídy CVector. 
+__Celý projekt kontejneru budete realizovat bez podpory standardních kontejnerových typů knihovny STL nebo jiných knihoven třetích stran!__
+
+
+###Třída CSLNode
+Vznikla jako privátní mixin (tj. potomek dvou různých tříd). Tato třída představuje kompletně funkční prvek SkipList seznamu a krom obou předků \c CNode a CLanes zavádí navíc i nutnou pomocnou \c int hodnotu \ref CSLNode::iExtraInt "iExtraInt",
+jejíž využití bude v jednotlivých kontejnerových projektech různé (například uložení priority každého prvku, počet prvků stejné hodnoty pro multimnožinu apod.). Zamyslete se tedy, zda a jak bude ve Vaší realizaci tato hodnota využívána.
+Tady je několik dalších možných využití: __mapa__ (_obsahuje výslednou_ \c int _hodnotu, pro kterou je daný_ \c CNode _klíčem_), __asociativní pole__ (_obsahuje_ \c int _hodnotu klíče pro daný prvek_) atd.
+
+
+###Třída CLanes
+Tato třída je tvořena jediným vektorem ukazatelů na třídu CSLNode. Tato třída je v rámci SkipList seznamu využívána na dvou místech. Jako samotný vektor počátečních ukazatelů (tzv. \c Head) a také jako jeden z 
+předků třídy \c CSLNode. Třída umožňuje pracovat s jednotlivými ukazateli pomocí metod CLanes::SetNext (resp. CLanes::Next), měnit a zjišťovat velikost vektoru ukazatelů pomocí metod CLanes::Resize (resp. CLanes::Size).
+
+
+###Třída CVector
+Představuje pomocnou kontejnerovou datovou strukturu, jejíž funkcionalitu následně využívá třída CLanes, která obsahuje jako jednu ze svých složek právě instanci třídy CVector. Třída CVector je realizována jako šablona,
+kde parametrem šablony je typ prvku, který má CVector obsahovat. Tuto pomocnou kontejnerovou třídu můžete ve svém projektu v omezené míře využít (např. pro vnitřní implementaci nových typů CNode). 
+__Nikoliv ovšem k náhradě kontejnerové funkcionality SkipList seznamu!__.\n
+_Pozn.: Konstatní instance třídy CVector nemůže již po svém vzniku měnit dále svoji velikost (počet prvků), pomocí volání metody CVector<>::Resize, ale může měnit hodnoty těchto prvků.
+(Touto vlastností se liší od běžného pole v jazyce C/C++, kde konstantní pole automaticky znamená i konstatní hodnoty prvků.)_
+
+
+###Třída CNodeBase
+Třída CNodeBase implementuje všechny vlastnosti, které jsou společné pro jakékoliv typy \c CNode např. implementuje základní kontrolní mechanismy. Tato třída neobsahuje v definici žádná "užitečná" data, které by měl prvek nésti. 
+Definuje tak pouze základní rozhraní, které bude společné všem prvkům bez ohledu na typ a množství užitečných dat v potomkovi tj. ve třídě \c CNode.
+
+
+###Třída CNode
+Třída \c CNode je potomkem třídy CNodeBase a obsahuje tedy prvek (nebo prvky) majícím hodnotu vkládanou do kontejneru. Úlohou třídy \c CNode je doplnit definici z CNodeBase o složku \p iValue,
+jenž představuje užitečná data, která bude každý prvek seznamu obsahovat. Dále je třeba vhodně upravit (případně doplnit) metody určené pro konstrukci a likvidaci prvku tak, aby bylo možné nový prvek efektivně konstruovat a využívat.
+Třída \c CNode je navíc správcem své vlastní hodnoty \p iValue a proto definuje základní metody pro zjištění, nastavení této hodnoty a zároveň zajišťuje pro nadřazené vyšší části programu metody pro porovnání dvou prvků \c CNode dle této hodnoty,
+čímž izoluje nadřazené části od nutnosti znát konkrétní datový typ složky \p iValue.
+
+
+###Jmenné prostory CNode_xxxx (CNode_bool::CNode, CNode_TWeekDay::CNode)
+Návrh programu i Vaše zadání požaduje nezávislost na vnitřní implementaci třídy \c CNode (konkrétním datovém typu složky \p iValue). Návrh navíc umožňuje, aby uživatel mohl odkomentováním řádku přepínat
+mezi vnitřními implementacemi \c CNode. Tento mechanismus je zajištěn pomocí definice každé z variant \c CNode ve vlastním jmenném prostoru \c CNode_NAZEV_TYPU. Díky této skutečnosti může existovat v programu
+několik stejně pojmenovaných tříd \c CNode, neboť názvy existují ve svém vlastním oboru viditelnosti (jmenném prostoru).
+
+Volba dané varianty \c CNode je potom prováděna v souboru CNode.h, odkomentovaním toho řádku, který exportuje daný jmenný prostor do globálního prostoru jmen.
+\code{.cpp}
+using namespace CNode_bool;
+//using namespace CNode_TWeekDay;
+//using namespace CNode_char;
+//using namespace CNode_int;
+//using namespace CNode_float;
+//using namespace CNode_long_double;
+\endcode
+
+
+\n
+##Realizace dalších variant tříd CNode
+V současnosti projekt obsahuje tyto varianty tříd \c CNode, z nichž je každá definována ve svém jmenném prostoru:
+\li CNode_bool::CNode
+\li CNode_TWeekDay::CNode
+
+__Tyto dvě třídy jsou pevně zadány a je zakázáno modifikovat jejich zdrojové texty!__ Pro každou další variantu \c CNode nadefinujte nový jmenný prostor \c CNode_NAZEV_TYPU a v něm implementujte novou variantu třídy \c CNode.
+\note Mechanismus by samozřejmě bylo možné realizovat i zcela automaticky (překladač sám dle potřeby programátora vygeneruje novou variantu třídy \c CNode pomocí definované šablony, případně bude umožnovat dynamickou identifikaci typu a 
+tím umožní mít při běhu programu v jednom seznamu různé varianty prvků \c CNode.
+Obě tyto techniky ovšem svým rozsahem vybočují nad rámec výuky v tomto kurzu a proto jsme se rozhodli se jim v tomto projektu vyhnout.
+
+
+\n
+##Testovací hlavní program
+Hlavní program v souboru main.cpp představuje základní sadu testů, které ověřují správnou funkci libovolné varianty třídy \c CNode. Seznamte se s obsahem hlavního programu a trasujte si jednotlivá volání.
+
+###Testovací hodnoty
+Každá z implementací třídy \c CNode navíc obsahuje šest základních metod vracející hodnotu datového typu, který je vhodný pro vložení do složky \p iValue. Projděte si uvedené mechanismy a snažte se
+pochopit jejich vliv na nezávislost kódu hlavního programu.
+
+Jedná se o tyto metody:
+\li \c TestValue0() (např. CNode_bool::CNode::TestValue0())
+\li \c TestStringValue0() (např. CNode_bool::CNode::TestStringValue0)
+\li \c TestValue1() (např. CNode_bool::CNode::TestValue1)
+\li \c TestStringValue1() (např. CNode_bool::CNode::TestStringValue1)
+\li \c TestValueRandom() (např. CNode_bool::CNode::TestValueRandom)
+\li \c TestStringRandom() (např. CNode_bool::CNode::TestStringValueRandom)
+
+###Další kontrolní vlastnosti prvku
+Již základní společná třída CNodeBase (a tedy i každý potomek \c CNode) obsahuje několik kontrolních a ladicích mechanismů, které budete jistě chtít využívat.
+
+\li Prvek CSLNode a CLanes při své destrukci kontroluje, zda není součástí seznamu dalších prvků a pokud ano, generuje chybové hlášení případně i výjimku \c std::runtime_error.
+\li Prvek CVector vždy ověřuje, zda pomocí indexace přistupujeme k existujícímu prvku Vektoru a v případě neplatného indexu generuje výjimku \c std::out_of_range.
+\li Pokud je prováděn překlad v _Debug režimu_ je při každém spuštění zajištěna identická inicializace generátoru náhodných čísel. Tím při každém krokování programu bude generován pro stejná vstupní data identický SkipList seznam. Až si budete jisti, že program je funkční, zkuste přepnout překlad do _Release režimu_ a ověřit správnou funkci celého kontejneru při různých počátečních podmínkách generátoru náhodných čísel.
+
+###Třída ClassInfo
+Třída ClassInfo implementuje mechanismus automatického počítání vzniklých objektů a mechanismus jednoznačné identifikace ClassInfo<>::ID "ID" instancí za běhu programu. Tento mechanismus se Vám bude hodit při ladění programu. Všechny Vaše třídy by měly obsahovat datovou složku \ref CNodeBase::iInstanceInfo "iInstanceInfo" třídy ClassInfo, čímž zajistíte Vašim třídám tyto ladicí vlastnosti. Samotná třída ClassInfo je definována jako šablona umožňující, vznik různých variant této třídy - (generické programování resp. metaprogramování).
+
+Mezi ladicí metody třídy ClassInfo patří:
+\li ClassInfo<T>::Total()  - počítadlo vzniklých instancí třídy T
+\li ClassInfo<T>::Living() - počítadlo v daném okamžiku existujících instancí třídy T
+\li ClassInfo<T>::ID() resp. \ref CNode_bool::CNode::ID "CNode::ID()", CNodeBase::ID()  - unikátní číselné označení dané instance
+
+
+\attention Projděte si všechny uvedené kontrolní i ladicí mechanismy, snažte se pochopit jejich smysl a využití při trasování programu. Získané vědomosti se Vám budou rozhodně hodit, například když se nějaká část Vašeho programu začne chovat "nepřátelsky". 
+
+
+\note 
+Hodně štěstí při realizaci Vašeho projektu. Nebojte se, ono to půjde. Hlavně _nepropadejte panice!_ ;-)
+
+Celá hierarchie souboru projektu je patrná na následujícím obrázku. 
+\dotfile project_hierarchy.gv "Obr.1 - Nákres hierarchie souboru v projektu"
+\n
+
+
+TaD.
+
+$Id: Documentation.txt 1 2019-07-25 8:00:00Z tdivacky $
+*/

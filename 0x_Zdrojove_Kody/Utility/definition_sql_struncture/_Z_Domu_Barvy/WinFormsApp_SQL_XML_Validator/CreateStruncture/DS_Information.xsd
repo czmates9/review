@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Information" targetNamespace="http://tempuri.org/DS_Information.xsd" xmlns:mstns="http://tempuri.org/DS_Information.xsd" xmlns="http://tempuri.org/DS_Information.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Information" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_Information" msprop:Generator_UserDSName="DS_Information">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SchemaColumns" msprop:Generator_TableClassName="SchemaColumnsDataTable" msprop:Generator_TableVarName="tableSchemaColumns" msprop:Generator_RowChangedName="SchemaColumnsRowChanged" msprop:Generator_TablePropName="SchemaColumns" msprop:Generator_RowDeletingName="SchemaColumnsRowDeleting" msprop:Generator_RowChangingName="SchemaColumnsRowChanging" msprop:Generator_RowEvHandlerName="SchemaColumnsRowChangeEventHandler" msprop:Generator_RowDeletedName="SchemaColumnsRowDeleted" msprop:Generator_RowClassName="SchemaColumnsRow" msprop:Generator_UserTableName="SchemaColumns" msprop:Generator_RowEvArgName="SchemaColumnsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TABLE_NAME" msprop:Generator_ColumnVarNameInTable="columnTABLE_NAME" msprop:Generator_ColumnPropNameInRow="TABLE_NAME" msprop:Generator_ColumnPropNameInTable="TABLE_NAMEColumn" msprop:Generator_UserColumnName="TABLE_NAME" type="xs:string" />
+              <xs:element name="COLUMN_DEFAULT" msprop:Generator_ColumnVarNameInTable="columnCOLUMN_DEFAULT" msprop:Generator_ColumnPropNameInRow="COLUMN_DEFAULT" msprop:Generator_ColumnPropNameInTable="COLUMN_DEFAULTColumn" msprop:Generator_UserColumnName="COLUMN_DEFAULT" type="xs:string" minOccurs="0" />
+              <xs:element name="IS_NULLABLE" msprop:Generator_ColumnVarNameInTable="columnIS_NULLABLE" msprop:Generator_ColumnPropNameInRow="IS_NULLABLE" msprop:Generator_ColumnPropNameInTable="IS_NULLABLEColumn" msprop:Generator_UserColumnName="IS_NULLABLE" type="xs:string" minOccurs="0" />
+              <xs:element name="DATA_TYPE" msprop:Generator_ColumnVarNameInTable="columnDATA_TYPE" msprop:Generator_ColumnPropNameInRow="DATA_TYPE" msprop:Generator_ColumnPropNameInTable="DATA_TYPEColumn" msprop:Generator_UserColumnName="DATA_TYPE" type="xs:string" />
+              <xs:element name="CHARACTER_MAXIMUM_LENGTH" msprop:Generator_ColumnVarNameInTable="columnCHARACTER_MAXIMUM_LENGTH" msprop:Generator_ColumnPropNameInRow="CHARACTER_MAXIMUM_LENGTH" msprop:Generator_ColumnPropNameInTable="CHARACTER_MAXIMUM_LENGTHColumn" msprop:Generator_UserColumnName="CHARACTER_MAXIMUM_LENGTH" type="xs:int" minOccurs="0" />
+              <xs:element name="NUMERIC_PRECISION" msprop:Generator_ColumnVarNameInTable="columnNUMERIC_PRECISION" msprop:Generator_ColumnPropNameInRow="NUMERIC_PRECISION" msprop:Generator_ColumnPropNameInTable="NUMERIC_PRECISIONColumn" msprop:Generator_UserColumnName="NUMERIC_PRECISION" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="NUMERIC_SCALE" msprop:Generator_ColumnVarNameInTable="columnNUMERIC_SCALE" msprop:Generator_ColumnPropNameInRow="NUMERIC_SCALE" msprop:Generator_ColumnPropNameInTable="NUMERIC_SCALEColumn" msprop:Generator_UserColumnName="NUMERIC_SCALE" type="xs:int" minOccurs="0" />
+              <xs:element name="DATETIME_PRECISION" msprop:Generator_ColumnVarNameInTable="columnDATETIME_PRECISION" msprop:Generator_ColumnPropNameInRow="DATETIME_PRECISION" msprop:Generator_ColumnPropNameInTable="DATETIME_PRECISIONColumn" msprop:Generator_UserColumnName="DATETIME_PRECISION" type="xs:short" minOccurs="0" />
+              <xs:element name="COLUMN_NAME" msprop:Generator_ColumnVarNameInTable="columnCOLUMN_NAME" msprop:Generator_ColumnPropNameInRow="COLUMN_NAME" msprop:Generator_ColumnPropNameInTable="COLUMN_NAMEColumn" msprop:Generator_UserColumnName="COLUMN_NAME" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SchemaColumns" />
+      <xs:field xpath="mstns:TABLE_NAME" />
+      <xs:field xpath="mstns:COLUMN_NAME" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

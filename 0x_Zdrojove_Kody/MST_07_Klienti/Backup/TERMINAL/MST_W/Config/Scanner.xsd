@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Scanner" targetNamespace="http://tempuri.org/Scanner.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/Scanner.xsd" xmlns:mstns="http://tempuri.org/Scanner.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Config">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

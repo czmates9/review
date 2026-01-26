@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PohodaDB" targetNamespace="http://tempuri.org/PohodaDB.xsd" xmlns:mstns="http://tempuri.org/PohodaDB.xsd" xmlns="http://tempuri.org/PohodaDB.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Provider=SQLNCLI11;Data Source=FASKCZ-CV004\SQL_2014;Password=sasa;User ID=sa;Initial Catalog=StwPh_64086551_201801" IsAppSettingsProperty="false" Modifier="Assembly" Name="SQLNCLI11.FASKCZ-CV004\SQL_2014.StwPh_64086551_201801" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PohodaDB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="PohodaDB" msprop:Generator_UserDSName="PohodaDB">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="sVPUL" msprop:Generator_TableClassName="sVPULDataTable" msprop:Generator_TableVarName="tablesVPUL" msprop:Generator_RowChangedName="sVPULRowChanged" msprop:Generator_TablePropName="sVPUL" msprop:Generator_RowDeletingName="sVPULRowDeleting" msprop:Generator_RowChangingName="sVPULRowChanging" msprop:Generator_RowEvHandlerName="sVPULRowChangeEventHandler" msprop:Generator_RowDeletedName="sVPULRowDeleted" msprop:Generator_RowClassName="sVPULRow" msprop:Generator_UserTableName="sVPUL" msprop:Generator_RowEvArgName="sVPULRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Sel" msprop:Generator_ColumnVarNameInTable="columnSel" msprop:Generator_ColumnPropNameInRow="Sel" msprop:Generator_ColumnPropNameInTable="SelColumn" msprop:Generator_UserColumnName="Sel" type="xs:boolean" />
+              <xs:element name="UsrAgID" msprop:Generator_ColumnVarNameInTable="columnUsrAgID" msprop:Generator_ColumnPropNameInRow="UsrAgID" msprop:Generator_ColumnPropNameInTable="UsrAgIDColumn" msprop:Generator_UserColumnName="UsrAgID" type="xs:int" minOccurs="0" />
+              <xs:element name="IDS" msprop:Generator_ColumnVarNameInTable="columnIDS" msprop:Generator_ColumnPropNameInRow="IDS" msprop:Generator_ColumnPropNameInTable="IDSColumn" msprop:Generator_UserColumnName="IDS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SText" msprop:Generator_ColumnVarNameInTable="columnSText" msprop:Generator_ColumnPropNameInRow="SText" msprop:Generator_ColumnPropNameInTable="STextColumn" msprop:Generator_UserColumnName="SText" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UseConstID" msprop:Generator_ColumnVarNameInTable="columnUseConstID" msprop:Generator_ColumnPropNameInRow="UseConstID" msprop:Generator_ColumnPropNameInTable="UseConstIDColumn" msprop:Generator_UserColumnName="UseConstID" type="xs:boolean" />
+              <xs:element name="Oznacil" msprop:Generator_ColumnVarNameInTable="columnOznacil" msprop:Generator_ColumnPropNameInRow="Oznacil" msprop:Generator_ColumnPropNameInTable="OznacilColumn" msprop:Generator_UserColumnName="Oznacil" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ucetni" msprop:Generator_ColumnVarNameInTable="columnUcetni" msprop:Generator_ColumnPropNameInRow="Ucetni" msprop:Generator_ColumnPropNameInTable="UcetniColumn" msprop:Generator_UserColumnName="Ucetni" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Creator" msprop:Generator_ColumnVarNameInTable="columnCreator" msprop:Generator_ColumnPropNameInRow="Creator" msprop:Generator_ColumnPropNameInTable="CreatorColumn" msprop:Generator_UserColumnName="Creator" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pozn" msprop:Generator_ColumnVarNameInTable="columnPozn" msprop:Generator_ColumnPropNameInRow="Pozn" msprop:Generator_ColumnPropNameInTable="PoznColumn" msprop:Generator_UserColumnName="Pozn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NullCheck_IDS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNullCheck_IDS" msprop:Generator_ColumnPropNameInRow="NullCheck_IDS" msprop:Generator_ColumnPropNameInTable="NullCheck_IDSColumn" msprop:Generator_UserColumnName="NullCheck_IDS" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sVPUL_UsrAgID" msprop:Generator_TableClassName="sVPUL_UsrAgIDDataTable" msprop:Generator_TableVarName="tablesVPUL_UsrAgID" msprop:Generator_RowChangedName="sVPUL_UsrAgIDRowChanged" msprop:Generator_TablePropName="sVPUL_UsrAgID" msprop:Generator_RowDeletingName="sVPUL_UsrAgIDRowDeleting" msprop:Generator_RowChangingName="sVPUL_UsrAgIDRowChanging" msprop:Generator_RowEvHandlerName="sVPUL_UsrAgIDRowChangeEventHandler" msprop:Generator_RowDeletedName="sVPUL_UsrAgIDRowDeleted" msprop:Generator_RowClassName="sVPUL_UsrAgIDRow" msprop:Generator_UserTableName="sVPUL_UsrAgID" msprop:Generator_RowEvArgName="sVPUL_UsrAgIDRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UsrAgID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnUsrAgID" msprop:Generator_ColumnPropNameInRow="UsrAgID" msprop:Generator_ColumnPropNameInTable="UsrAgIDColumn" msprop:Generator_UserColumnName="UsrAgID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:sVPUL" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

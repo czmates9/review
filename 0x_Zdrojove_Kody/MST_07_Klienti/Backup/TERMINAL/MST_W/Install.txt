@@ -1,0 +1,34 @@
+﻿SCANNER:
+
+	Popis souboru pro nastaveni scanneru:
+	-------------------------------------
+
+	ScannerFactory.xml - slouzi pro zvoleni pouzivaneho typu scanneru
+	Fask.ScannerFactory.dll - knihovna pro nacteni a inicializaci nastaveneho typu scanneru
+	Fask.ScannerProvider.dll - knihovna s rozhranim (Fask.ScannerProvider.IScannerProvider) pro praci se scanner
+	Fask.ScannerProviderXXX.dll - knihovna pro praci s konkretnim typem scanneru odpovidajicimu rozhrani (Fask.ScannerProvider.IScannerProvider)  
+
+	Popis nastaveni scanneru:
+	--------------------------			
+	1) Nastaveni cesty ke knihovne pro praci s konkretnim typem scanneru (napr. "Path="/Storage Card/MST_W_Lorenc_New/Fask.ScannerProviderXXXX/Fask.ScannerProviderXXXX.dll")
+		- mozne nastavit absolutni nebo relativni cestu vuci exe souboru MST_W
+	2) Nastaveni nazvu scanneru (tento nazev bude zobrazen v nastaveni scanneru v aplikaci MST_W) napr. Type="MC3090"/>
+
+MODULY:
+
+	Popis souboru pro nastaveni modulu:
+	-------------------------------------
+
+	Fask.ModuleProvider.dll - knihovna s rozhranim (IModuleProvider) pro praci s moduly 
+	ConfigModules.xml - konfiguracni soubor pro nastaveni cesty k dynamicky loadovanym modulum
+
+	Popis nastaveni modulu:
+	--------------------------
+	
+	1) Do souboru ConfigModules.xml pridat do tagu <Config> novy tag <Assembly> s parametry path = cesta
+	k modulu a parametrem buttonName = nazev tlacitka, ktere se zobrazi v menu 
+	
+		<Config>
+			<Assembly path="\Storage Card\Lorenc_Mini_Oprava\Lorenc_Mini.exe" buttonName="Lorenc mini"/>
+			
+	2) Pro pridani dalsiho modulu se na novy radek vlozi opet tag <Assembly> se zvolenymi parametry
