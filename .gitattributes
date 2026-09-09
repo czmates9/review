@@ -1,0 +1,4 @@
+/Instalace/**/*.exe filter=lfs diff=lfs merge=lfs -text
+/Instalace/**/*.msi filter=lfs diff=lfs merge=lfs -text
+/Instalace/**/*.zip filter=lfs diff=lfs merge=lfs -text
+

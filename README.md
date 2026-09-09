@@ -32,6 +32,7 @@ Repozitář není jedna monolitická solution. Pro konkrétní část systému o
 | `06_ToDo` | Rozpracované úkoly. |
 | `07_Dokumentace` | Uživatelská a technická dokumentace. |
 | `0x_SQL_Struktry_` | SQL struktury a databázové podklady. |
+| [`Instalace`](Instalace/) | Instalační balíčky nástrojů potřebných pro vývoj a testování. |
 
 ## Požadavky pro lokální vývoj
 
@@ -41,6 +42,7 @@ Repozitář není jedna monolitická solution. Pro konkrétní část systému o
 - Microsoft SQL Server 2017 nebo novější; databázi `FASK` lze založit dodaným skriptem.
 - IIS Express pro projekt `Win_Kom_Server`.
 - Přístup k NuGetu pro obnovení balíčků.
+- Git LFS pro stažení velkých instalačních souborů ze složky `Instalace`.
 
 Některé starší části mohou navíc vyžadovat Microsoft Report Viewer 2010 SP1 nebo nativní knihovny SQLite.
 
