@@ -1,0 +1,10 @@
+{
+  "version": "1",
+  "name": "FASK Win Kom Server",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
+

@@ -98,6 +98,16 @@ Vývojová konfigurace používá SQL provider `Fask.ModuleSql`, databázi `FASK
 
 Pokud je port 8000 obsazený nebo IIS Express hlásí duplicitní registraci URL, ukončete běžící instanci IIS Express a spusťte řešení znovu.
 
+### Test REST API v Brunu
+
+Připravená kolekce [FASK Win Kom Server](Bruno/FASK-Win-Kom-Server/) obsahuje lokální prostředí pro IIS Express a požadavek `POST /api/Informations/MnozstviNaSklade`. Před prvním testem doplňte podpůrnou proceduru do vývojové databáze:
+
+```powershell
+sqlcmd -S localhost -E -i .\setup-fask-api-stock-procedure.sql
+```
+
+V Brunu otevřete složku kolekce, vyberte prostředí `Local IIS` a odešlete požadavek `Informations / Mnozstvi na sklade`. Kolekce používá Basic autentizaci s vývojovým uživatelem `0` a heslem `1`.
+
 ## Čištění pracovního adresáře
 
 Interaktivní čištění dočasných výstupů spustíte souborem:

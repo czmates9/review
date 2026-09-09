@@ -1,0 +1,35 @@
+meta {
+  name: Mnozstvi na sklade
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/Informations/MnozstviNaSklade
+  body: json
+  auth: basic
+}
+
+headers {
+  Accept: application/json
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{username}}
+  password: {{password}}
+}
+
+body:json {
+  {
+    "idZbozi": "{{itemNumber}}",
+    "idSklad": "{{warehouseId}}"
+  }
+}
+
+tests {
+  test("Server vrati vysledek nebo nenalezenou zasobu", function () {
+    expect([200, 204]).to.include(res.status);
+  });
+}
+
