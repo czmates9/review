@@ -1,4 +1,15 @@
 $ErrorActionPreference = 'Stop'
+
+if ([Environment]::Is64BitOperatingSystem -and [Environment]::Is64BitProcess) {
+    $powerShellX86 = Join-Path $env:WINDIR 'SysWOW64\WindowsPowerShell\v1.0\powershell.exe'
+    if (-not (Test-Path -LiteralPath $powerShellX86)) {
+        throw "32bitovy PowerShell nebyl nalezen: $powerShellX86"
+    }
+
+    & $powerShellX86 -NoProfile -ExecutionPolicy Bypass -File $PSCommandPath
+    exit $LASTEXITCODE
+}
+
 $root = $PSScriptRoot
 $output = Join-Path $root '0x_Zdrojove_Kody\!Build!\Konzola\Debug'
 [void][Reflection.Assembly]::LoadFrom((Join-Path $output 'Fask.Encryption.dll'))
