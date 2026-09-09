@@ -98,6 +98,22 @@ Vývojová konfigurace používá SQL provider `Fask.ModuleSql`, databázi `FASK
 
 Pokud je port 8000 obsazený nebo IIS Express hlásí duplicitní registraci URL, ukončete běžící instanci IIS Express a spusťte řešení znovu.
 
+### Trvalý provoz v plném IIS
+
+Pro běžné používání bez spuštěného Visual Studia je `Win_Kom_Server` určený jako web `MST_W_Server` v plném IIS. První instalaci i každou pozdější aktualizaci provedete z kořene repozitáře příkazem:
+
+```powershell
+.\setup-win-kom-server-iis.ps1
+```
+
+Potvrďte standardní dialog UAC. Skript zapne potřebné součásti IIS, nasadí web do `C:\inetpub\FASK\MST_W_Server`, vytvoří aplikační pool `MST_W_Server`, nastaví jeho SQL oprávnění a spustí web na [http://localhost:8000/](http://localhost:8000/). Web se poté spouští automaticky se službou IIS a Visual Studio nemusí běžet.
+
+Po novém sestavení projektu spusťte stejný skript znovu, aby se aktuální soubory zkopírovaly do IIS. Při ladění přes IIS Express nejprve zastavte plný IIS web, protože obě varianty nemohou současně používat port 8000:
+
+```powershell
+Stop-Website -Name MST_W_Server
+```
+
 ### Test REST API v Brunu
 
 Připravená kolekce [FASK Win Kom Server](Bruno/FASK-Win-Kom-Server/) obsahuje lokální prostředí pro IIS Express a požadavek `POST /api/Informations/MnozstviNaSklade`. Podrobný návod popisuje spuštění API, otevření správné složky v Brunu, výběr prostředí, odeslání požadavku i řešení běžných chyb. Před prvním testem doplňte podpůrnou proceduru do vývojové databáze:

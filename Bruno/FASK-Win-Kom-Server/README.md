@@ -31,15 +31,19 @@ sqlcmd -S localhost -E -i .\setup-fask-api-stock-procedure.sql
 
 Příkaz vytvoří nebo aktualizuje proceduru `dbo.fask_mnozstvinasklade2`, kterou testovaná metoda používá. Databáze `FASK` a testovací záznamy musí být připravené podle hlavního README repozitáře.
 
-## 1. Spuštění API ve Visual Studiu
+## 1. Kontrola API v IIS
 
-1. Otevřete solution `0x_Zdrojove_Kody\Win_Kom_Server\MST_Win_Kom_Server.sln`.
-2. V **Solution Exploreru** klikněte pravým tlačítkem na webový projekt `MST_Win_Kom_Server` a vyberte **Set as Startup Project**.
-3. V horní liště Visual Studia vyberte profil **IIS Express**.
-4. Spusťte projekt klávesou **F5**.
-5. Zkontrolujte, že se služba otevře na adrese `http://localhost:8000/`.
+`Win_Kom_Server` je nainstalovaný jako web `MST_W_Server` v plném IIS na adrese `http://localhost:8000/`. IIS i web se spouštějí automaticky se systémem, takže Visual Studio pro testování v Brunu nemusí běžet.
 
-Visual Studio musí zůstat spuštěné po celou dobu testování v Brunu.
+Před otevřením Bruna stačí v prohlížeči zkusit adresu:
+
+```text
+http://localhost:8000/
+```
+
+Pokud web neběží, spusťte **IIS Manager**, otevřete **Sites**, vyberte `MST_W_Server` a vpravo klikněte na **Start**. Kompletní instalaci nebo aktualizaci webu lze zopakovat z kořene repozitáře pomocí `setup-win-kom-server-iis.ps1`.
+
+Ladění přes IIS Express ve Visual Studiu je samostatná alternativa. Před stisknutím **F5** je nutné web `MST_W_Server` v plném IIS zastavit, protože obě varianty používají port 8000.
 
 ## 2. Otevření připravené kolekce v Brunu
 
@@ -115,11 +119,11 @@ Tím zůstanou tělo požadavku i autentizace společné a mění se jen testova
 
 ### Bruno hlásí `ECONNREFUSED`
 
-IIS Express na portu 8000 neběží. Spusťte `MST_Win_Kom_Server` ve Visual Studiu pomocí **F5** a zkuste požadavek znovu.
+Web `MST_W_Server` v IIS neběží. Otevřete **IIS Manager → Sites → MST_W_Server**, klikněte na **Start** a zkuste požadavek znovu.
 
 ### Port 8000 je obsazený
 
-Ukončete starou instanci IIS Express a znovu spusťte projekt ve Visual Studiu. V kolekci i projektu je nastavený port 8000.
+Port může blokovat stará instance IIS Express. Ukončete IIS Express a v **IIS Manageru** znovu spusťte web `MST_W_Server`.
 
 ### Odpověď je `401 Unauthorized`
 
