@@ -1,0 +1,331 @@
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+Seeding dbo.FASK_AGENDA
+Seeding dbo.FASK_MachineType
+Seeding dbo.FASK_Logins
+Seeding dbo.Groups
+Seeding dbo.FASK_AfterProcess_Log
+Seeding dbo.FASK_PLANOVANI_PARAMS
+Seeding dbo.FASK_Events
+Seeding dbo.FASK_PLANOVANI_PARAMS_Name
+Seeding dbo.CZMST_SI
+ 
+ItemTypeResult není ani P, ani I. Provedeno jiné akce.
+ 
+ItemTypeResult není ani P, ani I. Provedeno jiné akce.
+ 
+ItemTypeResult není ani P, ani I. Provedeno jiné akce.
+ 
+ItemTypeResult není ani P, ani I. Provedeno jiné akce.
+ 
+ItemTypeResult není ani P, ani I. Provedeno jiné akce.
+ 
+ItemTypeResult není ani P, ani I. Provedeno jiné akce.
+ 
+ItemTypeResult není ani P, ani I. Provedeno jiné akce.
+ 
+ItemTypeResult není ani P, ani I. Provedeno jiné akce.
+ 
+ItemTypeResult není ani P, ani I. Provedeno jiné akce.
+ 
+ItemTypeResult není ani P, ani I. Provedeno jiné akce.
+Seeding dbo.CZMST_I1
+ZAZNAM BYL USPESNE VLOZEN
+ZAZNAM BYL USPESNE VLOZEN
+ZAZNAM BYL USPESNE VLOZEN
+ZAZNAM BYL USPESNE VLOZEN
+ZAZNAM BYL USPESNE VLOZEN
+ZAZNAM BYL USPESNE VLOZEN
+ZAZNAM BYL USPESNE VLOZEN
+ZAZNAM BYL USPESNE VLOZEN
+ZAZNAM BYL USPESNE VLOZEN
+ZAZNAM BYL USPESNE VLOZEN
+Seeding dbo.FASK_Events_HISTORY
+Seeding dbo.CZMST_I2
+Seeding dbo.FASK_ZASOBY
+Seeding dbo.CZMST_I3
+Seeding dbo.FASK_EventsErr
+Seeding dbo.CZMST093
+Seeding dbo.CZMST_I4
+Seeding dbo.CZMST_SkladLokace_Stav
+Seeding dbo.FASK_FORMULARE
+Seeding dbo.CZMST_SkladLokace_StavPohyb
+Seeding dbo.FASK_FORMULARE_20250714_vzor
+Seeding dbo.CZMST_PI
+Seeding dbo.FASK_FORMULARE_20250912_vzor
+Seeding dbo.CZMST_PE
+ZAZNAM BYL USPESNE VLOZEN
+ZAZNAM BYL USPESNE VLOZEN
+ZAZNAM BYL USPESNE VLOZEN
+ZAZNAM BYL USPESNE VLOZEN
+ZAZNAM BYL USPESNE VLOZEN
+ZAZNAM BYL USPESNE VLOZEN
+ZAZNAM BYL USPESNE VLOZEN
+ZAZNAM BYL USPESNE VLOZEN
+ZAZNAM BYL USPESNE VLOZEN
+ZAZNAM BYL USPESNE VLOZEN
+Seeding dbo.FASK_FORMULARE_20250926_vzor
+Seeding dbo.CZMST_DI
+Seeding dbo.FASK_FORMULARE_KS
+Seeding dbo.CZMST_SE
+Seeding dbo.CZMST_DI_HISTORY
+Seeding dbo.CZMST_SE_HISTORY
+Seeding dbo.CZMST_SI_HISTORY
+Seeding dbo.CZMST_PE_HISTORY
+Seeding dbo.CZMST_PI_HISTORY
+Seeding dbo.CZPRO_VPH
+Seeding dbo.FASK_PLANOVANI
+Seeding dbo.CZPRO_VPP
+Seeding dbo.FASK_POHODA_RESPONSE
+Seeding dbo.FASK_RADY
+Seeding dbo.Production
+Seeding dbo.FASK_StatusTypes
+Seeding dbo.FASK_TISKOVE_ULOHY
+Seeding dbo.Corrects
+Seeding dbo.FASK_UserEvents
+Seeding dbo.CZ_UKOL
+Seeding dbo.CZ_UKOL_ServiceMan
+Seeding dbo.FASK_Vyroba_PVH
+Seeding dbo.FASK_Vyroba_PVP
+Seeding dbo.CZ_UKOL_STATE
+Seeding dbo.FASK_Vyroba_TP
+Seeding dbo.CZ_UKOL_UZIV
+Seeding dbo.FASK_ZASOBY_IMPORT_POHODA_SKzNC
+Seeding dbo.FASK_ZASOBY_MENY
+Seeding dbo.CZ_UKOL_UZIV_HIST
+Seeding dbo.FASK_ZASOBY_PARAMETRY
+Seeding dbo.FASK_ZASOBY_STAV
+Seeding dbo.CZMST_CountEntries
+Seeding dbo.FASK_ZASOBY_zal_20260129
+Seeding dbo.CZMST_DI_RFID
+Seeding dbo.CZMST_DIH
+Seeding dbo.INVENTUR
+Seeding dbo.CZMST_DIH_HISTORY
+Seeding dbo.CZMST_EventsTypes
+Seeding dbo.KANCL
+Seeding dbo.CZMST_EventsUser
+Seeding dbo.LOKACE
+Seeding dbo.CZMST_Expedice_Baleni_Buffer
+Seeding dbo.CZMST_Expedice_Baleni_Hlavicka
+Seeding dbo.Machines
+Seeding dbo.CZMST_Expedice_Baleni_Hlavicka_HISTORY
+Seeding dbo.CZMST_Expedice_Baleni_Polozky
+Seeding dbo.MachinesDefinition
+Seeding dbo.CZMST_Expedice_Baleni_Polozky_HISTORY
+Seeding dbo.CZMST_Expedice_Hlavicka
+Seeding dbo.MachinesDefinitionMeasurement
+Seeding dbo.CZMST_Expedice_Hlavicka_HISTORY
+Seeding dbo.MachineStateSet
+Seeding dbo.CZMST_Expedice_Polozky
+Seeding dbo.CZMST_Expedice_Polozky_HISTORY
+Seeding dbo.MachineStateSetHistory
+Seeding dbo.CZMST_I1H
+Seeding dbo.MAJETEK
+Seeding dbo.CZMST_I1P
+Seeding dbo.Operations
+Seeding dbo.CZMST_METAINFO
+Seeding dbo.CZMST_Palety
+Seeding dbo.OSOBY
+Seeding dbo.CZMST_PE_SN
+Seeding dbo.Production_HISTORY
+Seeding dbo.CZMST_PE_SN_HISTORY
+Seeding dbo.CZMST_PEH
+Seeding dbo.Production_SN
+Seeding dbo.CZMST_PEH_HISTORY
+Seeding dbo.Production_Sources
+Seeding dbo.CZMST_PI_F
+Seeding dbo.CZMST_PI_F_HISTORY
+Seeding dbo.StatusTypes
+Seeding dbo.CZMST_PIH
+Seeding dbo.CZMST_PIH_HISTORY
+Seeding dbo.UCSTR
+Seeding dbo.CZMST_RFID_ITEMS
+Seeding dbo.CZMST_RFID_ITEMS_ASSIGNS
+Seeding dbo.UserEvents
+Seeding dbo.CZMST_SE_SN
+Seeding dbo.CZMST_SE_SN_HISTORY
+Seeding dbo.VMachinesOperations
+Seeding dbo.CZMST_SEH
+Seeding dbo.CZMST_SEH_HISTORY
+Seeding dbo.CZMST_Servis_Cinnost
+Seeding dbo.CZMST_Servis_CinnostNext
+Seeding dbo.CZMST_Servis_Dyn_Table
+Seeding dbo.CZMST_Servis_Dynamic_Table_Definition
+Seeding dbo.CZMST_Servis_Okruh
+Seeding dbo.CZMST_Servis_Predloha
+Seeding dbo.CZMST_Servis_Stav
+Seeding dbo.CZMST_Servis_StavNext
+Seeding dbo.CZMST_Servis_Zdroj
+Seeding dbo.CZMST_Servis_ZdrojPohyb
+Seeding dbo.CZMST_Servis_ZdrojSeznam
+Seeding dbo.CZMST_Servis_ZdrojStav
+Seeding dbo.CZMST_SI_BV
+Seeding dbo.CZMST_SI_RFID
+Seeding dbo.CZMST_SIH
+Seeding dbo.CZMST_SIH_HISTORY
+Seeding dbo.CZMST_SkladLokace_LokaceTypy
+Seeding dbo.CZMST_SkladLokace_LokaceVariantySortiment
+Seeding dbo.CZMST_SkladLokace_Mapa
+Seeding dbo.CZMST_SSCC_PARAMETERS
+Seeding dbo.CZMST_SSCC_SEQUENCE
+Seeding dbo.CZMST_TASK_VERIFY
+Seeding dbo.CZMST_TERMINAL
+Seeding dbo.CZMST_TERMINAL_AKT
+Seeding dbo.CZMST_TERMINAL_DEFINITION
+Seeding dbo.CZMST_TISKARNA
+Seeding dbo.CZMST_TISKARNA_zal20260428
+Seeding dbo.CZMST090
+Seeding dbo.CZMST091
+Seeding dbo.CZMST092
+Seeding dbo.CZMST094
+Seeding dbo.CZMST096
+Seeding dbo.CZMST097
+Seeding dbo.EXTERNAL_POST_LOG
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+schema_name                                                                                                                      table_name                                                                                                                       before_rows          after_rows           added_rows          
+-------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------- -------------------- -------------------- --------------------
+dbo                                                                                                                              Corrects                                                                                                                                            0                   10                   10
+dbo                                                                                                                              CZ_UKOL                                                                                                                                             0                   10                   10
+dbo                                                                                                                              CZ_UKOL_ServiceMan                                                                                                                                  0                   10                   10
+dbo                                                                                                                              CZ_UKOL_STATE                                                                                                                                       0                   10                   10
+dbo                                                                                                                              CZ_UKOL_UZIV                                                                                                                                        0                   10                   10
+dbo                                                                                                                              CZ_UKOL_UZIV_HIST                                                                                                                                   0                   20                   20
+dbo                                                                                                                              CZMST_CountEntries                                                                                                                                  0                   10                   10
+dbo                                                                                                                              CZMST_DI                                                                                                                                            0                   10                   10
+dbo                                                                                                                              CZMST_DI_HISTORY                                                                                                                                    0                   10                   10
+dbo                                                                                                                              CZMST_DI_RFID                                                                                                                                       0                   10                   10
+dbo                                                                                                                              CZMST_DIH                                                                                                                                           0                   10                   10
+dbo                                                                                                                              CZMST_DIH_HISTORY                                                                                                                                   0                   10                   10
+dbo                                                                                                                              CZMST_EventsTypes                                                                                                                                   0                   10                   10
+dbo                                                                                                                              CZMST_EventsUser                                                                                                                                    0                   10                   10
+dbo                                                                                                                              CZMST_Expedice_Baleni_Buffer                                                                                                                        0                   10                   10
+dbo                                                                                                                              CZMST_Expedice_Baleni_Hlavicka                                                                                                                      0                   10                   10
+dbo                                                                                                                              CZMST_Expedice_Baleni_Hlavicka_HISTORY                                                                                                              0                   10                   10
+dbo                                                                                                                              CZMST_Expedice_Baleni_Polozky                                                                                                                       0                   10                   10
+dbo                                                                                                                              CZMST_Expedice_Baleni_Polozky_HISTORY                                                                                                               0                   10                   10
+dbo                                                                                                                              CZMST_Expedice_Hlavicka                                                                                                                             0                   10                   10
+dbo                                                                                                                              CZMST_Expedice_Hlavicka_HISTORY                                                                                                                     0                   10                   10
+dbo                                                                                                                              CZMST_Expedice_Polozky                                                                                                                              0                   10                   10
+dbo                                                                                                                              CZMST_Expedice_Polozky_HISTORY                                                                                                                      0                   10                   10
+dbo                                                                                                                              CZMST_I1                                                                                                                                            0                   10                   10
+dbo                                                                                                                              CZMST_I1H                                                                                                                                           0                   10                   10
+dbo                                                                                                                              CZMST_I1P                                                                                                                                           0                   10                   10
+dbo                                                                                                                              CZMST_I2                                                                                                                                            0                   10                   10
+dbo                                                                                                                              CZMST_I3                                                                                                                                            0                   10                   10
+dbo                                                                                                                              CZMST_I4                                                                                                                                            0                   10                   10
+dbo                                                                                                                              CZMST_METAINFO                                                                                                                                      0                   10                   10
+dbo                                                                                                                              CZMST_Palety                                                                                                                                        0                   10                   10
+dbo                                                                                                                              CZMST_PE                                                                                                                                            0                   10                   10
+dbo                                                                                                                              CZMST_PE_HISTORY                                                                                                                                    0                   10                   10
+dbo                                                                                                                              CZMST_PE_SN                                                                                                                                         0                   10                   10
+dbo                                                                                                                              CZMST_PE_SN_HISTORY                                                                                                                                 0                   10                   10
+dbo                                                                                                                              CZMST_PEH                                                                                                                                           0                   10                   10
+dbo                                                                                                                              CZMST_PEH_HISTORY                                                                                                                                   0                   10                   10
+dbo                                                                                                                              CZMST_PI                                                                                                                                            0                   10                   10
+dbo                                                                                                                              CZMST_PI_F                                                                                                                                          0                   10                   10
+dbo                                                                                                                              CZMST_PI_F_HISTORY                                                                                                                                  0                   10                   10
+dbo                                                                                                                              CZMST_PI_HISTORY                                                                                                                                    0                   10                   10
+dbo                                                                                                                              CZMST_PIH                                                                                                                                           0                   10                   10
+dbo                                                                                                                              CZMST_PIH_HISTORY                                                                                                                                   0                   10                   10
+dbo                                                                                                                              CZMST_RFID_ITEMS                                                                                                                                    0                   10                   10
+dbo                                                                                                                              CZMST_RFID_ITEMS_ASSIGNS                                                                                                                            0                   10                   10
+dbo                                                                                                                              CZMST_SE                                                                                                                                            0                   30                   30
+dbo                                                                                                                              CZMST_SE_HISTORY                                                                                                                                    0                   10                   10
+dbo                                                                                                                              CZMST_SE_SN                                                                                                                                         0                   10                   10
+dbo                                                                                                                              CZMST_SE_SN_HISTORY                                                                                                                                 0                   10                   10
+dbo                                                                                                                              CZMST_SEH                                                                                                                                           0                   10                   10
+dbo                                                                                                                              CZMST_SEH_HISTORY                                                                                                                                   0                   10                   10
+dbo                                                                                                                              CZMST_Servis_Cinnost                                                                                                                                0                   10                   10
+dbo                                                                                                                              CZMST_Servis_CinnostNext                                                                                                                            0                   10                   10
+dbo                                                                                                                              CZMST_Servis_Dyn_Table                                                                                                                              0                   10                   10
+dbo                                                                                                                              CZMST_Servis_Dynamic_Table_Definition                                                                                                               0                   10                   10
+dbo                                                                                                                              CZMST_Servis_Okruh                                                                                                                                  0                   10                   10
+dbo                                                                                                                              CZMST_Servis_Predloha                                                                                                                               0                   10                   10
+dbo                                                                                                                              CZMST_Servis_Stav                                                                                                                                   0                   10                   10
+dbo                                                                                                                              CZMST_Servis_StavNext                                                                                                                               0                   10                   10
+dbo                                                                                                                              CZMST_Servis_Zdroj                                                                                                                                  0                   10                   10
+dbo                                                                                                                              CZMST_Servis_ZdrojPohyb                                                                                                                             0                   10                   10
+dbo                                                                                                                              CZMST_Servis_ZdrojSeznam                                                                                                                            0                   10                   10
+dbo                                                                                                                              CZMST_Servis_ZdrojStav                                                                                                                              0                   10                   10
+dbo                                                                                                                              CZMST_SI                                                                                                                                            0                   10                   10
+dbo                                                                                                                              CZMST_SI_BV                                                                                                                                         0                   10                   10
+dbo                                                                                                                              CZMST_SI_HISTORY                                                                                                                                    0                   10                   10
+dbo                                                                                                                              CZMST_SI_RFID                                                                                                                                       0                   10                   10
+dbo                                                                                                                              CZMST_SIH                                                                                                                                           0                   10                   10
+dbo                                                                                                                              CZMST_SIH_HISTORY                                                                                                                                   0                   10                   10
+dbo                                                                                                                              CZMST_SkladLokace_LokaceTypy                                                                                                                        0                   10                   10
+dbo                                                                                                                              CZMST_SkladLokace_LokaceVariantySortiment                                                                                                           0                   10                   10
+dbo                                                                                                                              CZMST_SkladLokace_Mapa                                                                                                                              0                   10                   10
+dbo                                                                                                                              CZMST_SkladLokace_Stav                                                                                                                              0                   10                   10
+dbo                                                                                                                              CZMST_SkladLokace_StavPohyb                                                                                                                         0                   10                   10
+dbo                                                                                                                              CZMST_SSCC_PARAMETERS                                                                                                                               0                   10                   10
+dbo                                                                                                                              CZMST_SSCC_SEQUENCE                                                                                                                                 0                   10                   10
+dbo                                                                                                                              CZMST_TASK_VERIFY                                                                                                                                   0                   10                   10
+dbo                                                                                                                              CZMST_TERMINAL                                                                                                                                      0                   10                   10
+dbo                                                                                                                              CZMST_TERMINAL_AKT                                                                                                                                  0                   10                   10
+dbo                                                                                                                              CZMST_TERMINAL_DEFINITION                                                                                                                           0                   10                   10
+dbo                                                                                                                              CZMST_TISKARNA                                                                                                                                      0                   10                   10
+dbo                                                                                                                              CZMST_TISKARNA_zal20260428                                                                                                                          0                   10                   10
+dbo                                                                                                                              CZMST090                                                                                                                                            0                   10                   10
+dbo                                                                                                                              CZMST091                                                                                                                                            0                   10                   10
+dbo                                                                                                                              CZMST092                                                                                                                                            0                   10                   10
+dbo                                                                                                                              CZMST093                                                                                                                                            0                   10                   10
+dbo                                                                                                                              CZMST094                                                                                                                                            0                   10                   10
+dbo                                                                                                                              CZMST096                                                                                                                                            0                   10                   10
+dbo                                                                                                                              CZMST097                                                                                                                                            0                   10                   10
+dbo                                                                                                                              CZPRO_VPH                                                                                                                                           0                   10                   10
+dbo                                                                                                                              CZPRO_VPP                                                                                                                                           0                   10                   10
+dbo                                                                                                                              EXTERNAL_POST_LOG                                                                                                                                   0                   10                   10
+dbo                                                                                                                              FASK_AfterProcess_Log                                                                                                                               0                   10                   10
+dbo                                                                                                                              FASK_AGENDA                                                                                                                                        16                   26                   10
+dbo                                                                                                                              FASK_Events                                                                                                                                         0                   20                   20
+dbo                                                                                                                              FASK_Events_HISTORY                                                                                                                                 0                   10                   10
+dbo                                                                                                                              FASK_EventsErr                                                                                                                                      0                   10                   10
+dbo                                                                                                                              FASK_FORMULARE                                                                                                                                      0                   10                   10
+dbo                                                                                                                              FASK_FORMULARE_20250714_vzor                                                                                                                        0                   10                   10
+dbo                                                                                                                              FASK_FORMULARE_20250912_vzor                                                                                                                        0                   10                   10
+dbo                                                                                                                              FASK_FORMULARE_20250926_vzor                                                                                                                        0                   10                   10
+dbo                                                                                                                              FASK_FORMULARE_KS                                                                                                                                   0                   10                   10
+dbo                                                                                                                              FASK_Logins                                                                                                                                         1                   11                   10
+dbo                                                                                                                              FASK_Logins_Auth                                                                                                                                   16                   26                   10
+dbo                                                                                                                              FASK_Machines                                                                                                                                       0                   10                   10
+dbo                                                                                                                              FASK_MachineType                                                                                                                                    0                   10                   10
+dbo                                                                                                                              FASK_Operations                                                                                                                                     0                   10                   10
+dbo                                                                                                                              FASK_Operations_Next                                                                                                                                0                   10                   10
+dbo                                                                                                                              FASK_PLANOVANI                                                                                                                                      0                   10                   10
+dbo                                                                                                                              FASK_PLANOVANI_PARAMS                                                                                                                               0                   10                   10
+dbo                                                                                                                              FASK_PLANOVANI_PARAMS_Name                                                                                                                          0                   10                   10
+dbo                                                                                                                              FASK_POHODA_RESPONSE                                                                                                                                0                   10                   10
+dbo                                                                                                                              FASK_RADY                                                                                                                                           0                   10                   10
+dbo                                                                                                                              FASK_StatusTypes                                                                                                                                    0                   10                   10
+dbo                                                                                                                              FASK_TISKOVE_ULOHY                                                                                                                                  0                   10                   10
+dbo                                                                                                                              FASK_UserEvents                                                                                                                                     0                   10                   10
+dbo                                                                                                                              FASK_Vyroba_PVH                                                                                                                                     0                   10                   10
+dbo                                                                                                                              FASK_Vyroba_PVP                                                                                                                                     0                   10                   10
+dbo                                                                                                                              FASK_Vyroba_TP                                                                                                                                      0                   10                   10
+dbo                                                                                                                              FASK_ZASOBY                                                                                                                                         0                   10                   10
+dbo                                                                                                                              FASK_ZASOBY_IMPORT_POHODA_SKzNC                                                                                                                     0                   10                   10
+dbo                                                                                                                              FASK_ZASOBY_MENY                                                                                                                                    0                   10                   10
+dbo                                                                                                                              FASK_ZASOBY_PARAMETRY                                                                                                                               0                   10                   10
+dbo                                                                                                                              FASK_ZASOBY_STAV                                                                                                                                    0                   10                   10
+dbo                                                                                                                              FASK_ZASOBY_zal_20260129                                                                                                                            0                   10                   10
+dbo                                                                                                                              Groups                                                                                                                                              0                   10                   10
+dbo                                                                                                                              INVENTUR                                                                                                                                            0                   10                   10
+dbo                                                                                                                              KANCL                                                                                                                                               0                   10                   10
+dbo                                                                                                                              LOKACE                                                                                                                                              0                   10                   10
+dbo                                                                                                                              Machines                                                                                                                                            0                   10                   10
+dbo                                                                                                                              MachinesDefinition                                                                                                                                  0                   10                   10
+dbo                                                                                                                              MachinesDefinitionMeasurement                                                                                                                       0                   10                   10
+dbo                                                                                                                              MachineStateSet                                                                                                                                     0                   10                   10
+dbo                                                                                                                              MachineStateSetHistory                                                                                                                              0                   20                   20
+dbo                                                                                                                              MAJETEK                                                                                                                                             0                   10                   10
+dbo                                                                                                                              Operations                                                                                                                                          0                   10                   10
+dbo                                                                                                                              OSOBY                                                                                                                                               0                   10                   10
+dbo                                                                                                                              Production                                                                                                                                          0                   10                   10
+dbo                                                                                                                              Production_HISTORY                                                                                                                                  0                   10                   10
+dbo                                                                                                                              Production_SN                                                                                                                                       0                   10                   10
+dbo                                                                                                                              Production_Sources                                                                                                                                  0                   10                   10
+dbo                                                                                                                              StatusTypes                                                                                                                                         0                   10                   10
+dbo                                                                                                                              UCSTR                                                                                                                                               0                   10                   10
+dbo                                                                                                                              UserEvents                                                                                                                                          0                   10                   10
+dbo                                                                                                                              VLoginsGroups                                                                                                                                       0                   10                   10
+dbo                                                                                                                              VMachinesOperations                                                                                                                                 0                   10                   10

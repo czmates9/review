@@ -114,6 +114,7 @@ namespace Fask.MST_W_Server.Licensing
         /// <returns>Vraceni XML sobrou ktery je možne nasledne parsovat</returns>
         private static string GetXML(string x, out string podpis)
         {
+            x = x.TrimEnd('\r', '\n');
             podpis = string.Empty;
             if (x.LastIndexOf("\n") > 0)
             {

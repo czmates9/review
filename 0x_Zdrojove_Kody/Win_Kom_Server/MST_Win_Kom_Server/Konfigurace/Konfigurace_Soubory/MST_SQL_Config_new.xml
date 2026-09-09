@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
 <SQL xmlns="http://tempuri.org/SQL.xsd">
   <ConnectionString>
-    <FASKDB />
+    <FASKDB>Data Source=localhost;Initial Catalog=FASK;Integrated Security=True;TrustServerCertificate=True</FASKDB>
   </ConnectionString>
   <Vydej>
     <AfterDataProcessed_Action />

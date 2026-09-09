@@ -37,8 +37,8 @@
     </SccProvider>
     <OldToolsVersion>3.5</OldToolsVersion>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
-    <UseIISExpress>false</UseIISExpress>
-    <Use64BitIISExpress>false</Use64BitIISExpress>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress>true</Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -118,10 +118,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Fask.Server.Modules\Fask.Module.Ingress.SAD\Fask.Module.Ingres.SAD.csproj">
-      <Project>{2ceb8fcb-328a-4938-b98a-2ddb42a9a449}</Project>
-      <Name>Fask.Module.Ingres.SAD</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MST_Win_Print_Server\Fask.BarCode.ReportFactory\Fask.BarCode.ReportFactory.csproj">
       <Project>{85e699c4-e421-4f59-a45a-443c03574105}</Project>
       <Name>Fask.BarCode.ReportFactory</Name>
@@ -987,6 +983,9 @@
     </None>
     <Content Include="libman.json" />
     <None Include="logo_FASK.png" />
+    <Content Include="licence.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Konfigurace\Stranky\Konfigurace_Agendy.aspx" />
     <Content Include="Konfigurace\Stranky\Konfigurace_ProviderPohodaXML.aspx" />
     <Content Include="Konfigurace\Stranky\Konfigurace_ProviderSql.aspx" />
@@ -1310,18 +1309,6 @@
     </Content>
     <Content Include="Konfigurace\Stranky\App_LocalResources\Konfigurace_ProviderABRACarpServis.aspx.resx" />
     <Content Include="Konfigurace\Stranky\App_LocalResources\Konfigurace_ProviderABRA_SAB.aspx.resx" />
-    <EmbeddedResource Include="Prijem.asmx.resx">
-      <DependentUpon>Prijem.asmx.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Prodej.asmx.resx">
-      <DependentUpon>Prodej.asmx.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vydej.asmx.resx">
-      <DependentUpon>Vydej.asmx.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <None Include="DataSets\Passwd.xsc">
       <DependentUpon>Passwd.xsd</DependentUpon>
     </None>
@@ -1507,11 +1494,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>53996</DevelopmentServerPort>
+          <DevelopmentServerPort>8000</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/MST_Win_Kom_Server_7_Dasenka</IISUrl>
+          <IISUrl>http://localhost:8000/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

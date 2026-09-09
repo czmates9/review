@@ -10,7 +10,7 @@ namespace Fask.ModuleSql
     public class Globals
     {
 
-        private static string _configFilePath = "MST_SQL_Config.xml";
+        private static string _configFilePath = "MST_SQL_Config_new.xml";
 
 
         /// <summary>

@@ -55,8 +55,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MST_Print_Server_Classes", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fask.BarCode.ReportFactory", "MST_Win_Print_Server\Fask.BarCode.ReportFactory\Fask.BarCode.ReportFactory.csproj", "{85E699C4-E421-4F59-A45A-443C03574105}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fask.Module.Ingres.SAD", "Fask.Server.Modules\Fask.Module.Ingress.SAD\Fask.Module.Ingres.SAD.csproj", "{2CEB8FCB-328A-4938-B98A-2DDB42A9A449}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -343,18 +341,6 @@ Global
 		{85E699C4-E421-4F59-A45A-443C03574105}.Release|x64.Build.0 = Release|x64
 		{85E699C4-E421-4F59-A45A-443C03574105}.Release|x86.ActiveCfg = Release|x86
 		{85E699C4-E421-4F59-A45A-443C03574105}.Release|x86.Build.0 = Release|x86
-		{2CEB8FCB-328A-4938-B98A-2DDB42A9A449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2CEB8FCB-328A-4938-B98A-2DDB42A9A449}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2CEB8FCB-328A-4938-B98A-2DDB42A9A449}.Debug|x64.ActiveCfg = Debug|x64
-		{2CEB8FCB-328A-4938-B98A-2DDB42A9A449}.Debug|x64.Build.0 = Debug|x64
-		{2CEB8FCB-328A-4938-B98A-2DDB42A9A449}.Debug|x86.ActiveCfg = Debug|x86
-		{2CEB8FCB-328A-4938-B98A-2DDB42A9A449}.Debug|x86.Build.0 = Debug|x86
-		{2CEB8FCB-328A-4938-B98A-2DDB42A9A449}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2CEB8FCB-328A-4938-B98A-2DDB42A9A449}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2CEB8FCB-328A-4938-B98A-2DDB42A9A449}.Release|x64.ActiveCfg = Release|x64
-		{2CEB8FCB-328A-4938-B98A-2DDB42A9A449}.Release|x64.Build.0 = Release|x64
-		{2CEB8FCB-328A-4938-B98A-2DDB42A9A449}.Release|x86.ActiveCfg = Release|x86
-		{2CEB8FCB-328A-4938-B98A-2DDB42A9A449}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

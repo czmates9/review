@@ -23,7 +23,7 @@
     <Provider_Ukolovani />
   </Providers>
   <ConnectionString>
-    <FASKDB>Data Source=192.168.1.121\SQLEXPRESS;Initial Catalog=FASKPOH_Prezentace7D;User ID=fask_dbowner;Password=pro147fask</FASKDB>
+    <FASKDB>Data Source=localhost;Initial Catalog=FASK;Integrated Security=True;TrustServerCertificate=True</FASKDB>
   </ConnectionString>
   <Logs>
     <Errors>true</Errors>

@@ -82,8 +82,8 @@
     <Reference Include="ProgressControls">
       <HintPath>!!!Support!!!\ProgressControls\ProgressControls.dll</HintPath>
     </Reference>
-    <Reference Include="RestSharp, Version=106.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
-      <HintPath>..\..\Konzola\packages\RestSharp.106.0.0\lib\net452\RestSharp.dll</HintPath>
+    <Reference Include="RestSharp, Version=106.15.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\..\Win_Kom_Server\packages\RestSharp.106.15.0\lib\net452\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -239,17 +239,6 @@
       <Project>{dcd07eda-015d-49cb-a3f0-855bc143440f}</Project>
       <Name>Fask.RestSharp</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Editace\FormUzivateleEdit.resx">
-      <DependentUpon>FormUzivateleEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Editace\Form_FASK_AGENDA.resx">
-      <DependentUpon>Form_FASK_AGENDA.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Editace\Form_FASK_Logins.resx">
-      <DependentUpon>Form_FASK_Logins.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

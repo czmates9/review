@@ -8,7 +8,7 @@ namespace Fask.MST_W_Server.Konfigurace.Classes
 {
     public class Globals_Konfig_WebConfig
     {
-        private static string _configFilePath = "MST_Konfig_WebConfig.xml";
+        private static string _configFilePath = "MST_Konfig_WebConfig - kopie.xml";
 
 
         /// <summary>
