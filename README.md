@@ -38,23 +38,31 @@ Repozitář není jedna monolitická solution. Pro konkrétní část systému o
 - Windows 10 nebo 11.
 - Visual Studio 2026 nebo kompatibilní verze Visual Studia s podporou desktopových aplikací .NET a ASP.NET.
 - .NET Framework 4.7 Developer Pack.
-- Microsoft SQL Server s lokální databází `FASK`.
+- Microsoft SQL Server 2017 nebo novější; databázi `FASK` lze založit dodaným skriptem.
 - IIS Express pro projekt `Win_Kom_Server`.
 - Přístup k NuGetu pro obnovení balíčků.
 
 Některé starší části mohou navíc vyžadovat Microsoft Report Viewer 2010 SP1 nebo nativní knihovny SQLite.
 
-## Příprava databáze FASK
+## Založení a příprava databáze FASK
 
-Skripty předpokládají lokální SQL Server, Windows autentizaci a existující databázi `FASK`.
+Aktuální zakládací skript je [FASK_SQL2017.sql](0x_SQL_Struktry_/00_SQL_Zakladaci_Script_Cele_DB/FASK_SQL2017.sql). Je určený pro SQL Server 2017 nebo novější, používá výchozí datové cesty SQL instance a vytvoří databázi `FASK` se 146 tabulkami a dalšími databázovými objekty.
 
-Vývojového uživatele s přihlášením `0`, heslem `1` a potřebnými oprávněními připravíte z kořene repozitáře příkazem:
+Skript spusťte pod účtem, který může vytvářet databáze. Z kořene repozitáře použijte:
+
+```powershell
+sqlcmd -S localhost -E -i ".\0x_SQL_Struktry_\00_SQL_Zakladaci_Script_Cele_DB\FASK_SQL2017.sql"
+```
+
+Pokud databáze `FASK` už existuje, musí být prázdná a spouštěcí účet nad ní musí mít oprávnění `CONTROL`. Skript existující databázi nemaže a při nalezení uživatelských objektů skončí bez jejich změny. Zakládá pouze schéma bez počátečních dat; integrační objekty závislé na externích databázích, například Pohodě, nejsou aktivovány.
+
+Po úspěšném založení připravte vývojového uživatele s přihlášením `0`, heslem `1` a potřebnými oprávněními:
 
 ```powershell
 sqlcmd -S localhost -E -d FASK -i .\setup-fask-debug-user.sql
 ```
 
-Testovací data lze doplnit pomocí:
+Nakonec lze doplnit testovací data pomocí:
 
 ```powershell
 sqlcmd -S localhost -E -d FASK -i .\seed-fask-all-tables.sql
