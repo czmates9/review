@@ -22,6 +22,17 @@
 [Bb]in/
 [Oo]bj/
 
+# Generovane vystupy starsich projektu
+\!Build!/
+\!\!\!Build\!\!\!/
+[Pp]ackages/
+
+# Logy a docasne soubory
+*.log
+*.tmp
+*.cache
+[Tt]est[Rr]esults/
+
 /0x_Zdrojove_Kody/!Build!/
 
 /0x_Zdrojove_Kody/Win_Kom_Server/MST_Win_Kom_Server/Konfigurace/Konfigurace_Soubory/Fask_Module_Pohod_I_Tec.xml
@@ -35,14 +46,7 @@
 
 /0x_Zdrojove_Kody/Win_Kom_Server/MST_Win_Kom_Server/Logs
 /0x_Zdrojove_Kody/Win_Kom_Server/MST_Win_Kom_Server/Konfigurace/Konfigurace_Soubory_Terminal
-/0x_Zdrojove_Kody/Win_Kom_Server/packages
-
 /0x_Zdrojove_Kody/_SdileneProjekty_/WIN_CE/Fask.Logging/!Build!/Debug online with SQLCE/Fask.Logging.dll
 /0x_Zdrojove_Kody/_SdileneProjekty_/WIN_CE/Fask.Logging/!Build!/Debug online with SQLCE/Fask.Logging.pdb
-
-/0x_Zdrojove_Kody/SledovaniVyroby2/packages
-
-/0x_Zdrojove_Kody/Konzola/packages
-/0x_Zdrojove_Kody/Vyroba_2_Klienti/packages
 
 /0x_Zdrojove_Kody/Konzola/.vs

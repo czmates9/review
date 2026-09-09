@@ -1,9 +1,0 @@
-<?xml version="1.0" standalone="yes"?>
-<ConfigModules xmlns="http://tempuri.org/ConfigModules.xsd">
-  <Modules>
-    <Name>AGRO_Sledovani_Voziku</Name>
-    <Assembly>Vyroba_Agro_Sledovani_Voziku.dll </Assembly>
-    <Object>FASK.SledovaniVyroby.Module.Vyroba_Agro_Sledovani_Voziku.Forms.FormIDPracovnikaLogin</Object>
-    <Id>0</Id>
-  </Modules>
-</ConfigModules>

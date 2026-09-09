@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Settings>
-    <!--    <Scanner Type="SerialPort" Path="RFID_SR_5102_Provider.dll" />   -->
-    
-    <Scanner Type="LAN" Path="RFID_Zebra_fx9600_Provider.dll" />
-</Settings>
-

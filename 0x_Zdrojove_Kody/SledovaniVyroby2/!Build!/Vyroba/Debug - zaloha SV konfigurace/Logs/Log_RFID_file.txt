@@ -1,5 +1,0 @@
-15.03.2023 12:56:14 : d:\_w\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\!Build!\Vyroba\Debug\Symbol.RFID3.Host.dll
-15.03.2023 13:00:19 : d:\_w\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\!Build!\Vyroba\Debug\Symbol.RFID3.Host.dll
-15.03.2023 13:19:06 : d:\_w\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\!Build!\Vyroba\Debug\Symbol.RFID3.Host.dll
-15.03.2023 13:31:41 : d:\_w\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\!Build!\Vyroba\Debug\Symbol.RFID3.Host.dll
-15.03.2023 13:47:04 : d:\_w\MES-Projekt\0x_Zdrojove_Kody\SledovaniVyroby2\!Build!\Vyroba\Debug\Symbol.RFID3.Host.dll

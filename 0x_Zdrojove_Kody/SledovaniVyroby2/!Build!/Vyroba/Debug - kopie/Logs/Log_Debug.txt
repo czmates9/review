@@ -1,2 +1,0 @@
-10.07.2023 18:51:53 : FormMain - ukončení aplikace: Pokus o ukončení aplikace
-10.07.2023 18:51:56 : application stop

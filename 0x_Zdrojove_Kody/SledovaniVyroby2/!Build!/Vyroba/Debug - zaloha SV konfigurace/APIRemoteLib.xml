@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" standalone="yes"?>
-<WEB_API>
-	<Autorizace_DoAPI>MDox</Autorizace_DoAPI>
-	<Adresa>192.168.1.69/MST_Win_Kom_Server_7_Dasenka</Adresa>
-	<AliasDB>api</AliasDB>
-	<isHTTPS>false</isHTTPS>
-	<API_TimeOut>5000</API_TimeOut>
-</WEB_API>

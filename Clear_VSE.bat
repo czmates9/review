@@ -1,39 +1,49 @@
 
 
 @ECHO OFF
-chcp 65001 >nul
-ECHO =============================================================================
-ECHO =============================================================================
-ECHO Výtam vas v BAT souboru pro smazani všeho: BIN, OBJ, .vs, !Build! a !!!Build!!! složky, *.user, *.suo.
-ECHO =============================================================================
-ECHO =============================================================================
-PAUSE
+SETLOCAL
+CHCP 65001 >NUL
 
-:choice
-ECHO =============================================================================
-set /P c=Opravdu si přejete poračovat[A/N]?
-if /I "%c%" EQU "A" goto :POKYN_ANO
-if /I "%c%" EQU "N" goto :POKYN_NE
-goto :choice
+REM Skript se vzdy spousti z korene repozitare, kde je ulozen.
+PUSHD "%~dp0" || (
+    ECHO Nepodarilo se otevrit adresar repozitare.
+    EXIT /B 1
+)
 
-PAUSE
+ECHO =============================================================================
+ECHO Smazou se generovane slozky bin, obj, .vs, !Build! a !!!Build!!!
+ECHO a uzivatelske soubory *.user a *.suo pouze uvnitr:
+ECHO %CD%
+ECHO =============================================================================
 
-:POKYN_ANO
-ECHO =============================================================================
-ECHO Zvolili jste volbu ano, přikazy budou vykonány...
-ECHO =============================================================================
-Powershell.exe -executionpolicy remotesigned -File  D:\_w\MES-Projekt\00_remove_all.ps1
-Powershell.exe -executionpolicy remotesigned -File  D:\_w\MES-Projekt\04_remove_X.user.ps1
-Powershell.exe -executionpolicy remotesigned -File  D:\_w\MES-Projekt\05_remove_X.suo.ps1
-ECHO =============================================================================
-ECHO Píkazy byly uspěšně vykonány
-ECHO =============================================================================
-PAUSE
-EXIT
+SET "VOLBA="
+SET /P "VOLBA=Opravdu chcete pokracovat [A/N]? "
+IF /I "%VOLBA%"=="N" GOTO :Zruseno
+IF /I NOT "%VOLBA%"=="A" (
+    ECHO Neplatna volba. Zadejte A nebo N.
+    POPD
+    EXIT /B 2
+)
 
-:POKYN_NE
-ECHO =============================================================================
-ECHO Zvolili jste volbu ne. Příkaz bude ukončen
-ECHO =============================================================================
-PAUSE
-EXIT
+PowerShell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0\00_remove_all.ps1"
+IF ERRORLEVEL 1 GOTO :Chyba
+
+PowerShell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0\04_remove_X.user.ps1"
+IF ERRORLEVEL 1 GOTO :Chyba
+
+PowerShell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0\05_remove_X.suo.ps1"
+IF ERRORLEVEL 1 GOTO :Chyba
+
+ECHO Cisteni bylo uspesne dokonceno.
+POPD
+EXIT /B 0
+
+:Zruseno
+ECHO Cisteni bylo zruseno.
+POPD
+EXIT /B 0
+
+:Chyba
+ECHO Pri cisteni doslo k chybe.
+POPD
+EXIT /B 1

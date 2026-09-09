@@ -1,9 +1,0 @@
-<?xml version="1.0" standalone="yes"?>
-<ConfigModules xmlns="http://tempuri.org/ConfigModules.xsd">
-  <Modules>
-    <Name>Agro</Name>
-    <Assembly>Vyroba_Agro.dll</Assembly>
-    <Object>FASK.SledovaniVyroby.Module.Vyroba_Agro.frmMainAgroVyroba</Object>
-    <Id>0</Id>
-  </Modules>
-</ConfigModules>

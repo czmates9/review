@@ -1,4 +1,0 @@
-<?xml version="1.0" standalone="yes"?>
-<Database>
-  <Path>Data Source=192.168.1.121\SQLEXPRESS;Initial Catalog=Agro_fask;Persist Security Info=True;User ID=fask_dbowner;Password=pro147fask</Path>
-</Database>
